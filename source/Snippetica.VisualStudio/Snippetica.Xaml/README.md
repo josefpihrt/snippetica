@@ -11,10 +11,6 @@ Title | Shortcut
 [Button](Button_.snippet)|bn
 [Canvas](Canvas.snippet)|canvas
 [Canvas](Canvas_.snippet)|cs
-[ckbx DataGridCheckBoxColumn](DataGridCheckBoxColumn.snippet)|datagridcolumn
-[ckbx DataGridCheckBoxColumn](DataGridCheckBoxColumn_.snippet)|dagdcn
-[cobx DataGridComboBoxColumn](DataGridComboBoxColumn.snippet)|datagridcolumn
-[cobx DataGridComboBoxColumn](DataGridComboBoxColumn_.snippet)|dagdcn
 [ColumnDefinition](ColumnDefinition.snippet)|columndefinition
 [ColumnDefinition](ColumnDefinition_.snippet)|cndn
 [ComboBox](ComboBox.snippet)|combobox
@@ -28,6 +24,12 @@ Title | Shortcut
 [ControlTemplate](ControlTemplate_.snippet)|clte
 [DataGrid](DataGrid.snippet)|datagrid
 [DataGrid](DataGrid_.snippet)|dagd
+[DataGridComboBoxColumn](DataGridComboBoxColumn.snippet)|datagridcolumn
+[DataGridComboBoxColumn](DataGridComboBoxColumn_.snippet)|dagdcn
+[DataGridCheckBoxColumn](DataGridCheckBoxColumn.snippet)|datagridcolumn
+[DataGridCheckBoxColumn](DataGridCheckBoxColumn_.snippet)|dagdcn
+[DataGridTextColumn](DataGridTextColumn.snippet)|datagridcolumn
+[DataGridTextColumn](DataGridTextColumn_.snippet)|dagdcn
 [DataTemplate](DataTemplate.snippet)|datatemplate
 [DataTemplate](DataTemplate_.snippet)|date
 [DockPanel with LastChildFill](DockPanelLastChildFill.snippet)|dockpanel
@@ -86,8 +88,6 @@ Title | Shortcut
 [TextBlock](TextBlock_.snippet)|ttbk
 [TextBox](TextBox.snippet)|textbox
 [TextBox](TextBox_.snippet)|ttbx
-[tt DataGridTextColumn](DataGridTextColumn.snippet)|datagridcolumn
-[tt DataGridTextColumn](DataGridTextColumn_.snippet)|dagdcn
 [UniformGrid](UniformGrid.snippet)|uniformgrid
 [UniformGrid](UniformGrid_.snippet)|umgd
 [WrapPanel (horizontal)](WrapPanelHorizontal.snippet)|wrappanel

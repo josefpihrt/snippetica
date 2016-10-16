@@ -1472,10 +1472,6 @@ XAML|[Button](Snippetica.Xaml\Button.snippet)|button
 XAML|[Button](Snippetica.Xaml\Button_.snippet)|bn
 XAML|[Canvas](Snippetica.Xaml\Canvas.snippet)|canvas
 XAML|[Canvas](Snippetica.Xaml\Canvas_.snippet)|cs
-XAML|[ckbx DataGridCheckBoxColumn](Snippetica.Xaml\DataGridCheckBoxColumn.snippet)|datagridcolumn
-XAML|[ckbx DataGridCheckBoxColumn](Snippetica.Xaml\DataGridCheckBoxColumn_.snippet)|dagdcn
-XAML|[cobx DataGridComboBoxColumn](Snippetica.Xaml\DataGridComboBoxColumn.snippet)|datagridcolumn
-XAML|[cobx DataGridComboBoxColumn](Snippetica.Xaml\DataGridComboBoxColumn_.snippet)|dagdcn
 XAML|[ColumnDefinition](Snippetica.Xaml\ColumnDefinition.snippet)|columndefinition
 XAML|[ColumnDefinition](Snippetica.Xaml\ColumnDefinition_.snippet)|cndn
 XAML|[ComboBox](Snippetica.Xaml\ComboBox.snippet)|combobox
@@ -1489,6 +1485,12 @@ XAML|[ControlTemplate](Snippetica.Xaml\ControlTemplate.snippet)|controltemplate
 XAML|[ControlTemplate](Snippetica.Xaml\ControlTemplate_.snippet)|clte
 XAML|[DataGrid](Snippetica.Xaml\DataGrid.snippet)|datagrid
 XAML|[DataGrid](Snippetica.Xaml\DataGrid_.snippet)|dagd
+XAML|[DataGridComboBoxColumn](Snippetica.Xaml\DataGridComboBoxColumn.snippet)|datagridcolumn
+XAML|[DataGridComboBoxColumn](Snippetica.Xaml\DataGridComboBoxColumn_.snippet)|dagdcn
+XAML|[DataGridCheckBoxColumn](Snippetica.Xaml\DataGridCheckBoxColumn.snippet)|datagridcolumn
+XAML|[DataGridCheckBoxColumn](Snippetica.Xaml\DataGridCheckBoxColumn_.snippet)|dagdcn
+XAML|[DataGridTextColumn](Snippetica.Xaml\DataGridTextColumn.snippet)|datagridcolumn
+XAML|[DataGridTextColumn](Snippetica.Xaml\DataGridTextColumn_.snippet)|dagdcn
 XAML|[DataTemplate](Snippetica.Xaml\DataTemplate.snippet)|datatemplate
 XAML|[DataTemplate](Snippetica.Xaml\DataTemplate_.snippet)|date
 XAML|[DockPanel with LastChildFill](Snippetica.Xaml\DockPanelLastChildFill.snippet)|dockpanel
@@ -1547,8 +1549,6 @@ XAML|[TextBlock](Snippetica.Xaml\TextBlock.snippet)|textblock
 XAML|[TextBlock](Snippetica.Xaml\TextBlock_.snippet)|ttbk
 XAML|[TextBox](Snippetica.Xaml\TextBox.snippet)|textbox
 XAML|[TextBox](Snippetica.Xaml\TextBox_.snippet)|ttbx
-XAML|[tt DataGridTextColumn](Snippetica.Xaml\DataGridTextColumn.snippet)|datagridcolumn
-XAML|[tt DataGridTextColumn](Snippetica.Xaml\DataGridTextColumn_.snippet)|dagdcn
 XAML|[UniformGrid](Snippetica.Xaml\UniformGrid.snippet)|uniformgrid
 XAML|[UniformGrid](Snippetica.Xaml\UniformGrid_.snippet)|umgd
 XAML|[WrapPanel (horizontal)](Snippetica.Xaml\WrapPanelHorizontal.snippet)|wrappanel
