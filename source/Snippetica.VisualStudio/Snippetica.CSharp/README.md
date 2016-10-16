@@ -58,7 +58,6 @@ Title | Shortcut
 [object keyword](ObjectKeyword.snippet)|o
 [ObservableCollection<T> class](ObservableCollectionOfTClass.snippet)|c_
 [parameter array ](ParameterArray.snippet)|pa
-[parameter](TypeParameter.snippet)|g
 [public auto property with private setter](PublicAutoPropertyWithPrivateSet.snippet)|pps
 [public auto property](PublicAutoProperty.snippet)|p
 [public class](PublicClass.snippet)|c
@@ -97,6 +96,7 @@ Title | Shortcut
 [try-catch](TryCatch.snippet)|tc
 [try-catch-finally](TryCatchFinally.snippet)|tcf
 [try-finally](TryFinally.snippet)|tf
+[type parameter](TypeParameter.snippet)|g
 [typeof operator](TypeOfOperator.snippet)|to
 [using statement](Using.snippet)|u
 [variable](Variable.snippet)|v

@@ -46,7 +46,7 @@ Title | Shortcut
 [array variable (with initializer)](ArrayOfTVariableWithInitializer.snippet)|va_
 [array variable](ArrayOfTVariable.snippet)|va
 [Attribute class](AttributeClass.snippet)|c_
-[Boolean parameter](BooleanTypeParameter.snippet)|g
+[Boolean type parameter](BooleanTypeParameter.snippet)|g
 [Boolean variable](BooleanVariable.snippet)|v
 [braces](Braces.snippet)|b
 [catch](Catch.snippet)|catch
@@ -55,7 +55,7 @@ Title | Shortcut
 [Collection<T> variable (with initializer)](CollectionOfTVariableWithInitializer.snippet)|vc_
 [Collection<T> variable](CollectionOfTVariable.snippet)|vc
 [containing type name](ContainingTypeName.snippet)|this
-[DateTime parameter](DateTimeTypeParameter.snippet)|g
+[DateTime type parameter](DateTimeTypeParameter.snippet)|g
 [DateTime type](DateTimeType.snippet)|dt
 [DateTime variable](DateTimeVariable.snippet)|v
 [Debug.Assert](DebugAssert.snippet)|da
@@ -114,9 +114,9 @@ Title | Shortcut
 [ImmutableStack<T> type](ImmutableStackOfTType.snippet)|gc
 [ImmutableStack<T> variable](ImmutableStackOfTVariable.snippet)|vc
 [implicit operator overload](OperatorOverloadImplicit.snippet)|oo
-[Int32 parameter](Int32TypeParameter.snippet)|g
+[Int32 type parameter](Int32TypeParameter.snippet)|g
 [Int32 variable](Int32Variable.snippet)|v
-[Int64 parameter](Int64TypeParameter.snippet)|g
+[Int64 type parameter](Int64TypeParameter.snippet)|g
 [Int64 variable](Int64Variable.snippet)|v
 [interface Boolean indexer](BooleanInterfaceIndexer.snippet)|_ir
 [interface Boolean method (with parameters)](BooleanInterfaceMethodWithParameters.snippet)|_m_
@@ -291,7 +291,7 @@ Title | Shortcut
 [new variable](NewVariable.snippet)|vn
 [not equal to null](NotEqualToNull.snippet)|nn
 [object keyword](ObjectKeyword.snippet)|o
-[Object parameter](ObjectTypeParameter.snippet)|g
+[Object type parameter](ObjectTypeParameter.snippet)|g
 [Object variable](ObjectVariable.snippet)|v
 [ObservableCollection<T> class](ObservableCollectionOfTClass.snippet)|c_
 [ObservableCollection<T> type](ObservableCollectionOfTType.snippet)|gc
@@ -304,7 +304,6 @@ Title | Shortcut
 [parameter array of Int64](Int64ParameterArray.snippet)|pa
 [parameter array of Object](ObjectParameterArray.snippet)|pa
 [parameter array of String](StringParameterArray.snippet)|pa
-[parameter](TypeParameter.snippet)|g
 [private auto property with private setter](PrivateAutoPropertyWithPrivateSet.snippet)|ppps
 [private auto property](PrivateAutoProperty.snippet)|pp
 [private Boolean auto property with private setter](PrivateBooleanAutoPropertyWithPrivateSet.snippet)|ppps
@@ -604,7 +603,7 @@ Title | Shortcut
 [Stack<T> variable](StackOfTVariable.snippet)|vc
 [static constructor](StaticConstructor.snippet)|scr
 [string keyword](StringKeyword.snippet)|s
-[String parameter](StringTypeParameter.snippet)|g
+[String type parameter](StringTypeParameter.snippet)|g
 [String variable](StringVariable.snippet)|v
 [string.IsNullOrEmpty](StringIsNullOrEmpty.snippet)|sne
 [string.IsNullOrWhiteSpace](StringIsNullOrWhiteSpace.snippet)|snw
@@ -622,6 +621,7 @@ Title | Shortcut
 [try-catch](TryCatch.snippet)|tc
 [try-catch-finally](TryCatchFinally.snippet)|tcf
 [try-finally](TryFinally.snippet)|tf
+[type parameter](TypeParameter.snippet)|g
 [typeof operator](TypeOfOperator.snippet)|to
 [using statement](Using.snippet)|u
 [variable](Variable.snippet)|v

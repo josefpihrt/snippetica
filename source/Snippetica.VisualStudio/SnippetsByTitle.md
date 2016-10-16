@@ -46,7 +46,7 @@ C#|[array of String variable](Snippetica.CSharp\ArrayOfStringVariable.snippet)|v
 C#|[array variable (with initializer)](Snippetica.CSharp\ArrayOfTVariableWithInitializer.snippet)|va_
 C#|[array variable](Snippetica.CSharp\ArrayOfTVariable.snippet)|va
 C#|[Attribute class](Snippetica.CSharp\AttributeClass.snippet)|c_
-C#|[Boolean parameter](Snippetica.CSharp\BooleanTypeParameter.snippet)|g
+C#|[Boolean type parameter](Snippetica.CSharp\BooleanTypeParameter.snippet)|g
 C#|[Boolean variable](Snippetica.CSharp\BooleanVariable.snippet)|v
 C#|[braces](Snippetica.CSharp\Braces.snippet)|b
 C#|[catch](Snippetica.CSharp\Catch.snippet)|catch
@@ -55,7 +55,7 @@ C#|[Collection<T> type](Snippetica.CSharp\CollectionOfTType.snippet)|gc
 C#|[Collection<T> variable (with initializer)](Snippetica.CSharp\CollectionOfTVariableWithInitializer.snippet)|vc_
 C#|[Collection<T> variable](Snippetica.CSharp\CollectionOfTVariable.snippet)|vc
 C#|[containing type name](Snippetica.CSharp\ContainingTypeName.snippet)|this
-C#|[DateTime parameter](Snippetica.CSharp\DateTimeTypeParameter.snippet)|g
+C#|[DateTime type parameter](Snippetica.CSharp\DateTimeTypeParameter.snippet)|g
 C#|[DateTime type](Snippetica.CSharp\DateTimeType.snippet)|dt
 C#|[DateTime variable](Snippetica.CSharp\DateTimeVariable.snippet)|v
 C#|[Debug.Assert](Snippetica.CSharp\DebugAssert.snippet)|da
@@ -114,9 +114,9 @@ C#|[ImmutableSortedSet<T> variable](Snippetica.CSharp\ImmutableSortedSetOfTVaria
 C#|[ImmutableStack<T> type](Snippetica.CSharp\ImmutableStackOfTType.snippet)|gc
 C#|[ImmutableStack<T> variable](Snippetica.CSharp\ImmutableStackOfTVariable.snippet)|vc
 C#|[implicit operator overload](Snippetica.CSharp\OperatorOverloadImplicit.snippet)|oo
-C#|[Int32 parameter](Snippetica.CSharp\Int32TypeParameter.snippet)|g
+C#|[Int32 type parameter](Snippetica.CSharp\Int32TypeParameter.snippet)|g
 C#|[Int32 variable](Snippetica.CSharp\Int32Variable.snippet)|v
-C#|[Int64 parameter](Snippetica.CSharp\Int64TypeParameter.snippet)|g
+C#|[Int64 type parameter](Snippetica.CSharp\Int64TypeParameter.snippet)|g
 C#|[Int64 variable](Snippetica.CSharp\Int64Variable.snippet)|v
 C#|[interface Boolean indexer](Snippetica.CSharp\BooleanInterfaceIndexer.snippet)|_ir
 C#|[interface Boolean method (with parameters)](Snippetica.CSharp\BooleanInterfaceMethodWithParameters.snippet)|_m_
@@ -291,7 +291,7 @@ C#|[new variable (with arguments)](Snippetica.CSharp\NewVariableWithArguments.sn
 C#|[new variable](Snippetica.CSharp\NewVariable.snippet)|vn
 C#|[not equal to null](Snippetica.CSharp\NotEqualToNull.snippet)|nn
 C#|[object keyword](Snippetica.CSharp\ObjectKeyword.snippet)|o
-C#|[Object parameter](Snippetica.CSharp\ObjectTypeParameter.snippet)|g
+C#|[Object type parameter](Snippetica.CSharp\ObjectTypeParameter.snippet)|g
 C#|[Object variable](Snippetica.CSharp\ObjectVariable.snippet)|v
 C#|[ObservableCollection<T> class](Snippetica.CSharp\ObservableCollectionOfTClass.snippet)|c_
 C#|[ObservableCollection<T> type](Snippetica.CSharp\ObservableCollectionOfTType.snippet)|gc
@@ -304,7 +304,6 @@ C#|[parameter array of Int32](Snippetica.CSharp\Int32ParameterArray.snippet)|pa
 C#|[parameter array of Int64](Snippetica.CSharp\Int64ParameterArray.snippet)|pa
 C#|[parameter array of Object](Snippetica.CSharp\ObjectParameterArray.snippet)|pa
 C#|[parameter array of String](Snippetica.CSharp\StringParameterArray.snippet)|pa
-C#|[parameter](Snippetica.CSharp\TypeParameter.snippet)|g
 C#|[private auto property with private setter](Snippetica.CSharp\PrivateAutoPropertyWithPrivateSet.snippet)|ppps
 C#|[private auto property](Snippetica.CSharp\PrivateAutoProperty.snippet)|pp
 C#|[private Boolean auto property with private setter](Snippetica.CSharp\PrivateBooleanAutoPropertyWithPrivateSet.snippet)|ppps
@@ -604,7 +603,7 @@ C#|[Stack<T> type](Snippetica.CSharp\StackOfTType.snippet)|gc
 C#|[Stack<T> variable](Snippetica.CSharp\StackOfTVariable.snippet)|vc
 C#|[static constructor](Snippetica.CSharp\StaticConstructor.snippet)|scr
 C#|[string keyword](Snippetica.CSharp\StringKeyword.snippet)|s
-C#|[String parameter](Snippetica.CSharp\StringTypeParameter.snippet)|g
+C#|[String type parameter](Snippetica.CSharp\StringTypeParameter.snippet)|g
 C#|[String variable](Snippetica.CSharp\StringVariable.snippet)|v
 C#|[string.IsNullOrEmpty](Snippetica.CSharp\StringIsNullOrEmpty.snippet)|sne
 C#|[string.IsNullOrWhiteSpace](Snippetica.CSharp\StringIsNullOrWhiteSpace.snippet)|snw
@@ -622,6 +621,7 @@ C#|[true-false operator overload](Snippetica.CSharp\OperatorOverloadTrueFalse.sn
 C#|[try-catch](Snippetica.CSharp\TryCatch.snippet)|tc
 C#|[try-catch-finally](Snippetica.CSharp\TryCatchFinally.snippet)|tcf
 C#|[try-finally](Snippetica.CSharp\TryFinally.snippet)|tf
+C#|[type parameter](Snippetica.CSharp\TypeParameter.snippet)|g
 C#|[typeof operator](Snippetica.CSharp\TypeOfOperator.snippet)|to
 C#|[using statement](Snippetica.CSharp\Using.snippet)|u
 C#|[variable](Snippetica.CSharp\Variable.snippet)|v
