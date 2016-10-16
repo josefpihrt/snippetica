@@ -4,6 +4,8 @@
 * [Release Notes](http://github.com/JosefPihrt/Snippetica/blob/master/ChangeLog.md)
 * **Snippetica** is distributed as Visual Studio Extension.
 
+### Folders
+
 * [Snippetica.CSharp](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md) (622 snippets)
 * [Snippetica.VisualBasic](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md) (596 snippets)
 * [Snippetica.Cpp](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp/README.md) (23 snippets)
