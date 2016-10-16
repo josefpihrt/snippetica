@@ -32,7 +32,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
                 {
                     Snippet[] snippets = snippetDirectory.EnumerateSnippets().ToArray();
 
-                    sw.WriteLine($"[{snippetDirectory.DirectoryName}]({settings.GitHubExtensionProjectPath}/{snippetDirectory.DirectoryName}/{settings.ReadMeFileName}) ({snippets.Length} snippets)");
+                    sw.WriteLine($"* [{snippetDirectory.DirectoryName}]({settings.GitHubExtensionProjectPath}/{snippetDirectory.DirectoryName}/{settings.ReadMeFileName}) ({snippets.Length} snippets)");
                 }
 
                 return sw.ToString();
@@ -64,7 +64,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 
                 foreach (SnippetDirectory snippetDirectory in snippetDirectories)
                 {
-                    sw.WriteLine($"* [{snippetDirectory.DirectoryName}]({snippetDirectory.DirectoryName}) ({snippetDirectory.SnippetCount} snippets)");
+                    sw.WriteLine($"* [{snippetDirectory.DirectoryName}]({snippetDirectory.DirectoryName}/README.md) ({snippetDirectory.SnippetCount} snippets)");
                 }
 
                 return sw.ToString();
