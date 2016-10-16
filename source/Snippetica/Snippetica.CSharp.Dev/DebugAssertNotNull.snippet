@@ -1,0 +1,32 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Debug.Assert != null</Title>
+    <Shortcut>dann</Shortcut>
+    <Description>Debug.Assert method with condition whether the expression is not equal to null</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System.Diagnostics</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>expression</ID>
+        <ToolTip>Expression to evaluate</ToolTip>
+        <Default>false</Default>
+      </Literal>
+      <Literal>
+        <ID>message</ID>
+        <ToolTip>The message text</ToolTip>
+        <Default>""</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[Debug.Assert($expression$ != null, $message$);$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

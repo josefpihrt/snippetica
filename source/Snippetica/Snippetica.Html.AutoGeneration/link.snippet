@@ -1,0 +1,29 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>link</Title>
+    <Shortcut>link</Shortcut>
+    <Description>link</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>href</ID>
+        <Default>css</Default>
+      </Literal>
+      <Literal>
+        <ID>rel</ID>
+        <Default>stylesheet</Default>
+      </Literal>
+      <Literal>
+        <ID>type</ID>
+        <Default>text/css</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="Html"><![CDATA[<link rel="$rel$" type="$type$" href="$href$">$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

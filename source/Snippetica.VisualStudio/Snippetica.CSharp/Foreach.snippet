@@ -1,0 +1,30 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>foreach statement</Title>
+    <Shortcut>fe</Shortcut>
+    <Description>foreach statement</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>_collection</ID>
+        <ToolTip>Collection variable name</ToolTip>
+        <Default>items</Default>
+      </Literal>
+      <Literal>
+        <ID>identifier</ID>
+        <ToolTip>Identifier that represents the element in the collection</ToolTip>
+        <Default>item</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[foreach (var $identifier$ in $_collection$)
+{
+    $end$
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

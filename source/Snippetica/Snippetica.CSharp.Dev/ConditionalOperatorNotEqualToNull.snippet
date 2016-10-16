@@ -1,0 +1,32 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>?: operator (not equal to null)</Title>
+    <Shortcut>conn</Shortcut>
+    <Description>?: (conditional) operator with condition whether the expression is not equal to null</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>expression</ID>
+        <ToolTip>Expression to evaluate</ToolTip>
+        <Default>expression</Default>
+      </Literal>
+      <Literal>
+        <ID>false</ID>
+        <ToolTip>False expression</ToolTip>
+        <Default>null</Default>
+      </Literal>
+      <Literal>
+        <ID>true</ID>
+        <ToolTip>True expression</ToolTip>
+        <Default>null</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[($expression$ != null) ? $true$ : $false$$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

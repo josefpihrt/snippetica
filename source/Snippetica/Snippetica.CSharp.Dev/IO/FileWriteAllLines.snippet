@@ -1,0 +1,44 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>wal File.WriteAllLines</Title>
+    <Shortcut>iof</Shortcut>
+    <Description>File.WriteAllLines method.</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-Tag TitleStartsWithShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System.IO</Namespace>
+      </Import>
+      <Import>
+        <Namespace>System.Text</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>_encoding</ID>
+        <ToolTip>File encoding</ToolTip>
+        <Default>Encoding.UTF8</Default>
+      </Literal>
+      <Literal>
+        <ID>content</ID>
+        <ToolTip>File content</ToolTip>
+        <Default>content</Default>
+      </Literal>
+      <Literal>
+        <ID>path</ID>
+        <ToolTip>File path</ToolTip>
+        <Default>path</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[File.WriteAllLines($path$, $content$, $_encoding$)$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

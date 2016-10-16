@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Document Version="0.1.0">
+  <Entities>
+    <Entity Name="Base">
+      <Declarations>
+        <Property Name="Keyword" />
+        <Property Name="Shortcut" />
+        <Property Name="Language" />
+        <Property Name="Items" IsCollection="true" />
+        <Variable Name="x" Value="x" />
+      </Declarations>
+      <Entities>
+        <Entity Name="Modifier">
+          <BaseRecords>
+            <Tag Value="AccessModifier">
+              <New Id="Public" Shortcut="" Tag="Default" />
+            </Tag>
+            <New Id="Static" Shortcut="s" />
+          </BaseRecords>
+          <Records>
+            <New Keyword="keyword">
+              <Add Items="a" />
+              <Add Items="b" />
+              <Add Items="c" />
+            </New>
+            <Set Language="CSharp">
+              <Variable Name="c" Value ="PUBLIC">
+                <New Id="Public" Keyword="public{c}" />
+              </Variable>
+              <Variable Name="x" Value ="INTERNAL">
+                <New Id="Static" Keyword="static{x}" />
+              </Variable>
+            </Set>
+          </Records>
+        </Entity>
+        <Entity Name="Type">
+          <Declarations>
+            <Property Name="DefaultValue" />
+            <Variable Name="x" Value="VOID" />
+          </Declarations>
+          <BaseRecords>
+            <New Id="Void" Shortcut="{x}" />
+            <New Id="Boolean" Shortcut="b" />
+            <Tag Value="Disabled">
+              <New Id="Char" Shortcut="c" />
+            </Tag>
+          </BaseRecords>
+          <Records>
+            <Set Language="CSharp">
+              <New Id="Void" Keyword="void" />
+              <New Id="Boolean" Keyword="bool" DefaultValue="false" />
+            </Set>
+            <Set Language="VisualBasic">
+              <New Id="Void" />
+              <New Id="Boolean" Keyword="Boolean" DefaultValue="False" />
+            </Set>
+          </Records>
+        </Entity>
+      </Entities>
+    </Entity>
+  </Entities>
+</Document>

@@ -1,0 +1,73 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>IEqualityComparer class</Title>
+    <Shortcut>c_</Shortcut>
+    <Description>class that implements IEqualityComparer</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System</Namespace>
+      </Import>
+      <Import>
+        <Namespace>System.Collections</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>modifier</ID>
+        <ToolTip>Modifier(s)</ToolTip>
+        <Default>public</Default>
+      </Literal>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Equality comparer type name</ToolTip>
+        <Default>EqualityComparer</Default>
+      </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Type name</ToolTip>
+        <Default>object</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IEqualityComparer
+{
+    new public bool Equals(object x, object y)
+    {
+        if (object.ReferenceEquals(x, y))
+        {
+            return true;
+        }
+
+        if (x == null || y == null)
+        {
+            return false;
+        }
+
+        var a = ($type$)x;
+        var b = ($type$)y;
+
+        $end$
+        throw new NotImplementedException();
+    }
+
+    public int GetHashCode(object obj)
+    {
+        if (obj == null)
+        {
+            return 0;
+        }
+
+        throw new NotImplementedException();
+    }
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

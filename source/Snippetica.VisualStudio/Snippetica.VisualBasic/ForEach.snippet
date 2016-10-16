@@ -1,0 +1,29 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>For Each statement</Title>
+    <Shortcut>fe</Shortcut>
+    <Description>For Each statement</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>_collectionIdentifier</ID>
+        <ToolTip>Sequence identifier name</ToolTip>
+        <Default>items</Default>
+      </Literal>
+      <Literal>
+        <ID>elementIdentifier</ID>
+        <ToolTip>Identifier that represents the element in the collection</ToolTip>
+        <Default>item</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[For Each $elementIdentifier$ In $_collectionIdentifier$
+    $end$
+Next]]></Code>
+  </Snippet>
+</CodeSnippet>

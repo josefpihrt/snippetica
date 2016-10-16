@@ -1,0 +1,42 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>try-catch-finally</Title>
+    <Shortcut>tcf</Shortcut>
+    <Description>try-catch-finally statement</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>exceptionType</ID>
+        <ToolTip>Exception type</ToolTip>
+        <Default>Exception</Default>
+      </Literal>
+      <Literal>
+        <ID>identifier</ID>
+        <ToolTip>Identifier name</ToolTip>
+        <Default>ex</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[try
+{
+    $end$
+}
+catch ($exceptionType$ $identifier$)
+{
+    throw;
+}
+finally
+{
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

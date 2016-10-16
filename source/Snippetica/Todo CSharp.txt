@@ -1,0 +1,5 @@
+﻿g  - generický typ (prefix)
+ge - IEnumerable<T>
+_  - WithInitializer (suffix)
+_  - WithParameters (suffix)
+_  - InterfaceMember (prefix)

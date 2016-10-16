@@ -1,0 +1,61 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Disposable class</Title>
+    <Shortcut>c_</Shortcut>
+    <Description>class that implements IDisposable interface</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>modifier</ID>
+        <ToolTip>Modifier(s)</ToolTip>
+        <Default>Public</Default>
+      </Literal>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Class name</ToolTip>
+        <Default>ClassName</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[$modifier$ Class $name$
+    Implements IDisposable
+
+    Private _disposed As Boolean
+
+    Public Sub Dispose() Implements IDisposable.Dispose
+
+        Dispose(True)
+        GC.SuppressFinalize(Me)
+
+    End Sub
+
+    Protected Overridable Sub Dispose(disposing As Boolean)
+
+        If Not _disposed Then
+
+            If disposing Then
+                Throw New NotImplementedException()
+            End If
+
+            _disposed = True
+
+        End If
+
+    End Sub
+
+End Class$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

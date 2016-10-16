@@ -1,0 +1,47 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Singleton class</Title>
+    <Shortcut>c_</Shortcut>
+    <Description>class that implements singleton pattern</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>modifier</ID>
+        <ToolTip>Modifier(s)</ToolTip>
+        <Default>public sealed</Default>
+      </Literal>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Class name</ToolTip>
+        <Default>ClassName</Default>
+      </Literal>
+      <Literal>
+        <ID>value</ID>
+        <ToolTip>Value to assign</ToolTip>
+        <Default>value</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[$modifier$ class $name$
+{
+    private static readonly $name$ _instance = $value$;
+
+    private $name$()
+    {
+    }
+
+    public static $name$ Instance
+    {
+        get { return _instance; }
+    }
+}$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

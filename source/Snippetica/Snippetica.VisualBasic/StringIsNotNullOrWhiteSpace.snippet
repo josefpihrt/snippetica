@@ -1,0 +1,27 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>String.IsNullOrWhiteSpace = False</Title>
+    <Shortcut>snnw</Shortcut>
+    <Description>String.IsNullOrWhiteSpace = False</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>expression</ID>
+        <ToolTip>String expression</ToolTip>
+        <Default>s</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[String.IsNullOrWhiteSpace($expression$) = False$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,0 +1,37 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>read-only @type@ field</Title>
+    <Shortcut>rf</Shortcut>
+    <Description>read-only @type@ field declaration</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-Tag GenerateAccessModifier</Keyword>
+      <Keyword>Meta-Tag GenerateStaticModifier</Keyword>
+      <Keyword>Meta-Tag GenerateType</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>_modifiers</ID>
+        <ToolTip>Modifier(s)</ToolTip>
+        <Default>Private</Default>
+      </Literal>
+      <Literal>
+        <ID>_type</ID>
+        <ToolTip>Field type</ToolTip>
+        <Default>Object</Default>
+      </Literal>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Field name</ToolTip>
+        <Default>FieldName</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[$_modifiers$ ReadOnly $name$ As $_type$$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

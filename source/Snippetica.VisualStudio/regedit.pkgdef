@@ -1,0 +1,26 @@
+﻿// C#
+[$RootKey$\Languages\CodeExpansions\CSharp\Paths]
+"Snippetica.CSharp" = "$PackageFolder$\Snippetica.CSharp"
+
+// VB
+[$RootKey$\Languages\CodeExpansions\Basic\Paths]
+"Snippetica.VisualBasic" = "$PackageFolder$\Snippetica.VisualBasic"
+
+// C++
+[$RootKey$\Languages\CodeExpansions\C/C++\Paths]
+"Snippetica.Cpp" = "$PackageFolder$\Snippetica.Cpp"
+
+// HTML
+[$RootKey$\Languages\CodeExpansions\HTML\Paths]
+"Snippetica.Html" = "$PackageFolder$\Snippetica.Html"
+
+// XAML
+[$RootKey$\Languages\CodeExpansions\XAML\Paths]
+"Snippetica.Xaml" = "$PackageFolder$\Snippetica.Xaml"
+
+// XML
+[$RootKey$\Languages\CodeExpansions\XML\Paths]
+"Snippetica.Xml" = "$PackageFolder$\Snippetica.Xml"
+[$RootKey$\Languages\CodeExpansions\XML\Paths]
+"Snippetica.Xml.CodeSnippet" = "$PackageFolder$\Snippetica.Xml.CodeSnippet"
+

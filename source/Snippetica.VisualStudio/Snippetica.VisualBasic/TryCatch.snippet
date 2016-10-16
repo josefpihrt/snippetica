@@ -1,0 +1,36 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Try-Catch</Title>
+    <Shortcut>tc</Shortcut>
+    <Description>Try-Catch statement</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>exceptionType</ID>
+        <ToolTip>Exception type</ToolTip>
+        <Default>Exception</Default>
+      </Literal>
+      <Literal>
+        <ID>identifier</ID>
+        <ToolTip>Identifier name</ToolTip>
+        <Default>ex</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[Try
+    $end$
+Catch $identifier$ as $exceptionType$
+    Throw
+End Try]]></Code>
+  </Snippet>
+</CodeSnippet>

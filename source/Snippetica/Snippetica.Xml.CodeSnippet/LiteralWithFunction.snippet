@@ -1,0 +1,41 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>lf Literal with Function</Title>
+    <Shortcut>s</Shortcut>
+    <Description>Literal element with function</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>default</ID>
+        <Default>ThisName</Default>
+      </Literal>
+      <Literal>
+        <ID>function</ID>
+        <Default>ClassName()</Default>
+      </Literal>
+      <Literal>
+        <ID>id</ID>
+        <Default>thisName</Default>
+      </Literal>
+      <Literal>
+        <ID>toolTip</ID>
+        <Default>Containing type name</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="Xml"><![CDATA[<Literal Editable="false">
+  <ID>$id$</ID>
+  <ToolTip>$toolTip$</ToolTip>
+  <Default>$default$</Default>
+  <Function>$function$</Function>
+</Literal>$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

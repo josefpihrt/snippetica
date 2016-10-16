@@ -1,0 +1,26 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>struct</Title>
+    <Shortcut>st</Shortcut>
+    <Description>struct declaration</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Struct name</ToolTip>
+        <Default>StructName</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="Cpp"><![CDATA[struct $name$
+{
+    $selected$$end$
+};]]></Code>
+  </Snippet>
+</CodeSnippet>

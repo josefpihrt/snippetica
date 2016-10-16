@@ -1,0 +1,42 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Equals and GetHashCode</Title>
+    <Shortcut>equals</Shortcut>
+    <Description>overriding Equals and GetHashCode methods</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal Editable="false">
+        <ID>thisname</ID>
+        <ToolTip>Containing type name</ToolTip>
+        <Default>ThisName</Default>
+        <Function>ClassName()</Function>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[Public Overrides Function Equals(obj As object) As Boolean
+
+    Dim other = Nothing
+    If TryCast(other, $thisname$) Is Nothing Then
+        Return False
+    End If
+
+    $end$
+    Throw New NotImplementedException()
+
+End Function
+
+Public Overrides Function GetHashCode() As Integer
+    Throw New NotImplementedException()
+End Function]]></Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,0 +1,30 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>If TryCast Is Nothing</Title>
+    <Shortcut>ifftc</Shortcut>
+    <Description>If TryCast Is Nothing</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>identifier</ID>
+        <ToolTip>Identifier name</ToolTip>
+        <Default>x</Default>
+      </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Type to cast to</ToolTip>
+        <Default>Object</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[Dim $identifier$ = Nothing
+    If TryCast($identifier$, $type$) Is Nothing Then
+        $end$
+    End If]]></Code>
+  </Snippet>
+</CodeSnippet>

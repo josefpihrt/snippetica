@@ -1,0 +1,64 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Exception class</Title>
+    <Shortcut>c_</Shortcut>
+    <Description>class derived from Exception class</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System</Namespace>
+      </Import>
+      <Import>
+        <Namespace>System.Runtime.Serialization</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>base</ID>
+        <ToolTip>Base exception type</ToolTip>
+        <Default>Exception</Default>
+      </Literal>
+      <Literal>
+        <ID>modifier</ID>
+        <ToolTip>Modifier(s)</ToolTip>
+        <Default>public</Default>
+      </Literal>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Exception name</ToolTip>
+        <Default>My</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[[Serializable]
+$modifier$ class $name$Exception : $base$
+{
+    public $name$Exception()
+    {
+    }
+
+    public $name$Exception(string message)
+        : base(message)
+    {
+    }
+
+    public $name$Exception(string message, Exception inner)
+        : base(message, inner)
+    {
+    }
+
+    protected $name$Exception(SerializationInfo info, StreamingContext context)
+        : base(info, context)
+    {
+    }$end$
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

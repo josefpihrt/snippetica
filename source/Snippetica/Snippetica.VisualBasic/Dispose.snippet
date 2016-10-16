@@ -1,0 +1,38 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Dispose</Title>
+    <Shortcut>dispose</Shortcut>
+    <Description>Dispose pattern</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System</Namespace>
+      </Import>
+    </Imports>
+    <Code Language="VB"><![CDATA[Private _disposed As Boolean
+
+Public Sub Dispose()
+
+    Dispose(True)
+    GC.SuppressFinalize(Me)
+
+End Sub
+
+Protected Overridable Sub Dispose(disposing As Boolean)
+
+    If Not _disposed Then
+        If disposing Then
+            Throw New NotImplementedException()
+        End If
+        _disposed = True
+    End If
+
+End Sub$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

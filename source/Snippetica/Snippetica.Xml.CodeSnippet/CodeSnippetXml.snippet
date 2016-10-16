@@ -1,0 +1,65 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>csxml CodeSnippet for XML</Title>
+    <Shortcut>s</Shortcut>
+    <Description>CodeSnippet for XML</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal Editable="false">
+        <ID>CDataEnd</ID>
+        <ToolTip>End of CDATA section</ToolTip>
+        <Default>]]&gt;</Default>
+      </Literal>
+      <Literal>
+        <ID>code</ID>
+        <ToolTip>Snippet code</ToolTip>
+        <Default>$end$</Default>
+      </Literal>
+      <Literal>
+        <ID>description</ID>
+        <ToolTip>Snippet description</ToolTip>
+        <Default>.</Default>
+      </Literal>
+      <Literal>
+        <ID>shortcut</ID>
+        <ToolTip>Snippet shortcut</ToolTip>
+        <Default>x</Default>
+      </Literal>
+      <Literal>
+        <ID>title</ID>
+        <ToolTip>Snippet title</ToolTip>
+        <Default>title</Default>
+      </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Snippet type</ToolTip>
+        <Default>Expansion</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="Xml"><![CDATA[<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>$title$</Title>
+    <Shortcut>$shortcut$</Shortcut>
+    <Description>$description$</Description>
+    <Author></Author>
+    <SnippetTypes>
+      <SnippetType>$type$</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="XML">
+      <![CDATA[$code$$CDataEnd$
+    </Code>
+  </Snippet>
+</CodeSnippet>$end$]]></Code>
+  </Snippet>
+</CodeSnippet>
