@@ -27,6 +27,16 @@ namespace Pihrtsoft.Snippets.Xml
             }
         }
 
+        public XElement LastItemGroupOrDefault
+        {
+            get
+            {
+                return Project
+                    .Elements()
+                    .LastOrDefault(f => f.LocalName() == "ItemGroup");
+            }
+        }
+
         public string FilePath { get; }
 
         public XDocument Document { get; }
@@ -65,6 +75,9 @@ namespace Pihrtsoft.Snippets.Xml
 
                 for (int i = 0; i < items.Length; i++)
                     items[i].Remove();
+
+                if (!itemGroup.HasElements)
+                    itemGroup.Remove();
             }
         }
 
@@ -72,7 +85,16 @@ namespace Pihrtsoft.Snippets.Xml
         {
             var itemGroup = new XElement(Project.Name.Namespace + "ItemGroup");
 
-            Project.Add(itemGroup);
+            XElement lastItemGroup = LastItemGroupOrDefault;
+
+            if (lastItemGroup != null)
+            {
+                lastItemGroup.AddAfterSelf(itemGroup);
+            }
+            else
+            {
+                Project.Add(itemGroup);
+            }
 
             return itemGroup;
         }
