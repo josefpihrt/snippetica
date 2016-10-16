@@ -2,7 +2,7 @@
 
 * A collection of snippets for C#, VB, C++, HTML, XAML and XML.
 * [Release Notes](http://github.com/JosefPihrt/Snippetica/blob/master/ChangeLog.md)
-* **Snippetica** is distributed as Visual Studio Extension.
+* **Snippetica** is distributed as [Visual Studio Extension](http://visualstudiogallery.msdn.microsoft.com/a5576f35-9f87-4c9c-8f1f-059421a23aed).
 
 ### Folders
 
