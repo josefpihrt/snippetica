@@ -24,7 +24,10 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
                 sw.WriteLine();
 
                 sw.WriteLine($"* {settings.GetProjectSubtitle(snippetDirectories)}");
-                sw.WriteLine($"* [Release Notes]({settings.GitHubMasterPath}/{"ChangeLog.md"})");
+                sw.WriteLine($"* [Release Notes]({settings.GitHubMasterPath}/{"ChangeLog.md"}).");
+                sw.WriteLine();
+                sw.WriteLine("### Distribution");
+                sw.WriteLine();
                 sw.WriteLine("* **Snippetica** is distributed as [Visual Studio Extension](http://visualstudiogallery.msdn.microsoft.com/a5576f35-9f87-4c9c-8f1f-059421a23aed).");
                 sw.WriteLine();
                 sw.WriteLine("### Folders");
