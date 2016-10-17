@@ -323,7 +323,7 @@ namespace Pihrtsoft.Records
             return list.ToArray();
         }
 
-        public TItem[] GetItems<TItem>(string propertyName, TItem[] defaultValue = default(TItem[]))
+        public TItem[] GetItems<TItem>(string propertyName)
         {
             object value = Properties[propertyName];
 
@@ -337,9 +337,9 @@ namespace Pihrtsoft.Records
             return items;
         }
 
-        public object[] GetItemsOrDefault(string propertyName)
+        public object[] GetItemsOrDefault(string propertyName, object[] defaultValue = default(object[]))
         {
-            return GetItemsOrDefault<object>(propertyName);
+            return GetItemsOrDefault<object>(propertyName, defaultValue);
         }
 
         public TItem[] GetItemsOrDefault<TItem>(string propertyName, TItem[] defaultValue = default(TItem[]))
