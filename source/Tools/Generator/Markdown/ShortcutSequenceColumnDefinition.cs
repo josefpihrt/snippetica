@@ -10,7 +10,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 
         public override string GetValue(object value)
         {
-            return ((CharacterSequence)value).Value;
+            return MarkdownHelper.Escape(((CharacterSequence)value).Value);
         }
     }
 }

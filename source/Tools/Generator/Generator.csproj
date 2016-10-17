@@ -52,6 +52,7 @@
     <Compile Include="HtmlSnippetGenerator.cs" />
     <Compile Include="Markdown\ColumnDefinition.cs" />
     <Compile Include="Markdown\MarkdownGenerator.cs" />
+    <Compile Include="Markdown\MarkdownHelper.cs" />
     <Compile Include="Markdown\MarkdownTableWriter.cs" />
     <Compile Include="Markdown\ShortcutCommentColumnDefinition.cs" />
     <Compile Include="Markdown\ShortcutDescriptionColumnDefinition.cs" />

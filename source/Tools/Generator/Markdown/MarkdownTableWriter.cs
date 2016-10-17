@@ -42,7 +42,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
                     Write(" ");
                 }
 
-                Write(definition.Title);
+                Write(MarkdownHelper.Escape(definition.Title));
             }
 
             WriteLine();

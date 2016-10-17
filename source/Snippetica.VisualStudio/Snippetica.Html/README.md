@@ -5,12 +5,12 @@
 * Snippet can be inserted by providing full name of an element (for example **div**).
 * If you want to provide element's content right during snippet insertion you can do it by appending **x** to the element name (for example **divx**).
 
-Character(s) | Description | Comment
+Character\(s\) | Description | Comment
 ------------ | ----------- | -------
-a|(element) with attribute|-
-e|element|-
-s|self-closing (element)|-
-x|(element) with content|-
+a|\(element\) with attribute|\-
+e|element|\-
+s|self\-closing \(element\)|\-
+x|\(element\) with content|\-
 
 * [full list of snippets (sorted by title)](SnippetsByTitle.md)
 * [full list of snippets (sorted by shortcut)](SnippetsByShortcut.md)
@@ -48,8 +48,8 @@ Title | Shortcut
 [comment](Comment.snippet)|c
 [datalist](datalist.snippet)|datalist
 [dd](dd.snippet)|dd
+[del\+ins](del_ins.snippet)|delins
 [del](del.snippet)|del
-[del+ins](del_ins.snippet)|delins
 [details](details.snippet)|details
 [dfn](dfn.snippet)|dfn
 [dialog](dialog.snippet)|dialog
@@ -57,9 +57,9 @@ Title | Shortcut
 [div](div.snippet)|div
 [dl](dl.snippet)|dl
 [dt](dt.snippet)|dt
-[element (with attribute)](ElementWithAttribute.snippet)|ea
-[element (with attribute, with content)](ElementWithAttributeWithContent.snippet)|eax
-[element (with content)](ElementWithContent.snippet)|ex
+[element \(with attribute, with content\)](ElementWithAttributeWithContent.snippet)|eax
+[element \(with attribute\)](ElementWithAttribute.snippet)|ea
+[element \(with content\)](ElementWithContent.snippet)|ex
 [element](Element.snippet)|e
 [em](em.snippet)|em
 [embed](embed.snippet)|embed
@@ -122,8 +122,8 @@ Title | Shortcut
 [script](script.snippet)|script
 [section](section.snippet)|section
 [select](select.snippet)|select
-[self-closing element (with attribute)](SelfClosingElementWithAttribute.snippet)|eas
-[self-closing element](SelfClosingElement.snippet)|es
+[self\-closing element \(with attribute\)](SelfClosingElementWithAttribute.snippet)|eas
+[self\-closing element](SelfClosingElement.snippet)|es
 [small](small.snippet)|small
 [source](source.snippet)|source
 [span](span.snippet)|span

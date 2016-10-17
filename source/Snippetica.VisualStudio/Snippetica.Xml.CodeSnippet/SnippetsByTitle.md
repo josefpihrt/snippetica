@@ -8,8 +8,8 @@ Title | Shortcut
 ----- | --------
 [c Code](Code.snippet)|s
 [cs CodeSnippet](CodeSnippet.snippet)|s
-[cscpp CodeSnippet for C++](CodeSnippetCPlusPlus.snippet)|s
-[cscs CodeSnippet for C#](CodeSnippetCSharp.snippet)|s
+[cscpp CodeSnippet for C\+\+](CodeSnippetCPlusPlus.snippet)|s
+[cscs CodeSnippet for C\#](CodeSnippetCSharp.snippet)|s
 [cshtml CodeSnippet for HTML](CodeSnippetHtml.snippet)|s
 [csjs CodeSnippet for JavaScript](CodeSnippetJavaScript.snippet)|s
 [css CodeSnippets](CodeSnippets.snippet)|s

@@ -31,7 +31,9 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
                 "",
                 RegexOptions.IgnoreCase);
 
-            return $"[{snippet.GetTitleWithoutShortcut()}]({path})";
+            path = path.Replace('\\', '/');
+
+            return $"[{MarkdownHelper.Escape(snippet.GetTitleWithoutShortcut())}]({path})";
         }
     }
 }

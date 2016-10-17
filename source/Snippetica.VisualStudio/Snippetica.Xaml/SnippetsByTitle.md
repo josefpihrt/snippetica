@@ -33,20 +33,20 @@ Title | Shortcut
 [DataTemplate](DataTemplate_.snippet)|date
 [DockPanel with LastChildFill](DockPanelLastChildFill.snippet)|dockpanel
 [DockPanel with LastChildFill](DockPanelLastChildFill_.snippet)|dkpl
-[DockPanel.Dock](DockPanelDock.snippet)|dockpanel
-[DockPanel.Dock](DockPanelDock_.snippet)|dkpl
+[DockPanel\.Dock](DockPanelDock.snippet)|dockpanel
+[DockPanel\.Dock](DockPanelDock_.snippet)|dkpl
 [DockPanel](DockPanel.snippet)|dockpanel
 [DockPanel](DockPanel_.snippet)|dkpl
-[element (with attribute)](ElementWithAttribute.snippet)|ea
-[element (with attribute, with content)](ElementWithAttributeWithContent.snippet)|eax
-[element (with content)](ElementWithContent.snippet)|ex
+[element \(with attribute, with content\)](ElementWithAttributeWithContent.snippet)|eax
+[element \(with attribute\)](ElementWithAttribute.snippet)|ea
+[element \(with content\)](ElementWithContent.snippet)|ex
 [element](Element.snippet)|e
 [Grid](Grid.snippet)|grid
 [Grid](Grid_.snippet)|gd
-[GridSplitter (horizontal)](GridSplitterHorizontal.snippet)|gridsplitter
-[GridSplitter (horizontal)](GridSplitterHorizontal_.snippet)|gdsr
-[GridSplitter (vertical)](GridSplitterVertical.snippet)|gridsplitter
-[GridSplitter (vertical)](GridSplitterVertical_.snippet)|gdsr
+[GridSplitter \(horizontal\)](GridSplitterHorizontal.snippet)|gridsplitter
+[GridSplitter \(horizontal\)](GridSplitterHorizontal_.snippet)|gdsr
+[GridSplitter \(vertical\)](GridSplitterVertical.snippet)|gridsplitter
+[GridSplitter \(vertical\)](GridSplitterVertical_.snippet)|gdsr
 [GridViewColumn](GridViewColumn.snippet)|gridviewcolumn
 [GridViewColumn](GridViewColumn_.snippet)|gdvwcn
 [GroupBox](GroupBox.snippet)|groupbox
@@ -69,14 +69,14 @@ Title | Shortcut
 [MenuItem](MenuItem_.snippet)|muim
 [RowDefinition](RowDefinition.snippet)|rowdefinition
 [RowDefinition](RowDefinition_.snippet)|rwdn
-[self-closing element (with attribute)](SelfClosingElementWithAttribute.snippet)|eas
-[self-closing element](SelfClosingElement.snippet)|es
+[self\-closing element \(with attribute\)](SelfClosingElementWithAttribute.snippet)|eas
+[self\-closing element](SelfClosingElement.snippet)|es
 [Setter](Setter.snippet)|setter
 [Setter](Setter_.snippet)|sr
-[StackPanel (horizontal)](StackPanelHorizontal.snippet)|stackpanel
-[StackPanel (horizontal)](StackPanelHorizontal_.snippet)|skpl
-[StackPanel (vertical)](StackPanelVertical.snippet)|stackpanel
-[StackPanel (vertical)](StackPanelVertical_.snippet)|skpl
+[StackPanel \(horizontal\)](StackPanelHorizontal.snippet)|stackpanel
+[StackPanel \(horizontal\)](StackPanelHorizontal_.snippet)|skpl
+[StackPanel \(vertical\)](StackPanelVertical.snippet)|stackpanel
+[StackPanel \(vertical\)](StackPanelVertical_.snippet)|skpl
 [StackPanel](StackPanel.snippet)|stackpanel
 [StackPanel](StackPanel_.snippet)|skpl
 [TabControl](TabControl.snippet)|tabcontrol
@@ -89,9 +89,9 @@ Title | Shortcut
 [TextBox](TextBox_.snippet)|ttbx
 [UniformGrid](UniformGrid.snippet)|uniformgrid
 [UniformGrid](UniformGrid_.snippet)|umgd
-[WrapPanel (horizontal)](WrapPanelHorizontal.snippet)|wrappanel
-[WrapPanel (horizontal)](WrapPanelHorizontal_.snippet)|wppl
-[WrapPanel (vertical)](WrapPanelVertical.snippet)|wrappanel
-[WrapPanel (vertical)](WrapPanelVertical_.snippet)|wppl
+[WrapPanel \(horizontal\)](WrapPanelHorizontal.snippet)|wrappanel
+[WrapPanel \(horizontal\)](WrapPanelHorizontal_.snippet)|wppl
+[WrapPanel \(vertical\)](WrapPanelVertical.snippet)|wrappanel
+[WrapPanel \(vertical\)](WrapPanelVertical_.snippet)|wppl
 [WrapPanel](WrapPanel.snippet)|wrappanel
 [WrapPanel](WrapPanel_.snippet)|wppl

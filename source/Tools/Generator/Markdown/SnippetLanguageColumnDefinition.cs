@@ -10,7 +10,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 
         public override string GetValue(object value)
         {
-            return LanguageHelper.GetLanguageTitle(((Snippet)value).Language);
+            return MarkdownHelper.Escape(LanguageHelper.GetLanguageTitle(((Snippet)value).Language));
         }
     }
 }
