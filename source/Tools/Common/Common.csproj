@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterSequence.cs" />
     <Compile Include="IOUtility.cs" />
     <Compile Include="LanguageHelper.cs" />
     <Compile Include="LiteralIdentifiers.cs" />

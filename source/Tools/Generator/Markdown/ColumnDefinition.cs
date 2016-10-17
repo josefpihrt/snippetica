@@ -1,10 +1,11 @@
-﻿
+﻿using System;
+
 namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 {
-    public abstract class SnippetColumnDefinition
+    public abstract class ColumnDefinition
     {
         public abstract string Title { get; }
 
-        public abstract string GetValue(Snippet snippet);
+        public abstract string GetValue(object value);
     }
 }

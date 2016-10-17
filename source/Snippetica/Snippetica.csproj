@@ -63,7 +63,6 @@
     <None Include="Snippetica.CSharp.Dev\Modifiers\ReadOnlyModifier.snippet" />
     <None Include="Snippetica.CSharp\SnippetsByShortcut.md" />
     <None Include="Snippetica.CSharp\SnippetsByTitle.md" />
-    <None Include="Snippetica.Html.AutoGeneration\README.md" />
     <None Include="Snippetica.Html\SnippetsByShortcut.md" />
     <None Include="Snippetica.Html\SnippetsByTitle.md" />
     <None Include="Snippetica.VisualBasic\SnippetsByShortcut.md" />

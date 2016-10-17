@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 {
@@ -76,22 +77,27 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
             }
         }
 
-        public static void WriteDirectoryMarkdownFiles(SnippetDirectory[] snippetDirectories)
+        public static void WriteDirectoryMarkdownFiles(SnippetDirectory[] snippetDirectories, CharacterSequence[] characterSequences)
         {
             foreach (SnippetDirectory snippetDirectory in snippetDirectories)
-                WriteDirectoryMarkdownFiles(snippetDirectory, snippetDirectory.Path);
+            {
+                WriteDirectoryMarkdownFiles(
+                    snippetDirectory,
+                    snippetDirectory.Path,
+                    characterSequences.Where(f => f.DirectoryNames.Contains(snippetDirectory.DirectoryName)).ToArray());
+            }
         }
 
-        public static void WriteDirectoryMarkdownFiles(SnippetDirectory snippetDirectory, string directoryPath)
+        public static void WriteDirectoryMarkdownFiles(SnippetDirectory snippetDirectory, string directoryPath, CharacterSequence[] characterSequences)
         {
-            WriteDirectoryMarkdownFiles(snippetDirectory.EnumerateSnippets().ToArray(), directoryPath);
+            WriteDirectoryMarkdownFiles(snippetDirectory.EnumerateSnippets().ToArray(), directoryPath, characterSequences);
         }
 
-        public static void WriteDirectoryMarkdownFiles(Snippet[] snippets, string directoryPath)
+        public static void WriteDirectoryMarkdownFiles(Snippet[] snippets, string directoryPath, CharacterSequence[] characterSequences)
         {
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, "README.md"),
-                GenerateDirectoryReadme(snippets.Where(f => !f.HasTag(KnownTags.ExcludeFromReadme)), directoryPath));
+                GenerateDirectoryReadme(snippets.Where(f => !f.HasTag(KnownTags.ExcludeFromReadme)), directoryPath, characterSequences));
 
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, SnippetsByTitleFileName),
@@ -102,12 +108,36 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
                 GenerateSnippetList(snippets, directoryPath, SnippetTableWriter.CreateShortcutThenTitle(directoryPath)));
         }
 
-        private static string GenerateDirectoryReadme(IEnumerable<Snippet> snippets, string directoryPath)
+        private static string GenerateDirectoryReadme(IEnumerable<Snippet> snippets, string directoryPath, CharacterSequence[] characterSequences)
         {
             using (var sw = new StringWriter())
             {
-                sw.WriteLine($"## {Path.GetFileName(directoryPath)}");
+                string directoryName = Path.GetFileName(directoryPath);
+
+                sw.WriteLine($"## {directoryName}");
                 sw.WriteLine();
+
+                if (characterSequences.Length > 0)
+                {
+                    sw.WriteLine("### Quick Reference");
+                    sw.WriteLine();
+
+                    string filePath = $@"..\..\..\..\..\text\{directoryName}.md";
+
+                    if (File.Exists(filePath))
+                    {
+                        sw.WriteLine(File.ReadAllText(filePath, Encoding.UTF8));
+                        sw.WriteLine();
+                    }
+
+                    using (CharacterSequenceTableWriter tableWriter = CharacterSequenceTableWriter.Create())
+                    {
+                        tableWriter.WriteTable(characterSequences);
+                        sw.Write(tableWriter.ToString());
+                    }
+
+                    sw.WriteLine();
+                }
 
                 sw.WriteLine($"* [full list of snippets (sorted by title)]({SnippetsByTitleFileName})");
                 sw.WriteLine($"* [full list of snippets (sorted by shortcut)]({SnippetsByShortcutFileName})");

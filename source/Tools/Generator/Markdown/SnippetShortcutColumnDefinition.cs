@@ -1,16 +1,16 @@
 ﻿
 namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 {
-    internal class SnippetShortcutColumnDefinition : SnippetColumnDefinition
+    internal class SnippetShortcutColumnDefinition : ColumnDefinition
     {
         public override string Title
         {
             get { return "Shortcut"; }
         }
 
-        public override string GetValue(Snippet snippet)
+        public override string GetValue(object value)
         {
-            return snippet.Shortcut;
+            return ((Snippet)value).Shortcut;
         }
     }
 }

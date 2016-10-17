@@ -8,6 +8,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         public GeneralSettings()
         {
             ProjectTitle = "Snippetica";
+            DirectoryNamePrefix = ProjectTitle + ".";
             SourceDirectoryName = "source";
             GitHubPath = "http://github.com/JosefPihrt/Snippetica";
             GitHubMasterPath = $"{GitHubPath}/blob/master";
@@ -23,6 +24,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         public string SolutionDirectoryPath { get; set; }
 
         public string ProjectTitle { get; }
+        public string DirectoryNamePrefix { get; }
         public string GitHubPath { get; }
         public string GitHubMasterPath { get; }
         public string GitHubSourcePath { get; }

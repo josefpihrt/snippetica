@@ -1,16 +1,16 @@
 ﻿
 namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 {
-    internal class SnippetLanguageColumnDefinition : ColumnDefinition
+    internal class ShortcutSequenceColumnDefinition : ColumnDefinition
     {
         public override string Title
         {
-            get { return "Language"; }
+            get { return "Character(s)"; }
         }
 
         public override string GetValue(object value)
         {
-            return LanguageHelper.GetLanguageTitle(((Snippet)value).Language);
+            return ((CharacterSequence)value).Value;
         }
     }
 }

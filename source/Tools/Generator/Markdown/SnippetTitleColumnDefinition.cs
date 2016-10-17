@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 {
-    internal class SnippetTitleColumnDefinition : SnippetColumnDefinition
+    internal class SnippetTitleColumnDefinition : ColumnDefinition
     {
         private readonly string _pattern;
 
@@ -21,8 +21,10 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 
         public string DirectoryPath { get; }
 
-        public override string GetValue(Snippet snippet)
+        public override string GetValue(object value)
         {
+            var snippet = (Snippet)value;
+
             string path = Regex.Replace(
                 snippet.FilePath,
                 _pattern,

@@ -21,6 +21,8 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             SnippetDirectory[] snippetDirectories = LoadSnippetDirectories().ToArray();
 
+            CharacterSequence[] characterSequences = LoadCharacterSequences(settings).ToArray();
+
             GenerateSnippets(snippetDirectories);
             GenerateHtmlSnippets(snippetDirectories);
             GenerateXamlSnippets(snippetDirectories);
@@ -32,7 +34,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             MarkdownGenerator.WriteSolutionReadMe(releaseDirectories, settings);
             MarkdownGenerator.WriteProjectMarkdownFiles(releaseDirectories, Path.GetFullPath(settings.ProjectPath));
-            MarkdownGenerator.WriteDirectoryMarkdownFiles(releaseDirectories);
+            MarkdownGenerator.WriteDirectoryMarkdownFiles(releaseDirectories, characterSequences);
 
             CopySnippetsToVisualStudioProject(settings.ExtensionProjectPath, releaseDirectories);
 
@@ -41,7 +43,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                 .ToArray();
 
             MarkdownGenerator.WriteProjectMarkdownFiles(releaseDirectories, settings.ExtensionProjectPath);
-            MarkdownGenerator.WriteDirectoryMarkdownFiles(releaseDirectories);
+            MarkdownGenerator.WriteDirectoryMarkdownFiles(releaseDirectories, characterSequences);
 
             WriteVisualStudioGalleryDescription(releaseDirectories, settings);
             WritePkgDefFile(releaseDirectories, settings);
@@ -58,6 +60,22 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                 .ReadRecords()
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .Select(record => SnippetDirectoryMapper.MapFromRecord(record));
+        }
+
+        private static IEnumerable<CharacterSequence> LoadCharacterSequences(GeneralSettings settings)
+        {
+            return Document.Create(@"..\..\CharacterSequences.xml")
+                .ReadRecords()
+                .Where(f => !f.HasTag(KnownTags.Disabled))
+                .Select(record =>
+                {
+                    return new CharacterSequence(
+                        record.GetString("Sequence"),
+                        record.GetString("Description"),
+                        record.GetStringOrDefault("Comment", "-"),
+                        record.GetItems<string>("Languages").Select(f => settings.DirectoryNamePrefix + f),
+                        record.Tags);
+                });
         }
 
         private static void CheckSnippets(SnippetDirectory[] snippetDirectories)

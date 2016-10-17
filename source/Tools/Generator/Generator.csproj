@@ -50,8 +50,13 @@
   <ItemGroup>
     <Compile Include="GeneralSettings.cs" />
     <Compile Include="HtmlSnippetGenerator.cs" />
+    <Compile Include="Markdown\ColumnDefinition.cs" />
     <Compile Include="Markdown\MarkdownGenerator.cs" />
-    <Compile Include="Markdown\SnippetColumnDefinition.cs" />
+    <Compile Include="Markdown\MarkdownTableWriter.cs" />
+    <Compile Include="Markdown\ShortcutCommentColumnDefinition.cs" />
+    <Compile Include="Markdown\ShortcutDescriptionColumnDefinition.cs" />
+    <Compile Include="Markdown\ShortcutSequenceColumnDefinition.cs" />
+    <Compile Include="Markdown\CharacterSequenceTableWriter.cs" />
     <Compile Include="Markdown\SnippetLanguageColumnDefinition.cs" />
     <Compile Include="Markdown\SnippetShortcutColumnDefinition.cs" />
     <Compile Include="Markdown\SnippetTableWriter.cs" />
@@ -84,6 +89,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Html.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CharacterSequences.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Records.xml">

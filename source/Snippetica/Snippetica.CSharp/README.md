@@ -1,5 +1,82 @@
 ﻿## Snippetica.CSharp
 
+### Quick Reference
+
+* Default access modifier is **public**.
+
+Character(s) | Description | Comment
+------------ | ----------- | -------
+_|interface member|prefix
+_|with initializer|suffix
+_|with parameters|suffix
+a|Array|-
+b|Boolean|-
+c|catch|-
+c|class declaration|-
+c|Collection<T>|-
+co|conditional operator|-
+cr|constructor declaration|-
+d|default|-
+d|Dictionary<TKey,TValue>|-
+de|delegate declaration|-
+dt|DateTime|-
+e|else clause|-
+e|IEnumerable<T>|-
+em|enum declaration|-
+et|event declaration|-
+f|false|-
+f|field declaration|-
+f|finally|-
+fe|foreach statement|-
+fr|for statement|-
+g|generic type|prefix
+g|type parameter|-
+hs|HashSet<T>|-
+i|Immutable|prefix
+i|Int32|-
+i|internal (Friend)|prefix
+ie|inteface declaration|-
+if|if statement|-
+ir|indexer declaration|-
+k|constant declaration|-
+l|Int64|-
+l|lambda expression|-
+l|List<T>|-
+ll|LinkedList<T>|-
+m|method declaration|-
+n|(equal to) null|-
+n|new object creation|-
+nn|not (equal to) null|-
+no|nameof operator|-
+o|Object|-
+oc|ObservableCollection<T>|-
+oo|operator overload|-
+p|private|prefix
+p|property declaration|-
+pa|parameter array|-
+pp|preprocessor directive|prefix
+pp|property declaration (expanded)|-
+ps|private set|-
+q|Queue<T>|-
+r|read-only|-
+r|return|-
+re|return|-
+s|Stack<T>|-
+s|static (Shared)|prefix (after access modifier)
+s|String|-
+sh|switch statement|-
+st|struct|-
+t|explict cast operator|-
+t|true|-
+t|try|-
+this|containing type name|-
+to|typeof operator|-
+tw|throw statement|-
+u|using statement|-
+v|local variable|prefix
+we|while statement|-
+y|yield|-
+
 * [full list of snippets (sorted by title)](SnippetsByTitle.md)
 * [full list of snippets (sorted by shortcut)](SnippetsByShortcut.md)
 
