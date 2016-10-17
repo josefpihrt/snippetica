@@ -70,7 +70,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                 .Select(record =>
                 {
                     return new CharacterSequence(
-                        record.GetString("Sequence"),
+                        record.GetString("Value"),
                         record.GetString("Description"),
                         record.GetStringOrDefault("Comment", "-"),
                         record.GetItems<string>("Languages").Select(f => settings.DirectoryNamePrefix + f),

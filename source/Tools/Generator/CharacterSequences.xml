@@ -3,7 +3,7 @@
   <Entities>
     <Entity Name="CharacterSequence">
       <Declarations>
-        <Property Name="Sequence" />
+        <Property Name="Value" />
         <Property Name="Description" />
         <Property Name="Comment" />
         <Property Name="Languages" IsCollection="true" />
@@ -12,93 +12,93 @@
         <Add Languages="Xml">
           <Add Languages="Xaml">
             <Add Languages="Html">
-              <New Sequence="a" Description="(element) with attribute" />
-              <New Sequence="e" Description="element" />
-              <New Sequence="s" Description="self-closing (element)" />
-              <New Sequence="x" Description="(element) with content" />
+              <New Value="a" Description="(element) with attribute" />
+              <New Value="e" Description="element" />
+              <New Value="s" Description="self-closing (element)" />
+              <New Value="x" Description="(element) with content" />
             </Add>
           </Add>
         </Add>
         <Add Languages="CSharp">
-          <New Sequence="co" Description="conditional operator" />
-          <New Sequence="sh" Description="switch statement" />
-          <New Sequence="t" Description="explict cast operator" />
-          <New Sequence="to" Description="typeof operator" />
+          <New Value="co" Description="conditional operator" />
+          <New Value="sh" Description="switch statement" />
+          <New Value="t" Description="explict cast operator" />
+          <New Value="to" Description="typeof operator" />
         </Add>
         <Add Languages="VisualBasic">
-          <New Sequence="gt" Description="GetType operator" />
-          <New Sequence="me" Description="Module declaration" />
-          <New Sequence="sc" Description="Select Case statement" />
-          <New Sequence="tc" Description="TryCast operator" />
+          <New Value="gt" Description="GetType operator" />
+          <New Value="me" Description="Module declaration" />
+          <New Value="sc" Description="Select Case statement" />
+          <New Value="tc" Description="TryCast operator" />
         </Add>
         <Add Languages="CSharp">
           <Add Languages="VisualBasic">
-            <New Sequence="_" Description="interface member" Comment="prefix" />
-            <New Sequence="_" Description="with parameters" Comment="suffix" />
-            <New Sequence="_" Description="with initializer" Comment="suffix" />
-            <New Sequence="a" Description="Array" />
-            <New Sequence="b" Description="Boolean" />
-            <New Sequence="c" Description="class declaration" />
-            <New Sequence="c" Description="catch" />
-            <New Sequence="c" Description="Collection&lt;T&gt;" />
-            <New Sequence="cr" Description="constructor declaration" />
-            <New Sequence="d" Description="default" />
-            <New Sequence="d" Description="Dictionary&lt;TKey,TValue&gt;" />
-            <New Sequence="de" Description="delegate declaration" />
-            <New Sequence="dt" Description="DateTime" />
-            <New Sequence="e" Description="IEnumerable&lt;T&gt;" />
-            <New Sequence="e" Description="else clause" />
-            <New Sequence="em" Description="enum declaration" />
-            <New Sequence="et" Description="event declaration" />
-            <New Sequence="f" Description="finally" />
-            <New Sequence="f" Description="field declaration" />
-            <New Sequence="f" Description="false" />
-            <New Sequence="fe" Description="foreach statement" />
-            <New Sequence="fr" Description="for statement" />
-            <New Sequence="g" Description="type parameter" />
-            <New Sequence="g" Description="generic type" Comment="prefix" />
-            <New Sequence="hs" Description="HashSet&lt;T&gt;" />
-            <New Sequence="i" Description="internal (Friend)" Comment="prefix" />
-            <New Sequence="i" Description="Int32" />
-            <New Sequence="i" Description="Immutable" Comment="prefix" />
-            <New Sequence="ie" Description="inteface declaration" />
-            <New Sequence="if" Description="if statement" />
-            <New Sequence="ir" Description="indexer declaration" />
-            <New Sequence="k" Description="constant declaration" />
-            <New Sequence="l" Description="Int64" />
-            <New Sequence="l" Description="List&lt;T&gt;" />
-            <New Sequence="l" Description="lambda expression" />
-            <New Sequence="ll" Description="LinkedList&lt;T&gt;" />
-            <New Sequence="m" Description="method declaration" />
-            <New Sequence="n" Description="(equal to) null" />
-            <New Sequence="n" Description="new object creation" />
-            <New Sequence="nn" Description="not (equal to) null" />
-            <New Sequence="no" Description="nameof operator" />
-            <New Sequence="o" Description="Object" />
-            <New Sequence="oc" Description="ObservableCollection&lt;T&gt;" />
-            <New Sequence="oo" Description="operator overload" />
-            <New Sequence="p" Description="property declaration" />
-            <New Sequence="p" Description="private" Comment="prefix" />
-            <New Sequence="pa" Description="parameter array" />
-            <New Sequence="pp" Description="preprocessor directive" Comment="prefix" />
-            <New Sequence="pp" Description="property declaration (expanded)" />
-            <New Sequence="ps" Description="private set" />
-            <New Sequence="q" Description="Queue&lt;T&gt;" />
-            <New Sequence="r" Description="read-only" />
-            <New Sequence="r" Description="return" />
-            <New Sequence="re" Description="return" />
-            <New Sequence="s" Description="static (Shared)" Comment="prefix (after access modifier)" />
-            <New Sequence="s" Description="String" />
-            <New Sequence="s" Description="Stack&lt;T&gt;" />
-            <New Sequence="st" Description="struct" />
-            <New Sequence="t" Description="true" />
-            <New Sequence="t" Description="try" />
-            <New Sequence="this" Description="containing type name" />
-            <New Sequence="tw" Description="throw statement" />
-            <New Sequence="u" Description="using statement" />
-            <New Sequence="v" Description="local variable" Comment="prefix" />
-            <New Sequence="we" Description="while statement" />
-            <New Sequence="y" Description="yield" />
+            <New Value="_" Description="interface member" Comment="prefix" />
+            <New Value="_" Description="with parameters" Comment="suffix" />
+            <New Value="_" Description="with initializer" Comment="suffix" />
+            <New Value="a" Description="Array" />
+            <New Value="b" Description="Boolean" />
+            <New Value="c" Description="class declaration" />
+            <New Value="c" Description="catch" />
+            <New Value="c" Description="Collection&lt;T&gt;" />
+            <New Value="cr" Description="constructor declaration" />
+            <New Value="d" Description="default" />
+            <New Value="d" Description="Dictionary&lt;TKey,TValue&gt;" />
+            <New Value="de" Description="delegate declaration" />
+            <New Value="dt" Description="DateTime" />
+            <New Value="e" Description="IEnumerable&lt;T&gt;" />
+            <New Value="e" Description="else clause" />
+            <New Value="em" Description="enum declaration" />
+            <New Value="et" Description="event declaration" />
+            <New Value="f" Description="finally" />
+            <New Value="f" Description="field declaration" />
+            <New Value="f" Description="false" />
+            <New Value="fe" Description="foreach statement" />
+            <New Value="fr" Description="for statement" />
+            <New Value="g" Description="type parameter" />
+            <New Value="g" Description="generic type" Comment="prefix" />
+            <New Value="hs" Description="HashSet&lt;T&gt;" />
+            <New Value="i" Description="internal (Friend)" Comment="prefix" />
+            <New Value="i" Description="Int32" />
+            <New Value="i" Description="Immutable" Comment="prefix" />
+            <New Value="ie" Description="inteface declaration" />
+            <New Value="if" Description="if statement" />
+            <New Value="ir" Description="indexer declaration" />
+            <New Value="k" Description="constant declaration" />
+            <New Value="l" Description="Int64" />
+            <New Value="l" Description="List&lt;T&gt;" />
+            <New Value="l" Description="lambda expression" />
+            <New Value="ll" Description="LinkedList&lt;T&gt;" />
+            <New Value="m" Description="method declaration" />
+            <New Value="n" Description="(equal to) null" />
+            <New Value="n" Description="new object creation" />
+            <New Value="nn" Description="not (equal to) null" />
+            <New Value="no" Description="nameof operator" />
+            <New Value="o" Description="Object" />
+            <New Value="oc" Description="ObservableCollection&lt;T&gt;" />
+            <New Value="oo" Description="operator overload" />
+            <New Value="p" Description="property declaration" />
+            <New Value="p" Description="private" Comment="prefix" />
+            <New Value="pa" Description="parameter array" />
+            <New Value="pp" Description="preprocessor directive" Comment="prefix" />
+            <New Value="pp" Description="property declaration (expanded)" />
+            <New Value="ps" Description="private set" />
+            <New Value="q" Description="Queue&lt;T&gt;" />
+            <New Value="r" Description="read-only" />
+            <New Value="r" Description="return" />
+            <New Value="re" Description="return" />
+            <New Value="s" Description="static (Shared)" Comment="prefix (after access modifier)" />
+            <New Value="s" Description="String" />
+            <New Value="s" Description="Stack&lt;T&gt;" />
+            <New Value="st" Description="struct" />
+            <New Value="t" Description="true" />
+            <New Value="t" Description="try" />
+            <New Value="this" Description="containing type name" />
+            <New Value="tw" Description="throw statement" />
+            <New Value="u" Description="using statement" />
+            <New Value="v" Description="local variable" Comment="prefix" />
+            <New Value="we" Description="while statement" />
+            <New Value="y" Description="yield" />
           </Add>
         </Add>
       </Records>
