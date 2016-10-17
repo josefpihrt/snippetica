@@ -3,7 +3,7 @@
 namespace Pihrtsoft.Records.Commands
 {
     [DebuggerDisplay("{Kind} {PropertyName,nq} = {Value,nq}")]
-    public class SetCommand : Command
+    internal class SetCommand : Command
     {
         public SetCommand(string propertyName, string value)
         {

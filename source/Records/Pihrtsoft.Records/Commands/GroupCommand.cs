@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Pihrtsoft.Records.Commands
 {
-    public class GroupCommand : Command
+    internal class GroupCommand : Command
     {
         public GroupCommand(IEnumerable<Command> commands)
         {

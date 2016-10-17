@@ -1,6 +1,6 @@
 ﻿namespace Pihrtsoft.Records.Commands
 {
-    public class PrefixCommand : SetCommand
+    internal class PrefixCommand : SetCommand
     {
         public PrefixCommand(string propertyName, string value)
             : base(propertyName, value)

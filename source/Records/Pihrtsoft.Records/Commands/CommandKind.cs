@@ -1,6 +1,6 @@
 ﻿namespace Pihrtsoft.Records.Commands
 {
-    public enum CommandKind
+    internal enum CommandKind
     {
         Set,
         AddTag,

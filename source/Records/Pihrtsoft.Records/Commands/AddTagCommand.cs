@@ -3,7 +3,7 @@
 namespace Pihrtsoft.Records.Commands
 {
     [DebuggerDisplay("{Kind} {Tag,nq}")]
-    public class AddTagCommand : Command
+    internal class AddTagCommand : Command
     {
         public AddTagCommand(string tag)
         {

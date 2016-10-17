@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 
 namespace Pihrtsoft.Records.Commands
 {
-    public class CommandCollection : Collection<Command>
+    internal class CommandCollection : Collection<Command>
     {
         public CommandCollection()
         {

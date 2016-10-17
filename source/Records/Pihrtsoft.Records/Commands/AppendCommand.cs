@@ -1,6 +1,6 @@
 ﻿namespace Pihrtsoft.Records.Commands
 {
-    public class AppendCommand : SetCommand
+    internal class AppendCommand : SetCommand
     {
         public AppendCommand(string propertyName, string value)
             : base(propertyName, value)

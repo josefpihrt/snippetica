@@ -3,7 +3,7 @@
 namespace Pihrtsoft.Records.Commands
 {
     [DebuggerDisplay("{Kind}")]
-    public abstract class Command
+    internal abstract class Command
     {
         protected Command()
         {

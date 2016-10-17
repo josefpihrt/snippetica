@@ -4,7 +4,7 @@ using System.Diagnostics;
 namespace Pihrtsoft.Records.Commands
 {
     [DebuggerDisplay("{Kind} {PropertyName,nq} {Item,nq}")]
-    public class AddItemCommand : Command
+    internal class AddItemCommand : Command
     {
         public AddItemCommand(string propertyName, string item)
         {
