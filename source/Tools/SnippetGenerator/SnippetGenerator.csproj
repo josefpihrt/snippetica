@@ -32,8 +32,8 @@
     <CodeAnalysisRuleSet>..\..\Snippetica.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Pihrtsoft.Snippets, Version=1.2.1.0, Culture=neutral, PublicKeyToken=47d18de6ae9b6208, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SnippetManager.1.2.1\lib\net40\Pihrtsoft.Snippets.dll</HintPath>
+    <Reference Include="Pihrtsoft.Snippets, Version=1.2.2.0, Culture=neutral, PublicKeyToken=47d18de6ae9b6208, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SnippetManager.1.2.2\lib\net40\Pihrtsoft.Snippets.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Pihrtsoft.Text.RegularExpressions.Linq, Version=2.4.0.0, Culture=neutral, PublicKeyToken=7b6a2af53c8ae8ab, processorArchitecture=MSIL">
