@@ -34,7 +34,11 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             MarkdownGenerator.WriteSolutionReadMe(releaseDirectories, settings);
             MarkdownGenerator.WriteProjectMarkdownFiles(releaseDirectories, Path.GetFullPath(settings.ProjectPath));
-            MarkdownGenerator.WriteDirectoryMarkdownFiles(releaseDirectories, characterSequences);
+            MarkdownGenerator.WriteDirectoryMarkdownFiles(
+                snippetDirectories
+                    .Where(f => f.HasAnyTag(KnownTags.Release, KnownTags.Dev) && !f.HasAnyTag(KnownTags.AutoGenerationSource, KnownTags.AutoGenerationDestination))
+                    .ToArray(),
+                characterSequences);
 
             CopySnippetsToVisualStudioProject(settings.ExtensionProjectPath, releaseDirectories);
 
