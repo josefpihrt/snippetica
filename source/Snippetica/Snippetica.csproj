@@ -59,6 +59,7 @@
     <None Include="Snippetica.Cpp\README.md" />
     <None Include="Snippetica.Cpp\SnippetsByShortcut.md" />
     <None Include="Snippetica.Cpp\SnippetsByTitle.md" />
+    <None Include="Snippetica.CSharp.Dev\Namespace.snippet" />
     <None Include="Snippetica.CSharp.Dev\DoNotNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\DoNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\IO\PathGetFullPath.snippet" />
@@ -69,6 +70,7 @@
     <None Include="Snippetica.CSharp\SnippetsByTitle.md" />
     <None Include="Snippetica.Html\SnippetsByShortcut.md" />
     <None Include="Snippetica.Html\SnippetsByTitle.md" />
+    <None Include="Snippetica.VisualBasic.Dev\Namespace.snippet" />
     <None Include="Snippetica.VisualBasic\SnippetsByShortcut.md" />
     <None Include="Snippetica.VisualBasic\SnippetsByTitle.md" />
     <None Include="Snippetica.Xaml.Dev\Canvas.snippet" />
