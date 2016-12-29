@@ -1,6 +1,6 @@
 ﻿## Snippetica.VisualBasic
 
-* 596 snippets
+* 595 snippets
 
 ### List of Snippets
 
@@ -548,14 +548,9 @@ twn|[Throw New InvalidOperationException](ThrowNewInvalidOperationException.snip
 twn|[Throw New NotImplementedException](ThrowNewNotImplementedException.snippet)
 twn|[Throw New NotSupportedException](ThrowNewNotSupportedException.snippet)
 twn|[Throw New](ThrowNew.snippet)
+u|[er IEnumerator\(Of T\) variable](IEnumeratorOfTVariable.snippet)
 u|[Using statement](Using.snippet)
-v|[Boolean variable](BooleanVariable.snippet)
-v|[DateTime variable](DateTimeVariable.snippet)
-v|[Int32 variable](Int32Variable.snippet)
-v|[Int64 variable](Int64Variable.snippet)
-v|[Object variable](ObjectVariable.snippet)
-v|[String variable](StringVariable.snippet)
-v|[variable](Variable.snippet)
+v|[variable declaration](Variable.snippet)
 va|[array of Boolean variable](ArrayOfBooleanVariable.snippet)
 va|[array of DateTime variable](ArrayOfDateTimeVariable.snippet)
 va|[array of Int32 variable](ArrayOfInt32Variable.snippet)
@@ -570,6 +565,7 @@ va\_|[array of Int64 variable \(with initializer\)](ArrayOfInt64VariableWithInit
 va\_|[array of Object variable \(with initializer\)](ArrayOfObjectVariableWithInitializer.snippet)
 va\_|[array of String variable \(with initializer\)](ArrayOfStringVariableWithInitializer.snippet)
 va\_|[array variable \(with initializer\)](ArrayOfTVariableWithInitializer.snippet)
+vb|[Boolean variable](BooleanVariable.snippet)
 vc|[Collection\(Of T\) variable](CollectionOfTVariable.snippet)
 vc|[Dictionary\(Of T\) variable](DictionaryOfTVariable.snippet)
 vc|[HashSet\(Of T\) variable](HashSetOfTVariable.snippet)
@@ -599,6 +595,9 @@ vc\_|[SortedDictionary\(Of T\) variable \(with initializer\)](SortedDictionaryOf
 vc\_|[SortedSet\(Of T\) variable \(with initializer\)](SortedSetOfTVariableWithInitializer.snippet)
 vd|[Dictionary\(Of TKey, TValue\) variable](DictionaryOfTKeyTValueVariable.snippet)
 vd\_|[Dictionary\(Of TKey, TValue\) variable \(with initializer\)](DictionaryOfTKeyTValueVariableWithInitializer.snippet)
+vi|[Int32 variable](Int32Variable.snippet)
 vn|[new variable](NewVariable.snippet)
 vn\_|[new variable \(with arguments\)](NewVariableWithArguments.snippet)
+vs|[String variable](StringVariable.snippet)
+vt|[variable with DirectCast](VariableWithDirectCast.snippet)
 we|[While statement](While.snippet)

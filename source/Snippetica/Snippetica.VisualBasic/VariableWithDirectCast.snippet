@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>variable declaration</Title>
-    <Shortcut>v</Shortcut>
-    <Description>variable declaration</Description>
+    <Title>variable with DirectCast</Title>
+    <Shortcut>vt</Shortcut>
+    <Description>variable declaration with DirectCast</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -12,21 +12,21 @@
   <Snippet>
     <Declarations>
       <Literal>
-        <ID>_identifier</ID>
+        <ID>_type</ID>
+        <ToolTip>Type to cast to</ToolTip>
+        <Default>T</Default>
+      </Literal>
+      <Literal>
+        <ID>expression</ID>
+        <ToolTip>Expression to cast</ToolTip>
+        <Default>expression</Default>
+      </Literal>
+      <Literal>
+        <ID>identifier</ID>
         <ToolTip>Identifier name</ToolTip>
         <Default>x</Default>
       </Literal>
-      <Literal Editable="false">
-        <ID>_type</ID>
-        <ToolTip>Declaration type</ToolTip>
-        <Default>var</Default>
-      </Literal>
-      <Literal>
-        <ID>_value</ID>
-        <ToolTip>Value to assign</ToolTip>
-        <Default>expression</Default>
-      </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$_type$ $_identifier$ = $_value$;$end$]]></Code>
+    <Code Language="VB"><![CDATA[Dim $identifier$ = DirectCast($expression$, $_type$)$end$]]></Code>
   </Snippet>
 </CodeSnippet>

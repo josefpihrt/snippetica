@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>er IEnumerator&lt;T&gt; variable</Title>
+    <Title>er IEnumerator(Of T) variable</Title>
     <Shortcut>u</Shortcut>
-    <Description>IEnumerator&lt;T&gt; variable declaration.</Description>
+    <Description>IEnumerator(Of T) variable declaration.</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -13,11 +13,6 @@
     </Keywords>
   </Header>
   <Snippet>
-    <Imports>
-      <Import>
-        <Namespace>System.Collections.Generic</Namespace>
-      </Import>
-    </Imports>
     <Declarations>
       <Literal>
         <ID>_collectionIdentifier</ID>
@@ -30,12 +25,10 @@
         <Default>en</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[using (var $enumerator$ = $_collectionIdentifier$.GetEnumerator())
-{
-    while ($enumerator$.MoveNext())
-    {
+    <Code Language="VB"><![CDATA[Using $enumerator$ = $_collectionIdentifier$.GetEnumerator()
+    While $enumerator$.MoveNext()
         $end$
-    }
-}]]></Code>
+    End While
+End Using]]></Code>
   </Snippet>
 </CodeSnippet>

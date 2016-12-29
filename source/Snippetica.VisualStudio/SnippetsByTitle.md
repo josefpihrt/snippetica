@@ -1,6 +1,6 @@
 ﻿## Snippetica.VisualStudio
 
-* 1581 snippets
+* 1580 snippets
 
 ### List of Snippets
 
@@ -47,7 +47,7 @@ C\#|[array variable \(with initializer\)](Snippetica.CSharp/ArrayOfTVariableWith
 C\#|[array variable](Snippetica.CSharp/ArrayOfTVariable.snippet)|va
 C\#|[Attribute class](Snippetica.CSharp/AttributeClass.snippet)|c\_
 C\#|[Boolean type parameter](Snippetica.CSharp/BooleanTypeParameter.snippet)|g
-C\#|[Boolean variable](Snippetica.CSharp/BooleanVariable.snippet)|v
+C\#|[Boolean variable](Snippetica.CSharp/BooleanVariable.snippet)|vb
 C\#|[braces](Snippetica.CSharp/Braces.snippet)|b
 C\#|[catch](Snippetica.CSharp/Catch.snippet)|catch
 C\#|[Collection\<T\> class](Snippetica.CSharp/CollectionOfTClass.snippet)|c\_
@@ -57,7 +57,6 @@ C\#|[Collection\<T\> variable](Snippetica.CSharp/CollectionOfTVariable.snippet)|
 C\#|[containing type name](Snippetica.CSharp/ContainingTypeName.snippet)|this
 C\#|[DateTime type parameter](Snippetica.CSharp/DateTimeTypeParameter.snippet)|g
 C\#|[DateTime type](Snippetica.CSharp/DateTimeType.snippet)|dt
-C\#|[DateTime variable](Snippetica.CSharp/DateTimeVariable.snippet)|v
 C\#|[Debug\.Assert](Snippetica.CSharp/DebugAssert.snippet)|da
 C\#|[Debug\.WriteLine](Snippetica.CSharp/DebugWriteLine.snippet)|dw
 C\#|[default keyword](Snippetica.CSharp/DefaultKeyword.snippet)|d
@@ -72,6 +71,7 @@ C\#|[else](Snippetica.CSharp/Else.snippet)|e
 C\#|[equal to null](Snippetica.CSharp/EqualToNull.snippet)|n
 C\#|[Equals and GetHashCode for value type](Snippetica.CSharp/EqualsAndGetHashCodeForValueType.snippet)|equals
 C\#|[Equals and GetHashCode](Snippetica.CSharp/EqualsAndGetHashCode.snippet)|equals
+C\#|[er IEnumerator\<T\> variable](Snippetica.CSharp/IEnumeratorOfTVariable.snippet)|u
 C\#|[Exception class](Snippetica.CSharp/ExceptionClass.snippet)|c\_
 C\#|[explicit cast operator](Snippetica.CSharp/ExplicitCastOperator.snippet)|t
 C\#|[explicit operator overload](Snippetica.CSharp/OperatorOverloadExplicit.snippet)|oo
@@ -115,9 +115,8 @@ C\#|[ImmutableStack\<T\> type](Snippetica.CSharp/ImmutableStackOfTType.snippet)|
 C\#|[ImmutableStack\<T\> variable](Snippetica.CSharp/ImmutableStackOfTVariable.snippet)|vc
 C\#|[implicit operator overload](Snippetica.CSharp/OperatorOverloadImplicit.snippet)|oo
 C\#|[Int32 type parameter](Snippetica.CSharp/Int32TypeParameter.snippet)|g
-C\#|[Int32 variable](Snippetica.CSharp/Int32Variable.snippet)|v
+C\#|[Int32 variable](Snippetica.CSharp/Int32Variable.snippet)|vi
 C\#|[Int64 type parameter](Snippetica.CSharp/Int64TypeParameter.snippet)|g
-C\#|[Int64 variable](Snippetica.CSharp/Int64Variable.snippet)|v
 C\#|[interface Boolean indexer](Snippetica.CSharp/BooleanInterfaceIndexer.snippet)|\_ir
 C\#|[interface Boolean method \(with parameters\)](Snippetica.CSharp/BooleanInterfaceMethodWithParameters.snippet)|\_m\_
 C\#|[interface Boolean method](Snippetica.CSharp/BooleanInterfaceMethod.snippet)|\_m
@@ -292,7 +291,6 @@ C\#|[new variable](Snippetica.CSharp/NewVariable.snippet)|vn
 C\#|[not equal to null](Snippetica.CSharp/NotEqualToNull.snippet)|nn
 C\#|[object keyword](Snippetica.CSharp/ObjectKeyword.snippet)|o
 C\#|[Object type parameter](Snippetica.CSharp/ObjectTypeParameter.snippet)|g
-C\#|[Object variable](Snippetica.CSharp/ObjectVariable.snippet)|v
 C\#|[ObservableCollection\<T\> class](Snippetica.CSharp/ObservableCollectionOfTClass.snippet)|c\_
 C\#|[ObservableCollection\<T\> type](Snippetica.CSharp/ObservableCollectionOfTType.snippet)|gc
 C\#|[ObservableCollection\<T\> variable \(with initializer\)](Snippetica.CSharp/ObservableCollectionOfTVariableWithInitializer.snippet)|vc\_
@@ -604,7 +602,7 @@ C\#|[Stack\<T\> variable](Snippetica.CSharp/StackOfTVariable.snippet)|vc
 C\#|[static constructor](Snippetica.CSharp/StaticConstructor.snippet)|scr
 C\#|[string keyword](Snippetica.CSharp/StringKeyword.snippet)|s
 C\#|[String type parameter](Snippetica.CSharp/StringTypeParameter.snippet)|g
-C\#|[String variable](Snippetica.CSharp/StringVariable.snippet)|v
+C\#|[String variable](Snippetica.CSharp/StringVariable.snippet)|vs
 C\#|[string\.IsNullOrEmpty](Snippetica.CSharp/StringIsNullOrEmpty.snippet)|sne
 C\#|[string\.IsNullOrWhiteSpace](Snippetica.CSharp/StringIsNullOrWhiteSpace.snippet)|snw
 C\#|[switch](Snippetica.CSharp/Switch.snippet)|sh
@@ -624,7 +622,9 @@ C\#|[try\-finally](Snippetica.CSharp/TryFinally.snippet)|tf
 C\#|[type parameter](Snippetica.CSharp/TypeParameter.snippet)|g
 C\#|[typeof operator](Snippetica.CSharp/TypeOfOperator.snippet)|to
 C\#|[using statement](Snippetica.CSharp/Using.snippet)|u
-C\#|[variable](Snippetica.CSharp/Variable.snippet)|v
+C\#|[using variable](Snippetica.CSharp/UsingVariable.snippet)|u
+C\#|[variable declaration with explicit cast operator](Snippetica.CSharp/VariableWithExplicitCast.snippet)|vt
+C\#|[variable declaration](Snippetica.CSharp/Variable.snippet)|v
 C\#|[while](Snippetica.CSharp/While.snippet)|we
 C\#|[yield break](Snippetica.CSharp/YieldBreak.snippet)|yb
 C\#|[yield return](Snippetica.CSharp/YieldReturn.snippet)|yr
@@ -906,7 +906,7 @@ VB|[array variable \(with initializer\)](Snippetica.VisualBasic/ArrayOfTVariable
 VB|[array variable](Snippetica.VisualBasic/ArrayOfTVariable.snippet)|va
 VB|[Attribute class](Snippetica.VisualBasic/AttributeClass.snippet)|c\_
 VB|[Boolean type parameter](Snippetica.VisualBasic/BooleanTypeParameter.snippet)|g
-VB|[Boolean variable](Snippetica.VisualBasic/BooleanVariable.snippet)|v
+VB|[Boolean variable](Snippetica.VisualBasic/BooleanVariable.snippet)|vb
 VB|[Catch clause](Snippetica.VisualBasic/Catch.snippet)|catch
 VB|[Collection\(Of T\) class](Snippetica.VisualBasic/CollectionClass.snippet)|c\_
 VB|[Collection\(Of T\) type](Snippetica.VisualBasic/CollectionOfTType.snippet)|gc
@@ -917,7 +917,6 @@ VB|[CType operator overload](Snippetica.VisualBasic/OperatorOverloadCType.snippe
 VB|[CType operator](Snippetica.VisualBasic/CTypeOperator.snippet)|t
 VB|[DateTime type parameter](Snippetica.VisualBasic/DateTimeTypeParameter.snippet)|g
 VB|[DateTime type](Snippetica.VisualBasic/DateTimeType.snippet)|dt
-VB|[DateTime variable](Snippetica.VisualBasic/DateTimeVariable.snippet)|v
 VB|[Debug\.Assert](Snippetica.VisualBasic/DebugAssert.snippet)|da
 VB|[Debug\.WriteLine](Snippetica.VisualBasic/DebugWriteLine.snippet)|dw
 VB|[Dictionary\(Of T\) type](Snippetica.VisualBasic/DictionaryOfTType.snippet)|gc
@@ -933,6 +932,7 @@ VB|[Do statement](Snippetica.VisualBasic/Do.snippet)|do
 VB|[Else clause](Snippetica.VisualBasic/Else.snippet)|e
 VB|[ElseIf](Snippetica.VisualBasic/ElseIf.snippet)|eif
 VB|[Equals and GetHashCode](Snippetica.VisualBasic/EqualsAndGetHashCode.snippet)|equals
+VB|[er IEnumerator\(Of T\) variable](Snippetica.VisualBasic/IEnumeratorOfTVariable.snippet)|u
 VB|[Exception class](Snippetica.VisualBasic/ExceptionClass.snippet)|c\_
 VB|[For \(reversed\)](Snippetica.VisualBasic/ForReversed.snippet)|frr
 VB|[For Each statement](Snippetica.VisualBasic/ForEach.snippet)|fe
@@ -1092,9 +1092,8 @@ VB|[ImmutableSortedSet\(Of T\) variable](Snippetica.VisualBasic/ImmutableSortedS
 VB|[ImmutableStack\(Of T\) type](Snippetica.VisualBasic/ImmutableStackOfTType.snippet)|gc
 VB|[ImmutableStack\(Of T\) variable](Snippetica.VisualBasic/ImmutableStackOfTVariable.snippet)|vc
 VB|[Int32 type parameter](Snippetica.VisualBasic/Int32TypeParameter.snippet)|g
-VB|[Int32 variable](Snippetica.VisualBasic/Int32Variable.snippet)|v
+VB|[Int32 variable](Snippetica.VisualBasic/Int32Variable.snippet)|vi
 VB|[Int64 type parameter](Snippetica.VisualBasic/Int64TypeParameter.snippet)|g
-VB|[Int64 variable](Snippetica.VisualBasic/Int64Variable.snippet)|v
 VB|[interface Boolean indexer](Snippetica.VisualBasic/BooleanInterfaceIndexer.snippet)|\_ir
 VB|[interface Boolean method \(with parameters\)](Snippetica.VisualBasic/BooleanInterfaceMethodWithParameters.snippet)|\_m\_
 VB|[interface Boolean method](Snippetica.VisualBasic/BooleanInterfaceMethod.snippet)|\_m
@@ -1149,7 +1148,6 @@ VB|[new variable \(with arguments\)](Snippetica.VisualBasic/NewVariableWithArgum
 VB|[new variable](Snippetica.VisualBasic/NewVariable.snippet)|vn
 VB|[Not operator overload](Snippetica.VisualBasic/OperatorOverloadNot.snippet)|oo
 VB|[Object type parameter](Snippetica.VisualBasic/ObjectTypeParameter.snippet)|g
-VB|[Object variable](Snippetica.VisualBasic/ObjectVariable.snippet)|v
 VB|[ObservableCollection\(Of T\) class](Snippetica.VisualBasic/ObservableCollectionClass.snippet)|c\_
 VB|[ObservableCollection\(Of T\) type](Snippetica.VisualBasic/ObservableCollectionOfTType.snippet)|gc
 VB|[ObservableCollection\(Of T\) variable \(with initializer\)](Snippetica.VisualBasic/ObservableCollectionOfTVariableWithInitializer.snippet)|vc\_
@@ -1446,7 +1444,7 @@ VB|[Stack\(Of T\) type](Snippetica.VisualBasic/StackOfTType.snippet)|gc
 VB|[Stack\(Of T\) variable](Snippetica.VisualBasic/StackOfTVariable.snippet)|vc
 VB|[static constructor](Snippetica.VisualBasic/StaticConstructor.snippet)|scr
 VB|[String type parameter](Snippetica.VisualBasic/StringTypeParameter.snippet)|g
-VB|[String variable](Snippetica.VisualBasic/StringVariable.snippet)|v
+VB|[String variable](Snippetica.VisualBasic/StringVariable.snippet)|vs
 VB|[String\.IsNullOrEmpty = False](Snippetica.VisualBasic/StringIsNotNullOrEmpty.snippet)|snne
 VB|[String\.IsNullOrEmpty](Snippetica.VisualBasic/StringIsNullOrEmpty.snippet)|sne
 VB|[String\.IsNullOrWhiteSpace = False](Snippetica.VisualBasic/StringIsNotNullOrWhiteSpace.snippet)|snnw
@@ -1465,7 +1463,8 @@ VB|[Try\-Catch](Snippetica.VisualBasic/TryCatch.snippet)|tc
 VB|[Try\-Finally](Snippetica.VisualBasic/TryFinally.snippet)|tf
 VB|[type parameter](Snippetica.VisualBasic/TypeParameter.snippet)|g
 VB|[Using statement](Snippetica.VisualBasic/Using.snippet)|u
-VB|[variable](Snippetica.VisualBasic/Variable.snippet)|v
+VB|[variable declaration](Snippetica.VisualBasic/Variable.snippet)|v
+VB|[variable with DirectCast](Snippetica.VisualBasic/VariableWithDirectCast.snippet)|vt
 VB|[While statement](Snippetica.VisualBasic/While.snippet)|we
 VB|[Xor operator overload](Snippetica.VisualBasic/OperatorOverloadXor.snippet)|oo
 XAML|[Button](Snippetica.Xaml/Button.snippet)|button

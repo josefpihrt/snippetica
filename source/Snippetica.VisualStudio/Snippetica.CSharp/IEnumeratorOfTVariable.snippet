@@ -1,0 +1,36 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>er IEnumerator&lt;T&gt; variable</Title>
+    <Shortcut>u</Shortcut>
+    <Description>IEnumerator&lt;T&gt; variable declaration.</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>_collectionIdentifier</ID>
+        <ToolTip>Collection identifier name</ToolTip>
+        <Default>items</Default>
+      </Literal>
+      <Literal>
+        <ID>enumerator</ID>
+        <ToolTip>Enumerator identifier name</ToolTip>
+        <Default>en</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[using (var $enumerator$ = $_collectionIdentifier$.GetEnumerator())
+{
+    while ($enumerator$.MoveNext())
+    {
+        $end$
+    }
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

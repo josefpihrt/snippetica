@@ -90,6 +90,7 @@ Title | Shortcut
 [= operator overload](OperatorOverloadEquality.snippet)|oo
 [array variable](ArrayOfTVariable.snippet)|va
 [Attribute class](AttributeClass.snippet)|c\_
+[Boolean variable](BooleanVariable.snippet)|vb
 [Catch clause](Catch.snippet)|catch
 [Collection\(Of T\) class](CollectionClass.snippet)|c\_
 [Containing type name](ContainingTypeName.snippet)|this
@@ -106,6 +107,7 @@ Title | Shortcut
 [Else clause](Else.snippet)|e
 [ElseIf](ElseIf.snippet)|eif
 [Equals and GetHashCode](EqualsAndGetHashCode.snippet)|equals
+[er IEnumerator\(Of T\) variable](IEnumeratorOfTVariable.snippet)|u
 [Exception class](ExceptionClass.snippet)|c\_
 [For \(reversed\)](ForReversed.snippet)|frr
 [For Each statement](ForEach.snippet)|fe
@@ -121,6 +123,7 @@ Title | Shortcut
 [If Not](IfNot.snippet)|iff
 [If TryCast Is Nothing](IfTryCastIsNothing.snippet)|ifftc
 [If TryCast IsNot Nothing](IfTryCastIsNotNothing.snippet)|iftc
+[Int32 variable](Int32Variable.snippet)|vi
 [interface indexer](InterfaceIndexer.snippet)|\_ir
 [interface method](InterfaceMethod.snippet)|\_m
 [interface property](InterfaceProperty.snippet)|\_p
@@ -160,6 +163,7 @@ Title | Shortcut
 [Select Case statement](SelectCase.snippet)|sc
 [singleton class](SingletonClass.snippet)|c\_
 [static constructor](StaticConstructor.snippet)|scr
+[String variable](StringVariable.snippet)|vs
 [String\.IsNullOrEmpty = False](StringIsNotNullOrEmpty.snippet)|snne
 [String\.IsNullOrEmpty](StringIsNullOrEmpty.snippet)|sne
 [String\.IsNullOrWhiteSpace = False](StringIsNotNullOrWhiteSpace.snippet)|snnw
@@ -171,5 +175,6 @@ Title | Shortcut
 [Try\-Finally](TryFinally.snippet)|tf
 [type parameter](TypeParameter.snippet)|g
 [Using statement](Using.snippet)|u
-[variable](Variable.snippet)|v
+[variable declaration](Variable.snippet)|v
+[variable with DirectCast](VariableWithDirectCast.snippet)|vt
 [While statement](While.snippet)|we

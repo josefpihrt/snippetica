@@ -1,29 +1,29 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>@type@ variable</Title>
-    <Shortcut>v</Shortcut>
-    <Description>@type@ variable declaration</Description>
+    <Title>v using variable</Title>
+    <Shortcut>u</Shortcut>
+    <Description>using variable</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag GenerateType</Keyword>
-      <Keyword>Meta-Tag LocalDeclaration</Keyword>
+      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-Tag TitleStartsWithShortcut</Keyword>
     </Keywords>
   </Header>
   <Snippet>
     <Declarations>
       <Literal>
-        <ID>_type</ID>
-        <ToolTip>Generic type</ToolTip>
-        <Default>object</Default>
-      </Literal>
-      <Literal>
         <ID>_identifier</ID>
         <ToolTip>Identifier name</ToolTip>
         <Default>x</Default>
+      </Literal>
+      <Literal Editable="false">
+        <ID>_type</ID>
+        <ToolTip>Declaration type</ToolTip>
+        <Default>var</Default>
       </Literal>
       <Literal>
         <ID>_value</ID>
@@ -31,6 +31,9 @@
         <Default>expression</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$_type$ $_identifier$ = $_value$;$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[using ($_type$ $_identifier$ = $_value$)
+{
+    $end$
+}]]></Code>
   </Snippet>
 </CodeSnippet>

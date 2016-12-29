@@ -47,7 +47,7 @@ Title | Shortcut
 [array variable](ArrayOfTVariable.snippet)|va
 [Attribute class](AttributeClass.snippet)|c\_
 [Boolean type parameter](BooleanTypeParameter.snippet)|g
-[Boolean variable](BooleanVariable.snippet)|v
+[Boolean variable](BooleanVariable.snippet)|vb
 [braces](Braces.snippet)|b
 [catch](Catch.snippet)|catch
 [Collection\<T\> class](CollectionOfTClass.snippet)|c\_
@@ -57,7 +57,6 @@ Title | Shortcut
 [containing type name](ContainingTypeName.snippet)|this
 [DateTime type parameter](DateTimeTypeParameter.snippet)|g
 [DateTime type](DateTimeType.snippet)|dt
-[DateTime variable](DateTimeVariable.snippet)|v
 [Debug\.Assert](DebugAssert.snippet)|da
 [Debug\.WriteLine](DebugWriteLine.snippet)|dw
 [default keyword](DefaultKeyword.snippet)|d
@@ -72,6 +71,7 @@ Title | Shortcut
 [equal to null](EqualToNull.snippet)|n
 [Equals and GetHashCode for value type](EqualsAndGetHashCodeForValueType.snippet)|equals
 [Equals and GetHashCode](EqualsAndGetHashCode.snippet)|equals
+[er IEnumerator\<T\> variable](IEnumeratorOfTVariable.snippet)|u
 [Exception class](ExceptionClass.snippet)|c\_
 [explicit cast operator](ExplicitCastOperator.snippet)|t
 [explicit operator overload](OperatorOverloadExplicit.snippet)|oo
@@ -115,9 +115,8 @@ Title | Shortcut
 [ImmutableStack\<T\> variable](ImmutableStackOfTVariable.snippet)|vc
 [implicit operator overload](OperatorOverloadImplicit.snippet)|oo
 [Int32 type parameter](Int32TypeParameter.snippet)|g
-[Int32 variable](Int32Variable.snippet)|v
+[Int32 variable](Int32Variable.snippet)|vi
 [Int64 type parameter](Int64TypeParameter.snippet)|g
-[Int64 variable](Int64Variable.snippet)|v
 [interface Boolean indexer](BooleanInterfaceIndexer.snippet)|\_ir
 [interface Boolean method \(with parameters\)](BooleanInterfaceMethodWithParameters.snippet)|\_m\_
 [interface Boolean method](BooleanInterfaceMethod.snippet)|\_m
@@ -292,7 +291,6 @@ Title | Shortcut
 [not equal to null](NotEqualToNull.snippet)|nn
 [object keyword](ObjectKeyword.snippet)|o
 [Object type parameter](ObjectTypeParameter.snippet)|g
-[Object variable](ObjectVariable.snippet)|v
 [ObservableCollection\<T\> class](ObservableCollectionOfTClass.snippet)|c\_
 [ObservableCollection\<T\> type](ObservableCollectionOfTType.snippet)|gc
 [ObservableCollection\<T\> variable \(with initializer\)](ObservableCollectionOfTVariableWithInitializer.snippet)|vc\_
@@ -604,7 +602,7 @@ Title | Shortcut
 [static constructor](StaticConstructor.snippet)|scr
 [string keyword](StringKeyword.snippet)|s
 [String type parameter](StringTypeParameter.snippet)|g
-[String variable](StringVariable.snippet)|v
+[String variable](StringVariable.snippet)|vs
 [string\.IsNullOrEmpty](StringIsNullOrEmpty.snippet)|sne
 [string\.IsNullOrWhiteSpace](StringIsNullOrWhiteSpace.snippet)|snw
 [switch](Switch.snippet)|sh
@@ -624,7 +622,9 @@ Title | Shortcut
 [type parameter](TypeParameter.snippet)|g
 [typeof operator](TypeOfOperator.snippet)|to
 [using statement](Using.snippet)|u
-[variable](Variable.snippet)|v
+[using variable](UsingVariable.snippet)|u
+[variable declaration with explicit cast operator](VariableWithExplicitCast.snippet)|vt
+[variable declaration](Variable.snippet)|v
 [while](While.snippet)|we
 [yield break](YieldBreak.snippet)|yb
 [yield return](YieldReturn.snippet)|yr

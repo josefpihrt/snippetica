@@ -64,6 +64,7 @@
     <None Include="Snippetica.Cpp\README.md" />
     <None Include="Snippetica.Cpp\SnippetsByShortcut.md" />
     <None Include="Snippetica.Cpp\SnippetsByTitle.md" />
+    <None Include="Snippetica.CSharp.Dev\Attributes\FlagsAttribute.snippet" />
     <None Include="Snippetica.CSharp.Dev\Namespace.snippet" />
     <None Include="Snippetica.CSharp.Dev\DoNotNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\DoNull.snippet" />
@@ -73,11 +74,14 @@
     <None Include="Snippetica.CSharp.Dev\WhileNotNull.snippet" />
     <None Include="Snippetica.CSharp\SnippetsByShortcut.md" />
     <None Include="Snippetica.CSharp\SnippetsByTitle.md" />
+    <None Include="Snippetica.CSharp\UsingVariable.snippet" />
     <None Include="Snippetica.Html\SnippetsByShortcut.md" />
     <None Include="Snippetica.Html\SnippetsByTitle.md" />
     <None Include="Snippetica.VisualBasic.Dev\Namespace.snippet" />
+    <None Include="Snippetica.VisualBasic\IEnumeratorOfTVariable.snippet" />
     <None Include="Snippetica.VisualBasic\SnippetsByShortcut.md" />
     <None Include="Snippetica.VisualBasic\SnippetsByTitle.md" />
+    <None Include="Snippetica.VisualBasic\VariableWithDirectCast.snippet" />
     <None Include="Snippetica.Xaml.Dev\Canvas.snippet" />
     <None Include="Snippetica.Xaml.Dev\DockPanel.snippet" />
     <None Include="Snippetica.Xaml.Dev\Grid.snippet" />
@@ -100,7 +104,7 @@
     <None Include="Snippetica.CSharp.AutoGeneration\CollectionOfTType.snippet" />
     <None Include="Snippetica.CSharp.AutoGeneration\AutoPropertyWithPrivateSet.snippet" />
     <None Include="Snippetica.CSharp.AutoGeneration\CollectionOfTVariable.snippet" />
-    <None Include="Snippetica.CSharp.AutoGeneration\Variable.snippet" />
+    <None Include="Snippetica.CSharp\Variable.snippet" />
     <None Include="Snippetica.CSharp.Dev.AutoGeneration\IfNotTryGetValue.snippet" />
     <None Include="Snippetica.CSharp.Dev.AutoGeneration\IfNotTryParse.snippet" />
     <None Include="Snippetica.CSharp.Dev.AutoGeneration\IfTryParse.snippet" />
@@ -111,10 +115,10 @@
     <None Include="Snippetica.CSharp.Dev\Attributes\ObsoleteAttribute.snippet" />
     <None Include="Snippetica.CSharp.Dev\Attributes\ConditionalAttribute.snippet" />
     <None Include="Snippetica.CSharp.Dev\Attributes\DebuggerDisplayAttribute.snippet" />
-    <None Include="Snippetica.CSharp.Dev\BooleanVariable.snippet" />
-    <None Include="Snippetica.CSharp.Dev\Int32Variable.snippet" />
-    <None Include="Snippetica.CSharp.Dev\StringVariable.snippet" />
-    <None Include="Snippetica.CSharp.Dev\VariableWithExplicitCast.snippet" />
+    <None Include="Snippetica.CSharp\BooleanVariable.snippet" />
+    <None Include="Snippetica.CSharp\Int32Variable.snippet" />
+    <None Include="Snippetica.CSharp\StringVariable.snippet" />
+    <None Include="Snippetica.CSharp\VariableWithExplicitCast.snippet" />
     <None Include="Snippetica.CSharp.Dev\Xml\XmlReaderVariable.snippet" />
     <None Include="Snippetica.CSharp.Dev\Xml\XmlWriterVariable.snippet" />
     <None Include="Snippetica.CSharp\DictionaryOfTKeyTValueClass.snippet" />
@@ -128,7 +132,7 @@
     <None Include="Snippetica.CSharp\ThrowNewInvalidOperationException.snippet" />
     <None Include="Snippetica.CSharp\ThrowNewNotImplementedException.snippet" />
     <None Include="Snippetica.CSharp\ThrowNewNotSupportedException.snippet" />
-    <None Include="Snippetica.CSharp.Dev\IEnumeratorOfTVariable.snippet" />
+    <None Include="Snippetica.CSharp\IEnumeratorOfTVariable.snippet" />
     <None Include="Snippetica.CSharp.Dev\Modifiers\InternalVirtualModifiers.snippet" />
     <None Include="Snippetica.CSharp.Dev\Modifiers\ProtectedVirtualModifiers.snippet" />
     <None Include="Snippetica.CSharp.Dev\Modifiers\PublicVirtualModifiers.snippet" />
@@ -277,7 +281,7 @@
     <None Include="Snippetica.VisualBasic.AutoGeneration\CollectionOfTVariable.snippet" />
     <None Include="Snippetica.VisualBasic.AutoGeneration\ImmutableCollectionOfTType.snippet" />
     <None Include="Snippetica.VisualBasic.AutoGeneration\ImmutableCollectionOfTVariable.snippet" />
-    <None Include="Snippetica.VisualBasic.AutoGeneration\Variable.snippet" />
+    <None Include="Snippetica.VisualBasic\Variable.snippet" />
     <None Include="Snippetica.VisualBasic.Dev.AutoGeneration\NewArrayOfT.snippet" />
     <None Include="Snippetica.VisualBasic\DictionaryOfTKeyTValueClass.snippet" />
     <None Include="Snippetica.VisualBasic.Dev\ThrowStatement.snippet" />
@@ -663,19 +667,19 @@
     <None Include="Snippetica.VisualBasic\TryFinally.snippet" />
     <None Include="Snippetica.VisualBasic.AutoGeneration\TypeParameter.snippet" />
     <None Include="Snippetica.VisualBasic\Using.snippet" />
-    <None Include="Snippetica.VisualBasic.Dev\BooleanVariable.snippet" />
+    <None Include="Snippetica.VisualBasic\BooleanVariable.snippet" />
     <None Include="Snippetica.VisualBasic.AutoGeneration\DictionaryOfTKeyTValueVariable.snippet" />
     <None Include="Snippetica.VisualBasic.Dev.AutoGeneration\HashSetOfTVariable.snippet">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Snippetica.VisualBasic.Dev\Int32Variable.snippet" />
+    <None Include="Snippetica.VisualBasic\Int32Variable.snippet" />
     <None Include="Snippetica.VisualBasic.Dev.AutoGeneration\ListOfTVariable.snippet">
       <SubType>Designer</SubType>
     </None>
     <None Include="Snippetica.VisualBasic.Dev.AutoGeneration\ObservableCollectionOfTVariable.snippet">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Snippetica.VisualBasic.Dev\StringVariable.snippet" />
+    <None Include="Snippetica.VisualBasic\StringVariable.snippet" />
     <None Include="Snippetica.VisualBasic.Dev\StringBuilderVariable.snippet" />
     <None Include="Snippetica.VisualBasic\Do.snippet" />
     <None Include="Snippetica.VisualBasic\While.snippet" />

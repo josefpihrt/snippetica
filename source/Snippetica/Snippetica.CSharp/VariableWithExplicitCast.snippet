@@ -1,0 +1,32 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>variable declaration with explicit cast operator</Title>
+    <Shortcut>vt</Shortcut>
+    <Description>variable declaration with explicit cast operator</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>_type</ID>
+        <ToolTip>Type to cast to</ToolTip>
+        <Default>T</Default>
+      </Literal>
+      <Literal>
+        <ID>expression</ID>
+        <ToolTip>Expression to cast</ToolTip>
+        <Default>expression</Default>
+      </Literal>
+      <Literal>
+        <ID>identifier</ID>
+        <ToolTip>Identifier name</ToolTip>
+        <Default>x</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[var $identifier$ = ($_type$)$expression$;$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

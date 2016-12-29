@@ -1,6 +1,6 @@
 ﻿## Snippetica.VisualBasic
 
-* 596 snippets
+* 595 snippets
 
 ### List of Snippets
 
@@ -40,7 +40,7 @@ Title | Shortcut
 [array variable](ArrayOfTVariable.snippet)|va
 [Attribute class](AttributeClass.snippet)|c\_
 [Boolean type parameter](BooleanTypeParameter.snippet)|g
-[Boolean variable](BooleanVariable.snippet)|v
+[Boolean variable](BooleanVariable.snippet)|vb
 [Catch clause](Catch.snippet)|catch
 [Collection\(Of T\) class](CollectionClass.snippet)|c\_
 [Collection\(Of T\) type](CollectionOfTType.snippet)|gc
@@ -51,7 +51,6 @@ Title | Shortcut
 [CType operator](CTypeOperator.snippet)|t
 [DateTime type parameter](DateTimeTypeParameter.snippet)|g
 [DateTime type](DateTimeType.snippet)|dt
-[DateTime variable](DateTimeVariable.snippet)|v
 [Debug\.Assert](DebugAssert.snippet)|da
 [Debug\.WriteLine](DebugWriteLine.snippet)|dw
 [Dictionary\(Of T\) type](DictionaryOfTType.snippet)|gc
@@ -67,6 +66,7 @@ Title | Shortcut
 [Else clause](Else.snippet)|e
 [ElseIf](ElseIf.snippet)|eif
 [Equals and GetHashCode](EqualsAndGetHashCode.snippet)|equals
+[er IEnumerator\(Of T\) variable](IEnumeratorOfTVariable.snippet)|u
 [Exception class](ExceptionClass.snippet)|c\_
 [For \(reversed\)](ForReversed.snippet)|frr
 [For Each statement](ForEach.snippet)|fe
@@ -226,9 +226,8 @@ Title | Shortcut
 [ImmutableStack\(Of T\) type](ImmutableStackOfTType.snippet)|gc
 [ImmutableStack\(Of T\) variable](ImmutableStackOfTVariable.snippet)|vc
 [Int32 type parameter](Int32TypeParameter.snippet)|g
-[Int32 variable](Int32Variable.snippet)|v
+[Int32 variable](Int32Variable.snippet)|vi
 [Int64 type parameter](Int64TypeParameter.snippet)|g
-[Int64 variable](Int64Variable.snippet)|v
 [interface Boolean indexer](BooleanInterfaceIndexer.snippet)|\_ir
 [interface Boolean method \(with parameters\)](BooleanInterfaceMethodWithParameters.snippet)|\_m\_
 [interface Boolean method](BooleanInterfaceMethod.snippet)|\_m
@@ -283,7 +282,6 @@ Title | Shortcut
 [new variable](NewVariable.snippet)|vn
 [Not operator overload](OperatorOverloadNot.snippet)|oo
 [Object type parameter](ObjectTypeParameter.snippet)|g
-[Object variable](ObjectVariable.snippet)|v
 [ObservableCollection\(Of T\) class](ObservableCollectionClass.snippet)|c\_
 [ObservableCollection\(Of T\) type](ObservableCollectionOfTType.snippet)|gc
 [ObservableCollection\(Of T\) variable \(with initializer\)](ObservableCollectionOfTVariableWithInitializer.snippet)|vc\_
@@ -580,7 +578,7 @@ Title | Shortcut
 [Stack\(Of T\) variable](StackOfTVariable.snippet)|vc
 [static constructor](StaticConstructor.snippet)|scr
 [String type parameter](StringTypeParameter.snippet)|g
-[String variable](StringVariable.snippet)|v
+[String variable](StringVariable.snippet)|vs
 [String\.IsNullOrEmpty = False](StringIsNotNullOrEmpty.snippet)|snne
 [String\.IsNullOrEmpty](StringIsNullOrEmpty.snippet)|sne
 [String\.IsNullOrWhiteSpace = False](StringIsNotNullOrWhiteSpace.snippet)|snnw
@@ -599,6 +597,7 @@ Title | Shortcut
 [Try\-Finally](TryFinally.snippet)|tf
 [type parameter](TypeParameter.snippet)|g
 [Using statement](Using.snippet)|u
-[variable](Variable.snippet)|v
+[variable declaration](Variable.snippet)|v
+[variable with DirectCast](VariableWithDirectCast.snippet)|vt
 [While statement](While.snippet)|we
 [Xor operator overload](OperatorOverloadXor.snippet)|oo

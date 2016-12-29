@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>- Using statement</Title>
-    <Shortcut>u</Shortcut>
-    <Description>Using statement</Description>
+    <Title>fs Flags attribute</Title>
+    <Shortcut>ae</Shortcut>
+    <Description>Flags attribute</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -14,15 +14,11 @@
     </Keywords>
   </Header>
   <Snippet>
-    <Declarations>
-      <Literal>
-        <ID>disposable</ID>
-        <ToolTip>A resouce to use</ToolTip>
-        <Default>disposable</Default>
-      </Literal>
-    </Declarations>
-    <Code Language="VB"><![CDATA[Using $disposable$
-    $end$
-End Using]]></Code>
+    <Imports>
+      <Import>
+        <Namespace>System</Namespace>
+      </Import>
+    </Imports>
+    <Code Language="CSharp"><![CDATA[[Flags]$end$]]></Code>
   </Snippet>
 </CodeSnippet>
