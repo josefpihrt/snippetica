@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26014.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica", "source\Snippetica\Snippetica.csproj", "{D26EA838-9073-407E-A15A-112731027059}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Records", "Records", "{B408FEAA-24E9-488C-B384-6602BAE8DB38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BA91112D-6AEE-48D3-8C2B-C59AF29C5BF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica", "source\Snippetica\Snippetica.csproj", "{D26EA838-9073-407E-A15A-112731027059}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "source\Tools\Common\Common.csproj", "{EA986E08-DD26-43EA-94F0-8D2F70D4A17F}"
 EndProject
@@ -19,13 +23,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudio", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pihrtsoft.Records", "source\Records\Pihrtsoft.Records\Pihrtsoft.Records.csproj", "{5F21280B-2029-4D27-AEE6-C6E3E8C09C29}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Records", "Records", "{B408FEAA-24E9-488C-B384-6602BAE8DB38}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pihrtsoft.Records.Tests", "source\Records\Pihrtsoft.Records.Tests\Pihrtsoft.Records.Tests.csproj", "{CE18A42C-A7FD-4B6B-90FE-2F4510B7CB0E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.Tests", "source\Tests\Snippetica.Tests\Snippetica.Tests.csproj", "{A8ED9945-2D2B-493C-ABB6-E860315EAFFF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BA91112D-6AEE-48D3-8C2B-C59AF29C5BF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
