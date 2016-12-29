@@ -131,18 +131,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             Literal typeLiteral = snippet.Literals[LiteralIdentifiers.Type];
 
             if (typeLiteral != null)
-            {
-                if (snippet.Language == Snippets.Language.CSharp
-                    && snippet.HasTag(KnownTags.LocalDeclaration))
-                {
-                    typeLiteral.DefaultValue = "var";
-                    typeLiteral.IsEditable = false;
-                }
-                else
-                {
-                    typeLiteral.DefaultValue = "T";
-                }
-            }
+                typeLiteral.DefaultValue = "T";
 
             RemoveUnusedLiterals(snippet);
 
