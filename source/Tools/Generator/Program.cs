@@ -33,7 +33,9 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                 .ToArray();
 
             MarkdownGenerator.WriteSolutionReadMe(releaseDirectories, settings);
+
             MarkdownGenerator.WriteProjectMarkdownFiles(releaseDirectories, Path.GetFullPath(settings.ProjectPath));
+
             MarkdownGenerator.WriteDirectoryMarkdownFiles(
                 snippetDirectories
                     .Where(f => f.HasAnyTag(KnownTags.Release, KnownTags.Dev) && !f.HasAnyTag(KnownTags.AutoGenerationSource, KnownTags.AutoGenerationDestination))
@@ -46,7 +48,10 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                 .Select(f => f.WithPath(Path.Combine(settings.ExtensionProjectPath, f.DirectoryName)))
                 .ToArray();
 
+            MarkdownGenerator.WriteChangeLog(releaseDirectories, Release.LoadFromDocument(@"..\..\ChangeLog.xml").ToArray(), settings);
+
             MarkdownGenerator.WriteProjectMarkdownFiles(releaseDirectories, settings.ExtensionProjectPath);
+
             MarkdownGenerator.WriteDirectoryMarkdownFiles(releaseDirectories, characterSequences);
 
             WriteVisualStudioGalleryDescription(releaseDirectories, settings);

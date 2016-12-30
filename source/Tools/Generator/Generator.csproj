@@ -62,8 +62,10 @@
     <Compile Include="Markdown\SnippetShortcutColumnDefinition.cs" />
     <Compile Include="Markdown\SnippetTableWriter.cs" />
     <Compile Include="Markdown\SnippetTitleColumnDefinition.cs" />
+    <Compile Include="Markdown\SnippetTitleWithLinkColumnDefinition.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Release.cs" />
     <Compile Include="XmlSnippetGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +98,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Records.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ChangeLog.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="SnippetDirectories.xml">

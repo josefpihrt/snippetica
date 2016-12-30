@@ -7,41 +7,51 @@
         {
         }
 
-        public static SnippetTableWriter CreateTitleThenShortcut(string directoryPath)
+        public static SnippetTableWriter CreateTitleWithLinkThenShortcut(string directoryPath)
         {
             return new SnippetTableWriter(new ColumnDefinition[]
             {
-                new SnippetTitleColumnDefinition(directoryPath),
+                new SnippetTitleWithLinkColumnDefinition(directoryPath),
                 new SnippetShortcutColumnDefinition()
             });
         }
 
-        public static SnippetTableWriter CreateShortcutThenTitle(string directoryPath)
+        public static SnippetTableWriter CreateShortcutThenTitleWithLink(string directoryPath)
         {
             return new SnippetTableWriter(new ColumnDefinition[]
             {
                 new SnippetShortcutColumnDefinition(),
-                new SnippetTitleColumnDefinition(directoryPath)
+                new SnippetTitleWithLinkColumnDefinition(directoryPath)
             });
         }
 
-        public static SnippetTableWriter CreateLanguageThenTitleThenShortcut(string directoryPath)
+        public static SnippetTableWriter CreateLanguageThenTitleWithLinkThenShortcut(string directoryPath)
         {
             return new SnippetTableWriter(new ColumnDefinition[]
             {
                 new SnippetLanguageColumnDefinition(),
-                new SnippetTitleColumnDefinition(directoryPath),
+                new SnippetTitleWithLinkColumnDefinition(directoryPath),
                 new SnippetShortcutColumnDefinition(),
             });
         }
 
-        public static SnippetTableWriter CreateLanguageThenShortcutThenTitle(string directoryPath)
+        public static SnippetTableWriter CreateLanguageThenShortcutThenTitle()
         {
             return new SnippetTableWriter(new ColumnDefinition[]
             {
                 new SnippetLanguageColumnDefinition(),
                 new SnippetShortcutColumnDefinition(),
-                new SnippetTitleColumnDefinition(directoryPath),
+                new SnippetTitleColumnDefinition(),
+            });
+        }
+
+        public static SnippetTableWriter CreateLanguageThenShortcutThenTitleWithLink(string directoryPath)
+        {
+            return new SnippetTableWriter(new ColumnDefinition[]
+            {
+                new SnippetLanguageColumnDefinition(),
+                new SnippetShortcutColumnDefinition(),
+                new SnippetTitleWithLinkColumnDefinition(directoryPath),
             });
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
@@ -73,9 +74,27 @@ namespace Pihrtsoft.Snippets
                 AddTag(snippet, tag);
         }
 
-        public static void RemoveTag(this Snippet snippet, string tag)
+        public static bool RemoveTag(this Snippet snippet, string tag)
         {
-            RemoveKeyword(snippet, KnownTags.MetaTagPrefix + tag);
+            string tagWithPrefix = KnownTags.MetaTagPrefix + tag;
+
+            if (RemoveKeyword(snippet, tagWithPrefix))
+            {
+                return true;
+            }
+            else
+            {
+                string keyword = snippet.Keywords.FirstOrDefault(f => f.StartsWith(tagWithPrefix + " ", StringComparison.Ordinal));
+
+                if (keyword != null)
+                {
+                    return snippet.RemoveKeyword(keyword);
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
 
         public static void RemoveTags(this Snippet snippet, IEnumerable<string> tags)
@@ -96,14 +115,40 @@ namespace Pihrtsoft.Snippets
             {
                 if (keyword.StartsWith(KnownTags.MetaTagPrefix))
                 {
-                    string s = keyword.Substring(KnownTags.MetaTagPrefix.Length).Trim();
+                    int i = KnownTags.MetaTagPrefix.Length;
+                    while (i < keyword.Length
+                        && char.IsWhiteSpace(keyword[i]))
+                    {
+                        i++;
+                    }
 
-                    if (string.Equals(s, tag, StringComparison.Ordinal))
+                    if (string.Equals(keyword.Substring(i, Math.Min(keyword.Length - i, tag.Length)), tag, StringComparison.Ordinal))
                         return true;
                 }
             }
 
             return false;
+        }
+
+        public static string GetTagValueOrDefault(this Snippet snippet, string tag)
+        {
+            foreach (string keyword in snippet.Keywords)
+            {
+                if (keyword.StartsWith(KnownTags.MetaTagPrefix))
+                {
+                    int i = KnownTags.MetaTagPrefix.Length;
+                    while (i < keyword.Length
+                        && char.IsWhiteSpace(keyword[i]))
+                    {
+                        i++;
+                    }
+
+                    if (string.Equals(keyword.Substring(i, Math.Min(keyword.Length - i, tag.Length)), tag, StringComparison.Ordinal))
+                        return keyword.Substring(i + tag.Length).Trim();
+                }
+            }
+
+            return null;
         }
 
         public static void AddNamespace(this Snippet snippet, string @namespace)
@@ -233,9 +278,9 @@ namespace Pihrtsoft.Snippets
                 snippet.Keywords.Remove(keyword);
         }
 
-        public static void RemoveKeyword(this Snippet snippet, string keyword)
+        public static bool RemoveKeyword(this Snippet snippet, string keyword)
         {
-            snippet.Keywords.Remove(keyword);
+            return snippet.Keywords.Remove(keyword);
         }
 
         public static void AddKeyword(this Snippet snippet, string keyword)
@@ -250,9 +295,9 @@ namespace Pihrtsoft.Snippets
                 AddKeyword(snippet, keyword);
         }
 
-        public static void RemoveLiteral(this Snippet snippet, string identifier)
+        public static bool RemoveLiteral(this Snippet snippet, string identifier)
         {
-            snippet.Literals.Remove(identifier);
+            return snippet.Literals.Remove(identifier);
         }
 
         public static void RemoveLiteralAndReplacePlaceholders(this Snippet snippet, string identifier, string replacement)

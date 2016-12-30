@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Document Version="0.0.1">
+  <Entities>
+    <Entity Name="Release">
+      <Declarations>
+        <Property Name="Version" Type="String" />
+        <Property Name="ReleaseDate" Type="Date" />
+        <Property Name="Comment" Type="String" />
+      </Declarations>
+      <Records>
+        <New Version="0.5.0" ReleaseDate="2016-12-30" />
+        <New Version="0.1.0" ReleaseDate="2016-10-16" Comment="Initial release" />
+      </Records>
+    </Entity>
+  </Entities>
+</Document>

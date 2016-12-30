@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
                 sw.WriteLine();
 
                 sw.WriteLine($"* {settings.GetProjectSubtitle(snippetDirectories)}");
-                sw.WriteLine($"* [Release Notes]({settings.GitHubMasterPath}/{"ChangeLog.md"}).");
+                sw.WriteLine($"* [Release Notes]({settings.GitHubMasterPath}/{$"{settings.ChangeLogFileName}"}).");
                 sw.WriteLine();
                 sw.WriteLine("### Distribution");
                 sw.WriteLine();
@@ -45,6 +46,58 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
             }
         }
 
+        public static void WriteChangeLog(SnippetDirectory[] snippetDirectories, Release[] releases, GeneralSettings settings)
+        {
+            IOUtility.WriteAllText(
+                Path.Combine(settings.SolutionDirectoryPath, settings.ChangeLogFileName),
+                GenerateChangeLog(snippetDirectories, releases, settings));
+        }
+
+        public static string GenerateChangeLog(SnippetDirectory[] snippetDirectories, Release[] releases, GeneralSettings settings)
+        {
+            Snippet[] snippets = snippetDirectories
+                .SelectMany(f => f.EnumerateSnippets())
+                .Where(f => f.HasTag(KnownTags.AddSnippet))
+                .ToArray();
+
+            using (var sw = new StringWriter())
+            {
+                sw.WriteLine("# Release Notes");
+
+                foreach (Release release in releases.OrderByDescending(f => f.ReleaseDate))
+                {
+                    sw.WriteLine();
+                    sw.WriteLine($"## {release.Version.ToString(3)} ({release.ReleaseDate.ToString("yyyy-MM-dd")})");
+
+                    if (!string.IsNullOrEmpty(release.Comment))
+                    {
+                        sw.WriteLine();
+                        sw.WriteLine($"* {MarkdownHelper.Escape(release.Comment)}");
+                    }
+
+                    snippets = snippets
+                        .Select(f => new { Snippet = f, Version = f.GetTagValueOrDefault(KnownTags.AddSnippet) })
+                        .Where(f => f.Version != null && Version.Parse(f.Version).Equals(release.Version))
+                        .Select(f => f.Snippet)
+                        .ToArray();
+
+                    if (snippets.Length > 0)
+                    {
+                        sw.WriteLine();
+                        sw.WriteLine("### New Snippets");
+                        sw.WriteLine();
+
+                        SnippetTableWriter tableWriter = SnippetTableWriter.CreateLanguageThenShortcutThenTitle();
+
+                        tableWriter.WriteTable(snippets);
+                        sw.Write(tableWriter.ToString());
+                    }
+                }
+
+                return sw.ToString();
+            }
+        }
+
         public static void WriteProjectMarkdownFiles(SnippetDirectory[] snippetDirectories, string directoryPath)
         {
             IOUtility.WriteAllText(
@@ -55,11 +108,11 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, SnippetsByTitleFileName),
-                GenerateSnippetList(snippets, directoryPath, SnippetTableWriter.CreateLanguageThenTitleThenShortcut(directoryPath)));
+                GenerateSnippetList(snippets, directoryPath, SnippetTableWriter.CreateLanguageThenTitleWithLinkThenShortcut(directoryPath)));
 
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, SnippetsByShortcutFileName),
-                GenerateSnippetList(snippets, directoryPath, SnippetTableWriter.CreateLanguageThenShortcutThenTitle(directoryPath)));
+                GenerateSnippetList(snippets, directoryPath, SnippetTableWriter.CreateLanguageThenShortcutThenTitleWithLink(directoryPath)));
         }
 
         private static string GenerateProjectReadMe(SnippetDirectory[] snippetDirectories)
@@ -101,11 +154,11 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, SnippetsByTitleFileName),
-                GenerateSnippetList(snippets, directoryPath, SnippetTableWriter.CreateTitleThenShortcut(directoryPath)));
+                GenerateSnippetList(snippets, directoryPath, SnippetTableWriter.CreateTitleWithLinkThenShortcut(directoryPath)));
 
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, SnippetsByShortcutFileName),
-                GenerateSnippetList(snippets, directoryPath, SnippetTableWriter.CreateShortcutThenTitle(directoryPath)));
+                GenerateSnippetList(snippets, directoryPath, SnippetTableWriter.CreateShortcutThenTitleWithLink(directoryPath)));
         }
 
         private static string GenerateDirectoryReadme(IEnumerable<Snippet> snippets, string directoryPath, CharacterSequence[] characterSequences)
@@ -146,7 +199,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
                 sw.WriteLine("### List of Selected Snippets");
                 sw.WriteLine();
 
-                using (SnippetTableWriter tableWriter = SnippetTableWriter.CreateTitleThenShortcut(directoryPath))
+                using (SnippetTableWriter tableWriter = SnippetTableWriter.CreateTitleWithLinkThenShortcut(directoryPath))
                 {
                     tableWriter.WriteTable(snippets);
                     sw.Write(tableWriter.ToString());
