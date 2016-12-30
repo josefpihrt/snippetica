@@ -573,7 +573,7 @@ twn|[throw new InvalidOperationException](ThrowNewInvalidOperationException.snip
 twn|[throw new NotImplementedException](ThrowNewNotImplementedException.snippet)
 twn|[throw new NotSupportedException](ThrowNewNotSupportedException.snippet)
 twn|[throw new](ThrowNew.snippet)
-u|[er IEnumerator\<T\> variable](IEnumeratorOfTVariable.snippet)
+u|[IEnumerator\<T\> variable](IEnumeratorOfTVariable.snippet)
 u|[using statement](Using.snippet)
 u|[using variable](UsingVariable.snippet)
 v|[variable declaration](Variable.snippet)

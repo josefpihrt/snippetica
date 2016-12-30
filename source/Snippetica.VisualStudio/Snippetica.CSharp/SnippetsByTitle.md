@@ -71,7 +71,6 @@ Title | Shortcut
 [equal to null](EqualToNull.snippet)|n
 [Equals and GetHashCode for value type](EqualsAndGetHashCodeForValueType.snippet)|equals
 [Equals and GetHashCode](EqualsAndGetHashCode.snippet)|equals
-[er IEnumerator\<T\> variable](IEnumeratorOfTVariable.snippet)|u
 [Exception class](ExceptionClass.snippet)|c\_
 [explicit cast operator](ExplicitCastOperator.snippet)|t
 [explicit operator overload](OperatorOverloadExplicit.snippet)|oo
@@ -92,6 +91,7 @@ Title | Shortcut
 [IEnumerable\<object\> type](IEnumerableOfObjectType.snippet)|ge
 [IEnumerable\<string\> type](IEnumerableOfStringType.snippet)|ge
 [IEnumerable\<T\> type](IEnumerableOfTType.snippet)|ge
+[IEnumerator\<T\> variable](IEnumeratorOfTVariable.snippet)|u
 [IEqualityComparer class](IEqualityComparerClass.snippet)|c\_
 [IEqualityComparer\<T\> class](IEqualityComparerOfTClass.snippet)|c\_
 [if equal to null](IfEqualToNull.snippet)|ifn

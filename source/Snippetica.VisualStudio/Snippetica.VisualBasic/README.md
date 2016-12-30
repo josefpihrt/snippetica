@@ -107,7 +107,6 @@ Title | Shortcut
 [Else clause](Else.snippet)|e
 [ElseIf](ElseIf.snippet)|eif
 [Equals and GetHashCode](EqualsAndGetHashCode.snippet)|equals
-[er IEnumerator\(Of T\) variable](IEnumeratorOfTVariable.snippet)|u
 [Exception class](ExceptionClass.snippet)|c\_
 [For \(reversed\)](ForReversed.snippet)|frr
 [For Each statement](ForEach.snippet)|fe
@@ -116,6 +115,7 @@ Title | Shortcut
 [IComparer class](IComparerClass.snippet)|c\_
 [IComparer\(Of T\) class](IComparerOfTClass.snippet)|c\_
 [IEnumerable\(Of T\) type](IEnumerableOfTType.snippet)|ge
+[IEnumerator\(Of T\) variable](IEnumeratorOfTVariable.snippet)|u
 [IEqualityComparer class](IEqualityComparerClass.snippet)|c\_
 [IEqualityComparer\(Of T\) class](IEqualityComparerOfTClass.snippet)|c\_
 [If Is Nothing](IfIsNothing.snippet)|ifn
