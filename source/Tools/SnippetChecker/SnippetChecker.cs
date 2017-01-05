@@ -8,7 +8,7 @@ using Pihrtsoft.Snippets.Validations;
 
 namespace Pihrtsoft.Snippets
 {
-    public class SnippetChecker
+    public static class SnippetChecker
     {
         private static readonly SnippetDeepEqualityComparer _snippetEqualityComparer = new SnippetDeepEqualityComparer();
 

@@ -12,7 +12,7 @@ using Pihrtsoft.Snippets.Xml;
 
 namespace Pihrtsoft.Snippets.CodeGeneration
 {
-    internal class Program
+    internal static class Program
     {
         private static void Main(string[] args)
         {
