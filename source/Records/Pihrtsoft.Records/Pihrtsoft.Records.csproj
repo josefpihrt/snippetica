@@ -36,10 +36,6 @@
     <CodeAnalysisRuleSet>..\..\Snippetica.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
-    <Content Include="_todo.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="AttributeValueParser.cs" />
     <Compile Include="Commands\GroupCommand.cs" />
     <Compile Include="Document.cs" />
