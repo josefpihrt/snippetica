@@ -26,7 +26,7 @@ namespace Pihrtsoft.Records.Commands
             List<object> items = null;
 
             object value;
-            if (record.Properties.TryGetValue(PropertyName, out value))
+            if (record.TryGetValue(PropertyName, out value))
             {
                 items = (List<object>)value;
             }

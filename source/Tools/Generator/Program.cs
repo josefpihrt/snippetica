@@ -82,7 +82,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                         record.GetString("Value"),
                         record.GetString("Description"),
                         record.GetStringOrDefault("Comment", "-"),
-                        record.GetItems<string>("Languages").Select(f => settings.DirectoryNamePrefix + f),
+                        record.GetItems("Languages").Select(f => settings.DirectoryNamePrefix + f),
                         record.Tags);
                 });
         }

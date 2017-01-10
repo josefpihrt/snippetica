@@ -2,16 +2,16 @@
 {
     public class DocumentReaderSettings
     {
-        public bool UseVariables { get; set; } = true;
+        public bool UseVariables { get; set; }
 
-        public char VariableOpenDelimiter { get; set; } = '{';
+        public char OpenVariableDelimiter { get; set; } = '{';
 
-        public char VariableCloseDelimiter { get; set; } = '}';
+        public char CloseVariableDelimiter { get; set; } = '}';
 
         public void SetVariableDelimiter(char delimiter)
         {
-            VariableOpenDelimiter = delimiter;
-            VariableCloseDelimiter = delimiter;
+            OpenVariableDelimiter = delimiter;
+            CloseVariableDelimiter = delimiter;
         }
     }
 }

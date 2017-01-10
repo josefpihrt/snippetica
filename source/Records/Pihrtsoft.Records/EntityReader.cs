@@ -140,7 +140,6 @@ namespace Pihrtsoft.Records
 
                             var property = new PropertyDefinition(
                                 propertyName,
-                                PropertyDefinition.DefaultType,
                                 element.AttributeValueOrDefault(AttributeNames.DefaultValue),
                                 element.AttributeValueAsBooleanOrDefault(AttributeNames.IsCollection),
                                 element);

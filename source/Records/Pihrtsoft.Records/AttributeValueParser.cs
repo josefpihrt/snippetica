@@ -13,13 +13,13 @@ namespace Pihrtsoft.Records
 
             for (int i = 0; i < value.Length; i++)
             {
-                if (value[i] == settings.VariableOpenDelimiter)
+                if (value[i] == settings.OpenVariableDelimiter)
                 {
                     if (i == value.Length - 1)
                     {
-                        Throw.CharacterMustBeEscaped(value, settings.VariableOpenDelimiter);
+                        Throw.CharacterMustBeEscaped(value, settings.OpenVariableDelimiter);
                     }
-                    else if (value[i + 1] == settings.VariableOpenDelimiter)
+                    else if (value[i + 1] == settings.OpenVariableDelimiter)
                     {
                         i++;
                     }
@@ -36,23 +36,23 @@ namespace Pihrtsoft.Records
                         {
                             if (!fInside)
                             {
-                                if (value[i] == settings.VariableOpenDelimiter)
+                                if (value[i] == settings.OpenVariableDelimiter)
                                 {
                                     fInside = true;
                                     startIndex = i;
                                 }
-                                else if (value[i] == settings.VariableCloseDelimiter)
+                                else if (value[i] == settings.CloseVariableDelimiter)
                                 {
                                     if (i == value.Length - 1
-                                        || value[i + 1] != settings.VariableCloseDelimiter)
+                                        || value[i + 1] != settings.CloseVariableDelimiter)
                                     {
-                                        Throw.CharacterMustBeEscaped(value, settings.VariableCloseDelimiter);
+                                        Throw.CharacterMustBeEscaped(value, settings.CloseVariableDelimiter);
                                     }
                                 }
                             }
                             else
                             {
-                                if (value[i] == settings.VariableOpenDelimiter)
+                                if (value[i] == settings.OpenVariableDelimiter)
                                 {
                                     if (i - startIndex == 1)
                                     {
@@ -61,10 +61,10 @@ namespace Pihrtsoft.Records
                                     }
                                     else
                                     {
-                                        Throw.VariableNameCannotContainCharacter(value, settings.VariableOpenDelimiter);
+                                        Throw.VariableNameCannotContainCharacter(value, settings.OpenVariableDelimiter);
                                     }
                                 }
-                                else if (value[i] == settings.VariableCloseDelimiter)
+                                else if (value[i] == settings.CloseVariableDelimiter)
                                 {
                                     int length = i - startIndex - 1;
 
@@ -91,7 +91,7 @@ namespace Pihrtsoft.Records
                         }
 
                         if (fInside)
-                            Throw.VariableMustBeClosed(value, settings.VariableOpenDelimiter);
+                            Throw.VariableMustBeClosed(value, settings.OpenVariableDelimiter);
 
                         if (lastEndIndex > 0)
                             sb.Append(value, lastEndIndex, value.Length - lastEndIndex);

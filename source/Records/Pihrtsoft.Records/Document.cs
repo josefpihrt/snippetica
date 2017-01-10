@@ -72,7 +72,7 @@ namespace Pihrtsoft.Records
             return element;
         }
 
-        public Version DocumentVersion(XElement element)
+        private Version DocumentVersion(XElement element)
         {
             string value = element.AttributeValueOrDefault(AttributeNames.Version);
 

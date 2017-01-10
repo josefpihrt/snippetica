@@ -4,21 +4,22 @@ using System.Linq;
 
 namespace Pihrtsoft.Records.Tests
 {
-    internal class Program
+    internal static class Program
     {
         internal static void Main(string[] args)
         {
             Record[] records = Document.Create(@"..\..\Test.xml")
-                .ReadRecords()
+                .ReadRecords(new DocumentReaderSettings() { UseVariables = true })
                 .ToArray();
 
             foreach (Record record in records)
             {
                 WriteLine(record.EntityName);
 
+#if DEBUG
                 Indent();
 
-                foreach (KeyValuePair<string, object> pair in record.Properties)
+                foreach (KeyValuePair<string, object> pair in record.GetProperties())
                 {
                     var list = pair.Value as List<object>;
                     if (list != null)
@@ -39,6 +40,7 @@ namespace Pihrtsoft.Records.Tests
                 }
 
                 Unindent();
+#endif
 
                 Console.WriteLine("");
             }

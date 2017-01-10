@@ -28,10 +28,29 @@ namespace Pihrtsoft.Records
 
         public string Id
         {
-            get { return (string)FindValue(PropertyDefinition.Id.Name); }
+            get
+            {
+                object value;
+                if (TryGetValue(PropertyDefinition.Id.Name, out value))
+                {
+                    return (string)value;
+                }
+                else
+                {
+                    return null;
+                }
+            }
         }
 
-        public Dictionary<string, object> Properties { get; }
+        private Dictionary<string, object> Properties { get; }
+
+#if DEBUG
+        public IEnumerable<KeyValuePair<string, object>> GetProperties()
+        {
+            foreach (KeyValuePair<string, object> kvp in Properties)
+                yield return kvp;
+        }
+#endif
 
         public TagCollection Tags { get; }
 
@@ -40,13 +59,14 @@ namespace Pihrtsoft.Records
             return Properties.ContainsKey(propertyName);
         }
 
-        public object FindValue(string propertyName)
+        internal object GetValue(string propertyName)
         {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
-                return value;
+            return Properties[propertyName];
+        }
 
-            return null;
+        internal bool TryGetValue(string propertyName, out object value)
+        {
+            return Properties.TryGetValue(propertyName, out value);
         }
 
         private string DebuggerDisplay
@@ -85,7 +105,7 @@ namespace Pihrtsoft.Records
             }
         }
 
-        public object this[string propertyName]
+        internal object this[string propertyName]
         {
             get { return Properties[propertyName]; }
             set { Properties[propertyName] = value; }
@@ -128,28 +148,6 @@ namespace Pihrtsoft.Records
             return defaultValue;
         }
 
-        public byte GetByteOrDefault(string propertyName, byte defaultValue = default(byte))
-        {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
-            {
-                return byte.Parse((string)value);
-            }
-
-            return defaultValue;
-        }
-
-        public sbyte GetSByteOrDefault(string propertyName, sbyte defaultValue = default(sbyte))
-        {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
-            {
-                return sbyte.Parse((string)value);
-            }
-
-            return defaultValue;
-        }
-
         public decimal GetDecimalOrDefault(string propertyName, decimal defaultValue = default(decimal))
         {
             object value;
@@ -172,7 +170,7 @@ namespace Pihrtsoft.Records
             return defaultValue;
         }
 
-        public float GetSingleOrDefault(string propertyName, float defaultValue = default(float))
+        public float GetFloatOrDefault(string propertyName, float defaultValue = default(float))
         {
             object value;
             if (Properties.TryGetValue(propertyName, out value))
@@ -183,7 +181,7 @@ namespace Pihrtsoft.Records
             return defaultValue;
         }
 
-        public int GetInt32OrDefault(string propertyName, int defaultValue = default(int))
+        public int GetIntOrDefault(string propertyName, int defaultValue = default(int))
         {
             object value;
             if (Properties.TryGetValue(propertyName, out value))
@@ -194,18 +192,7 @@ namespace Pihrtsoft.Records
             return defaultValue;
         }
 
-        public uint GetUInt32OrDefault(string propertyName, uint defaultValue = default(uint))
-        {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
-            {
-                return uint.Parse((string)value);
-            }
-
-            return defaultValue;
-        }
-
-        public long GetInt64OrDefault(string propertyName, long defaultValue = default(long))
+        public long GetLongOrDefault(string propertyName, long defaultValue = default(long))
         {
             object value;
             if (Properties.TryGetValue(propertyName, out value))
@@ -216,34 +203,12 @@ namespace Pihrtsoft.Records
             return defaultValue;
         }
 
-        public ulong GetUInt64OrDefault(string propertyName, ulong defaultValue = default(ulong))
+        public DateTime GetDateTimeOrDefault(string propertyName, DateTime defaultValue = default(DateTime))
         {
             object value;
             if (Properties.TryGetValue(propertyName, out value))
             {
-                return ulong.Parse((string)value);
-            }
-
-            return defaultValue;
-        }
-
-        public short GetInt16OrDefault(string propertyName, short defaultValue = default(short))
-        {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
-            {
-                return short.Parse((string)value);
-            }
-
-            return defaultValue;
-        }
-
-        public ushort GetUInt16OrDefault(string propertyName, ushort defaultValue = default(ushort))
-        {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
-            {
-                return ushort.Parse((string)value);
+                return DateTime.Parse((string)value);
             }
 
             return defaultValue;
@@ -259,16 +224,6 @@ namespace Pihrtsoft.Records
             return bool.Parse((string)Properties[propertyName]);
         }
 
-        public byte GetByte(string propertyName)
-        {
-            return byte.Parse((string)Properties[propertyName]);
-        }
-
-        public sbyte GetSByte(string propertyName)
-        {
-            return sbyte.Parse((string)Properties[propertyName]);
-        }
-
         public decimal GetDecimal(string propertyName)
         {
             return decimal.Parse((string)Properties[propertyName]);
@@ -279,51 +234,32 @@ namespace Pihrtsoft.Records
             return double.Parse((string)Properties[propertyName]);
         }
 
-        public float GetSingle(string propertyName)
+        public float GetFloat(string propertyName)
         {
             return float.Parse((string)Properties[propertyName]);
         }
 
-        public int GetInt32(string propertyName)
+        public int GetInt(string propertyName)
         {
             return int.Parse((string)Properties[propertyName]);
         }
 
-        public uint GetUInt32(string propertyName)
-        {
-            return uint.Parse((string)Properties[propertyName]);
-        }
-
-        public long GetInt64(string propertyName)
+        public long GetLong(string propertyName)
         {
             return long.Parse((string)Properties[propertyName]);
         }
 
-        public ulong GetUInt64(string propertyName)
+        public DateTime GetDateTime(string propertyName)
         {
-            return ulong.Parse((string)Properties[propertyName]);
+            return DateTime.Parse((string)Properties[propertyName]);
         }
 
-        public short GetInt16(string propertyName)
+        public string[] GetItems(string propertyName)
         {
-            return short.Parse((string)Properties[propertyName]);
+            return GetItems<string>(propertyName);
         }
 
-        public ushort GetUInt16(string propertyName)
-        {
-            return ushort.Parse((string)Properties[propertyName]);
-        }
-
-        public object[] GetItems(string propertyName)
-        {
-            object value = Properties[propertyName];
-
-            var list = (List<object>)value;
-
-            return list.ToArray();
-        }
-
-        public TItem[] GetItems<TItem>(string propertyName)
+        private TItem[] GetItems<TItem>(string propertyName)
         {
             object value = Properties[propertyName];
 
@@ -337,12 +273,12 @@ namespace Pihrtsoft.Records
             return items;
         }
 
-        public object[] GetItemsOrDefault(string propertyName, object[] defaultValue = default(object[]))
+        public string[] GetItemsOrDefault(string propertyName, string[] defaultValue = default(string[]))
         {
-            return GetItemsOrDefault<object>(propertyName, defaultValue);
+            return GetItemsOrDefault<string>(propertyName, defaultValue);
         }
 
-        public TItem[] GetItemsOrDefault<TItem>(string propertyName, TItem[] defaultValue = default(TItem[]))
+        private TItem[] GetItemsOrDefault<TItem>(string propertyName, TItem[] defaultValue = default(TItem[]))
         {
             object value;
             if (Properties.TryGetValue(propertyName, out value))

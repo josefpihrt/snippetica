@@ -3,8 +3,8 @@
   <Entities>
     <Entity Name="Directory">
       <Declarations>
-        <Property Name="Path" Type="String" />
-        <Property Name="Language" Type="String" />
+        <Property Name="Path" />
+        <Property Name="Language" />
       </Declarations>
       <Records>
         <Prefix Path="D:\Documents\Visual Studio 2015\Projects\Snippetica\Source\Snippetica\Snippetica">

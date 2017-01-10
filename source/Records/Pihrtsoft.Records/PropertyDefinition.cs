@@ -9,7 +9,6 @@ namespace Pihrtsoft.Records
     {
         internal PropertyDefinition(
             string name,
-            string type,
             string defaultValue = null,
             bool isCollection = false,
             XElement element = null)
@@ -24,19 +23,15 @@ namespace Pihrtsoft.Records
             }
 
             Name = name;
-            Type = type;
             DefaultValue = defaultValue;
             IsCollection = isCollection;
         }
 
         internal static string IdName { get; } = "Id";
 
-        internal static PropertyDefinition Id { get; } = new PropertyDefinition(IdName, TypeNames.String);
-
-        internal static string DefaultType { get; } = TypeNames.String;
+        internal static PropertyDefinition Id { get; } = new PropertyDefinition(IdName);
 
         public string Name { get; }
-        public string Type { get; }
         public string DefaultValue { get; }
         public bool IsCollection { get; }
 

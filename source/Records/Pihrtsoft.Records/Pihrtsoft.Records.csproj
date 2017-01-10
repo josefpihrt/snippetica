@@ -41,7 +41,6 @@
     <Compile Include="Document.cs" />
     <Compile Include="RecordReaderBase.cs" />
     <Compile Include="Extensions\QueueExtensions.cs" />
-    <Compile Include="TypeNames.cs" />
     <Compile Include="DocumentReader.cs" />
     <Compile Include="Commands\PrefixCommand.cs" />
     <Compile Include="TemplateRecordReader.cs" />
