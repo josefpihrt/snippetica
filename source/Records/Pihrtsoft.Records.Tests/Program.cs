@@ -8,8 +8,13 @@ namespace Pihrtsoft.Records.Tests
     {
         internal static void Main(string[] args)
         {
-            Record[] records = Document.Create(@"..\..\Test.xml")
-                .ReadRecords(new DocumentReaderSettings() { UseVariables = true })
+            var settings = new DocumentReaderSettings()
+            {
+                UseVariables = true
+            };
+
+            Record[] records = DocumentReader.Create(@"..\..\Test.xml", settings)
+                .ReadRecords()
                 .ToArray();
 
             foreach (Record record in records)

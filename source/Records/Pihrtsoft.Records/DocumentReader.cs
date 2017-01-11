@@ -1,30 +1,95 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Xml;
 using System.Xml.Linq;
 using Pihrtsoft.Records.Utilities;
 
 namespace Pihrtsoft.Records
 {
-    internal class DocumentReader
+    public class DocumentReader
     {
-        private XElement _entitiesElement;
-
-        public DocumentReader(XElement element, DocumentReaderSettings settings)
+        private DocumentReader(XDocument document, DocumentReaderSettings settings)
         {
-            Element = element;
+            XDocument = document;
             Settings = settings;
         }
 
-        public XElement Element { get; }
+        private static Version SchemaVersion { get; } = new Version(0, 1, 0);
+
+        private XDocument XDocument { get; }
 
         public DocumentReaderSettings Settings { get; }
 
+        public static DocumentReader Create(string uri, DocumentReaderSettings settings = null)
+        {
+            if (settings == null)
+                settings = new DocumentReaderSettings();
+
+            return new DocumentReader(XDocument.Load(uri, settings.LoadOptions), settings);
+        }
+
+        public static DocumentReader Create(Stream stream, DocumentReaderSettings settings = null)
+        {
+            if (settings == null)
+                settings = new DocumentReaderSettings();
+
+            return new DocumentReader(XDocument.Load(stream, settings.LoadOptions), settings);
+        }
+
+        public static DocumentReader Create(TextReader textReader, DocumentReaderSettings settings = null)
+        {
+            if (settings == null)
+                settings = new DocumentReaderSettings();
+
+            return new DocumentReader(XDocument.Load(textReader, settings.LoadOptions), settings);
+        }
+
+        public static DocumentReader Create(XmlReader xmlReader, DocumentReaderSettings settings = null)
+        {
+            if (settings == null)
+                settings = new DocumentReaderSettings();
+
+            return new DocumentReader(XDocument.Load(xmlReader, settings.LoadOptions), settings);
+        }
+
         public IEnumerable<Record> ReadRecords()
         {
-            Scan();
+            XElement documentElement = XDocument.Elements().FirstOrDefault();
 
-            if (_entitiesElement != null)
+            if (documentElement == null
+                || !DefaultComparer.NameEquals(documentElement, ElementNames.Document))
             {
-                Queue<EntityReader> readers = GetEntityReaders(_entitiesElement.Elements());
+                ThrowHelper.ThrowInvalidOperation(ExceptionMessages.MissingElement(ElementNames.Document));
+            }
+
+            string versionText = documentElement.AttributeValueOrDefault(AttributeNames.Version);
+
+            if (versionText != null)
+            {
+                Version version;
+
+                if (!Version.TryParse(versionText, out version))
+                {
+                    ThrowHelper.ThrowInvalidOperation(ExceptionMessages.InvalidDocumentVersion());
+                }
+                else if (version > SchemaVersion)
+                {
+                    ThrowHelper.ThrowInvalidOperation(ExceptionMessages.DocumentVersionIsNotSupported(version, SchemaVersion));
+                }
+            }
+
+            return ReadRecords(documentElement);
+        }
+
+        private IEnumerable<Record> ReadRecords(XElement documentElement)
+        {
+            XElement entitiesElement = GetEntitiesElement(documentElement);
+
+            if (entitiesElement != null)
+            {
+                Queue<EntityReader> readers = GetEntityReaders(entitiesElement.Elements());
 
                 if (readers != null)
                 {
@@ -45,21 +110,23 @@ namespace Pihrtsoft.Records
                 }
             }
 
-            _entitiesElement = null;
+            entitiesElement = null;
         }
 
-        private void Scan()
+        private XElement GetEntitiesElement(XElement rootElement)
         {
-            foreach (XElement element in Element.Elements())
+            XElement entitiesElement = null;
+
+            foreach (XElement element in rootElement.Elements())
             {
                 switch (element.Kind())
                 {
                     case ElementKind.Entities:
                         {
-                            if (_entitiesElement != null)
+                            if (entitiesElement != null)
                                 ThrowHelper.MultipleElementsWithEqualName(element);
 
-                            _entitiesElement = element;
+                            entitiesElement = element;
                             break;
                         }
                     default:
@@ -69,6 +136,8 @@ namespace Pihrtsoft.Records
                         }
                 }
             }
+
+            return entitiesElement;
         }
 
         private Queue<EntityReader> GetEntityReaders(IEnumerable<XElement> elements)
@@ -85,7 +154,6 @@ namespace Pihrtsoft.Records
                                 readers = new Queue<EntityReader>();
 
                             readers.Enqueue(new EntityReader(element, Settings));
-
                             break;
                         }
                     default:

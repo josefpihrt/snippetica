@@ -38,7 +38,6 @@
   <ItemGroup>
     <Compile Include="AttributeValueParser.cs" />
     <Compile Include="Commands\GroupCommand.cs" />
-    <Compile Include="Document.cs" />
     <Compile Include="RecordReaderBase.cs" />
     <Compile Include="Extensions\QueueExtensions.cs" />
     <Compile Include="DocumentReader.cs" />
