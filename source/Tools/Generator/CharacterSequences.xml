@@ -3,8 +3,8 @@
   <Entities>
     <Entity Name="CharacterSequence">
       <Declarations>
-        <Property Name="Value" />
-        <Property Name="Description" />
+        <Property Name="Value" IsRequired="true" />
+        <Property Name="Description" IsRequired="true" />
         <Property Name="Comment" />
         <Property Name="Languages" IsCollection="true" />
       </Declarations>

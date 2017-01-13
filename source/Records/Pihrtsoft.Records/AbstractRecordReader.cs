@@ -1,30 +1,34 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Xml.Linq;
 using Pihrtsoft.Records.Commands;
 using Pihrtsoft.Records.Utilities;
+using static Pihrtsoft.Records.Utilities.ThrowHelper;
 
 namespace Pihrtsoft.Records
 {
-    internal abstract class RecordReaderBase
+    internal abstract class AbstractRecordReader
     {
-        public RecordReaderBase(XElement element, EntityDefinition entity, DocumentReaderSettings settings)
+        public AbstractRecordReader(XElement element, EntityDefinition entity, DocumentSettings settings)
         {
             Element = element;
             Entity = entity;
             Settings = settings;
         }
 
-        public XElement Element { get; }
+        protected XElement Element { get; }
         public EntityDefinition Entity { get; }
-        public DocumentReaderSettings Settings { get; }
-        internal XElement Current { get; private set; }
+        public DocumentSettings Settings { get; }
+        private XElement Current { get; set; }
 
         private CommandCollection Commands { get; set; }
         private Stack<Variable> Variables { get; set; }
 
-        public abstract IEnumerable<Record> ReadRecords();
+        public virtual bool ShouldCheckRequiredProperty { get; }
+
+        public abstract Collection<Record> ReadRecords();
 
         protected abstract void AddRecord(Record record);
 
@@ -68,7 +72,7 @@ namespace Pihrtsoft.Records
                         }
                     default:
                         {
-                            ThrowHelper.UnknownElement(element);
+                            ThrowOnUnknownElement(element);
                             break;
                         }
                 }
@@ -153,30 +157,33 @@ namespace Pihrtsoft.Records
 
             Commands?.ExecuteAll(record);
 
-            SetDefaultValues(record);
-
-            return record;
-        }
-
-        private void SetDefaultValues(Record record)
-        {
-            foreach (PropertyDefinition property in Entity.AllProperties()
-                .Where(f => f.DefaultValue != null))
+            foreach (PropertyDefinition property in Entity.AllProperties())
             {
-                if (!record.ContainsProperty(property.Name))
+                if (property.DefaultValue != null)
                 {
-                    if (property.IsCollection)
+                    if (!record.ContainsProperty(property.Name))
                     {
-                        var list = new List<object>();
-                        list.Add(property.DefaultValue);
-                        record[property.Name] = list;
-                    }
-                    else
-                    {
-                        record[property.Name] = property.DefaultValue;
+                        if (property.IsCollection)
+                        {
+                            var list = new List<object>();
+                            list.Add(property.DefaultValue);
+                            record[property.Name] = list;
+                        }
+                        else
+                        {
+                            record[property.Name] = property.DefaultValue;
+                        }
                     }
                 }
+                else if (ShouldCheckRequiredProperty
+                    && property.IsRequired
+                    && !record.ContainsProperty(property.Name))
+                {
+                    Throw(ErrorMessages.PropertyIsRequired(property.Name));
+                }
             }
+
+            return record;
         }
 
         private Command CreateCommandFromAttribute(XAttribute attribute)
@@ -209,7 +216,7 @@ namespace Pihrtsoft.Records
                 if (element.HasAttributes)
                 {
                     if (element.Kind() != ElementKind.Command)
-                        ThrowHelper.UnknownElement(element);
+                        ThrowOnUnknownElement(element);
 
                     foreach (Command command in CreateCommandFromElement(element))
                         yield return command;
@@ -284,11 +291,11 @@ namespace Pihrtsoft.Records
 
                             if (property == null)
                             {
-                                Throw(ExceptionMessages.PropertyIsNotDefined(propertyName));
+                                Throw(ErrorMessages.PropertyIsNotDefined(propertyName));
                             }
                             else if (!property.IsCollection)
                             {
-                                Throw(ExceptionMessages.CannotAddItemToNonCollectionProperty(propertyName));
+                                Throw(ErrorMessages.CannotAddItemToNonCollectionProperty(propertyName));
                             }
 
                             yield return new AddItemCommand(propertyName, GetValue(attribute));
@@ -298,7 +305,7 @@ namespace Pihrtsoft.Records
                     }
                 default:
                     {
-                        Throw(ExceptionMessages.CommandIsNotDefined(element.LocalName()));
+                        Throw(ErrorMessages.CommandIsNotDefined(element.LocalName()));
                         break;
                     }
             }
@@ -309,7 +316,7 @@ namespace Pihrtsoft.Records
             string propertyName = GetAttributeName(attribute);
 
             if (!Entity.ContainsProperty(propertyName))
-                Throw(ExceptionMessages.PropertyIsNotDefined(propertyName), attribute);
+                Throw(ErrorMessages.PropertyIsNotDefined(propertyName), attribute);
 
             return propertyName;
         }
@@ -319,7 +326,7 @@ namespace Pihrtsoft.Records
             string propertyName = GetAttributeName(element);
 
             if (!Entity.ContainsProperty(propertyName))
-                Throw(ExceptionMessages.PropertyIsNotDefined(propertyName));
+                Throw(ErrorMessages.PropertyIsNotDefined(propertyName));
 
             return propertyName;
         }
@@ -336,15 +343,15 @@ namespace Pihrtsoft.Records
 
         private string GetValue(XAttribute attribute)
         {
-            return GetValue(attribute, attribute.Value);
+            return GetValue(attribute.Value, attribute);
         }
 
         private string GetValue(XElement element)
         {
-            return GetValue(element, element.Value);
+            return GetValue(element.Value, element);
         }
 
-        private string GetValue(XObject xobject, string value)
+        private string GetValue(string value, XObject xobject)
         {
             try
             {
@@ -352,7 +359,7 @@ namespace Pihrtsoft.Records
             }
             catch (InvalidValueException ex)
             {
-                ThrowHelper.ThrowInvalidOperation("Error while parsing value.", xobject, ex);
+                ThrowInvalidOperation("Error while parsing value.", xobject, ex);
             }
 
             return null;
@@ -371,9 +378,9 @@ namespace Pihrtsoft.Records
             return Entity.FindVariable(name);
         }
 
-        internal void Throw(string message, XObject @object = null)
+        protected void Throw(string message, XObject @object = null)
         {
-            ThrowHelper.ThrowInvalidOperation(message, @object ?? Current);
+            ThrowInvalidOperation(message, @object ?? Current);
         }
     }
 }

@@ -3,22 +3,23 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Xml.Linq;
 using Pihrtsoft.Records.Utilities;
+using static Pihrtsoft.Records.Utilities.ThrowHelper;
 
 namespace Pihrtsoft.Records
 {
-    internal class EntityReader
+    internal class EntityElement
     {
         private XElement _declarationsElement;
+        private XElement _baseRecordsElement;
         private XElement _recordsElement;
         private XElement _entitiesElement;
-        private XElement _baseRecordsElement;
 
-        public EntityReader(XElement element, DocumentReaderSettings settings)
-            : this(element, settings, null)
+        public EntityElement(XElement element, DocumentSettings settings)
+            : this(element, settings, baseEntity: null)
         {
         }
 
-        public EntityReader(XElement element, DocumentReaderSettings settings, EntityDefinition baseEntity = null)
+        public EntityElement(XElement element, DocumentSettings settings, EntityDefinition baseEntity = null)
         {
             Settings = settings;
 
@@ -30,37 +31,23 @@ namespace Pihrtsoft.Records
             if (_declarationsElement != null)
                 ScanDeclarations(_declarationsElement.Elements(), out properties, out variables);
 
-            Entity = new EntityDefinition(
-                element.AttributeValueOrThrow(AttributeNames.Name),
-                baseEntity,
-                properties,
-                variables,
-                element);
+            Entity = new EntityDefinition(element, baseEntity, properties, variables);
         }
 
-        public DocumentReaderSettings Settings { get; }
+        public DocumentSettings Settings { get; }
 
         public EntityDefinition Entity { get; }
-
-        public EntityDefinition BaseEntity
-        {
-            get { return Entity.BaseEntity; }
-        }
-
-        internal XElement Current { get; private set; }
 
         private void Scan(IEnumerable<XElement> elements)
         {
             foreach (XElement element in elements)
             {
-                Current = element;
-
                 switch (element.Kind())
                 {
                     case ElementKind.Declarations:
                         {
                             if (_declarationsElement != null)
-                                ThrowHelper.MultipleElementsWithEqualName(element);
+                                ThrowOnMultipleElementsWithEqualName(element);
 
                             _declarationsElement = element;
                             break;
@@ -68,7 +55,7 @@ namespace Pihrtsoft.Records
                     case ElementKind.BaseRecords:
                         {
                             if (_baseRecordsElement != null)
-                                ThrowHelper.MultipleElementsWithEqualName(element);
+                                ThrowOnMultipleElementsWithEqualName(element);
 
                             _baseRecordsElement = element;
                             break;
@@ -76,7 +63,7 @@ namespace Pihrtsoft.Records
                     case ElementKind.Records:
                         {
                             if (_recordsElement != null)
-                                ThrowHelper.MultipleElementsWithEqualName(element);
+                                ThrowOnMultipleElementsWithEqualName(element);
 
                             _recordsElement = element;
                             break;
@@ -84,31 +71,27 @@ namespace Pihrtsoft.Records
                     case ElementKind.Entities:
                         {
                             if (_entitiesElement != null)
-                                ThrowHelper.MultipleElementsWithEqualName(element);
+                                ThrowOnMultipleElementsWithEqualName(element);
 
                             _entitiesElement = element;
                             break;
                         }
                     default:
                         {
-                            ThrowHelper.UnknownElement(element);
+                            ThrowOnUnknownElement(element);
                             break;
                         }
                 }
-
-                Current = null;
             }
         }
 
-        private void ScanDeclarations(IEnumerable<XElement> elements, out ExtendedKeyedCollection<string, PropertyDefinition> properties, out ExtendedKeyedCollection<string, Variable> variables)
+        private static void ScanDeclarations(IEnumerable<XElement> elements, out ExtendedKeyedCollection<string, PropertyDefinition> properties, out ExtendedKeyedCollection<string, Variable> variables)
         {
             properties = null;
             variables = null;
 
             foreach (XElement element in elements)
             {
-                Current = element;
-
                 switch (element.Kind())
                 {
                     case ElementKind.Variable:
@@ -119,7 +102,7 @@ namespace Pihrtsoft.Records
                             string variableName = element.AttributeValueOrThrow(AttributeNames.Name);
 
                             if (variables.Contains(variableName))
-                                Throw(ExceptionMessages.ItemAlreadyDefined(ElementNames.Variable, variableName));
+                                Throw(ErrorMessages.ItemAlreadyDefined(ElementNames.Variable, variableName), element);
 
                             var variable = new Variable(
                                 variableName,
@@ -136,12 +119,13 @@ namespace Pihrtsoft.Records
                             string propertyName = element.AttributeValueOrThrow(AttributeNames.Name);
 
                             if (properties.Contains(propertyName))
-                                Throw(ExceptionMessages.ItemAlreadyDefined(ElementNames.Property, propertyName));
+                                Throw(ErrorMessages.ItemAlreadyDefined(ElementNames.Property, propertyName), element);
 
                             var property = new PropertyDefinition(
                                 propertyName,
                                 element.AttributeValueOrDefault(AttributeNames.DefaultValue),
                                 element.AttributeValueAsBooleanOrDefault(AttributeNames.IsCollection),
+                                element.AttributeValueAsBooleanOrDefault(AttributeNames.IsRequired),
                                 element);
 
                             properties.Add(property);
@@ -149,25 +133,9 @@ namespace Pihrtsoft.Records
                         }
                     default:
                         {
-                            ThrowHelper.UnknownElement(element);
+                            ThrowOnUnknownElement(element);
                             break;
                         }
-                }
-
-                Current = null;
-            }
-        }
-
-        public IEnumerable<EntityReader> GetEntityReaders()
-        {
-            if (_entitiesElement != null)
-            {
-                foreach (XElement element in _entitiesElement.Elements())
-                {
-                    if (element.Kind() != ElementKind.Entity)
-                        ThrowHelper.UnknownElement(element);
-
-                    yield return new EntityReader(element, Settings, Entity);
                 }
             }
         }
@@ -187,21 +155,35 @@ namespace Pihrtsoft.Records
             return null;
         }
 
-        public Collection<Record> ReadRecords()
+        public Collection<Record> Records()
         {
             if (_recordsElement != null)
             {
                 var reader = new RecordReader(_recordsElement, Entity, Settings, ReadBaseRecords());
 
-                return (Collection<Record>)reader.ReadRecords();
+                return reader.ReadRecords();
             }
 
             return null;
         }
 
-        internal void Throw(string message, XObject @object = null)
+        public IEnumerable<EntityElement> EntityElements()
         {
-            ThrowHelper.ThrowInvalidOperation(message, @object ?? Current);
+            if (_entitiesElement != null)
+            {
+                foreach (XElement element in _entitiesElement.Elements())
+                {
+                    if (element.Kind() != ElementKind.Entity)
+                        ThrowOnUnknownElement(element);
+
+                    yield return new EntityElement(element, Settings, Entity);
+                }
+            }
+        }
+
+        private static void Throw(string message, XObject @object)
+        {
+            ThrowInvalidOperation(message, @object);
         }
     }
 }

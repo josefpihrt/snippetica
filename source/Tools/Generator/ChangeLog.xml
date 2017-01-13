@@ -3,9 +3,9 @@
   <Entities>
     <Entity Name="Release">
       <Declarations>
-        <Property Name="Version" Type="String" />
-        <Property Name="ReleaseDate" Type="Date" />
-        <Property Name="Comment" Type="String" />
+        <Property Name="Version" IsRequired="true" />
+        <Property Name="ReleaseDate" IsRequired="true" />
+        <Property Name="Comment" />
       </Declarations>
       <Records>
         <New Version="0.5.0" ReleaseDate="2016-12-30" />

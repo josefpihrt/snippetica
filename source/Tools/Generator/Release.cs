@@ -23,8 +23,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
         public static IEnumerable<Release> LoadFromDocument(string path)
         {
-            return DocumentReader.Create(path)
-                .ReadRecords()
+            return Document.ReadRecords(path)
                 .Select(record => MapFromRecord(record));
         }
 

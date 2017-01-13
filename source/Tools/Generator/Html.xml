@@ -3,7 +3,7 @@
   <Entities>
     <Entity Name="Element">
       <Declarations>
-        <Property Name="Name" />
+        <Property Name="Name" IsRequired="true" />
         <Property Name="Shortcut" />
       </Declarations>
       <Records>

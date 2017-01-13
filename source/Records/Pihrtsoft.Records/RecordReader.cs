@@ -5,19 +5,26 @@ using Pihrtsoft.Records.Utilities;
 
 namespace Pihrtsoft.Records
 {
-    internal class RecordReader : RecordReaderBase
+    internal class RecordReader : AbstractRecordReader
     {
-        public RecordReader(XElement element, EntityDefinition entity, DocumentReaderSettings settings, IEnumerable<Record> baseRecords = null)
+        public RecordReader(XElement element, EntityDefinition entity, DocumentSettings settings, IEnumerable<Record> baseRecords = null)
             : base(element, entity, settings)
         {
-            BaseRecords = (baseRecords != null) ? new BaseRecordCollection(baseRecords) : Empty.BaseRecordCollection;
+            BaseRecords = (baseRecords != null)
+                ? new BaseRecordCollection(baseRecords)
+                : Empty.BaseRecordCollection;
         }
 
         public BaseRecordCollection BaseRecords { get; }
 
         private Collection<Record> Records { get; set; }
 
-        public override IEnumerable<Record> ReadRecords()
+        public override bool ShouldCheckRequiredProperty
+        {
+            get { return true; }
+        }
+
+        public override Collection<Record> ReadRecords()
         {
             Collect(Element.Elements());
 

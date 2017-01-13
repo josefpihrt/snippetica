@@ -2,7 +2,7 @@
 
 namespace Pihrtsoft.Records
 {
-    public class DocumentReaderSettings
+    public class DocumentSettings
     {
         public bool UseVariables { get; set; }
 

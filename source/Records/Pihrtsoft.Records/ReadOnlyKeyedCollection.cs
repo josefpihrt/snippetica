@@ -28,9 +28,13 @@ namespace Pihrtsoft.Records
         {
             TValue value;
             if (_keyedCollection.TryGetValue(key, out value))
+            {
                 return value;
-
-            return default(TValue);
+            }
+            else
+            {
+                return default(TValue);
+            }
         }
 
         public TValue this[TKey key]

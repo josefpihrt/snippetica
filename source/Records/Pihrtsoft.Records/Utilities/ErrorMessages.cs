@@ -3,9 +3,12 @@ using System.Xml.Linq;
 
 namespace Pihrtsoft.Records.Utilities
 {
-    internal static class ExceptionMessages
+    internal static class ErrorMessages
     {
-        public static string CannotApplyAddCommand { get; internal set; }
+        public static string PropertyIsRequired(string propertyName)
+        {
+            return $"Property '{propertyName}' is required.";
+        }
 
         public static string CannotAddItemToNonCollectionProperty(string propertyName)
         {

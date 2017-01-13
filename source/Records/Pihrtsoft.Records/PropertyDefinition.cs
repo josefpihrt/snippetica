@@ -4,27 +4,29 @@ using Pihrtsoft.Records.Utilities;
 
 namespace Pihrtsoft.Records
 {
-    [DebuggerDisplay("Name = {Name,nq} Type = {Type,nq} DefaultValue = {DefaultValue} IsCollection = {IsCollection}")]
+    [DebuggerDisplay("Name = {Name,nq} Type = {Type,nq} DefaultValue = {DefaultValue} IsCollection = {IsCollection}, IsRequired = {IsRequired}")]
     public class PropertyDefinition : IKey<string>
     {
         internal PropertyDefinition(
             string name,
             string defaultValue = null,
             bool isCollection = false,
+            bool isRequired = false,
             XElement element = null)
         {
             if (!object.ReferenceEquals(name, IdName))
             {
                 if (DefaultComparer.NameEquals(name, Id.Name))
-                    ThrowHelper.ThrowInvalidOperation(ExceptionMessages.PropertyNameIsReserved(Id.Name), element);
+                    ThrowHelper.ThrowInvalidOperation(ErrorMessages.PropertyNameIsReserved(Id.Name), element);
 
                 if (DefaultComparer.NameEquals(name, AttributeNames.Tag))
-                    ThrowHelper.ThrowInvalidOperation(ExceptionMessages.PropertyNameIsReserved(AttributeNames.Tag), element);
+                    ThrowHelper.ThrowInvalidOperation(ErrorMessages.PropertyNameIsReserved(AttributeNames.Tag), element);
             }
 
             Name = name;
             DefaultValue = defaultValue;
             IsCollection = isCollection;
+            IsRequired = isRequired;
         }
 
         internal static string IdName { get; } = "Id";
@@ -34,6 +36,7 @@ namespace Pihrtsoft.Records
         public string Name { get; }
         public string DefaultValue { get; }
         public bool IsCollection { get; }
+        public bool IsRequired { get; }
 
         public string GetKey()
         {

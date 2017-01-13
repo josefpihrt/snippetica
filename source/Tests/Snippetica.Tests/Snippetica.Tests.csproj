@@ -49,9 +49,6 @@
   <ItemGroup>
     <Content Include="html.html" />
     <Content Include="vb.vb" />
-    <Content Include="xml.xml">
-      <SubType>Designer</SubType>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Page Include="xaml.xaml">

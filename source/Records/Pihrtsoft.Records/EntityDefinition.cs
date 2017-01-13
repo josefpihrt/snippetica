@@ -6,15 +6,23 @@ using Pihrtsoft.Records.Utilities;
 
 namespace Pihrtsoft.Records
 {
-    [DebuggerDisplay("{Name,nq} Properties: {PropertiesText,nq}")]
+    [DebuggerDisplay("{Name,nq} {BaseEntity.Name,nq} Properties: {PropertiesText,nq}")]
     public class EntityDefinition : IKey<string>
     {
         internal EntityDefinition(
+            XElement element,
+            EntityDefinition baseEntity = null,
+            ExtendedKeyedCollection<string, PropertyDefinition> properties = null,
+            ExtendedKeyedCollection<string, Variable> variables = null): this(element, element.AttributeValueOrThrow(AttributeNames.Name), baseEntity, properties, variables)
+        {
+        }
+
+        private EntityDefinition(
+            XElement element,
             string name,
             EntityDefinition baseEntity = null,
             ExtendedKeyedCollection<string, PropertyDefinition> properties = null,
-            ExtendedKeyedCollection<string, Variable> variables = null,
-            XElement element = null)
+            ExtendedKeyedCollection<string, Variable> variables = null) 
         {
             Name = name;
 
@@ -30,7 +38,7 @@ namespace Pihrtsoft.Records
                     foreach (PropertyDefinition property in properties)
                     {
                         if (FindProperty(property.Name, baseEntity) != null)
-                            ThrowHelper.ThrowInvalidOperation(ExceptionMessages.PropertyAlreadyDefined(property.Name, name), element);
+                            ThrowHelper.ThrowInvalidOperation(ErrorMessages.PropertyAlreadyDefined(property.Name, name), element);
                     }
                 }
 
@@ -52,10 +60,11 @@ namespace Pihrtsoft.Records
         }
 
         public static EntityDefinition Global { get; } = new EntityDefinition(
-            GlobalName,
-            null,
-            new ExtendedKeyedCollection<string, PropertyDefinition>(new PropertyDefinition[] { PropertyDefinition.Id }),
-            null);
+            element: null,
+            name: GlobalName,
+            baseEntity: null,
+            properties: new ExtendedKeyedCollection<string, PropertyDefinition>(new PropertyDefinition[] { PropertyDefinition.Id }),
+            variables: null);
 
         public string Name { get; }
 

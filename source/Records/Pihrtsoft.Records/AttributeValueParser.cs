@@ -4,9 +4,9 @@ namespace Pihrtsoft.Records
 {
     internal static class AttributeValueParser
     {
-        public static string GetAttributeValue(string value, RecordReaderBase reader)
+        public static string GetAttributeValue(string value, AbstractRecordReader reader)
         {
-            DocumentReaderSettings settings = reader.Settings;
+            DocumentSettings settings = reader.Settings;
 
             if (!settings.UseVariables)
                 return value;

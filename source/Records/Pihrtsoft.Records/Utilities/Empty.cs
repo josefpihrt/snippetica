@@ -10,6 +10,8 @@ namespace Pihrtsoft.Records.Utilities
 
         public static BaseRecordCollection BaseRecordCollection { get; } = new BaseRecordCollection(Array<Record>());
 
+        public static RecordCollection RecordCollection { get; } = new RecordCollection(Array<Record>());
+
         public static T[] Array<T>()
         {
             return Empty<T>.Array;

@@ -65,16 +65,14 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
         private static IEnumerable<SnippetDirectory> LoadSnippetDirectories()
         {
-            return DocumentReader.Create(@"..\..\SnippetDirectories.xml")
-                .ReadRecords()
+            return Document.ReadRecords(@"..\..\SnippetDirectories.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .Select(record => SnippetDirectoryMapper.MapFromRecord(record));
         }
 
         private static IEnumerable<CharacterSequence> LoadCharacterSequences(GeneralSettings settings)
         {
-            return DocumentReader.Create(@"..\..\CharacterSequences.xml")
-                .ReadRecords()
+            return Document.ReadRecords(@"..\..\CharacterSequences.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .Select(record =>
                 {
@@ -158,8 +156,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
         public static void GenerateSnippets(SnippetDirectory[] snippetDirectories)
         {
-            IEnumerable<Record> records = DocumentReader.Create(@"..\..\Records.xml")
-                .ReadRecords()
+            IEnumerable<Record> records = Document.ReadRecords(@"..\..\Records.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled));
 
             LanguageDefinition[] languages = records

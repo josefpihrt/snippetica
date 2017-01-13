@@ -1,19 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
 using System.Xml.Linq;
 using Pihrtsoft.Records.Utilities;
 
 namespace Pihrtsoft.Records
 {
-    internal class BaseRecordReader : RecordReaderBase
+    internal class BaseRecordReader : AbstractRecordReader
     {
-        public BaseRecordReader(XElement element, EntityDefinition entity, DocumentReaderSettings settings)
+        public BaseRecordReader(XElement element, EntityDefinition entity, DocumentSettings settings)
             : base(element, entity, settings)
         {
         }
 
         private ExtendedKeyedCollection<string, Record> Records { get; set; }
 
-        public override IEnumerable<Record> ReadRecords()
+        public override Collection<Record> ReadRecords()
         {
             Collect(Element.Elements());
 
@@ -28,7 +28,7 @@ namespace Pihrtsoft.Records
             }
             else if (Records.Contains(record.Id))
             {
-                Throw(ExceptionMessages.ItemAlreadyDefined(PropertyDefinition.Id.Name, record.Id));
+                Throw(ErrorMessages.ItemAlreadyDefined(PropertyDefinition.Id.Name, record.Id));
             }
 
             Records.Add(record);
@@ -37,7 +37,7 @@ namespace Pihrtsoft.Records
         protected override Record CreateRecord(string id)
         {
             if (id == null)
-                Throw(ExceptionMessages.MissingBaseRecordIdentifier());
+                Throw(ErrorMessages.MissingBaseRecordIdentifier());
 
             return new Record(Entity, id);
         }

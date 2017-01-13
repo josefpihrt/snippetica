@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Pihrtsoft.Records.Tests
 {
@@ -8,14 +7,12 @@ namespace Pihrtsoft.Records.Tests
     {
         internal static void Main(string[] args)
         {
-            var settings = new DocumentReaderSettings()
+            var settings = new DocumentSettings()
             {
                 UseVariables = true
             };
 
-            Record[] records = DocumentReader.Create(@"..\..\Test.xml", settings)
-                .ReadRecords()
-                .ToArray();
+            RecordCollection records = Document.ReadRecords(@"..\..\Test.xml", settings);
 
             foreach (Record record in records)
             {

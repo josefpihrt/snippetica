@@ -10,6 +10,7 @@
         public const string Tag = nameof(Tag);
         public const string DefaultValue = nameof(DefaultValue);
         public const string IsCollection = nameof(IsCollection);
+        public const string IsRequired = nameof(IsRequired);
         public const string Version = nameof(Version);
     }
 }
