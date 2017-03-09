@@ -19,6 +19,7 @@
               </Tag>
             </Tag>
             <New Id="Static" Shortcut="s" />
+            <New Id="Virtual" Shortcut="v" />
           </BaseRecords>
           <Records>
             <Set Language="CSharp">
@@ -27,6 +28,7 @@
               <New Id="Protected" Keyword="protected" />
               <New Id="Private" Keyword="private" />
               <New Id="Static" Keyword="static" />
+              <New Id="Virtual" Keyword="virtual" />
             </Set>
             <Set Language="VisualBasic">
               <New Id="Public" Keyword="Public" />
@@ -34,6 +36,7 @@
               <New Id="Protected" Keyword="Protected" />
               <New Id="Private" Keyword="Private" />
               <New Id="Static" Keyword="Shared" />
+              <New Id="Virtual" Keyword="Overridable" />
             </Set>
           </Records>
         </Entity>

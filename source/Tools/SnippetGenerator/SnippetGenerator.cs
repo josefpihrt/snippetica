@@ -20,6 +20,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         public SnippetGeneratorSettings Settings { get; }
 
         private static Command StaticCommand { get; } = new StaticCommand();
+        private static Command VirtualCommand { get; } = new VirtualCommand();
         private static Command InitializerCommand { get; } = new InitializerCommand();
         private static Command ParametersCommand { get; } = new ParametersCommand();
         private static Command ArgumentsCommand { get; } = new ArgumentsCommand();
@@ -49,6 +50,9 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             if (snippet.HasTag(KnownTags.GenerateStaticModifier))
                 jobs.AddCommand(StaticCommand);
+
+            if (snippet.HasTag(KnownTags.GenerateVirtualModifier))
+                jobs.AddCommand(VirtualCommand);
 
             if (snippet.HasTag(KnownTags.GenerateInitializer))
                 jobs.AddCommand(InitializerCommand);

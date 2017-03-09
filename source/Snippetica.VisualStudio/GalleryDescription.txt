@@ -12,10 +12,10 @@
 <h3>List of Snippets</h3>
 <ul>
   <li>
-    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md">Snippetica.CSharp (622 snippets)</a>
+    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md">Snippetica.CSharp (696 snippets)</a>
   </li>
   <li>
-    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md">Snippetica.VisualBasic (595 snippets)</a>
+    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md">Snippetica.VisualBasic (669 snippets)</a>
   </li>
   <li>
     <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp/README.md">Snippetica.Cpp (23 snippets)</a>

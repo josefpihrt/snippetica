@@ -1,6 +1,6 @@
 ﻿## Snippetica.VisualBasic
 
-* 595 snippets
+* 669 snippets
 
 ### List of Snippets
 
@@ -118,6 +118,43 @@ Title | Shortcut
 [Friend Object indexer](InternalObjectIndexer.snippet)|iir
 [Friend Object method \(with parameters\)](InternalObjectMethodWithParameters.snippet)|im\_
 [Friend Object method](InternalObjectMethod.snippet)|im
+[Friend Overridable auto property](InternalVirtualAutoProperty.snippet)|ivp
+[Friend Overridable Boolean auto property](InternalVirtualBooleanAutoProperty.snippet)|ivp
+[Friend Overridable Boolean method \(with parameters\)](InternalVirtualBooleanMethodWithParameters.snippet)|ivm\_
+[Friend Overridable Boolean method](InternalVirtualBooleanMethod.snippet)|ivm
+[Friend Overridable DateTime auto property](InternalVirtualDateTimeAutoProperty.snippet)|ivp
+[Friend Overridable DateTime method \(with parameters\)](InternalVirtualDateTimeMethodWithParameters.snippet)|ivm\_
+[Friend Overridable DateTime method](InternalVirtualDateTimeMethod.snippet)|ivm
+[Friend Overridable Int32 auto property](InternalVirtualInt32AutoProperty.snippet)|ivp
+[Friend Overridable Int32 method \(with parameters\)](InternalVirtualInt32MethodWithParameters.snippet)|ivm\_
+[Friend Overridable Int32 method](InternalVirtualInt32Method.snippet)|ivm
+[Friend Overridable Int64 auto property](InternalVirtualInt64AutoProperty.snippet)|ivp
+[Friend Overridable Int64 method \(with parameters\)](InternalVirtualInt64MethodWithParameters.snippet)|ivm\_
+[Friend Overridable Int64 method](InternalVirtualInt64Method.snippet)|ivm
+[Friend Overridable method \(with parameters\)](InternalVirtualMethodWithParameters.snippet)|ivm\_
+[Friend Overridable method](InternalVirtualMethod.snippet)|ivm
+[Friend Overridable Object auto property](InternalVirtualObjectAutoProperty.snippet)|ivp
+[Friend Overridable Object method \(with parameters\)](InternalVirtualObjectMethodWithParameters.snippet)|ivm\_
+[Friend Overridable Object method](InternalVirtualObjectMethod.snippet)|ivm
+[Friend Overridable read\-only auto property](InternalVirtualReadOnlyAutoProperty.snippet)|ivrp
+[Friend Overridable read\-only Boolean auto property](InternalVirtualBooleanReadOnlyAutoProperty.snippet)|ivrp
+[Friend Overridable read\-only Boolean Property](InternalVirtualBooleanReadOnlyProperty.snippet)|ivrpp
+[Friend Overridable read\-only DateTime auto property](InternalVirtualDateTimeReadOnlyAutoProperty.snippet)|ivrp
+[Friend Overridable read\-only DateTime Property](InternalVirtualDateTimeReadOnlyProperty.snippet)|ivrpp
+[Friend Overridable read\-only Int32 auto property](InternalVirtualInt32ReadOnlyAutoProperty.snippet)|ivrp
+[Friend Overridable read\-only Int32 Property](InternalVirtualInt32ReadOnlyProperty.snippet)|ivrpp
+[Friend Overridable read\-only Int64 auto property](InternalVirtualInt64ReadOnlyAutoProperty.snippet)|ivrp
+[Friend Overridable read\-only Int64 Property](InternalVirtualInt64ReadOnlyProperty.snippet)|ivrpp
+[Friend Overridable read\-only Object auto property](InternalVirtualObjectReadOnlyAutoProperty.snippet)|ivrp
+[Friend Overridable read\-only Object Property](InternalVirtualObjectReadOnlyProperty.snippet)|ivrpp
+[Friend Overridable read\-only Property](InternalVirtualReadOnlyProperty.snippet)|ivrpp
+[Friend Overridable read\-only String auto property](InternalVirtualStringReadOnlyAutoProperty.snippet)|ivrp
+[Friend Overridable read\-only String Property](InternalVirtualStringReadOnlyProperty.snippet)|ivrpp
+[Friend Overridable String auto property](InternalVirtualStringAutoProperty.snippet)|ivp
+[Friend Overridable String method \(with parameters\)](InternalVirtualStringMethodWithParameters.snippet)|ivm\_
+[Friend Overridable String method](InternalVirtualStringMethod.snippet)|ivm
+[Friend Overridable void method \(with parameters\)](InternalVirtualVoidMethodWithParameters.snippet)|ivm\_
+[Friend Overridable void method](InternalVirtualVoidMethod.snippet)|ivm
 [Friend read\-only auto property](InternalReadOnlyAutoProperty.snippet)|irp
 [Friend read\-only Boolean auto property](InternalBooleanReadOnlyAutoProperty.snippet)|irp
 [Friend read\-only Boolean field](InternalBooleanReadOnlyField.snippet)|irf
@@ -478,6 +515,43 @@ Title | Shortcut
 [Public Object indexer](PublicObjectIndexer.snippet)|ir
 [Public Object method \(with parameters\)](PublicObjectMethodWithParameters.snippet)|m\_
 [Public Object method](PublicObjectMethod.snippet)|m
+[Public Overridable auto property](PublicVirtualAutoProperty.snippet)|vp
+[Public Overridable Boolean auto property](PublicVirtualBooleanAutoProperty.snippet)|vp
+[Public Overridable Boolean method \(with parameters\)](PublicVirtualBooleanMethodWithParameters.snippet)|vm\_
+[Public Overridable Boolean method](PublicVirtualBooleanMethod.snippet)|vm
+[Public Overridable DateTime auto property](PublicVirtualDateTimeAutoProperty.snippet)|vp
+[Public Overridable DateTime method \(with parameters\)](PublicVirtualDateTimeMethodWithParameters.snippet)|vm\_
+[Public Overridable DateTime method](PublicVirtualDateTimeMethod.snippet)|vm
+[Public Overridable Int32 auto property](PublicVirtualInt32AutoProperty.snippet)|vp
+[Public Overridable Int32 method \(with parameters\)](PublicVirtualInt32MethodWithParameters.snippet)|vm\_
+[Public Overridable Int32 method](PublicVirtualInt32Method.snippet)|vm
+[Public Overridable Int64 auto property](PublicVirtualInt64AutoProperty.snippet)|vp
+[Public Overridable Int64 method \(with parameters\)](PublicVirtualInt64MethodWithParameters.snippet)|vm\_
+[Public Overridable Int64 method](PublicVirtualInt64Method.snippet)|vm
+[Public Overridable method \(with parameters\)](PublicVirtualMethodWithParameters.snippet)|vm\_
+[Public Overridable method](PublicVirtualMethod.snippet)|vm
+[Public Overridable Object auto property](PublicVirtualObjectAutoProperty.snippet)|vp
+[Public Overridable Object method \(with parameters\)](PublicVirtualObjectMethodWithParameters.snippet)|vm\_
+[Public Overridable Object method](PublicVirtualObjectMethod.snippet)|vm
+[Public Overridable read\-only auto property](PublicVirtualReadOnlyAutoProperty.snippet)|vrp
+[Public Overridable read\-only Boolean auto property](PublicVirtualBooleanReadOnlyAutoProperty.snippet)|vrp
+[Public Overridable read\-only Boolean Property](PublicVirtualBooleanReadOnlyProperty.snippet)|vrpp
+[Public Overridable read\-only DateTime auto property](PublicVirtualDateTimeReadOnlyAutoProperty.snippet)|vrp
+[Public Overridable read\-only DateTime Property](PublicVirtualDateTimeReadOnlyProperty.snippet)|vrpp
+[Public Overridable read\-only Int32 auto property](PublicVirtualInt32ReadOnlyAutoProperty.snippet)|vrp
+[Public Overridable read\-only Int32 Property](PublicVirtualInt32ReadOnlyProperty.snippet)|vrpp
+[Public Overridable read\-only Int64 auto property](PublicVirtualInt64ReadOnlyAutoProperty.snippet)|vrp
+[Public Overridable read\-only Int64 Property](PublicVirtualInt64ReadOnlyProperty.snippet)|vrpp
+[Public Overridable read\-only Object auto property](PublicVirtualObjectReadOnlyAutoProperty.snippet)|vrp
+[Public Overridable read\-only Object Property](PublicVirtualObjectReadOnlyProperty.snippet)|vrpp
+[Public Overridable read\-only Property](PublicVirtualReadOnlyProperty.snippet)|vrpp
+[Public Overridable read\-only String auto property](PublicVirtualStringReadOnlyAutoProperty.snippet)|vrp
+[Public Overridable read\-only String Property](PublicVirtualStringReadOnlyProperty.snippet)|vrpp
+[Public Overridable String auto property](PublicVirtualStringAutoProperty.snippet)|vp
+[Public Overridable String method \(with parameters\)](PublicVirtualStringMethodWithParameters.snippet)|vm\_
+[Public Overridable String method](PublicVirtualStringMethod.snippet)|vm
+[Public Overridable void method \(with parameters\)](PublicVirtualVoidMethodWithParameters.snippet)|vm\_
+[Public Overridable void method](PublicVirtualVoidMethod.snippet)|vm
 [Public read\-only auto property](PublicReadOnlyAutoProperty.snippet)|rp
 [Public read\-only Boolean auto property](PublicBooleanReadOnlyAutoProperty.snippet)|rp
 [Public read\-only Boolean field](PublicBooleanReadOnlyField.snippet)|rf

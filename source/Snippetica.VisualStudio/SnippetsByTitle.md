@@ -1,6 +1,6 @@
 ﻿## Snippetica.VisualStudio
 
-* 1580 snippets
+* 1728 snippets
 
 ### List of Snippets
 
@@ -275,6 +275,43 @@ C\#|[internal String indexer](Snippetica.CSharp/InternalStringIndexer.snippet)|i
 C\#|[internal String method \(with parameters\)](Snippetica.CSharp/InternalStringMethodWithParameters.snippet)|im\_
 C\#|[internal String method](Snippetica.CSharp/InternalStringMethod.snippet)|im
 C\#|[internal struct](Snippetica.CSharp/InternalStruct.snippet)|ist
+C\#|[internal virtual auto property](Snippetica.CSharp/InternalVirtualAutoProperty.snippet)|ivp
+C\#|[internal virtual Boolean auto property](Snippetica.CSharp/InternalVirtualBooleanAutoProperty.snippet)|ivp
+C\#|[internal virtual Boolean method \(with parameters\)](Snippetica.CSharp/InternalVirtualBooleanMethodWithParameters.snippet)|ivm\_
+C\#|[internal virtual Boolean method](Snippetica.CSharp/InternalVirtualBooleanMethod.snippet)|ivm
+C\#|[internal virtual DateTime auto property](Snippetica.CSharp/InternalVirtualDateTimeAutoProperty.snippet)|ivp
+C\#|[internal virtual DateTime method \(with parameters\)](Snippetica.CSharp/InternalVirtualDateTimeMethodWithParameters.snippet)|ivm\_
+C\#|[internal virtual DateTime method](Snippetica.CSharp/InternalVirtualDateTimeMethod.snippet)|ivm
+C\#|[internal virtual Int32 auto property](Snippetica.CSharp/InternalVirtualInt32AutoProperty.snippet)|ivp
+C\#|[internal virtual Int32 method \(with parameters\)](Snippetica.CSharp/InternalVirtualInt32MethodWithParameters.snippet)|ivm\_
+C\#|[internal virtual Int32 method](Snippetica.CSharp/InternalVirtualInt32Method.snippet)|ivm
+C\#|[internal virtual Int64 auto property](Snippetica.CSharp/InternalVirtualInt64AutoProperty.snippet)|ivp
+C\#|[internal virtual Int64 method \(with parameters\)](Snippetica.CSharp/InternalVirtualInt64MethodWithParameters.snippet)|ivm\_
+C\#|[internal virtual Int64 method](Snippetica.CSharp/InternalVirtualInt64Method.snippet)|ivm
+C\#|[internal virtual method \(with parameters\)](Snippetica.CSharp/InternalVirtualMethodWithParameters.snippet)|ivm\_
+C\#|[internal virtual method](Snippetica.CSharp/InternalVirtualMethod.snippet)|ivm
+C\#|[internal virtual Object auto property](Snippetica.CSharp/InternalVirtualObjectAutoProperty.snippet)|ivp
+C\#|[internal virtual Object method \(with parameters\)](Snippetica.CSharp/InternalVirtualObjectMethodWithParameters.snippet)|ivm\_
+C\#|[internal virtual Object method](Snippetica.CSharp/InternalVirtualObjectMethod.snippet)|ivm
+C\#|[internal virtual read\-only auto property](Snippetica.CSharp/InternalVirtualReadOnlyAutoProperty.snippet)|ivrp
+C\#|[internal virtual read\-only Boolean auto property](Snippetica.CSharp/InternalVirtualBooleanReadOnlyAutoProperty.snippet)|ivrp
+C\#|[internal virtual read\-only Boolean property](Snippetica.CSharp/InternalVirtualBooleanReadOnlyProperty.snippet)|ivrpp
+C\#|[internal virtual read\-only DateTime auto property](Snippetica.CSharp/InternalVirtualDateTimeReadOnlyAutoProperty.snippet)|ivrp
+C\#|[internal virtual read\-only DateTime property](Snippetica.CSharp/InternalVirtualDateTimeReadOnlyProperty.snippet)|ivrpp
+C\#|[internal virtual read\-only Int32 auto property](Snippetica.CSharp/InternalVirtualInt32ReadOnlyAutoProperty.snippet)|ivrp
+C\#|[internal virtual read\-only Int32 property](Snippetica.CSharp/InternalVirtualInt32ReadOnlyProperty.snippet)|ivrpp
+C\#|[internal virtual read\-only Int64 auto property](Snippetica.CSharp/InternalVirtualInt64ReadOnlyAutoProperty.snippet)|ivrp
+C\#|[internal virtual read\-only Int64 property](Snippetica.CSharp/InternalVirtualInt64ReadOnlyProperty.snippet)|ivrpp
+C\#|[internal virtual read\-only Object auto property](Snippetica.CSharp/InternalVirtualObjectReadOnlyAutoProperty.snippet)|ivrp
+C\#|[internal virtual read\-only Object property](Snippetica.CSharp/InternalVirtualObjectReadOnlyProperty.snippet)|ivrpp
+C\#|[internal virtual read\-only property](Snippetica.CSharp/InternalVirtualReadOnlyProperty.snippet)|ivrpp
+C\#|[internal virtual read\-only String auto property](Snippetica.CSharp/InternalVirtualStringReadOnlyAutoProperty.snippet)|ivrp
+C\#|[internal virtual read\-only String property](Snippetica.CSharp/InternalVirtualStringReadOnlyProperty.snippet)|ivrpp
+C\#|[internal virtual String auto property](Snippetica.CSharp/InternalVirtualStringAutoProperty.snippet)|ivp
+C\#|[internal virtual String method \(with parameters\)](Snippetica.CSharp/InternalVirtualStringMethodWithParameters.snippet)|ivm\_
+C\#|[internal virtual String method](Snippetica.CSharp/InternalVirtualStringMethod.snippet)|ivm
+C\#|[internal virtual void method \(with parameters\)](Snippetica.CSharp/InternalVirtualVoidMethodWithParameters.snippet)|ivm\_
+C\#|[internal virtual void method](Snippetica.CSharp/InternalVirtualVoidMethod.snippet)|ivm
 C\#|[internal void delegate \(with parameters\)](Snippetica.CSharp/InternalVoidDelegateWithParameters.snippet)|ide\_
 C\#|[internal void delegate](Snippetica.CSharp/InternalVoidDelegate.snippet)|ide
 C\#|[internal void method \(with parameters\)](Snippetica.CSharp/InternalVoidMethodWithParameters.snippet)|im\_
@@ -575,6 +612,43 @@ C\#|[public String indexer](Snippetica.CSharp/PublicStringIndexer.snippet)|ir
 C\#|[public String method \(with parameters\)](Snippetica.CSharp/PublicStringMethodWithParameters.snippet)|m\_
 C\#|[public String method](Snippetica.CSharp/PublicStringMethod.snippet)|m
 C\#|[public struct](Snippetica.CSharp/PublicStruct.snippet)|st
+C\#|[public virtual auto property](Snippetica.CSharp/PublicVirtualAutoProperty.snippet)|vp
+C\#|[public virtual Boolean auto property](Snippetica.CSharp/PublicVirtualBooleanAutoProperty.snippet)|vp
+C\#|[public virtual Boolean method \(with parameters\)](Snippetica.CSharp/PublicVirtualBooleanMethodWithParameters.snippet)|vm\_
+C\#|[public virtual Boolean method](Snippetica.CSharp/PublicVirtualBooleanMethod.snippet)|vm
+C\#|[public virtual DateTime auto property](Snippetica.CSharp/PublicVirtualDateTimeAutoProperty.snippet)|vp
+C\#|[public virtual DateTime method \(with parameters\)](Snippetica.CSharp/PublicVirtualDateTimeMethodWithParameters.snippet)|vm\_
+C\#|[public virtual DateTime method](Snippetica.CSharp/PublicVirtualDateTimeMethod.snippet)|vm
+C\#|[public virtual Int32 auto property](Snippetica.CSharp/PublicVirtualInt32AutoProperty.snippet)|vp
+C\#|[public virtual Int32 method \(with parameters\)](Snippetica.CSharp/PublicVirtualInt32MethodWithParameters.snippet)|vm\_
+C\#|[public virtual Int32 method](Snippetica.CSharp/PublicVirtualInt32Method.snippet)|vm
+C\#|[public virtual Int64 auto property](Snippetica.CSharp/PublicVirtualInt64AutoProperty.snippet)|vp
+C\#|[public virtual Int64 method \(with parameters\)](Snippetica.CSharp/PublicVirtualInt64MethodWithParameters.snippet)|vm\_
+C\#|[public virtual Int64 method](Snippetica.CSharp/PublicVirtualInt64Method.snippet)|vm
+C\#|[public virtual method \(with parameters\)](Snippetica.CSharp/PublicVirtualMethodWithParameters.snippet)|vm\_
+C\#|[public virtual method](Snippetica.CSharp/PublicVirtualMethod.snippet)|vm
+C\#|[public virtual Object auto property](Snippetica.CSharp/PublicVirtualObjectAutoProperty.snippet)|vp
+C\#|[public virtual Object method \(with parameters\)](Snippetica.CSharp/PublicVirtualObjectMethodWithParameters.snippet)|vm\_
+C\#|[public virtual Object method](Snippetica.CSharp/PublicVirtualObjectMethod.snippet)|vm
+C\#|[public virtual read\-only auto property](Snippetica.CSharp/PublicVirtualReadOnlyAutoProperty.snippet)|vrp
+C\#|[public virtual read\-only Boolean auto property](Snippetica.CSharp/PublicVirtualBooleanReadOnlyAutoProperty.snippet)|vrp
+C\#|[public virtual read\-only Boolean property](Snippetica.CSharp/PublicVirtualBooleanReadOnlyProperty.snippet)|vrpp
+C\#|[public virtual read\-only DateTime auto property](Snippetica.CSharp/PublicVirtualDateTimeReadOnlyAutoProperty.snippet)|vrp
+C\#|[public virtual read\-only DateTime property](Snippetica.CSharp/PublicVirtualDateTimeReadOnlyProperty.snippet)|vrpp
+C\#|[public virtual read\-only Int32 auto property](Snippetica.CSharp/PublicVirtualInt32ReadOnlyAutoProperty.snippet)|vrp
+C\#|[public virtual read\-only Int32 property](Snippetica.CSharp/PublicVirtualInt32ReadOnlyProperty.snippet)|vrpp
+C\#|[public virtual read\-only Int64 auto property](Snippetica.CSharp/PublicVirtualInt64ReadOnlyAutoProperty.snippet)|vrp
+C\#|[public virtual read\-only Int64 property](Snippetica.CSharp/PublicVirtualInt64ReadOnlyProperty.snippet)|vrpp
+C\#|[public virtual read\-only Object auto property](Snippetica.CSharp/PublicVirtualObjectReadOnlyAutoProperty.snippet)|vrp
+C\#|[public virtual read\-only Object property](Snippetica.CSharp/PublicVirtualObjectReadOnlyProperty.snippet)|vrpp
+C\#|[public virtual read\-only property](Snippetica.CSharp/PublicVirtualReadOnlyProperty.snippet)|vrpp
+C\#|[public virtual read\-only String auto property](Snippetica.CSharp/PublicVirtualStringReadOnlyAutoProperty.snippet)|vrp
+C\#|[public virtual read\-only String property](Snippetica.CSharp/PublicVirtualStringReadOnlyProperty.snippet)|vrpp
+C\#|[public virtual String auto property](Snippetica.CSharp/PublicVirtualStringAutoProperty.snippet)|vp
+C\#|[public virtual String method \(with parameters\)](Snippetica.CSharp/PublicVirtualStringMethodWithParameters.snippet)|vm\_
+C\#|[public virtual String method](Snippetica.CSharp/PublicVirtualStringMethod.snippet)|vm
+C\#|[public virtual void method \(with parameters\)](Snippetica.CSharp/PublicVirtualVoidMethodWithParameters.snippet)|vm\_
+C\#|[public virtual void method](Snippetica.CSharp/PublicVirtualVoidMethod.snippet)|vm
 C\#|[public void delegate \(with parameters\)](Snippetica.CSharp/PublicVoidDelegateWithParameters.snippet)|de\_
 C\#|[public void delegate](Snippetica.CSharp/PublicVoidDelegate.snippet)|de
 C\#|[public void method \(with parameters\)](Snippetica.CSharp/PublicVoidMethodWithParameters.snippet)|m\_
@@ -984,6 +1058,43 @@ VB|[Friend Object delegate](Snippetica.VisualBasic/InternalObjectDelegate.snippe
 VB|[Friend Object indexer](Snippetica.VisualBasic/InternalObjectIndexer.snippet)|iir
 VB|[Friend Object method \(with parameters\)](Snippetica.VisualBasic/InternalObjectMethodWithParameters.snippet)|im\_
 VB|[Friend Object method](Snippetica.VisualBasic/InternalObjectMethod.snippet)|im
+VB|[Friend Overridable auto property](Snippetica.VisualBasic/InternalVirtualAutoProperty.snippet)|ivp
+VB|[Friend Overridable Boolean auto property](Snippetica.VisualBasic/InternalVirtualBooleanAutoProperty.snippet)|ivp
+VB|[Friend Overridable Boolean method \(with parameters\)](Snippetica.VisualBasic/InternalVirtualBooleanMethodWithParameters.snippet)|ivm\_
+VB|[Friend Overridable Boolean method](Snippetica.VisualBasic/InternalVirtualBooleanMethod.snippet)|ivm
+VB|[Friend Overridable DateTime auto property](Snippetica.VisualBasic/InternalVirtualDateTimeAutoProperty.snippet)|ivp
+VB|[Friend Overridable DateTime method \(with parameters\)](Snippetica.VisualBasic/InternalVirtualDateTimeMethodWithParameters.snippet)|ivm\_
+VB|[Friend Overridable DateTime method](Snippetica.VisualBasic/InternalVirtualDateTimeMethod.snippet)|ivm
+VB|[Friend Overridable Int32 auto property](Snippetica.VisualBasic/InternalVirtualInt32AutoProperty.snippet)|ivp
+VB|[Friend Overridable Int32 method \(with parameters\)](Snippetica.VisualBasic/InternalVirtualInt32MethodWithParameters.snippet)|ivm\_
+VB|[Friend Overridable Int32 method](Snippetica.VisualBasic/InternalVirtualInt32Method.snippet)|ivm
+VB|[Friend Overridable Int64 auto property](Snippetica.VisualBasic/InternalVirtualInt64AutoProperty.snippet)|ivp
+VB|[Friend Overridable Int64 method \(with parameters\)](Snippetica.VisualBasic/InternalVirtualInt64MethodWithParameters.snippet)|ivm\_
+VB|[Friend Overridable Int64 method](Snippetica.VisualBasic/InternalVirtualInt64Method.snippet)|ivm
+VB|[Friend Overridable method \(with parameters\)](Snippetica.VisualBasic/InternalVirtualMethodWithParameters.snippet)|ivm\_
+VB|[Friend Overridable method](Snippetica.VisualBasic/InternalVirtualMethod.snippet)|ivm
+VB|[Friend Overridable Object auto property](Snippetica.VisualBasic/InternalVirtualObjectAutoProperty.snippet)|ivp
+VB|[Friend Overridable Object method \(with parameters\)](Snippetica.VisualBasic/InternalVirtualObjectMethodWithParameters.snippet)|ivm\_
+VB|[Friend Overridable Object method](Snippetica.VisualBasic/InternalVirtualObjectMethod.snippet)|ivm
+VB|[Friend Overridable read\-only auto property](Snippetica.VisualBasic/InternalVirtualReadOnlyAutoProperty.snippet)|ivrp
+VB|[Friend Overridable read\-only Boolean auto property](Snippetica.VisualBasic/InternalVirtualBooleanReadOnlyAutoProperty.snippet)|ivrp
+VB|[Friend Overridable read\-only Boolean Property](Snippetica.VisualBasic/InternalVirtualBooleanReadOnlyProperty.snippet)|ivrpp
+VB|[Friend Overridable read\-only DateTime auto property](Snippetica.VisualBasic/InternalVirtualDateTimeReadOnlyAutoProperty.snippet)|ivrp
+VB|[Friend Overridable read\-only DateTime Property](Snippetica.VisualBasic/InternalVirtualDateTimeReadOnlyProperty.snippet)|ivrpp
+VB|[Friend Overridable read\-only Int32 auto property](Snippetica.VisualBasic/InternalVirtualInt32ReadOnlyAutoProperty.snippet)|ivrp
+VB|[Friend Overridable read\-only Int32 Property](Snippetica.VisualBasic/InternalVirtualInt32ReadOnlyProperty.snippet)|ivrpp
+VB|[Friend Overridable read\-only Int64 auto property](Snippetica.VisualBasic/InternalVirtualInt64ReadOnlyAutoProperty.snippet)|ivrp
+VB|[Friend Overridable read\-only Int64 Property](Snippetica.VisualBasic/InternalVirtualInt64ReadOnlyProperty.snippet)|ivrpp
+VB|[Friend Overridable read\-only Object auto property](Snippetica.VisualBasic/InternalVirtualObjectReadOnlyAutoProperty.snippet)|ivrp
+VB|[Friend Overridable read\-only Object Property](Snippetica.VisualBasic/InternalVirtualObjectReadOnlyProperty.snippet)|ivrpp
+VB|[Friend Overridable read\-only Property](Snippetica.VisualBasic/InternalVirtualReadOnlyProperty.snippet)|ivrpp
+VB|[Friend Overridable read\-only String auto property](Snippetica.VisualBasic/InternalVirtualStringReadOnlyAutoProperty.snippet)|ivrp
+VB|[Friend Overridable read\-only String Property](Snippetica.VisualBasic/InternalVirtualStringReadOnlyProperty.snippet)|ivrpp
+VB|[Friend Overridable String auto property](Snippetica.VisualBasic/InternalVirtualStringAutoProperty.snippet)|ivp
+VB|[Friend Overridable String method \(with parameters\)](Snippetica.VisualBasic/InternalVirtualStringMethodWithParameters.snippet)|ivm\_
+VB|[Friend Overridable String method](Snippetica.VisualBasic/InternalVirtualStringMethod.snippet)|ivm
+VB|[Friend Overridable void method \(with parameters\)](Snippetica.VisualBasic/InternalVirtualVoidMethodWithParameters.snippet)|ivm\_
+VB|[Friend Overridable void method](Snippetica.VisualBasic/InternalVirtualVoidMethod.snippet)|ivm
 VB|[Friend read\-only auto property](Snippetica.VisualBasic/InternalReadOnlyAutoProperty.snippet)|irp
 VB|[Friend read\-only Boolean auto property](Snippetica.VisualBasic/InternalBooleanReadOnlyAutoProperty.snippet)|irp
 VB|[Friend read\-only Boolean field](Snippetica.VisualBasic/InternalBooleanReadOnlyField.snippet)|irf
@@ -1344,6 +1455,43 @@ VB|[Public Object field](Snippetica.VisualBasic/PublicObjectField.snippet)|f
 VB|[Public Object indexer](Snippetica.VisualBasic/PublicObjectIndexer.snippet)|ir
 VB|[Public Object method \(with parameters\)](Snippetica.VisualBasic/PublicObjectMethodWithParameters.snippet)|m\_
 VB|[Public Object method](Snippetica.VisualBasic/PublicObjectMethod.snippet)|m
+VB|[Public Overridable auto property](Snippetica.VisualBasic/PublicVirtualAutoProperty.snippet)|vp
+VB|[Public Overridable Boolean auto property](Snippetica.VisualBasic/PublicVirtualBooleanAutoProperty.snippet)|vp
+VB|[Public Overridable Boolean method \(with parameters\)](Snippetica.VisualBasic/PublicVirtualBooleanMethodWithParameters.snippet)|vm\_
+VB|[Public Overridable Boolean method](Snippetica.VisualBasic/PublicVirtualBooleanMethod.snippet)|vm
+VB|[Public Overridable DateTime auto property](Snippetica.VisualBasic/PublicVirtualDateTimeAutoProperty.snippet)|vp
+VB|[Public Overridable DateTime method \(with parameters\)](Snippetica.VisualBasic/PublicVirtualDateTimeMethodWithParameters.snippet)|vm\_
+VB|[Public Overridable DateTime method](Snippetica.VisualBasic/PublicVirtualDateTimeMethod.snippet)|vm
+VB|[Public Overridable Int32 auto property](Snippetica.VisualBasic/PublicVirtualInt32AutoProperty.snippet)|vp
+VB|[Public Overridable Int32 method \(with parameters\)](Snippetica.VisualBasic/PublicVirtualInt32MethodWithParameters.snippet)|vm\_
+VB|[Public Overridable Int32 method](Snippetica.VisualBasic/PublicVirtualInt32Method.snippet)|vm
+VB|[Public Overridable Int64 auto property](Snippetica.VisualBasic/PublicVirtualInt64AutoProperty.snippet)|vp
+VB|[Public Overridable Int64 method \(with parameters\)](Snippetica.VisualBasic/PublicVirtualInt64MethodWithParameters.snippet)|vm\_
+VB|[Public Overridable Int64 method](Snippetica.VisualBasic/PublicVirtualInt64Method.snippet)|vm
+VB|[Public Overridable method \(with parameters\)](Snippetica.VisualBasic/PublicVirtualMethodWithParameters.snippet)|vm\_
+VB|[Public Overridable method](Snippetica.VisualBasic/PublicVirtualMethod.snippet)|vm
+VB|[Public Overridable Object auto property](Snippetica.VisualBasic/PublicVirtualObjectAutoProperty.snippet)|vp
+VB|[Public Overridable Object method \(with parameters\)](Snippetica.VisualBasic/PublicVirtualObjectMethodWithParameters.snippet)|vm\_
+VB|[Public Overridable Object method](Snippetica.VisualBasic/PublicVirtualObjectMethod.snippet)|vm
+VB|[Public Overridable read\-only auto property](Snippetica.VisualBasic/PublicVirtualReadOnlyAutoProperty.snippet)|vrp
+VB|[Public Overridable read\-only Boolean auto property](Snippetica.VisualBasic/PublicVirtualBooleanReadOnlyAutoProperty.snippet)|vrp
+VB|[Public Overridable read\-only Boolean Property](Snippetica.VisualBasic/PublicVirtualBooleanReadOnlyProperty.snippet)|vrpp
+VB|[Public Overridable read\-only DateTime auto property](Snippetica.VisualBasic/PublicVirtualDateTimeReadOnlyAutoProperty.snippet)|vrp
+VB|[Public Overridable read\-only DateTime Property](Snippetica.VisualBasic/PublicVirtualDateTimeReadOnlyProperty.snippet)|vrpp
+VB|[Public Overridable read\-only Int32 auto property](Snippetica.VisualBasic/PublicVirtualInt32ReadOnlyAutoProperty.snippet)|vrp
+VB|[Public Overridable read\-only Int32 Property](Snippetica.VisualBasic/PublicVirtualInt32ReadOnlyProperty.snippet)|vrpp
+VB|[Public Overridable read\-only Int64 auto property](Snippetica.VisualBasic/PublicVirtualInt64ReadOnlyAutoProperty.snippet)|vrp
+VB|[Public Overridable read\-only Int64 Property](Snippetica.VisualBasic/PublicVirtualInt64ReadOnlyProperty.snippet)|vrpp
+VB|[Public Overridable read\-only Object auto property](Snippetica.VisualBasic/PublicVirtualObjectReadOnlyAutoProperty.snippet)|vrp
+VB|[Public Overridable read\-only Object Property](Snippetica.VisualBasic/PublicVirtualObjectReadOnlyProperty.snippet)|vrpp
+VB|[Public Overridable read\-only Property](Snippetica.VisualBasic/PublicVirtualReadOnlyProperty.snippet)|vrpp
+VB|[Public Overridable read\-only String auto property](Snippetica.VisualBasic/PublicVirtualStringReadOnlyAutoProperty.snippet)|vrp
+VB|[Public Overridable read\-only String Property](Snippetica.VisualBasic/PublicVirtualStringReadOnlyProperty.snippet)|vrpp
+VB|[Public Overridable String auto property](Snippetica.VisualBasic/PublicVirtualStringAutoProperty.snippet)|vp
+VB|[Public Overridable String method \(with parameters\)](Snippetica.VisualBasic/PublicVirtualStringMethodWithParameters.snippet)|vm\_
+VB|[Public Overridable String method](Snippetica.VisualBasic/PublicVirtualStringMethod.snippet)|vm
+VB|[Public Overridable void method \(with parameters\)](Snippetica.VisualBasic/PublicVirtualVoidMethodWithParameters.snippet)|vm\_
+VB|[Public Overridable void method](Snippetica.VisualBasic/PublicVirtualVoidMethod.snippet)|vm
 VB|[Public read\-only auto property](Snippetica.VisualBasic/PublicReadOnlyAutoProperty.snippet)|rp
 VB|[Public read\-only Boolean auto property](Snippetica.VisualBasic/PublicBooleanReadOnlyAutoProperty.snippet)|rp
 VB|[Public read\-only Boolean field](Snippetica.VisualBasic/PublicBooleanReadOnlyField.snippet)|rf

@@ -27,6 +27,11 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             get { return Modifiers["Static"]; }
         }
 
+        public ModifierDefinition Virtual
+        {
+            get { return Modifiers["Virtual"]; }
+        }
+
         public string DefaultValue
         {
             get { return Object.DefaultValue; }

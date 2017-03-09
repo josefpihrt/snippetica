@@ -8,6 +8,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Commands
         Type,
         Collection,
         StaticModifier,
+        VirtualModifier,
         AccessModifier,
         Parameters,
         Arguments,

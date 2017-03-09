@@ -74,6 +74,7 @@ this|containing type name|\-
 tw|throw statement|\-
 u|using statement|\-
 v|local variable|prefix
+v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
 y|yield|\-
 
@@ -147,6 +148,10 @@ Title | Shortcut
 [Public interface](PublicInterface.snippet)|ie
 [Public method](PublicMethod.snippet)|m
 [Public module](PublicModule.snippet)|me
+[Public Overridable auto property](PublicVirtualAutoProperty.snippet)|vp
+[Public Overridable method](PublicVirtualMethod.snippet)|vm
+[Public Overridable read\-only auto property](PublicVirtualReadOnlyAutoProperty.snippet)|vrp
+[Public Overridable read\-only Property](PublicVirtualReadOnlyProperty.snippet)|vrpp
 [Public read\-only auto property](PublicReadOnlyAutoProperty.snippet)|rp
 [Public read\-only field](PublicReadOnlyField.snippet)|rf
 [Public read\-only Property](PublicReadOnlyProperty.snippet)|rpp

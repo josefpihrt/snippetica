@@ -122,7 +122,10 @@
             <New Value="this" Description="containing type name" />
             <New Value="tw" Description="throw statement" />
             <New Value="u" Description="using statement" />
-            <New Value="v" Description="local variable" Comment="prefix" />
+            <Set Value="v">
+              <New Description="local variable" Comment="prefix" />
+              <New Description="virtual (Overridable)" Comment="prefix (after access modifier)" />
+            </Set>
             <New Value="we" Description="while statement" />
             <New Value="y" Description="yield" />
           </Add>

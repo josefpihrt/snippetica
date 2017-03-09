@@ -38,6 +38,7 @@
         public const string GeneratePrivateModifier = GeneratePrefix + "PrivateModifier";
 
         public const string GenerateStaticModifier = GeneratePrefix + "StaticModifier";
+        public const string GenerateVirtualModifier = GeneratePrefix + "VirtualModifier";
         public const string GenerateInitializer = GeneratePrefix + "Initializer";
         public const string GenerateParameters = GeneratePrefix + "Parameters";
         public const string GenerateArguments = GeneratePrefix + "Arguments";

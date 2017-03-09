@@ -1,6 +1,6 @@
 ﻿## Snippetica.CSharp
 
-* 622 snippets
+* 696 snippets
 
 ### List of Snippets
 
@@ -275,6 +275,43 @@ Title | Shortcut
 [internal String method \(with parameters\)](InternalStringMethodWithParameters.snippet)|im\_
 [internal String method](InternalStringMethod.snippet)|im
 [internal struct](InternalStruct.snippet)|ist
+[internal virtual auto property](InternalVirtualAutoProperty.snippet)|ivp
+[internal virtual Boolean auto property](InternalVirtualBooleanAutoProperty.snippet)|ivp
+[internal virtual Boolean method \(with parameters\)](InternalVirtualBooleanMethodWithParameters.snippet)|ivm\_
+[internal virtual Boolean method](InternalVirtualBooleanMethod.snippet)|ivm
+[internal virtual DateTime auto property](InternalVirtualDateTimeAutoProperty.snippet)|ivp
+[internal virtual DateTime method \(with parameters\)](InternalVirtualDateTimeMethodWithParameters.snippet)|ivm\_
+[internal virtual DateTime method](InternalVirtualDateTimeMethod.snippet)|ivm
+[internal virtual Int32 auto property](InternalVirtualInt32AutoProperty.snippet)|ivp
+[internal virtual Int32 method \(with parameters\)](InternalVirtualInt32MethodWithParameters.snippet)|ivm\_
+[internal virtual Int32 method](InternalVirtualInt32Method.snippet)|ivm
+[internal virtual Int64 auto property](InternalVirtualInt64AutoProperty.snippet)|ivp
+[internal virtual Int64 method \(with parameters\)](InternalVirtualInt64MethodWithParameters.snippet)|ivm\_
+[internal virtual Int64 method](InternalVirtualInt64Method.snippet)|ivm
+[internal virtual method \(with parameters\)](InternalVirtualMethodWithParameters.snippet)|ivm\_
+[internal virtual method](InternalVirtualMethod.snippet)|ivm
+[internal virtual Object auto property](InternalVirtualObjectAutoProperty.snippet)|ivp
+[internal virtual Object method \(with parameters\)](InternalVirtualObjectMethodWithParameters.snippet)|ivm\_
+[internal virtual Object method](InternalVirtualObjectMethod.snippet)|ivm
+[internal virtual read\-only auto property](InternalVirtualReadOnlyAutoProperty.snippet)|ivrp
+[internal virtual read\-only Boolean auto property](InternalVirtualBooleanReadOnlyAutoProperty.snippet)|ivrp
+[internal virtual read\-only Boolean property](InternalVirtualBooleanReadOnlyProperty.snippet)|ivrpp
+[internal virtual read\-only DateTime auto property](InternalVirtualDateTimeReadOnlyAutoProperty.snippet)|ivrp
+[internal virtual read\-only DateTime property](InternalVirtualDateTimeReadOnlyProperty.snippet)|ivrpp
+[internal virtual read\-only Int32 auto property](InternalVirtualInt32ReadOnlyAutoProperty.snippet)|ivrp
+[internal virtual read\-only Int32 property](InternalVirtualInt32ReadOnlyProperty.snippet)|ivrpp
+[internal virtual read\-only Int64 auto property](InternalVirtualInt64ReadOnlyAutoProperty.snippet)|ivrp
+[internal virtual read\-only Int64 property](InternalVirtualInt64ReadOnlyProperty.snippet)|ivrpp
+[internal virtual read\-only Object auto property](InternalVirtualObjectReadOnlyAutoProperty.snippet)|ivrp
+[internal virtual read\-only Object property](InternalVirtualObjectReadOnlyProperty.snippet)|ivrpp
+[internal virtual read\-only property](InternalVirtualReadOnlyProperty.snippet)|ivrpp
+[internal virtual read\-only String auto property](InternalVirtualStringReadOnlyAutoProperty.snippet)|ivrp
+[internal virtual read\-only String property](InternalVirtualStringReadOnlyProperty.snippet)|ivrpp
+[internal virtual String auto property](InternalVirtualStringAutoProperty.snippet)|ivp
+[internal virtual String method \(with parameters\)](InternalVirtualStringMethodWithParameters.snippet)|ivm\_
+[internal virtual String method](InternalVirtualStringMethod.snippet)|ivm
+[internal virtual void method \(with parameters\)](InternalVirtualVoidMethodWithParameters.snippet)|ivm\_
+[internal virtual void method](InternalVirtualVoidMethod.snippet)|ivm
 [internal void delegate \(with parameters\)](InternalVoidDelegateWithParameters.snippet)|ide\_
 [internal void delegate](InternalVoidDelegate.snippet)|ide
 [internal void method \(with parameters\)](InternalVoidMethodWithParameters.snippet)|im\_
@@ -575,6 +612,43 @@ Title | Shortcut
 [public String method \(with parameters\)](PublicStringMethodWithParameters.snippet)|m\_
 [public String method](PublicStringMethod.snippet)|m
 [public struct](PublicStruct.snippet)|st
+[public virtual auto property](PublicVirtualAutoProperty.snippet)|vp
+[public virtual Boolean auto property](PublicVirtualBooleanAutoProperty.snippet)|vp
+[public virtual Boolean method \(with parameters\)](PublicVirtualBooleanMethodWithParameters.snippet)|vm\_
+[public virtual Boolean method](PublicVirtualBooleanMethod.snippet)|vm
+[public virtual DateTime auto property](PublicVirtualDateTimeAutoProperty.snippet)|vp
+[public virtual DateTime method \(with parameters\)](PublicVirtualDateTimeMethodWithParameters.snippet)|vm\_
+[public virtual DateTime method](PublicVirtualDateTimeMethod.snippet)|vm
+[public virtual Int32 auto property](PublicVirtualInt32AutoProperty.snippet)|vp
+[public virtual Int32 method \(with parameters\)](PublicVirtualInt32MethodWithParameters.snippet)|vm\_
+[public virtual Int32 method](PublicVirtualInt32Method.snippet)|vm
+[public virtual Int64 auto property](PublicVirtualInt64AutoProperty.snippet)|vp
+[public virtual Int64 method \(with parameters\)](PublicVirtualInt64MethodWithParameters.snippet)|vm\_
+[public virtual Int64 method](PublicVirtualInt64Method.snippet)|vm
+[public virtual method \(with parameters\)](PublicVirtualMethodWithParameters.snippet)|vm\_
+[public virtual method](PublicVirtualMethod.snippet)|vm
+[public virtual Object auto property](PublicVirtualObjectAutoProperty.snippet)|vp
+[public virtual Object method \(with parameters\)](PublicVirtualObjectMethodWithParameters.snippet)|vm\_
+[public virtual Object method](PublicVirtualObjectMethod.snippet)|vm
+[public virtual read\-only auto property](PublicVirtualReadOnlyAutoProperty.snippet)|vrp
+[public virtual read\-only Boolean auto property](PublicVirtualBooleanReadOnlyAutoProperty.snippet)|vrp
+[public virtual read\-only Boolean property](PublicVirtualBooleanReadOnlyProperty.snippet)|vrpp
+[public virtual read\-only DateTime auto property](PublicVirtualDateTimeReadOnlyAutoProperty.snippet)|vrp
+[public virtual read\-only DateTime property](PublicVirtualDateTimeReadOnlyProperty.snippet)|vrpp
+[public virtual read\-only Int32 auto property](PublicVirtualInt32ReadOnlyAutoProperty.snippet)|vrp
+[public virtual read\-only Int32 property](PublicVirtualInt32ReadOnlyProperty.snippet)|vrpp
+[public virtual read\-only Int64 auto property](PublicVirtualInt64ReadOnlyAutoProperty.snippet)|vrp
+[public virtual read\-only Int64 property](PublicVirtualInt64ReadOnlyProperty.snippet)|vrpp
+[public virtual read\-only Object auto property](PublicVirtualObjectReadOnlyAutoProperty.snippet)|vrp
+[public virtual read\-only Object property](PublicVirtualObjectReadOnlyProperty.snippet)|vrpp
+[public virtual read\-only property](PublicVirtualReadOnlyProperty.snippet)|vrpp
+[public virtual read\-only String auto property](PublicVirtualStringReadOnlyAutoProperty.snippet)|vrp
+[public virtual read\-only String property](PublicVirtualStringReadOnlyProperty.snippet)|vrpp
+[public virtual String auto property](PublicVirtualStringAutoProperty.snippet)|vp
+[public virtual String method \(with parameters\)](PublicVirtualStringMethodWithParameters.snippet)|vm\_
+[public virtual String method](PublicVirtualStringMethod.snippet)|vm
+[public virtual void method \(with parameters\)](PublicVirtualVoidMethodWithParameters.snippet)|vm\_
+[public virtual void method](PublicVirtualVoidMethod.snippet)|vm
 [public void delegate \(with parameters\)](PublicVoidDelegateWithParameters.snippet)|de\_
 [public void delegate](PublicVoidDelegate.snippet)|de
 [public void method \(with parameters\)](PublicVoidMethodWithParameters.snippet)|m\_

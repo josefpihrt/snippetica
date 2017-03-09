@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModifierKind.cs" />
     <Compile Include="Commands\AlternativeShortcutCommand.cs" />
     <Compile Include="Commands\CommandKind.cs" />
     <Compile Include="Commands\BaseCommand.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Commands\InitializerCommand.cs" />
     <Compile Include="Commands\CollectionTypeCommand.cs" />
     <Compile Include="Commands\SimpleCommand.cs" />
+    <Compile Include="Commands\VirtualCommand.cs" />
     <Compile Include="Commands\XamlPropertyCommand.cs" />
     <Compile Include="CSharpDefinition.cs" />
     <Compile Include="Job.cs" />

@@ -74,6 +74,7 @@ to|typeof operator|\-
 tw|throw statement|\-
 u|using statement|\-
 v|local variable|prefix
+v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
 y|yield|\-
 
@@ -160,6 +161,10 @@ Title | Shortcut
 [public static read\-only field](PublicStaticReadOnlyField.snippet)|srf
 [public static read\-only property](PublicStaticReadOnlyProperty.snippet)|srpp
 [public struct](PublicStruct.snippet)|st
+[public virtual auto property](PublicVirtualAutoProperty.snippet)|vp
+[public virtual method](PublicVirtualMethod.snippet)|vm
+[public virtual read\-only auto property](PublicVirtualReadOnlyAutoProperty.snippet)|vrp
+[public virtual read\-only property](PublicVirtualReadOnlyProperty.snippet)|vrpp
 [ReadOnlyCollection\<T\> class](ReadOnlyCollectionOfTClass.snippet)|c\_
 [return false](ReturnFalse.snippet)|ref
 [return keyword](ReturnKeyword.snippet)|r

@@ -26,22 +26,27 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             }
             else
             {
-                using (IEnumerator<Command> en = commands.GetEnumerator())
+                CartesianProduct(commands);
+            }
+        }
+
+        private void CartesianProduct(IEnumerable<Command> commands)
+        {
+            using (IEnumerator<Command> en = commands.GetEnumerator())
+            {
+                if (en.MoveNext())
                 {
-                    if (en.MoveNext())
-                    {
-                        Command first = en.Current;
+                    Command first = en.Current;
 
-                        var jobs = new List<Job>();
+                    var jobs = new List<Job>();
 
-                        while (en.MoveNext())
-                            jobs.AddRange(WithCommand(en.Current));
+                    while (en.MoveNext())
+                        jobs.AddRange(WithCommand(en.Current));
 
-                        foreach (Job job in Items)
-                            job.Commands.Add(first);
+                    foreach (Job job in Items)
+                        job.Commands.Add(first);
 
-                        AddRange(jobs);
-                    }
+                    AddRange(jobs);
                 }
             }
         }
