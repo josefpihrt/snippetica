@@ -1,5 +1,9 @@
 ﻿# Release Notes
 
+## 0.5.1 (2017-03-09)
+
+* 'virtual/Overridable' snippets
+
 ## 0.5.0 (2016-12-30)
 
 ### New Snippets

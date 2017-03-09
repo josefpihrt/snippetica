@@ -8,6 +8,7 @@
         <Property Name="Comment" />
       </Declarations>
       <Records>
+        <New Version="0.5.1" ReleaseDate="2017-03-09" Comment="'virtual/Overridable' snippets" />
         <New Version="0.5.0" ReleaseDate="2016-12-30" />
         <New Version="0.1.0" ReleaseDate="2016-10-16" Comment="Initial release" />
       </Records>
