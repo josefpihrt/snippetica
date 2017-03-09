@@ -75,13 +75,13 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
                         sw.WriteLine($"* {MarkdownHelper.Escape(release.Comment)}");
                     }
 
-                    snippets = snippets
+                    Snippet[] releasedSnippets = snippets
                         .Select(f => new { Snippet = f, Version = f.GetTagValueOrDefault(KnownTags.AddSnippet) })
                         .Where(f => f.Version != null && Version.Parse(f.Version).Equals(release.Version))
                         .Select(f => f.Snippet)
                         .ToArray();
 
-                    if (snippets.Length > 0)
+                    if (releasedSnippets.Length > 0)
                     {
                         sw.WriteLine();
                         sw.WriteLine("### New Snippets");
@@ -89,7 +89,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 
                         SnippetTableWriter tableWriter = SnippetTableWriter.CreateLanguageThenShortcutThenTitle();
 
-                        tableWriter.WriteTable(snippets);
+                        tableWriter.WriteTable(releasedSnippets);
                         sw.Write(tableWriter.ToString());
                     }
                 }
