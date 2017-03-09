@@ -7,8 +7,8 @@
     <ProjectGuid>{CE18A42C-A7FD-4B6B-90FE-2F4510B7CB0E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pihrtsoft.Records.Tests</RootNamespace>
-    <AssemblyName>Pihrtsoft.Records.Tests</AssemblyName>
+    <RootNamespace>Pihrtsoft.Records.Test</RootNamespace>
+    <AssemblyName>Pihrtsoft.Records.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
