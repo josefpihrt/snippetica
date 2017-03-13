@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -37,13 +38,7 @@ namespace Pihrtsoft.Snippets
             if (snippet == null)
                 throw new ArgumentNullException(nameof(snippet));
 
-            var settings = new SaveSettings()
-            {
-                OmitXmlDeclaration = true,
-                OmitCodeSnippetsElement = true,
-                IndentChars = "  ",
-                Comment = "Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0."
-            };
+            SaveSettings settings = CreateSaveSettings();
 
             if (!onlyIfChanged
                 || !File.Exists(filePath)
@@ -60,6 +55,31 @@ namespace Pihrtsoft.Snippets
 
                 Console.WriteLine();
             }
+        }
+
+        private static SaveSettings CreateSaveSettings()
+        {
+            return new SaveSettings()
+            {
+                OmitXmlDeclaration = true,
+                OmitCodeSnippetsElement = true,
+                IndentChars = "  ",
+                Comment = "Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0."
+            };
+        }
+
+        public static void SaveSnippetsToSingleFile(IEnumerable<Snippet> snippets, string filePath)
+        {
+            if (snippets == null)
+                throw new ArgumentNullException(nameof(snippets));
+
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                Console.WriteLine($"saving {filePath}");
+                SnippetSerializer.Serialize(fileStream, snippets, CreateSaveSettings());
+            }
+
+            Console.WriteLine();
         }
 
         public static void WriteAllText(string filePath, string content, bool onlyIfChanged = true)

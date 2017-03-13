@@ -50,6 +50,11 @@ namespace Pihrtsoft.Snippets
             return Path.GetFileName(snippet.FilePath);
         }
 
+        public static string FileNameWithoutExtension(this Snippet snippet)
+        {
+            return Path.GetFileNameWithoutExtension(snippet.FilePath);
+        }
+
         public static void SortCollections(this Snippet snippet)
         {
             snippet.Literals.Sort();

@@ -116,6 +116,8 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             document.RemoveSnippetFiles();
 
+            var allSnippets = new List<Snippet>();
+
             XElement newItemGroup = document.AddItemGroup();
 
             foreach (SnippetDirectory snippetDirectory in snippetDirectories)
@@ -136,9 +138,27 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                 IOUtility.SaveSnippets(snippets, directoryPath);
 
                 document.AddSnippetFiles(snippets.Select(f => f.FilePath), newItemGroup);
+
+                allSnippets.AddRange(snippets);
             }
 
             document.Save();
+
+            foreach (Snippet snippet in allSnippets)
+            {
+                string title = snippet.GetTitleWithoutShortcut();
+
+                snippet.RemoveMetaKeywords();
+                snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}FullName:{snippet.Language}.{snippet.FileNameWithoutExtension()}");
+                snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}Title:{title}");
+            }
+
+            IOUtility.SaveSnippetsToSingleFile(
+                allSnippets
+                    .Where(f => !f.HasTag(KnownTags.ExcludeFromReadme))
+                    .OrderBy(f => f.Language.ToString())
+                    .ThenBy(f => f.FileNameWithoutExtension()),
+                Path.Combine(projectDirPath, "snippets.xml"));
         }
 
         public static void RemoveAllTags(string projectDirPath, IEnumerable<SnippetDirectory> snippetDirectories)
