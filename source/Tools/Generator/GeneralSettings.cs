@@ -29,7 +29,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         public string GitHubMasterPath { get; }
         public string GitHubSourcePath { get; }
         public string ProjectName { get; }
-        public string ExtensionProjectName { get; }
+        public string ExtensionProjectName { get; set; }
         public string ChangeLogFileName { get; }
         public string GalleryDescriptionFileName { get; }
         public string SourceDirectoryName { get; }

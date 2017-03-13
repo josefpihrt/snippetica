@@ -16,8 +16,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
     {
         private static void Main(string[] args)
         {
-            var settings = new GeneralSettings();
-            settings.SolutionDirectoryPath = @"..\..\..\..\..";
+            var settings = new GeneralSettings() { SolutionDirectoryPath = @"..\..\..\..\.." };
 
             SnippetDirectory[] snippetDirectories = LoadSnippetDirectories().ToArray();
 
@@ -29,7 +28,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             GenerateXmlSnippets(snippetDirectories);
 
             SnippetDirectory[] releaseDirectories = snippetDirectories
-                .Where(f => f.HasTag(KnownTags.Release))
+                .Where(f => f.HasTag(KnownTags.Release) && !f.HasTag(KnownTags.Dev))
                 .ToArray();
 
             MarkdownGenerator.WriteSolutionReadMe(releaseDirectories, settings);
@@ -42,13 +41,42 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                     .ToArray(),
                 characterSequences);
 
+            GenerateVisualStudioPackageFiles(
+                releaseDirectories: releaseDirectories,
+                characterSequences: characterSequences,
+                releases: Release.LoadFromDocument(@"..\..\ChangeLog.xml").ToArray(),
+                settings: settings);
+
+            settings.ExtensionProjectName += ".Dev";
+
+            GenerateVisualStudioPackageFiles(
+                releaseDirectories: snippetDirectories
+                    .Where(f => f.HasTags(KnownTags.Release, KnownTags.Dev))
+                    .ToArray(),
+                characterSequences: null,
+                releases: null,
+                settings: settings);
+
+            CheckSnippets(snippetDirectories);
+
+            Console.WriteLine("*** END ***");
+            Console.ReadKey();
+        }
+
+        private static void GenerateVisualStudioPackageFiles(
+            SnippetDirectory[] releaseDirectories,
+            CharacterSequence[] characterSequences,
+            Release[] releases,
+            GeneralSettings settings)
+        {
             CopySnippetsToVisualStudioProject(settings.ExtensionProjectPath, releaseDirectories);
 
             releaseDirectories = releaseDirectories
                 .Select(f => f.WithPath(Path.Combine(settings.ExtensionProjectPath, f.DirectoryName)))
                 .ToArray();
 
-            MarkdownGenerator.WriteChangeLog(releaseDirectories, Release.LoadFromDocument(@"..\..\ChangeLog.xml").ToArray(), settings);
+            if (releases != null)
+                MarkdownGenerator.WriteChangeLog(releaseDirectories, releases, settings);
 
             MarkdownGenerator.WriteProjectMarkdownFiles(releaseDirectories, settings.ExtensionProjectPath);
 
@@ -56,11 +84,6 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             WriteVisualStudioGalleryDescription(releaseDirectories, settings);
             WritePkgDefFile(releaseDirectories, settings);
-
-            CheckSnippets(snippetDirectories);
-
-            Console.WriteLine("*** END ***");
-            Console.ReadKey();
         }
 
         private static IEnumerable<SnippetDirectory> LoadSnippetDirectories()
@@ -116,7 +139,9 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             document.RemoveSnippetFiles();
 
+#if RELEASE
             var allSnippets = new List<Snippet>();
+#endif
 
             XElement newItemGroup = document.AddItemGroup();
 
@@ -139,11 +164,14 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
                 document.AddSnippetFiles(snippets.Select(f => f.FilePath), newItemGroup);
 
+#if RELEASE
                 allSnippets.AddRange(snippets);
+#endif
             }
 
             document.Save();
 
+#if RELEASE
             foreach (Snippet snippet in allSnippets)
             {
                 string title = snippet.GetTitleWithoutShortcut();
@@ -159,6 +187,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                     .OrderBy(f => f.Language.ToString())
                     .ThenBy(f => f.FileNameWithoutExtension()),
                 Path.Combine(projectDirPath, "snippets.xml"));
+#endif
         }
 
         public static void RemoveAllTags(string projectDirPath, IEnumerable<SnippetDirectory> snippetDirectories)
@@ -249,10 +278,12 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         {
             using (var sw = new StringWriter())
             {
-                var xmlWriterSettings = new XmlWriterSettings();
-                xmlWriterSettings.Indent = true;
-                xmlWriterSettings.IndentChars = "  ";
-                xmlWriterSettings.ConformanceLevel = ConformanceLevel.Fragment;
+                var xmlWriterSettings = new XmlWriterSettings()
+                {
+                    Indent = true,
+                    IndentChars = "  ",
+                    ConformanceLevel = ConformanceLevel.Fragment
+                };
 
                 using (XmlWriter x = XmlWriter.Create(sw, xmlWriterSettings))
                 {

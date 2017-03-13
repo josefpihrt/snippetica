@@ -1,0 +1,39 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>mysm MemoryStream Variable</Title>
+    <Shortcut>u</Shortcut>
+    <Description>MemoryStream variable declaration.</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-Tag TitleStartsWithShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System.IO</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>identifier</ID>
+        <ToolTip>Identifier name</ToolTip>
+        <Default>ms</Default>
+      </Literal>
+      <Literal>
+        <ID>parameters</ID>
+        <ToolTip>Constructor parameters</ToolTip>
+        <Default>0</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[using (var $identifier$ = new MemoryStream($parameters$))
+{
+    $end$
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

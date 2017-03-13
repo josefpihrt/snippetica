@@ -1,0 +1,32 @@
+﻿<h3>Snippetica</h3>
+<p>A collection of snippets for C#, VB, C++, HTML and XAML.</p>
+<h3>Links</h3>
+<ul>
+  <li>
+    <a href="http://github.com/JosefPihrt/Snippetica">Project Website</a>
+  </li>
+  <li>
+    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/ChangeLog.md">Release Notes</a>
+  </li>
+  <li>
+    <a href="http://pihrt.net/Snippetica/Snippets">Browse and search all available snippets</a>
+  </li>
+</ul>
+<h3>List of Snippets</h3>
+<ul>
+  <li>
+    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio.Dev/Snippetica.CSharp.Dev/README.md">Snippetica.CSharp.Dev (193 snippets)</a>
+  </li>
+  <li>
+    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio.Dev/Snippetica.VisualBasic.Dev/README.md">Snippetica.VisualBasic.Dev (86 snippets)</a>
+  </li>
+  <li>
+    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio.Dev/Snippetica.Cpp.Dev/README.md">Snippetica.Cpp.Dev (1 snippets)</a>
+  </li>
+  <li>
+    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio.Dev/Snippetica.Html.Dev/README.md">Snippetica.Html.Dev (6 snippets)</a>
+  </li>
+  <li>
+    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio.Dev/Snippetica.Xaml.Dev/README.md">Snippetica.Xaml.Dev (9 snippets)</a>
+  </li>
+</ul>

@@ -138,7 +138,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
                 WriteDirectoryMarkdownFiles(
                     snippetDirectory,
                     snippetDirectory.Path,
-                    characterSequences.Where(f => f.DirectoryNames.Contains(snippetDirectory.DirectoryName)).ToArray());
+                    characterSequences?.Where(f => f.DirectoryNames.Contains(snippetDirectory.DirectoryName)).ToArray());
             }
         }
 
@@ -171,7 +171,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
                 sw.WriteLine($"## {directoryName}");
                 sw.WriteLine();
 
-                if (characterSequences.Length > 0)
+                if (characterSequences?.Length > 0)
                 {
                     sw.WriteLine("### Quick Reference");
                     sw.WriteLine();

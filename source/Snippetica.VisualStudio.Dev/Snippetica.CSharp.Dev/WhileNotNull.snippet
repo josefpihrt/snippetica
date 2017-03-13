@@ -1,0 +1,25 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>while not null</Title>
+    <Shortcut>wenn</Shortcut>
+    <Description>while statement with condition whether an expression is not equal to null</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>expression</ID>
+        <ToolTip>Expression to evaluate</ToolTip>
+        <Default>x</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[while ($expression$ != null)
+{
+    $end$
+}]]></Code>
+  </Snippet>
+</CodeSnippet>
