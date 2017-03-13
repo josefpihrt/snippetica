@@ -27,6 +27,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 
                 sw.WriteLine($"* {settings.GetProjectSubtitle(snippetDirectories)}");
                 sw.WriteLine($"* [Release Notes]({settings.GitHubMasterPath}/{$"{settings.ChangeLogFileName}"}).");
+                sw.WriteLine("* [Browse and search all available snippets](http://pihrt.net/Snippetica/Snippets).");
                 sw.WriteLine();
                 sw.WriteLine("### Distribution");
                 sw.WriteLine();

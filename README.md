@@ -2,6 +2,7 @@
 
 * A collection of snippets for C#, VB, C++, HTML, XAML and XML.
 * [Release Notes](http://github.com/JosefPihrt/Snippetica/blob/master/ChangeLog.md).
+* [Browse and search all available snippets](http://pihrt.net/Snippetica/Snippets).
 
 ### Distribution
 

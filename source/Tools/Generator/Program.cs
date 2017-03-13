@@ -277,6 +277,13 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                     x.WriteEndElement();
                     x.WriteEndElement();
 
+                    x.WriteStartElement("li");
+                    x.WriteStartElement("a");
+                    x.WriteAttributeString("href", "http://pihrt.net/Snippetica/Snippets");
+                    x.WriteString("Browse and search all available snippets");
+                    x.WriteEndElement();
+                    x.WriteEndElement();
+
                     x.WriteEndElement();
 
                     x.WriteElementString("h3", "List of Snippets");
