@@ -4,6 +4,8 @@ using System.IO;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Pihrtsoft.Records;
+using Pihrtsoft.Snippets.Mappings;
 
 namespace Pihrtsoft.Snippets
 {
@@ -78,6 +80,13 @@ namespace Pihrtsoft.Snippets
         private string TagsText
         {
             get { return string.Join(", ", Tags); }
+        }
+
+        public static IEnumerable<SnippetDirectory> LoadFromFile(string url)
+        {
+            return Document.ReadRecords(url)
+                .Where(f => !f.HasTag(KnownTags.Disabled))
+                .Select(record => SnippetDirectoryMapper.MapFromRecord(record));
         }
 
         public IEnumerable<Snippet> EnumerateSnippets()

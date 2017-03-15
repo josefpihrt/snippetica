@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HtmlSnippetGenerator.cs" />
     <Compile Include="ModifierKind.cs" />
     <Compile Include="Commands\AlternativeShortcutCommand.cs" />
     <Compile Include="Commands\CommandKind.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="TypeDefinitionCollection.cs" />
     <Compile Include="VisualBasicDefinition.cs" />
     <Compile Include="XamlSnippetGenerator.cs" />
+    <Compile Include="XmlSnippetGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

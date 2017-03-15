@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Pihrtsoft.Records;
 using Pihrtsoft.Snippets.CodeGeneration.Commands;
 
 namespace Pihrtsoft.Snippets.CodeGeneration
@@ -24,6 +25,45 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         private static Command InitializerCommand { get; } = new InitializerCommand();
         private static Command ParametersCommand { get; } = new ParametersCommand();
         private static Command ArgumentsCommand { get; } = new ArgumentsCommand();
+
+        public static void GenerateXamlSnippets(SnippetDirectory[] snippetDirectories)
+        {
+            IEnumerable<SnippetDirectory> directories = snippetDirectories
+                .Where(f => f.Language == Snippets.Language.Xaml);
+
+            string sourceDirPath = directories.First(f => f.HasTag(KnownTags.AutoGenerationSource)).Path;
+            string destinationDirPath = directories.First(f => f.HasTag(KnownTags.AutoGenerationDestination)).Path;
+
+            var snippets = new List<Snippet>();
+
+            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Snippets.Language.Xaml));
+
+            var generator = new XamlSnippetGenerator();
+            snippets.AddRange(generator.GenerateSnippets(sourceDirPath, destinationDirPath));
+
+            IOUtility.SaveSnippets(snippets.ToArray(), destinationDirPath);
+        }
+
+        public static void GenerateXmlSnippets(SnippetDirectory[] snippetDirectories)
+        {
+            string destinationDirPath = snippetDirectories.First(f => f.Language == Snippets.Language.Xml && f.HasTag(KnownTags.AutoGenerationDestination)).Path;
+
+            Snippet[] snippets = XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Snippets.Language.Xml).ToArray();
+
+            IOUtility.SaveSnippets(snippets, destinationDirPath);
+        }
+
+        public static void GenerateHtmlSnippets(SnippetDirectory[] snippetDirectories)
+        {
+            string sourceDirPath = snippetDirectories.First(f => f.Language == Snippets.Language.Html && f.HasTag(KnownTags.AutoGenerationSource)).Path;
+            string destinationDirPath = snippetDirectories.First(f => f.Language == Snippets.Language.Html && f.HasTag(KnownTags.AutoGenerationDestination)).Path;
+
+            var snippets = new List<Snippet>();
+            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Snippets.Language.Html));
+            snippets.AddRange(HtmlSnippetGenerator.GenerateSnippets(sourceDirPath));
+
+            IOUtility.SaveSnippets(snippets.ToArray(), destinationDirPath);
+        }
 
         public void GenerateSnippets(string sourceDirectoryPath, string destinationDirectoryPath)
         {

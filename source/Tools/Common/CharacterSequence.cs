@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Pihrtsoft.Records;
 
 namespace Pihrtsoft.Snippets.CodeGeneration
 {
@@ -25,5 +26,20 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         public string Comment { get; }
         public ReadOnlyCollection<string> DirectoryNames { get; }
         public ReadOnlyCollection<string> Tags { get; }
+
+        public static IEnumerable<CharacterSequence> LoadFromFile(string uri, string languagePrefix)
+        {
+            return Document.ReadRecords(uri)
+                .Where(f => !f.HasTag(KnownTags.Disabled))
+                .Select(record =>
+                {
+                    return new CharacterSequence(
+                        record.GetString("Value"),
+                        record.GetString("Description"),
+                        record.GetStringOrDefault("Comment", "-"),
+                        record.GetItems("Languages").Select(f => languagePrefix + f),
+                        record.Tags);
+                });
+        }
     }
 }

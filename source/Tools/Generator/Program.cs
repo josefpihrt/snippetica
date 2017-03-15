@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Xml;
-using System.Xml.Linq;
 using Pihrtsoft.Records;
 using Pihrtsoft.Snippets.CodeGeneration.Markdown;
-using Pihrtsoft.Snippets.Mappings;
-using Pihrtsoft.Snippets.Xml;
 
 namespace Pihrtsoft.Snippets.CodeGeneration
 {
@@ -18,14 +13,14 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         {
             var settings = new GeneralSettings() { SolutionDirectoryPath = @"..\..\..\..\.." };
 
-            SnippetDirectory[] snippetDirectories = LoadSnippetDirectories().ToArray();
+            SnippetDirectory[] snippetDirectories = SnippetDirectory.LoadFromFile(@"..\..\SnippetDirectories.xml").ToArray();
 
-            CharacterSequence[] characterSequences = LoadCharacterSequences(settings).ToArray();
+            CharacterSequence[] characterSequences = CharacterSequence.LoadFromFile(@"..\..\CharacterSequences.xml", settings.DirectoryNamePrefix).ToArray();
 
             GenerateSnippets(snippetDirectories);
-            GenerateHtmlSnippets(snippetDirectories);
-            GenerateXamlSnippets(snippetDirectories);
-            GenerateXmlSnippets(snippetDirectories);
+            SnippetGenerator.GenerateHtmlSnippets(snippetDirectories);
+            SnippetGenerator.GenerateXamlSnippets(snippetDirectories);
+            SnippetGenerator.GenerateXmlSnippets(snippetDirectories);
 
             SnippetDirectory[] releaseDirectories = snippetDirectories
                 .Where(f => f.HasTag(KnownTags.Release) && !f.HasTag(KnownTags.Dev))
@@ -41,7 +36,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                     .ToArray(),
                 characterSequences);
 
-            GenerateVisualStudioPackageFiles(
+            SnippetPackageGenerator.GenerateVisualStudioPackageFiles(
                 releaseDirectories: releaseDirectories,
                 characterSequences: characterSequences,
                 releases: Release.LoadFromDocument(@"..\..\ChangeLog.xml").ToArray(),
@@ -49,7 +44,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             settings.ExtensionProjectName += ".Dev";
 
-            GenerateVisualStudioPackageFiles(
+            SnippetPackageGenerator.GenerateVisualStudioPackageFiles(
                 releaseDirectories: snippetDirectories
                     .Where(f => f.HasTags(KnownTags.Release, KnownTags.Dev))
                     .ToArray(),
@@ -57,153 +52,13 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                 releases: null,
                 settings: settings);
 
-            CheckSnippets(snippetDirectories);
+            SnippetChecker.CheckSnippets(snippetDirectories);
 
             Console.WriteLine("*** END ***");
             Console.ReadKey();
         }
 
-        private static void GenerateVisualStudioPackageFiles(
-            SnippetDirectory[] releaseDirectories,
-            CharacterSequence[] characterSequences,
-            Release[] releases,
-            GeneralSettings settings)
-        {
-            CopySnippetsToVisualStudioProject(settings.ExtensionProjectPath, releaseDirectories);
-
-            releaseDirectories = releaseDirectories
-                .Select(f => f.WithPath(Path.Combine(settings.ExtensionProjectPath, f.DirectoryName)))
-                .ToArray();
-
-            if (releases != null)
-                MarkdownGenerator.WriteChangeLog(releaseDirectories, releases, settings);
-
-            MarkdownGenerator.WriteProjectMarkdownFiles(releaseDirectories, settings.ExtensionProjectPath);
-
-            MarkdownGenerator.WriteDirectoryMarkdownFiles(releaseDirectories, characterSequences);
-
-            WriteVisualStudioGalleryDescription(releaseDirectories, settings);
-            WritePkgDefFile(releaseDirectories, settings);
-        }
-
-        private static IEnumerable<SnippetDirectory> LoadSnippetDirectories()
-        {
-            return Document.ReadRecords(@"..\..\SnippetDirectories.xml")
-                .Where(f => !f.HasTag(KnownTags.Disabled))
-                .Select(record => SnippetDirectoryMapper.MapFromRecord(record));
-        }
-
-        private static IEnumerable<CharacterSequence> LoadCharacterSequences(GeneralSettings settings)
-        {
-            return Document.ReadRecords(@"..\..\CharacterSequences.xml")
-                .Where(f => !f.HasTag(KnownTags.Disabled))
-                .Select(record =>
-                {
-                    return new CharacterSequence(
-                        record.GetString("Value"),
-                        record.GetString("Description"),
-                        record.GetStringOrDefault("Comment", "-"),
-                        record.GetItems("Languages").Select(f => settings.DirectoryNamePrefix + f),
-                        record.Tags);
-                });
-        }
-
-        private static void CheckSnippets(SnippetDirectory[] snippetDirectories)
-        {
-            foreach (IGrouping<Language, SnippetDirectory> grouping in snippetDirectories
-                .Where(f => !f.HasAnyTag(KnownTags.AutoGenerationSource, KnownTags.AutoGenerationDestination))
-                .GroupBy(f => f.Language))
-            {
-                Console.WriteLine();
-                Console.WriteLine($"***** {grouping.Key} *****");
-
-                SnippetDirectory[] directories = grouping.ToArray();
-
-                SnippetChecker.CheckDuplicateShortcuts(directories);
-
-                directories = directories
-                    .Where(f => !f.HasTag(KnownTags.VisualStudio))
-                    .ToArray();
-
-                SnippetChecker.CheckSnippets(directories);
-            }
-        }
-
-        public static void CopySnippetsToVisualStudioProject(string projectDirPath, IEnumerable<SnippetDirectory> snippetDirectories)
-        {
-            string projectName = Path.GetFileName(projectDirPath);
-
-            string csprojPath = Path.Combine(projectDirPath, $"{projectName}.{ProjectDocument.CSharpProjectExtension}");
-
-            var document = new ProjectDocument(csprojPath);
-
-            document.RemoveSnippetFiles();
-
-#if RELEASE
-            var allSnippets = new List<Snippet>();
-#endif
-
-            XElement newItemGroup = document.AddItemGroup();
-
-            foreach (SnippetDirectory snippetDirectory in snippetDirectories)
-            {
-                string directoryPath = Path.Combine(projectDirPath, snippetDirectory.DirectoryName);
-
-                Directory.CreateDirectory(directoryPath);
-
-                Snippet[] snippets = snippetDirectory.EnumerateSnippets().ToArray();
-
-                foreach (IGrouping<string, Snippet> grouping in snippets
-                    .GroupBy(f => Path.GetFileNameWithoutExtension(f.FilePath))
-                    .Where(f => f.Count() > 1))
-                {
-                    throw new Exception($"multiple files with same name '{grouping.Key}'");
-                }
-
-                IOUtility.SaveSnippets(snippets, directoryPath);
-
-                document.AddSnippetFiles(snippets.Select(f => f.FilePath), newItemGroup);
-
-#if RELEASE
-                allSnippets.AddRange(snippets);
-#endif
-            }
-
-            document.Save();
-
-#if RELEASE
-            foreach (Snippet snippet in allSnippets)
-            {
-                string title = snippet.GetTitleWithoutShortcut();
-
-                snippet.RemoveMetaKeywords();
-                snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}FullName:{snippet.Language}.{snippet.FileNameWithoutExtension()}");
-                snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}Title:{title}");
-            }
-
-            IOUtility.SaveSnippetsToSingleFile(
-                allSnippets
-                    .Where(f => !f.HasTag(KnownTags.ExcludeFromReadme))
-                    .OrderBy(f => f.Language.ToString())
-                    .ThenBy(f => f.FileNameWithoutExtension()),
-                Path.Combine(projectDirPath, "snippets.xml"));
-#endif
-        }
-
-        public static void RemoveAllTags(string projectDirPath, IEnumerable<SnippetDirectory> snippetDirectories)
-        {
-            foreach (SnippetDirectory snippetDirectory in snippetDirectories)
-            {
-                Snippet[] snippets = snippetDirectory.EnumerateSnippets().ToArray();
-
-                foreach (Snippet snippet in snippets)
-                    snippet.RemoveMetaKeywords();
-
-                IOUtility.SaveSnippets(snippets, snippetDirectory.Path);
-            }
-        }
-
-        public static void GenerateSnippets(SnippetDirectory[] snippetDirectories)
+        private static void GenerateSnippets(SnippetDirectory[] snippetDirectories)
         {
             IEnumerable<Record> records = Document.ReadRecords(@"..\..\Records.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled));
@@ -225,175 +80,6 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                 }
 
                 language.GenerateSnippets(snippetDirectories, settings);
-            }
-        }
-
-        public static void GenerateXamlSnippets(SnippetDirectory[] snippetDirectories)
-        {
-            IEnumerable<SnippetDirectory> directories = snippetDirectories
-                .Where(f => f.Language == Language.Xaml);
-
-            string sourceDirPath = directories.First(f => f.HasTag(KnownTags.AutoGenerationSource)).Path;
-            string destinationDirPath = directories.First(f => f.HasTag(KnownTags.AutoGenerationDestination)).Path;
-
-            var snippets = new List<Snippet>();
-
-            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Language.Xaml));
-
-            var generator = new XamlSnippetGenerator();
-            snippets.AddRange(generator.GenerateSnippets(sourceDirPath, destinationDirPath));
-
-            IOUtility.SaveSnippets(snippets.ToArray(), destinationDirPath);
-        }
-
-        public static void GenerateXmlSnippets(SnippetDirectory[] snippetDirectories)
-        {
-            string destinationDirPath = snippetDirectories.First(f => f.Language == Language.Xml && f.HasTag(KnownTags.AutoGenerationDestination)).Path;
-
-            Snippet[] snippets = XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Language.Xml).ToArray();
-
-            IOUtility.SaveSnippets(snippets, destinationDirPath);
-        }
-
-        public static void GenerateHtmlSnippets(SnippetDirectory[] snippetDirectories)
-        {
-            string sourceDirPath = snippetDirectories.First(f => f.Language == Language.Html && f.HasTag(KnownTags.AutoGenerationSource)).Path;
-            string destinationDirPath = snippetDirectories.First(f => f.Language == Language.Html && f.HasTag(KnownTags.AutoGenerationDestination)).Path;
-
-            var snippets = new List<Snippet>();
-            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Language.Html));
-            snippets.AddRange(HtmlSnippetGenerator.GenerateSnippets(sourceDirPath));
-
-            IOUtility.SaveSnippets(snippets.ToArray(), destinationDirPath);
-        }
-
-        public static void WriteVisualStudioGalleryDescription(SnippetDirectory[] snippetDirectories, GeneralSettings settings)
-        {
-            IOUtility.WriteAllText(
-                Path.Combine(settings.ExtensionProjectPath, settings.GalleryDescriptionFileName),
-                GenerateVisualStudioGalleryDescription(snippetDirectories, settings));
-        }
-
-        public static string GenerateVisualStudioGalleryDescription(SnippetDirectory[] snippetDirectories, GeneralSettings settings)
-        {
-            using (var sw = new StringWriter())
-            {
-                var xmlWriterSettings = new XmlWriterSettings()
-                {
-                    Indent = true,
-                    IndentChars = "  ",
-                    ConformanceLevel = ConformanceLevel.Fragment
-                };
-
-                using (XmlWriter x = XmlWriter.Create(sw, xmlWriterSettings))
-                {
-                    x.WriteElementString("h3", settings.ProjectTitle);
-                    x.WriteElementString("p", settings.GetProjectSubtitle(snippetDirectories));
-
-                    x.WriteElementString("h3", "Links");
-
-                    x.WriteStartElement("ul");
-
-                    x.WriteStartElement("li");
-                    x.WriteStartElement("a");
-                    x.WriteAttributeString("href", settings.GitHubPath);
-                    x.WriteString("Project Website");
-                    x.WriteEndElement();
-                    x.WriteEndElement();
-
-                    x.WriteStartElement("li");
-                    x.WriteStartElement("a");
-                    x.WriteAttributeString("href", $"{settings.GitHubMasterPath}/{settings.ChangeLogFileName}");
-                    x.WriteString("Release Notes");
-                    x.WriteEndElement();
-                    x.WriteEndElement();
-
-                    x.WriteStartElement("li");
-                    x.WriteStartElement("a");
-                    x.WriteAttributeString("href", "http://pihrt.net/Snippetica/Snippets");
-                    x.WriteString("Browse and search all available snippets");
-                    x.WriteEndElement();
-                    x.WriteEndElement();
-
-                    x.WriteEndElement();
-
-                    x.WriteElementString("h3", "List of Snippets");
-                    x.WriteStartElement("ul");
-
-                    foreach (SnippetDirectory snippetDirectory in snippetDirectories)
-                    {
-                        string directoryName = Path.GetFileName(snippetDirectory.Path);
-
-                        x.WriteStartElement("li");
-                        x.WriteStartElement("a");
-                        x.WriteAttributeString("href", $"{settings.GitHubSourcePath}/{settings.ExtensionProjectName}/{directoryName}/README.md");
-                        x.WriteString($"{directoryName} ({snippetDirectory.EnumerateSnippets().Count()} snippets)");
-                        x.WriteEndElement();
-                        x.WriteEndElement();
-                    }
-
-                    x.WriteEndElement();
-                }
-
-                return sw.ToString();
-            }
-        }
-
-        public static void WritePkgDefFile(SnippetDirectory[] snippetDirectories, GeneralSettings settings)
-        {
-            IOUtility.WriteAllText(
-                Path.Combine(settings.ExtensionProjectPath, settings.PkgDefFileName),
-                GeneratePkgDefFile(snippetDirectories));
-        }
-
-        public static string GeneratePkgDefFile(SnippetDirectory[] snippetDirectories)
-        {
-            using (var sw = new StringWriter())
-            {
-                foreach (IGrouping<Language, SnippetDirectory> grouping in snippetDirectories.GroupBy(f => f.Language))
-                {
-                    sw.WriteLine($"// {LanguageHelper.GetLanguageTitle(grouping.Key)}");
-
-                    foreach (SnippetDirectory snippetDirectory in grouping)
-                    {
-                        sw.WriteLine($@"[$RootKey$\Languages\CodeExpansions\{GetRegistryCode(snippetDirectory.Language)}\Paths]");
-                        sw.WriteLine($"\"{snippetDirectory.DirectoryName}\" = \"$PackageFolder$\\{snippetDirectory.DirectoryName}\"");
-                    }
-
-                    sw.WriteLine();
-                }
-
-                return sw.ToString();
-            }
-        }
-
-        private static string GetRegistryCode(Language language)
-        {
-            switch (language)
-            {
-                case Language.VisualBasic:
-                    return "Basic";
-                case Language.CSharp:
-                    return "CSharp";
-                case Language.CPlusPlus:
-                    return "C/C++";
-                case Language.Xml:
-                    return "XML";
-                case Language.Xaml:
-                    return "XAML";
-                case Language.JavaScript:
-                    return "JavaScript";
-                case Language.Sql:
-                    return "SQL_SSDT";
-                case Language.Html:
-                    return "HTML";
-                case Language.Css:
-                    return "CSS";
-                default:
-                    {
-                        Debug.Assert(false, language.ToString());
-                        throw new NotSupportedException();
-                    }
             }
         }
     }

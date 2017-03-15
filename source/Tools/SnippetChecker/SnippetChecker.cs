@@ -14,6 +14,27 @@ namespace Pihrtsoft.Snippets
 
         public static void CheckSnippets(SnippetDirectory[] snippetDirectories)
         {
+            foreach (IGrouping<Language, SnippetDirectory> grouping in snippetDirectories
+                .Where(f => !f.HasAnyTag(KnownTags.AutoGenerationSource, KnownTags.AutoGenerationDestination))
+                .GroupBy(f => f.Language))
+            {
+                Console.WriteLine();
+                Console.WriteLine($"***** {grouping.Key} *****");
+
+                SnippetDirectory[] directories = grouping.ToArray();
+
+                CheckDuplicateShortcuts(directories);
+
+                directories = directories
+                    .Where(f => !f.HasTag(KnownTags.VisualStudio))
+                    .ToArray();
+
+                CheckLanguageSnippets(directories);
+            }
+        }
+
+        private static void CheckLanguageSnippets(SnippetDirectory[] snippetDirectories)
+        {
             List<Snippet> snippets = snippetDirectories
                 .SelectMany(f => f.EnumerateSnippets())
                 .ToList();
