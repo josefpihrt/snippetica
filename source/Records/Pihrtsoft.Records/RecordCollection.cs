@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Xml.Linq;
-using Pihrtsoft.Records.Utilities;
 
 namespace Pihrtsoft.Records
 {

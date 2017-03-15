@@ -7,14 +7,9 @@ namespace Pihrtsoft.Records.Tests
     {
         internal static void Main(string[] args)
         {
-            var settings = new DocumentSettings()
-            {
-                UseVariables = true
-            };
+            var settings = new DocumentSettings() { UseVariables = true };
 
-            RecordCollection records = Document.ReadRecords(@"..\..\Test.xml", settings);
-
-            foreach (Record record in records)
+            foreach (Record record in Document.ReadRecords(@"..\..\Test.xml", settings))
             {
                 WriteLine(record.EntityName);
 
