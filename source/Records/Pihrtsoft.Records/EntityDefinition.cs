@@ -22,7 +22,7 @@ namespace Pihrtsoft.Records
             string name,
             EntityDefinition baseEntity = null,
             ExtendedKeyedCollection<string, PropertyDefinition> properties = null,
-            ExtendedKeyedCollection<string, Variable> variables = null) 
+            ExtendedKeyedCollection<string, Variable> variables = null)
         {
             Name = name;
 

@@ -53,7 +53,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Commands
             if (snippet.HasTag(KnownTags.Initializer) && Tags.Contains(KnownTags.Initializer))
             {
                 var clone = (Snippet)snippet.Clone();
-                InitializerCommand.AddInitializer(clone, GetInitializer(snippet, language), language.DefaultValue);
+                InitializerCommand.AddInitializer(clone, GetInitializer(language), language.DefaultValue);
                 context.Snippets.Add(clone);
             }
             else
@@ -62,7 +62,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Commands
             }
         }
 
-        private string GetInitializer(Snippet snippet, LanguageDefinition language)
+        private string GetInitializer(LanguageDefinition language)
         {
             if (Tags.Contains(KnownTags.Array))
                 return language.GetArrayInitializer($"${LiteralIdentifiers.Value}$");

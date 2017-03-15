@@ -124,10 +124,7 @@ namespace Pihrtsoft.Records
                 if (element.Kind() != ElementKind.Entity)
                     ThrowOnUnknownElement(element);
 
-                if (entityElements == null)
-                    entityElements = new Queue<EntityElement>();
-
-                entityElements.Enqueue(new EntityElement(element, Settings));
+                (entityElements ?? (entityElements = new Queue<EntityElement>())).Enqueue(new EntityElement(element, Settings));
             }
 
             if (entityElements != null)

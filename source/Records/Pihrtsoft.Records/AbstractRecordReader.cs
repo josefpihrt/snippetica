@@ -11,7 +11,7 @@ namespace Pihrtsoft.Records
 {
     internal abstract class AbstractRecordReader
     {
-        public AbstractRecordReader(XElement element, EntityDefinition entity, DocumentSettings settings)
+        protected AbstractRecordReader(XElement element, EntityDefinition entity, DocumentSettings settings)
         {
             Element = element;
             Entity = entity;
@@ -91,9 +91,11 @@ namespace Pihrtsoft.Records
 
                     if (en.MoveNext())
                     {
-                        var commands = new List<Command>();
-                        commands.Add(command);
-                        commands.Add(en.Current);
+                        var commands = new List<Command>()
+                        {
+                            command,
+                            en.Current
+                        };
 
                         while (en.MoveNext())
                             commands.Add(en.Current);
@@ -110,10 +112,7 @@ namespace Pihrtsoft.Records
 
         private void AddCommand(Command command)
         {
-            if (Commands == null)
-                Commands = new CommandCollection();
-
-            Commands.Add(command);
+            (Commands ?? (Commands = new CommandCollection())).Add(command);
         }
 
         private void AddVariable(XElement element)
@@ -121,10 +120,7 @@ namespace Pihrtsoft.Records
             string name = element.AttributeValueOrThrow(AttributeNames.Name);
             string value = element.AttributeValueOrThrow(AttributeNames.Value);
 
-            if (Variables == null)
-                Variables = new Stack<Variable>();
-
-            Variables.Push(new Variable(name, value));
+            (Variables ?? (Variables = new Stack<Variable>())).Push(new Variable(name, value));
         }
 
         private Record CreateRecord(XElement element)
@@ -141,10 +137,7 @@ namespace Pihrtsoft.Records
                 }
                 else
                 {
-                    if (commands == null)
-                        commands = new CommandCollection();
-
-                    commands.Add(CreateCommandFromAttribute(attribute));
+                    (commands ?? (commands = new CommandCollection())).Add(CreateCommandFromAttribute(attribute));
                 }
             }
 
@@ -165,9 +158,7 @@ namespace Pihrtsoft.Records
                     {
                         if (property.IsCollection)
                         {
-                            var list = new List<object>();
-                            list.Add(property.DefaultValue);
-                            record[property.Name] = list;
+                            record[property.Name] = new List<object>() { property.DefaultValue };
                         }
                         else
                         {

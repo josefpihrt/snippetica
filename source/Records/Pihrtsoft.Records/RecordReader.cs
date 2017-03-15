@@ -33,10 +33,7 @@ namespace Pihrtsoft.Records
 
         protected override void AddRecord(Record record)
         {
-            if (Records == null)
-                Records = new Collection<Record>();
-
-            Records.Add(record);
+            (Records ?? (Records = new Collection<Record>())).Add(record);
         }
 
         protected override Record CreateRecord(string id)

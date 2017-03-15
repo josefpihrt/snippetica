@@ -63,12 +63,9 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             IEnumerable<Record> records = Document.ReadRecords(@"..\..\Records.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled));
 
-            LanguageDefinition[] languages = records
+            foreach (LanguageDefinition language in records
                 .Where(f => f.ContainsProperty(KnownTags.Language))
-                .ToLanguageDefinitions()
-                .ToArray();
-
-            foreach (LanguageDefinition language in languages)
+                .ToLanguageDefinitions())
             {
                 var settings = new SnippetGeneratorSettings(language);
 

@@ -6,7 +6,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 {
     public abstract class LanguageDefinition
     {
-        public LanguageDefinition()
+        protected LanguageDefinition()
         {
             Modifiers = new ModifierDefinitionCollection();
             Types = new TypeDefinitionCollection();

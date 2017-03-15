@@ -17,7 +17,7 @@ namespace Pihrtsoft.Snippets.Xml
 
         public static string AttributeValueOrDefault(this XElement element, string attributeName)
         {
-            return element.Attribute(attributeName)?.Value ?? null;
+            return element.Attribute(attributeName)?.Value;
         }
 
         public static TEnum AttributeValueAsEnumOrDefault<TEnum>(this XElement element, string attributeName, TEnum defaultValue) where TEnum : struct

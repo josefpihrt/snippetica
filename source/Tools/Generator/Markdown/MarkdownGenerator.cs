@@ -51,10 +51,10 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
         {
             IOUtility.WriteAllText(
                 Path.Combine(settings.SolutionDirectoryPath, settings.ChangeLogFileName),
-                GenerateChangeLog(snippetDirectories, releases, settings));
+                GenerateChangeLog(snippetDirectories, releases));
         }
 
-        public static string GenerateChangeLog(SnippetDirectory[] snippetDirectories, Release[] releases, GeneralSettings settings)
+        public static string GenerateChangeLog(SnippetDirectory[] snippetDirectories, Release[] releases)
         {
             Snippet[] snippets = snippetDirectories
                 .SelectMany(f => f.EnumerateSnippets())

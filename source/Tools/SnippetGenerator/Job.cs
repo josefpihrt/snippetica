@@ -38,10 +38,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             {
                 if (command.ChildCommand != null)
                 {
-                    if (stack == null)
-                        stack = new Stack<Command>();
-
-                    stack.Push(command.ChildCommand);
+                    (stack ?? (stack = new Stack<Command>())).Push(command.ChildCommand);
                 }
             }
 
@@ -83,6 +80,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                     }
                 }
             }
+
             return false;
         }
 

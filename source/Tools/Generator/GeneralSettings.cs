@@ -75,7 +75,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             languages[languages.Length - 1] = " and " + languages[languages.Length - 1];
 
-            return string.Join("", languages);
+            return string.Concat(languages);
         }
     }
 }

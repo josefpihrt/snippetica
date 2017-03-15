@@ -6,8 +6,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
     {
         public ExecutionContext(Snippet snippet)
         {
-            Snippets = new Collection<Snippet>();
-            Snippets.Add(snippet);
+            Snippets = new Collection<Snippet>() { snippet };
         }
 
         public bool IsCanceled { get; set; }

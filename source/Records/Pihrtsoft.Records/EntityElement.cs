@@ -96,8 +96,7 @@ namespace Pihrtsoft.Records
                 {
                     case ElementKind.Variable:
                         {
-                            if (variables == null)
-                                variables = new ExtendedKeyedCollection<string, Variable>(DefaultComparer.StringComparer);
+                            variables = variables ?? new ExtendedKeyedCollection<string, Variable>(DefaultComparer.StringComparer);
 
                             string variableName = element.AttributeValueOrThrow(AttributeNames.Name);
 
@@ -113,8 +112,7 @@ namespace Pihrtsoft.Records
                         }
                     case ElementKind.Property:
                         {
-                            if (properties == null)
-                                properties = new ExtendedKeyedCollection<string, PropertyDefinition>();
+                            properties = properties ?? new ExtendedKeyedCollection<string, PropertyDefinition>();
 
                             string propertyName = element.AttributeValueOrThrow(AttributeNames.Name);
 

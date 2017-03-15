@@ -84,10 +84,12 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
         private static Snippet CreateElementSnippet()
         {
-            var s = new Snippet();
+            var s = new Snippet()
+            {
+                Title = "element",
+                Shortcut = ElementShortcut
+            };
 
-            s.Title = "element";
-            s.Shortcut = ElementShortcut;
             s.Description = s.Title;
 
             Literal nameLiteral = CreateElementNameLiteral();
@@ -118,10 +120,12 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
         private static Snippet CreateSelfClosingElementSnippet()
         {
-            var s = new Snippet();
+            var s = new Snippet()
+            {
+                Title = "self-closing element",
+                Shortcut = ElementShortcut
+            };
 
-            s.Title = "self-closing element";
-            s.Shortcut = ElementShortcut;
             s.Description = s.Title;
 
             Literal nameLiteral = CreateElementNameLiteral();
@@ -145,10 +149,12 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
         private static Snippet CreateCommentSnippet()
         {
-            var s = new Snippet();
+            var s = new Snippet()
+            {
+                Title = "comment",
+                Shortcut = CommentShortcut
+            };
 
-            s.Title = "comment";
-            s.Shortcut = CommentShortcut;
             s.Description = s.Title;
 
             Literal commentLiteral = CreateCommentLiteral();

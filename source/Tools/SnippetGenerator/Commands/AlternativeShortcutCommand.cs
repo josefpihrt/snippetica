@@ -28,7 +28,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Commands
                 .Select(f => f.Substring(0, 1) + f.Substring(f.Length - 1, 1))
                 .Select(f => f.ToLower());
 
-            snippet.Shortcut = string.Join("", values);
+            snippet.Shortcut = string.Concat(values);
         }
     }
 }

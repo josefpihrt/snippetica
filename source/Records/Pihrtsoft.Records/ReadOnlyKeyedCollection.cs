@@ -6,7 +6,7 @@ namespace Pihrtsoft.Records
 {
     public class ReadOnlyKeyedCollection<TKey, TValue> : ReadOnlyCollection<TValue> where TValue : IKey<TKey>
     {
-        private ExtendedKeyedCollection<TKey, TValue> _keyedCollection;
+        private readonly ExtendedKeyedCollection<TKey, TValue> _keyedCollection;
 
         public ReadOnlyKeyedCollection(IList<TValue> list)
             : this(new ExtendedKeyedCollection<TKey, TValue>(list))

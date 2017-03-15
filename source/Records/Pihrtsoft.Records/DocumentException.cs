@@ -19,7 +19,6 @@ namespace Pihrtsoft.Records
             XObject = @object;
         }
 
-
         public DocumentException(string message, XObject @object)
             : base(message)
         {

@@ -8,7 +8,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 {
     public class XamlSnippetGenerator
     {
-        public IEnumerable<Snippet> GenerateSnippets(string sourceDirectoryPath, string destinationDirectoryPath)
+        public IEnumerable<Snippet> GenerateSnippets(string sourceDirectoryPath)
         {
             return SnippetSerializer.Deserialize(sourceDirectoryPath, SearchOption.AllDirectories)
                 .SelectMany(snippet => GenerateSnippets(snippet));

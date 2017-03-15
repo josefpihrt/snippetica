@@ -8,17 +8,17 @@ namespace Pihrtsoft.Records.Utilities
         {
         }
 
-        public StringKeyedCollection(IList<TValue> list)
+        protected StringKeyedCollection(IList<TValue> list)
             : base(list)
         {
         }
 
-        public StringKeyedCollection(IEqualityComparer<string> comparer)
+        protected StringKeyedCollection(IEqualityComparer<string> comparer)
             : base(comparer)
         {
         }
 
-        public StringKeyedCollection(IList<TValue> list, IEqualityComparer<string> comparer)
+        protected StringKeyedCollection(IList<TValue> list, IEqualityComparer<string> comparer)
             : base(list, comparer)
         {
         }

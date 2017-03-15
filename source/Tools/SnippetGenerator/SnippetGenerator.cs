@@ -39,7 +39,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Snippets.Language.Xaml));
 
             var generator = new XamlSnippetGenerator();
-            snippets.AddRange(generator.GenerateSnippets(sourceDirPath, destinationDirPath));
+            snippets.AddRange(generator.GenerateSnippets(sourceDirPath));
 
             IOUtility.SaveSnippets(snippets.ToArray(), destinationDirPath);
         }
@@ -81,10 +81,10 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             jobs.AddCommands(GetTypeCommands(snippet));
 
             if (snippet.HasTag(KnownTags.GenerateCollection))
-                jobs.AddCommands(GetCollectionCommands(snippet));
+                jobs.AddCommands(GetCollectionCommands());
 
             if (snippet.HasTag(KnownTags.GenerateImmutableCollection))
-                jobs.AddCommands(GetImmutableCollectionCommands(snippet));
+                jobs.AddCommands(GetImmutableCollectionCommands());
 
             jobs.AddCommands(GetAccessModifierCommands(snippet));
 
@@ -141,7 +141,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             }
         }
 
-        private IEnumerable<Command> GetCollectionCommands(Snippet snippet)
+        private IEnumerable<Command> GetCollectionCommands()
         {
             return Settings
                 .Types
@@ -149,7 +149,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                 .Select(f => new CollectionTypeCommand(f));
         }
 
-        private IEnumerable<Command> GetImmutableCollectionCommands(Snippet snippet)
+        private IEnumerable<Command> GetImmutableCollectionCommands()
         {
             return Settings
                 .Types
