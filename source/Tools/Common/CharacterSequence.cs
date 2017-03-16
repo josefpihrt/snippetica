@@ -3,7 +3,11 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
+using System.Text;
+using System.Xml;
+using System.Xml.Linq;
 using Pihrtsoft.Records;
 
 namespace Pihrtsoft.Snippets.CodeGeneration
@@ -43,6 +47,42 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                         record.GetItems("Languages").Select(f => (Language)Enum.Parse(typeof(Language), f)),
                         record.Tags);
                 });
+        }
+
+        public static void SerializeToXml(string path, IEnumerable<CharacterSequence> sequences)
+        {
+            var doc = new XDocument(
+                new XElement(
+                    new XElement(
+                        "CharacterSequences",
+                        sequences.Select(f =>
+                            new XElement(nameof(CharacterSequence),
+                                new XAttribute(nameof(f.Value), f.Value),
+                                new XAttribute(nameof(f.Description), f.Description),
+                                new XAttribute(nameof(f.Comment), f.Comment),
+                                new XElement(nameof(f.Languages), f.Languages.Select(language => new XElement(nameof(Language), language.ToString()))),
+                                new XElement(nameof(f.Tags), f.Tags.Select(tag => new XElement("Tag", tag)))
+                            )
+                        )
+                    )
+                )
+            );
+
+            using (var stringWriter = new Utf8StringWriter())
+            {
+                var xmlWriterSettings = new XmlWriterSettings()
+                {
+                    OmitXmlDeclaration = false,
+                    NewLineChars = "\r\n",
+                    IndentChars = "  ",
+                    Indent = true
+                };
+
+                using (XmlWriter xmlWriter = XmlWriter.Create(stringWriter, xmlWriterSettings))
+                    doc.WriteTo(xmlWriter);
+
+                IOUtility.WriteAllText(path, stringWriter.ToString());
+            }
         }
     }
 }

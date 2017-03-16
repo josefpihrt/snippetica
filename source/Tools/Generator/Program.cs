@@ -19,6 +19,8 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             CharacterSequence[] characterSequences = CharacterSequence.LoadFromFile(@"..\..\CharacterSequences.xml").ToArray();
 
+            CharacterSequence.SerializeToXml(Path.Combine(settings.ExtensionProjectPath, "CharacterSequences.xml"), characterSequences);
+
             GenerateSnippets(snippetDirectories);
             SnippetGenerator.GenerateHtmlSnippets(snippetDirectories);
             SnippetGenerator.GenerateXamlSnippets(snippetDirectories);
