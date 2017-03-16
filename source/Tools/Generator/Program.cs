@@ -17,7 +17,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             SnippetDirectory[] snippetDirectories = SnippetDirectory.LoadFromFile(@"..\..\SnippetDirectories.xml").ToArray();
 
-            CharacterSequence[] characterSequences = CharacterSequence.LoadFromFile(@"..\..\CharacterSequences.xml", settings.DirectoryNamePrefix).ToArray();
+            CharacterSequence[] characterSequences = CharacterSequence.LoadFromFile(@"..\..\CharacterSequences.xml").ToArray();
 
             GenerateSnippets(snippetDirectories);
             SnippetGenerator.GenerateHtmlSnippets(snippetDirectories);
@@ -36,7 +36,8 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                 snippetDirectories
                     .Where(f => f.HasAnyTag(KnownTags.Release, KnownTags.Dev) && !f.HasAnyTag(KnownTags.AutoGenerationSource, KnownTags.AutoGenerationDestination))
                     .ToArray(),
-                characterSequences);
+                characterSequences,
+                settings);
 
             SnippetPackageGenerator.GenerateVisualStudioPackageFiles(
                 releaseDirectories: releaseDirectories,

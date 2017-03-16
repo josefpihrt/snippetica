@@ -31,7 +31,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             MarkdownGenerator.WriteProjectMarkdownFiles(releaseDirectories, settings.ExtensionProjectPath);
 
-            MarkdownGenerator.WriteDirectoryMarkdownFiles(releaseDirectories, characterSequences);
+            MarkdownGenerator.WriteDirectoryMarkdownFiles(releaseDirectories, characterSequences, settings);
 
             WriteVisualStudioGalleryDescription(releaseDirectories, settings);
             WritePkgDefFile(releaseDirectories, settings);

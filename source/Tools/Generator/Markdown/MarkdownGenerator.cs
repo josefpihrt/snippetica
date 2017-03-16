@@ -133,14 +133,16 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
             }
         }
 
-        public static void WriteDirectoryMarkdownFiles(SnippetDirectory[] snippetDirectories, CharacterSequence[] characterSequences)
+        public static void WriteDirectoryMarkdownFiles(SnippetDirectory[] snippetDirectories, CharacterSequence[] characterSequences, GeneralSettings settings)
         {
             foreach (SnippetDirectory snippetDirectory in snippetDirectories)
             {
                 WriteDirectoryMarkdownFiles(
                     snippetDirectory,
                     snippetDirectory.Path,
-                    characterSequences?.Where(f => f.DirectoryNames.Contains(snippetDirectory.DirectoryName)).ToArray());
+                    characterSequences?
+                        .Where(f => f.Languages.Select(language => settings.DirectoryNamePrefix + language.ToString())
+                        .Contains(snippetDirectory.DirectoryName)).ToArray());
             }
         }
 
