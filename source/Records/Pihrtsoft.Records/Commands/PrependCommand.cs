@@ -2,16 +2,16 @@
 
 namespace Pihrtsoft.Records.Commands
 {
-    internal class PrefixCommand : SetCommand
+    internal class PrependCommand : SetCommand
     {
-        public PrefixCommand(string propertyName, string value)
+        public PrependCommand(string propertyName, string value)
             : base(propertyName, value)
         {
         }
 
         public override CommandKind Kind
         {
-            get { return CommandKind.Prefix; }
+            get { return CommandKind.Prepend; }
         }
 
         public override void Execute(Record record)

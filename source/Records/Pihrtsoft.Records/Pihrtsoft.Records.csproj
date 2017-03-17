@@ -41,7 +41,7 @@
     <Compile Include="AbstractRecordReader.cs" />
     <Compile Include="Extensions\QueueExtensions.cs" />
     <Compile Include="Document.cs" />
-    <Compile Include="Commands\PrefixCommand.cs" />
+    <Compile Include="Commands\PrependCommand.cs" />
     <Compile Include="BaseRecordReader.cs" />
     <Compile Include="BaseRecordCollection.cs" />
     <Compile Include="Extensions\XContainerExtensions.cs" />

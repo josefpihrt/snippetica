@@ -35,7 +35,7 @@ namespace Pihrtsoft.Records
                 case ElementNames.Set:
                 case ElementNames.Add:
                 case ElementNames.Append:
-                case ElementNames.Prefix:
+                case ElementNames.Prepend:
                     return ElementKind.Command;
                 default:
                     {

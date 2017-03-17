@@ -8,7 +8,7 @@ namespace Pihrtsoft.Records.Commands
         AddTag,
         AddItem,
         Append,
-        Prefix,
+        Prepend,
         Group
     }
 }

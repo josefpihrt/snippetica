@@ -256,10 +256,10 @@ namespace Pihrtsoft.Records
 
                         break;
                     }
-                case ElementNames.Prefix:
+                case ElementNames.Prepend:
                     {
                         foreach (XAttribute attribute in element.Attributes())
-                            yield return new PrefixCommand(GetPropertyName(attribute), GetValue(attribute));
+                            yield return new PrependCommand(GetPropertyName(attribute), GetValue(attribute));
 
                         break;
                     }
