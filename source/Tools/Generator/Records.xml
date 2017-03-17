@@ -48,7 +48,7 @@
             <Property Name="Namespace" />
           </Declarations>
           <BaseRecords>
-            <New Id="Void" Title="void" Shortcut="-" />
+            <New Id="Void" Shortcut="-" />
             <New Id="Object" Shortcut="o" />
             <New Id="String" Shortcut="s" DefaultIdentifier="s" />
             <Tag Value="TryParse">
@@ -85,7 +85,7 @@
           </BaseRecords>
           <Records>
             <Set Language="CSharp">
-              <New Id="Void" Keyword="void" />
+              <New Id="Void" Title="void" Keyword="void" />
               <New Id="Boolean" Keyword="bool" DefaultValue="false" />
               <New Id="Int32" Keyword="int" />
               <New Id="Object" Keyword="object" DefaultValue="null" />
@@ -98,7 +98,7 @@
               <New Id="DateTime" Keyword="DateTime" DefaultValue="DateTime.MinValue" Namespace="System" />
             </Set>
             <Set Language="VisualBasic">
-              <New Id="Void" />
+              <New Id="Void" Title="Sub" Keyword="Sub" />
               <New Id="Boolean" Keyword="Boolean" DefaultValue="False" />
               <New Id="Int32" Keyword="Integer" />
               <New Id="Object" Keyword="Object" DefaultValue="Nothing" />
