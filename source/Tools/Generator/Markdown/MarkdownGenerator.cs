@@ -10,9 +10,6 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 {
     public static class MarkdownGenerator
     {
-        private const string SnippetsByTitleFileName = "SnippetsByTitle.md";
-        private const string SnippetsByShortcutFileName = "SnippetsByShortcut.md";
-
         public static void WriteSolutionReadMe(SnippetDirectory[] snippetDirectories, GeneralSettings settings)
         {
             IOUtility.WriteAllText(
@@ -29,20 +26,23 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
 
                 sw.WriteLine($"* {settings.GetProjectSubtitle(snippetDirectories)}");
                 sw.WriteLine($"* [Release Notes]({settings.GitHubMasterPath}/{$"{settings.ChangeLogFileName}"}).");
-                sw.WriteLine("* [Browse and search all available snippets](http://pihrt.net/Snippetica/Snippets).");
+                sw.WriteLine("* [Browse and Search All Snippets](http://pihrt.net/Snippetica/Snippets).");
                 sw.WriteLine();
                 sw.WriteLine("### Distribution");
                 sw.WriteLine();
                 sw.WriteLine("* **Snippetica** is distributed as [Visual Studio Extension](http://visualstudiogallery.msdn.microsoft.com/a5576f35-9f87-4c9c-8f1f-059421a23aed).");
                 sw.WriteLine();
-                sw.WriteLine("### Folders");
+                sw.WriteLine("### Snippets");
                 sw.WriteLine();
+
+                sw.WriteLine("Folder|Count| |");
+                sw.WriteLine("--- | --- | ---:");
 
                 foreach (SnippetDirectory snippetDirectory in snippetDirectories)
                 {
                     Snippet[] snippets = snippetDirectory.EnumerateSnippets().ToArray();
 
-                    sw.WriteLine($"* [{snippetDirectory.DirectoryName}]({settings.GitHubExtensionProjectPath}/{snippetDirectory.DirectoryName}/{settings.ReadMeFileName}) ({snippets.Length} snippets)");
+                    sw.WriteLine($"[{snippetDirectory.DirectoryName}]({settings.GitHubExtensionProjectPath}/{snippetDirectory.DirectoryName}/{settings.ReadMeFileName})|{snippets.Length}|[full list](http://pihrt.net/Snippetica/Snippets?Language={snippetDirectory.Language})");
                 }
 
                 return sw.ToString();
@@ -101,21 +101,11 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
             }
         }
 
-        public static void WriteProjectMarkdownFiles(SnippetDirectory[] snippetDirectories, string directoryPath)
+        public static void WriteProjectReadMe(SnippetDirectory[] snippetDirectories, string directoryPath)
         {
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, "README.md"),
                 GenerateProjectReadMe(snippetDirectories));
-
-            Snippet[] snippets = snippetDirectories.SelectMany(f => f.EnumerateSnippets()).ToArray();
-
-            IOUtility.WriteAllText(
-                Path.Combine(directoryPath, SnippetsByTitleFileName),
-                GenerateSnippetList(snippets, directoryPath, SnippetTableWriter.CreateLanguageThenTitleWithLinkThenShortcut(directoryPath)));
-
-            IOUtility.WriteAllText(
-                Path.Combine(directoryPath, SnippetsByShortcutFileName),
-                GenerateSnippetList(snippets, directoryPath, SnippetTableWriter.CreateLanguageThenShortcutThenTitleWithLink(directoryPath)));
         }
 
         private static string GenerateProjectReadMe(SnippetDirectory[] snippetDirectories)
@@ -133,47 +123,28 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
             }
         }
 
-        public static void WriteDirectoryMarkdownFiles(SnippetDirectory[] snippetDirectories, CharacterSequence[] characterSequences, GeneralSettings settings)
+        public static void WriteDirectoryReadMe(SnippetDirectory[] snippetDirectories, CharacterSequence[] characterSequences, GeneralSettings settings)
         {
             foreach (SnippetDirectory snippetDirectory in snippetDirectories)
             {
-                WriteDirectoryMarkdownFiles(
-                    snippetDirectory,
-                    snippetDirectory.Path,
-                    characterSequences?
-                        .Where(f => f.Languages.Select(language => settings.DirectoryNamePrefix + language.ToString())
-                        .Contains(snippetDirectory.DirectoryName)).ToArray());
+                IOUtility.WriteAllText(
+                    Path.Combine(snippetDirectory.Path, "README.md"),
+                    GenerateDirectoryReadme(snippetDirectory, characterSequences, settings));
             }
         }
 
-        public static void WriteDirectoryMarkdownFiles(SnippetDirectory snippetDirectory, string directoryPath, CharacterSequence[] characterSequences)
-        {
-            WriteDirectoryMarkdownFiles(snippetDirectory.EnumerateSnippets().ToArray(), directoryPath, characterSequences);
-        }
-
-        public static void WriteDirectoryMarkdownFiles(Snippet[] snippets, string directoryPath, CharacterSequence[] characterSequences)
-        {
-            IOUtility.WriteAllText(
-                Path.Combine(directoryPath, "README.md"),
-                GenerateDirectoryReadme(snippets.Where(f => !f.HasTag(KnownTags.ExcludeFromReadme)), directoryPath, characterSequences));
-
-            IOUtility.WriteAllText(
-                Path.Combine(directoryPath, SnippetsByTitleFileName),
-                GenerateSnippetList(snippets, directoryPath, SnippetTableWriter.CreateTitleWithLinkThenShortcut(directoryPath)));
-
-            IOUtility.WriteAllText(
-                Path.Combine(directoryPath, SnippetsByShortcutFileName),
-                GenerateSnippetList(snippets, directoryPath, SnippetTableWriter.CreateShortcutThenTitleWithLink(directoryPath)));
-        }
-
-        private static string GenerateDirectoryReadme(IEnumerable<Snippet> snippets, string directoryPath, CharacterSequence[] characterSequences)
+        private static string GenerateDirectoryReadme(SnippetDirectory snippetDirectory, CharacterSequence[] characterSequences, GeneralSettings settings   )
         {
             using (var sw = new StringWriter())
             {
-                string directoryName = Path.GetFileName(directoryPath);
+                string directoryName = snippetDirectory.DirectoryName;
 
                 sw.WriteLine($"## {directoryName}");
                 sw.WriteLine();
+
+                characterSequences = characterSequences?
+                        .Where(f => f.Languages.Select(language => settings.DirectoryNamePrefix + language.ToString())
+                        .Contains(snippetDirectory.DirectoryName)).ToArray();
 
                 if (characterSequences?.Length > 0)
                 {
@@ -197,15 +168,21 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
                     sw.WriteLine();
                 }
 
-                sw.WriteLine($"* [full list of snippets (sorted by title)]({SnippetsByTitleFileName})");
-                sw.WriteLine($"* [full list of snippets (sorted by shortcut)]({SnippetsByShortcutFileName})");
-                sw.WriteLine();
+                if (!snippetDirectory.HasTag(KnownTags.Dev))
+                {
+                    sw.WriteLine($"* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language={snippetDirectory.Language})");
+                    sw.WriteLine();
+                }
 
                 sw.WriteLine("### List of Selected Snippets");
                 sw.WriteLine();
 
-                using (SnippetTableWriter tableWriter = SnippetTableWriter.CreateTitleWithLinkThenShortcut(directoryPath))
+                using (SnippetTableWriter tableWriter = SnippetTableWriter.CreateTitleWithLinkThenShortcut(snippetDirectory.Path))
                 {
+                    IEnumerable<Snippet> snippets = snippetDirectory
+                        .EnumerateSnippets()
+                        .Where(f => !f.HasTag(KnownTags.ExcludeFromReadme));
+
                     tableWriter.WriteTable(snippets);
                     sw.Write(tableWriter.ToString());
                 }

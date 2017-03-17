@@ -1,7 +1,6 @@
 ﻿## Snippetica.Xml.CodeSnippet
 
-* [full list of snippets (sorted by title)](SnippetsByTitle.md)
-* [full list of snippets (sorted by shortcut)](SnippetsByShortcut.md)
+* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=Xml)
 
 ### List of Selected Snippets
 

@@ -1,8 +1,5 @@
 ﻿## Snippetica.Cpp.Dev
 
-* [full list of snippets (sorted by title)](SnippetsByTitle.md)
-* [full list of snippets (sorted by shortcut)](SnippetsByShortcut.md)
-
 ### List of Selected Snippets
 
 Title | Shortcut

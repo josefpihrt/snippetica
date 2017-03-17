@@ -12,8 +12,7 @@ e|element|\-
 s|self\-closing \(element\)|\-
 x|\(element\) with content|\-
 
-* [full list of snippets (sorted by title)](SnippetsByTitle.md)
-* [full list of snippets (sorted by shortcut)](SnippetsByShortcut.md)
+* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=Xaml)
 
 ### List of Selected Snippets
 
