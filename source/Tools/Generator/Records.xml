@@ -130,17 +130,19 @@
                 <New Id="ReadOnlyCollection" />
                 <New Id="ReadOnlyDictionary" />
               </Set>
-              <Set Namespace="System.Collections.Immutable" Tag="Immutable">
-                <Prefix Id="Immutable" Shortcut="i">
-                  <New Id="Array" />
-                  <New Id="Dictionary" />
-                  <New Id="HashSet" />
-                  <New Id="List" />
-                  <New Id="Queue" />
-                  <New Id="Stack" />
-                  <New Id="SortedDictionary" />
-                  <New Id="SortedSet" />
-                </Prefix>
+              <Set Namespace="System.Collections.Immutable">
+                <Tag Value="Immutable">
+                  <Prepend Id="Immutable" Shortcut="i">
+                    <New Id="Array" />
+                    <New Id="Dictionary" />
+                    <New Id="HashSet" />
+                    <New Id="List" />
+                    <New Id="Queue" />
+                    <New Id="Stack" />
+                    <New Id="SortedDictionary" />
+                    <New Id="SortedSet" />
+                  </Prepend>
+                </Tag>
               </Set>
             </Tag>
           </Records>

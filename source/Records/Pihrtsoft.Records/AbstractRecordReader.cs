@@ -85,7 +85,7 @@ namespace Pihrtsoft.Records
 
         private void AddPendingCommands(XElement element)
         {
-            using (IEnumerator<Command> en = CreateCommandFromElement(element).GetEnumerator())
+            using (IEnumerator<Command> en = CreateCommandsFromElement(element).GetEnumerator())
             {
                 if (en.MoveNext())
                 {
@@ -139,7 +139,9 @@ namespace Pihrtsoft.Records
                 }
                 else
                 {
-                    (commands ?? (commands = new CommandCollection())).Add(CreateCommandFromAttribute(attribute));
+                    Command command = CreateCommandFromAttribute(element, attribute);
+
+                    (commands ?? (commands = new CommandCollection())).Add(command);
                 }
             }
 
@@ -148,7 +150,8 @@ namespace Pihrtsoft.Records
             if (commands != null)
                 commands.ExecuteAll(record);
 
-            GetChildCommands(element).ExecuteAll(record);
+            foreach (Command command in GetChildCommands(element))
+                command.Execute(record);
 
             Commands?.ExecuteAll(record);
 
@@ -179,24 +182,45 @@ namespace Pihrtsoft.Records
             return record;
         }
 
-        private Command CreateCommandFromAttribute(XAttribute attribute)
+        private Command CreateCommandFromAttribute(
+            XElement element,
+            XAttribute attribute,
+            bool throwOnId = false,
+            bool throwOnTag = false,
+            bool throwOnSet = false,
+            bool throwOnAdd = false)
         {
-            if (DefaultComparer.NameEquals(attribute, AttributeNames.Tag))
+            string attributeName = GetAttributeName(attribute);
+
+            if (throwOnId
+                && DefaultComparer.NameEquals(attributeName, AttributeNames.Id))
             {
+                Throw(ErrorMessages.CannotUseCommandOnProperty(element, attributeName));
+            }
+
+            if (DefaultComparer.NameEquals(attributeName, AttributeNames.Tag))
+            {
+                if (throwOnTag)
+                    Throw(ErrorMessages.CannotUseCommandOnProperty(element, attributeName));
+
                 return new AddTagCommand(GetValue(attribute));
+            }
+
+            PropertyDefinition property = GetProperty(attribute);
+
+            if (property.IsCollection)
+            {
+                if (throwOnAdd)
+                    Throw(ErrorMessages.CannotUseCommandOnCollectionProperty(element, property.Name));
+
+                return new AddItemCommand(property, GetValue(attribute));
             }
             else
             {
-                string propertyName = GetPropertyName(attribute);
+                if (throwOnSet)
+                    Throw(ErrorMessages.CannotUseCommandOnNonCollectionProperty(element, property.Name));
 
-                string value = GetValue(attribute);
-
-                PropertyDefinition propertyDefinition = Entity.FindProperty(propertyName);
-
-                if (propertyDefinition?.IsCollection == true)
-                    return new AddItemCommand(propertyName, value);
-
-                return new SetCommand(propertyName, value);
+                return new SetCommand(property, GetValue(attribute));
             }
         }
 
@@ -206,37 +230,14 @@ namespace Pihrtsoft.Records
             {
                 Current = element;
 
-                if (element.HasAttributes)
-                {
-                    if (element.Kind() != ElementKind.Command)
-                        ThrowOnUnknownElement(element);
-
-                    foreach (Command command in CreateCommandFromElement(element))
-                        yield return command;
-                }
-                else
-                {
-                    string propertyName = GetPropertyName(element);
-
-                    string value = GetValue(element);
-
-                    PropertyDefinition propertyDefinition = Entity.FindProperty(propertyName);
-
-                    if (propertyDefinition?.IsCollection == true)
-                    {
-                        yield return new AddItemCommand(propertyName, value);
-                    }
-                    else
-                    {
-                        yield return new SetCommand(propertyName, value);
-                    }
-                }
+                foreach (Command command in CreateCommandsFromElement(element))
+                    yield return command;
             }
 
             Current = parent;
         }
 
-        private IEnumerable<Command> CreateCommandFromElement(XElement element)
+        private IEnumerable<Command> CreateCommandsFromElement(XElement element)
         {
             Debug.Assert(element.HasAttributes, element.ToString());
 
@@ -245,54 +246,42 @@ namespace Pihrtsoft.Records
                 case ElementNames.Set:
                     {
                         foreach (XAttribute attribute in element.Attributes())
-                            yield return CreateCommandFromAttribute(attribute);
+                            yield return CreateCommandFromAttribute(element, attribute, throwOnId: true, throwOnTag: true, throwOnAdd: true);
 
                         break;
                     }
                 case ElementNames.Append:
                     {
                         foreach (XAttribute attribute in element.Attributes())
-                            yield return new AppendCommand(GetPropertyName(attribute), GetValue(attribute));
+                        {
+                            PropertyDefinition property = GetProperty(attribute);
+                            yield return new AppendCommand(property, GetValue(attribute));
+                        }
 
                         break;
                     }
                 case ElementNames.Prepend:
                     {
                         foreach (XAttribute attribute in element.Attributes())
-                            yield return new PrependCommand(GetPropertyName(attribute), GetValue(attribute));
+                        {
+                            PropertyDefinition property = GetProperty(attribute);
+                            yield return new PrependCommand(property, GetValue(attribute));
+                        }
 
                         break;
                     }
                 case ElementNames.Tag:
                     {
-                        XAttribute attribute = element
-                            .Attributes()
-                            .FirstOrDefault(f => f.LocalName() == AttributeNames.Value);
+                        XAttribute attribute = element.SingleAttributeOrThrow(AttributeNames.Value);
 
-                        if (attribute != null)
-                            yield return new AddTagCommand(GetValue(attribute));
+                        yield return new AddTagCommand(GetValue(attribute));
 
                         break;
                     }
                 case ElementNames.Add:
                     {
                         foreach (XAttribute attribute in element.Attributes())
-                        {
-                            string propertyName = GetAttributeName(attribute);
-
-                            PropertyDefinition property = Entity.FindProperty(propertyName);
-
-                            if (property == null)
-                            {
-                                Throw(ErrorMessages.PropertyIsNotDefined(propertyName));
-                            }
-                            else if (!property.IsCollection)
-                            {
-                                Throw(ErrorMessages.CannotAddItemToNonCollectionProperty(propertyName));
-                            }
-
-                            yield return new AddItemCommand(propertyName, GetValue(attribute));
-                        }
+                            yield return CreateCommandFromAttribute(element, attribute, throwOnId: true, throwOnTag: true, throwOnSet: true);
 
                         break;
                     }
@@ -304,24 +293,30 @@ namespace Pihrtsoft.Records
             }
         }
 
-        private string GetPropertyName(XAttribute attribute)
+        private PropertyDefinition GetProperty(XAttribute attribute)
         {
             string propertyName = GetAttributeName(attribute);
 
-            if (!Entity.ContainsProperty(propertyName))
+            PropertyDefinition property;
+            if (!Entity.TryGetProperty(propertyName, out property))
+            {
                 Throw(ErrorMessages.PropertyIsNotDefined(propertyName), attribute);
+            }
 
-            return propertyName;
+            return property;
         }
 
-        private string GetPropertyName(XElement element)
+        private PropertyDefinition GetProperty(XElement element)
         {
-            string propertyName = GetAttributeName(element);
+            string propertyName = GetElementName(element);
 
-            if (!Entity.ContainsProperty(propertyName))
+            PropertyDefinition property;
+            if (!Entity.TryGetProperty(propertyName, out property))
+            {
                 Throw(ErrorMessages.PropertyIsNotDefined(propertyName));
+            }
 
-            return propertyName;
+            return property;
         }
 
         private string GetAttributeName(XAttribute attribute)
@@ -329,7 +324,7 @@ namespace Pihrtsoft.Records
             return attribute.LocalName();
         }
 
-        private string GetAttributeName(XElement element)
+        private string GetElementName(XElement element)
         {
             return element.LocalName();
         }

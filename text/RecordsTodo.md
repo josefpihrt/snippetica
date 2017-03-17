@@ -1,9 +1,9 @@
-﻿* property type is Entity
-* define xsd
+﻿* Property type is Entity
+* xsd
 * Entity Base="BaseEntity"
 * <Namespace>
 * <Document> <Settings>
 * <Document> <Header>
 * UndefinedPropertyAction
-* <Group> <Commands> <Records> </Records> </Commands> </Group> 
+* <Group> <Commands> </Commands> <Records> </Records> </Group> 
 * <Conditions> <Condition Tag="Immutable"> <Set Namespace="System.Collections.Immutable" />

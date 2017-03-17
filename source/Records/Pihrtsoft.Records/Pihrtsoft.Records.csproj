@@ -39,6 +39,7 @@
     <Compile Include="AttributeValueParser.cs" />
     <Compile Include="Commands\GroupCommand.cs" />
     <Compile Include="AbstractRecordReader.cs" />
+    <Compile Include="Commands\PropertyCommand.cs" />
     <Compile Include="Extensions\QueueExtensions.cs" />
     <Compile Include="Document.cs" />
     <Compile Include="Commands\PrependCommand.cs" />
@@ -61,7 +62,6 @@
     <Compile Include="VariableCollection.cs" />
     <Compile Include="Variable.cs" />
     <Compile Include="InvalidValueException.cs" />
-    <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Commands\AddTagCommand.cs" />
     <Compile Include="Commands\AppendCommand.cs" />
     <Compile Include="Record.cs" />

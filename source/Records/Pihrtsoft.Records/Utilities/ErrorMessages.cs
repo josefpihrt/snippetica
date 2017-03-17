@@ -12,11 +12,6 @@ namespace Pihrtsoft.Records.Utilities
             return $"Property '{propertyName}' is required.";
         }
 
-        public static string CannotAddItemToNonCollectionProperty(string propertyName)
-        {
-            return $"Cannot add item to a non-collection property '{propertyName}'.";
-        }
-
         public static string DocumentVersionIsNotSupported(Version version, Version supportedVersion)
         {
             return $"Document version '{version}' is not supported. Version '{supportedVersion}' or lower is supported.";
@@ -29,22 +24,22 @@ namespace Pihrtsoft.Records.Utilities
 
         public static string MissingElement(string name)
         {
-            return $"'{name}' element was not found.";
+            return $"Element '{name}' was not found.";
         }
 
         public static string UnknownElement(XElement element)
         {
-            return $"'{element.Parent?.LocalName()}' element contains unknown '{element.LocalName()}' element.";
+            return $"Element '{element.Parent?.LocalName()}' contains unknown element '{element.LocalName()}'.";
         }
 
         public static string MultipleElementsWithEqualName(XElement element)
         {
-            return $"'{element.Parent?.LocalName()}' element cannot contains multiple '{element.LocalName()}' elements.";
+            return $"Element '{element.Parent?.LocalName()}' cannot contains multiple elements with name '{element.LocalName()}'.";
         }
 
         public static string MissingBaseRecordIdentifier()
         {
-            return $"Base record must define '{PropertyDefinition.Id.Name}' attribute.";
+            return $"Base record must define attribute '{PropertyDefinition.Id.Name}'.";
         }
 
         public static string ItemAlreadyDefined(string propertyName, string name)
@@ -75,6 +70,21 @@ namespace Pihrtsoft.Records.Utilities
         public static string PropertyIsNotDefined(string propertyName)
         {
             return $"Property '{propertyName}' is not defined.";
+        }
+
+        internal static string CannotUseCommandOnProperty(XElement element, string propertyName)
+        {
+            return $"Cannot use {element.LocalName()} command on property '{propertyName}'.";
+        }
+
+        internal static string CannotUseCommandOnCollectionProperty(XElement element, string propertyName)
+        {
+            return $"Cannot use {element.LocalName()} command on collection property '{propertyName}'.";
+        }
+
+        internal static string CannotUseCommandOnNonCollectionProperty(XElement element, string propertyName)
+        {
+            return $"Cannot use {element.LocalName()} command on non-collection property '{propertyName}'.";
         }
     }
 }

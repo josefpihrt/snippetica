@@ -5,17 +5,12 @@ using System.Diagnostics;
 namespace Pihrtsoft.Records.Commands
 {
     [DebuggerDisplay("{Kind} {PropertyName,nq} = {Value,nq}")]
-    internal class SetCommand : Command
+    internal class SetCommand : PropertyCommand
     {
-        public SetCommand(string propertyName, string value)
+        public SetCommand(PropertyDefinition property, string value)
+            : base(property, value)
         {
-            PropertyName = propertyName;
-            Value = value;
         }
-
-        public string PropertyName { get; }
-
-        public string Value { get; }
 
         public override CommandKind Kind
         {

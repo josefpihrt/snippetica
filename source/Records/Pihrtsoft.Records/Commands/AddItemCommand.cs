@@ -1,22 +1,15 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace Pihrtsoft.Records.Commands
 {
-    [DebuggerDisplay("{Kind} {PropertyName,nq} {Item,nq}")]
-    internal class AddItemCommand : Command
+    internal class AddItemCommand : PropertyCommand
     {
-        public AddItemCommand(string propertyName, string item)
+        public AddItemCommand(PropertyDefinition propertyName, string value)
+            : base(propertyName, value)
         {
-            PropertyName = propertyName;
-            Item = item;
         }
-
-        public string PropertyName { get; }
-
-        public string Item { get; }
 
         public override CommandKind Kind
         {
@@ -38,7 +31,7 @@ namespace Pihrtsoft.Records.Commands
                 record[PropertyName] = items;
             }
 
-            items.Add(Item);
+            items.Add(Value);
         }
     }
 }

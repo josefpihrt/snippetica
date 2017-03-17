@@ -121,6 +121,12 @@ namespace Pihrtsoft.Records
             return FindProperty(name, this);
         }
 
+        public bool TryGetProperty(string name, out PropertyDefinition property)
+        {
+            property = FindProperty(name, this);
+            return property != null;
+        }
+
         private static PropertyDefinition FindProperty(string name, EntityDefinition entity)
         {
             do

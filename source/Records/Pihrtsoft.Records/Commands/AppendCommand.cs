@@ -1,11 +1,13 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System.Collections.Generic;
+
 namespace Pihrtsoft.Records.Commands
 {
-    internal class AppendCommand : SetCommand
+    internal class AppendCommand : PropertyCommand
     {
-        public AppendCommand(string propertyName, string value)
-            : base(propertyName, value)
+        public AppendCommand(PropertyDefinition property, string value)
+            : base(property, value)
         {
         }
 
@@ -16,7 +18,21 @@ namespace Pihrtsoft.Records.Commands
 
         public override void Execute(Record record)
         {
-            record[PropertyName] += Value;
+            if (Property.IsCollection)
+            {
+                object value;
+                if (record.TryGetValue(PropertyName, out value))
+                {
+                    var items = (List<object>)value;
+
+                    for (int i = 0; i < items.Count; i++)
+                        items[i] += Value;
+                }
+            }
+            else
+            {
+                record[PropertyName] += Value;
+            }
         }
     }
 }
