@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using Pihrtsoft.Records.Utilities;
 
 namespace Pihrtsoft.Records
 {
@@ -84,11 +85,9 @@ namespace Pihrtsoft.Records
                 if (Tags.Count > 0)
                     sb.Append($" Tags: {string.Join(", ", Tags.OrderBy(f => f))}");
 
-                if (Properties.Count > 0)
-                {
-                    sb.Append(" ");
-
-                    IEnumerable<string> properties = Properties.Select(f =>
+                IEnumerable<string> properties = Properties
+                    .Where(f => !DefaultComparer.NameEquals(f.Key, "Id"))
+                    .Select(f =>
                     {
                         var list = f.Value as List<object>;
 
@@ -96,11 +95,18 @@ namespace Pihrtsoft.Records
                         {
                             return $"{f.Key} = {{{string.Join(", ", list)}}}";
                         }
-
-                        return $"{f.Key} = {f.Value}";
+                        else
+                        {
+                            return $"{f.Key} = {f.Value}";
+                        }
                     });
 
-                    sb.Append(string.Join(", ", properties));
+                string s = string.Join(", ", properties);
+
+                if (s.Length > 0)
+                {
+                    sb.Append(" ");
+                    sb.Append(s);
                 }
 
                 return sb.ToString();
