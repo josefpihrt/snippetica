@@ -62,14 +62,14 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         public static void GenerateXamlSnippets(SnippetDirectory[] snippetDirectories)
         {
             IEnumerable<SnippetDirectory> directories = snippetDirectories
-                .Where(f => f.Language == Snippets.Language.Xaml);
+                .Where(f => f.Language == Language.Xaml);
 
             string sourceDirPath = directories.First(f => f.HasTag(KnownTags.AutoGenerationSource)).Path;
             string destinationDirPath = directories.First(f => f.HasTag(KnownTags.AutoGenerationDestination)).Path;
 
             var snippets = new List<Snippet>();
 
-            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Snippets.Language.Xaml));
+            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Language.Xaml));
 
             var generator = new XamlSnippetGenerator();
             snippets.AddRange(generator.GenerateSnippets(sourceDirPath));
@@ -79,20 +79,20 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
         public static void GenerateXmlSnippets(SnippetDirectory[] snippetDirectories)
         {
-            string destinationDirPath = snippetDirectories.First(f => f.Language == Snippets.Language.Xml && f.HasTag(KnownTags.AutoGenerationDestination)).Path;
+            string destinationDirPath = snippetDirectories.First(f => f.Language == Language.Xml && f.HasTag(KnownTags.AutoGenerationDestination)).Path;
 
-            Snippet[] snippets = XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Snippets.Language.Xml).ToArray();
+            Snippet[] snippets = XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Language.Xml).ToArray();
 
             IOUtility.SaveSnippets(snippets, destinationDirPath);
         }
 
         public static void GenerateHtmlSnippets(SnippetDirectory[] snippetDirectories)
         {
-            string sourceDirPath = snippetDirectories.First(f => f.Language == Snippets.Language.Html && f.HasTag(KnownTags.AutoGenerationSource)).Path;
-            string destinationDirPath = snippetDirectories.First(f => f.Language == Snippets.Language.Html && f.HasTag(KnownTags.AutoGenerationDestination)).Path;
+            string sourceDirPath = snippetDirectories.First(f => f.Language == Language.Html && f.HasTag(KnownTags.AutoGenerationSource)).Path;
+            string destinationDirPath = snippetDirectories.First(f => f.Language == Language.Html && f.HasTag(KnownTags.AutoGenerationDestination)).Path;
 
             var snippets = new List<Snippet>();
-            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Snippets.Language.Html));
+            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(destinationDirPath, Language.Html));
             snippets.AddRange(HtmlSnippetGenerator.GenerateSnippets(sourceDirPath));
 
             IOUtility.SaveSnippets(snippets.ToArray(), destinationDirPath);
@@ -202,7 +202,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         {
             ReplacePlaceholders(snippet);
 
-            if (snippet.Language == Snippets.Language.VisualBasic)
+            if (snippet.Language == Language.VisualBasic)
                 snippet.ReplaceSubOrFunctionLiteral("Function");
 
             Literal typeLiteral = snippet.Literals[LiteralIdentifiers.Type];
