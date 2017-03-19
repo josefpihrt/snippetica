@@ -13,7 +13,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Commands
         {
             LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
-            ModifierDefinition @virtual = language.Virtual;
+            ModifierDefinition @virtual = language.VirtualModifier;
 
             snippet.PrefixTitle($"{@virtual.Keyword} ");
 

@@ -11,10 +11,8 @@ namespace Pihrtsoft.Snippets.CodeGeneration
     {
         public static IEnumerable<LanguageDefinition> ToLanguageDefinitions(this IEnumerable<Record> records)
         {
-            IEnumerable<IGrouping<string, Record>> x = records
-                .GroupBy(f => f.GetStringOrDefault(Identifiers.Language));
-
             foreach (IGrouping<string, Record> grouping in records
+                .Where(f => f.ContainsProperty("Language"))
                 .GroupBy(f => f.GetStringOrDefault(Identifiers.Language)))
             {
                 LanguageDefinition language = CreateLanguageDefinition((Language)Enum.Parse(typeof(Language), grouping.Key));
@@ -22,8 +20,12 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                 foreach (ModifierDefinition modifier in grouping.ToModifierDefinitions())
                     language.Modifiers.Add(modifier);
 
-                foreach (TypeDefinition type in grouping.ToTypeDefinitions())
+                foreach (TypeDefinition type in grouping
+                    .Concat(records.Where(f => !f.ContainsProperty("Language")))
+                    .ToTypeDefinitions())
+                {
                     language.Types.Add(type);
+                }
 
                 yield return language;
             }

@@ -13,7 +13,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Commands
         {
             LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
-            ModifierDefinition @static = language.Static;
+            ModifierDefinition @static = language.StaticModifier;
 
             snippet.PrefixTitle($"{@static.Keyword} ");
 

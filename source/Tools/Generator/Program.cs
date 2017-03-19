@@ -1,10 +1,8 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Pihrtsoft.Records;
 using Pihrtsoft.Snippets.CodeGeneration.Markdown;
 
 namespace Pihrtsoft.Snippets.CodeGeneration
@@ -19,9 +17,11 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             CharacterSequence[] characterSequences = CharacterSequence.LoadFromFile(@"..\..\CharacterSequences.xml").ToArray();
 
+            LanguageDefinition[] languageDefinitions = LanguageDefinition.LoadFromFile(@"..\..\Records.xml").ToArray();
+
             CharacterSequence.SerializeToXml(Path.Combine(settings.ExtensionProjectPath, "CharacterSequences.xml"), characterSequences);
 
-            GenerateSnippets(snippetDirectories);
+            SnippetGenerator.GenerateSnippets(snippetDirectories, languageDefinitions);
             SnippetGenerator.GenerateHtmlSnippets(snippetDirectories);
             SnippetGenerator.GenerateXamlSnippets(snippetDirectories);
             SnippetGenerator.GenerateXmlSnippets(snippetDirectories);
@@ -61,28 +61,6 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             Console.WriteLine("*** END ***");
             Console.ReadKey();
-        }
-
-        private static void GenerateSnippets(SnippetDirectory[] snippetDirectories)
-        {
-            IEnumerable<Record> records = Document.ReadRecords(@"..\..\Records.xml")
-                .Where(f => !f.HasTag(KnownTags.Disabled));
-
-            foreach (LanguageDefinition language in records
-                .Where(f => f.ContainsProperty(KnownTags.Language))
-                .ToLanguageDefinitions())
-            {
-                var settings = new SnippetGeneratorSettings(language);
-
-                foreach (TypeDefinition typeInfo in records
-                    .Where(f => f.HasTag(KnownTags.Collection))
-                    .ToTypeDefinitions())
-                {
-                    settings.Types.Add(typeInfo);
-                }
-
-                language.GenerateSnippets(snippetDirectories, settings);
-            }
         }
     }
 }

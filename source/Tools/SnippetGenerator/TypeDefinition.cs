@@ -36,5 +36,10 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         public string DefaultIdentifier { get; }
         public string Namespace { get; }
         public ReadOnlyCollection<string> Tags { get; }
+
+        public bool HasTag(string tag)
+        {
+            return Tags.Contains(tag);
+        }
     }
 }
