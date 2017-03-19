@@ -17,7 +17,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             CharacterSequence[] characterSequences = CharacterSequence.LoadFromFile(@"..\..\CharacterSequences.xml").ToArray();
 
-            LanguageDefinition[] languageDefinitions = LanguageDefinition.LoadFromFile(@"..\..\Records.xml").ToArray();
+            LanguageDefinition[] languageDefinitions = LanguageDefinition.LoadFromFile(@"..\..\LanguageDefinitions.xml").ToArray();
 
             CharacterSequence.SerializeToXml(Path.Combine(settings.ExtensionProjectPath, "CharacterSequences.xml"), characterSequences);
 
