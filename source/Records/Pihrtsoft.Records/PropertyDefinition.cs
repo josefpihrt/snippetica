@@ -43,7 +43,7 @@ namespace Pihrtsoft.Records
         public bool IsCollection { get; }
         public bool IsRequired { get; }
 
-        public string GetKey()
+        string IKey<string>.GetKey()
         {
             return Name;
         }

@@ -16,7 +16,7 @@ namespace Pihrtsoft.Records
         public string Name { get; }
         public string Value { get; }
 
-        public string GetKey()
+        string IKey<string>.GetKey()
         {
             return Name;
         }

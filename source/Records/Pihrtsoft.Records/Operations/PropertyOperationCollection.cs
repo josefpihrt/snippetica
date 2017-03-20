@@ -18,7 +18,7 @@ namespace Pihrtsoft.Records.Operations
             get { return PropertyDefinition.Name; }
         }
 
-        public string GetKey()
+        string IKey<string>.GetKey()
         {
             return PropertyName;
         }

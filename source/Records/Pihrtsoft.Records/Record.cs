@@ -335,7 +335,7 @@ namespace Pihrtsoft.Records
             return record;
         }
 
-        public string GetKey()
+        string IKey<string>.GetKey()
         {
             return Id;
         }

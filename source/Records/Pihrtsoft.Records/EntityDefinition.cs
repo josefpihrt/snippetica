@@ -197,7 +197,7 @@ namespace Pihrtsoft.Records
             } while (type != null);
         }
 
-        public string GetKey()
+        string IKey<string>.GetKey()
         {
             return Name;
         }
