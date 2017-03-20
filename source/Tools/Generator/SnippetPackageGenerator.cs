@@ -82,11 +82,15 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 #if RELEASE
             foreach (Snippet snippet in allSnippets)
             {
-                string title = snippet.GetTitleWithoutShortcut();
+                string submenuShortcut = snippet.GetSubmenuShortcut();
+
+                snippet.RemoveShortcutFromTitle();
 
                 snippet.RemoveMetaKeywords();
-                snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}FullName:{snippet.Language}.{snippet.FileNameWithoutExtension()}");
-                snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}Title:{title}");
+                snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}Name:{snippet.FileNameWithoutExtension()}");
+
+                if (!string.IsNullOrEmpty(submenuShortcut))
+                    snippet.Keywords.Add($"{KnownTags.MetaTagPrefix}SubmenuShortcut:{submenuShortcut}");
             }
 
             IOUtility.SaveSnippetsToSingleFile(

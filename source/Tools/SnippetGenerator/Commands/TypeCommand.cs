@@ -64,13 +64,13 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Commands
             }
 
             snippet.Title = snippet.Title
-                .ReplacePlaceholder(Placeholders.Type, Type.Title)
-                .ReplacePlaceholder(Placeholders.OfType, $"of {Type.Title}")
+                .ReplacePlaceholder(Placeholders.Type, Type.Keyword)
+                .ReplacePlaceholder(Placeholders.OfType, $"of {Type.Keyword}")
                 .ReplacePlaceholder(Placeholders.GenericType, language.GetTypeParameterList(Type.Keyword));
 
             snippet.Description = snippet.Description
-                .ReplacePlaceholder(Placeholders.Type, Type.Title)
-                .ReplacePlaceholder(Placeholders.OfType, $"of {Type.Title}")
+                .ReplacePlaceholder(Placeholders.Type, Type.Keyword)
+                .ReplacePlaceholder(Placeholders.OfType, $"of {Type.Keyword}")
                 .ReplacePlaceholder(Placeholders.GenericType, language.GetTypeParameterList(Type.Keyword));
 
             snippet.AddNamespace(Type.Namespace);

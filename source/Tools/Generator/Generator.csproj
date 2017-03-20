@@ -89,13 +89,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Html.xml">
+    <Content Include="HtmlElements.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="CharacterSequences.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Records.xml">
+    <Content Include="LanguageDefinitions.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="ChangeLog.xml">

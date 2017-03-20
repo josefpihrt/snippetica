@@ -10,6 +10,31 @@ namespace Pihrtsoft.Snippets
 {
     public static class SnippetExtensions
     {
+        public static string GetSubmenuShortcut(this Snippet snippet)
+        {
+            if (snippet.HasTag(KnownTags.TitleStartsWithShortcut))
+            {
+                string s = snippet.Title;
+
+                int i = 0;
+
+                while (i < s.Length
+                    && s[i] != ' ')
+                {
+                    i++;
+                }
+
+                return s.Substring(0, i);
+            }
+
+            return null;
+        }
+
+        public static void RemoveShortcutFromTitle(this Snippet snippet)
+        {
+            snippet.Title = snippet.GetTitleWithoutShortcut();
+        }
+
         public static string GetTitleWithoutShortcut(this Snippet snippet)
         {
             if (snippet.HasTag(KnownTags.TitleStartsWithShortcut))
