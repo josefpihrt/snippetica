@@ -45,7 +45,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                         record.GetString("Description"),
                         record.GetStringOrDefault("Comment", "-"),
                         record.GetItems("Languages").Select(f => (Language)Enum.Parse(typeof(Language), f)),
-                        record.Tags);
+                        record.GetTags());
                 });
         }
 

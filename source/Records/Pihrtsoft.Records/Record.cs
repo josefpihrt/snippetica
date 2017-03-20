@@ -55,7 +55,12 @@ namespace Pihrtsoft.Records
         }
 #endif
 
-        public TagCollection Tags { get; }
+        public string[] GetTags()
+        {
+            return Tags.ToArray();
+        }
+
+        internal TagCollection Tags { get; }
 
         public bool ContainsProperty(string propertyName)
         {

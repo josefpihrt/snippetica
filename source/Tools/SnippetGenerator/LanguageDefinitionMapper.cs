@@ -50,7 +50,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                     record.Id,
                     record.GetStringOrDefault(Identifiers.Keyword),
                     record.GetStringOrDefault(Identifiers.Shortcut),
-                    record.Tags.ToArray());
+                    record.GetTags());
             }
         }
 
@@ -66,7 +66,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                     record.GetStringOrDefault(Identifiers.DefaultValue),
                     record.GetStringOrDefault(Identifiers.DefaultIdentifier),
                     record.GetStringOrDefault(Identifiers.Namespace),
-                    record.Tags.ToArray());
+                    record.GetTags());
             }
         }
 

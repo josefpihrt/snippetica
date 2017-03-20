@@ -14,7 +14,7 @@ namespace Pihrtsoft.Snippets.Mappings
             return new SnippetDirectory(
                 record.GetString("Path"),
                 ParseEnumValue(record.GetString("Language")),
-                record.Tags.ToArray());
+                record.GetTags());
         }
 
         private static Language ParseEnumValue(string value)
