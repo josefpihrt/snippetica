@@ -40,8 +40,10 @@ namespace Pihrtsoft.Records
                 case ElementNames.Tag:
                 case ElementNames.Set:
                 case ElementNames.Add:
-                case ElementNames.Append:
-                case ElementNames.Prepend:
+                case ElementNames.Postfix:
+                case ElementNames.PostfixMany:
+                case ElementNames.Prefix:
+                case ElementNames.PrefixMany:
                     return ElementKind.Command;
                 default:
                     {

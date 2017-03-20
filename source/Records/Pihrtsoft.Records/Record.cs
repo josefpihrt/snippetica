@@ -19,7 +19,7 @@ namespace Pihrtsoft.Records
             Properties = new Dictionary<string, object>();
 
             if (id != null)
-                Properties[PropertyDefinition.Id.Name] = id;
+                Properties[PropertyDefinition.IdName] = id;
         }
 
         public EntityDefinition Entity { get; }
@@ -34,7 +34,7 @@ namespace Pihrtsoft.Records
             get
             {
                 object value;
-                if (TryGetValue(PropertyDefinition.Id.Name, out value))
+                if (TryGetValue(PropertyDefinition.IdName, out value))
                 {
                     return (string)value;
                 }

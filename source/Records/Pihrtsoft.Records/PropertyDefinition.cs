@@ -6,7 +6,7 @@ using Pihrtsoft.Records.Utilities;
 
 namespace Pihrtsoft.Records
 {
-    [DebuggerDisplay("Name = {Name,nq} Type = {Type,nq} DefaultValue = {DefaultValue} IsCollection = {IsCollection}, IsRequired = {IsRequired}")]
+    [DebuggerDisplay("Name = {Name,nq} DefaultValue = {DefaultValue} IsCollection = {IsCollection}, IsRequired = {IsRequired}")]
     public class PropertyDefinition : IKey<string>
     {
         internal PropertyDefinition(
@@ -16,10 +16,11 @@ namespace Pihrtsoft.Records
             bool isRequired = false,
             XElement element = null)
         {
-            if (!object.ReferenceEquals(name, IdName))
+            if (!object.ReferenceEquals(name, IdName)
+                && !object.ReferenceEquals(name, TagName))
             {
-                if (DefaultComparer.NameEquals(name, Id.Name))
-                    ThrowHelper.ThrowInvalidOperation(ErrorMessages.PropertyNameIsReserved(Id.Name), element);
+                if (DefaultComparer.NameEquals(name, IdName))
+                    ThrowHelper.ThrowInvalidOperation(ErrorMessages.PropertyNameIsReserved(IdName), element);
 
                 if (DefaultComparer.NameEquals(name, AttributeNames.Tag))
                     ThrowHelper.ThrowInvalidOperation(ErrorMessages.PropertyNameIsReserved(AttributeNames.Tag), element);
@@ -32,8 +33,10 @@ namespace Pihrtsoft.Records
         }
 
         internal static string IdName { get; } = "Id";
+        internal static string TagName { get; } = "Tag";
 
-        internal static PropertyDefinition Id { get; } = new PropertyDefinition(IdName);
+        internal static PropertyDefinition IdProperty { get; } = new PropertyDefinition(IdName);
+        internal static PropertyDefinition TagProperty { get; } = new PropertyDefinition(TagName);
 
         public string Name { get; }
         public string DefaultValue { get; }

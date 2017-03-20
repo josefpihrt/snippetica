@@ -132,7 +132,7 @@
               </Set>
               <Set Namespace="System.Collections.Immutable">
                 <Tag Value="Immutable">
-                  <Prepend Id="Immutable" Shortcut="i">
+                  <Prefix Id="Immutable" Shortcut="i">
                     <New Id="Array" />
                     <New Id="Dictionary" />
                     <New Id="HashSet" />
@@ -141,7 +141,7 @@
                     <New Id="Stack" />
                     <New Id="SortedDictionary" />
                     <New Id="SortedSet" />
-                  </Prepend>
+                  </Prefix>
                 </Tag>
               </Set>
             </Tag>

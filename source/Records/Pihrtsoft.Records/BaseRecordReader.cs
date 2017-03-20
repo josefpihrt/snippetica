@@ -30,7 +30,7 @@ namespace Pihrtsoft.Records
             }
             else if (Records.Contains(record.Id))
             {
-                Throw(ErrorMessages.ItemAlreadyDefined(PropertyDefinition.Id.Name, record.Id));
+                Throw(ErrorMessages.ItemAlreadyDefined(PropertyDefinition.IdName, record.Id));
             }
 
             Records.Add(record);

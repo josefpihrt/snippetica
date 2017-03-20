@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Xml.Linq;
-using Pihrtsoft.Records.Commands;
+using Pihrtsoft.Records.Operations;
 using Pihrtsoft.Records.Utilities;
 using static Pihrtsoft.Records.Utilities.ThrowHelper;
 
@@ -24,8 +24,10 @@ namespace Pihrtsoft.Records
         public EntityDefinition Entity { get; }
         public DocumentSettings Settings { get; }
         private XElement Current { get; set; }
+        private int Depth { get; set; } = -1;
 
-        private CommandCollection Commands { get; set; }
+        private StringKeyedCollection<PropertyOperationCollection> Operations { get; set; }
+
         private Stack<Variable> Variables { get; set; }
 
         public virtual bool ShouldCheckRequiredProperty { get; }
@@ -38,6 +40,8 @@ namespace Pihrtsoft.Records
 
         protected void Collect(IEnumerable<XElement> elements)
         {
+            Depth++;
+
             foreach (XElement element in elements)
             {
                 Current = element;
@@ -54,9 +58,9 @@ namespace Pihrtsoft.Records
                         {
                             if (element.HasElements)
                             {
-                                AddPendingCommands(element);
+                                PushOperations(element);
                                 Collect(element.Elements());
-                                Commands.RemoveLast();
+                                PopOperations();
                             }
 
                             break;
@@ -81,40 +85,39 @@ namespace Pihrtsoft.Records
 
                 Current = null;
             }
+
+            Depth--;
         }
 
-        private void AddPendingCommands(XElement element)
+        private void PushOperations(XElement element)
         {
-            using (IEnumerator<Command> en = CreateCommandsFromElement(element).GetEnumerator())
+            foreach (IPropertyOperation operation in CreateOperationsFromElement(element))
             {
-                if (en.MoveNext())
+                Operations = Operations ?? new StringKeyedCollection<PropertyOperationCollection>();
+
+                PropertyOperationCollection propertyOperations;
+                if (!Operations.TryGetValue(operation.PropertyName, out propertyOperations))
                 {
-                    Command command = en.Current;
-
-                    if (en.MoveNext())
-                    {
-                        var commands = new List<Command>()
-                        {
-                            command,
-                            en.Current
-                        };
-
-                        while (en.MoveNext())
-                            commands.Add(en.Current);
-
-                        AddCommand(new GroupCommand(commands));
-                    }
-                    else
-                    {
-                        AddCommand(command);
-                    }
+                    propertyOperations = new PropertyOperationCollection(operation.PropertyDefinition);
+                    Operations.Add(propertyOperations);
                 }
+
+                propertyOperations.Add(operation);
             }
         }
 
-        private void AddCommand(Command command)
+        private void PopOperations()
         {
-            (Commands ?? (Commands = new CommandCollection())).Add(command);
+            for (int i = 0; i < Operations.Count; i++)
+            {
+                PropertyOperationCollection propertyOperations = Operations[i];
+
+                for (int j = propertyOperations.Count - 1; j >= 0; j--)
+                {
+                    if (propertyOperations[j].Depth == Depth)
+                        propertyOperations.RemoveAt(j);
+                }
+            }
         }
 
         private void AddVariable(XElement element)
@@ -129,7 +132,7 @@ namespace Pihrtsoft.Records
         {
             string id = null;
 
-            CommandCollection commands = null;
+            Collection<IPropertyOperation> operations = null;
 
             foreach (XAttribute attribute in element.Attributes())
             {
@@ -139,21 +142,19 @@ namespace Pihrtsoft.Records
                 }
                 else
                 {
-                    Command command = CreateCommandFromAttribute(element, attribute);
+                    IPropertyOperation operation = CreateOperationFromAttribute(element, attribute);
 
-                    (commands ?? (commands = new CommandCollection())).Add(command);
+                    (operations ?? (operations = new Collection<IPropertyOperation>())).Add(operation);
                 }
             }
 
             Record record = CreateRecord(id);
 
-            if (commands != null)
-                commands.ExecuteAll(record);
+            operations?.ExecuteAll(record);
 
-            foreach (Command command in GetChildCommands(element))
-                command.Execute(record);
+            ExecuteChildOperations(element, record);
 
-            Commands?.ExecuteAll(record);
+            ExecutePendingOperations(record);
 
             foreach (PropertyDefinition property in Entity.AllProperties())
             {
@@ -182,7 +183,104 @@ namespace Pihrtsoft.Records
             return record;
         }
 
-        private Command CreateCommandFromAttribute(
+        private void ExecuteChildOperations(XElement element, Record record)
+        {
+            foreach (XElement child in element.Elements())
+            {
+                Current = child;
+
+                CreateOperationsFromElement(child).ExecuteAll(record);
+            }
+
+            Current = element;
+        }
+
+        private void ExecutePendingOperations(Record record)
+        {
+            if (Operations != null)
+            {
+                foreach (PropertyOperationCollection propertyOperations in Operations)
+                {
+                    Dictionary<OperationKind, string> pendingValues = null;
+
+                    foreach (IPropertyOperation operation in propertyOperations)
+                    {
+                        if (operation.SupportsExecute)
+                        {
+                            operation.Execute(record);
+
+                            if (pendingValues != null)
+                                ProcessPendingValues(pendingValues, propertyOperations.PropertyDefinition, record);
+                        }
+                        else
+                        {
+                            OperationKind kind = operation.Kind;
+
+                            pendingValues = pendingValues ?? new Dictionary<OperationKind, string>();
+
+                            string value;
+                            if (!pendingValues.TryGetValue(kind, out value))
+                            {
+                                pendingValues[kind] = operation.Value;
+                            }
+                            else
+                            {
+                                switch (kind)
+                                {
+                                    case OperationKind.PostfixMany:
+                                        {
+                                            pendingValues[kind] = operation.Value + pendingValues[kind];
+                                            break;
+                                        }
+                                    case OperationKind.PrefixMany:
+                                        {
+                                            pendingValues[kind] += operation.Value;
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            Debug.Assert(false, kind.ToString());
+                                            break;
+                                        }
+                                }
+                            }
+                        }
+                    }
+
+                    if (pendingValues != null)
+                        ProcessPendingValues(pendingValues, propertyOperations.PropertyDefinition, record);
+                }
+            }
+        }
+
+        private void ProcessPendingValues(Dictionary<OperationKind, string> operationValues, PropertyDefinition propertyDefinition, Record record)
+        {
+            foreach (KeyValuePair<OperationKind, string> pair in operationValues)
+            {
+                switch (pair.Key)
+                {
+                    case OperationKind.PostfixMany:
+                        {
+                            new PostfixOperation(propertyDefinition, pair.Value, Depth).Execute(record);
+                            break;
+                        }
+                    case OperationKind.PrefixMany:
+                        {
+                            new PrefixOperation(propertyDefinition, pair.Value, Depth).Execute(record);
+                            break;
+                        }
+                    default:
+                        {
+                            Debug.Assert(false, pair.Key.ToString());
+                            break;
+                        }
+                }
+            }
+
+            operationValues.Clear();
+        }
+
+        private IPropertyOperation CreateOperationFromAttribute(
             XElement element,
             XAttribute attribute,
             bool throwOnId = false,
@@ -190,7 +288,7 @@ namespace Pihrtsoft.Records
             bool throwOnSet = false,
             bool throwOnAdd = false)
         {
-            string attributeName = GetAttributeName(attribute);
+            string attributeName = attribute.LocalName();
 
             if (throwOnId
                 && DefaultComparer.NameEquals(attributeName, AttributeNames.Id))
@@ -203,7 +301,7 @@ namespace Pihrtsoft.Records
                 if (throwOnTag)
                     Throw(ErrorMessages.CannotUseCommandOnProperty(element, attributeName));
 
-                return new AddTagCommand(GetValue(attribute));
+                return new AddTagOperation(GetValue(attribute), Depth);
             }
 
             PropertyDefinition property = GetProperty(attribute);
@@ -213,31 +311,18 @@ namespace Pihrtsoft.Records
                 if (throwOnAdd)
                     Throw(ErrorMessages.CannotUseCommandOnCollectionProperty(element, property.Name));
 
-                return new AddItemCommand(property, GetValue(attribute));
+                return new AddItemOperation(property, GetValue(attribute), Depth);
             }
             else
             {
                 if (throwOnSet)
                     Throw(ErrorMessages.CannotUseCommandOnNonCollectionProperty(element, property.Name));
 
-                return new SetCommand(property, GetValue(attribute));
+                return new SetOperation(property, GetValue(attribute), Depth);
             }
         }
 
-        private IEnumerable<Command> GetChildCommands(XElement parent)
-        {
-            foreach (XElement element in parent.Elements())
-            {
-                Current = element;
-
-                foreach (Command command in CreateCommandsFromElement(element))
-                    yield return command;
-            }
-
-            Current = parent;
-        }
-
-        private IEnumerable<Command> CreateCommandsFromElement(XElement element)
+        private IEnumerable<IPropertyOperation> CreateOperationsFromElement(XElement element)
         {
             Debug.Assert(element.HasAttributes, element.ToString());
 
@@ -246,27 +331,35 @@ namespace Pihrtsoft.Records
                 case ElementNames.Set:
                     {
                         foreach (XAttribute attribute in element.Attributes())
-                            yield return CreateCommandFromAttribute(element, attribute, throwOnId: true, throwOnTag: true, throwOnAdd: true);
+                            yield return CreateOperationFromAttribute(element, attribute, throwOnId: true, throwOnTag: true, throwOnAdd: true);
 
                         break;
                     }
-                case ElementNames.Append:
+                case ElementNames.Postfix:
                     {
                         foreach (XAttribute attribute in element.Attributes())
-                        {
-                            PropertyDefinition property = GetProperty(attribute);
-                            yield return new AppendCommand(property, GetValue(attribute));
-                        }
+                            yield return new PostfixOperation(GetProperty(attribute), GetValue(attribute), Depth);
 
                         break;
                     }
-                case ElementNames.Prepend:
+                case ElementNames.PostfixMany:
                     {
                         foreach (XAttribute attribute in element.Attributes())
-                        {
-                            PropertyDefinition property = GetProperty(attribute);
-                            yield return new PrependCommand(property, GetValue(attribute));
-                        }
+                            yield return new PostfixManyOperation(GetProperty(attribute), GetValue(attribute), Depth);
+
+                        break;
+                    }
+                case ElementNames.Prefix:
+                    {
+                        foreach (XAttribute attribute in element.Attributes())
+                            yield return new PrefixOperation(GetProperty(attribute), GetValue(attribute), Depth);
+
+                        break;
+                    }
+                case ElementNames.PrefixMany:
+                    {
+                        foreach (XAttribute attribute in element.Attributes())
+                            yield return new PrefixManyOperation(GetProperty(attribute), GetValue(attribute), Depth);
 
                         break;
                     }
@@ -274,14 +367,14 @@ namespace Pihrtsoft.Records
                     {
                         XAttribute attribute = element.SingleAttributeOrThrow(AttributeNames.Value);
 
-                        yield return new AddTagCommand(GetValue(attribute));
+                        yield return new AddTagOperation(GetValue(attribute), Depth);
 
                         break;
                     }
                 case ElementNames.Add:
                     {
                         foreach (XAttribute attribute in element.Attributes())
-                            yield return CreateCommandFromAttribute(element, attribute, throwOnId: true, throwOnTag: true, throwOnSet: true);
+                            yield return CreateOperationFromAttribute(element, attribute, throwOnId: true, throwOnTag: true, throwOnSet: true);
 
                         break;
                     }
@@ -295,7 +388,7 @@ namespace Pihrtsoft.Records
 
         private PropertyDefinition GetProperty(XAttribute attribute)
         {
-            string propertyName = GetAttributeName(attribute);
+            string propertyName = attribute.LocalName();
 
             PropertyDefinition property;
             if (!Entity.TryGetProperty(propertyName, out property))
@@ -306,37 +399,9 @@ namespace Pihrtsoft.Records
             return property;
         }
 
-        private PropertyDefinition GetProperty(XElement element)
-        {
-            string propertyName = GetElementName(element);
-
-            PropertyDefinition property;
-            if (!Entity.TryGetProperty(propertyName, out property))
-            {
-                Throw(ErrorMessages.PropertyIsNotDefined(propertyName));
-            }
-
-            return property;
-        }
-
-        private string GetAttributeName(XAttribute attribute)
-        {
-            return attribute.LocalName();
-        }
-
-        private string GetElementName(XElement element)
-        {
-            return element.LocalName();
-        }
-
         private string GetValue(XAttribute attribute)
         {
             return GetValue(attribute.Value, attribute);
-        }
-
-        private string GetValue(XElement element)
-        {
-            return GetValue(element.Value, element);
         }
 
         private string GetValue(string value, XObject xobject)

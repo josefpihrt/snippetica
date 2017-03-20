@@ -39,7 +39,7 @@ namespace Pihrtsoft.Records.Utilities
 
         public static string MissingBaseRecordIdentifier()
         {
-            return $"Base record must define attribute '{PropertyDefinition.Id.Name}'.";
+            return $"Base record must define attribute '{PropertyDefinition.IdName}'.";
         }
 
         public static string ItemAlreadyDefined(string propertyName, string name)

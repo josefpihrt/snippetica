@@ -65,7 +65,7 @@ namespace Pihrtsoft.Records
             element: null,
             name: GlobalName,
             baseEntity: null,
-            properties: new ExtendedKeyedCollection<string, PropertyDefinition>(new PropertyDefinition[] { PropertyDefinition.Id }),
+            properties: new ExtendedKeyedCollection<string, PropertyDefinition>(new PropertyDefinition[] { PropertyDefinition.IdProperty }),
             variables: null);
 
         public string Name { get; }
