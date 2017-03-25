@@ -42,7 +42,11 @@ Title | Shortcut
 [gj Enumerable\.GroupJoin](EnumerableGroupJoin.snippet)|q
 [HashSet\<T\> type](HashSetOfTType.snippet)|ghs
 [HashSet\<T\> variable](HashSetOfTVariable.snippet)|vhs
+[if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)|ifsnne
+[if \!string\.IsNullOrWhiteSpace](IfNotStringIsNullOrWhiteSpace.snippet)|ifsnnw
 [if not TryParse](IfNotTryParse.snippet)|ifftp
+[if string\.IsNullOrEmpty](IfStringIsNullOrEmpty.snippet)|ifsne
+[if string\.IsNullOrWhiteSpace](IfStringIsNullOrWhiteSpace.snippet)|ifsnw
 [if TryParse](IfTryParse.snippet)|iftp
 [internal abstract modifiers](InternalAbstractModifiers.snippet)|x
 [internal modifier](InternalModifier.snippet)|x

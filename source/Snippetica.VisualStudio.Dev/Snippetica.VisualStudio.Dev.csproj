@@ -104,6 +104,18 @@
     <Content Include="Snippetica.CSharp.Dev\DoNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrEmpty.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrWhiteSpace.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfStringIsNullOrEmpty.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfStringIsNullOrWhiteSpace.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\Namespace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

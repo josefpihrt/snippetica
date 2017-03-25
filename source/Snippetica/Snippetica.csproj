@@ -63,6 +63,10 @@
     <None Include="README.md" />
     <None Include="Snippetica.Cpp\README.md" />
     <None Include="Snippetica.CSharp.Dev\Attributes\FlagsAttribute.snippet" />
+    <None Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrEmpty.snippet" />
+    <None Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrWhiteSpace.snippet" />
+    <None Include="Snippetica.CSharp.Dev\IfStringIsNullOrWhiteSpace.snippet" />
+    <None Include="Snippetica.CSharp.Dev\IfStringIsNullOrEmpty.snippet" />
     <None Include="Snippetica.CSharp.Dev\Namespace.snippet" />
     <None Include="Snippetica.CSharp.Dev\DoNotNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\DoNull.snippet" />
