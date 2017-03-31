@@ -86,5 +86,10 @@ namespace Pihrtsoft.Records.Utilities
         {
             return $"Cannot use {element.LocalName()} command on non-collection property '{propertyName}'.";
         }
+
+        internal static string CommandCannotBeUsedAsChildCommandOfNewCommand(XElement element)
+        {
+            return $"Command '{element.LocalName()}' cannot be used as a child command of 'New' command.";
+        }
     }
 }
