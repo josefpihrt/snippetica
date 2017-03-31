@@ -229,8 +229,6 @@
     <Rule Id="IDE0027WithoutSuggestion" Action="None" />
     <Rule Id="IDE0028" Action="Info" />
     <Rule Id="IDE0029" Action="Info" />
-    <Rule Id="IDE0030" Action="None" />
-    <Rule Id="IDE0030WithoutSuggestion" Action="None" />
     <Rule Id="IDE0031" Action="Info" />
     <Rule Id="IDE1005" Action="Info" />
     <Rule Id="IDE1006" Action="Info" />
@@ -309,10 +307,12 @@
     <Rule Id="RCS1101" Action="Info" />
     <Rule Id="RCS1111" Action="Info" />
     <Rule Id="RCS1124" Action="Info" />
+    <Rule Id="RCS1126" Action="Warning" />
     <Rule Id="RCS1129" Action="Info" />
     <Rule Id="RCS1133" Action="Info" />
     <Rule Id="RCS1136" Action="Info" />
     <Rule Id="RCS1143" Action="Info" />
+    <Rule Id="RCS1145" Action="Info" />
     <Rule Id="RCS1153" Action="Info" />
     <Rule Id="RCS1161" Action="Hidden" />
     <Rule Id="RCS1162" Action="Info" />
