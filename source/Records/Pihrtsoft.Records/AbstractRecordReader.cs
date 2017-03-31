@@ -227,12 +227,12 @@ namespace Pihrtsoft.Records
                             {
                                 switch (kind)
                                 {
-                                    case OperationKind.PostfixMany:
+                                    case OperationKind.MultiPostfix:
                                         {
                                             pendingValues[kind] = operation.Value + pendingValues[kind];
                                             break;
                                         }
-                                    case OperationKind.PrefixMany:
+                                    case OperationKind.MultiPrefix:
                                         {
                                             pendingValues[kind] += operation.Value;
                                             break;
@@ -259,12 +259,12 @@ namespace Pihrtsoft.Records
             {
                 switch (pair.Key)
                 {
-                    case OperationKind.PostfixMany:
+                    case OperationKind.MultiPostfix:
                         {
                             new PostfixOperation(propertyDefinition, pair.Value, Depth).Execute(record);
                             break;
                         }
-                    case OperationKind.PrefixMany:
+                    case OperationKind.MultiPrefix:
                         {
                             new PrefixOperation(propertyDefinition, pair.Value, Depth).Execute(record);
                             break;
@@ -342,10 +342,10 @@ namespace Pihrtsoft.Records
 
                         break;
                     }
-                case ElementNames.PostfixMany:
+                case ElementNames.MultiPostfix:
                     {
                         foreach (XAttribute attribute in element.Attributes())
-                            yield return new PostfixManyOperation(GetProperty(attribute), GetValue(attribute), Depth);
+                            yield return new MultiPostfixOperation(GetProperty(attribute), GetValue(attribute), Depth);
 
                         break;
                     }
@@ -356,10 +356,10 @@ namespace Pihrtsoft.Records
 
                         break;
                     }
-                case ElementNames.PrefixMany:
+                case ElementNames.MultiPrefix:
                     {
                         foreach (XAttribute attribute in element.Attributes())
-                            yield return new PrefixManyOperation(GetProperty(attribute), GetValue(attribute), Depth);
+                            yield return new MultiPrefixOperation(GetProperty(attribute), GetValue(attribute), Depth);
 
                         break;
                     }

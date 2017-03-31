@@ -41,9 +41,9 @@ namespace Pihrtsoft.Records
                 case ElementNames.Set:
                 case ElementNames.Add:
                 case ElementNames.Postfix:
-                case ElementNames.PostfixMany:
+                case ElementNames.MultiPostfix:
                 case ElementNames.Prefix:
-                case ElementNames.PrefixMany:
+                case ElementNames.MultiPrefix:
                     return ElementKind.Command;
                 default:
                     {

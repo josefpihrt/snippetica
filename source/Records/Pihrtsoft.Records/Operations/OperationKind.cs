@@ -8,8 +8,8 @@ namespace Pihrtsoft.Records.Operations
         AddTag,
         AddItem,
         Postfix,
-        PostfixMany,
+        MultiPostfix,
         Prefix,
-        PrefixMany,
+        MultiPrefix,
     }
 }

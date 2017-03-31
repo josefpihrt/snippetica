@@ -42,9 +42,9 @@
     <Compile Include="Operations\AddTagOperation.cs" />
     <Compile Include="Operations\OperationKind.cs" />
     <Compile Include="Operations\IPropertyOperation.cs" />
-    <Compile Include="Operations\PostfixManyOperation.cs" />
+    <Compile Include="Operations\MultiPostfixOperation.cs" />
     <Compile Include="Operations\PostfixOperation.cs" />
-    <Compile Include="Operations\PrefixManyOperation.cs" />
+    <Compile Include="Operations\MultiPrefixOperation.cs" />
     <Compile Include="Operations\PrefixOperation.cs" />
     <Compile Include="Operations\SetOperation.cs" />
     <Compile Include="AbstractRecordReader.cs" />
