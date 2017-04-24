@@ -77,7 +77,15 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Commands
 
             snippet.AddTag(KnownTags.ExcludeFromReadme);
 
-            snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.Type, Type.Keyword);
+            if (Type.Keyword == "this")
+            {
+                snippet.AddLiteral(Literal.CreateClassNameLiteral("this", "Containing type name", "ThisName"));
+                snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.Type, "$this$");
+            }
+            else
+            {
+                snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.Type, Type.Keyword);
+            }
 
             Literal valueLiteral = snippet.Literals.Find(LiteralIdentifiers.Value);
 

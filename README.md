@@ -1,4 +1,4 @@
-## Snippetica
+﻿## Snippetica
 
 * A collection of snippets for C#, VB, C++, HTML, XAML and XML.
 * [Release Notes](http://github.com/JosefPihrt/Snippetica/blob/master/ChangeLog.md).
@@ -12,8 +12,8 @@
 
 Folder|Count| |
 --- | --- | ---:
-[Snippetica.CSharp](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|696|[full list](http://pihrt.net/Snippetica/Snippets?Language=CSharp)
-[Snippetica.VisualBasic](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|669|[full list](http://pihrt.net/Snippetica/Snippets?Language=VisualBasic)
+[Snippetica.CSharp](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|765|[full list](http://pihrt.net/Snippetica/Snippets?Language=CSharp)
+[Snippetica.VisualBasic](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|735|[full list](http://pihrt.net/Snippetica/Snippets?Language=VisualBasic)
 [Snippetica.Cpp](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|23|[full list](http://pihrt.net/Snippetica/Snippets?Language=CPlusPlus)
 [Snippetica.Html](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Html/README.md)|221|[full list](http://pihrt.net/Snippetica/Snippets?Language=Html)
 [Snippetica.Xaml](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Xaml/README.md)|89|[full list](http://pihrt.net/Snippetica/Snippets?Language=Xaml)
