@@ -236,7 +236,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                     return "CSS";
                 default:
                     {
-                        Debug.Assert(false, language.ToString());
+                        Debug.Fail(language.ToString());
                         throw new NotSupportedException();
                     }
             }

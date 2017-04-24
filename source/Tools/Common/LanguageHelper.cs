@@ -32,7 +32,7 @@ namespace Pihrtsoft.Snippets
                     return "CSS";
                 default:
                     {
-                        Debug.Assert(false, language.ToString());
+                        Debug.Fail(language.ToString());
                         return null;
                     }
             }

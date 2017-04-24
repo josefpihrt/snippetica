@@ -35,7 +35,7 @@ namespace Pihrtsoft.Snippets.Mappings
                     return Language.Xml;
                 default:
                     {
-                        Debug.Assert(false, value);
+                        Debug.Fail(value);
                         throw new NotSupportedException();
                     }
             }
