@@ -125,6 +125,9 @@
     <Content Include="Snippetica.CSharp.Dev\ReturnNew.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\ReturnNewThis.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\ReturnStatement.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -150,6 +153,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\YieldReturnNew.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\YieldReturnNewThis.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\ArrayOfBooleanType.snippet">

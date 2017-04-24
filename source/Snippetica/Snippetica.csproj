@@ -72,8 +72,10 @@
     <None Include="Snippetica.CSharp.Dev\DoNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\IO\PathGetFullPath.snippet" />
     <None Include="Snippetica.CSharp.Dev\Modifiers\ReadOnlyModifier.snippet" />
+    <None Include="Snippetica.CSharp.Dev\ReturnNewThis.snippet" />
     <None Include="Snippetica.CSharp.Dev\WhileNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\WhileNotNull.snippet" />
+    <None Include="Snippetica.CSharp.Dev\YieldReturnNewThis.snippet" />
     <None Include="Snippetica.CSharp\UsingVariable.snippet" />
     <None Include="Snippetica.VisualBasic.Dev\Namespace.snippet" />
     <None Include="Snippetica.VisualBasic\IEnumeratorOfTVariable.snippet" />

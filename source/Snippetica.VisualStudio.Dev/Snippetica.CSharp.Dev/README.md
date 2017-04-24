@@ -88,6 +88,7 @@ Title | Shortcut
 [public virtual modifiers](PublicVirtualModifiers.snippet)|x
 [readonly modifier](ReadOnlyModifier.snippet)|ro
 [Regex type](Regex.snippet)|rx
+[return new containing type](ReturnNewThis.snippet)|rnthis
 [return new](ReturnNew.snippet)|rn
 [return statement](ReturnStatement.snippet)|re
 [s Enumerable\.Select](EnumerableSelect.snippet)|q
@@ -112,5 +113,6 @@ Title | Shortcut
 [wnn Enumerable\.Where not equal to null](EnumerableWhereNotNull.snippet)|q
 [XmlReader Variable](XmlReaderVariable.snippet)|u
 [XmlWriter Variable](XmlWriterVariable.snippet)|u
+[yield return new containing type](YieldReturnNewThis.snippet)|yrnthis
 [yield return new](YieldReturnNew.snippet)|yrn
 [z Enumerable\.Zip](EnumerableZip.snippet)|q
