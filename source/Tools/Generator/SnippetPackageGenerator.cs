@@ -26,9 +26,6 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                 .Select(f => f.WithPath(Path.Combine(settings.ExtensionProjectPath, f.DirectoryName)))
                 .ToArray();
 
-            if (releases != null)
-                MarkdownGenerator.WriteChangeLog(releaseDirectories, releases, settings);
-
             MarkdownGenerator.WriteProjectReadMe(releaseDirectories, settings.ExtensionProjectPath);
 
             MarkdownGenerator.WriteDirectoryReadMe(releaseDirectories, characterSequences, settings);
