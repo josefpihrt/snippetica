@@ -31,10 +31,9 @@
         <Default>value</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$_type$ $result$;
-if (!$_type$.TryParse($value$, out $result$))
-{
+    <Code Language="VB"><![CDATA[Dim $result$ As $_type$
+If Not $_type$.TryParse($value$, $result$)
     $end$
-}]]></Code>
+End If]]></Code>
   </Snippet>
 </CodeSnippet>

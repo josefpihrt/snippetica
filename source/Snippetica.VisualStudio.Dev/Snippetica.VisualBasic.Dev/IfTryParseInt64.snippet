@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>t if not this TryParse</Title>
-    <Shortcut>ifftp</Shortcut>
-    <Description>if statement with condition whether this TryParse method returns false.</Description>
+    <Title>l if Long TryParse</Title>
+    <Shortcut>iftp</Shortcut>
+    <Description>if statement with condition whether Long TryParse method returns true.</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -22,22 +22,15 @@
         <ToolTip>The result</ToolTip>
         <Default>x</Default>
       </Literal>
-      <Literal Editable="false">
-        <ID>this</ID>
-        <ToolTip>Containing type name</ToolTip>
-        <Default>ThisName</Default>
-        <Function>ClassName()</Function>
-      </Literal>
       <Literal>
         <ID>value</ID>
         <ToolTip>The value to parse</ToolTip>
         <Default>value</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$this$ $result$;
-if (!$this$.TryParse($value$, out $result$))
-{
+    <Code Language="VB"><![CDATA[Dim $result$ As Long
+If Long.TryParse($value$, $result$)
     $end$
-}]]></Code>
+End If]]></Code>
   </Snippet>
 </CodeSnippet>

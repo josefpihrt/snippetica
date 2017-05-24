@@ -7,6 +7,8 @@ Title | Shortcut
 [array type](ArrayOfTType.snippet)|a
 [HashSet\(Of T\) type](HashSetOfTType.snippet)|ghs
 [HashSet\(Of T\) variable](HashSetOfTVariable.snippet)|vhs
+[if not TryParse](IfNotTryParse.snippet)|ifftp
+[if TryParse](IfTryParse.snippet)|iftp
 [List\(Of T\) type](ListOfTType.snippet)|gl
 [List\(Of T\) variable](ListOfTVariable.snippet)|vl
 [namespace](Namespace.snippet)|ns

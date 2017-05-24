@@ -78,6 +78,8 @@
     <None Include="Snippetica.CSharp.Dev\WhileNotNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\YieldReturnNewThis.snippet" />
     <None Include="Snippetica.CSharp\UsingVariable.snippet" />
+    <None Include="Snippetica.VisualBasic.Dev.AutoGeneration\IfNotTryParse.snippet" />
+    <None Include="Snippetica.VisualBasic.Dev.AutoGeneration\IfTryParse.snippet" />
     <None Include="Snippetica.VisualBasic.Dev\Namespace.snippet" />
     <None Include="Snippetica.VisualBasic\IEnumeratorOfTVariable.snippet" />
     <None Include="Snippetica.VisualBasic\VariableWithDirectCast.snippet" />

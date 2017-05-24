@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>if not @type@ TryParse</Title>
-    <Shortcut>ifftp</Shortcut>
-    <Description>if statement with condition whether @type@ TryParse method returns false.</Description>
+    <Title>if @type@ TryParse</Title>
+    <Shortcut>iftp</Shortcut>
+    <Description>if statement with condition whether @type@ TryParse method returns true.</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -31,10 +31,9 @@
         <Default>value</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$_type$ $result$;
-if (!$_type$.TryParse($value$, out $result$))
-{
+    <Code Language="VB"><![CDATA[Dim $result$ As $_type$
+If $_type$.TryParse($value$, $result$)
     $end$
-}]]></Code>
+End If]]></Code>
   </Snippet>
 </CodeSnippet>
