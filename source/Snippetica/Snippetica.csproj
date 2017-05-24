@@ -85,8 +85,12 @@
     <None Include="Snippetica.Xaml.Dev\DockPanel.snippet" />
     <None Include="Snippetica.Xaml.Dev\Grid.snippet" />
     <None Include="Snippetica.Xaml.Dev\StackPanel.snippet" />
+    <None Include="Snippetica.Xaml.Dev\StackPanelHorizontal.snippet" />
+    <None Include="Snippetica.Xaml.Dev\StackPanelVertical.snippet" />
     <None Include="Snippetica.Xaml.Dev\UniformGrid.snippet" />
     <None Include="Snippetica.Xaml.Dev\WrapPanel.snippet" />
+    <None Include="Snippetica.Xaml.Dev\WrapPanelHorizontal.snippet" />
+    <None Include="Snippetica.Xaml.Dev\WrapPanelVertical.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\README.md" />
     <Content Include="Snippetica.Xml\CDataSection.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\SnippetType.snippet" />

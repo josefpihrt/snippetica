@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>dp DockPanel</Title>
-    <Shortcut>p</Shortcut>
-    <Description>DockPanel</Description>
+    <Title>dst DebuggerStepThrough attribute</Title>
+    <Shortcut>ae</Shortcut>
+    <Description>DebuggerStepThrough attribute</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -14,6 +14,11 @@
     </Keywords>
   </Header>
   <Snippet>
-    <Code Language="Xaml"><![CDATA[<DockPanel>$end$</DockPanel>]]></Code>
+    <Imports>
+      <Import>
+        <Namespace>System.Diagnostics</Namespace>
+      </Import>
+    </Imports>
+    <Code Language="CSharp"><![CDATA[[DebuggerStepThrough]$end$]]></Code>
   </Snippet>
 </CodeSnippet>

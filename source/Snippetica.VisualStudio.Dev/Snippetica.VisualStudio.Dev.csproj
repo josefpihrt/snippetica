@@ -713,6 +713,9 @@
     <Content Include="Snippetica.CSharp.Dev\DebuggerDisplayAttribute.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\DebuggerStepThroughAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\FlagsAttribute.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1049,6 +1052,12 @@
     <Content Include="Snippetica.Xaml.Dev\StackPanel.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.Xaml.Dev\StackPanelHorizontal.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.Xaml.Dev\StackPanelVertical.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.Xaml.Dev\ToolBarTray.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1056,6 +1065,12 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Xaml.Dev\WrapPanel.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.Xaml.Dev\WrapPanelHorizontal.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.Xaml.Dev\WrapPanelVertical.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
   </ItemGroup>

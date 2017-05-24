@@ -12,6 +12,7 @@ Title | Shortcut
 [continue statement](ContinueStatement.snippet)|ce
 [Debug\.Assert \!= null](DebugAssertNotNull.snippet)|dann
 [DebuggerDisplay attribute](DebuggerDisplayAttribute.snippet)|ae
+[DebuggerStepThrough attribute](DebuggerStepThroughAttribute.snippet)|ae
 [Dictionary\<TKey, TValue\> type](DictionaryOfTKeyTValueType.snippet)|gd
 [Dictionary\<TKey, TValue\> variable](DictionaryOfTKeyTValueVariable.snippet)|vd
 [Directory\.CreateDirectory](DirectoryCreateDirectory.snippet)|iod
