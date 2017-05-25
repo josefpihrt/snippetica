@@ -45,10 +45,8 @@ Title | Shortcut
 [HashSet\<T\> variable](HashSetOfTVariable.snippet)|vhs
 [if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)|ifsnne
 [if \!string\.IsNullOrWhiteSpace](IfNotStringIsNullOrWhiteSpace.snippet)|ifsnnw
-[if not TryParse](IfNotTryParse.snippet)|ifftp
 [if string\.IsNullOrEmpty](IfStringIsNullOrEmpty.snippet)|ifsne
 [if string\.IsNullOrWhiteSpace](IfStringIsNullOrWhiteSpace.snippet)|ifsnw
-[if TryParse](IfTryParse.snippet)|iftp
 [internal abstract modifiers](InternalAbstractModifiers.snippet)|x
 [internal modifier](InternalModifier.snippet)|x
 [internal static modifiers](InternalStaticModifiers.snippet)|x
@@ -95,25 +93,18 @@ Title | Shortcut
 [s Enumerable\.Select](EnumerableSelect.snippet)|q
 [sm Enumerable\.SelectMany](EnumerableSelectMany.snippet)|q
 [sod Enumerable\.SingleOrDefault](EnumerableSingleOrDefault.snippet)|q
-[StreamReader Variable](StreamReaderVariable.snippet)|u
-[StreamWriter Variable](StreamWriterVariable.snippet)|u
 [StringBuilder variable](StringBuilderVariable.snippet)|vsb
-[StringReader Variable](StringReaderVariable.snippet)|u
-[StringWriter Variable](StringWriterVariable.snippet)|u
 [sw Enumerable\.SkipWhile](EnumerableSkipWhile.snippet)|q
 [tb Enumerable\.ThenBy](EnumerableThenBy.snippet)|q
 [tbd Enumerable\.ThenByDescending](EnumerableThenByDescending.snippet)|q
 [throw statement](ThrowStatement.snippet)|tw
 [TimeSpan type](TimeSpanType.snippet)|ts
 [tw Enumerable\.TakeWhile](EnumerableTakeWhile.snippet)|q
-[using static](UsingStatic.snippet)|us
 [variable declaration with as operator \+ if not null](VariableAsTIfNotNull.snippet)|vasnn
 [w Enumerable\.Where](EnumerableWhere.snippet)|q
 [while not null](WhileNotNull.snippet)|wenn
 [while null](WhileNull.snippet)|wen
 [wnn Enumerable\.Where not equal to null](EnumerableWhereNotNull.snippet)|q
-[XmlReader Variable](XmlReaderVariable.snippet)|u
-[XmlWriter Variable](XmlWriterVariable.snippet)|u
 [yield return new containing type](YieldReturnNewThis.snippet)|yrnthis
 [yield return new](YieldReturnNew.snippet)|yrn
 [z Enumerable\.Zip](EnumerableZip.snippet)|q

@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>xmlrr XmlReader Variable</Title>
+    <Title>smrr StreamReader Variable</Title>
     <Shortcut>u</Shortcut>
-    <Description>XmlReader variable declaration.</Description>
+    <Description>StreamReader variable declaration.</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -16,24 +16,23 @@
   <Snippet>
     <Imports>
       <Import>
-        <Namespace>System.Xml</Namespace>
+        <Namespace>System.IO</Namespace>
       </Import>
     </Imports>
     <Declarations>
       <Literal>
-        <ID>argument</ID>
-        <ToolTip>Argument(s)</ToolTip>
-        <Default>argument</Default>
-      </Literal>
-      <Literal>
         <ID>identifier</ID>
         <ToolTip>Identifier name</ToolTip>
-        <Default>xmlReader</Default>
+        <Default>sr</Default>
+      </Literal>
+      <Literal>
+        <ID>parameters</ID>
+        <ToolTip>Constructor parameters</ToolTip>
+        <Default>stream</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[using (var $identifier$ = XmlReader.Create($argument$))
-{
+    <Code Language="VB"><![CDATA[Using $identifier$ = New StreamReader($parameters$)
     $end$
-}]]></Code>
+End Using]]></Code>
   </Snippet>
 </CodeSnippet>

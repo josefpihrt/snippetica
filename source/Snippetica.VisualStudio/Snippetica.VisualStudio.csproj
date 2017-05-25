@@ -306,6 +306,12 @@
     <Content Include="Snippetica.CSharp\StaticConstructor.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\StreamReaderVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\StreamWriterVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\StringIsNotNullOrEmpty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -321,7 +327,13 @@
     <Content Include="Snippetica.CSharp\StringKeyword.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\StringReaderVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\StringVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\StringWriterVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\Switch.snippet">
@@ -369,6 +381,9 @@
     <Content Include="Snippetica.CSharp\Using.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\UsingStatic.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\UsingVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -379,6 +394,12 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\While.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\XmlReaderVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\XmlWriterVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\YieldBreak.snippet">
@@ -526,6 +547,36 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\IEnumerableOfTType.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\IfNotTryParse.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\IfNotTryParseBoolean.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\IfNotTryParseDateTime.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\IfNotTryParseInt32.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\IfNotTryParseInt64.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\IfTryParse.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\IfTryParseBoolean.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\IfTryParseDateTime.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\IfTryParseInt32.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\IfTryParseInt64.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\ImmutableArrayOfTType.snippet">
@@ -2598,6 +2649,12 @@
     <Content Include="Snippetica.VisualBasic\StaticConstructor.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.VisualBasic\StreamReaderVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\StreamWriterVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.VisualBasic\StringIsNotNullOrEmpty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2610,7 +2667,13 @@
     <Content Include="Snippetica.VisualBasic\StringIsNullOrWhiteSpace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.VisualBasic\StringReaderVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.VisualBasic\StringVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\StringWriterVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\ThrowNew.snippet">
@@ -2659,6 +2722,12 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\While.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\XmlReaderVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\XmlWriterVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\ArrayOfBooleanVariable.snippet">
@@ -2806,6 +2875,36 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\IEnumerableOfTType.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\IfNotTryParse.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\IfNotTryParseBoolean.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\IfNotTryParseDateTime.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\IfNotTryParseInt32.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\IfNotTryParseInt64.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\IfTryParse.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\IfTryParseBoolean.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\IfTryParseDateTime.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\IfTryParseInt32.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\IfTryParseInt64.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\ImmutableArrayOfTType.snippet">
