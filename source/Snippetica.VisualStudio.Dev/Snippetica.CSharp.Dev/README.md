@@ -43,8 +43,8 @@ Title | Shortcut
 [gj Enumerable\.GroupJoin](EnumerableGroupJoin.snippet)|q
 [HashSet\<T\> type](HashSetOfTType.snippet)|ghs
 [HashSet\<T\> variable](HashSetOfTVariable.snippet)|vhs
-[if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)|ifsnne
-[if \!string\.IsNullOrWhiteSpace](IfNotStringIsNullOrWhiteSpace.snippet)|ifsnnw
+[if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)|iffsne
+[if \!string\.IsNullOrWhiteSpace](IfNotStringIsNullOrWhiteSpace.snippet)|iffsnw
 [if string\.IsNullOrEmpty](IfStringIsNullOrEmpty.snippet)|ifsne
 [if string\.IsNullOrWhiteSpace](IfStringIsNullOrWhiteSpace.snippet)|ifsnw
 [internal abstract modifiers](InternalAbstractModifiers.snippet)|x
