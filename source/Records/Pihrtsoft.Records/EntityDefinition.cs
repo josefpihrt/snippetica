@@ -131,9 +131,7 @@ namespace Pihrtsoft.Records
         {
             do
             {
-                PropertyDefinition property;
-
-                if (entity.Properties.TryGetValue(name, out property))
+                if (entity.Properties.TryGetValue(name, out PropertyDefinition property))
                     return property;
 
                 entity = entity.BaseEntity;
@@ -152,9 +150,7 @@ namespace Pihrtsoft.Records
         {
             do
             {
-                Variable variable;
-
-                if (entity.Variables.TryGetValue(name, out variable))
+                if (entity.Variables.TryGetValue(name, out Variable variable))
                     return variable;
 
                 entity = entity.BaseEntity;

@@ -33,7 +33,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
             {
                 new SnippetLanguageColumnDefinition(),
                 new SnippetTitleWithLinkColumnDefinition(directoryPath),
-                new SnippetShortcutColumnDefinition(),
+                new SnippetShortcutColumnDefinition()
             });
         }
 
@@ -43,7 +43,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
             {
                 new SnippetLanguageColumnDefinition(),
                 new SnippetShortcutColumnDefinition(),
-                new SnippetTitleColumnDefinition(),
+                new SnippetTitleColumnDefinition()
             });
         }
 
@@ -53,7 +53,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
             {
                 new SnippetLanguageColumnDefinition(),
                 new SnippetShortcutColumnDefinition(),
-                new SnippetTitleWithLinkColumnDefinition(directoryPath),
+                new SnippetTitleWithLinkColumnDefinition(directoryPath)
             });
         }
     }

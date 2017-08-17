@@ -95,8 +95,7 @@ namespace Pihrtsoft.Records
             {
                 Operations = Operations ?? new StringKeyedCollection<PropertyOperationCollection>();
 
-                PropertyOperationCollection propertyOperations;
-                if (!Operations.TryGetValue(operation.PropertyName, out propertyOperations))
+                if (!Operations.TryGetValue(operation.PropertyName, out PropertyOperationCollection propertyOperations))
                 {
                     propertyOperations = new PropertyOperationCollection(operation.PropertyDefinition);
                     Operations.Add(propertyOperations);
@@ -218,8 +217,7 @@ namespace Pihrtsoft.Records
 
                             pendingValues = pendingValues ?? new Dictionary<OperationKind, string>();
 
-                            string value;
-                            if (!pendingValues.TryGetValue(kind, out value))
+                            if (!pendingValues.TryGetValue(kind, out string value))
                             {
                                 pendingValues[kind] = operation.Value;
                             }
@@ -390,8 +388,7 @@ namespace Pihrtsoft.Records
         {
             string propertyName = attribute.LocalName();
 
-            PropertyDefinition property;
-            if (!Entity.TryGetProperty(propertyName, out property))
+            if (!Entity.TryGetProperty(propertyName, out PropertyDefinition property))
             {
                 Throw(ErrorMessages.PropertyIsNotDefined(propertyName), attribute);
             }

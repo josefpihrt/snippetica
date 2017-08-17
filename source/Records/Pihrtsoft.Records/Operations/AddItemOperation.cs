@@ -40,8 +40,7 @@ namespace Pihrtsoft.Records.Operations
         {
             List<object> items = null;
 
-            object value;
-            if (record.TryGetValue(PropertyName, out value))
+            if (record.TryGetValue(PropertyName, out object value))
             {
                 items = (List<object>)value;
             }

@@ -21,7 +21,7 @@ namespace Pihrtsoft.Snippets
             {
                 yield return new SnippetValidationResult(
                     context.Snippet,
-                    string.Empty,
+                    "",
                     "Snippet author is not 'Josef Pihrt'.",
                     ResultImportance.Information);
             }
@@ -30,7 +30,7 @@ namespace Pihrtsoft.Snippets
             {
                 yield return new SnippetValidationResult(
                     context.Snippet,
-                    string.Empty,
+                    "",
                     "Snippet code contains tab.",
                     ResultImportance.Information);
             }
@@ -39,7 +39,7 @@ namespace Pihrtsoft.Snippets
             {
                 yield return new SnippetValidationResult(
                     context.Snippet,
-                    string.Empty,
+                    "",
                     "Snippet shortcut contains white-space.",
                     ResultImportance.Information);
             }
@@ -48,7 +48,7 @@ namespace Pihrtsoft.Snippets
             {
                 yield return new SnippetValidationResult(
                     context.Snippet,
-                    string.Empty,
+                    "",
                     "Snippet code contains trailing white-space.",
                     ResultImportance.Information);
             }
@@ -60,7 +60,7 @@ namespace Pihrtsoft.Snippets
 
                 yield return new SnippetValidationResult(
                     context.Snippet,
-                    string.Empty,
+                    "",
                     "Snippet code contains invalid leading spaces.",
                     ResultImportance.Information);
             }

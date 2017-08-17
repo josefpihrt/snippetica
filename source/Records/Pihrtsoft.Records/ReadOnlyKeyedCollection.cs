@@ -28,8 +28,7 @@ namespace Pihrtsoft.Records
 
         internal TValue Find(TKey key)
         {
-            TValue value;
-            if (_keyedCollection.TryGetValue(key, out value))
+            if (_keyedCollection.TryGetValue(key, out TValue value))
             {
                 return value;
             }

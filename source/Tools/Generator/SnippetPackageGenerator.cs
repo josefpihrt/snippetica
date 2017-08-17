@@ -17,7 +17,6 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         public static void GenerateVisualStudioPackageFiles(
             SnippetDirectory[] releaseDirectories,
             CharacterSequence[] characterSequences,
-            Release[] releases,
             GeneralSettings settings)
         {
             CopySnippetsToVisualStudioProject(settings.ExtensionProjectPath, releaseDirectories);
