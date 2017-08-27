@@ -62,6 +62,7 @@
   <ItemGroup>
     <None Include="README.md" />
     <None Include="Snippetica.Cpp\README.md" />
+    <None Include="Snippetica.CSharp.Dev\Attributes\AssemblyAttribute.snippet" />
     <None Include="Snippetica.CSharp.Dev\Attributes\DebuggerStepThroughAttribute.snippet" />
     <None Include="Snippetica.CSharp.Dev\Attributes\FlagsAttribute.snippet" />
     <None Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrEmpty.snippet" />

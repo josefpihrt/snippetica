@@ -6,6 +6,7 @@ Title | Shortcut
 ----- | --------
 [?: operator \(not equal to null\)](ConditionalOperatorNotEqualToNull.snippet)|conn
 [array type](ArrayOfTType.snippet)|a
+[Assembly attribute](AssemblyAttribute.snippet)|ae
 [break statement](BreakStatement.snippet)|bk
 [c Enumerable\.Cast](EnumerableCast.snippet)|q
 [Conditional attribute](ConditionalAttribute.snippet)|ae

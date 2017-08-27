@@ -647,6 +647,9 @@
     <Content Include="Snippetica.CSharp.Dev\PathHasExtension.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\AssemblyAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\ConditionalAttribute.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
