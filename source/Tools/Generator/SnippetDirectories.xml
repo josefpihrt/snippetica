@@ -7,7 +7,7 @@
         <Property Name="Language" IsRequired="true" />
       </Declarations>
       <Records>
-        <MultiPrefix Path="D:\Documents\Visual Studio 2015\Projects\Snippetica\Source\Snippetica\Snippetica">
+        <MultiPrefix Path="..\..\..\..\Snippetica\Snippetica">
           <Set Language="CSharp">
             <MultiPrefix Path=".CSharp">
               <New Path="" Tag="Release" />
