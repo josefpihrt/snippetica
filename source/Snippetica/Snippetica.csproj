@@ -62,24 +62,43 @@
   <ItemGroup>
     <None Include="README.md" />
     <None Include="Snippetica.Cpp\README.md" />
+    <None Include="Snippetica.CSharp.Dev\Attributes\DebuggerStepThroughAttribute.snippet" />
     <None Include="Snippetica.CSharp.Dev\Attributes\FlagsAttribute.snippet" />
+    <None Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrEmpty.snippet" />
+    <None Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrWhiteSpace.snippet" />
+    <None Include="Snippetica.CSharp.Dev\IfStringIsNullOrWhiteSpace.snippet" />
+    <None Include="Snippetica.CSharp.Dev\IfStringIsNullOrEmpty.snippet" />
     <None Include="Snippetica.CSharp.Dev\Namespace.snippet" />
     <None Include="Snippetica.CSharp.Dev\DoNotNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\DoNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\IO\PathGetFullPath.snippet" />
     <None Include="Snippetica.CSharp.Dev\Modifiers\ReadOnlyModifier.snippet" />
+    <None Include="Snippetica.CSharp.Dev\ReturnNewThis.snippet" />
     <None Include="Snippetica.CSharp.Dev\WhileNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\WhileNotNull.snippet" />
+    <None Include="Snippetica.CSharp.Dev\YieldReturnNewThis.snippet" />
     <None Include="Snippetica.CSharp\UsingVariable.snippet" />
+    <None Include="Snippetica.VisualBasic.AutoGeneration\IfNotTryParse.snippet" />
+    <None Include="Snippetica.VisualBasic.AutoGeneration\IfTryParse.snippet" />
     <None Include="Snippetica.VisualBasic.Dev\Namespace.snippet" />
     <None Include="Snippetica.VisualBasic\IEnumeratorOfTVariable.snippet" />
+    <None Include="Snippetica.VisualBasic\StreamReaderVariable.snippet" />
+    <None Include="Snippetica.VisualBasic\StreamWriterVariable.snippet" />
+    <None Include="Snippetica.VisualBasic\StringReaderVariable.snippet" />
+    <None Include="Snippetica.VisualBasic\StringWriterVariable.snippet" />
     <None Include="Snippetica.VisualBasic\VariableWithDirectCast.snippet" />
+    <None Include="Snippetica.VisualBasic\XmlReaderVariable.snippet" />
+    <None Include="Snippetica.VisualBasic\XmlWriterVariable.snippet" />
     <None Include="Snippetica.Xaml.Dev\Canvas.snippet" />
     <None Include="Snippetica.Xaml.Dev\DockPanel.snippet" />
     <None Include="Snippetica.Xaml.Dev\Grid.snippet" />
     <None Include="Snippetica.Xaml.Dev\StackPanel.snippet" />
+    <None Include="Snippetica.Xaml.Dev\StackPanelHorizontal.snippet" />
+    <None Include="Snippetica.Xaml.Dev\StackPanelVertical.snippet" />
     <None Include="Snippetica.Xaml.Dev\UniformGrid.snippet" />
     <None Include="Snippetica.Xaml.Dev\WrapPanel.snippet" />
+    <None Include="Snippetica.Xaml.Dev\WrapPanelHorizontal.snippet" />
+    <None Include="Snippetica.Xaml.Dev\WrapPanelVertical.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\README.md" />
     <Content Include="Snippetica.Xml\CDataSection.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\SnippetType.snippet" />
@@ -90,8 +109,8 @@
     <None Include="Snippetica.CSharp.AutoGeneration\CollectionOfTVariable.snippet" />
     <None Include="Snippetica.CSharp\Variable.snippet" />
     <None Include="Snippetica.CSharp.Dev.AutoGeneration\IfNotTryGetValue.snippet" />
-    <None Include="Snippetica.CSharp.Dev.AutoGeneration\IfNotTryParse.snippet" />
-    <None Include="Snippetica.CSharp.Dev.AutoGeneration\IfTryParse.snippet" />
+    <None Include="Snippetica.CSharp.AutoGeneration\IfNotTryParse.snippet" />
+    <None Include="Snippetica.CSharp.AutoGeneration\IfTryParse.snippet" />
     <None Include="Snippetica.CSharp.Dev.AutoGeneration\IfTryGetValue.snippet" />
     <None Include="Snippetica.CSharp.AutoGeneration\ImmutableCollectionOfTType.snippet" />
     <None Include="Snippetica.CSharp.AutoGeneration\ImmutableCollectionOfTVariable.snippet" />
@@ -103,8 +122,8 @@
     <None Include="Snippetica.CSharp\Int32Variable.snippet" />
     <None Include="Snippetica.CSharp\StringVariable.snippet" />
     <None Include="Snippetica.CSharp\VariableWithExplicitCast.snippet" />
-    <None Include="Snippetica.CSharp.Dev\Xml\XmlReaderVariable.snippet" />
-    <None Include="Snippetica.CSharp.Dev\Xml\XmlWriterVariable.snippet" />
+    <None Include="Snippetica.CSharp\XmlReaderVariable.snippet" />
+    <None Include="Snippetica.CSharp\XmlWriterVariable.snippet" />
     <None Include="Snippetica.CSharp\DictionaryOfTKeyTValueClass.snippet" />
     <None Include="Snippetica.CSharp.Dev\DebugAssertNotNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\ThrowStatement.snippet" />
@@ -374,10 +393,10 @@
     <None Include="Snippetica.CSharp.Dev\IO\PathChangeExtension.snippet" />
     <None Include="Snippetica.CSharp.Dev\IO\FileStreamVariable.snippet" />
     <None Include="Snippetica.CSharp.Dev\IO\MemoryStreamVariable.snippet" />
-    <None Include="Snippetica.CSharp.Dev\IO\StreamReaderVariable.snippet" />
-    <None Include="Snippetica.CSharp.Dev\IO\StreamWriterVariable.snippet" />
-    <None Include="Snippetica.CSharp.Dev\IO\StringReaderVariable.snippet" />
-    <None Include="Snippetica.CSharp.Dev\IO\StringWriterVariable.snippet" />
+    <None Include="Snippetica.CSharp\StreamReaderVariable.snippet" />
+    <None Include="Snippetica.CSharp\StreamWriterVariable.snippet" />
+    <None Include="Snippetica.CSharp\StringReaderVariable.snippet" />
+    <None Include="Snippetica.CSharp\StringWriterVariable.snippet" />
     <None Include="Snippetica.CSharp.Dev\Modifiers\OverrideModifier.snippet" />
     <None Include="Snippetica.CSharp.Dev\Modifiers\PrivateStaticModifiers.snippet" />
     <None Include="Snippetica.CSharp.Dev\Modifiers\InternalStaticModifiers.snippet" />
@@ -536,7 +555,7 @@
     <None Include="Snippetica.CSharp\TypeOfOperator.snippet" />
     <None Include="Snippetica.CSharp.AutoGeneration\TypeParameter.snippet" />
     <None Include="Snippetica.CSharp\Using.snippet" />
-    <None Include="Snippetica.CSharp.Dev\UsingStatic.snippet" />
+    <None Include="Snippetica.CSharp\UsingStatic.snippet" />
     <None Include="Snippetica.CSharp.Dev.AutoGeneration\DictionaryOfTKeyTValueVariable.snippet" />
     <None Include="Snippetica.CSharp.Dev.AutoGeneration\HashSetOfTVariable.snippet" />
     <None Include="Snippetica.CSharp.Dev.AutoGeneration\ListOfTVariable.snippet" />
@@ -699,7 +718,9 @@
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Snippetica.CSharp.Dev\Xml\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

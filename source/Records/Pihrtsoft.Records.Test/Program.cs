@@ -20,8 +20,7 @@ namespace Pihrtsoft.Records.Tests
 
                 foreach (KeyValuePair<string, object> pair in record.GetProperties())
                 {
-                    var list = pair.Value as List<object>;
-                    if (list != null)
+                    if (pair.Value is List<object> list)
                     {
                         WriteLine($"[{pair.Key}]");
 

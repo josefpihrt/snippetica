@@ -45,7 +45,6 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             SnippetPackageGenerator.GenerateVisualStudioPackageFiles(
                 releaseDirectories: releaseDirectories,
                 characterSequences: characterSequences,
-                releases: Release.LoadFromDocument(@"..\..\ChangeLog.xml").ToArray(),
                 settings: settings);
 
             settings.ExtensionProjectName += ".Dev";
@@ -55,7 +54,6 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                     .Where(f => f.HasTags(KnownTags.Release, KnownTags.Dev))
                     .ToArray(),
                 characterSequences: null,
-                releases: null,
                 settings: settings);
 
             SnippetChecker.CheckSnippets(snippetDirectories);

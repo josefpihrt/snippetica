@@ -91,9 +91,7 @@ namespace Pihrtsoft.Records
 
             if (versionText != null)
             {
-                Version version;
-
-                if (!Version.TryParse(versionText, out version))
+                if (!Version.TryParse(versionText, out Version version))
                 {
                     ThrowInvalidOperation(ErrorMessages.InvalidDocumentVersion());
                 }

@@ -75,7 +75,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Commands
             if (Tags.Contains(KnownTags.Collection))
                 return language.GetCollectionInitializer($"${LiteralIdentifiers.Value}$");
 
-            Debug.Assert(false, "");
+            Debug.Fail("");
 
             return null;
         }

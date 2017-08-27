@@ -125,7 +125,9 @@ Title | Shortcut
 [IEqualityComparer\<T\> class](IEqualityComparerOfTClass.snippet)|c\_
 [if equal to null](IfEqualToNull.snippet)|ifn
 [if not equal to null](IfNotEqualToNull.snippet)|ifnn
+[if not TryParse](IfNotTryParse.snippet)|ifftp
 [if not](IfNot.snippet)|iff
+[if TryParse](IfTryParse.snippet)|iftp
 [Int32 variable](Int32Variable.snippet)|vi
 [interface indexer](InterfaceIndexer.snippet)|\_ir
 [interface method](InterfaceMethod.snippet)|\_m
@@ -171,10 +173,14 @@ Title | Shortcut
 [return true](ReturnTrue.snippet)|ret
 [Singleton class](SingletonClass.snippet)|c\_
 [static constructor](StaticConstructor.snippet)|scr
+[StreamReader Variable](StreamReaderVariable.snippet)|u
+[StreamWriter Variable](StreamWriterVariable.snippet)|u
 [string keyword](StringKeyword.snippet)|s
 [String variable](StringVariable.snippet)|vs
 [string\.IsNullOrEmpty](StringIsNullOrEmpty.snippet)|sne
 [string\.IsNullOrWhiteSpace](StringIsNullOrWhiteSpace.snippet)|snw
+[StringReader Variable](StringReaderVariable.snippet)|u
+[StringWriter Variable](StringWriterVariable.snippet)|u
 [switch](Switch.snippet)|sh
 [throw new](ThrowNew.snippet)|twn
 [TODO comment](TodoComment.snippet)|td
@@ -184,9 +190,12 @@ Title | Shortcut
 [type parameter](TypeParameter.snippet)|g
 [typeof operator](TypeOfOperator.snippet)|to
 [using statement](Using.snippet)|u
+[using static](UsingStatic.snippet)|us
 [using variable](UsingVariable.snippet)|u
 [variable declaration with explicit cast operator](VariableWithExplicitCast.snippet)|vt
 [variable declaration](Variable.snippet)|v
 [while](While.snippet)|we
+[XmlReader Variable](XmlReaderVariable.snippet)|u
+[XmlWriter Variable](XmlWriterVariable.snippet)|u
 [yield break](YieldBreak.snippet)|yb
 [yield return](YieldReturn.snippet)|yr

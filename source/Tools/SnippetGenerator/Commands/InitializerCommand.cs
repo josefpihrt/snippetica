@@ -28,7 +28,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Commands
             if (snippet.HasTag(KnownTags.Collection))
                 return language.GetCollectionInitializer($"${LiteralIdentifiers.Value}$");
 
-            Debug.Assert(false, "");
+            Debug.Fail("");
             return null;
         }
 

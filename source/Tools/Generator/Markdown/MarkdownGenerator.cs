@@ -49,58 +49,6 @@ namespace Pihrtsoft.Snippets.CodeGeneration.Markdown
             }
         }
 
-        public static void WriteChangeLog(SnippetDirectory[] snippetDirectories, Release[] releases, GeneralSettings settings)
-        {
-            IOUtility.WriteAllText(
-                Path.Combine(settings.SolutionDirectoryPath, settings.ChangeLogFileName),
-                GenerateChangeLog(snippetDirectories, releases));
-        }
-
-        public static string GenerateChangeLog(SnippetDirectory[] snippetDirectories, Release[] releases)
-        {
-            Snippet[] snippets = snippetDirectories
-                .SelectMany(f => f.EnumerateSnippets())
-                .Where(f => f.HasTag(KnownTags.AddSnippet))
-                .ToArray();
-
-            using (var sw = new StringWriter())
-            {
-                sw.WriteLine("# Release Notes");
-
-                foreach (Release release in releases.OrderByDescending(f => f.ReleaseDate))
-                {
-                    sw.WriteLine();
-                    sw.WriteLine($"## {release.Version.ToString(3)} ({release.ReleaseDate.ToString("yyyy-MM-dd")})");
-
-                    if (!string.IsNullOrEmpty(release.Comment))
-                    {
-                        sw.WriteLine();
-                        sw.WriteLine($"* {MarkdownHelper.Escape(release.Comment)}");
-                    }
-
-                    Snippet[] releasedSnippets = snippets
-                        .Select(f => new { Snippet = f, Version = f.GetTagValueOrDefault(KnownTags.AddSnippet) })
-                        .Where(f => f.Version != null && Version.Parse(f.Version).Equals(release.Version))
-                        .Select(f => f.Snippet)
-                        .ToArray();
-
-                    if (releasedSnippets.Length > 0)
-                    {
-                        sw.WriteLine();
-                        sw.WriteLine("### New Snippets");
-                        sw.WriteLine();
-
-                        SnippetTableWriter tableWriter = SnippetTableWriter.CreateLanguageThenShortcutThenTitle();
-
-                        tableWriter.WriteTable(releasedSnippets);
-                        sw.Write(tableWriter.ToString());
-                    }
-                }
-
-                return sw.ToString();
-            }
-        }
-
         public static void WriteProjectReadMe(SnippetDirectory[] snippetDirectories, string directoryPath)
         {
             IOUtility.WriteAllText(

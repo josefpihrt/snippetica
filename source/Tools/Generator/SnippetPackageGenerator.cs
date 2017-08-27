@@ -17,7 +17,6 @@ namespace Pihrtsoft.Snippets.CodeGeneration
         public static void GenerateVisualStudioPackageFiles(
             SnippetDirectory[] releaseDirectories,
             CharacterSequence[] characterSequences,
-            Release[] releases,
             GeneralSettings settings)
         {
             CopySnippetsToVisualStudioProject(settings.ExtensionProjectPath, releaseDirectories);
@@ -25,9 +24,6 @@ namespace Pihrtsoft.Snippets.CodeGeneration
             releaseDirectories = releaseDirectories
                 .Select(f => f.WithPath(Path.Combine(settings.ExtensionProjectPath, f.DirectoryName)))
                 .ToArray();
-
-            if (releases != null)
-                MarkdownGenerator.WriteChangeLog(releaseDirectories, releases, settings);
 
             MarkdownGenerator.WriteProjectReadMe(releaseDirectories, settings.ExtensionProjectPath);
 
@@ -47,7 +43,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
             document.RemoveSnippetFiles();
 
-#if RELEASE
+#if !DEBUG
             var allSnippets = new List<Snippet>();
 #endif
 
@@ -72,14 +68,14 @@ namespace Pihrtsoft.Snippets.CodeGeneration
 
                 document.AddSnippetFiles(snippets.Select(f => f.FilePath), newItemGroup);
 
-#if RELEASE
+#if !DEBUG
                 allSnippets.AddRange(snippets);
 #endif
             }
 
             document.Save();
 
-#if RELEASE
+#if !DEBUG
             foreach (Snippet snippet in allSnippets)
             {
                 string submenuShortcut = snippet.GetSubmenuShortcut();
@@ -236,7 +232,7 @@ namespace Pihrtsoft.Snippets.CodeGeneration
                     return "CSS";
                 default:
                     {
-                        Debug.Assert(false, language.ToString());
+                        Debug.Fail(language.ToString());
                         throw new NotSupportedException();
                     }
             }

@@ -33,8 +33,7 @@ namespace Pihrtsoft.Records
         {
             get
             {
-                object value;
-                if (TryGetValue(PropertyDefinition.IdName, out value))
+                if (TryGetValue(PropertyDefinition.IdName, out object value))
                 {
                     return (string)value;
                 }
@@ -85,18 +84,22 @@ namespace Pihrtsoft.Records
                 sb.Append(Entity.Name);
 
                 if (Id != null)
-                    sb.Append($" Id: {Id}");
+                {
+                    sb.Append(" Id: ");
+                    sb.Append(Id);
+                }
 
                 if (Tags.Count > 0)
-                    sb.Append($" Tags: {string.Join(", ", Tags.OrderBy(f => f))}");
+                {
+                    sb.Append(" Tags: ");
+                    sb.Append(string.Join(", ", Tags.OrderBy(f => f)));
+                }
 
                 IEnumerable<string> properties = Properties
                     .Where(f => !DefaultComparer.NameEquals(f.Key, "Id"))
                     .Select(f =>
                     {
-                        var list = f.Value as List<object>;
-
-                        if (list != null)
+                        if (f.Value is List<object> list)
                         {
                             return $"{f.Key} = {{{string.Join(", ", list)}}}";
                         }
@@ -141,8 +144,7 @@ namespace Pihrtsoft.Records
 
         public string GetStringOrDefault(string propertyName, string defaultValue = default(string))
         {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
+            if (Properties.TryGetValue(propertyName, out object value))
             {
                 return (string)value;
             }
@@ -152,8 +154,7 @@ namespace Pihrtsoft.Records
 
         public bool GetBooleanOrDefault(string propertyName, bool defaultValue = default(bool))
         {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
+            if (Properties.TryGetValue(propertyName, out object value))
             {
                 return bool.Parse((string)value);
             }
@@ -163,8 +164,7 @@ namespace Pihrtsoft.Records
 
         public decimal GetDecimalOrDefault(string propertyName, decimal defaultValue = default(decimal))
         {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
+            if (Properties.TryGetValue(propertyName, out object value))
             {
                 return decimal.Parse((string)value);
             }
@@ -174,8 +174,7 @@ namespace Pihrtsoft.Records
 
         public double GetDoubleOrDefault(string propertyName, double defaultValue = default(double))
         {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
+            if (Properties.TryGetValue(propertyName, out object value))
             {
                 return double.Parse((string)value);
             }
@@ -185,8 +184,7 @@ namespace Pihrtsoft.Records
 
         public float GetFloatOrDefault(string propertyName, float defaultValue = default(float))
         {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
+            if (Properties.TryGetValue(propertyName, out object value))
             {
                 return float.Parse((string)value);
             }
@@ -196,8 +194,7 @@ namespace Pihrtsoft.Records
 
         public int GetIntOrDefault(string propertyName, int defaultValue = default(int))
         {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
+            if (Properties.TryGetValue(propertyName, out object value))
             {
                 return int.Parse((string)value);
             }
@@ -207,8 +204,7 @@ namespace Pihrtsoft.Records
 
         public long GetLongOrDefault(string propertyName, long defaultValue = default(long))
         {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
+            if (Properties.TryGetValue(propertyName, out object value))
             {
                 return long.Parse((string)value);
             }
@@ -218,8 +214,7 @@ namespace Pihrtsoft.Records
 
         public DateTime GetDateTimeOrDefault(string propertyName, DateTime defaultValue = default(DateTime))
         {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
+            if (Properties.TryGetValue(propertyName, out object value))
             {
                 return DateTime.Parse((string)value);
             }
@@ -293,20 +288,15 @@ namespace Pihrtsoft.Records
 
         private TItem[] GetItemsOrDefault<TItem>(string propertyName, TItem[] defaultValue = default(TItem[]))
         {
-            object value;
-            if (Properties.TryGetValue(propertyName, out value))
+            if (Properties.TryGetValue(propertyName, out object value)
+                && (value is List<object> list))
             {
-                var list = value as List<object>;
+                var items = new TItem[list.Count];
 
-                if (list != null)
-                {
-                    var items = new TItem[list.Count];
+                for (int i = 0; i < list.Count; i++)
+                    items[i] = (TItem)list[i];
 
-                    for (int i = 0; i < list.Count; i++)
-                        items[i] = (TItem)list[i];
-
-                    return items;
-                }
+                return items;
             }
 
             return defaultValue;

@@ -120,9 +120,11 @@ Title | Shortcut
 [IEqualityComparer\(Of T\) class](IEqualityComparerOfTClass.snippet)|c\_
 [If Is Nothing](IfIsNothing.snippet)|ifn
 [If IsNot Nothing](IfIsNotNothing.snippet)|ifnn
+[if not TryParse](IfNotTryParse.snippet)|ifftp
 [If Not](IfNot.snippet)|iff
 [If TryCast Is Nothing](IfTryCastIsNothing.snippet)|ifftc
 [If TryCast IsNot Nothing](IfTryCastIsNotNothing.snippet)|iftc
+[if TryParse](IfTryParse.snippet)|iftp
 [Int32 variable](Int32Variable.snippet)|vi
 [interface indexer](InterfaceIndexer.snippet)|\_ir
 [interface method](InterfaceMethod.snippet)|\_m
@@ -167,11 +169,15 @@ Title | Shortcut
 [Select Case statement](SelectCase.snippet)|sc
 [singleton class](SingletonClass.snippet)|c\_
 [static constructor](StaticConstructor.snippet)|scr
+[StreamReader Variable](StreamReaderVariable.snippet)|u
+[StreamWriter Variable](StreamWriterVariable.snippet)|u
 [String variable](StringVariable.snippet)|vs
 [String\.IsNullOrEmpty = False](StringIsNotNullOrEmpty.snippet)|snne
 [String\.IsNullOrEmpty](StringIsNullOrEmpty.snippet)|sne
 [String\.IsNullOrWhiteSpace = False](StringIsNotNullOrWhiteSpace.snippet)|snnw
 [String\.IsNullOrWhiteSpace](StringIsNullOrWhiteSpace.snippet)|snw
+[StringReader Variable](StringReaderVariable.snippet)|u
+[StringWriter Variable](StringWriterVariable.snippet)|u
 [Throw New](ThrowNew.snippet)|twn
 [TODO comment](TodoComment.snippet)|td
 [Try\-Catch\-Finally](TryCatchFinally.snippet)|tcf
@@ -182,3 +188,5 @@ Title | Shortcut
 [variable declaration](Variable.snippet)|v
 [variable with DirectCast](VariableWithDirectCast.snippet)|vt
 [While statement](While.snippet)|we
+[XmlReader Variable](XmlReaderVariable.snippet)|u
+[XmlWriter Variable](XmlWriterVariable.snippet)|u

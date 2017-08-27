@@ -12,6 +12,7 @@ Title | Shortcut
 [continue statement](ContinueStatement.snippet)|ce
 [Debug\.Assert \!= null](DebugAssertNotNull.snippet)|dann
 [DebuggerDisplay attribute](DebuggerDisplayAttribute.snippet)|ae
+[DebuggerStepThrough attribute](DebuggerStepThroughAttribute.snippet)|ae
 [Dictionary\<TKey, TValue\> type](DictionaryOfTKeyTValueType.snippet)|gd
 [Dictionary\<TKey, TValue\> variable](DictionaryOfTKeyTValueVariable.snippet)|vd
 [Directory\.CreateDirectory](DirectoryCreateDirectory.snippet)|iod
@@ -42,8 +43,10 @@ Title | Shortcut
 [gj Enumerable\.GroupJoin](EnumerableGroupJoin.snippet)|q
 [HashSet\<T\> type](HashSetOfTType.snippet)|ghs
 [HashSet\<T\> variable](HashSetOfTVariable.snippet)|vhs
-[if not TryParse](IfNotTryParse.snippet)|ifftp
-[if TryParse](IfTryParse.snippet)|iftp
+[if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)|iffsne
+[if \!string\.IsNullOrWhiteSpace](IfNotStringIsNullOrWhiteSpace.snippet)|iffsnw
+[if string\.IsNullOrEmpty](IfStringIsNullOrEmpty.snippet)|ifsne
+[if string\.IsNullOrWhiteSpace](IfStringIsNullOrWhiteSpace.snippet)|ifsnw
 [internal abstract modifiers](InternalAbstractModifiers.snippet)|x
 [internal modifier](InternalModifier.snippet)|x
 [internal static modifiers](InternalStaticModifiers.snippet)|x
@@ -84,29 +87,24 @@ Title | Shortcut
 [public virtual modifiers](PublicVirtualModifiers.snippet)|x
 [readonly modifier](ReadOnlyModifier.snippet)|ro
 [Regex type](Regex.snippet)|rx
+[return new containing type](ReturnNewThis.snippet)|rnthis
 [return new](ReturnNew.snippet)|rn
 [return statement](ReturnStatement.snippet)|re
 [s Enumerable\.Select](EnumerableSelect.snippet)|q
 [sm Enumerable\.SelectMany](EnumerableSelectMany.snippet)|q
 [sod Enumerable\.SingleOrDefault](EnumerableSingleOrDefault.snippet)|q
-[StreamReader Variable](StreamReaderVariable.snippet)|u
-[StreamWriter Variable](StreamWriterVariable.snippet)|u
 [StringBuilder variable](StringBuilderVariable.snippet)|vsb
-[StringReader Variable](StringReaderVariable.snippet)|u
-[StringWriter Variable](StringWriterVariable.snippet)|u
 [sw Enumerable\.SkipWhile](EnumerableSkipWhile.snippet)|q
 [tb Enumerable\.ThenBy](EnumerableThenBy.snippet)|q
 [tbd Enumerable\.ThenByDescending](EnumerableThenByDescending.snippet)|q
 [throw statement](ThrowStatement.snippet)|tw
 [TimeSpan type](TimeSpanType.snippet)|ts
 [tw Enumerable\.TakeWhile](EnumerableTakeWhile.snippet)|q
-[using static](UsingStatic.snippet)|us
 [variable declaration with as operator \+ if not null](VariableAsTIfNotNull.snippet)|vasnn
 [w Enumerable\.Where](EnumerableWhere.snippet)|q
 [while not null](WhileNotNull.snippet)|wenn
 [while null](WhileNull.snippet)|wen
 [wnn Enumerable\.Where not equal to null](EnumerableWhereNotNull.snippet)|q
-[XmlReader Variable](XmlReaderVariable.snippet)|u
-[XmlWriter Variable](XmlWriterVariable.snippet)|u
+[yield return new containing type](YieldReturnNewThis.snippet)|yrnthis
 [yield return new](YieldReturnNew.snippet)|yrn
 [z Enumerable\.Zip](EnumerableZip.snippet)|q

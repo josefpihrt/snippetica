@@ -4,12 +4,16 @@
 
 Title | Shortcut
 ----- | --------
-[Canvas](Canvas.snippet)|c
-[DockPanel](DockPanel.snippet)|dp
+[Canvas](Canvas.snippet)|p
+[DockPanel](DockPanel.snippet)|p
 [Grid\.Row Grid\.Column](GridRowGridColumn.snippet)|gdrwcn
-[Grid](Grid.snippet)|g
+[Grid](Grid.snippet)|p
 [ListBoxItem](ListBoxItem.snippet)|ltbxim
-[StackPanel](StackPanel.snippet)|sp
+[StackPanel \(horizontal\)](StackPanelHorizontal.snippet)|p
+[StackPanel \(vertical\)](StackPanelVertical.snippet)|p
+[StackPanel](StackPanel.snippet)|p
 [ToolBarTray](ToolBarTray.snippet)|tlbrty
-[UniformGrid](UniformGrid.snippet)|ug
-[WrapPanel](WrapPanel.snippet)|wp
+[UniformGrid](UniformGrid.snippet)|p
+[WrapPanel \(horizontal\)](WrapPanelHorizontal.snippet)|p
+[WrapPanel \(vertical\)](WrapPanelVertical.snippet)|p
+[WrapPanel](WrapPanel.snippet)|p

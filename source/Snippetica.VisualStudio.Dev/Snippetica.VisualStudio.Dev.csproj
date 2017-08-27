@@ -104,6 +104,18 @@
     <Content Include="Snippetica.CSharp.Dev\DoNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrEmpty.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrWhiteSpace.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfStringIsNullOrEmpty.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfStringIsNullOrWhiteSpace.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\Namespace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -111,6 +123,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\ReturnNew.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\ReturnNewThis.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\ReturnStatement.snippet">
@@ -125,9 +140,6 @@
     <Content Include="Snippetica.CSharp.Dev\TimeSpanType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\UsingStatic.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp.Dev\VariableAsTIfNotNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -138,6 +150,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\YieldReturnNew.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\YieldReturnNewThis.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\ArrayOfBooleanType.snippet">
@@ -158,13 +173,10 @@
     <Content Include="Snippetica.CSharp.Dev\ArrayOfStringType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\ArrayOfThisType.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\ArrayOfTType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\BooleanIfNotTryParse.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\DateTimeIfNotTryParse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\DictionaryOfTKeyTValueVariable.snippet">
@@ -227,6 +239,15 @@
     <Content Include="Snippetica.CSharp.Dev\HashSetOfStringVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\HashSetOfThisType.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\HashSetOfThisVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\HashSetOfThisVariableWithInitializer.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\HashSetOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -234,30 +255,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\HashSetOfTVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\IfNotTryParse.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\IfTryParse.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\IfTryParseBoolean.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\IfTryParseDateTime.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\IfTryParseInt32.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\IfTryParseInt64.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\Int32IfNotTryParse.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\Int64IfNotTryParse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\ListOfBooleanType.snippet">
@@ -314,6 +311,15 @@
     <Content Include="Snippetica.CSharp.Dev\ListOfStringVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\ListOfThisType.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\ListOfThisVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\ListOfThisVariableWithInitializer.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\ListOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -362,10 +368,13 @@
     <Content Include="Snippetica.CSharp.Dev\NewArrayOfT.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\NewArrayOfTWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp.Dev\NewArrayOfThis.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObjectIfNotTryParse.snippet">
+    <Content Include="Snippetica.CSharp.Dev\NewArrayOfThisWithInitializer.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\NewArrayOfTWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfBooleanType.snippet">
@@ -422,6 +431,15 @@
     <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfStringVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfThisType.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfThisVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfThisVariableWithInitializer.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -429,15 +447,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\ObservableCollectionOfTVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\StringIfNotTryParse.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\XmlReaderVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\XmlWriterVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\InternalAbstractModifiers.snippet">
@@ -638,22 +647,13 @@
     <Content Include="Snippetica.CSharp.Dev\PathHasExtension.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp.Dev\StreamReaderVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\StreamWriterVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\StringReaderVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\StringWriterVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp.Dev\ConditionalAttribute.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\DebuggerDisplayAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\DebuggerStepThroughAttribute.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\FlagsAttribute.snippet">
@@ -705,6 +705,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic.Dev\ArrayOfStringType.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\ArrayOfThisType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic.Dev\ArrayOfTType.snippet">
@@ -762,6 +765,15 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic.Dev\HashSetOfStringVariableWithInitializer.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfThisType.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfThisVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\HashSetOfThisVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic.Dev\HashSetOfTType.snippet">
@@ -827,6 +839,15 @@
     <Content Include="Snippetica.VisualBasic.Dev\ListOfStringVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\ListOfThisType.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\ListOfThisVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\ListOfThisVariableWithInitializer.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.VisualBasic.Dev\ListOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -855,6 +876,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic.Dev\NewArrayOfT.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\NewArrayOfThis.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfBooleanType.snippet">
@@ -911,6 +935,15 @@
     <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfStringVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfThisType.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfThisVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfThisVariableWithInitializer.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.VisualBasic.Dev\ObservableCollectionOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -959,6 +992,12 @@
     <Content Include="Snippetica.Xaml.Dev\StackPanel.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.Xaml.Dev\StackPanelHorizontal.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.Xaml.Dev\StackPanelVertical.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.Xaml.Dev\ToolBarTray.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -966,6 +1005,12 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Xaml.Dev\WrapPanel.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.Xaml.Dev\WrapPanelHorizontal.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.Xaml.Dev\WrapPanelVertical.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
   </ItemGroup>

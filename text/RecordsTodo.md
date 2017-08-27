@@ -1,4 +1,5 @@
-﻿* Property type is Entity
+﻿* PropertyDefinition.Description
+* Property type is Entity
 * xsd
 * Entity Base="BaseEntity"
 * <Namespace>

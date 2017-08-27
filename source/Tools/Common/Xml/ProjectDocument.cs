@@ -110,7 +110,7 @@ namespace Pihrtsoft.Snippets.Xml
         public void AddSnippetFile(string path, XElement itemGroup)
         {
             string relativePath = path
-                .Replace(Path.GetDirectoryName(FilePath), string.Empty)
+                .Replace(Path.GetDirectoryName(FilePath), "")
                 .TrimStart(Path.DirectorySeparatorChar);
 
             XNamespace ns = itemGroup.Name.Namespace;
