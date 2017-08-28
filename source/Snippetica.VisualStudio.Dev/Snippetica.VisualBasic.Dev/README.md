@@ -10,7 +10,7 @@ Title | Shortcut
 [List\(Of T\) type](ListOfTType.snippet)|gl
 [List\(Of T\) variable](ListOfTVariable.snippet)|vl
 [namespace](Namespace.snippet)|ns
-[new array ](NewArrayOfT.snippet)|va
+[new array ](NewArrayOfT.snippet)|na
 [Object keyword](ObjectKeyword.snippet)|o
 [ObservableCollection\(Of T\) type](ObservableCollectionOfTType.snippet)|goc
 [ObservableCollection\(Of T\) variable](ObservableCollectionOfTVariable.snippet)|voc
