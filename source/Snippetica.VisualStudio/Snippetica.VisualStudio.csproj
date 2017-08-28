@@ -2829,12 +2829,6 @@
     <Content Include="Snippetica.VisualBasic\DateTimeTypeParameter.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\DictionaryOfTKeyTValueVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\DictionaryOfTKeyTValueVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\DictionaryOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

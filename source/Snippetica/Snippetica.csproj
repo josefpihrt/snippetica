@@ -672,7 +672,7 @@
     <None Include="Snippetica.VisualBasic.AutoGeneration\TypeParameter.snippet" />
     <None Include="Snippetica.VisualBasic\Using.snippet" />
     <None Include="Snippetica.VisualBasic\BooleanVariable.snippet" />
-    <None Include="Snippetica.VisualBasic.AutoGeneration\DictionaryOfTKeyTValueVariable.snippet" />
+    <None Include="Snippetica.VisualBasic.Dev.AutoGeneration\DictionaryOfTKeyTValueVariable.snippet" />
     <None Include="Snippetica.VisualBasic.Dev.AutoGeneration\HashSetOfTVariable.snippet">
       <SubType>Designer</SubType>
     </None>

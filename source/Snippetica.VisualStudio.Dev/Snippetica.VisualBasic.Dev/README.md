@@ -5,6 +5,7 @@
 Title | Shortcut
 ----- | --------
 [array type](ArrayOfTType.snippet)|a
+[Dictionary\(Of TKey, TValue\) variable](DictionaryOfTKeyTValueVariable.snippet)|vd
 [HashSet\(Of T\) type](HashSetOfTType.snippet)|ghs
 [HashSet\(Of T\) variable](HashSetOfTVariable.snippet)|vhs
 [List\(Of T\) type](ListOfTType.snippet)|gl

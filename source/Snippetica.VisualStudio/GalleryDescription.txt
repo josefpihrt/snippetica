@@ -17,7 +17,7 @@
   <li>
     <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md">Snippetica.CSharp</a> (782 snippets) (<a href="http://pihrt.net/Snippetica/Snippets?Language=CSharp">full list</a>)</li>
   <li>
-    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md">Snippetica.VisualBasic</a> (751 snippets) (<a href="http://pihrt.net/Snippetica/Snippets?Language=VisualBasic">full list</a>)</li>
+    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md">Snippetica.VisualBasic</a> (749 snippets) (<a href="http://pihrt.net/Snippetica/Snippets?Language=VisualBasic">full list</a>)</li>
   <li>
     <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp/README.md">Snippetica.Cpp</a> (23 snippets) (<a href="http://pihrt.net/Snippetica/Snippets?Language=CPlusPlus">full list</a>)</li>
   <li>

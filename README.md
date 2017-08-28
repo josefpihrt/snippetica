@@ -13,7 +13,7 @@
 Folder|Count| |
 --- | --- | ---:
 [Snippetica.CSharp](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|782|[full list](http://pihrt.net/Snippetica/Snippets?Language=CSharp)
-[Snippetica.VisualBasic](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|751|[full list](http://pihrt.net/Snippetica/Snippets?Language=VisualBasic)
+[Snippetica.VisualBasic](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|749|[full list](http://pihrt.net/Snippetica/Snippets?Language=VisualBasic)
 [Snippetica.Cpp](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|23|[full list](http://pihrt.net/Snippetica/Snippets?Language=CPlusPlus)
 [Snippetica.Html](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Html/README.md)|221|[full list](http://pihrt.net/Snippetica/Snippets?Language=Html)
 [Snippetica.Xaml](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Xaml/README.md)|89|[full list](http://pihrt.net/Snippetica/Snippets?Language=Xaml)

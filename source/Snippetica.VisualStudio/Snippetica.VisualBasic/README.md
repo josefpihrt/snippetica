@@ -100,7 +100,6 @@ Title | Shortcut
 [Debug\.WriteLine](DebugWriteLine.snippet)|dw
 [Dictionary\(Of TKey, TValue\) class](DictionaryOfTKeyTValueClass.snippet)|c\_
 [Dictionary\(Of TKey, TValue\) type](DictionaryOfTKeyTValueType.snippet)|gd
-[Dictionary\(Of TKey, TValue\) variable](DictionaryOfTKeyTValueVariable.snippet)|vd
 [Disposable class](DisposableClass.snippet)|c\_
 [Dispose](Dispose.snippet)|dispose
 [Do statement](Do.snippet)|do

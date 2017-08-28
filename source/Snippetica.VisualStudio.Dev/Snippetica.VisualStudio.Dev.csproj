@@ -716,6 +716,12 @@
     <Content Include="Snippetica.VisualBasic.Dev\ArrayOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\DictionaryOfTKeyTValueVariable.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\DictionaryOfTKeyTValueVariableWithInitializer.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.VisualBasic.Dev\HashSetOfBooleanType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

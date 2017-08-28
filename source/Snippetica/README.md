@@ -1,6 +1,6 @@
 ﻿
 * [Snippetica.CSharp](Snippetica.CSharp/README.md) (782 snippets)
-* [Snippetica.VisualBasic](Snippetica.VisualBasic/README.md) (751 snippets)
+* [Snippetica.VisualBasic](Snippetica.VisualBasic/README.md) (749 snippets)
 * [Snippetica.Cpp](Snippetica.Cpp/README.md) (23 snippets)
 * [Snippetica.Html](Snippetica.Html/README.md) (221 snippets)
 * [Snippetica.Xaml](Snippetica.Xaml/README.md) (89 snippets)
