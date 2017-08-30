@@ -24,8 +24,8 @@ Title | Shortcut
 [Directory\.GetDirectories](IO/DirectoryGetDirectories.snippet)|iod
 [Directory\.GetFiles](IO/DirectoryGetFiles.snippet)|iod
 [Directory\.Move](IO/DirectoryMove.snippet)|iod
-[do](DoNotNull.snippet)|donn
-[do](DoNull.snippet)|don
+[do while not null](DoNotNull.snippet)|donn
+[do while null](DoNull.snippet)|don
 [e Enumerable\.Empty](Linq/EnumerableEmpty.snippet)|q
 [f Enumerable\.First](Linq/EnumerableFirst.snippet)|q
 [File Exists](IO/FileExists.snippet)|iof
