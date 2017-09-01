@@ -4,6 +4,7 @@
 
 Title | Shortcut
 ----- | --------
+[?: operator \(equal to null\)](ConditionalOperatorEqualToNull.snippet)|con
 [?: operator \(not equal to null\)](ConditionalOperatorNotEqualToNull.snippet)|conn
 [array type](ArrayOfTType.snippet)|a
 [Assembly attribute](AssemblyAttribute.snippet)|ae

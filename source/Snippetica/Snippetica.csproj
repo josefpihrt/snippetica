@@ -65,6 +65,7 @@
     <None Include="Snippetica.CSharp.Dev\Attributes\AssemblyAttribute.snippet" />
     <None Include="Snippetica.CSharp.Dev\Attributes\DebuggerStepThroughAttribute.snippet" />
     <None Include="Snippetica.CSharp.Dev\Attributes\FlagsAttribute.snippet" />
+    <None Include="Snippetica.CSharp.Dev\ConditionalOperatorEqualToNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrEmpty.snippet" />
     <None Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp.Dev\IfStringIsNullOrWhiteSpace.snippet" />

@@ -86,6 +86,9 @@
     <Content Include="Snippetica.CSharp.Dev\BreakStatement.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\ConditionalOperatorEqualToNull.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\ConditionalOperatorNotEqualToNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

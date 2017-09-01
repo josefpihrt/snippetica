@@ -15,7 +15,7 @@
 <h3>Snippets</h3>
 <ul>
   <li>
-    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio.Dev/Snippetica.CSharp.Dev/README.md">Snippetica.CSharp.Dev</a> (194 snippets) (<a href="http://pihrt.net/Snippetica/Snippets?Language=CSharp">full list</a>)</li>
+    <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio.Dev/Snippetica.CSharp.Dev/README.md">Snippetica.CSharp.Dev</a> (195 snippets) (<a href="http://pihrt.net/Snippetica/Snippets?Language=CSharp">full list</a>)</li>
   <li>
     <a href="http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio.Dev/Snippetica.VisualBasic.Dev/README.md">Snippetica.VisualBasic.Dev</a> (99 snippets) (<a href="http://pihrt.net/Snippetica/Snippets?Language=VisualBasic">full list</a>)</li>
   <li>

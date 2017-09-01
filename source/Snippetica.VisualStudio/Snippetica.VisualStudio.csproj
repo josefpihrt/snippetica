@@ -4683,31 +4683,31 @@
     <Content Include="Snippetica.VisualBasic\VoidInterfaceMethodWithParameters.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\class.snippet">
+    <Content Include="Snippetica.Cpp\Class.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\constructor.snippet">
+    <Content Include="Snippetica.Cpp\Constructor.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\destructor.snippet">
+    <Content Include="Snippetica.Cpp\Destructor.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\do_while.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\else.snippet">
+    <Content Include="Snippetica.Cpp\Else.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\enum.snippet">
+    <Content Include="Snippetica.Cpp\Enum.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\enum_class.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\for.snippet">
+    <Content Include="Snippetica.Cpp\For.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\foreach.snippet">
+    <Content Include="Snippetica.Cpp\ForEach.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\for_range_based.snippet">
@@ -4716,13 +4716,13 @@
     <Content Include="Snippetica.Cpp\for_reversed.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\if.snippet">
+    <Content Include="Snippetica.Cpp\If.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\interface.snippet">
+    <Content Include="Snippetica.Cpp\Interface.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\namespace.snippet">
+    <Content Include="Snippetica.Cpp\Namespace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\preprocessor_directive_if.snippet">
@@ -4737,19 +4737,19 @@
     <Content Include="Snippetica.Cpp\preprocessor_directive_region.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\struct.snippet">
+    <Content Include="Snippetica.Cpp\Struct.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\switch.snippet">
+    <Content Include="Snippetica.Cpp\Switch.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\try.snippet">
+    <Content Include="Snippetica.Cpp\Try.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\union.snippet">
+    <Content Include="Snippetica.Cpp\Union.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\while.snippet">
+    <Content Include="Snippetica.Cpp\While.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Html\del_ins.snippet">
