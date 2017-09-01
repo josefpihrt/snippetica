@@ -79,9 +79,13 @@
     <None Include="Snippetica.CSharp.Dev\WhileNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\WhileNotNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\YieldReturnNewThis.snippet" />
+    <None Include="Snippetica.CSharp.Dev\IfNotEnumTryParse.snippet" />
+    <None Include="Snippetica.CSharp.Dev\IfEnumTryParse.snippet" />
     <None Include="Snippetica.CSharp\UsingVariable.snippet" />
     <None Include="Snippetica.VisualBasic.AutoGeneration\IfNotTryParse.snippet" />
     <None Include="Snippetica.VisualBasic.AutoGeneration\IfTryParse.snippet" />
+    <None Include="Snippetica.VisualBasic.Dev\IfNotEnumTryParse.snippet" />
+    <None Include="Snippetica.VisualBasic.Dev\IfEnumTryParse.snippet" />
     <None Include="Snippetica.VisualBasic.Dev\Namespace.snippet" />
     <None Include="Snippetica.VisualBasic\IEnumeratorOfTVariable.snippet" />
     <None Include="Snippetica.VisualBasic\StreamReaderVariable.snippet" />

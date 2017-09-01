@@ -8,6 +8,8 @@ Title | Shortcut
 [Dictionary\(Of TKey, TValue\) variable](DictionaryOfTKeyTValueVariable.snippet)|vd
 [HashSet\(Of T\) type](HashSetOfTType.snippet)|ghs
 [HashSet\(Of T\) variable](HashSetOfTVariable.snippet)|vhs
+[if Enum\.TryParse](IfEnumTryParse.snippet)|ifemtp
+[if not Enum\.TryParse](IfNotEnumTryParse.snippet)|iffemtp
 [List\(Of T\) type](ListOfTType.snippet)|gl
 [List\(Of T\) variable](ListOfTVariable.snippet)|vl
 [namespace](Namespace.snippet)|ns
