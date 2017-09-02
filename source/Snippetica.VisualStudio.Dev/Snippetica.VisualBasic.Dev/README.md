@@ -10,6 +10,7 @@ Title | Shortcut
 [HashSet\(Of T\) variable](HashSetOfTVariable.snippet)|vhs
 [if Enum\.TryParse](IfEnumTryParse.snippet)|ifemtp
 [if not Enum\.TryParse](IfNotEnumTryParse.snippet)|iffemtp
+[Lambda expression with 2 parameters](LambdaExpressionWithTwoParameters.snippet)|l2
 [List\(Of T\) type](ListOfTType.snippet)|gl
 [List\(Of T\) variable](ListOfTVariable.snippet)|vl
 [namespace](Namespace.snippet)|ns

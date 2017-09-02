@@ -125,6 +125,9 @@
     <Content Include="Snippetica.CSharp.Dev\IfStringIsNullOrWhiteSpace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\LambdaExpressionWithTwoParameters.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\Namespace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -678,6 +681,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic.Dev\IfNotEnumTryParse.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic.Dev\LambdaExpressionWithTwoParameters.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic.Dev\Namespace.snippet">

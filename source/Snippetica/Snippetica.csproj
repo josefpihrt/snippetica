@@ -70,6 +70,7 @@
     <None Include="Snippetica.CSharp.Dev\IfNotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp.Dev\IfStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp.Dev\IfStringIsNullOrEmpty.snippet" />
+    <None Include="Snippetica.CSharp.Dev\LambdaExpressionWithTwoParameters.snippet" />
     <None Include="Snippetica.CSharp.Dev\Namespace.snippet" />
     <None Include="Snippetica.CSharp.Dev\DoNotNull.snippet" />
     <None Include="Snippetica.CSharp.Dev\DoNull.snippet" />
@@ -86,6 +87,7 @@
     <None Include="Snippetica.VisualBasic.AutoGeneration\IfTryParse.snippet" />
     <None Include="Snippetica.VisualBasic.Dev\IfNotEnumTryParse.snippet" />
     <None Include="Snippetica.VisualBasic.Dev\IfEnumTryParse.snippet" />
+    <None Include="Snippetica.VisualBasic.Dev\LambdaExpressionWithTwoParameters.snippet" />
     <None Include="Snippetica.VisualBasic.Dev\Namespace.snippet" />
     <None Include="Snippetica.VisualBasic\IEnumeratorOfTVariable.snippet" />
     <None Include="Snippetica.VisualBasic\StreamReaderVariable.snippet" />

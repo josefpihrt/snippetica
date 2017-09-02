@@ -57,6 +57,7 @@ Title | Shortcut
 [internal virtual modifiers](InternalVirtualModifiers.snippet)|x
 [j Enumerable\.Join](EnumerableJoin.snippet)|q
 [l Enumerable\.Last](EnumerableLast.snippet)|q
+[lambda expression with 2 parameters](LambdaExpressionWithTwoParameters.snippet)|l2
 [List\<T\> type](ListOfTType.snippet)|gl
 [List\<T\> variable](ListOfTVariable.snippet)|vl
 [lod Enumerable\.LastOrDefault](EnumerableLastOrDefault.snippet)|q
