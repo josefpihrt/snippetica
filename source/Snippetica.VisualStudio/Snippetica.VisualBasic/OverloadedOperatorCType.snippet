@@ -1,0 +1,42 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>CType operator overloading</Title>
+    <Shortcut>oo</Shortcut>
+    <Description>CType operator overloading</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-ExcludeFromReadme</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>operand</ID>
+        <ToolTip>Object to convert</ToolTip>
+        <Default>value</Default>
+      </Literal>
+      <Literal Editable="false">
+        <ID>thisName</ID>
+        <ToolTip>Containing type name</ToolTip>
+        <Default>ThisName</Default>
+        <Function>ClassName()</Function>
+      </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Type to convert to</ToolTip>
+        <Default>Object</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[Public Shared Widening Operator CType(ByVal $operand$ As $thisName$) As $type$
+	$end$
+End Operator
+
+Public Shared Narrowing Operator CType(ByVal $operand$ As $type$) As $thisName$
+End Operator]]></Code>
+  </Snippet>
+</CodeSnippet>

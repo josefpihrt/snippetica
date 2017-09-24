@@ -1,0 +1,33 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>interface</Title>
+    <Shortcut>ie</Shortcut>
+    <Description>interface declaration</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-GenerateInternalModifier</Keyword>
+      <Keyword>Meta-GeneratePublicModifier</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>_modifiers</ID>
+        <ToolTip>Modifier(s)</ToolTip>
+        <Default>Public</Default>
+      </Literal>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Interface name</ToolTip>
+        <Default>InterfaceName</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[$_modifiers$ Interface $name$
+	$end$
+End Interface]]></Code>
+  </Snippet>
+</CodeSnippet>

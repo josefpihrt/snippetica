@@ -5,8 +5,10 @@ namespace Pihrtsoft.Records.Operations
     internal enum OperationKind
     {
         Set,
-        AddTag,
-        AddItem,
+        Add,
+        AddRange,
+        Remove,
+        RemoveRange,
         Postfix,
         PostfixMany,
         Prefix,

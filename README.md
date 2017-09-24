@@ -1,21 +1,22 @@
-﻿## Snippetica
+# Snippetica
 
-* A collection of snippets for C#, VB, C++, HTML, XAML and XML.
-* [Release Notes](http://github.com/JosefPihrt/Snippetica/blob/master/ChangeLog.md).
-* [Browse and Search All Snippets](http://pihrt.net/Snippetica/Snippets).
+* A collection of snippets for C#, C++, HTML, VB, XAML and XML.
+* [Release Notes](http://github.com/josefpihrt/snippetica/blob/master/ChangeLog.md).
 
-### Distribution
+## Snippetica for Visual Studio
 
-* **Snippetica** is distributed as [Visual Studio Extension](http://visualstudiogallery.msdn.microsoft.com/a5576f35-9f87-4c9c-8f1f-059421a23aed).
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs).
+* Download extension from [Marketplace](http://marketplace.visualstudio.com/search?term=publisher%3A"Josef%20Pihrt"%20Snippetica&target=vs&sortBy=Name).
 
 ### Snippets
 
-Folder|Count| |
+Group|Count| |
 --- | --- | ---:
-[Snippetica.CSharp](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|782|[full list](http://pihrt.net/Snippetica/Snippets?Language=CSharp)
-[Snippetica.VisualBasic](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|749|[full list](http://pihrt.net/Snippetica/Snippets?Language=VisualBasic)
-[Snippetica.Cpp](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|23|[full list](http://pihrt.net/Snippetica/Snippets?Language=CPlusPlus)
-[Snippetica.Html](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Html/README.md)|221|[full list](http://pihrt.net/Snippetica/Snippets?Language=Html)
-[Snippetica.Xaml](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Xaml/README.md)|89|[full list](http://pihrt.net/Snippetica/Snippets?Language=Xaml)
-[Snippetica.Xml](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Xml/README.md)|8|[full list](http://pihrt.net/Snippetica/Snippets?Language=Xml)
-[Snippetica.Xml.CodeSnippet](http://github.com/JosefPihrt/Snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Xml.CodeSnippet/README.md)|22|[full list](http://pihrt.net/Snippetica/Snippets?Language=Xml)
+[Snippetica.Cpp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|24|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=cpp)
+[Snippetica.CSharp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|799|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=csharp)
+[Snippetica.Html](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Html/README.md)|221|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=html)
+[Snippetica.VisualBasic](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|762|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=vb)
+[Snippetica.Xaml](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Xaml/README.md)|91|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=xaml)
+[Snippetica.Xml](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Xml/README.md)|9|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=xml)
+[Snippetica.Xml.CodeSnippet](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Xml.CodeSnippet/README.md)|22|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=xml)
+

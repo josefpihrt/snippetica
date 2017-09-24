@@ -1,7 +1,7 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>wnn Enumerable.Where not equal to null</Title>
+    <Title>wxn Enumerable.Where not equal to null</Title>
     <Shortcut>q</Shortcut>
     <Description>Enumerable.Where method with predicate whether the expression is not equal to null</Description>
     <Author>Josef Pihrt</Author>
@@ -9,7 +9,8 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-TitleStartsWithShortcut</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -18,12 +19,6 @@
         <Namespace>System.Linq</Namespace>
       </Import>
     </Imports>
-    <Declarations>
-      <Literal Editable="false">
-        <ID>_lambdaParam</ID>
-        <Default>f</Default>
-      </Literal>
-    </Declarations>
-    <Code Language="CSharp"><![CDATA[.Where($_lambdaParam$ => $_lambdaParam$ != null)$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[.Where(f => f != null)$end$]]></Code>
   </Snippet>
 </CodeSnippet>

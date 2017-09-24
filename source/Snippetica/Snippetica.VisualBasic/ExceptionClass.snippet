@@ -9,7 +9,8 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-ShortcutSuffix Exception</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -40,22 +41,22 @@
     </Declarations>
     <Code Language="VB"><![CDATA[<Serializable>
 $modifier$ Class $name$Exception
-    Inherits $base$
+	Inherits $base$
 
-    Public Sub New()
-    End Sub
+	Public Sub New()
+	End Sub
 
-    Public Sub New(message As String)
-        MyBase.New(message)
-    End Sub
+	Public Sub New(message As String)
+		MyBase.New(message)
+	End Sub
 
-    Public Sub New(message As String, inner As Exception)
-        MyBase.New(message, inner)
-    End Sub
+	Public Sub New(message As String, inner As Exception)
+		MyBase.New(message, inner)
+	End Sub
 
-    Protected Sub New(info As SerializationInfo, context As StreamingContext)
-        MyBase.New(info, context)
-    End Sub$end$
+	Protected Sub New(info As SerializationInfo, context As StreamingContext)
+		MyBase.New(info, context)
+	End Sub$end$
 
 End Class]]></Code>
   </Snippet>

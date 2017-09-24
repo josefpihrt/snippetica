@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Document Version="0.0.1">
+  <Entities>
+    <Entity Name="Base">
+      <Declarations>
+        <Property Name="Keyword" />
+        <Property Name="Shortcut" IsRequired="true" />
+        <Property Name="Language" />
+      </Declarations>
+      <Entities>
+        <Entity Name="Modifier">
+          <BaseRecords>
+            <Add Tags="AccessModifier">
+              <New Id="Public" Shortcut="" Tags="Default" />
+              <New Id="Internal" Shortcut="i" />
+              <New Id="Private" Shortcut="p" />
+              <Add Tags="Disabled">
+                <New Id="Protected" Shortcut="d" />
+              </Add>
+            </Add>
+            <New Id="Static" Shortcut="s" />
+            <New Id="Virtual" Shortcut="v" />
+          </BaseRecords>
+          <Records>
+            <Set Language="CSharp">
+              <New Id="Public" Keyword="public" />
+              <New Id="Internal" Keyword="internal" />
+              <New Id="Protected" Keyword="protected" />
+              <New Id="Private" Keyword="private" />
+              <New Id="Static" Keyword="static" />
+              <New Id="Virtual" Keyword="virtual" />
+            </Set>
+            <Set Language="VisualBasic">
+              <New Id="Public" Keyword="Public" />
+              <New Id="Internal" Keyword="Friend" />
+              <New Id="Protected" Keyword="Protected" />
+              <New Id="Private" Keyword="Private" />
+              <New Id="Static" Keyword="Shared" />
+              <New Id="Virtual" Keyword="Overridable" />
+            </Set>
+          </Records>
+        </Entity>
+        <Entity Name="Type">
+          <Declarations>
+            <Property Name="Title" />
+            <Property Name="DefaultValue" />
+            <Property Name="DefaultIdentifier" />
+            <Property Name="Namespace" />
+          </Declarations>
+          <BaseRecords>
+            <New Id="This" Shortcut="t" />
+            <New Id="Void" Shortcut="-" />
+            <New Id="Object" Shortcut="o" />
+            <New Id="String" Shortcut="s" DefaultIdentifier="s" />
+            <Add Tags="TryParse">
+              <New Id="Boolean" Shortcut="b" DefaultIdentifier="f" />
+              <New Id="Int32" Shortcut="i" DefaultValue="0" DefaultIdentifier="i" />
+              <New Id="DateTime" Shortcut="dt"  DefaultIdentifier="dt" />
+              <New Id="Int64" Shortcut="l" DefaultValue="0" DefaultIdentifier="i" />
+              <Add Tags="Disabled">
+                <New Id="Char" Shortcut="c" DefaultIdentifier="ch" />
+                <New Id="Decimal" Shortcut="dl" DefaultValue="0" />
+                <New Id="Double" Shortcut="de" DefaultValue="0" />
+                <New Id="Single" Shortcut="se" DefaultValue="0" />
+              </Add>
+            </Add>
+            <Add Tags="Initializer">
+              <New Id="Collection" Shortcut="c" />
+              <New Id="ObservableCollection" Shortcut="oc" />
+              <New Id="Dictionary" Shortcut="d" Tags="Dictionary" />
+              <New Id="HashSet" Shortcut="hs" />
+              <New Id="List" Shortcut="l" />
+              <New Id="SortedDictionary" Shortcut="sd" Tags="Dictionary" />
+              <New Id="SortedSet" Shortcut="ss" />
+            </Add>
+            <New Id="ReadOnlyCollection" Shortcut="rc" Tags="ArgumentList" />
+            <New Id="ReadOnlyDictionary" Shortcut="rd">
+              <Add Tags="Dictionary" />
+              <Add Tags="ArgumentList" />
+            </New>
+            <New Id="LinkedList" Shortcut="ll" />
+            <New Id="Queue" Shortcut="q" />
+            <New Id="Stack" Shortcut="s" />
+            <New Id="IEnumerable" Shortcut="e" Tags="Interface" />
+            <New Id="Array" Shortcut="a" />
+          </BaseRecords>
+          <Records>
+            <Set Language="CSharp">
+              <New Id="This" Title="containing type name" Keyword="this" DefaultValue="null" />
+              <New Id="Void" Title="void" Keyword="void" />
+              <New Id="Boolean" Keyword="bool" DefaultValue="false" />
+              <New Id="Int32" Keyword="int" />
+              <New Id="Object" Keyword="object" DefaultValue="null" />
+              <New Id="String" Keyword="string" DefaultValue="null" />
+              <New Id="Decimal" Keyword="decimal" />
+              <New Id="Double" Keyword="double" />
+              <New Id="Int64" Keyword="long" />
+              <New Id="Single" Keyword="float" />
+              <New Id="Char" Keyword="char" DefaultValue="'\0'" />
+              <New Id="DateTime" Keyword="DateTime" DefaultValue="DateTime.MinValue" Namespace="System" />
+            </Set>
+            <Set Language="VisualBasic">
+              <New Id="This" Title="containing type name" Keyword="this" DefaultValue="Nothing" />
+              <New Id="Void" Title="Sub" Keyword="Sub" />
+              <New Id="Boolean" Keyword="Boolean" DefaultValue="False" />
+              <New Id="Int32" Keyword="Integer" />
+              <New Id="Object" Keyword="Object" DefaultValue="Nothing" />
+              <New Id="String" Keyword="String" DefaultValue="Nothing" />
+              <New Id="Decimal" Keyword="Decimal" />
+              <New Id="Double" Keyword="Double" />
+              <New Id="Int64" Keyword="Long" />
+              <New Id="Single" Keyword="Single" />
+              <New Id="Char" Keyword="Char" DefaultValue='"0"c' />
+              <New Id="DateTime" Keyword="Date" DefaultValue="Date.MinValue" />
+            </Set>
+            <Add Tags="Collection">
+              <Set Namespace="System.Collections.Generic">
+                <New Id="Dictionary" />
+                <New Id="HashSet" />
+                <New Id="List" />
+                <New Id="LinkedList" />
+                <New Id="Queue" />
+                <New Id="SortedDictionary" />
+                <New Id="SortedSet" />
+                <New Id="Stack" />
+                <Add Tags="Disabled">
+                  <New Id="IEnumerable" />
+                </Add>
+              </Set>
+              <Set Namespace="System.Collections.ObjectModel">
+                <New Id="Collection" />
+                <New Id="ObservableCollection" />
+                <New Id="ReadOnlyCollection" />
+                <New Id="ReadOnlyDictionary" />
+              </Set>
+              <Set Namespace="System.Collections.Immutable">
+                <Add Tags="Immutable">
+                  <Prefix Id="Immutable" Shortcut="i">
+                    <New Id="Array" />
+                    <New Id="Dictionary" />
+                    <New Id="HashSet" />
+                    <New Id="List" />
+                    <New Id="Queue" />
+                    <New Id="Stack" />
+                    <New Id="SortedDictionary" />
+                    <New Id="SortedSet" />
+                  </Prefix>
+                </Add>
+              </Set>
+            </Add>
+          </Records>
+        </Entity>
+      </Entities>
+    </Entity>
+  </Entities>
+</Document>

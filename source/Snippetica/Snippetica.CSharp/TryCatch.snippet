@@ -7,6 +7,7 @@
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
     </SnippetTypes>
   </Header>
   <Snippet>
@@ -29,11 +30,11 @@
     </Declarations>
     <Code Language="CSharp"><![CDATA[try
 {
-    $end$
+	$selected$$end$
 }
 catch ($exceptionType$ $identifier$)
 {
-    throw;
+	throw;
 }]]></Code>
   </Snippet>
 </CodeSnippet>

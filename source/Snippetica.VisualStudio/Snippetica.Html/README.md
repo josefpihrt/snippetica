@@ -1,151 +1,154 @@
-﻿## Snippetica.Html
+## Snippetica.Html
+
+### Snippet Browser
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs&language=html).
 
 ### Quick Reference
 
 * Snippet can be inserted by providing full name of an element (for example **div**).
 * If you want to provide element's content right during snippet insertion you can do it by appending **x** to the element name (for example **divx**).
 
-Character\(s\) | Description | Comment
------------- | ----------- | -------
-a|\(element\) with attribute|\-
-e|element|\-
-s|self\-closing \(element\)|\-
-x|\(element\) with content|\-
+#### 
 
-* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=Html)
+Shortcut | Description | Comment
+-------- | ----------- | -------
+a|\(element\) with attribute|suffix
+e|element|\-
+s|self\-closing \(element\)|suffix
+x|\(element\) with content|suffix
 
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
-[a](a.snippet)|a
-[abbr](abbr.snippet)|abbr
-[acronym](acronym.snippet)|acronym
-[address](address.snippet)|address
-[applet](applet.snippet)|applet
-[area](area.snippet)|area
-[article](article.snippet)|article
-[aside](aside.snippet)|aside
-[audio](audio.snippet)|audio
-[b](b.snippet)|b
-[base](base.snippet)|base
-[basefont](basefont.snippet)|basefont
-[bdi](bdi.snippet)|bdi
-[bdo](bdo.snippet)|bdo
-[big](big.snippet)|big
-[blockquote](blockquote.snippet)|blockquote
-[body](body.snippet)|body
-[br](br.snippet)|br
-[button](button.snippet)|button
-[canvas](canvas.snippet)|canvas
-[caption](caption.snippet)|caption
-[center](center.snippet)|center
-[cite](cite.snippet)|cite
-[code](code.snippet)|code
-[col](col.snippet)|col
-[colgroup](colgroup.snippet)|colgroup
-[comment](Comment.snippet)|c
-[datalist](datalist.snippet)|datalist
-[dd](dd.snippet)|dd
-[del\+ins](del_ins.snippet)|delins
-[del](del.snippet)|del
-[details](details.snippet)|details
-[dfn](dfn.snippet)|dfn
-[dialog](dialog.snippet)|dialog
-[dir](dir.snippet)|dir
-[div](div.snippet)|div
-[dl](dl.snippet)|dl
-[dt](dt.snippet)|dt
-[element \(with attribute, with content\)](ElementWithAttributeWithContent.snippet)|eax
-[element \(with attribute\)](ElementWithAttribute.snippet)|ea
-[element \(with content\)](ElementWithContent.snippet)|ex
-[element](Element.snippet)|e
-[em](em.snippet)|em
-[embed](embed.snippet)|embed
-[fieldset](fieldset.snippet)|fieldset
-[figure](figure.snippet)|figure
-[font](font.snippet)|font
-[footer](footer.snippet)|footer
-[form](form.snippet)|form
-[frame](frame.snippet)|frame
-[frameset](frameset.snippet)|frameset
-[h1](h1.snippet)|h
-[h2](h2.snippet)|h2
-[h2](h2_.snippet)|hh
-[h3](h3.snippet)|h3
-[h3](h3_.snippet)|hhh
-[h4](h4.snippet)|h4
-[h5](h5.snippet)|h5
-[h6](h6.snippet)|h6
-[head](head.snippet)|head
-[header](header.snippet)|header
-[hr](hr.snippet)|hr
-[html](html.snippet)|html
-[i](i.snippet)|i
-[iframe](iframe.snippet)|iframe
-[img](img.snippet)|img
-[input](input.snippet)|input
-[ins](ins.snippet)|ins
-[kbd](kbd.snippet)|kbd
-[keygen](keygen.snippet)|keygen
-[label](label.snippet)|label
-[legend](legend.snippet)|legend
-[li](li.snippet)|li
-[link](link.snippet)|link
-[main](main.snippet)|main
-[map](map.snippet)|map
-[mark](mark.snippet)|mark
-[menu](menu.snippet)|menu
-[menuitem](menuitem.snippet)|menuitem
-[meta](meta.snippet)|meta
-[meter](meter.snippet)|meter
-[nav](nav.snippet)|nav
-[noframes](noframes.snippet)|noframes
-[noscript](noscript.snippet)|noscript
-[object](object.snippet)|object
-[ol](ol.snippet)|ol
-[optgroup](optgroup.snippet)|optgroup
-[option](option.snippet)|option
-[output](output.snippet)|output
-[p](p.snippet)|p
-[param](param.snippet)|param
-[pre](pre.snippet)|pre
-[progress](progress.snippet)|progress
-[q](q.snippet)|q
-[region](region.snippet)|r
-[rp](rp.snippet)|rp
-[rt](rt.snippet)|rt
-[ruby](ruby.snippet)|ruby
-[s](s.snippet)|s
-[samp](samp.snippet)|samp
-[script](script.snippet)|script
-[section](section.snippet)|section
-[select](select.snippet)|select
-[self\-closing element \(with attribute\)](SelfClosingElementWithAttribute.snippet)|eas
-[self\-closing element](SelfClosingElement.snippet)|es
-[small](small.snippet)|small
-[source](source.snippet)|source
-[span](span.snippet)|span
-[strike](strike.snippet)|strike
-[strong](strong.snippet)|strong
-[style](style.snippet)|style
-[sub](sub.snippet)|sub
-[summary](summary.snippet)|summary
-[sup](sup.snippet)|sup
-[table](table.snippet)|table
-[tbody](tbody.snippet)|tbody
-[td](td.snippet)|td
-[textarea](textarea.snippet)|textarea
-[tfoot](tfoot.snippet)|tfoot
-[th](th.snippet)|th
-[thead](thead.snippet)|thead
-[time](time.snippet)|time
-[title](title.snippet)|title
-[tr](tr.snippet)|tr
-[track](track.snippet)|track
-[tt](tt.snippet)|tt
-[u](u.snippet)|u
-[ul](ul.snippet)|ul
-[var](var.snippet)|var
-[video](video.snippet)|video
-[wbr](wbr.snippet)|wbr
+Shortcut | Title
+-------- | -----
+a|[a](a.snippet)
+abbr|[abbr](abbr.snippet)
+acronym|[acronym](acronym.snippet)
+address|[address](address.snippet)
+applet|[applet](applet.snippet)
+area|[area](area.snippet)
+article|[article](article.snippet)
+aside|[aside](aside.snippet)
+audio|[audio](audio.snippet)
+b|[b](b.snippet)
+base|[base](base.snippet)
+basefont|[basefont](basefont.snippet)
+bdi|[bdi](bdi.snippet)
+bdo|[bdo](bdo.snippet)
+big|[big](big.snippet)
+blockquote|[blockquote](blockquote.snippet)
+body|[body](body.snippet)
+br|[br](br.snippet)
+button|[button](button.snippet)
+c|[comment](Comment.snippet)
+canvas|[canvas](canvas.snippet)
+caption|[caption](caption.snippet)
+cdata|[CDATA section](CDataSection.snippet)
+cdatax|[CDATA section \(with content\)](CDataSectionWithContent.snippet)
+center|[center](center.snippet)
+cite|[cite](cite.snippet)
+code|[code](code.snippet)
+col|[col](col.snippet)
+colgroup|[colgroup](colgroup.snippet)
+datalist|[datalist](datalist.snippet)
+dd|[dd](dd.snippet)
+del|[del](del.snippet)
+delins|[del\+ins](del_ins.snippet)
+details|[details](details.snippet)
+dfn|[dfn](dfn.snippet)
+dialog|[dialog](dialog.snippet)
+dir|[dir](dir.snippet)
+div|[div](div.snippet)
+dl|[dl](dl.snippet)
+dt|[dt](dt.snippet)
+e|[element](Element.snippet)
+ea|[element \(with attribute\)](ElementWithAttribute.snippet)
+eas|[self\-closing element \(with attribute\)](SelfClosingElementWithAttribute.snippet)
+eax|[element \(with attribute, with content\)](ElementWithAttributeWithContent.snippet)
+em|[em](em.snippet)
+embed|[embed](embed.snippet)
+es|[self\-closing element](SelfClosingElement.snippet)
+ex|[element \(with content\)](ElementWithContent.snippet)
+fieldset|[fieldset](fieldset.snippet)
+figure|[figure](figure.snippet)
+font|[font](font.snippet)
+footer|[footer](footer.snippet)
+form|[form](form.snippet)
+frame|[frame](frame.snippet)
+frameset|[frameset](frameset.snippet)
+h|[h1](h1.snippet)
+h2|[h2](h2.snippet)
+h3|[h3](h3.snippet)
+h4|[h4](h4.snippet)
+h5|[h5](h5.snippet)
+h6|[h6](h6.snippet)
+head|[head](head.snippet)
+header|[header](header.snippet)
+hr|[hr](hr.snippet)
+html|[html](html.snippet)
+i|[i](i.snippet)
+iframe|[iframe](iframe.snippet)
+img|[img](img.snippet)
+input|[input](input.snippet)
+ins|[ins](ins.snippet)
+kbd|[kbd](kbd.snippet)
+keygen|[keygen](keygen.snippet)
+label|[label](label.snippet)
+legend|[legend](legend.snippet)
+li|[li](li.snippet)
+link|[link](link.snippet)
+main|[main](main.snippet)
+map|[map](map.snippet)
+mark|[mark](mark.snippet)
+menu|[menu](menu.snippet)
+menuitem|[menuitem](menuitem.snippet)
+meta|[meta](meta.snippet)
+meter|[meter](meter.snippet)
+nav|[nav](nav.snippet)
+noframes|[noframes](noframes.snippet)
+noscript|[noscript](noscript.snippet)
+object|[object](object.snippet)
+ol|[ol](ol.snippet)
+optgroup|[optgroup](optgroup.snippet)
+option|[option](option.snippet)
+output|[output](output.snippet)
+p|[p](p.snippet)
+param|[param](param.snippet)
+pre|[pre](pre.snippet)
+progress|[progress](progress.snippet)
+q|[q](q.snippet)
+r|[region](region.snippet)
+rp|[rp](rp.snippet)
+rt|[rt](rt.snippet)
+ruby|[ruby](ruby.snippet)
+s|[s](s.snippet)
+samp|[samp](samp.snippet)
+script|[script](script.snippet)
+section|[section](section.snippet)
+select|[select](select.snippet)
+small|[small](small.snippet)
+source|[source](source.snippet)
+span|[span](span.snippet)
+strike|[strike](strike.snippet)
+strong|[strong](strong.snippet)
+style|[style](style.snippet)
+sub|[sub](sub.snippet)
+summary|[summary](summary.snippet)
+sup|[sup](sup.snippet)
+table|[table](table.snippet)
+tbody|[tbody](tbody.snippet)
+td|[td](td.snippet)
+textarea|[textarea](textarea.snippet)
+tfoot|[tfoot](tfoot.snippet)
+th|[th](th.snippet)
+thead|[thead](thead.snippet)
+time|[time](time.snippet)
+title|[title](title.snippet)
+tr|[tr](tr.snippet)
+track|[track](track.snippet)
+tt|[tt](tt.snippet)
+u|[u](u.snippet)
+ul|[ul](ul.snippet)
+var|[var](var.snippet)
+video|[video](video.snippet)
+wbr|[wbr](wbr.snippet)

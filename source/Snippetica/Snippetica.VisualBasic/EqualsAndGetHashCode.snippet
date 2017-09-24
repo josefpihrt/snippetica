@@ -17,7 +17,7 @@
     </Imports>
     <Declarations>
       <Literal Editable="false">
-        <ID>thisname</ID>
+        <ID>thisName</ID>
         <ToolTip>Containing type name</ToolTip>
         <Default>ThisName</Default>
         <Function>ClassName()</Function>
@@ -25,18 +25,18 @@
     </Declarations>
     <Code Language="VB"><![CDATA[Public Overrides Function Equals(obj As object) As Boolean
 
-    Dim other = Nothing
-    If TryCast(other, $thisname$) Is Nothing Then
-        Return False
-    End If
+	Dim other = Nothing
+	If TryCast(other, $thisName$) Is Nothing Then
+		Return False
+	End If
 
-    $end$
-    Throw New NotImplementedException()
+	$end$
+	Throw New NotImplementedException()
 
 End Function
 
 Public Overrides Function GetHashCode() As Integer
-    Throw New NotImplementedException()
+	Throw New NotImplementedException()
 End Function]]></Code>
   </Snippet>
 </CodeSnippet>

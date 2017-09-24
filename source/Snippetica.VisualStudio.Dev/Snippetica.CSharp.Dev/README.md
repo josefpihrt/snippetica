@@ -1,115 +1,112 @@
-﻿## Snippetica.CSharp.Dev
+## Snippetica.CSharp.Dev
 
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
-[?: operator \(equal to null\)](ConditionalOperatorEqualToNull.snippet)|con
-[?: operator \(not equal to null\)](ConditionalOperatorNotEqualToNull.snippet)|conn
-[array type](ArrayOfTType.snippet)|a
-[Assembly attribute](AssemblyAttribute.snippet)|ae
-[break statement](BreakStatement.snippet)|bk
-[c Enumerable\.Cast](EnumerableCast.snippet)|q
-[Conditional attribute](ConditionalAttribute.snippet)|ae
-[continue statement](ContinueStatement.snippet)|ce
-[Debug\.Assert \!= null](DebugAssertNotNull.snippet)|dann
-[DebuggerDisplay attribute](DebuggerDisplayAttribute.snippet)|ae
-[DebuggerStepThrough attribute](DebuggerStepThroughAttribute.snippet)|ae
-[Dictionary\<TKey, TValue\> type](DictionaryOfTKeyTValueType.snippet)|gd
-[Dictionary\<TKey, TValue\> variable](DictionaryOfTKeyTValueVariable.snippet)|vd
-[Directory\.CreateDirectory](DirectoryCreateDirectory.snippet)|iod
-[Directory\.Delete](DirectoryDelete.snippet)|iod
-[Directory\.EnumerateDirectories](DirectoryEnumerateDirectories.snippet)|iod
-[Directory\.EnumerateFiles](DirectoryEnumerateFiles.snippet)|iod
-[Directory\.Exists](DirectoryExists.snippet)|iod
-[Directory\.GetDirectories](DirectoryGetDirectories.snippet)|iod
-[Directory\.GetFiles](DirectoryGetFiles.snippet)|iod
-[Directory\.Move](DirectoryMove.snippet)|iod
-[do while not null](DoNotNull.snippet)|donn
-[do while null](DoNull.snippet)|don
-[e Enumerable\.Empty](EnumerableEmpty.snippet)|q
-[f Enumerable\.First](EnumerableFirst.snippet)|q
-[File Exists](FileExists.snippet)|iof
-[File\.Copy](FileCopy.snippet)|iof
-[File\.Delete](FileDelete.snippet)|iof
-[File\.Move](FileMove.snippet)|iof
-[File\.ReadAllLines](FileReadAllLines.snippet)|iof
-[File\.ReadAllText](FileReadAllText.snippet)|iof
-[File\.ReadLines](FileReadLines.snippet)|iof
-[File\.WriteAllLines](FileWriteAllLines.snippet)|iof
-[File\.WriteAllText](FileWriteAllText.snippet)|iof
-[FileStream Variable](FileStreamVariable.snippet)|u
-[Flags attribute](FlagsAttribute.snippet)|ae
-[fod Enumerable\.FirstOrDefault](EnumerableFirstOrDefault.snippet)|q
-[gb Enumerable\.GroupBy](EnumerableGroupBy.snippet)|q
-[gj Enumerable\.GroupJoin](EnumerableGroupJoin.snippet)|q
-[HashSet\<T\> type](HashSetOfTType.snippet)|ghs
-[HashSet\<T\> variable](HashSetOfTVariable.snippet)|vhs
-[if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)|iffsne
-[if \!string\.IsNullOrWhiteSpace](IfNotStringIsNullOrWhiteSpace.snippet)|iffsnw
-[if Enum\.TryParse](IfEnumTryParse.snippet)|ifemtp
-[if not Enum\.TryParse](IfNotEnumTryParse.snippet)|iffemtp
-[if string\.IsNullOrEmpty](IfStringIsNullOrEmpty.snippet)|ifsne
-[if string\.IsNullOrWhiteSpace](IfStringIsNullOrWhiteSpace.snippet)|ifsnw
-[internal abstract modifiers](InternalAbstractModifiers.snippet)|x
-[internal modifier](InternalModifier.snippet)|x
-[internal static modifiers](InternalStaticModifiers.snippet)|x
-[internal virtual modifiers](InternalVirtualModifiers.snippet)|x
-[j Enumerable\.Join](EnumerableJoin.snippet)|q
-[l Enumerable\.Last](EnumerableLast.snippet)|q
-[lambda expression with 2 parameters](LambdaExpressionWithTwoParameters.snippet)|l2
-[List\<T\> type](ListOfTType.snippet)|gl
-[List\<T\> variable](ListOfTVariable.snippet)|vl
-[lod Enumerable\.LastOrDefault](EnumerableLastOrDefault.snippet)|q
-[MemoryStream Variable](MemoryStreamVariable.snippet)|u
-[mn Enumerable\.Min](EnumerableMin.snippet)|q
-[mx Enumerable\.Max](EnumerableMax.snippet)|q
-[namespace](Namespace.snippet)|ns
-[new array ](NewArrayOfT.snippet)|na
-[ob Enumerable\.OrderBy](EnumerableOrderBy.snippet)|q
-[obd Enumerable\.OrderByDescending](EnumerableOrderByDescending.snippet)|q
-[ObservableCollection\<T\> type](ObservableCollectionOfTType.snippet)|goc
-[ObservableCollection\<T\> variable](ObservableCollectionOfTVariable.snippet)|voc
-[Obsolete attribute](ObsoleteAttribute.snippet)|ae
-[ot Enumerable\.OfType](EnumerableOfType.snippet)|q
-[override modifier](OverrideModifier.snippet)|oe
-[Path\.Combine](PathCombine.snippet)|iop
-[Path\.GetDirectoryName](PathGetDirectoryName.snippet)|iop
-[Path\.GetExtension](PathGetExtension.snippet)|iop
-[Path\.GetFileName](PathGetFileName.snippet)|iop
-[Path\.GetFileNameWithoutExtension](PathGetFileNameWithoutExtension.snippet)|iop
-[Path\.GetFullPath](PathGetFullPath.snippet)|iop
-[Path\.HasExtension](PathHasExtension.snippet)|iop
-[Path\.ChangeExtension](PathChangeExtension.snippet)|iop
-[private modifier](PrivateModifier.snippet)|x
-[private static modifiers](PrivateStaticModifiers.snippet)|x
-[protected abstract modifiers](ProtectedAbstractModifiers.snippet)|x
-[protected modifier](ProtectedModifier.snippet)|x
-[protected virtual modifiers](ProtectedVirtualModifiers.snippet)|x
-[public abstract modifiers](PublicAbstractModifiers.snippet)|x
-[public modifier](PublicModifier.snippet)|x
-[public static modifiers](PublicStaticModifiers.snippet)|x
-[public virtual modifiers](PublicVirtualModifiers.snippet)|x
-[readonly modifier](ReadOnlyModifier.snippet)|ro
-[Regex type](Regex.snippet)|rx
-[return new containing type](ReturnNewThis.snippet)|rnthis
-[return new](ReturnNew.snippet)|rn
-[return statement](ReturnStatement.snippet)|re
-[s Enumerable\.Select](EnumerableSelect.snippet)|q
-[sm Enumerable\.SelectMany](EnumerableSelectMany.snippet)|q
-[sod Enumerable\.SingleOrDefault](EnumerableSingleOrDefault.snippet)|q
-[StringBuilder variable](StringBuilderVariable.snippet)|vsb
-[sw Enumerable\.SkipWhile](EnumerableSkipWhile.snippet)|q
-[tb Enumerable\.ThenBy](EnumerableThenBy.snippet)|q
-[tbd Enumerable\.ThenByDescending](EnumerableThenByDescending.snippet)|q
-[throw statement](ThrowStatement.snippet)|tw
-[TimeSpan type](TimeSpanType.snippet)|ts
-[tw Enumerable\.TakeWhile](EnumerableTakeWhile.snippet)|q
-[variable declaration with as operator \+ if not null](VariableAsTIfNotNull.snippet)|vasnn
-[w Enumerable\.Where](EnumerableWhere.snippet)|q
-[while not null](WhileNotNull.snippet)|wenn
-[while null](WhileNull.snippet)|wen
-[wnn Enumerable\.Where not equal to null](EnumerableWhereNotNull.snippet)|q
-[yield return new containing type](YieldReturnNewThis.snippet)|yrnthis
-[yield return new](YieldReturnNew.snippet)|yrn
-[z Enumerable\.Zip](EnumerableZip.snippet)|q
+Shortcut | Title
+-------- | -----
+a|[array type](ArrayOfTType.snippet)
+ae|[Assembly attribute](AssemblyAttribute.snippet)
+ae|[Conditional attribute](ConditionalAttribute.snippet)
+ae|[DebuggerDisplay attribute](DebuggerDisplayAttribute.snippet)
+ae|[DebuggerStepThrough attribute](DebuggerStepThroughAttribute.snippet)
+ae|[Flags attribute](FlagsAttribute.snippet)
+ae|[Obsolete attribute](ObsoleteAttribute.snippet)
+bk|[break statement](BreakStatement.snippet)
+ce|[continue statement](ContinueStatement.snippet)
+daxn|[Debug\.Assert \!= null](DebugAssertNotNull.snippet)
+gd|[Dictionary&lt;TKey, TValue&gt; type](DictionaryOfTKeyTValueType.snippet)
+ghs|[HashSet&lt;T&gt; type](HashSetOfTType.snippet)
+gl|[List&lt;T&gt; type](ListOfTType.snippet)
+goc|[ObservableCollection&lt;T&gt; type](ObservableCollectionOfTType.snippet)
+ifemtp|[if Enum\.TryParse](IfEnumTryParse.snippet)
+ifnre|[if equal to null return](IfEqualToNullReturn.snippet)
+ifnref|[if equal to null return false](IfEqualToNullReturnFalse.snippet)
+ifnren|[if equal to null return null](IfEqualToNullReturnNull.snippet)
+ifnret|[if equal to null return true](IfEqualToNullReturnTrue.snippet)
+ifre|[if return](IfReturn.snippet)
+ifref|[if return false](IfReturnFalse.snippet)
+ifren|[if return null](IfReturnNull.snippet)
+ifret|[if return true](IfReturnTrue.snippet)
+ifsne|[if string\.IsNullOrEmpty](IfStringIsNullOrEmpty.snippet)
+ifsnw|[if string\.IsNullOrWhiteSpace](IfStringIsNullOrWhiteSpace.snippet)
+ifxemtp|[if not Enum\.TryParse](IfNotEnumTryParse.snippet)
+ifxnre|[if not equal to null return](IfNotEqualToNullReturn.snippet)
+ifxnref|[if not equal to null return false](IfNotEqualToNullReturnFalse.snippet)
+ifxnren|[if not equal to null return null](IfNotEqualToNullReturnNull.snippet)
+ifxnret|[if not equal to null return true](IfNotEqualToNullReturnTrue.snippet)
+ifxre|[if not return](IfNotReturn.snippet)
+ifxref|[if not return false](IfNotReturnFalse.snippet)
+ifxren|[if not return null](IfNotReturnNull.snippet)
+ifxret|[if not return true](IfNotReturnTrue.snippet)
+ifxsne|[if \!string\.IsNullOrEmpty](IfNotStringIsNullOrEmpty.snippet)
+ifxsnw|[if \!string\.IsNullOrWhiteSpace](IfNotStringIsNullOrWhiteSpace.snippet)
+iod|[Directory\.CreateDirectory](DirectoryCreateDirectory.snippet)
+iod|[Directory\.Delete](DirectoryDelete.snippet)
+iod|[Directory\.EnumerateDirectories](DirectoryEnumerateDirectories.snippet)
+iod|[Directory\.EnumerateFiles](DirectoryEnumerateFiles.snippet)
+iod|[Directory\.Exists](DirectoryExists.snippet)
+iod|[Directory\.GetDirectories](DirectoryGetDirectories.snippet)
+iod|[Directory\.GetFiles](DirectoryGetFiles.snippet)
+iod|[Directory\.Move](DirectoryMove.snippet)
+iof|[File Exists](FileExists.snippet)
+iof|[File\.Copy](FileCopy.snippet)
+iof|[File\.Delete](FileDelete.snippet)
+iof|[File\.Move](FileMove.snippet)
+iof|[File\.ReadAllLines](FileReadAllLines.snippet)
+iof|[File\.ReadAllText](FileReadAllText.snippet)
+iof|[File\.ReadLines](FileReadLines.snippet)
+iof|[File\.WriteAllLines](FileWriteAllLines.snippet)
+iof|[File\.WriteAllText](FileWriteAllText.snippet)
+iop|[Path\.Combine](PathCombine.snippet)
+iop|[Path\.GetDirectoryName](PathGetDirectoryName.snippet)
+iop|[Path\.GetExtension](PathGetExtension.snippet)
+iop|[Path\.GetFileName](PathGetFileName.snippet)
+iop|[Path\.GetFileNameWithoutExtension](PathGetFileNameWithoutExtension.snippet)
+iop|[Path\.GetFullPath](PathGetFullPath.snippet)
+iop|[Path\.HasExtension](PathHasExtension.snippet)
+iop|[Path\.ChangeExtension](PathChangeExtension.snippet)
+lf|[local function](LocalFunction.snippet)
+na|[new array ](NewArrayOfT.snippet)
+ns|[namespace](Namespace.snippet)
+oe|[override modifier](OverrideModifier.snippet)
+q|[Enumerable\.Cast](EnumerableCast.snippet)
+q|[Enumerable\.Empty](EnumerableEmpty.snippet)
+q|[Enumerable\.First](EnumerableFirst.snippet)
+q|[Enumerable\.FirstOrDefault](EnumerableFirstOrDefault.snippet)
+q|[Enumerable\.GroupBy](EnumerableGroupBy.snippet)
+q|[Enumerable\.GroupJoin](EnumerableGroupJoin.snippet)
+q|[Enumerable\.Join](EnumerableJoin.snippet)
+q|[Enumerable\.Last](EnumerableLast.snippet)
+q|[Enumerable\.LastOrDefault](EnumerableLastOrDefault.snippet)
+q|[Enumerable\.Max](EnumerableMax.snippet)
+q|[Enumerable\.Min](EnumerableMin.snippet)
+q|[Enumerable\.OfType](EnumerableOfType.snippet)
+q|[Enumerable\.OrderBy](EnumerableOrderBy.snippet)
+q|[Enumerable\.OrderByDescending](EnumerableOrderByDescending.snippet)
+q|[Enumerable\.Select](EnumerableSelect.snippet)
+q|[Enumerable\.SelectMany](EnumerableSelectMany.snippet)
+q|[Enumerable\.SingleOrDefault](EnumerableSingleOrDefault.snippet)
+q|[Enumerable\.SkipWhile](EnumerableSkipWhile.snippet)
+q|[Enumerable\.TakeWhile](EnumerableTakeWhile.snippet)
+q|[Enumerable\.ThenBy](EnumerableThenBy.snippet)
+q|[Enumerable\.ThenByDescending](EnumerableThenByDescending.snippet)
+q|[Enumerable\.Where not equal to null](EnumerableWhereNotNull.snippet)
+q|[Enumerable\.Where](EnumerableWhere.snippet)
+q|[Enumerable\.Zip](EnumerableZip.snippet)
+re|[return statement](ReturnStatement.snippet)
+rn|[return new](ReturnNew.snippet)
+rnthis|[return new containing type](ReturnNewThis.snippet)
+rx|[Regex type](Regex.snippet)
+ts|[TimeSpan type](TimeSpanType.snippet)
+tw|[throw statement](ThrowStatement.snippet)
+u|[FileStream Variable](FileStreamVariable.snippet)
+u|[MemoryStream Variable](MemoryStreamVariable.snippet)
+vasxn|[variable declaration with as operator \+ if not null](VariableAsTIfNotNull.snippet)
+vd|[Dictionary&lt;TKey, TValue&gt; variable](DictionaryOfTKeyTValueVariable.snippet)
+vhs|[HashSet&lt;T&gt; variable](HashSetOfTVariable.snippet)
+vl|[List&lt;T&gt; variable](ListOfTVariable.snippet)
+voc|[ObservableCollection&lt;T&gt; variable](ObservableCollectionOfTVariable.snippet)
+vsb|[StringBuilder variable](StringBuilderVariable.snippet)
+x|[\! operator](LogicalNotOperator.snippet)
+yrn|[yield return new](YieldReturnNew.snippet)
+yrnthis|[yield return new containing type](YieldReturnNewThis.snippet)

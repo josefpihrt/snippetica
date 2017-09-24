@@ -9,7 +9,7 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -40,34 +40,34 @@
     </Declarations>
     <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IEqualityComparer
 {
-    new public bool Equals(object x, object y)
-    {
-        if (object.ReferenceEquals(x, y))
-        {
-            return true;
-        }
+	new public bool Equals(object x, object y)
+	{
+		if (object.ReferenceEquals(x, y))
+		{
+			return true;
+		}
 
-        if (x == null || y == null)
-        {
-            return false;
-        }
+		if (x == null || y == null)
+		{
+			return false;
+		}
 
-        var a = ($type$)x;
-        var b = ($type$)y;
+		var a = ($type$)x;
+		var b = ($type$)y;
 
-        $end$
-        throw new NotImplementedException();
-    }
+		$end$
+		throw new NotImplementedException();
+	}
 
-    public int GetHashCode(object obj)
-    {
-        if (obj == null)
-        {
-            return 0;
-        }
+	public int GetHashCode(object obj)
+	{
+		if (obj == null)
+		{
+			return 0;
+		}
 
-        throw new NotImplementedException();
-    }
+		throw new NotImplementedException();
+	}
 }]]></Code>
   </Snippet>
 </CodeSnippet>

@@ -1,0 +1,30 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>interface read-only @type@ property</Title>
+    <Shortcut>_rp</Shortcut>
+    <Description>interface read-only @type@ property</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-GenerateType</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>_type</ID>
+        <ToolTip>Property type</ToolTip>
+        <Default>Object</Default>
+      </Literal>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Property name</ToolTip>
+        <Default>PropertyName</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[ReadOnly Property $name$ As $_type$$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

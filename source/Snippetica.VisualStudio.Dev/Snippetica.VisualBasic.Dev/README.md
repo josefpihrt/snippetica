@@ -1,27 +1,26 @@
-﻿## Snippetica.VisualBasic.Dev
+## Snippetica.VisualBasic.Dev
 
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
-[array type](ArrayOfTType.snippet)|a
-[Dictionary\(Of TKey, TValue\) variable](DictionaryOfTKeyTValueVariable.snippet)|vd
-[HashSet\(Of T\) type](HashSetOfTType.snippet)|ghs
-[HashSet\(Of T\) variable](HashSetOfTVariable.snippet)|vhs
-[if Enum\.TryParse](IfEnumTryParse.snippet)|ifemtp
-[if not Enum\.TryParse](IfNotEnumTryParse.snippet)|iffemtp
-[Lambda expression with 2 parameters](LambdaExpressionWithTwoParameters.snippet)|l2
-[List\(Of T\) type](ListOfTType.snippet)|gl
-[List\(Of T\) variable](ListOfTVariable.snippet)|vl
-[namespace](Namespace.snippet)|ns
-[new array ](NewArrayOfT.snippet)|na
-[Object keyword](ObjectKeyword.snippet)|o
-[ObservableCollection\(Of T\) type](ObservableCollectionOfTType.snippet)|goc
-[ObservableCollection\(Of T\) variable](ObservableCollectionOfTVariable.snippet)|voc
-[Regex type](Regex.snippet)|rx
-[Return keyword](ReturnKeyword.snippet)|r
-[String keyword](StringKeyword.snippet)|s
-[StringBuilder variable](StringBuilderVariable.snippet)|vsb
-[Throw statement](ThrowStatement.snippet)|tw
-[TimeSpan type](TimeSpanType.snippet)|ts
-[Yield keyword](YieldKeyword.snippet)|y
+Shortcut | Title
+-------- | -----
+a|[array type](ArrayOfTType.snippet)
+ghs|[HashSet\(Of T\) type](HashSetOfTType.snippet)
+gl|[List\(Of T\) type](ListOfTType.snippet)
+goc|[ObservableCollection\(Of T\) type](ObservableCollectionOfTType.snippet)
+ifemtp|[if Enum\.TryParse](IfEnumTryParse.snippet)
+ifxemtp|[if not Enum\.TryParse](IfNotEnumTryParse.snippet)
+na|[new array ](NewArrayOfT.snippet)
+ns|[namespace](Namespace.snippet)
+o|[Object keyword](ObjectKeyword.snippet)
+r|[Return keyword](ReturnKeyword.snippet)
+rx|[Regex type](Regex.snippet)
+s|[String keyword](StringKeyword.snippet)
+ts|[TimeSpan type](TimeSpanType.snippet)
+tw|[Throw statement](ThrowStatement.snippet)
+vd|[Dictionary\(Of TKey, TValue\) variable](DictionaryOfTKeyTValueVariable.snippet)
+vhs|[HashSet\(Of T\) variable](HashSetOfTVariable.snippet)
+vl|[List\(Of T\) variable](ListOfTVariable.snippet)
+voc|[ObservableCollection\(Of T\) variable](ObservableCollectionOfTVariable.snippet)
+vsb|[StringBuilder variable](StringBuilderVariable.snippet)
+y|[Yield keyword](YieldKeyword.snippet)

@@ -1,10 +1,10 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Xml.Linq;
 using Pihrtsoft.Records.Utilities;
-using System.Collections.Generic;
 
 namespace Pihrtsoft.Records
 {
@@ -37,14 +37,24 @@ namespace Pihrtsoft.Records
                     return ElementKind.BaseRecords;
                 case ElementNames.New:
                     return ElementKind.New;
-                case ElementNames.Tag:
                 case ElementNames.Set:
+                    return ElementKind.Set;
                 case ElementNames.Add:
+                    return ElementKind.Add;
+                case ElementNames.AddRange:
+                    return ElementKind.AddRange;
+                case ElementNames.Remove:
+                    return ElementKind.Remove;
+                case ElementNames.RemoveRange:
+                    return ElementKind.RemoveRange;
                 case ElementNames.Postfix:
+                    return ElementKind.Postfix;
                 case ElementNames.PostfixMany:
+                    return ElementKind.PostfixMany;
                 case ElementNames.Prefix:
+                    return ElementKind.Prefix;
                 case ElementNames.PrefixMany:
-                    return ElementKind.Command;
+                    return ElementKind.PrefixMany;
                 default:
                     {
                         Debug.Assert(false, element.ToString());
@@ -73,7 +83,7 @@ namespace Pihrtsoft.Records
             return attribute.Value;
         }
 
-        public static XAttribute SingleAttributeOrThrow(this XElement element, string attributeName)
+        public static XAttribute SingleAttributeOrThrow(this XElement element, string attributeName = null)
         {
             using (IEnumerator<XAttribute> en = element.Attributes().GetEnumerator())
             {
@@ -82,14 +92,22 @@ namespace Pihrtsoft.Records
                     XAttribute attribute = en.Current;
 
                     if (!en.MoveNext()
-                        && en.Current.Name == attributeName)
+                        && (attributeName == null || en.Current.Name == attributeName))
                     {
                         return attribute;
                     }
                 }
             }
 
-            ThrowHelper.ThrowInvalidOperation($"Element '{element.Name}' must contains single attribute with name '{attributeName}'.");
+            if (attributeName != null)
+            {
+                ThrowHelper.ThrowInvalidOperation($"Element '{element.Name}' must contains single attribute with name '{attributeName}'.");
+            }
+            else
+            {
+                ThrowHelper.ThrowInvalidOperation($"Element '{element.Name}' must contains single attribute.");
+            }
+
             return null;
         }
 

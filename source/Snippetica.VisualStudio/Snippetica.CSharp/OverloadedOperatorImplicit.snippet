@@ -1,0 +1,44 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>implicit operator overloading</Title>
+    <Shortcut>oo</Shortcut>
+    <Description>implicit operator overloading</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-ExcludeFromReadme</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>operand</ID>
+        <ToolTip>Operand</ToolTip>
+        <Default>value</Default>
+      </Literal>
+      <Literal Editable="false">
+        <ID>thisName</ID>
+        <ToolTip>Containing type name</ToolTip>
+        <Default>ThisName</Default>
+        <Function>ClassName()</Function>
+      </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Type name</ToolTip>
+        <Default>object</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[public static implicit operator $thisName$($type$ $operand$)
+{
+	$end$
+}
+
+public static implicit operator $type$($thisName$ $operand$)
+{
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,12 +1,13 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>#if-#else preprocessor directive</Title>
+    <Title>#if-#else directive</Title>
     <Shortcut>ppife</Shortcut>
     <Description>#if-#else preprocessor directives</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
     </SnippetTypes>
   </Header>
   <Snippet>
@@ -18,7 +19,7 @@
       </Literal>
     </Declarations>
     <Code Language="CSharp"><![CDATA[#if $symbol$
-    $end$
+	$selected$$end$
 #else
 
 #endif]]></Code>

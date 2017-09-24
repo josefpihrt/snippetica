@@ -1,31 +1,33 @@
-﻿## Snippetica.Cpp
+## Snippetica.Cpp
 
-* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=CPlusPlus)
+### Snippet Browser
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs&language=cpp).
 
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
-[\#if](preprocessor_directive_if.snippet)|ppif
-[\#ifdef](preprocessor_directive_ifdef.snippet)|ppifd
-[\#ifndef](preprocessor_directive_ifndef.snippet)|ppifnd
-[\#pragma region](preprocessor_directive_region.snippet)|ppr
-[class](class.snippet)|c
-[constructor](constructor.snippet)|cr
-[destructor](destructor.snippet)|dr
-[do\-while](do_while.snippet)|dw
-[else](else.snippet)|e
-[enum class](enum_class.snippet)|emc
-[enum](enum.snippet)|em
-[for \(range\-based\)](for_range_based.snippet)|frrb
-[for \(reversed\)](for_reversed.snippet)|frr
-[for each](foreach.snippet)|fe
-[for](for.snippet)|fr
-[if](if.snippet)|if
-[interface](interface.snippet)|ie
-[namespace](namespace.snippet)|ns
-[struct](struct.snippet)|st
-[switch](switch.snippet)|sh
-[try\-catch](try.snippet)|tc
-[union](union.snippet)|un
-[while](while.snippet)|we
+Shortcut | Title
+-------- | -----
+c|[class](Class.snippet)
+cr|[constructor](Constructor.snippet)
+dr|[destructor](Destructor.snippet)
+dw|[do\-while](DoWhile.snippet)
+e|[else](Else.snippet)
+eif|[else\-if](ElseIf.snippet)
+em|[enum](Enum.snippet)
+emc|[enum class](EnumClass.snippet)
+fe|[for each](ForEach.snippet)
+fr|[for](For.snippet)
+frr|[for \(reversed\)](ForReversed.snippet)
+frrb|[for \(range\-based\)](ForRangeBased.snippet)
+ie|[interface](Interface.snippet)
+if|[if](If.snippet)
+ns|[namespace](Namespace.snippet)
+ppif|[\#if](PreprocessorDirectiveIf.snippet)
+ppifd|[\#ifdef](PreprocessorDirectiveIfdef.snippet)
+ppifnd|[\#ifndef](PreprocessorDirectiveIfndef.snippet)
+ppr|[\#pragma region](PreprocessorDirectiveRegion.snippet)
+sh|[switch](Switch.snippet)
+st|[struct](Struct.snippet)
+tc|[try\-catch](Try.snippet)
+un|[union](Union.snippet)
+we|[while](While.snippet)

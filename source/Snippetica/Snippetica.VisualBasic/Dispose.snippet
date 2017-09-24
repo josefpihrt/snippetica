@@ -19,19 +19,19 @@
 
 Public Sub Dispose()
 
-    Dispose(True)
-    GC.SuppressFinalize(Me)
+	Dispose(True)
+	GC.SuppressFinalize(Me)
 
 End Sub
 
 Protected Overridable Sub Dispose(disposing As Boolean)
 
-    If Not _disposed Then
-        If disposing Then
-            Throw New NotImplementedException()
-        End If
-        _disposed = True
-    End If
+	If Not _disposed Then
+		If disposing Then
+			Throw New NotImplementedException()
+		End If
+		_disposed = True
+	End If
 
 End Sub$end$]]></Code>
   </Snippet>

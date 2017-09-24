@@ -1,0 +1,44 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>&lt;= operator overloading</Title>
+    <Shortcut>oo</Shortcut>
+    <Description>&lt;= operator overloading</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-ExcludeFromReadme</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>left</ID>
+        <ToolTip>Left operand</ToolTip>
+        <Default>left</Default>
+      </Literal>
+      <Literal>
+        <ID>right</ID>
+        <ToolTip>Right operand</ToolTip>
+        <Default>right</Default>
+      </Literal>
+      <Literal Editable="false">
+        <ID>thisName</ID>
+        <ToolTip>Containing type name</ToolTip>
+        <Default>ThisName</Default>
+        <Function>ClassName()</Function>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[public static bool operator <=($thisName$ $left$, $thisName$ $right$)
+{
+	$end$
+}
+
+public static bool operator >=($thisName$ $left$, $thisName$ $right$)
+{
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

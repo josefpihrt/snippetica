@@ -12,9 +12,9 @@
       <Entities>
         <Entity Name="Modifier">
           <BaseRecords>
-            <Tag Value="AccessModifier">
+            <Add Tag="AccessModifier">
               <New Id="Public" Shortcut="" Tag="Default" />
-            </Tag>
+            </Add>
             <New Id="Static" Shortcut="s" />
           </BaseRecords>
           <Records>
@@ -41,9 +41,9 @@
           <BaseRecords>
             <New Id="Void" Shortcut="{x}" />
             <New Id="Boolean" Shortcut="b" />
-            <Tag Value="Disabled">
+            <Add Tag="Disabled">
               <New Id="Char" Shortcut="c" />
-            </Tag>
+            </Add>
           </BaseRecords>
           <Records>
             <Set Language="CSharp">

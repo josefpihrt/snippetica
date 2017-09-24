@@ -9,7 +9,8 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-ShortcutSuffix IEqualityComparerOfT</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -40,31 +41,31 @@
     </Declarations>
     <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : EqualityComparer<$type$>
 {
-    public override bool Equals($type$ x, $type$ y)
-    {
-        if (object.ReferenceEquals(x, y))
-        {
-            return true;
-        }
+	public override bool Equals($type$ x, $type$ y)
+	{
+		if (object.ReferenceEquals(x, y))
+		{
+			return true;
+		}
 
-        if (x == null || y == null)
-        {
-            return false;
-        }
+		if (x == null || y == null)
+		{
+			return false;
+		}
 
-        $end$
-        throw new NotImplementedException();
-    }
+		$end$
+		throw new NotImplementedException();
+	}
 
-    public override int GetHashCode($type$ obj)
-    {
-        if (obj == null)
-        {
-            return 0;
-        }
+	public override int GetHashCode($type$ obj)
+	{
+		if (obj == null)
+		{
+			return 0;
+		}
 
-        throw new NotImplementedException();
-    }
+		throw new NotImplementedException();
+	}
 }]]></Code>
   </Snippet>
 </CodeSnippet>

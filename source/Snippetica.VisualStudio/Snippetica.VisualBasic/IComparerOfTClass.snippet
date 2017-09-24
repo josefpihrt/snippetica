@@ -9,7 +9,7 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -39,26 +39,26 @@
       </Literal>
     </Declarations>
     <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Implements IComparer(Of $type$)
+	Implements IComparer(Of $type$)
 
-    Public Function Compare(x As $type$, y As $type$) As Integer Implements IComparer(Of $type$).Compare
+	Public Function Compare(x As $type$, y As $type$) As Integer Implements IComparer(Of $type$).Compare
 
-        If Object.ReferenceEquals(x, y) Then
-            Return 0
-        End If
+		If Object.ReferenceEquals(x, y) Then
+			Return 0
+		End If
 
-        If x Is Nothing Then
-            Return -1
-        End If
+		If x Is Nothing Then
+			Return -1
+		End If
 
-        If y Is Nothing Then
-            Return 1
-        End If
+		If y Is Nothing Then
+			Return 1
+		End If
 
-        $end$
-        Throw New NotImplementedException()
+		$end$
+		Throw New NotImplementedException()
 
-    End Function
+	End Function
 
 End Class]]></Code>
   </Snippet>

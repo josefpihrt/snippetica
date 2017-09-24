@@ -16,7 +16,7 @@ namespace Pihrtsoft.Records
         {
             Entity = entity;
             Tags = new TagCollection();
-            Properties = new Dictionary<string, object>();
+            Properties = new Dictionary<string, object>() { [PropertyDefinition.TagsName] = Tags };
 
             if (id != null)
                 Properties[PropertyDefinition.IdName] = id;

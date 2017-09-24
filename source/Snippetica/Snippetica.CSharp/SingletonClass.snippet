@@ -9,7 +9,8 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-ShortcutSuffix Singleton</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -32,16 +33,16 @@
     </Declarations>
     <Code Language="CSharp"><![CDATA[$modifier$ class $name$
 {
-    private static readonly $name$ _instance = $value$;
+	private static readonly $name$ _instance = $value$;
 
-    private $name$()
-    {
-    }
+	private $name$()
+	{
+	}
 
-    public static $name$ Instance
-    {
-        get { return _instance; }
-    }
+	public static $name$ Instance
+	{
+		get { return _instance; }
+	}
 }$end$]]></Code>
   </Snippet>
 </CodeSnippet>

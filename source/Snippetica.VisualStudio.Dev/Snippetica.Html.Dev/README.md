@@ -1,12 +1,12 @@
-﻿## Snippetica.Html.Dev
+## Snippetica.Html.Dev
 
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
-[div with class attribute](div_class.snippet)|divcs
-[div with id attribute](div_id.snippet)|divid
-[meta viewport](meta_viewport.snippet)|metavp
-[span with class attribute](span_class.snippet)|spancs
-[span with id attribute](span_id.snippet)|spanid
-[table with sections](table_with_sections.snippet)|table2
+Shortcut | Title
+-------- | -----
+divcs|[div with class attribute](div_class.snippet)
+divid|[div with id attribute](div_id.snippet)
+metavp|[meta viewport](meta_viewport.snippet)
+spancs|[span with class attribute](span_class.snippet)
+spanid|[span with id attribute](span_id.snippet)
+table2|[table with sections](table_with_sections.snippet)

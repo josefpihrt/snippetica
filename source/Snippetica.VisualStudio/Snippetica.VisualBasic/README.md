@@ -1,191 +1,221 @@
-﻿## Snippetica.VisualBasic
+## Snippetica.VisualBasic
+
+### Snippet Browser
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs&language=vb).
 
 ### Quick Reference
 
 * Default access modifier is **Public**.
 
-Character\(s\) | Description | Comment
------------- | ----------- | -------
-\_|interface member|prefix
-\_|with initializer|suffix
-\_|with parameters|suffix
-a|Array|\-
-b|Boolean|\-
-c|catch|\-
+#### Member Declaration
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+\_|interface member declaration|prefix
 c|class declaration|\-
-c|Collection\<T\>|\-
 cr|constructor declaration|\-
-d|default|\-
-d|Dictionary\<TKey,TValue\>|\-
 de|delegate declaration|\-
-dt|DateTime|\-
-e|else clause|\-
-e|IEnumerable\<T\>|\-
 em|enum declaration|\-
 et|event declaration|\-
-f|false|\-
 f|field declaration|\-
-f|finally|\-
-fe|foreach statement|\-
-fr|for statement|\-
-g|generic type|prefix
-g|type parameter|\-
-gt|GetType operator|\-
-hs|HashSet\<T\>|\-
-i|Immutable|prefix
-i|Int32|\-
-i|internal \(Friend\)|prefix
 ie|inteface declaration|\-
-if|if statement|\-
 ir|indexer declaration|\-
 k|constant declaration|\-
-l|Int64|\-
-l|lambda expression|\-
-l|List\<T\>|\-
-ll|LinkedList\<T\>|\-
 m|method declaration|\-
 me|Module declaration|\-
-n|\(equal to\) null|\-
-n|new object creation|\-
-nn|not \(equal to\) null|\-
-no|nameof operator|\-
-o|Object|\-
-oc|ObservableCollection\<T\>|\-
-oo|operator overload|\-
-p|private|prefix
 p|property declaration|\-
-pa|parameter array|\-
-pp|preprocessor directive|prefix
 pp|property declaration \(expanded\)|\-
-ps|private set|\-
-q|Queue\<T\>|\-
-r|read\-only|\-
-r|return|\-
-re|return|\-
-s|Stack\<T\>|\-
+st|struct declaration|\-
+
+#### Modifer
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+i|internal \(Friend\)|prefix
+p|private|prefix
+r|read\-only|prefix \(after access modifier\)
 s|static \(Shared\)|prefix \(after access modifier\)
-s|String|\-
+v|virtual \(Overridable\)|prefix \(after access modifier\)
+
+#### Statement
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+fe|foreach statement|\-
+fr|for statement|\-
+if|if statement|\-
+re|return statement|\-
 sc|Select Case statement|\-
-st|struct|\-
-t|true|\-
-t|try|\-
-tc|TryCast operator|\-
-this|containing type name|\-
+t|try statement|\-
 tw|throw statement|\-
 u|using statement|\-
-v|local variable|prefix
-v|virtual \(Overridable\)|prefix \(after access modifier\)
 we|while statement|\-
-y|yield|\-
 
-* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=VisualBasic)
+#### Operator
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+gt|GetType operator|\-
+n|new object creation|\-
+no|nameof operator|\-
+oo|operator overload|\-
+tc|TryCast operator|\-
+x|logical not operator|prefix
+
+#### Type
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+a|Array|\-
+b|Boolean|\-
+c|Collection&lt;T&gt;|\-
+d|Dictionary&lt;TKey,TValue&gt;|\-
+dt|DateTime|\-
+hs|HashSet&lt;T&gt;|\-
+i|Immutable|prefix
+i|Int32|\-
+l|Int64|\-
+l|List&lt;T&gt;|\-
+ll|LinkedList&lt;T&gt;|\-
+o|Object|\-
+oc|ObservableCollection&lt;T&gt;|\-
+q|Queue&lt;T&gt;|\-
+rr|Reader|suffix
+s|Stack&lt;T&gt;|\-
+s|String|\-
+wr|Writer|suffix
+
+#### Other
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+\_|with initializer|suffix
+\_|with parameters|suffix
+c|catch clause|\-
+d|default keyword|\-
+e|else clause|\-
+f|finally clause|\-
+g|generic type|prefix
+g|type parameter|\-
+l|lambda expression|\-
+n|\(equals to\) null|\-
+pa|parameter array|\-
+pp|preprocessor directive|prefix
+ps|private set|\-
+r|return keyword|\-
+this|containing type name|\-
+v|local variable declaration|\-
+y|yield|prefix
 
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
-[\#If \#Else preprocessor directive](PreprocessorDirectiveIfElse.snippet)|ppife
-[\#If preprocessor directive](PreprocessorDirectiveIf.snippet)|ppif
-[\#Region preprocessor directive](PreprocessorDirectiveRegion.snippet)|ppr
-[= operator overload](OperatorOverloadEquality.snippet)|oo
-[array variable](ArrayOfTVariable.snippet)|va
-[Attribute class](AttributeClass.snippet)|c\_
-[Boolean variable](BooleanVariable.snippet)|vb
-[Catch clause](Catch.snippet)|catch
-[Collection\(Of T\) class](CollectionClass.snippet)|c\_
-[Containing type name](ContainingTypeName.snippet)|this
-[CType operator](CTypeOperator.snippet)|t
-[DateTime type](DateTimeType.snippet)|dt
-[Debug\.Assert](DebugAssert.snippet)|da
-[Debug\.WriteLine](DebugWriteLine.snippet)|dw
-[Dictionary\(Of TKey, TValue\) class](DictionaryOfTKeyTValueClass.snippet)|c\_
-[Dictionary\(Of TKey, TValue\) type](DictionaryOfTKeyTValueType.snippet)|gd
-[Disposable class](DisposableClass.snippet)|c\_
-[Dispose](Dispose.snippet)|dispose
-[Do statement](Do.snippet)|do
-[Else clause](Else.snippet)|e
-[ElseIf](ElseIf.snippet)|eif
-[Equals and GetHashCode](EqualsAndGetHashCode.snippet)|equals
-[Exception class](ExceptionClass.snippet)|c\_
-[For \(reversed\)](ForReversed.snippet)|frr
-[For Each statement](ForEach.snippet)|fe
-[For statement](For.snippet)|fr
-[GetType](GetTypeOperator.snippet)|gt
-[IComparer class](IComparerClass.snippet)|c\_
-[IComparer\(Of T\) class](IComparerOfTClass.snippet)|c\_
-[IEnumerable\(Of T\) type](IEnumerableOfTType.snippet)|ge
-[IEnumerator\(Of T\) variable](IEnumeratorOfTVariable.snippet)|u
-[IEqualityComparer class](IEqualityComparerClass.snippet)|c\_
-[IEqualityComparer\(Of T\) class](IEqualityComparerOfTClass.snippet)|c\_
-[If Is Nothing](IfIsNothing.snippet)|ifn
-[If IsNot Nothing](IfIsNotNothing.snippet)|ifnn
-[if not TryParse](IfNotTryParse.snippet)|ifftp
-[If Not](IfNot.snippet)|iff
-[If TryCast Is Nothing](IfTryCastIsNothing.snippet)|ifftc
-[If TryCast IsNot Nothing](IfTryCastIsNotNothing.snippet)|iftc
-[if TryParse](IfTryParse.snippet)|iftp
-[Int32 variable](Int32Variable.snippet)|vi
-[interface indexer](InterfaceIndexer.snippet)|\_ir
-[interface method](InterfaceMethod.snippet)|\_m
-[interface property](InterfaceProperty.snippet)|\_p
-[interface read\-only property](InterfaceReadOnlyProperty.snippet)|\_rp
-[Is Nothing](IsNothing.snippet)|n
-[IsNot Nothing](IsNotNothing.snippet)|nn
-[Lambda expression](LambdaExpression.snippet)|l
-[NameOf operator](NameOfOperator.snippet)|no
-[new variable](NewVariable.snippet)|vn
-[ObservableCollection\(Of T\) class](ObservableCollectionClass.snippet)|c\_
-[parameter array ](ParameterArray.snippet)|pa
-[Public auto property](PublicAutoProperty.snippet)|p
-[Public class](PublicClass.snippet)|c
-[Public constant](PublicConstant.snippet)|k
-[Public constructor](PublicConstructor.snippet)|cr
-[Public delegate](PublicDelegate.snippet)|de
-[Public enum](PublicEnum.snippet)|em
-[Public event](PublicEvent.snippet)|et
-[Public field](PublicField.snippet)|f
-[Public indexer](PublicIndexer.snippet)|ir
-[Public interface](PublicInterface.snippet)|ie
-[Public method](PublicMethod.snippet)|m
-[Public module](PublicModule.snippet)|me
-[Public Overridable auto property](PublicVirtualAutoProperty.snippet)|vp
-[Public Overridable method](PublicVirtualMethod.snippet)|vm
-[Public Overridable read\-only auto property](PublicVirtualReadOnlyAutoProperty.snippet)|vrp
-[Public Overridable read\-only Property](PublicVirtualReadOnlyProperty.snippet)|vrpp
-[Public read\-only auto property](PublicReadOnlyAutoProperty.snippet)|rp
-[Public read\-only field](PublicReadOnlyField.snippet)|rf
-[Public read\-only Property](PublicReadOnlyProperty.snippet)|rpp
-[Public Shared field](PublicStaticField.snippet)|sf
-[Public Shared method](PublicStaticMethod.snippet)|sm
-[Public Shared read\-only auto property](PublicStaticReadOnlyAutoProperty.snippet)|srp
-[Public Shared read\-only field](PublicStaticReadOnlyField.snippet)|srf
-[Public Shared read\-only Property](PublicStaticReadOnlyProperty.snippet)|srpp
-[Public structure](PublicStruct.snippet)|st
-[ReadOnlyCollection\(Of T\) class](ReadOnlyCollectionClass.snippet)|c\_
-[Return False](ReturnFalse.snippet)|ref
-[Return Nothing](ReturnNothing.snippet)|ren
-[Return True](ReturnTrue.snippet)|ret
-[Select Case statement](SelectCase.snippet)|sc
-[singleton class](SingletonClass.snippet)|c\_
-[static constructor](StaticConstructor.snippet)|scr
-[StreamReader Variable](StreamReaderVariable.snippet)|u
-[StreamWriter Variable](StreamWriterVariable.snippet)|u
-[String variable](StringVariable.snippet)|vs
-[String\.IsNullOrEmpty = False](StringIsNotNullOrEmpty.snippet)|snne
-[String\.IsNullOrEmpty](StringIsNullOrEmpty.snippet)|sne
-[String\.IsNullOrWhiteSpace = False](StringIsNotNullOrWhiteSpace.snippet)|snnw
-[String\.IsNullOrWhiteSpace](StringIsNullOrWhiteSpace.snippet)|snw
-[StringReader Variable](StringReaderVariable.snippet)|u
-[StringWriter Variable](StringWriterVariable.snippet)|u
-[Throw New](ThrowNew.snippet)|twn
-[TODO comment](TodoComment.snippet)|td
-[Try\-Catch\-Finally](TryCatchFinally.snippet)|tcf
-[Try\-Catch](TryCatch.snippet)|tc
-[Try\-Finally](TryFinally.snippet)|tf
-[type parameter](TypeParameter.snippet)|g
-[Using statement](Using.snippet)|u
-[variable declaration](Variable.snippet)|v
-[variable with DirectCast](VariableWithDirectCast.snippet)|vt
-[While statement](While.snippet)|we
-[XmlReader Variable](XmlReaderVariable.snippet)|u
-[XmlWriter Variable](XmlWriterVariable.snippet)|u
+Shortcut | Title
+-------- | -----
+\_ir|[interface indexer](InterfaceIndexer.snippet)
+\_m|[interface method](InterfaceMethod.snippet)
+\_p|[interface property](InterfaceProperty.snippet)
+\_rp|[interface read\-only property](InterfaceReadOnlyProperty.snippet)
+c|[Public class](PublicClass.snippet)
+c\_|[Attribute class](AttributeClass.snippet)
+c\_|[Collection\(Of T\) class](CollectionClass.snippet)
+c\_|[Dictionary\(Of TKey, TValue\) class](DictionaryOfTKeyTValueClass.snippet)
+c\_|[Disposable class](DisposableClass.snippet)
+c\_|[Exception class](ExceptionClass.snippet)
+c\_|[IComparer class](IComparerClass.snippet)
+c\_|[IComparer\(Of T\) class](IComparerOfTClass.snippet)
+c\_|[IEqualityComparer class](IEqualityComparerClass.snippet)
+c\_|[IEqualityComparer\(Of T\) class](IEqualityComparerOfTClass.snippet)
+c\_|[ObservableCollection\(Of T\) class](ObservableCollectionClass.snippet)
+c\_|[ReadOnlyCollection\(Of T\) class](ReadOnlyCollectionClass.snippet)
+c\_|[singleton class](SingletonClass.snippet)
+catch|[Catch clause](Catch.snippet)
+cr|[Public constructor](PublicConstructor.snippet)
+da|[Debug\.Assert](DebugAssert.snippet)
+de|[Public delegate](PublicDelegate.snippet)
+dispose|[Dispose](Dispose.snippet)
+do|[Do statement](Do.snippet)
+dt|[DateTime type](DateTimeType.snippet)
+dw|[Debug\.WriteLine](DebugWriteLine.snippet)
+e|[Else clause](Else.snippet)
+eif|[ElseIf](ElseIf.snippet)
+em|[Public enum](PublicEnum.snippet)
+equals|[Equals and GetHashCode](EqualsAndGetHashCode.snippet)
+et|[Public event](PublicEvent.snippet)
+f|[Public field](PublicField.snippet)
+fe|[For Each statement](ForEach.snippet)
+fr|[For statement](For.snippet)
+frr|[For statement \(reversed\)](ForReversed.snippet)
+g|[type parameter](TypeParameter.snippet)
+gd|[Dictionary\(Of TKey, TValue\) type](DictionaryOfTKeyTValueType.snippet)
+ge|[IEnumerable\(Of T\) type](IEnumerableOfTType.snippet)
+gt|[GetType](GetTypeOperator.snippet)
+ie|[Public interface](PublicInterface.snippet)
+ifn|[If Is Nothing](IfIsNothing.snippet)
+iftc|[If TryCast IsNot Nothing](IfTryCastIsNotNothing.snippet)
+iftp|[if TryParse](IfTryParse.snippet)
+ifx|[If Not](IfNot.snippet)
+ifxn|[If IsNot Nothing](IfIsNotNothing.snippet)
+ifxtc|[If TryCast Is Nothing](IfTryCastIsNothing.snippet)
+ifxtp|[if not TryParse](IfNotTryParse.snippet)
+ir|[Public indexer](PublicIndexer.snippet)
+k|[Public constant](PublicConstant.snippet)
+l|[Lambda expression](LambdaExpression.snippet)
+l2|[Lambda expression with 2 parameters](LambdaExpressionWithTwoParameters.snippet)
+m|[Public method](PublicMethod.snippet)
+me|[Public module](PublicModule.snippet)
+n|[Is Nothing](IsNothing.snippet)
+no|[NameOf operator](NameOfOperator.snippet)
+oo|[= operator overloading](OverloadedOperatorEquality.snippet)
+p|[Public auto property](PublicAutoProperty.snippet)
+pa|[parameter array ](ParameterArray.snippet)
+ppif|[\#If directive](PreprocessorDirectiveIf.snippet)
+ppife|[\#If\-\#Else directive](PreprocessorDirectiveIfElse.snippet)
+ppr|[\#Region directive](PreprocessorDirectiveRegion.snippet)
+ref|[Return False](ReturnFalse.snippet)
+ren|[Return Nothing](ReturnNothing.snippet)
+ret|[Return True](ReturnTrue.snippet)
+rf|[Public read\-only field](PublicReadOnlyField.snippet)
+rp|[Public read\-only auto property](PublicReadOnlyAutoProperty.snippet)
+rpp|[Public read\-only Property](PublicReadOnlyProperty.snippet)
+sc|[Select Case statement](SelectCase.snippet)
+scr|[static constructor](StaticConstructor.snippet)
+sf|[Public Shared field](PublicStaticField.snippet)
+sm|[Public Shared method](PublicStaticMethod.snippet)
+sne|[String\.IsNullOrEmpty](StringIsNullOrEmpty.snippet)
+snw|[String\.IsNullOrWhiteSpace](StringIsNullOrWhiteSpace.snippet)
+srf|[Public Shared read\-only field](PublicStaticReadOnlyField.snippet)
+srp|[Public Shared read\-only auto property](PublicStaticReadOnlyAutoProperty.snippet)
+srpp|[Public Shared read\-only Property](PublicStaticReadOnlyProperty.snippet)
+st|[Public structure](PublicStruct.snippet)
+t|[CType operator](CTypeOperator.snippet)
+tc|[Try\-Catch](TryCatch.snippet)
+tcf|[Try\-Catch\-Finally](TryCatchFinally.snippet)
+td|[TODO comment](TodoComment.snippet)
+tf|[Try\-Finally](TryFinally.snippet)
+this|[Containing type name](ContainingTypeName.snippet)
+twn|[Throw New](ThrowNew.snippet)
+u|[IEnumerator\(Of T\) variable](IEnumeratorOfTVariable.snippet)
+u|[StreamReader Variable](StreamReaderVariable.snippet)
+u|[StreamWriter Variable](StreamWriterVariable.snippet)
+u|[StringReader Variable](StringReaderVariable.snippet)
+u|[StringWriter Variable](StringWriterVariable.snippet)
+u|[Using statement](Using.snippet)
+u|[XmlReader Variable](XmlReaderVariable.snippet)
+u|[XmlWriter Variable](XmlWriterVariable.snippet)
+v|[local variable declaration](Variable.snippet)
+va|[array variable](ArrayOfTVariable.snippet)
+vb|[Boolean variable](BooleanVariable.snippet)
+vi|[Int32 variable](Int32Variable.snippet)
+vm|[Public Overridable method](PublicVirtualMethod.snippet)
+vn|[new variable](NewVariable.snippet)
+vp|[Public Overridable auto property](PublicVirtualAutoProperty.snippet)
+vrp|[Public Overridable read\-only auto property](PublicVirtualReadOnlyAutoProperty.snippet)
+vrpp|[Public Overridable read\-only Property](PublicVirtualReadOnlyProperty.snippet)
+vs|[String variable](StringVariable.snippet)
+vt|[local variable with DirectCast](VariableWithDirectCast.snippet)
+we|[While statement](While.snippet)
+wen|[While Is Nothing](WhileIsNothing.snippet)
+wexn|[While IsNot Nothing](WhileIsNotNothing.snippet)
+xn|[IsNot Nothing](IsNotNothing.snippet)
+xsne|[String\.IsNullOrEmpty = False](NotStringIsNullOrEmpty.snippet)
+xsnw|[String\.IsNullOrWhiteSpace = False](NotStringIsNullOrWhiteSpace.snippet)

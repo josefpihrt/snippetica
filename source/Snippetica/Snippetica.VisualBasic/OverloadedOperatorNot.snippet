@@ -1,0 +1,35 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Not operator overloading</Title>
+    <Shortcut>oo</Shortcut>
+    <Description>Not operator overloading</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-ExcludeFromReadme</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-ShortcutSuffix Not</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>operand</ID>
+        <ToolTip>Operand</ToolTip>
+        <Default>value</Default>
+      </Literal>
+      <Literal Editable="false">
+        <ID>thisName</ID>
+        <ToolTip>Containing type name</ToolTip>
+        <Default>ThisName</Default>
+        <Function>ClassName()</Function>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[Public Shared Operator Not($operand$ As $thisName$)
+	$end$
+End Operator]]></Code>
+  </Snippet>
+</CodeSnippet>

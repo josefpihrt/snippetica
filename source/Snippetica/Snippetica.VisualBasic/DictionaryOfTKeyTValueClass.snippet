@@ -9,7 +9,8 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-ShortcutSuffix DictionaryOfTKeyTValue</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -44,37 +45,37 @@
       </Literal>
     </Declarations>
     <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Inherits Dictionary(Of $_keyType$, $_valueType$)
+	Inherits Dictionary(Of $_keyType$, $_valueType$)
 
-    Public Sub New()
-        MyBase.New()
-    End Sub
+	Public Sub New()
+		MyBase.New()
+	End Sub
 
-    Public Sub New(capacity As Integer)
-        MyBase.New(capacity)
-    End Sub
+	Public Sub New(capacity As Integer)
+		MyBase.New(capacity)
+	End Sub
 
-    Public Sub New(comparer As IEqualityComparer(Of $_keyType$))
-        MyBase.New(comparer)
-    End Sub
+	Public Sub New(comparer As IEqualityComparer(Of $_keyType$))
+		MyBase.New(comparer)
+	End Sub
 
-    Public Sub New(dictionary As IDictionary(Of $_keyType$, $_valueType$))
-        MyBase.New(dictionary)
-    End Sub
+	Public Sub New(dictionary As IDictionary(Of $_keyType$, $_valueType$))
+		MyBase.New(dictionary)
+	End Sub
 
-    Public Sub New(capacity As Integer, comparer As IEqualityComparer(Of $_keyType$))
-        MyBase.New(capacity, comparer)
-    End Sub
+	Public Sub New(capacity As Integer, comparer As IEqualityComparer(Of $_keyType$))
+		MyBase.New(capacity, comparer)
+	End Sub
 
-    Public Sub New(info As SerializationInfo, context As StreamingContext)
-        MyBase.New(info, context)
-    End Sub
+	Public Sub New(info As SerializationInfo, context As StreamingContext)
+		MyBase.New(info, context)
+	End Sub
 
-    Public Sub New(dictionary As IDictionary(Of $_keyType$, $_valueType$), comparer As IEqualityComparer(Of $_keyType$))
-        MyBase.New(dictionary, comparer)
-    End Sub
+	Public Sub New(dictionary As IDictionary(Of $_keyType$, $_valueType$), comparer As IEqualityComparer(Of $_keyType$))
+		MyBase.New(dictionary, comparer)
+	End Sub
 
-    $end$
+	$end$
 End Class]]></Code>
   </Snippet>
 </CodeSnippet>

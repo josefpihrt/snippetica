@@ -9,7 +9,7 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -39,35 +39,35 @@
       </Literal>
     </Declarations>
     <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Implements IEqualityComparer
+	Implements IEqualityComparer
 
-    Public Shadows Function Equals(x As Object, y As Object) As Boolean Implements IEqualityComparer.Equals
+	Public Shadows Function Equals(x As Object, y As Object) As Boolean Implements IEqualityComparer.Equals
 
-        If Object.ReferenceEquals(x, y) Then
-            Return True
-        End If
+		If Object.ReferenceEquals(x, y) Then
+			Return True
+		End If
 
-        If x Is Nothing OrElse y Is Nothing Then
-            Return False
-        End If
+		If x Is Nothing OrElse y Is Nothing Then
+			Return False
+		End If
 
-        Dim a = CType(x, $type$)
-        Dim b = CType(y, $type$)
+		Dim a = CType(x, $type$)
+		Dim b = CType(y, $type$)
 
-        $end$
-        Throw New NotImplementedException()
+		$end$
+		Throw New NotImplementedException()
 
-    End Function
+	End Function
 
-    Public Shadows Function GetHashCode(obj As Object) As Integer Implements IEqualityComparer.GetHashCode
+	Public Shadows Function GetHashCode(obj As Object) As Integer Implements IEqualityComparer.GetHashCode
 
-        If obj Is Nothing Then
-            Return 0
-        End If
+		If obj Is Nothing Then
+			Return 0
+		End If
 
-        Throw New NotImplementedException()
+		Throw New NotImplementedException()
 
-    End Function
+	End Function
 
 End Class]]></Code>
   </Snippet>

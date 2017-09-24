@@ -116,16 +116,64 @@ namespace Pihrtsoft.Records
                         {
                             properties = properties ?? new ExtendedKeyedCollection<string, PropertyDefinition>();
 
-                            string propertyName = element.AttributeValueOrThrow(AttributeNames.Name);
+                            string name = null;
+                            bool isCollection = false;
+                            bool isRequired = false;
+                            string defaultValue = null;
+                            string description = null;
 
-                            if (properties.Contains(propertyName))
-                                Throw(ErrorMessages.ItemAlreadyDefined(ElementNames.Property, propertyName), element);
+                            foreach (XAttribute attribute in element.Attributes())
+                            {
+                                switch (attribute.LocalName())
+                                {
+                                    case AttributeNames.Name:
+                                        {
+                                            name = attribute.Value;
+                                            break;
+                                        }
+                                    case AttributeNames.IsCollection:
+                                        {
+                                            isCollection = bool.Parse(attribute.Value);
+                                            break;
+                                        }
+                                    case AttributeNames.IsRequired:
+                                        {
+                                            isRequired = bool.Parse(attribute.Value);
+                                            break;
+                                        }
+                                    case AttributeNames.DefaultValue:
+                                        {
+                                            defaultValue = attribute.Value;
+                                            break;
+                                        }
+                                    case AttributeNames.Description:
+                                        {
+                                            description = attribute.Value;
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            Throw(ErrorMessages.UnknownAttribute(attribute), element);
+                                            break;
+                                        }
+                                }
+                            }
+
+                            if (properties.Contains(name))
+                                Throw(ErrorMessages.ItemAlreadyDefined(ElementNames.Property, name), element);
+
+                            if (isCollection
+                                && defaultValue != null)
+                            {
+                                Throw(ErrorMessages.CollectionPropertyCannotDefineDefaultValue(), element);
+                            }
 
                             var property = new PropertyDefinition(
-                                propertyName,
-                                element.AttributeValueOrDefault(AttributeNames.DefaultValue),
-                                element.AttributeValueAsBooleanOrDefault(AttributeNames.IsCollection),
-                                element.AttributeValueAsBooleanOrDefault(AttributeNames.IsRequired),
+                                name,
+                                isCollection,
+                                isRequired,
+                                defaultValue,
+                                description,
                                 element);
 
                             properties.Add(property);

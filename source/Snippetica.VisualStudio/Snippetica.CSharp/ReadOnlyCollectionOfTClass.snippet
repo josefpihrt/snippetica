@@ -9,7 +9,7 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -40,12 +40,12 @@
     </Declarations>
     <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : ReadOnlyCollection<$type$>
 {
-    public $name$(IList<$type$> list)
-        : base(list)
-    {
-    }
+	public $name$(IList<$type$> list)
+		: base(list)
+	{
+	}
 
-    $end$
+	$end$
 }]]></Code>
   </Snippet>
 </CodeSnippet>

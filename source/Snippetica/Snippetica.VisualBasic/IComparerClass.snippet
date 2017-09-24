@@ -9,7 +9,8 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-ShortcutSuffix IComparer</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -39,29 +40,29 @@
       </Literal>
     </Declarations>
     <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Implements IComparer
+	Implements IComparer
 
-    Public Function Compare(x As Object, y As Object) As Integer Implements IComparer.Compare
+	Public Function Compare(x As Object, y As Object) As Integer Implements IComparer.Compare
 
-        If Object.ReferenceEquals(x, y) Then
-            Return 0
-        End If
+		If Object.ReferenceEquals(x, y) Then
+			Return 0
+		End If
 
-        If x Is Nothing Then
-            Return IIf(y Is Nothing, 0, -1)
-        End If
+		If x Is Nothing Then
+			Return IIf(y Is Nothing, 0, -1)
+		End If
 
-        If y Is Nothing Then
-            Return 1
-        End If
+		If y Is Nothing Then
+			Return 1
+		End If
 
-        Dim a = CType(x, $type$)
-        Dim b = CType(y, $type$)
+		Dim a = CType(x, $type$)
+		Dim b = CType(y, $type$)
 
-        $end$
-        Throw New NotImplementedException()
+		$end$
+		Throw New NotImplementedException()
 
-    End Function
+	End Function
 
 End Class]]></Code>
   </Snippet>

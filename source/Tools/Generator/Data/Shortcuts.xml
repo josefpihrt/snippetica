@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Document Version="0.0.1">
+  <Entities>
+    <Entity Name="Shortcut">
+      <Declarations>
+        <Property Name="Value" IsRequired="true" />
+        <Property Name="Description" IsRequired="true" />
+        <Property Name="Comment" />
+        <Property Name="Kind" />
+        <Property Name="Languages" IsCollection="true" />
+        <Property Name="Environments" IsCollection="true" />
+      </Declarations>
+      <Records>
+        <AddRange Environments="VisualStudio">
+          <AddRange Languages="Xml,Xaml,Html">
+            <New Value="a" Description="(element) with attribute" Comment="suffix" />
+            <New Value="e" Description="element" />
+            <New Value="s" Description="self-closing (element)" Comment="suffix" />
+            <New Value="x" Description="(element) with content" Comment="suffix" />
+          </AddRange>
+          <AddRange Languages="CSharp,VisualBasic">
+            <Set Kind="MemberDeclaration">
+              <New Value="_" Description="interface member declaration" Comment="prefix" />
+              <New Value="c" Description="class declaration" />
+              <New Value="cr" Description="constructor declaration" />
+              <New Value="de" Description="delegate declaration" />
+              <New Value="em" Description="enum declaration" />
+              <New Value="et" Description="event declaration" />
+              <New Value="f" Description="field declaration" />
+              <New Value="ie" Description="inteface declaration" />
+              <New Value="ir" Description="indexer declaration" />
+              <New Value="k" Description="constant declaration" />
+              <New Value="m" Description="method declaration" />
+              <New Value="p" Description="property declaration" />
+              <New Value="pp" Description="property declaration (expanded)" />
+              <New Value="st" Description="struct declaration" />
+              <Remove Languages="CSharp">
+                <New Value="me" Description="Module declaration" Kind="MemberDeclaration" />
+              </Remove>
+            </Set>
+            <Set Kind="Modifier">
+              <New Value="i" Description="internal (Friend)" Comment="prefix" />
+              <New Value="p" Description="private" Comment="prefix" />
+              <New Value="r" Description="read-only" Comment="prefix (after access modifier)" />
+              <New Value="s" Description="static (Shared)" Comment="prefix (after access modifier)" />
+              <New Value="v" Description="virtual (Overridable)" Comment="prefix (after access modifier)" />
+            </Set>
+            <Set Kind="Operator">
+              <New Value="n" Description="new object creation" />
+              <New Value="no" Description="nameof operator" />
+              <New Value="oo" Description="operator overload" />
+              <New Value="x" Description="logical not operator" Comment="prefix" />
+              <Remove Languages="VisualBasic">
+                <New Value="co" Description="conditional operator" Kind="Operator" />
+                <New Value="t" Description="explict cast operator" Kind="Operator" />
+                <New Value="to" Description="typeof operator" Kind="Operator" />
+              </Remove>
+              <Remove Languages="CSharp">
+                <New Value="gt" Description="GetType operator" Kind="Operator" />
+                <New Value="tc" Description="TryCast operator" Kind="Operator" />
+              </Remove>
+            </Set>
+            <Set Kind="Statement">
+              <New Value="fe" Description="foreach statement" />
+              <New Value="fr" Description="for statement" />
+              <New Value="if" Description="if statement" />
+              <New Value="re" Description="return statement" />
+              <New Value="t" Description="try statement" />
+              <New Value="tw" Description="throw statement" />
+              <New Value="u" Description="using statement" />
+              <New Value="we" Description="while statement" />
+              <Remove Languages="VisualBasic">
+                <New Value="sh" Description="switch statement" Kind="Statement" />
+              </Remove>
+              <Remove Languages="CSharp">
+                <New Value="sc" Description="Select Case statement" Kind="Statement" />
+              </Remove>
+            </Set>
+            <Set Kind="Type">
+              <New Value="a" Description="Array" />
+              <New Value="b" Description="Boolean" />
+              <New Value="dt" Description="DateTime" />
+              <New Value="i" Description="Int32" />
+              <New Value="l" Description="List&lt;T&gt;" />
+              <New Value="o" Description="Object" />
+              <New Value="s" Description="String" />
+              <New Value="rr" Description="Reader" Comment="suffix" />
+              <New Value="wr" Description="Writer" Comment="suffix" />
+              <New Value="c" Description="Collection&lt;T&gt;" />
+              <New Value="d" Description="Dictionary&lt;TKey,TValue&gt;" />
+              <New Value="hs" Description="HashSet&lt;T&gt;" />
+              <New Value="i" Description="Immutable" Comment="prefix" />
+              <New Value="l" Description="Int64" />
+              <New Value="ll" Description="LinkedList&lt;T&gt;" />
+              <New Value="oc" Description="ObservableCollection&lt;T&gt;" />
+              <New Value="q" Description="Queue&lt;T&gt;" />
+              <New Value="s" Description="Stack&lt;T&gt;" />
+            </Set>
+            <Set Kind="Other">
+              <New Value="_" Description="with parameters" Comment="suffix" />
+              <New Value="_" Description="with initializer" Comment="suffix" />
+              <New Value="c" Description="catch clause" />
+              <New Value="d" Description="default keyword" />
+              <New Value="e" Description="else clause" />
+              <New Value="f" Description="finally clause" />
+              <New Value="g" Description="type parameter" />
+              <New Value="g" Description="generic type" Comment="prefix" />
+              <New Value="l" Description="lambda expression" />
+              <New Value="n" Description="(equals to) null" />
+              <New Value="pa" Description="parameter array" />
+              <New Value="pp" Description="preprocessor directive" Comment="prefix" />
+              <New Value="ps" Description="private set" />
+              <New Value="r" Description="return keyword" />
+              <New Value="v" Description="local variable declaration" />
+              <New Value="y" Description="yield" Comment="prefix" />
+              <New Value="this" Description="containing type name" />
+            </Set>
+          </AddRange>
+        </AddRange>
+      </Records>
+    </Entity>
+  </Entities>
+</Document>

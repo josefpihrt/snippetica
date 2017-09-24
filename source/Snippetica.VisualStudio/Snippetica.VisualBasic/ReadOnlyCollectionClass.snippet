@@ -9,7 +9,7 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -39,13 +39,13 @@
       </Literal>
     </Declarations>
     <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Inherits ReadOnlyCollection(Of $type$)
+	Inherits ReadOnlyCollection(Of $type$)
 
-    Public Sub New(list As IList(Of $type$))
-        MyBase.New(list)
-    End Sub
+	Public Sub New(list As IList(Of $type$))
+		MyBase.New(list)
+	End Sub
 
-    $end$
+	$end$
 End Class]]></Code>
   </Snippet>
 </CodeSnippet>
