@@ -12,6 +12,8 @@ namespace Snippetica
             {
                 case EnvironmentKind.VisualStudio:
                     return "vs";
+                case EnvironmentKind.VisualStudioCode:
+                    return "vscode";
                 default:
                     throw new ArgumentException("", nameof(kind));
             }
@@ -23,6 +25,8 @@ namespace Snippetica
             {
                 case EnvironmentKind.VisualStudio:
                     return "Visual Studio";
+                case EnvironmentKind.VisualStudioCode:
+                    return "Visual Studio Code";
                 default:
                     throw new ArgumentException("", nameof(kind));
             }

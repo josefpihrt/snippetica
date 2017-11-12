@@ -36,7 +36,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudio.Dev", "source\Snippetica.VisualStudio.Dev\Snippetica.VisualStudio.Dev.csproj", "{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode", "source\Snippetica.VisualStudioCode\Snippetica.VisualStudioCode.shproj", "{849BCA71-BCB0-4CC5-A46C-F27C846AD843}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode.Dev", "source\Snippetica.VisualStudioCode.Dev\Snippetica.VisualStudioCode.Dev.shproj", "{DDDAE79D-39A1-4D6E-83E9-E9758C632645}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		source\Snippetica.VisualStudioCode\Snippetica.VisualStudioCode.projitems*{849bca71-bcb0-4cc5-a46c-f27c846ad843}*SharedItemsImports = 13
+		source\Snippetica.VisualStudioCode.Dev\Snippetica.VisualStudioCode.Dev.projitems*{dddae79d-39a1-4d6e-83e9-e9758c632645}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

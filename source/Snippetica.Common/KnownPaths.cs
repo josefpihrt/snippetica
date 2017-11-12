@@ -22,9 +22,19 @@ namespace Snippetica
             get { return Path.Combine(SolutionDirectoryPath, SourceDirectoryName, VisualStudioExtensionProjectName); }
         }
 
+        public static string VisualStudioCodeExtensionProjectPath
+        {
+            get { return Path.Combine(SolutionDirectoryPath, SourceDirectoryName, VisualStudioCodeExtensionProjectName); }
+        }
+
         public static string VisualStudioExtensionGitHubUrl
         {
             get { return $"{SourceGitHubUrl}/{VisualStudioExtensionProjectName}"; }
+        }
+
+        public static string VisualStudioCodeExtensionGitHubUrl
+        {
+            get { return $"{SourceGitHubUrl}/{VisualStudioCodeExtensionProjectName}"; }
         }
     }
 }

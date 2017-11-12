@@ -1,0 +1,65 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>IComparer(Of T) class</Title>
+    <Shortcut>c_IComparerOfT</Shortcut>
+    <Description>class that implements IComparer(Of T)</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-ExcludeFromReadme</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System</Namespace>
+      </Import>
+      <Import>
+        <Namespace>System.Collections.Generic</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>modifier</ID>
+        <ToolTip>Modifier(s)</ToolTip>
+        <Default>Public</Default>
+      </Literal>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Collection type name</ToolTip>
+        <Default>Collection</Default>
+      </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Type name</ToolTip>
+        <Default>Object</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[$modifier$ Class $name$
+	Implements IComparer(Of $type$)
+
+	Public Function Compare(x As $type$, y As $type$) As Integer Implements IComparer(Of $type$).Compare
+
+		If Object.ReferenceEquals(x, y) Then
+			Return 0
+		End If
+
+		If x Is Nothing Then
+			Return -1
+		End If
+
+		If y Is Nothing Then
+			Return 1
+		End If
+
+		$end$
+		Throw New NotImplementedException()
+
+	End Function
+
+End Class]]></Code>
+  </Snippet>
+</CodeSnippet>

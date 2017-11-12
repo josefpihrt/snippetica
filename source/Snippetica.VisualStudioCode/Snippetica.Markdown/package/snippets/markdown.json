@@ -1,0 +1,361 @@
+﻿{
+  "bold": {
+    "prefix": "b",
+    "body": [
+      "**${TM_SELECTED_TEXT}${1:x}**${0}"
+    ],
+    "description": "bold"
+  },
+  "CDATA section": {
+    "prefix": "cdata",
+    "body": [
+      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
+    ],
+    "description": "CDATA section"
+  },
+  "CDATA section (with content)": {
+    "prefix": "cdatax",
+    "body": [
+      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
+    ],
+    "description": "CDATA section (with content)"
+  },
+  "code (inline)": {
+    "prefix": "ci",
+    "body": [
+      "`${TM_SELECTED_TEXT}${1:x}`${0}"
+    ],
+    "description": "code (inline)"
+  },
+  "code block": {
+    "prefix": "cb",
+    "body": [
+      "```",
+      "${TM_SELECTED_TEXT}${1:x}",
+      "```${0}"
+    ],
+    "description": "code block"
+  },
+  "code block with language": {
+    "prefix": "cbl",
+    "body": [
+      "```${1:language}",
+      "${TM_SELECTED_TEXT}${2:x}",
+      "```${0}"
+    ],
+    "description": "code block with language"
+  },
+  "comment": {
+    "prefix": "c",
+    "body": [
+      "<!-- ${TM_SELECTED_TEXT}${1:comment} -->${0}"
+    ],
+    "description": "comment"
+  },
+  "element": {
+    "prefix": "e",
+    "body": [
+      "<${1:element}>",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "</${1}>"
+    ],
+    "description": "element"
+  },
+  "element (with attribute)": {
+    "prefix": "ea",
+    "body": [
+      "<${1:element} ${2:attribute}=\"${3:value}\">",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "</${1}>"
+    ],
+    "description": "element (with attribute)"
+  },
+  "element (with attribute, with content)": {
+    "prefix": "eax",
+    "body": [
+      "<${1:element} ${2:attribute}=\"${3:value}\">${4:content}</${1}>${0}"
+    ],
+    "description": "element (with attribute, with content)"
+  },
+  "element (with content)": {
+    "prefix": "ex",
+    "body": [
+      "<${1:element}>${2:content}</${1}>${0}"
+    ],
+    "description": "element (with content)"
+  },
+  "header 1": {
+    "prefix": "h",
+    "body": [
+      "# ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "header 1"
+  },
+  "header 2": {
+    "prefix": "h2",
+    "body": [
+      "## ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "header 2"
+  },
+  "header 2 _": {
+    "prefix": "hh",
+    "body": [
+      "## ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "header 2"
+  },
+  "header 3": {
+    "prefix": "h3",
+    "body": [
+      "### ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "header 3"
+  },
+  "header 3 _": {
+    "prefix": "hhh",
+    "body": [
+      "### ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "header 3"
+  },
+  "header 4": {
+    "prefix": "h4",
+    "body": [
+      "#### ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "header 4"
+  },
+  "header 5": {
+    "prefix": "h5",
+    "body": [
+      "##### ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "header 5"
+  },
+  "header 6": {
+    "prefix": "h6",
+    "body": [
+      "###### ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "header 6"
+  },
+  "horizontal rule": {
+    "prefix": "hr",
+    "body": [
+      "__________${0}"
+    ],
+    "description": "horizontal rule"
+  },
+  "image": {
+    "prefix": "ie",
+    "body": [
+      "![${1:text}](${2:url})${0}"
+    ],
+    "description": "image"
+  },
+  "image _": {
+    "prefix": "img",
+    "body": [
+      "![${1:text}](${2:url})${0}"
+    ],
+    "description": "image"
+  },
+  "italic": {
+    "prefix": "i",
+    "body": [
+      "*${TM_SELECTED_TEXT}${1:x}*${0}"
+    ],
+    "description": "italic"
+  },
+  "link": {
+    "prefix": "l",
+    "body": [
+      "[${1:text}](${2:http://www.url.com})${0}"
+    ],
+    "description": "link"
+  },
+  "link _": {
+    "prefix": "a",
+    "body": [
+      "[${1:text}](${2:http://www.url.com})${0}"
+    ],
+    "description": "link"
+  },
+  "ordered list item": {
+    "prefix": "ol",
+    "body": [
+      "${1:1}. ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "ordered list item"
+  },
+  "ordered list item (level 2)": {
+    "prefix": "ol2",
+    "body": [
+      "\t${1:1}. ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "ordered list item (level 2)"
+  },
+  "ordered list item (level 3)": {
+    "prefix": "ol3",
+    "body": [
+      "\t\t${1:1}. ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "ordered list item (level 3)"
+  },
+  "ordered list items": {
+    "prefix": "oll",
+    "body": [
+      "1. ${1:x}",
+      "2. ${2:x}",
+      "3. ${3:x}${0}"
+    ],
+    "description": "ordered list items"
+  },
+  "ordered list items (level 2)": {
+    "prefix": "oll2",
+    "body": [
+      "\t1. ${1:x}",
+      "\t2. ${2:x}",
+      "\t3. ${3:x}${0}"
+    ],
+    "description": "ordered list items (level 2)"
+  },
+  "ordered list items (level 3)": {
+    "prefix": "oll3",
+    "body": [
+      "\t\t1. ${1:x}",
+      "\t\t2. ${2:x}",
+      "\t\t3. ${3:x}${0}"
+    ],
+    "description": "ordered list items (level 3)"
+  },
+  "quote": {
+    "prefix": "q",
+    "body": [
+      "> ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "quote"
+  },
+  "self-closing element": {
+    "prefix": "es",
+    "body": [
+      "<${1:element} />${0}"
+    ],
+    "description": "self-closing element"
+  },
+  "self-closing element (with attribute)": {
+    "prefix": "eas",
+    "body": [
+      "<${1:element} ${2:attribute}=\"${3:value}\" />${0}"
+    ],
+    "description": "self-closing element (with attribute)"
+  },
+  "strikethrough": {
+    "prefix": "st",
+    "body": [
+      "~~${TM_SELECTED_TEXT}${1:x}~~${0}"
+    ],
+    "description": "strikethrough"
+  },
+  "table with 1 column": {
+    "prefix": "t",
+    "body": [
+      "${1:header} |",
+      "--- |",
+      "${2:x} |${0}"
+    ],
+    "description": "table with 1 column"
+  },
+  "table with 2 columns": {
+    "prefix": "t2",
+    "body": [
+      "${1:header1} | ${2:header2}",
+      "--- | ---",
+      "${3:x} | ${4:x}${0}"
+    ],
+    "description": "table with 2 columns"
+  },
+  "table with 2 columns _": {
+    "prefix": "tt",
+    "body": [
+      "${1:header1} | ${2:header2}",
+      "--- | ---",
+      "${3:x} | ${4:x}${0}"
+    ],
+    "description": "table with 2 columns"
+  },
+  "table with 3 columns": {
+    "prefix": "t3",
+    "body": [
+      "${1:header1} | ${2:header2} | ${3:header3}",
+      "--- | --- | ---",
+      "${4:x} | ${5:x} | ${6:x}${0}"
+    ],
+    "description": "table with 3 columns"
+  },
+  "table with 3 columns _": {
+    "prefix": "ttt",
+    "body": [
+      "${1:header1} | ${2:header2} | ${3:header3}",
+      "--- | --- | ---",
+      "${4:x} | ${5:x} | ${6:x}${0}"
+    ],
+    "description": "table with 3 columns"
+  },
+  "task list item": {
+    "prefix": "tl",
+    "body": [
+      "- [ ] ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "task list item"
+  },
+  "unordered list item": {
+    "prefix": "ul",
+    "body": [
+      "* ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "unordered list item"
+  },
+  "unordered list item (level 2)": {
+    "prefix": "ul2",
+    "body": [
+      "\t* ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "unordered list item (level 2)"
+  },
+  "unordered list item (level 3)": {
+    "prefix": "ul3",
+    "body": [
+      "\t\t* ${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "unordered list item (level 3)"
+  },
+  "unordered list items": {
+    "prefix": "ull",
+    "body": [
+      "* ${1:x}",
+      "* ${2:x}",
+      "* ${3:x}${0}"
+    ],
+    "description": "unordered list items"
+  },
+  "unordered list items (level 2)": {
+    "prefix": "ull2",
+    "body": [
+      "\t* ${1:x}",
+      "\t* ${2:x}",
+      "\t* ${3:x}${0}"
+    ],
+    "description": "unordered list items (level 2)"
+  },
+  "unordered list items (level 3)": {
+    "prefix": "ull3",
+    "body": [
+      "\t\t* ${1:x}",
+      "\t\t* ${2:x}",
+      "\t\t* ${3:x}${0}"
+    ],
+    "description": "unordered list items (level 3)"
+  }
+}

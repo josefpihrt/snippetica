@@ -1,0 +1,26 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>union</Title>
+    <Shortcut>un</Shortcut>
+    <Description>union</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Union name</ToolTip>
+        <Default>UnionName</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="Cpp"><![CDATA[union $name$
+{
+	$selected$$end$
+};]]></Code>
+  </Snippet>
+</CodeSnippet>

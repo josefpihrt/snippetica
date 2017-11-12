@@ -1,0 +1,40 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>File.WriteAllText</Title>
+    <Shortcut>iof_wat</Shortcut>
+    <Description>File.WriteAllText method.</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System.IO</Namespace>
+      </Import>
+      <Import>
+        <Namespace>System.Text</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>_encoding</ID>
+        <ToolTip>File encoding</ToolTip>
+        <Default>Encoding.UTF8</Default>
+      </Literal>
+      <Literal>
+        <ID>content</ID>
+        <ToolTip>File content</ToolTip>
+        <Default>""</Default>
+      </Literal>
+      <Literal>
+        <ID>path</ID>
+        <ToolTip>File path</ToolTip>
+        <Default>path</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[File.WriteAllText($path$, $content$, $_encoding$)$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

@@ -6,5 +6,6 @@ namespace Snippetica
     {
         None,
         VisualStudio,
+        VisualStudioCode
     }
 }

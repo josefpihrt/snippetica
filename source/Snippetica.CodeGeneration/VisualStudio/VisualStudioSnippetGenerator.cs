@@ -20,6 +20,8 @@ namespace Snippetica.CodeGeneration.VisualStudio
 
             base.PostProcess(snippet);
 
+            snippet.RemoveTag(KnownTags.ExcludeFromVisualStudioCode);
+
             return snippet;
         }
     }

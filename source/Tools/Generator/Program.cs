@@ -10,6 +10,7 @@ using Pihrtsoft.Snippets;
 using Pihrtsoft.Snippets.Comparers;
 using Snippetica.CodeGeneration.Markdown;
 using Snippetica.CodeGeneration.VisualStudio;
+using Snippetica.CodeGeneration.VisualStudioCode;
 using Snippetica.IO;
 using static Snippetica.KnownNames;
 using static Snippetica.KnownPaths;
@@ -43,7 +44,15 @@ namespace Snippetica.CodeGeneration
                 directories,
                 VisualStudioExtensionProjectPath);
 
+            var visualStudioCode = new VisualStudioCodeEnvironment();
+
+            (List<SnippetGeneratorResult> visualStudioCodeResults, List<Snippet> visualStudioCodeSnippets) = GenerateSnippets(
+                visualStudioCode,
+                directories,
+                VisualStudioCodeExtensionProjectPath);
+
             CheckDuplicateShortcuts(visualStudioSnippets, visualStudio);
+            CheckDuplicateShortcuts(visualStudioCodeSnippets, visualStudioCode);
 
             using (var sw = new StringWriter())
             {
@@ -51,6 +60,7 @@ namespace Snippetica.CodeGeneration
                 sw.WriteLine();
 
                 IEnumerable<Language> languages = visualStudioResults
+                    .Concat(visualStudioCodeResults)
                     .Select(f => f.Language).Distinct();
 
                 sw.WriteLine($"* {CodeGenerationUtility.GetProjectSubtitle(languages)}");
@@ -60,6 +70,8 @@ namespace Snippetica.CodeGeneration
                 MarkdownGenerator.GenerateProjectReadme(visualStudioResults, sw, visualStudio.CreateProjectReadmeSettings());
 
                 sw.WriteLine();
+
+                MarkdownGenerator.GenerateProjectReadme(visualStudioCodeResults, sw, visualStudioCode.CreateProjectReadmeSettings());
 
                 IOUtility.WriteAllText(Path.Combine(SolutionDirectoryPath, ReadMeFileName), sw.ToString(), IOUtility.UTF8NoBom);
             }

@@ -1,0 +1,32 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Enumerable.Zip</Title>
+    <Shortcut>q_z</Shortcut>
+    <Description>Enumerable.Zip method</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System.Linq</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>resultSelector</ID>
+        <ToolTip>Result selector</ToolTip>
+        <Default>new { }</Default>
+      </Literal>
+      <Literal>
+        <ID>second</ID>
+        <ToolTip>Second sequence</ToolTip>
+        <Default>second</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[.Zip($second$, (f, g) => $resultSelector$)$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

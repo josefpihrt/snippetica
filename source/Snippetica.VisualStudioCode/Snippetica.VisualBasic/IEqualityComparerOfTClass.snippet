@@ -1,0 +1,71 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>IEqualityComparer(Of T) class</Title>
+    <Shortcut>c_IEqualityComparerOfT</Shortcut>
+    <Description>class that implements IEqualityComparer(Of T)</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-ExcludeFromReadme</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System</Namespace>
+      </Import>
+      <Import>
+        <Namespace>System.Collections.Generic</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>modifier</ID>
+        <ToolTip>Modifier(s)</ToolTip>
+        <Default>Public</Default>
+      </Literal>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Equality comparer name</ToolTip>
+        <Default>EqualityComparer</Default>
+      </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Type name</ToolTip>
+        <Default>Object</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[$modifier$ Class $name$
+	Inherits EqualityComparer(Of $type$)
+
+	Public Overrides Function Equals(x As $type$, y As $type$) As Boolean
+
+		If Object.ReferenceEquals(x, y) Then
+			Return True
+		End If
+
+		If x Is Nothing OrElse y Is Nothing Then
+			Return False
+		End If
+
+		$end$
+		Throw New NotImplementedException()
+
+	End Function
+
+	Public Overrides Function GetHashCode(obj As $type$) As Integer
+
+		If obj Is Nothing Then
+			Return 0
+		End If
+
+		Throw New NotImplementedException()
+
+	End Function
+
+End Class]]></Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,0 +1,33 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>! operator overloading</Title>
+    <Shortcut>oo_ExclamationMark</Shortcut>
+    <Description>! operator overloading</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-ExcludeFromReadme</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>operand</ID>
+        <ToolTip>Operand</ToolTip>
+        <Default>value</Default>
+      </Literal>
+      <Literal>
+        <ID>thisName</ID>
+        <ToolTip>Containing type name</ToolTip>
+        <Default>ThisName</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[public static $thisName$ operator !($thisName$ $operand$)
+{
+	$end$
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

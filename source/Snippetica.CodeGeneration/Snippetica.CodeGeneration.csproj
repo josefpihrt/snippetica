@@ -59,6 +59,8 @@
     <Compile Include="Markdown\ProjectReadmeSettings.cs" />
     <Compile Include="PackageGenerator.cs" />
     <Compile Include="SnippetEnvironment.cs" />
+    <Compile Include="VisualStudioCode\VisualStudioCodeEnvironment.cs" />
+    <Compile Include="VisualStudioCode\VisualStudioCodePackageGenerator.cs" />
     <Compile Include="VisualStudio\HtmlGenerator.cs" />
     <Compile Include="VisualStudio\PkgDefGenerator.cs" />
     <Compile Include="VisualStudio\ProjectDocument.cs" />
@@ -66,6 +68,12 @@
     <Compile Include="HtmlSnippetGenerator.cs" />
     <Compile Include="Commands\HtmlWithContentCommand.cs" />
     <Compile Include="Commands\HtmlWithoutContentCommand.cs" />
+    <Compile Include="Json\JsonHelper.cs" />
+    <Compile Include="Json\JsonUtility.cs" />
+    <Compile Include="Json\Package\BugInfo.cs" />
+    <Compile Include="Json\Package\PackageInfo.cs" />
+    <Compile Include="Json\Package\RepositoryInfo.cs" />
+    <Compile Include="Json\Package\SnippetInfo.cs" />
     <Compile Include="LanguageSnippetGenerator.cs" />
     <Compile Include="Markdown\ColumnDefinition.cs" />
     <Compile Include="Markdown\MarkdownGenerator.cs" />
@@ -117,6 +125,7 @@
     <Compile Include="Commands\TypeCommand.cs" />
     <Compile Include="TypeDefinitionCollection.cs" />
     <Compile Include="VisualBasicDefinition.cs" />
+    <Compile Include="VisualStudioCode\VisualStudioCodeSnippetGenerator.cs" />
     <Compile Include="VisualStudio\VisualStudioPackageGenerator.cs" />
     <Compile Include="VisualStudio\VisualStudioSnippetGenerator.cs" />
     <Compile Include="XamlSnippetGenerator.cs" />

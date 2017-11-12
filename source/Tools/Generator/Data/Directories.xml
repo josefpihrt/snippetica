@@ -23,14 +23,24 @@
           <Set Language="Xaml">
             <New Path=".Xaml">
               <Add Tags="GenerateXmlSnippets" />
+              <Add Tags="ExcludeFromVisualStudioCode" />
             </New>
           </Set>
           <Set Language="Xml">
             <New Path=".Xml" Tags="GenerateXmlSnippets" />
             <New Path=".Xml.CodeSnippet">
+              <Add Tags="ExcludeFromVisualStudioCode" />
               <Add Tags="NoQuickReference" />
             </New>
           </Set>
+          <Add Tags="ExcludeFromVisualStudio">
+            <Set Language="Markdown">
+              <New Path=".Markdown" Tags="GenerateXmlSnippets" />
+            </Set>
+            <Set Language="Json">
+              <New Path=".Json" />
+            </Set>
+          </Add>
         </PrefixMany>
       </Records>
     </Entity>

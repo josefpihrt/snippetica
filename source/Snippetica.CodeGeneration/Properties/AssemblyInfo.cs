@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Snippetica.CodeGeneration")]
+[assembly: AssemblyTitle("SnippetGenerator")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Pihrtsoft")]
-[assembly: AssemblyProduct("Snippetica.CodeGeneration")]
-[assembly: AssemblyCopyright("Copyright (c) 2015-2017 Josef Pihrt")]
+[assembly: AssemblyProduct("SnippetGenerator")]
+[assembly: AssemblyCopyright("Copyright (c) 2015-2016 Josef Pihrt")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

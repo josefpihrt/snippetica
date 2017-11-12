@@ -29,6 +29,7 @@ namespace Snippetica
         public const string TitleStartsWithShortcut = nameof(TitleStartsWithShortcut);
         public const string TitleEndsWithUnderscore = nameof(TitleEndsWithUnderscore);
         public const string ExcludeFromVisualStudio = nameof(ExcludeFromVisualStudio);
+        public const string ExcludeFromVisualStudioCode = nameof(ExcludeFromVisualStudioCode);
         public const string NoQuickReference = nameof(NoQuickReference);
         public const string ExcludeFromSnippetBrowser = nameof(ExcludeFromSnippetBrowser);
         public const string GenerateXmlSnippets = "GenerateXmlSnippets";

@@ -11,7 +11,7 @@
         <Property Name="Environments" IsCollection="true" />
       </Declarations>
       <Records>
-        <AddRange Environments="VisualStudio">
+        <AddRange Environments="VisualStudio,VisualStudioCode">
           <AddRange Languages="Xml,Xaml,Html">
             <New Value="a" Description="(element) with attribute" Comment="suffix" />
             <New Value="e" Description="element" />
@@ -86,15 +86,17 @@
               <New Value="s" Description="String" />
               <New Value="rr" Description="Reader" Comment="suffix" />
               <New Value="wr" Description="Writer" Comment="suffix" />
-              <New Value="c" Description="Collection&lt;T&gt;" />
-              <New Value="d" Description="Dictionary&lt;TKey,TValue&gt;" />
-              <New Value="hs" Description="HashSet&lt;T&gt;" />
-              <New Value="i" Description="Immutable" Comment="prefix" />
-              <New Value="l" Description="Int64" />
-              <New Value="ll" Description="LinkedList&lt;T&gt;" />
-              <New Value="oc" Description="ObservableCollection&lt;T&gt;" />
-              <New Value="q" Description="Queue&lt;T&gt;" />
-              <New Value="s" Description="Stack&lt;T&gt;" />
+              <Remove Environments="VisualStudioCode">
+                <New Value="c" Description="Collection&lt;T&gt;" />
+                <New Value="d" Description="Dictionary&lt;TKey,TValue&gt;" />
+                <New Value="hs" Description="HashSet&lt;T&gt;" />
+                <New Value="i" Description="Immutable" Comment="prefix" />
+                <New Value="l" Description="Int64" />
+                <New Value="ll" Description="LinkedList&lt;T&gt;" />
+                <New Value="oc" Description="ObservableCollection&lt;T&gt;" />
+                <New Value="q" Description="Queue&lt;T&gt;" />
+                <New Value="s" Description="Stack&lt;T&gt;" />
+              </Remove>
             </Set>
             <Set Kind="Other">
               <New Value="_" Description="with parameters" Comment="suffix" />
@@ -113,7 +115,9 @@
               <New Value="r" Description="return keyword" />
               <New Value="v" Description="local variable declaration" />
               <New Value="y" Description="yield" Comment="prefix" />
-              <New Value="this" Description="containing type name" />
+              <Remove Environments="VisualStudioCode">
+                <New Value="this" Description="containing type name" />
+              </Remove>
             </Set>
           </AddRange>
         </AddRange>

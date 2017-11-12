@@ -1,0 +1,37 @@
+{
+  "name": "snippetica-html",
+  "publisher": "josefpihrt",
+  "displayName": "Snippetica for HTML",
+  "description": "A collection of snippets for HTML.",
+  "icon": "images/icon.png",
+  "version": "0.6.0",
+  "author": "Josef Pihrt",
+  "license": "SEE LICENSE IN LICENSE.TXT",
+  "homepage": "http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudioCode/Snippetica.Html/README.md",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/josefpihrt/snippetica.git"
+  },
+  "bugs": {
+    "url": "http://github.com/josefpihrt/snippetica/issues"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "Snippet",
+    "Snippets",
+    "HTML"
+  ],
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/html.json"
+      }
+    ]
+  }
+}
