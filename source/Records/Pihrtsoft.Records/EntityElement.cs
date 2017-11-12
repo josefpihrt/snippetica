@@ -190,42 +190,40 @@ namespace Pihrtsoft.Records
 
         private Collection<Record> ReadBaseRecords()
         {
-            if (_baseRecordsElement != null)
-            {
-                var reader = new BaseRecordReader(_baseRecordsElement, Entity, Settings);
+            if (_baseRecordsElement == null)
+                return null;
 
-                IEnumerable<Record> records = reader.ReadRecords();
+            var reader = new BaseRecordReader(_baseRecordsElement, Entity, Settings);
 
-                if (records != null)
-                    return new ExtendedKeyedCollection<string, Record>(records.ToArray(), DefaultComparer.StringComparer);
-            }
+            IEnumerable<Record> records = reader.ReadRecords();
 
-            return null;
+            if (records == null)
+                return null;
+
+            return new ExtendedKeyedCollection<string, Record>(records.ToArray(), DefaultComparer.StringComparer);
         }
 
         public Collection<Record> Records()
         {
-            if (_recordsElement != null)
-            {
-                var reader = new RecordReader(_recordsElement, Entity, Settings, ReadBaseRecords());
+            if (_recordsElement == null)
+                return null;
 
-                return reader.ReadRecords();
-            }
+            var reader = new RecordReader(_recordsElement, Entity, Settings, ReadBaseRecords());
 
-            return null;
+            return reader.ReadRecords();
         }
 
         public IEnumerable<EntityElement> EntityElements()
         {
-            if (_entitiesElement != null)
-            {
-                foreach (XElement element in _entitiesElement.Elements())
-                {
-                    if (element.Kind() != ElementKind.Entity)
-                        ThrowOnUnknownElement(element);
+            if (_entitiesElement == null)
+                yield break;
 
-                    yield return new EntityElement(element, Settings, Entity);
-                }
+            foreach (XElement element in _entitiesElement.Elements())
+            {
+                if (element.Kind() != ElementKind.Entity)
+                    ThrowOnUnknownElement(element);
+
+                yield return new EntityElement(element, Settings, Entity);
             }
         }
 

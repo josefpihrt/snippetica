@@ -197,58 +197,58 @@ namespace Pihrtsoft.Records
 
         private void ExecutePendingOperations(Record record)
         {
-            if (Operations != null)
+            if (Operations == null)
+                return;
+
+            foreach (PropertyOperationCollection propertyOperations in Operations)
             {
-                foreach (PropertyOperationCollection propertyOperations in Operations)
+                Dictionary<OperationKind, string> pendingValues = null;
+
+                foreach (IPropertyOperation operation in propertyOperations)
                 {
-                    Dictionary<OperationKind, string> pendingValues = null;
-
-                    foreach (IPropertyOperation operation in propertyOperations)
+                    if (operation.SupportsExecute)
                     {
-                        if (operation.SupportsExecute)
-                        {
-                            operation.Execute(record);
+                        operation.Execute(record);
 
-                            if (pendingValues != null)
-                                ProcessPendingValues(pendingValues, propertyOperations.PropertyDefinition, record);
+                        if (pendingValues != null)
+                            ProcessPendingValues(pendingValues, propertyOperations.PropertyDefinition, record);
+                    }
+                    else
+                    {
+                        OperationKind kind = operation.Kind;
+
+                        pendingValues = pendingValues ?? new Dictionary<OperationKind, string>();
+
+                        if (!pendingValues.TryGetValue(kind, out string value))
+                        {
+                            pendingValues[kind] = operation.Value;
                         }
                         else
                         {
-                            OperationKind kind = operation.Kind;
-
-                            pendingValues = pendingValues ?? new Dictionary<OperationKind, string>();
-
-                            if (!pendingValues.TryGetValue(kind, out string value))
+                            switch (kind)
                             {
-                                pendingValues[kind] = operation.Value;
-                            }
-                            else
-                            {
-                                switch (kind)
-                                {
-                                    case OperationKind.PostfixMany:
-                                        {
-                                            pendingValues[kind] = operation.Value + pendingValues[kind];
-                                            break;
-                                        }
-                                    case OperationKind.PrefixMany:
-                                        {
-                                            pendingValues[kind] += operation.Value;
-                                            break;
-                                        }
-                                    default:
-                                        {
-                                            Debug.Assert(false, kind.ToString());
-                                            break;
-                                        }
-                                }
+                                case OperationKind.PostfixMany:
+                                    {
+                                        pendingValues[kind] = operation.Value + pendingValues[kind];
+                                        break;
+                                    }
+                                case OperationKind.PrefixMany:
+                                    {
+                                        pendingValues[kind] += operation.Value;
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        Debug.Assert(false, kind.ToString());
+                                        break;
+                                    }
                             }
                         }
                     }
-
-                    if (pendingValues != null)
-                        ProcessPendingValues(pendingValues, propertyOperations.PropertyDefinition, record);
                 }
+
+                if (pendingValues != null)
+                    ProcessPendingValues(pendingValues, propertyOperations.PropertyDefinition, record);
             }
         }
 

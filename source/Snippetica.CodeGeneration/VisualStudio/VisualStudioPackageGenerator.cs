@@ -64,9 +64,8 @@ namespace Snippetica.CodeGeneration.VisualStudio
         protected override IEnumerable<Snippet> PostProcess(IEnumerable<Snippet> snippets)
         {
             snippets = PostProcessCore(snippets);
-            snippets = base.PostProcess(snippets);
 
-            return snippets;
+            return base.PostProcess(snippets);
         }
 
         private IEnumerable<Snippet> PostProcessCore(IEnumerable<Snippet> snippets)

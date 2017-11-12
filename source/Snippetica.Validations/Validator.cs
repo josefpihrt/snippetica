@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using Pihrtsoft.Snippets;
@@ -18,7 +19,7 @@ namespace Snippetica.Validations
             foreach (SnippetValidationResult result in Validate(snippets))
             {
                 Console.WriteLine();
-                Console.WriteLine($"{result.Importance.ToString().ToUpper()}: \"{result.Description}\" in \"{result.Snippet.FilePath}\"");
+                Console.WriteLine($"{result.Importance.ToString().ToUpper(CultureInfo.InvariantCulture)}: \"{result.Description}\" in \"{result.Snippet.FilePath}\"");
             }
 
             foreach (IGrouping<string, Snippet> snippet in snippets

@@ -49,15 +49,13 @@ namespace Pihrtsoft.Records.Operations
                 return;
             }
 
-            List<object> items = null;
+            if (!record.TryGetValue(PropertyName, out object value))
+                return;
 
-            if (record.TryGetValue(PropertyName, out object value))
-            {
-                items = (List<object>)value;
+            var items = (List<object>)value;
 
-                foreach (string item in Value.Split(Separator))
-                    items.Remove(item);
-            }
+            foreach (string item in Value.Split(Separator))
+                items.Remove(item);
         }
 
         string IKey<string>.GetKey()

@@ -40,7 +40,7 @@ namespace Snippetica.CodeGeneration.Json.Package
 
         public BugInfo Bugs { get; set; }
 
-        public List<SnippetInfo> Snippets { get; set; } = new List<SnippetInfo>();
+        public List<SnippetInfo> Snippets { get; } = new List<SnippetInfo>();
 
         public JObject ToJson()
         {

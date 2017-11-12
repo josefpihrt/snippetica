@@ -44,14 +44,12 @@ namespace Pihrtsoft.Records.Operations
                 return;
             }
 
-            List<object> items = null;
+            if (!record.TryGetValue(PropertyName, out object value))
+                return;
 
-            if (record.TryGetValue(PropertyName, out object value))
-            {
-                items = (List<object>)value;
+            var items = (List<object>)value;
 
-                items.Remove(Value);
-            }
+            items.Remove(Value);
         }
 
         string IKey<string>.GetKey()

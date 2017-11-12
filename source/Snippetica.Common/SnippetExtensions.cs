@@ -14,22 +14,20 @@ namespace Snippetica
 
         public static string GetShortcutFromTitle(this Snippet snippet)
         {
-            if (snippet.HasTag(KnownTags.TitleStartsWithShortcut))
+            if (!snippet.HasTag(KnownTags.TitleStartsWithShortcut))
+                return null;
+
+            string s = snippet.Title;
+
+            int i = 0;
+
+            while (i < s.Length
+                && s[i] != ' ')
             {
-                string s = snippet.Title;
-
-                int i = 0;
-
-                while (i < s.Length
-                    && s[i] != ' ')
-                {
-                    i++;
-                }
-
-                return s.Substring(0, i);
+                i++;
             }
 
-            return null;
+            return s.Substring(0, i);
         }
 
         public static Snippet RemoveShortcutFromTitle(this Snippet snippet)
@@ -224,11 +222,13 @@ namespace Snippetica
 
         public static void AddNamespace(this Snippet snippet, string @namespace)
         {
-            if (@namespace != null
-                && !snippet.Namespaces.Contains(@namespace))
-            {
-                snippet.Namespaces.Add(@namespace);
-            }
+            if (@namespace == null)
+                return;
+
+            if (snippet.Namespaces.Contains(@namespace))
+                return;
+
+            snippet.Namespaces.Add(@namespace);
         }
 
         public static void AddLiteral(this Snippet snippet, Literal literal)
@@ -247,17 +247,14 @@ namespace Snippetica
 
         public static bool RequiresTypeGeneration(this Snippet snippet, string typeName)
         {
-            if (snippet.HasTag(KnownTags.GenerateType)
-                || snippet.HasTag(KnownTags.GenerateTypeTag(typeName)))
+            if (!snippet.HasTag(KnownTags.GenerateType)
+                && !snippet.HasTag(KnownTags.GenerateTypeTag(typeName)))
             {
-                if (KnownTags.GenerateTypeTag(typeName) != KnownTags.GenerateVoidType
-                    || snippet.HasTag(KnownTags.GenerateVoidType))
-                {
-                    return true;
-                }
+                return false;
             }
 
-            return false;
+            return KnownTags.GenerateTypeTag(typeName) != KnownTags.GenerateVoidType
+                || snippet.HasTag(KnownTags.GenerateVoidType);
         }
 
         public static bool RequiresModifierGeneration(this Snippet snippet, string modifierName)
@@ -387,11 +384,11 @@ namespace Snippetica
         {
             Literal literal = snippet.Literals.FirstOrDefault(f => f.Identifier == identifier);
 
-            if (literal != null)
-            {
-                snippet.Literals.Remove(literal);
-                snippet.ReplacePlaceholders(literal.Identifier, "");
-            }
+            if (literal == null)
+                return;
+
+            snippet.Literals.Remove(literal);
+            snippet.ReplacePlaceholders(literal.Identifier, "");
         }
 
         public static void RemoveLiterals(this Snippet snippet, params string[] identifiers)
@@ -414,11 +411,11 @@ namespace Snippetica
         {
             Literal literal = snippet.Literals.FirstOrDefault(f => f.Identifier == LiteralIdentifiers.SubOrFunction);
 
-            if (literal != null)
-            {
-                snippet.CodeText = snippet.CodeText.Replace($"${LiteralIdentifiers.SubOrFunction}$", replacement);
-                snippet.Literals.Remove(literal);
-            }
+            if (literal == null)
+                return;
+
+            snippet.CodeText = snippet.CodeText.Replace($"${LiteralIdentifiers.SubOrFunction}$", replacement);
+            snippet.Literals.Remove(literal);
         }
     }
 }

@@ -49,13 +49,13 @@ namespace Snippetica.IO
 
             SaveSettings settings = CreateSaveSettings();
 
-            if (ShouldSave(snippet, filePath, settings, onlyIfChanged))
+            if (!ShouldSave(snippet, filePath, settings, onlyIfChanged))
+                return;
+
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    Console.WriteLine($"saving file {filePath}");
-                    SnippetSerializer.Serialize(fileStream, snippet, settings);
-                }
+                Console.WriteLine($"saving file {filePath}");
+                SnippetSerializer.Serialize(fileStream, snippet, settings);
             }
         }
 
@@ -132,15 +132,15 @@ namespace Snippetica.IO
         {
             encoding = encoding ?? Encoding.UTF8;
 
-            if (ShouldSave(filePath, content, encoding, onlyIfChanged))
-            {
-                if (createDirectory)
-                    Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+            if (!ShouldSave(filePath, content, encoding, onlyIfChanged))
+                return;
 
-                Console.WriteLine($"saving file {filePath}");
+            if (createDirectory)
+                Directory.CreateDirectory(Path.GetDirectoryName(filePath));
 
-                File.WriteAllText(filePath, content, encoding);
-            }
+            Console.WriteLine($"saving file {filePath}");
+
+            File.WriteAllText(filePath, content, encoding);
         }
 
         private static bool NewMethod(string filePath)

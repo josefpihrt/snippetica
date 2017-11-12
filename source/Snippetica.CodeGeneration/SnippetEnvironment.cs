@@ -38,17 +38,17 @@ namespace Snippetica.CodeGeneration
 
             string devPath = Path.Combine(directory.Path, KnownNames.Dev);
 
-            if (Directory.Exists(devPath))
-            {
-                SnippetDirectory devDirectory = directory.WithPath(devPath);
+            if (!Directory.Exists(devPath))
+                yield break;
 
-                yield return new SnippetGeneratorResult(
-                    GenerateSnippetsCore(devDirectory, isDevelopment: true),
-                    name: directory.Path + KnownNames.DevSuffix,
-                    language: directory.Language,
-                    isDevelopment: true,
-                    tags: directory.Tags.ToArray());
-            }
+            SnippetDirectory devDirectory = directory.WithPath(devPath);
+
+            yield return new SnippetGeneratorResult(
+                GenerateSnippetsCore(devDirectory, isDevelopment: true),
+                name: directory.Path + KnownNames.DevSuffix,
+                language: directory.Language,
+                isDevelopment: true,
+                tags: directory.Tags.ToArray());
         }
 
         private List<Snippet> GenerateSnippetsCore(SnippetDirectory directory, bool isDevelopment = false)

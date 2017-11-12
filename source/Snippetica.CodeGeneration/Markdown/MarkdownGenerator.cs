@@ -126,7 +126,6 @@ namespace Snippetica.CodeGeneration.Markdown
                         }
                     }
 
-
                     writer.WriteLine();
                 }
             }
