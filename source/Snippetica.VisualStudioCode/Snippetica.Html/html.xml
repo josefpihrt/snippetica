@@ -872,7 +872,13 @@
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>__cdataEnd</ID>
+          <Default>]]&gt;</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<![CDATA[$selected$$end$$__cdataEnd$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -883,14 +889,24 @@
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name CDataSectionWithContent</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Html"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>__cdataEnd</ID>
+          <Default>]]&gt;</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <ToolTip>Content</ToolTip>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<![CDATA[$content$$__cdataEnd$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

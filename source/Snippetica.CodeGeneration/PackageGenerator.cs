@@ -72,7 +72,7 @@ namespace Snippetica.CodeGeneration
                     Literal literal = snippet.Literals[i];
 
                     if (!literal.IsEditable
-                        && !string.Equals(literal.Identifier, "__cdataEnd", StringComparison.Ordinal))
+                        && !string.Equals(literal.Identifier, XmlSnippetGenerator.CDataIdentifier, StringComparison.Ordinal))
                     {
                         if (string.IsNullOrEmpty(literal.DefaultValue))
                         {

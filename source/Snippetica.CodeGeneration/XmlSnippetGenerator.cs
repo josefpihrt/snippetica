@@ -17,7 +17,7 @@ namespace Snippetica.CodeGeneration
         private const string AttributeIdentifier = "attribute";
         private const string AttributeNameIdentifier = "attribute";
         private const string AttributeValueIdentifier = "value";
-        private const string CDataIdentfiier = "__cdataEnd";
+        public const string CDataIdentifier = "__cdataEnd";
 
         private const string EndPlaceholder = "$end$";
         private const string SelectedPlaceholder = "$selected$";
@@ -81,11 +81,12 @@ namespace Snippetica.CodeGeneration
             snippet.SuffixShortcut(SelfClosingShortcut);
             yield return snippet;
 
-            snippet = CreateCDataSnippetSnippet();
+            Snippet cdataSnippet = CreateCDataSnippetSnippet();
+            snippet = (Snippet)cdataSnippet.Clone();
             ReplaceContentIdentifier(snippet);
             yield return snippet;
 
-            snippet = (Snippet)snippet.Clone();
+            snippet = (Snippet)cdataSnippet.Clone();
             yield return WithContent(snippet);
 
             if (generateHtmlEntities)
@@ -201,12 +202,14 @@ namespace Snippetica.CodeGeneration
 
             s.Description = s.Title;
 
-            s.AddLiteral(new Literal(CDataIdentfiier) { DefaultValue="]]>", IsEditable = false });
+            s.AddLiteral(new Literal(CDataIdentifier) { DefaultValue="]]>", IsEditable = false });
+
+            s.AddLiteral(CreateContentLiteral());
 
             var b = new SnippetCodeBuilder();
             b.Append("<![CDATA[");
             b.AppendPlaceholder(ContentIdentifier);
-            b.Append(CDataIdentfiier);
+            b.AppendPlaceholder(CDataIdentifier);
             s.CodeText = b.ToString();
 
             s.FilePath = "CDataSection";
