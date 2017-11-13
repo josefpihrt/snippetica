@@ -22,7 +22,7 @@ namespace Pihrtsoft.Records
 
         private string TagsText
         {
-            get { return (Count > 0) ? string.Join(", ", this.OrderBy(f => f)) : "" ; }
+            get { return (Count > 0) ? string.Join(", ", this.OrderBy(f => f)) : ""; }
         }
 
         public bool ContainsAll(params string[] tags)

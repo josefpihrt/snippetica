@@ -7,6 +7,7 @@
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
     </SnippetTypes>
   </Header>
   <Snippet>
@@ -28,9 +29,9 @@
       </Literal>
     </Declarations>
     <Code Language="VB"><![CDATA[Try
-    $end$
+	$selected$$end$
 Catch $identifier$ as $exceptionType$
-    Throw
+	Throw
 End Try]]></Code>
   </Snippet>
 </CodeSnippet>

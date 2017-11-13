@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>dddae79d-39a1-4d6e-83e9-e9758c632645</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Snippetica.VisualStudioCode.Dev</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\CHANGELOG.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\CHANGELOG.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\CHANGELOG.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Markdown.Dev\package\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.Markdown.Dev\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\CHANGELOG.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\README.md" />
+    <None Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\.vscode\launch.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\images\icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\LICENSE.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\package.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp.Dev\package\snippets\cpp.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\.vscode\launch.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\images\icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\LICENSE.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\package.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.CSharp.Dev\package\snippets\csharp.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\.vscode\launch.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\images\icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\LICENSE.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\package.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Html.Dev\package\snippets\html.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Markdown.Dev\package\package.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.Markdown.Dev\package\snippets\markdown.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\.vscode\launch.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\images\icon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\LICENSE.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\package.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic.Dev\package\snippets\vb.json" />
+  </ItemGroup>
+</Project>

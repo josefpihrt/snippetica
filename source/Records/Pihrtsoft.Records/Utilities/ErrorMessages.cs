@@ -32,6 +32,11 @@ namespace Pihrtsoft.Records.Utilities
             return $"Element '{element.Parent?.LocalName()}' contains unknown element '{element.LocalName()}'.";
         }
 
+        public static string UnknownAttribute(XAttribute attribute)
+        {
+            return $"Element '{attribute.Parent?.LocalName()}' contains unknown attribute '{attribute.LocalName()}'.";
+        }
+
         public static string MultipleElementsWithEqualName(XElement element)
         {
             return $"Element '{element.Parent?.LocalName()}' cannot contains multiple elements with name '{element.LocalName()}'.";
@@ -62,9 +67,9 @@ namespace Pihrtsoft.Records.Utilities
             return $"Variable '{variableName}' in entity '{entityName}' is already defined in base entity.";
         }
 
-        public static string CommandIsNotDefined(string command)
+        public static string OperationIsNotDefined(string operationName)
         {
-            return $"Command '{command}' is not defined.";
+            return $"Operation '{operationName}' is not defined.";
         }
 
         public static string PropertyIsNotDefined(string propertyName)
@@ -72,19 +77,29 @@ namespace Pihrtsoft.Records.Utilities
             return $"Property '{propertyName}' is not defined.";
         }
 
-        internal static string CannotUseCommandOnProperty(XElement element, string propertyName)
+        public static string CollectionIsNotDefined(string elementName)
         {
-            return $"Cannot use {element.LocalName()} command on property '{propertyName}'.";
+            return $"Collection with element name '{elementName}' is not defined.";
         }
 
-        internal static string CannotUseCommandOnCollectionProperty(XElement element, string propertyName)
+        public static string CannotUseOperationOnProperty(XElement element, string propertyName)
         {
-            return $"Cannot use {element.LocalName()} command on collection property '{propertyName}'.";
+            return $"Cannot use {element.LocalName()} operation on property '{propertyName}'.";
         }
 
-        internal static string CannotUseCommandOnNonCollectionProperty(XElement element, string propertyName)
+        public static string CannotUseOperationOnCollectionProperty(XElement element, string propertyName)
         {
-            return $"Cannot use {element.LocalName()} command on non-collection property '{propertyName}'.";
+            return $"Cannot use {element.LocalName()} operation on collection property '{propertyName}'.";
+        }
+
+        public static string CannotUseOperationOnNonCollectionProperty(XElement element, string propertyName)
+        {
+            return $"Cannot use {element.LocalName()} operation on non-collection property '{propertyName}'.";
+        }
+
+        public static string CollectionPropertyCannotDefineDefaultValue()
+        {
+            return "Collection property cannot define default value.";
         }
 
         internal static string CommandCannotBeUsedAsChildCommandOfNewCommand(XElement element)

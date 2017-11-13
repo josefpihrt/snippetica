@@ -54,7 +54,15 @@ namespace Pihrtsoft.Records
 
                             break;
                         }
-                    case ElementKind.Command:
+                    case ElementKind.Set:
+                    case ElementKind.Add:
+                    case ElementKind.AddRange:
+                    case ElementKind.Remove:
+                    case ElementKind.RemoveRange:
+                    case ElementKind.Postfix:
+                    case ElementKind.PostfixMany:
+                    case ElementKind.Prefix:
+                    case ElementKind.PrefixMany:
                         {
                             if (element.HasElements)
                             {
@@ -141,7 +149,7 @@ namespace Pihrtsoft.Records
                 }
                 else
                 {
-                    IPropertyOperation operation = CreateOperationFromAttribute(element, attribute);
+                    IPropertyOperation operation = CreateOperationFromAttribute(element, ElementKind.New, attribute);
 
                     (operations ?? (operations = new Collection<IPropertyOperation>())).Add(operation);
                 }
@@ -161,14 +169,7 @@ namespace Pihrtsoft.Records
                 {
                     if (!record.ContainsProperty(property.Name))
                     {
-                        if (property.IsCollection)
-                        {
-                            record[property.Name] = new List<object>() { property.DefaultValue };
-                        }
-                        else
-                        {
-                            record[property.Name] = property.DefaultValue;
-                        }
+                        record[property.Name] = property.DefaultValue;
                     }
                 }
                 else if (ShouldCheckRequiredProperty
@@ -196,58 +197,58 @@ namespace Pihrtsoft.Records
 
         private void ExecutePendingOperations(Record record)
         {
-            if (Operations != null)
+            if (Operations == null)
+                return;
+
+            foreach (PropertyOperationCollection propertyOperations in Operations)
             {
-                foreach (PropertyOperationCollection propertyOperations in Operations)
+                Dictionary<OperationKind, string> pendingValues = null;
+
+                foreach (IPropertyOperation operation in propertyOperations)
                 {
-                    Dictionary<OperationKind, string> pendingValues = null;
-
-                    foreach (IPropertyOperation operation in propertyOperations)
+                    if (operation.SupportsExecute)
                     {
-                        if (operation.SupportsExecute)
-                        {
-                            operation.Execute(record);
+                        operation.Execute(record);
 
-                            if (pendingValues != null)
-                                ProcessPendingValues(pendingValues, propertyOperations.PropertyDefinition, record);
+                        if (pendingValues != null)
+                            ProcessPendingValues(pendingValues, propertyOperations.PropertyDefinition, record);
+                    }
+                    else
+                    {
+                        OperationKind kind = operation.Kind;
+
+                        pendingValues = pendingValues ?? new Dictionary<OperationKind, string>();
+
+                        if (!pendingValues.TryGetValue(kind, out string value))
+                        {
+                            pendingValues[kind] = operation.Value;
                         }
                         else
                         {
-                            OperationKind kind = operation.Kind;
-
-                            pendingValues = pendingValues ?? new Dictionary<OperationKind, string>();
-
-                            if (!pendingValues.TryGetValue(kind, out string value))
+                            switch (kind)
                             {
-                                pendingValues[kind] = operation.Value;
-                            }
-                            else
-                            {
-                                switch (kind)
-                                {
-                                    case OperationKind.MultiPostfix:
-                                        {
-                                            pendingValues[kind] = operation.Value + pendingValues[kind];
-                                            break;
-                                        }
-                                    case OperationKind.MultiPrefix:
-                                        {
-                                            pendingValues[kind] += operation.Value;
-                                            break;
-                                        }
-                                    default:
-                                        {
-                                            Debug.Assert(false, kind.ToString());
-                                            break;
-                                        }
-                                }
+                                case OperationKind.PostfixMany:
+                                    {
+                                        pendingValues[kind] = operation.Value + pendingValues[kind];
+                                        break;
+                                    }
+                                case OperationKind.PrefixMany:
+                                    {
+                                        pendingValues[kind] += operation.Value;
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        Debug.Assert(false, kind.ToString());
+                                        break;
+                                    }
                             }
                         }
                     }
-
-                    if (pendingValues != null)
-                        ProcessPendingValues(pendingValues, propertyOperations.PropertyDefinition, record);
                 }
+
+                if (pendingValues != null)
+                    ProcessPendingValues(pendingValues, propertyOperations.PropertyDefinition, record);
             }
         }
 
@@ -280,43 +281,62 @@ namespace Pihrtsoft.Records
 
         private IPropertyOperation CreateOperationFromAttribute(
             XElement element,
+            ElementKind kind,
             XAttribute attribute,
+            char separator = ',',
             bool throwOnId = false,
-            bool throwOnTag = false,
-            bool throwOnSet = false,
-            bool throwOnAdd = false)
+            bool throwOnCollection = false)
         {
             string attributeName = attribute.LocalName();
 
             if (throwOnId
                 && DefaultComparer.NameEquals(attributeName, AttributeNames.Id))
             {
-                Throw(ErrorMessages.CannotUseCommandOnProperty(element, attributeName));
+                Throw(ErrorMessages.CannotUseOperationOnProperty(element, attributeName));
             }
 
-            if (DefaultComparer.NameEquals(attributeName, AttributeNames.Tag))
+            PropertyDefinition property;
+
+            string name = attribute.LocalName();
+
+            if (name == PropertyDefinition.TagsName)
             {
-                if (throwOnTag)
-                    Throw(ErrorMessages.CannotUseCommandOnProperty(element, attributeName));
-
-                return new AddTagOperation(GetValue(attribute), Depth);
-            }
-
-            PropertyDefinition property = GetProperty(attribute);
-
-            if (property.IsCollection)
-            {
-                if (throwOnAdd)
-                    Throw(ErrorMessages.CannotUseCommandOnCollectionProperty(element, property.Name));
-
-                return new AddItemOperation(property, GetValue(attribute), Depth);
+                property = PropertyDefinition.Tags;
             }
             else
             {
-                if (throwOnSet)
-                    Throw(ErrorMessages.CannotUseCommandOnNonCollectionProperty(element, property.Name));
+                property = GetProperty(attribute);
+            }
 
-                return new SetOperation(property, GetValue(attribute), Depth);
+            if (throwOnCollection
+                && property.IsCollection)
+            {
+                Throw(ErrorMessages.CannotUseOperationOnCollectionProperty(element, property.Name));
+            }
+
+            switch (kind)
+            {
+                case ElementKind.Add:
+                    return new AddOperation(property, GetValue(attribute), Depth);
+                case ElementKind.AddRange:
+                    return new AddRangeOperation(property, GetValue(attribute), separator, Depth);
+                case ElementKind.Remove:
+                    return new RemoveOperation(property, GetValue(attribute), Depth);
+                case ElementKind.RemoveRange:
+                    return new RemoveRangeOperation(property, GetValue(attribute), separator, Depth);
+                default:
+                    {
+                        Debug.Assert(kind == ElementKind.Set || kind == ElementKind.New, kind.ToString());
+
+                        if (property.IsCollection)
+                        {
+                            return new AddOperation(property, GetValue(attribute), Depth);
+                        }
+                        else
+                        {
+                            return new SetOperation(property, GetValue(attribute), Depth);
+                        }
+                    }
             }
         }
 
@@ -324,23 +344,25 @@ namespace Pihrtsoft.Records
         {
             Debug.Assert(element.HasAttributes, element.ToString());
 
-            switch (element.LocalName())
+            ElementKind kind = element.Kind();
+
+            switch (kind)
             {
-                case ElementNames.Set:
+                case ElementKind.Set:
                     {
                         foreach (XAttribute attribute in element.Attributes())
-                            yield return CreateOperationFromAttribute(element, attribute, throwOnId: true, throwOnTag: true, throwOnAdd: true);
+                            yield return CreateOperationFromAttribute(element, kind, attribute, throwOnId: true, throwOnCollection: true);
 
                         break;
                     }
-                case ElementNames.Postfix:
+                case ElementKind.Postfix:
                     {
                         foreach (XAttribute attribute in element.Attributes())
                             yield return new PostfixOperation(GetProperty(attribute), GetValue(attribute), Depth);
 
                         break;
                     }
-                case ElementNames.MultiPostfix:
+                case ElementKind.PostfixMany:
                     {
                         if (throwOnMultiCommand)
                             ThrowInvalidOperation(ErrorMessages.CommandCannotBeUsedAsChildCommandOfNewCommand(element));
@@ -350,14 +372,14 @@ namespace Pihrtsoft.Records
 
                         break;
                     }
-                case ElementNames.Prefix:
+                case ElementKind.Prefix:
                     {
                         foreach (XAttribute attribute in element.Attributes())
                             yield return new PrefixOperation(GetProperty(attribute), GetValue(attribute), Depth);
 
                         break;
                     }
-                case ElementNames.MultiPrefix:
+                case ElementKind.PrefixMany:
                     {
                         if (throwOnMultiCommand)
                             ThrowInvalidOperation(ErrorMessages.CommandCannotBeUsedAsChildCommandOfNewCommand(element));
@@ -367,24 +389,46 @@ namespace Pihrtsoft.Records
 
                         break;
                     }
-                case ElementNames.Tag:
+                case ElementKind.Add:
+                case ElementKind.Remove:
                     {
-                        XAttribute attribute = element.SingleAttributeOrThrow(AttributeNames.Value);
-
-                        yield return new AddTagOperation(GetValue(attribute), Depth);
+                        foreach (XAttribute attribute in element.Attributes())
+                            yield return CreateOperationFromAttribute(element, kind, attribute, throwOnId: true);
 
                         break;
                     }
-                case ElementNames.Add:
+                case ElementKind.AddRange:
+                case ElementKind.RemoveRange:
                     {
+                        char separator = ',';
+
                         foreach (XAttribute attribute in element.Attributes())
-                            yield return CreateOperationFromAttribute(element, attribute, throwOnId: true, throwOnTag: true, throwOnSet: true);
+                        {
+                            switch (attribute.LocalName())
+                            {
+                                case AttributeNames.Separator:
+                                    {
+                                        string separatorText = attribute.Value;
+
+                                        if (separatorText.Length != 1)
+                                            Throw("Separator must be a single character", attribute);
+
+                                        separator = separatorText[0];
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        yield return CreateOperationFromAttribute(element, kind, attribute, separator: separator, throwOnId: true);
+                                        break;
+                                    }
+                            }
+                        }
 
                         break;
                     }
                 default:
                     {
-                        Throw(ErrorMessages.CommandIsNotDefined(element.LocalName()));
+                        Throw(ErrorMessages.OperationIsNotDefined(element.LocalName()));
                         break;
                     }
             }
@@ -394,12 +438,15 @@ namespace Pihrtsoft.Records
         {
             string propertyName = attribute.LocalName();
 
-            if (!Entity.TryGetProperty(propertyName, out PropertyDefinition property))
-            {
-                Throw(ErrorMessages.PropertyIsNotDefined(propertyName), attribute);
-            }
+            if (DefaultComparer.NameEquals(propertyName, PropertyDefinition.TagsName))
+                return PropertyDefinition.Tags;
 
-            return property;
+            if (Entity.TryGetProperty(propertyName, out PropertyDefinition property))
+                return property;
+
+            Throw(ErrorMessages.PropertyIsNotDefined(propertyName), attribute);
+
+            return null;
         }
 
         private string GetValue(XAttribute attribute)

@@ -9,7 +9,8 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-TitleStartsWithShortcut</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -19,16 +20,12 @@
       </Import>
     </Imports>
     <Declarations>
-      <Literal Editable="false">
-        <ID>_lambdaParam</ID>
-        <Default>f</Default>
-      </Literal>
       <Literal>
         <ID>keySelector</ID>
         <ToolTip>Key selector</ToolTip>
         <Default>f</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[.ThenByDescending($_lambdaParam$ => $keySelector$)$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[.ThenByDescending(f => $keySelector$)$end$]]></Code>
   </Snippet>
 </CodeSnippet>

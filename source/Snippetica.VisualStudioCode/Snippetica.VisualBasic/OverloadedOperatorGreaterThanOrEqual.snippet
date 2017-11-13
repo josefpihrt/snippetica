@@ -1,0 +1,40 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>&gt;= operator overloading</Title>
+    <Shortcut>oo_GreaterThanEquals</Shortcut>
+    <Description>&gt;= operator overloading</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-ExcludeFromReadme</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>left</ID>
+        <ToolTip>Left operand</ToolTip>
+        <Default>left</Default>
+      </Literal>
+      <Literal>
+        <ID>right</ID>
+        <ToolTip>Right operand</ToolTip>
+        <Default>right</Default>
+      </Literal>
+      <Literal>
+        <ID>thisName</ID>
+        <ToolTip>Containing type name</ToolTip>
+        <Default>ThisName</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[Public Shared Operator >=($left$ As $thisName$, $right$ As $thisName$)
+	$end$
+End Operator
+
+Public Shared Operator <=($left$ As $thisName$, $right$ As $thisName$)
+End Operator]]></Code>
+  </Snippet>
+</CodeSnippet>

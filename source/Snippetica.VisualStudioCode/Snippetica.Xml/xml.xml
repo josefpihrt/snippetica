@@ -1,0 +1,254 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>CDATA section</Title>
+      <Shortcut>cdata</Shortcut>
+      <Description>CDATA section</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name CDataSection</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Xml"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>CDATA section (with content)</Title>
+      <Shortcut>cdatax</Shortcut>
+      <Description>CDATA section (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name CDataSectionWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Xml"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>comment</Title>
+      <Shortcut>c</Shortcut>
+      <Description>comment</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Comment</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>comment</ID>
+          <ToolTip>Comment</ToolTip>
+          <Default>comment</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Xml"><![CDATA[<!-- $selected$$comment$ -->$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>element</Title>
+      <Shortcut>e</Shortcut>
+      <Description>element</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Element</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>element</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>element</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Xml"><![CDATA[<$element$>
+	$selected$$end$
+</$element$>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>element (with attribute)</Title>
+      <Shortcut>ea</Shortcut>
+      <Description>element (with attribute)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ElementWithAttribute</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>attribute</Default>
+        </Literal>
+        <Literal>
+          <ID>element</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>element</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Xml"><![CDATA[<$element$ $attribute$="$value$">
+	$selected$$end$
+</$element$>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>element (with attribute, with content)</Title>
+      <Shortcut>eax</Shortcut>
+      <Description>element (with attribute, with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ElementWithAttributeWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>attribute</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <ToolTip>Content</ToolTip>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>element</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>element</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Xml"><![CDATA[<$element$ $attribute$="$value$">$content$</$element$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>element (with content)</Title>
+      <Shortcut>ex</Shortcut>
+      <Description>element (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ElementWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <ToolTip>Content</ToolTip>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>element</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>element</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Xml"><![CDATA[<$element$>$content$</$element$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>self-closing element</Title>
+      <Shortcut>es</Shortcut>
+      <Description>self-closing element</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name SelfClosingElement</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>element</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>element</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Xml"><![CDATA[<$element$ />$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>self-closing element (with attribute)</Title>
+      <Shortcut>eas</Shortcut>
+      <Description>self-closing element (with attribute)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name SelfClosingElementWithAttribute</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>attribute</Default>
+        </Literal>
+        <Literal>
+          <ID>element</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>element</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Xml"><![CDATA[<$element$ $attribute$="$value$" />$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

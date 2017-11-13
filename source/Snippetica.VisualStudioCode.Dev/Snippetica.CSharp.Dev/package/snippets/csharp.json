@@ -1,0 +1,827 @@
+﻿{
+  " local function": {
+    "prefix": "lf",
+    "body": [
+      "${1:void} ${2:MethodName}()",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": " local function declaration"
+  },
+  " local function (with parameters)": {
+    "prefix": "lf_",
+    "body": [
+      "${1:void} ${2:MethodName}(${3:object parameter})",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": " local function declaration (with parameters)"
+  },
+  "! operator": {
+    "prefix": "x",
+    "body": [
+      "!(${1:x})${0}"
+    ],
+    "description": "! operator"
+  },
+  "array type": {
+    "prefix": "a",
+    "body": [
+      "${1:T}[]${0}"
+    ],
+    "description": "array type declaration"
+  },
+  "Assembly attribute": {
+    "prefix": "ae_ay",
+    "body": [
+      "[assembly: ${1:Attribute}]${0}"
+    ],
+    "description": "Assembly attribute"
+  },
+  "break statement": {
+    "prefix": "bk",
+    "body": [
+      "break;${0}"
+    ],
+    "description": "break statement"
+  },
+  "Conditional attribute": {
+    "prefix": "ae_cl",
+    "body": [
+      "[Conditional(${1:\"DEBUG\"})]${0}"
+    ],
+    "description": "Conditional attribute"
+  },
+  "continue statement": {
+    "prefix": "ce",
+    "body": [
+      "continue;${0}"
+    ],
+    "description": "continue statement"
+  },
+  "Debug.Assert != null": {
+    "prefix": "daxn",
+    "body": [
+      "Debug.Assert(${1:false} != null, ${2:\"\"});${0}"
+    ],
+    "description": "Debug.Assert method with condition whether the expression is not equal to null"
+  },
+  "DebuggerDisplay attribute": {
+    "prefix": "ae_dd",
+    "body": [
+      "[DebuggerDisplay(${1:\"{}\"})]${0}"
+    ],
+    "description": "DebuggerDisplay attribute"
+  },
+  "DebuggerStepThrough attribute": {
+    "prefix": "ae_dst",
+    "body": [
+      "[DebuggerStepThrough]${0}"
+    ],
+    "description": "DebuggerStepThrough attribute"
+  },
+  "Dictionary<TKey, TValue> type": {
+    "prefix": "gd",
+    "body": [
+      "Dictionary<${1:object}, ${2:object}>${0}"
+    ],
+    "description": "Dictionary<TKey, TValue> type declaration"
+  },
+  "Dictionary<TKey, TValue> variable": {
+    "prefix": "vd",
+    "body": [
+      "var ${1:dic} = new Dictionary<${2:object}, ${3:object}>();${0}"
+    ],
+    "description": "Dictionary<TKey, TValue> variable declaration"
+  },
+  "Dictionary<TKey, TValue> variable (with initializer)": {
+    "prefix": "vd_",
+    "body": [
+      "var ${1:dic} = new Dictionary<${2:object}, ${3:object}>() { [0] = ${4:null} };${0}"
+    ],
+    "description": "Dictionary<TKey, TValue> variable declaration (with initializer)"
+  },
+  "Directory.CreateDirectory": {
+    "prefix": "iod_cd",
+    "body": [
+      "Directory.CreateDirectory(${1:path})${0}"
+    ],
+    "description": "Directory.CreateDirectory method."
+  },
+  "Directory.Delete": {
+    "prefix": "iod_d",
+    "body": [
+      "Directory.Delete(${1:path}, recursive: ${2:true})${0}"
+    ],
+    "description": "Directory.Delete method."
+  },
+  "Directory.EnumerateDirectories": {
+    "prefix": "iod_ed",
+    "body": [
+      "Directory.EnumerateDirectories(${1:path}, ${2:\"*\"}, SearchOption${3:.AllDirectories})${0}"
+    ],
+    "description": "Directory.EnumerateDirectories method."
+  },
+  "Directory.EnumerateFiles": {
+    "prefix": "iod_ef",
+    "body": [
+      "Directory.EnumerateFiles(${1:path}, ${2:\"*\"}, SearchOption${3:.AllDirectories})${0}"
+    ],
+    "description": "Directory.EnumerateFiles method."
+  },
+  "Directory.Exists": {
+    "prefix": "iod_e",
+    "body": [
+      "Directory.Exists(${1:path})${0}"
+    ],
+    "description": "Directory.Exists method."
+  },
+  "Directory.GetDirectories": {
+    "prefix": "iod_gd",
+    "body": [
+      "Directory.GetDirectories(${1:path}, ${2:\"*\"}, SearchOption${3:.AllDirectories})${0}"
+    ],
+    "description": "Directory.GetDirectories method."
+  },
+  "Directory.GetFiles": {
+    "prefix": "iod_gf",
+    "body": [
+      "Directory.GetFiles(${1:path}, ${2:\"*\"}, SearchOption${3:.AllDirectories})${0}"
+    ],
+    "description": "Directory.GetFiles method."
+  },
+  "Directory.Move": {
+    "prefix": "iod_m",
+    "body": [
+      "Directory.Move(${1:sourceDirName}, ${2:destinationDirName})${0}"
+    ],
+    "description": "Directory.Move method."
+  },
+  "Enumerable.Cast": {
+    "prefix": "q_c",
+    "body": [
+      ".Cast<${1:object}>()${0}"
+    ],
+    "description": "Enumerable.Cast method"
+  },
+  "Enumerable.Empty": {
+    "prefix": "q_e",
+    "body": [
+      "Enumerable.Empty<${1:object}>()${0}"
+    ],
+    "description": "Enumerable.Empty method"
+  },
+  "Enumerable.First": {
+    "prefix": "q_f",
+    "body": [
+      ".First(f => ${1:false})${0}"
+    ],
+    "description": "Enumerable.First method"
+  },
+  "Enumerable.FirstOrDefault": {
+    "prefix": "q_fod",
+    "body": [
+      ".FirstOrDefault(f => ${1:false})${0}"
+    ],
+    "description": "Enumerable.FirstOrDefault method"
+  },
+  "Enumerable.GroupBy": {
+    "prefix": "q_gb",
+    "body": [
+      ".GroupBy(f => ${1:f})${0}"
+    ],
+    "description": "Enumerable.GroupBy method"
+  },
+  "Enumerable.GroupJoin": {
+    "prefix": "q_gj",
+    "body": [
+      ".GroupJoin(${1:inner}, f => ${2:f}, g => ${3:g}, (f, g) => ${4:new { }})${0}"
+    ],
+    "description": "Enumerable.GroupJoin method"
+  },
+  "Enumerable.Join": {
+    "prefix": "q_j",
+    "body": [
+      ".Join(${1:inner}, f => ${2:f}, g => ${3:g}, (f, g) => ${4:new { }})${0}"
+    ],
+    "description": "Enumerable.Join method"
+  },
+  "Enumerable.Last": {
+    "prefix": "q_l",
+    "body": [
+      ".Last(f => ${1:false})${0}"
+    ],
+    "description": "Enumerable.Last method"
+  },
+  "Enumerable.LastOrDefault": {
+    "prefix": "q_lod",
+    "body": [
+      ".LastOrDefault(f => ${1:false})${0}"
+    ],
+    "description": "Enumerable.LastOrDefault method"
+  },
+  "Enumerable.Max": {
+    "prefix": "q_mx",
+    "body": [
+      ".Max(f => ${1:f})${0}"
+    ],
+    "description": "Enumerable.Max method"
+  },
+  "Enumerable.Min": {
+    "prefix": "q_mn",
+    "body": [
+      ".Min(f => ${1:f})${0}"
+    ],
+    "description": "Enumerable.Min method"
+  },
+  "Enumerable.OfType": {
+    "prefix": "q_ot",
+    "body": [
+      ".OfType<${1:object}>()${0}"
+    ],
+    "description": "Enumerable.OfType method"
+  },
+  "Enumerable.OrderBy": {
+    "prefix": "q_ob",
+    "body": [
+      ".OrderBy(f => ${1:f})${0}"
+    ],
+    "description": "Enumerable.OrderBy method"
+  },
+  "Enumerable.OrderByDescending": {
+    "prefix": "q_obd",
+    "body": [
+      ".OrderByDescending(f => ${1:f})${0}"
+    ],
+    "description": "Enumerable.OrderByDescending method"
+  },
+  "Enumerable.Select": {
+    "prefix": "q_s",
+    "body": [
+      ".Select(f => ${1:f})${0}"
+    ],
+    "description": "Enumerable.Select method"
+  },
+  "Enumerable.SelectMany": {
+    "prefix": "q_sm",
+    "body": [
+      ".SelectMany(f => ${1:f})${0}"
+    ],
+    "description": "Enumerable.SelectMany method"
+  },
+  "Enumerable.SingleOrDefault": {
+    "prefix": "q_sod",
+    "body": [
+      ".SingleOrDefault(f => ${1:false})${0}"
+    ],
+    "description": "Enumerable.SingleOrDefault method"
+  },
+  "Enumerable.SkipWhile": {
+    "prefix": "q_sw",
+    "body": [
+      ".SkipWhile(f => ${1:false})${0}"
+    ],
+    "description": "Enumerable.SkipWhile method"
+  },
+  "Enumerable.TakeWhile": {
+    "prefix": "q_tw",
+    "body": [
+      ".TakeWhile(f => ${1:false})${0}"
+    ],
+    "description": "Enumerable.TakeWhile method"
+  },
+  "Enumerable.ThenBy": {
+    "prefix": "q_tb",
+    "body": [
+      ".ThenBy(f => ${1:f})${0}"
+    ],
+    "description": "Enumerable.ThenBy method"
+  },
+  "Enumerable.ThenByDescending": {
+    "prefix": "q_tbd",
+    "body": [
+      ".ThenByDescending(f => ${1:f})${0}"
+    ],
+    "description": "Enumerable.ThenByDescending method"
+  },
+  "Enumerable.Where": {
+    "prefix": "q_w",
+    "body": [
+      ".Where(f => ${1:false})${0}"
+    ],
+    "description": "Enumerable.Where method"
+  },
+  "Enumerable.Where not equal to null": {
+    "prefix": "q_wxn",
+    "body": [
+      ".Where(f => f != null)${0}"
+    ],
+    "description": "Enumerable.Where method with predicate whether the expression is not equal to null"
+  },
+  "Enumerable.Zip": {
+    "prefix": "q_z",
+    "body": [
+      ".Zip(${1:second}, (f, g) => ${2:new { }})${0}"
+    ],
+    "description": "Enumerable.Zip method"
+  },
+  "File Exists": {
+    "prefix": "iof_e",
+    "body": [
+      "File.Exists(${1:path})${0}"
+    ],
+    "description": "File.Exists method."
+  },
+  "File.Copy": {
+    "prefix": "iof_c",
+    "body": [
+      "File.Copy(${1:sourceFileName}, ${2:destinationFileName})${0}"
+    ],
+    "description": "File.Copy method."
+  },
+  "File.Delete": {
+    "prefix": "iof_d",
+    "body": [
+      "File.Delete(${1:path})${0}"
+    ],
+    "description": "File.Delete method."
+  },
+  "File.Move": {
+    "prefix": "iof_m",
+    "body": [
+      "File.Move(${1:sourceFileName}, ${2:destinationFileName})${0}"
+    ],
+    "description": "File.Move method."
+  },
+  "File.ReadAllLines": {
+    "prefix": "iof_ral",
+    "body": [
+      "File.ReadAllLines(${1:path}, ${2:Encoding.UTF8})${0}"
+    ],
+    "description": "File.ReadAllLines method."
+  },
+  "File.ReadAllText": {
+    "prefix": "iof_rat",
+    "body": [
+      "File.ReadAllText(${1:path}, ${2:Encoding.UTF8})${0}"
+    ],
+    "description": "File.ReadAllText method."
+  },
+  "File.ReadLines": {
+    "prefix": "iof_rl",
+    "body": [
+      "File.ReadLines(${1:path}, ${2:Encoding.UTF8})${0}"
+    ],
+    "description": "File.ReadLines method."
+  },
+  "File.WriteAllLines": {
+    "prefix": "iof_wal",
+    "body": [
+      "File.WriteAllLines(${1:path}, ${2:content}, ${3:Encoding.UTF8})${0}"
+    ],
+    "description": "File.WriteAllLines method."
+  },
+  "File.WriteAllText": {
+    "prefix": "iof_wat",
+    "body": [
+      "File.WriteAllText(${1:path}, ${2:\"\"}, ${3:Encoding.UTF8})${0}"
+    ],
+    "description": "File.WriteAllText method."
+  },
+  "FileStream Variable": {
+    "prefix": "u_fesm",
+    "body": [
+      "using (var ${1:fs} = new FileStream(${2:path}, FileMode${3:.OpenOrCreate}))",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "FileStream variable declaration."
+  },
+  "Flags attribute": {
+    "prefix": "ae_fs",
+    "body": [
+      "[Flags]${0}"
+    ],
+    "description": "Flags attribute"
+  },
+  "HashSet<T> type": {
+    "prefix": "ghs",
+    "body": [
+      "HashSet<${1:T}>${0}"
+    ],
+    "description": "HashSet<T> type declaration"
+  },
+  "HashSet<T> variable": {
+    "prefix": "vhs",
+    "body": [
+      "var ${1:items} = new HashSet<${2:T}>();${0}"
+    ],
+    "description": "HashSet<T> variable declaration"
+  },
+  "HashSet<T> variable (with initializer)": {
+    "prefix": "vhs_",
+    "body": [
+      "var ${1:items} = new HashSet<${2:T}>() { ${3:null} };${0}"
+    ],
+    "description": "HashSet<T> variable declaration (with initializer)"
+  },
+  "if !string.IsNullOrEmpty": {
+    "prefix": "ifxsne",
+    "body": [
+      "if (!string.IsNullOrEmpty(${1:s}))",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "if !string.IsNullOrEmpty"
+  },
+  "if !string.IsNullOrWhiteSpace": {
+    "prefix": "ifxsnw",
+    "body": [
+      "if (!string.IsNullOrWhiteSpace(${1:s}))",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "if !string.IsNullOrWhiteSpace"
+  },
+  "if Enum.TryParse": {
+    "prefix": "ifemtp",
+    "body": [
+      "${1:TEnum} ${2:x};",
+      "if (Enum.TryParse(${3:value}, out ${2}))",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "if statement with condition whether Enum.TryParse method returns true."
+  },
+  "if equal to null return": {
+    "prefix": "ifnre",
+    "body": [
+      "if (${1:x} == null)",
+      "\treturn;${0}"
+    ],
+    "description": "if equal to null return"
+  },
+  "if equal to null return false": {
+    "prefix": "ifnref",
+    "body": [
+      "if (${1:x} == null)",
+      "\treturn false;${0}"
+    ],
+    "description": "if equal to null return false"
+  },
+  "if equal to null return null": {
+    "prefix": "ifnren",
+    "body": [
+      "if (${1:x} == null)",
+      "\treturn null;${0}"
+    ],
+    "description": "if equal to null return null"
+  },
+  "if equal to null return true": {
+    "prefix": "ifnret",
+    "body": [
+      "if (${1:x} == null)",
+      "\treturn true;${0}"
+    ],
+    "description": "if equal to null return true"
+  },
+  "if not Enum.TryParse": {
+    "prefix": "ifxemtp",
+    "body": [
+      "${1:TEnum} ${2:x};",
+      "if (!Enum.TryParse(${3:value}, out ${2}))",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "if statement with condition whether Enum.TryParse method returns false."
+  },
+  "if not equal to null return": {
+    "prefix": "ifxnre",
+    "body": [
+      "if (${1:x} != null)",
+      "\treturn;${0}"
+    ],
+    "description": "if not equal to null return"
+  },
+  "if not equal to null return false": {
+    "prefix": "ifxnref",
+    "body": [
+      "if (${1:x} != null)",
+      "\treturn false;${0}"
+    ],
+    "description": "if not equal to null return false"
+  },
+  "if not equal to null return null": {
+    "prefix": "ifxnren",
+    "body": [
+      "if (${1:x} != null)",
+      "\treturn null;${0}"
+    ],
+    "description": "if not equal to null return null"
+  },
+  "if not equal to null return true": {
+    "prefix": "ifxnret",
+    "body": [
+      "if (${1:x} != null)",
+      "\treturn true;${0}"
+    ],
+    "description": "if not equal to null return true"
+  },
+  "if not return": {
+    "prefix": "ifxre",
+    "body": [
+      "if (!${1:x})",
+      "\treturn;${0}"
+    ],
+    "description": "if not return"
+  },
+  "if not return false": {
+    "prefix": "ifxref",
+    "body": [
+      "if (!${1:x})",
+      "\treturn false;${0}"
+    ],
+    "description": "if not return false"
+  },
+  "if not return null": {
+    "prefix": "ifxren",
+    "body": [
+      "if (!${1:x})",
+      "\treturn null;${0}"
+    ],
+    "description": "if not return null"
+  },
+  "if not return true": {
+    "prefix": "ifxret",
+    "body": [
+      "if (!${1:x})",
+      "\treturn true;${0}"
+    ],
+    "description": "if not return true"
+  },
+  "if return": {
+    "prefix": "ifre",
+    "body": [
+      "if (${1:true})",
+      "\treturn;${0}"
+    ],
+    "description": "if return"
+  },
+  "if return false": {
+    "prefix": "ifref",
+    "body": [
+      "if (${1:true})",
+      "\treturn false;${0}"
+    ],
+    "description": "if return false"
+  },
+  "if return null": {
+    "prefix": "ifren",
+    "body": [
+      "if (${1:true})",
+      "\treturn null;${0}"
+    ],
+    "description": "if return null"
+  },
+  "if return true": {
+    "prefix": "ifret",
+    "body": [
+      "if (${1:true})",
+      "\treturn true;${0}"
+    ],
+    "description": "if return true"
+  },
+  "if string.IsNullOrEmpty": {
+    "prefix": "ifsne",
+    "body": [
+      "if (string.IsNullOrEmpty(${1:s}))",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "if string.IsNullOrEmpty"
+  },
+  "if string.IsNullOrWhiteSpace": {
+    "prefix": "ifsnw",
+    "body": [
+      "if (string.IsNullOrWhiteSpace(${1:s}))",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "if string.IsNullOrWhiteSpace"
+  },
+  "List<T> type": {
+    "prefix": "gl",
+    "body": [
+      "List<${1:T}>${0}"
+    ],
+    "description": "List<T> type declaration"
+  },
+  "List<T> variable": {
+    "prefix": "vl",
+    "body": [
+      "var ${1:items} = new List<${2:T}>();${0}"
+    ],
+    "description": "List<T> variable declaration"
+  },
+  "List<T> variable (with initializer)": {
+    "prefix": "vl_",
+    "body": [
+      "var ${1:items} = new List<${2:T}>() { ${3:null} };${0}"
+    ],
+    "description": "List<T> variable declaration (with initializer)"
+  },
+  "MemoryStream Variable": {
+    "prefix": "u_mysm",
+    "body": [
+      "using (var ${1:ms} = new MemoryStream(${2:0}))",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "MemoryStream variable declaration."
+  },
+  "namespace": {
+    "prefix": "ns",
+    "body": [
+      "namespace ${1:NamespaceName}",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "namespace declaration"
+  },
+  "new array ": {
+    "prefix": "na",
+    "body": [
+      "new ${1:T}[${2:0}]${0}"
+    ],
+    "description": "new array "
+  },
+  "new array (with initializer)": {
+    "prefix": "na_",
+    "body": [
+      "new ${1:T}[] { ${2:null} }${0}"
+    ],
+    "description": "new array (with initializer)"
+  },
+  "ObservableCollection<T> type": {
+    "prefix": "goc",
+    "body": [
+      "ObservableCollection<${1:T}>${0}"
+    ],
+    "description": "ObservableCollection<T> type declaration"
+  },
+  "ObservableCollection<T> variable": {
+    "prefix": "voc",
+    "body": [
+      "var ${1:items} = new ObservableCollection<${2:T}>();${0}"
+    ],
+    "description": "ObservableCollection<T> variable declaration"
+  },
+  "ObservableCollection<T> variable (with initializer)": {
+    "prefix": "voc_",
+    "body": [
+      "var ${1:items} = new ObservableCollection<${2:T}>() { ${3:null} };${0}"
+    ],
+    "description": "ObservableCollection<T> variable declaration (with initializer)"
+  },
+  "Obsolete attribute": {
+    "prefix": "ae_oe",
+    "body": [
+      "[Obsolete(${1:\"\"})]${0}"
+    ],
+    "description": "Obsolete attribute"
+  },
+  "override modifier": {
+    "prefix": "oe",
+    "body": [
+      "override${0}"
+    ],
+    "description": "override modifier"
+  },
+  "Path.Combine": {
+    "prefix": "iop_c",
+    "body": [
+      "Path.Combine(${1:path1}, ${2:path2})${0}"
+    ],
+    "description": "Path.Combine method."
+  },
+  "Path.GetDirectoryName": {
+    "prefix": "iop_gdn",
+    "body": [
+      "Path.GetDirectoryName(${1:path})${0}"
+    ],
+    "description": "Path.GetDirectoryName method."
+  },
+  "Path.GetExtension": {
+    "prefix": "iop_ge",
+    "body": [
+      "Path.GetExtension(${1:path})${0}"
+    ],
+    "description": "Path.GetExtension method."
+  },
+  "Path.GetFileName": {
+    "prefix": "iop_gfn",
+    "body": [
+      "Path.GetFileName(${1:path})${0}"
+    ],
+    "description": "Path.GetFileName method."
+  },
+  "Path.GetFileNameWithoutExtension": {
+    "prefix": "iop_gfnwe",
+    "body": [
+      "Path.GetFileNameWithoutExtension(${1:path})${0}"
+    ],
+    "description": "Path.GetFileNameWithoutExtension method."
+  },
+  "Path.GetFullPath": {
+    "prefix": "iop_gfp",
+    "body": [
+      "Path.GetFullPath(${1:path})${0}"
+    ],
+    "description": "Path.GetFullPath method."
+  },
+  "Path.HasExtension": {
+    "prefix": "iop_he",
+    "body": [
+      "Path.HasExtension(${1:path})${0}"
+    ],
+    "description": "Path.HasExtension method."
+  },
+  "Path.ChangeExtension": {
+    "prefix": "iop_ce",
+    "body": [
+      "Path.ChangeExtension(${1:path}, ${2:\"\"})${0}"
+    ],
+    "description": "Path.ChangeExtension method."
+  },
+  "Regex type": {
+    "prefix": "rx",
+    "body": [
+      "Regex${0}"
+    ],
+    "description": "Regex type declaration"
+  },
+  "return new": {
+    "prefix": "rn",
+    "body": [
+      "return new${0}"
+    ],
+    "description": "return new"
+  },
+  "return statement": {
+    "prefix": "re",
+    "body": [
+      "return;${0}"
+    ],
+    "description": "return statement"
+  },
+  "StringBuilder variable": {
+    "prefix": "vsb",
+    "body": [
+      "var ${1:sb} = new StringBuilder();${0}"
+    ],
+    "description": "StringBuilder variable declaration"
+  },
+  "throw statement": {
+    "prefix": "tw",
+    "body": [
+      "throw;${0}"
+    ],
+    "description": "throw statement"
+  },
+  "TimeSpan type": {
+    "prefix": "ts",
+    "body": [
+      "TimeSpan${0}"
+    ],
+    "description": "TimeSpan type declaration"
+  },
+  "variable declaration with as operator + if not null": {
+    "prefix": "vasxn",
+    "body": [
+      "var ${1:x} = ${2:expression} as ${3:T};",
+      "if (${1} != null)",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "variable declaration with as operator + condition whether the variable is not equal to null"
+  },
+  "yield return new": {
+    "prefix": "yrn",
+    "body": [
+      "yield return new${0}"
+    ],
+    "description": "yield return new"
+  }
+}

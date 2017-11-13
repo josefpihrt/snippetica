@@ -1,0 +1,1611 @@
+﻿{
+  "a": {
+    "prefix": "a",
+    "body": [
+      "<a href=\"${1:#}\">${TM_SELECTED_TEXT}${0}</a>"
+    ],
+    "description": "a"
+  },
+  "a (with content)": {
+    "prefix": "ax",
+    "body": [
+      "<a href=\"${1:#}\">${2:content}</a>${0}"
+    ],
+    "description": "a (with content)"
+  },
+  "abbr": {
+    "prefix": "abbr",
+    "body": [
+      "<abbr title=\"${1:title}\">${TM_SELECTED_TEXT}${0}</abbr>"
+    ],
+    "description": "abbr"
+  },
+  "abbr (with content)": {
+    "prefix": "abbrx",
+    "body": [
+      "<abbr title=\"${1:title}\">${2:content}</abbr>${0}"
+    ],
+    "description": "abbr (with content)"
+  },
+  "acronym": {
+    "prefix": "acronym",
+    "body": [
+      "<acronym title=\"${1:title}\">${TM_SELECTED_TEXT}${0}</acronym>"
+    ],
+    "description": "acronym"
+  },
+  "acronym (with content)": {
+    "prefix": "acronymx",
+    "body": [
+      "<acronym title=\"${1:title}\">${2:content}</acronym>${0}"
+    ],
+    "description": "acronym (with content)"
+  },
+  "address": {
+    "prefix": "address",
+    "body": [
+      "<address>${TM_SELECTED_TEXT}${0}</address>"
+    ],
+    "description": "address"
+  },
+  "address (with content)": {
+    "prefix": "addressx",
+    "body": [
+      "<address>${1:content}</address>${0}"
+    ],
+    "description": "address (with content)"
+  },
+  "applet": {
+    "prefix": "applet",
+    "body": [
+      "<applet code=\"${1:url}\" object=\"${2:name}\">${TM_SELECTED_TEXT}${0}</applet>"
+    ],
+    "description": "applet"
+  },
+  "applet (with content)": {
+    "prefix": "appletx",
+    "body": [
+      "<applet code=\"${1:url}\" object=\"${2:name}\">${3:content}</applet>${0}"
+    ],
+    "description": "applet (with content)"
+  },
+  "area": {
+    "prefix": "area",
+    "body": [
+      "<area ${1:attribute=\"\"}>${0}"
+    ],
+    "description": "area"
+  },
+  "article": {
+    "prefix": "article",
+    "body": [
+      "<article>${TM_SELECTED_TEXT}${0}</article>"
+    ],
+    "description": "article"
+  },
+  "article (with content)": {
+    "prefix": "articlex",
+    "body": [
+      "<article>${1:content}</article>${0}"
+    ],
+    "description": "article (with content)"
+  },
+  "aside": {
+    "prefix": "aside",
+    "body": [
+      "<aside>${TM_SELECTED_TEXT}${0}</aside>"
+    ],
+    "description": "aside"
+  },
+  "aside (with content)": {
+    "prefix": "asidex",
+    "body": [
+      "<aside>${1:content}</aside>${0}"
+    ],
+    "description": "aside (with content)"
+  },
+  "audio": {
+    "prefix": "audio",
+    "body": [
+      "<audio controls=\"controls\">",
+      "\t<source src=\"${1:url}\" type=\"${2:audio/mpeg}\">",
+      "</audio>${0}"
+    ],
+    "description": "audio"
+  },
+  "b": {
+    "prefix": "b",
+    "body": [
+      "<b>${TM_SELECTED_TEXT}${0}</b>"
+    ],
+    "description": "b"
+  },
+  "b (with content)": {
+    "prefix": "bx",
+    "body": [
+      "<b>${1:content}</b>${0}"
+    ],
+    "description": "b (with content)"
+  },
+  "base": {
+    "prefix": "base",
+    "body": [
+      "<base href=\"${1:url}\" target=\"${2:_blank}\">${0}"
+    ],
+    "description": "base"
+  },
+  "basefont": {
+    "prefix": "basefont",
+    "body": [
+      "<basefont ${1:attribute=\"\"}>${0}"
+    ],
+    "description": "basefont"
+  },
+  "bdi": {
+    "prefix": "bdi",
+    "body": [
+      "<bdi>${TM_SELECTED_TEXT}${0}</bdi>"
+    ],
+    "description": "bdi"
+  },
+  "bdi (with content)": {
+    "prefix": "bdix",
+    "body": [
+      "<bdi>${1:content}</bdi>${0}"
+    ],
+    "description": "bdi (with content)"
+  },
+  "bdo": {
+    "prefix": "bdo",
+    "body": [
+      "<bdo dir=\"${1:rtl}\">${TM_SELECTED_TEXT}${0}</bdo>"
+    ],
+    "description": "bdo"
+  },
+  "bdo (with content)": {
+    "prefix": "bdox",
+    "body": [
+      "<bdo dir=\"${1:rtl}\">${2:content}</bdo>${0}"
+    ],
+    "description": "bdo (with content)"
+  },
+  "big": {
+    "prefix": "big",
+    "body": [
+      "<big>${TM_SELECTED_TEXT}${0}</big>"
+    ],
+    "description": "big"
+  },
+  "big (with content)": {
+    "prefix": "bigx",
+    "body": [
+      "<big>${1:content}</big>${0}"
+    ],
+    "description": "big (with content)"
+  },
+  "blockquote": {
+    "prefix": "blockquote",
+    "body": [
+      "<blockquote cite=\"${1:url}\">${TM_SELECTED_TEXT}${0}</blockquote>"
+    ],
+    "description": "blockquote"
+  },
+  "blockquote (with content)": {
+    "prefix": "blockquotex",
+    "body": [
+      "<blockquote cite=\"${1:url}\">${2:content}</blockquote>${0}"
+    ],
+    "description": "blockquote (with content)"
+  },
+  "body": {
+    "prefix": "body",
+    "body": [
+      "<body>${TM_SELECTED_TEXT}${0}</body>"
+    ],
+    "description": "body"
+  },
+  "body (with content)": {
+    "prefix": "bodyx",
+    "body": [
+      "<body>${1:content}</body>${0}"
+    ],
+    "description": "body (with content)"
+  },
+  "br": {
+    "prefix": "br",
+    "body": [
+      "<br />${0}"
+    ],
+    "description": "br"
+  },
+  "button": {
+    "prefix": "button",
+    "body": [
+      "<button type=\"${1:button}\">${TM_SELECTED_TEXT}${0}</button>"
+    ],
+    "description": "button"
+  },
+  "button (with content)": {
+    "prefix": "buttonx",
+    "body": [
+      "<button type=\"${1:button}\">${2:content}</button>${0}"
+    ],
+    "description": "button (with content)"
+  },
+  "canvas": {
+    "prefix": "canvas",
+    "body": [
+      "<canvas>${TM_SELECTED_TEXT}${0}</canvas>"
+    ],
+    "description": "canvas"
+  },
+  "canvas (with content)": {
+    "prefix": "canvasx",
+    "body": [
+      "<canvas>${1:content}</canvas>${0}"
+    ],
+    "description": "canvas (with content)"
+  },
+  "caption": {
+    "prefix": "caption",
+    "body": [
+      "<caption>${TM_SELECTED_TEXT}${0}</caption>"
+    ],
+    "description": "caption"
+  },
+  "caption (with content)": {
+    "prefix": "captionx",
+    "body": [
+      "<caption>${1:content}</caption>${0}"
+    ],
+    "description": "caption (with content)"
+  },
+  "CDATA section": {
+    "prefix": "cdata",
+    "body": [
+      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
+    ],
+    "description": "CDATA section"
+  },
+  "CDATA section (with content)": {
+    "prefix": "cdatax",
+    "body": [
+      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
+    ],
+    "description": "CDATA section (with content)"
+  },
+  "center": {
+    "prefix": "center",
+    "body": [
+      "<center>${TM_SELECTED_TEXT}${0}</center>"
+    ],
+    "description": "center"
+  },
+  "center (with content)": {
+    "prefix": "centerx",
+    "body": [
+      "<center>${1:content}</center>${0}"
+    ],
+    "description": "center (with content)"
+  },
+  "cite": {
+    "prefix": "cite",
+    "body": [
+      "<cite>${TM_SELECTED_TEXT}${0}</cite>"
+    ],
+    "description": "cite"
+  },
+  "cite (with content)": {
+    "prefix": "citex",
+    "body": [
+      "<cite>${1:content}</cite>${0}"
+    ],
+    "description": "cite (with content)"
+  },
+  "code": {
+    "prefix": "code",
+    "body": [
+      "<code>${0}</code>"
+    ],
+    "description": "code"
+  },
+  "col": {
+    "prefix": "col",
+    "body": [
+      "<col ${1:attribute=\"\"}>${0}"
+    ],
+    "description": "col"
+  },
+  "colgroup": {
+    "prefix": "colgroup",
+    "body": [
+      "<colgroup>",
+      "\t<col ${0}>",
+      "</colgroup>"
+    ],
+    "description": "colgroup"
+  },
+  "comment": {
+    "prefix": "c",
+    "body": [
+      "<!-- ${TM_SELECTED_TEXT}${1:comment} -->${0}"
+    ],
+    "description": "comment"
+  },
+  "datalist": {
+    "prefix": "datalist",
+    "body": [
+      "<datalist>",
+      "\t<option value=\"${1:value}\">${0}",
+      "</datalist>"
+    ],
+    "description": "datalist"
+  },
+  "dd": {
+    "prefix": "dd",
+    "body": [
+      "<dd>${TM_SELECTED_TEXT}${0}</dd>"
+    ],
+    "description": "dd"
+  },
+  "dd (with content)": {
+    "prefix": "ddx",
+    "body": [
+      "<dd>${1:content}</dd>${0}"
+    ],
+    "description": "dd (with content)"
+  },
+  "del": {
+    "prefix": "del",
+    "body": [
+      "<del>${TM_SELECTED_TEXT}${0}</del>"
+    ],
+    "description": "del"
+  },
+  "del (with content)": {
+    "prefix": "delx",
+    "body": [
+      "<del>${1:content}</del>${0}"
+    ],
+    "description": "del (with content)"
+  },
+  "del+ins": {
+    "prefix": "delins",
+    "body": [
+      "<del>${1:deleted}</del><ins>${2:inserted}</ins>${0}"
+    ],
+    "description": "del+ins"
+  },
+  "details": {
+    "prefix": "details",
+    "body": [
+      "<details>",
+      "\t<summary>${1:summary}</summary>${0}",
+      "</details>"
+    ],
+    "description": "details"
+  },
+  "dfn": {
+    "prefix": "dfn",
+    "body": [
+      "<dfn>${TM_SELECTED_TEXT}${0}</dfn>"
+    ],
+    "description": "dfn"
+  },
+  "dfn (with content)": {
+    "prefix": "dfnx",
+    "body": [
+      "<dfn>${1:content}</dfn>${0}"
+    ],
+    "description": "dfn (with content)"
+  },
+  "dialog": {
+    "prefix": "dialog",
+    "body": [
+      "<dialog open>${TM_SELECTED_TEXT}${0}</dialog>"
+    ],
+    "description": "dialog"
+  },
+  "dialog (with content)": {
+    "prefix": "dialogx",
+    "body": [
+      "<dialog open>${1:content}</dialog>${0}"
+    ],
+    "description": "dialog (with content)"
+  },
+  "dir": {
+    "prefix": "dir",
+    "body": [
+      "<dir>",
+      "\t<li>${TM_SELECTED_TEXT}${0}</li>",
+      "</dir>"
+    ],
+    "description": "dir"
+  },
+  "dir (with content)": {
+    "prefix": "dirx",
+    "body": [
+      "<dir>",
+      "\t<li>${1:content}</li>${0}",
+      "</dir>"
+    ],
+    "description": "dir (with content)"
+  },
+  "div": {
+    "prefix": "div",
+    "body": [
+      "<div>${TM_SELECTED_TEXT}${0}</div>"
+    ],
+    "description": "div"
+  },
+  "div (with content)": {
+    "prefix": "divx",
+    "body": [
+      "<div>${1:content}</div>${0}"
+    ],
+    "description": "div (with content)"
+  },
+  "dl": {
+    "prefix": "dl",
+    "body": [
+      "<dl>",
+      "\t<dt>${0}</dt>",
+      "\t<dd></dd>",
+      "</dl>"
+    ],
+    "description": "dl"
+  },
+  "dt": {
+    "prefix": "dt",
+    "body": [
+      "<dt>${TM_SELECTED_TEXT}${0}</dt>"
+    ],
+    "description": "dt"
+  },
+  "dt (with content)": {
+    "prefix": "dtx",
+    "body": [
+      "<dt>${1:content}</dt>${0}"
+    ],
+    "description": "dt (with content)"
+  },
+  "element": {
+    "prefix": "e",
+    "body": [
+      "<${1:element}>",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "</${1}>"
+    ],
+    "description": "element"
+  },
+  "element (with attribute)": {
+    "prefix": "ea",
+    "body": [
+      "<${1:element} ${2:attribute}=\"${3:value}\">",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "</${1}>"
+    ],
+    "description": "element (with attribute)"
+  },
+  "element (with attribute, with content)": {
+    "prefix": "eax",
+    "body": [
+      "<${1:element} ${2:attribute}=\"${3:value}\">${4:content}</${1}>${0}"
+    ],
+    "description": "element (with attribute, with content)"
+  },
+  "element (with content)": {
+    "prefix": "ex",
+    "body": [
+      "<${1:element}>${2:content}</${1}>${0}"
+    ],
+    "description": "element (with content)"
+  },
+  "em": {
+    "prefix": "em",
+    "body": [
+      "<em>${TM_SELECTED_TEXT}${0}</em>"
+    ],
+    "description": "em"
+  },
+  "em (with content)": {
+    "prefix": "emx",
+    "body": [
+      "<em>${1:content}</em>${0}"
+    ],
+    "description": "em (with content)"
+  },
+  "embed": {
+    "prefix": "embed",
+    "body": [
+      "<embed src=\"${1:url}\">${0}"
+    ],
+    "description": "embed"
+  },
+  "fieldset": {
+    "prefix": "fieldset",
+    "body": [
+      "<fieldset>",
+      "\t<legend>${TM_SELECTED_TEXT}${0}</legend>",
+      "</fieldset>"
+    ],
+    "description": "fieldset"
+  },
+  "fieldset (with content)": {
+    "prefix": "fieldsetx",
+    "body": [
+      "<fieldset>",
+      "\t<legend>${1:content}</legend>${0}",
+      "</fieldset>"
+    ],
+    "description": "fieldset (with content)"
+  },
+  "figure": {
+    "prefix": "figure",
+    "body": [
+      "<figure>",
+      "\t<img src=\"${1:url}\" alt=\"${2:alt}\">",
+      "\t<figcaption>${3:caption}</figcaption>",
+      "</figure>${0}"
+    ],
+    "description": "figure"
+  },
+  "font": {
+    "prefix": "font",
+    "body": [
+      "<font ${1:attribute=\"\"}>${TM_SELECTED_TEXT}${0}</font>"
+    ],
+    "description": "font"
+  },
+  "font (with content)": {
+    "prefix": "fontx",
+    "body": [
+      "<font ${1:attribute=\"\"}>${2:content}</font>${0}"
+    ],
+    "description": "font (with content)"
+  },
+  "footer": {
+    "prefix": "footer",
+    "body": [
+      "<footer>${TM_SELECTED_TEXT}${0}</footer>"
+    ],
+    "description": "footer"
+  },
+  "footer (with content)": {
+    "prefix": "footerx",
+    "body": [
+      "<footer>${1:content}</footer>${0}"
+    ],
+    "description": "footer (with content)"
+  },
+  "form": {
+    "prefix": "form",
+    "body": [
+      "<form action=\"${1:/}\" method=\"${2:post}\">${TM_SELECTED_TEXT}${0}</form>"
+    ],
+    "description": "form"
+  },
+  "form (with content)": {
+    "prefix": "formx",
+    "body": [
+      "<form action=\"${1:/}\" method=\"${2:post}\">${3:content}</form>${0}"
+    ],
+    "description": "form (with content)"
+  },
+  "frame": {
+    "prefix": "frame",
+    "body": [
+      "<frame ${1:attribute=\"\"}>${0}"
+    ],
+    "description": "frame"
+  },
+  "frameset": {
+    "prefix": "frameset",
+    "body": [
+      "<frameset>${TM_SELECTED_TEXT}${0}</frameset>"
+    ],
+    "description": "frameset"
+  },
+  "frameset (with content)": {
+    "prefix": "framesetx",
+    "body": [
+      "<frameset>${1:content}</frameset>${0}"
+    ],
+    "description": "frameset (with content)"
+  },
+  "h1": {
+    "prefix": "h",
+    "body": [
+      "<h1>${TM_SELECTED_TEXT}${0}</h1>"
+    ],
+    "description": "h"
+  },
+  "h1 (with content)": {
+    "prefix": "hx",
+    "body": [
+      "<h1>${1:content}</h1>${0}"
+    ],
+    "description": "h (with content)"
+  },
+  "h2": {
+    "prefix": "h2",
+    "body": [
+      "<h2>${TM_SELECTED_TEXT}${0}</h2>"
+    ],
+    "description": "h2"
+  },
+  "h2 (with content)": {
+    "prefix": "h2x",
+    "body": [
+      "<h2>${1:content}</h2>${0}"
+    ],
+    "description": "h2 (with content)"
+  },
+  "h3": {
+    "prefix": "h3",
+    "body": [
+      "<h3>${TM_SELECTED_TEXT}${0}</h3>"
+    ],
+    "description": "h3"
+  },
+  "h3 (with content)": {
+    "prefix": "h3x",
+    "body": [
+      "<h3>${1:content}</h3>${0}"
+    ],
+    "description": "h3 (with content)"
+  },
+  "h4": {
+    "prefix": "h4",
+    "body": [
+      "<h4>${TM_SELECTED_TEXT}${0}</h4>"
+    ],
+    "description": "h4"
+  },
+  "h4 (with content)": {
+    "prefix": "h4x",
+    "body": [
+      "<h4>${1:content}</h4>${0}"
+    ],
+    "description": "h4 (with content)"
+  },
+  "h5": {
+    "prefix": "h5",
+    "body": [
+      "<h5>${TM_SELECTED_TEXT}${0}</h5>"
+    ],
+    "description": "h5"
+  },
+  "h5 (with content)": {
+    "prefix": "h5x",
+    "body": [
+      "<h5>${1:content}</h5>${0}"
+    ],
+    "description": "h5 (with content)"
+  },
+  "h6": {
+    "prefix": "h6",
+    "body": [
+      "<h6>${TM_SELECTED_TEXT}${0}</h6>"
+    ],
+    "description": "h6"
+  },
+  "h6 (with content)": {
+    "prefix": "h6x",
+    "body": [
+      "<h6>${1:content}</h6>${0}"
+    ],
+    "description": "h6 (with content)"
+  },
+  "head": {
+    "prefix": "head",
+    "body": [
+      "<head>${TM_SELECTED_TEXT}${0}</head>"
+    ],
+    "description": "head"
+  },
+  "head (with content)": {
+    "prefix": "headx",
+    "body": [
+      "<head>${1:content}</head>${0}"
+    ],
+    "description": "head (with content)"
+  },
+  "header": {
+    "prefix": "header",
+    "body": [
+      "<header>${TM_SELECTED_TEXT}${0}</header>"
+    ],
+    "description": "header"
+  },
+  "header (with content)": {
+    "prefix": "headerx",
+    "body": [
+      "<header>${1:content}</header>${0}"
+    ],
+    "description": "header (with content)"
+  },
+  "hr": {
+    "prefix": "hr",
+    "body": [
+      "<hr />${0}"
+    ],
+    "description": "hr"
+  },
+  "html": {
+    "prefix": "html",
+    "body": [
+      "<html xmlns=\"http://www.w3.org/1999/xhtml\">",
+      "\t<head>",
+      "\t\t<title>${1:title}</title>",
+      "\t</head>",
+      "\t<body>${0}",
+      "\t</body>",
+      "</html>"
+    ],
+    "description": "html"
+  },
+  "i": {
+    "prefix": "i",
+    "body": [
+      "<i>${TM_SELECTED_TEXT}${0}</i>"
+    ],
+    "description": "i"
+  },
+  "i (with content)": {
+    "prefix": "ix",
+    "body": [
+      "<i>${1:content}</i>${0}"
+    ],
+    "description": "i (with content)"
+  },
+  "iframe": {
+    "prefix": "iframe",
+    "body": [
+      "<iframe scr=\"${1:url}\">${TM_SELECTED_TEXT}${0}</iframe>"
+    ],
+    "description": "iframe"
+  },
+  "iframe (with content)": {
+    "prefix": "iframex",
+    "body": [
+      "<iframe scr=\"${1:url}\">${2:content}</iframe>${0}"
+    ],
+    "description": "iframe (with content)"
+  },
+  "img": {
+    "prefix": "img",
+    "body": [
+      "<img src=\"${1:url}\" alt=\"${2:alt}\">${0}"
+    ],
+    "description": "img"
+  },
+  "input": {
+    "prefix": "input",
+    "body": [
+      "<input type=\"${1:type}\" name=\"${2:name}\" value=\"${3:value}\">${0}"
+    ],
+    "description": "input"
+  },
+  "ins": {
+    "prefix": "ins",
+    "body": [
+      "<ins>${TM_SELECTED_TEXT}${0}</ins>"
+    ],
+    "description": "ins"
+  },
+  "ins (with content)": {
+    "prefix": "insx",
+    "body": [
+      "<ins>${1:content}</ins>${0}"
+    ],
+    "description": "ins (with content)"
+  },
+  "kbd": {
+    "prefix": "kbd",
+    "body": [
+      "<kbd>${TM_SELECTED_TEXT}${0}</kbd>"
+    ],
+    "description": "kbd"
+  },
+  "kbd (with content)": {
+    "prefix": "kbdx",
+    "body": [
+      "<kbd>${1:content}</kbd>${0}"
+    ],
+    "description": "kbd (with content)"
+  },
+  "keygen": {
+    "prefix": "keygen",
+    "body": [
+      "<keygen ${1:attribute=\"\"}>${0}"
+    ],
+    "description": "keygen"
+  },
+  "label": {
+    "prefix": "label",
+    "body": [
+      "<label for=\"${1:for}\">${TM_SELECTED_TEXT}${0}</label>"
+    ],
+    "description": "label"
+  },
+  "label (with content)": {
+    "prefix": "labelx",
+    "body": [
+      "<label for=\"${1:for}\">${2:content}</label>${0}"
+    ],
+    "description": "label (with content)"
+  },
+  "legend": {
+    "prefix": "legend",
+    "body": [
+      "<legend>${TM_SELECTED_TEXT}${0}</legend>"
+    ],
+    "description": "legend"
+  },
+  "legend (with content)": {
+    "prefix": "legendx",
+    "body": [
+      "<legend>${1:content}</legend>${0}"
+    ],
+    "description": "legend (with content)"
+  },
+  "li": {
+    "prefix": "li",
+    "body": [
+      "<li>${TM_SELECTED_TEXT}${0}</li>"
+    ],
+    "description": "li"
+  },
+  "li (with content)": {
+    "prefix": "lix",
+    "body": [
+      "<li>${1:content}</li>${0}"
+    ],
+    "description": "li (with content)"
+  },
+  "link": {
+    "prefix": "link",
+    "body": [
+      "<link rel=\"${1:stylesheet}\" type=\"${2:text/css}\" href=\"${3:css}\">${0}"
+    ],
+    "description": "link"
+  },
+  "main": {
+    "prefix": "main",
+    "body": [
+      "<main>${TM_SELECTED_TEXT}${0}</main>"
+    ],
+    "description": "main"
+  },
+  "main (with content)": {
+    "prefix": "mainx",
+    "body": [
+      "<main>${1:content}</main>${0}"
+    ],
+    "description": "main (with content)"
+  },
+  "map": {
+    "prefix": "map",
+    "body": [
+      "<map name=\"${1:name}\">",
+      "<area>",
+      "</map>${0}"
+    ],
+    "description": "map"
+  },
+  "mark": {
+    "prefix": "mark",
+    "body": [
+      "<mark>${TM_SELECTED_TEXT}${0}</mark>"
+    ],
+    "description": "mark"
+  },
+  "mark (with content)": {
+    "prefix": "markx",
+    "body": [
+      "<mark>${1:content}</mark>${0}"
+    ],
+    "description": "mark (with content)"
+  },
+  "menu": {
+    "prefix": "menu",
+    "body": [
+      "<menu>${TM_SELECTED_TEXT}${0}</menu>"
+    ],
+    "description": "menu"
+  },
+  "menu (with content)": {
+    "prefix": "menux",
+    "body": [
+      "<menu>${1:content}</menu>${0}"
+    ],
+    "description": "menu (with content)"
+  },
+  "menuitem": {
+    "prefix": "menuitem",
+    "body": [
+      "<menuitem label=\"${1:text}\"></menuitem>${0}"
+    ],
+    "description": "menuitem"
+  },
+  "meta": {
+    "prefix": "meta",
+    "body": [
+      "<meta ${1:attribute=\"\"}>${0}"
+    ],
+    "description": "meta"
+  },
+  "meter": {
+    "prefix": "meter",
+    "body": [
+      "<meter value=\"${1:0}\">${TM_SELECTED_TEXT}${0}</meter>"
+    ],
+    "description": "meter"
+  },
+  "meter (with content)": {
+    "prefix": "meterx",
+    "body": [
+      "<meter value=\"${1:0}\">${2:content}</meter>${0}"
+    ],
+    "description": "meter (with content)"
+  },
+  "nav": {
+    "prefix": "nav",
+    "body": [
+      "<nav>${TM_SELECTED_TEXT}${0}</nav>"
+    ],
+    "description": "nav"
+  },
+  "nav (with content)": {
+    "prefix": "navx",
+    "body": [
+      "<nav>${1:content}</nav>${0}"
+    ],
+    "description": "nav (with content)"
+  },
+  "noframes": {
+    "prefix": "noframes",
+    "body": [
+      "<noframes>${TM_SELECTED_TEXT}${0}</noframes>"
+    ],
+    "description": "noframes"
+  },
+  "noframes (with content)": {
+    "prefix": "noframesx",
+    "body": [
+      "<noframes>${1:content}</noframes>${0}"
+    ],
+    "description": "noframes (with content)"
+  },
+  "noscript": {
+    "prefix": "noscript",
+    "body": [
+      "<noscript>${TM_SELECTED_TEXT}${0}</noscript>"
+    ],
+    "description": "noscript"
+  },
+  "noscript (with content)": {
+    "prefix": "noscriptx",
+    "body": [
+      "<noscript>${1:content}</noscript>${0}"
+    ],
+    "description": "noscript (with content)"
+  },
+  "object": {
+    "prefix": "object",
+    "body": [
+      "<object ${1:data=\"\"}>${TM_SELECTED_TEXT}${0}</object>"
+    ],
+    "description": "object"
+  },
+  "object (with content)": {
+    "prefix": "objectx",
+    "body": [
+      "<object ${1:data=\"\"}>${2:content}</object>${0}"
+    ],
+    "description": "object (with content)"
+  },
+  "ol": {
+    "prefix": "ol",
+    "body": [
+      "<ol>",
+      "\t<li>${TM_SELECTED_TEXT}${0}</li>",
+      "</ol>"
+    ],
+    "description": "ol"
+  },
+  "ol (with content)": {
+    "prefix": "olx",
+    "body": [
+      "<ol>",
+      "\t<li>${1:content}</li>${0}",
+      "</ol>"
+    ],
+    "description": "ol (with content)"
+  },
+  "optgroup": {
+    "prefix": "optgroup",
+    "body": [
+      "<optgroup>",
+      "\t<option value=\"${1:value}\">${TM_SELECTED_TEXT}${0}</option>",
+      "</optgroup>"
+    ],
+    "description": "optgroup"
+  },
+  "optgroup (with content)": {
+    "prefix": "optgroupx",
+    "body": [
+      "<optgroup>",
+      "\t<option value=\"${1:value}\">${2:content}</option>${0}",
+      "</optgroup>"
+    ],
+    "description": "optgroup (with content)"
+  },
+  "option": {
+    "prefix": "option",
+    "body": [
+      "<option value=\"${1:value}\">${TM_SELECTED_TEXT}${0}</option>"
+    ],
+    "description": "option"
+  },
+  "option (with content)": {
+    "prefix": "optionx",
+    "body": [
+      "<option value=\"${1:value}\">${2:content}</option>${0}"
+    ],
+    "description": "option (with content)"
+  },
+  "output": {
+    "prefix": "output",
+    "body": [
+      "<output name=\"${1:name}\" for=\"${2:for}\"></output>${0}"
+    ],
+    "description": "output"
+  },
+  "p": {
+    "prefix": "p",
+    "body": [
+      "<p>${TM_SELECTED_TEXT}${0}</p>"
+    ],
+    "description": "p"
+  },
+  "p (with content)": {
+    "prefix": "px",
+    "body": [
+      "<p>${1:content}</p>${0}"
+    ],
+    "description": "p (with content)"
+  },
+  "param": {
+    "prefix": "param",
+    "body": [
+      "<param name=\"${1:name}\" value=\"${2:value}\">${0}"
+    ],
+    "description": "param"
+  },
+  "pre": {
+    "prefix": "pre",
+    "body": [
+      "<pre>${TM_SELECTED_TEXT}${0}</pre>"
+    ],
+    "description": "pre"
+  },
+  "pre (with content)": {
+    "prefix": "prex",
+    "body": [
+      "<pre>${1:content}</pre>${0}"
+    ],
+    "description": "pre (with content)"
+  },
+  "progress": {
+    "prefix": "progress",
+    "body": [
+      "<progress value=\"${1:0}\" value=\"${2:100}\">${TM_SELECTED_TEXT}${0}</progress>"
+    ],
+    "description": "progress"
+  },
+  "progress (with content)": {
+    "prefix": "progressx",
+    "body": [
+      "<progress value=\"${1:0}\" value=\"${2:100}\">${3:content}</progress>${0}"
+    ],
+    "description": "progress (with content)"
+  },
+  "q": {
+    "prefix": "q",
+    "body": [
+      "<q>${TM_SELECTED_TEXT}${0}</q>"
+    ],
+    "description": "q"
+  },
+  "q (with content)": {
+    "prefix": "qx",
+    "body": [
+      "<q>${1:content}</q>${0}"
+    ],
+    "description": "q (with content)"
+  },
+  "region": {
+    "prefix": "r",
+    "body": [
+      "<!-- #region ${1:region} -->${0}",
+      "<!-- #endregion -->"
+    ],
+    "description": "region"
+  },
+  "rp": {
+    "prefix": "rp",
+    "body": [
+      "<rp>${TM_SELECTED_TEXT}${0}</rp>"
+    ],
+    "description": "rp"
+  },
+  "rp (with content)": {
+    "prefix": "rpx",
+    "body": [
+      "<rp>${1:content}</rp>${0}"
+    ],
+    "description": "rp (with content)"
+  },
+  "rt": {
+    "prefix": "rt",
+    "body": [
+      "<rt>${TM_SELECTED_TEXT}${0}</rt>"
+    ],
+    "description": "rt"
+  },
+  "rt (with content)": {
+    "prefix": "rtx",
+    "body": [
+      "<rt>${1:content}</rt>${0}"
+    ],
+    "description": "rt (with content)"
+  },
+  "ruby": {
+    "prefix": "ruby",
+    "body": [
+      "<ruby>${TM_SELECTED_TEXT}${0}</ruby>"
+    ],
+    "description": "ruby"
+  },
+  "ruby (with content)": {
+    "prefix": "rubyx",
+    "body": [
+      "<ruby>${1:content}</ruby>${0}"
+    ],
+    "description": "ruby (with content)"
+  },
+  "s": {
+    "prefix": "s",
+    "body": [
+      "<s>${TM_SELECTED_TEXT}${0}</s>"
+    ],
+    "description": "s"
+  },
+  "s (with content)": {
+    "prefix": "sx",
+    "body": [
+      "<s>${1:content}</s>${0}"
+    ],
+    "description": "s (with content)"
+  },
+  "samp": {
+    "prefix": "samp",
+    "body": [
+      "<samp>${TM_SELECTED_TEXT}${0}</samp>"
+    ],
+    "description": "samp"
+  },
+  "samp (with content)": {
+    "prefix": "sampx",
+    "body": [
+      "<samp>${1:content}</samp>${0}"
+    ],
+    "description": "samp (with content)"
+  },
+  "script": {
+    "prefix": "script",
+    "body": [
+      "<script>${TM_SELECTED_TEXT}${0}</script>"
+    ],
+    "description": "script"
+  },
+  "script (with content)": {
+    "prefix": "scriptx",
+    "body": [
+      "<script>${1:content}</script>${0}"
+    ],
+    "description": "script (with content)"
+  },
+  "section": {
+    "prefix": "section",
+    "body": [
+      "<section>${TM_SELECTED_TEXT}${0}</section>"
+    ],
+    "description": "section"
+  },
+  "section (with content)": {
+    "prefix": "sectionx",
+    "body": [
+      "<section>${1:content}</section>${0}"
+    ],
+    "description": "section (with content)"
+  },
+  "select": {
+    "prefix": "select",
+    "body": [
+      "<select>",
+      "\t<option value=\"${1:value}\">${TM_SELECTED_TEXT}${0}</option>",
+      "</select>"
+    ],
+    "description": "select"
+  },
+  "select (with content)": {
+    "prefix": "selectx",
+    "body": [
+      "<select>",
+      "\t<option value=\"${1:value}\">${2:content}</option>${0}",
+      "</select>"
+    ],
+    "description": "select (with content)"
+  },
+  "self-closing element": {
+    "prefix": "es",
+    "body": [
+      "<${1:element} />${0}"
+    ],
+    "description": "self-closing element"
+  },
+  "self-closing element (with attribute)": {
+    "prefix": "eas",
+    "body": [
+      "<${1:element} ${2:attribute}=\"${3:value}\" />${0}"
+    ],
+    "description": "self-closing element (with attribute)"
+  },
+  "small": {
+    "prefix": "small",
+    "body": [
+      "<small>${TM_SELECTED_TEXT}${0}</small>"
+    ],
+    "description": "small"
+  },
+  "small (with content)": {
+    "prefix": "smallx",
+    "body": [
+      "<small>${1:content}</small>${0}"
+    ],
+    "description": "small (with content)"
+  },
+  "source": {
+    "prefix": "source",
+    "body": [
+      "<source src=\"${1:url}\" type=\"${2:audio/mpeg}\">${0}"
+    ],
+    "description": "source"
+  },
+  "span": {
+    "prefix": "span",
+    "body": [
+      "<span>${TM_SELECTED_TEXT}${0}</span>"
+    ],
+    "description": "span"
+  },
+  "span (with content)": {
+    "prefix": "spanx",
+    "body": [
+      "<span>${1:content}</span>${0}"
+    ],
+    "description": "span (with content)"
+  },
+  "strike": {
+    "prefix": "strike",
+    "body": [
+      "<strike>${TM_SELECTED_TEXT}${0}</strike>"
+    ],
+    "description": "strike"
+  },
+  "strike (with content)": {
+    "prefix": "strikex",
+    "body": [
+      "<strike>${1:content}</strike>${0}"
+    ],
+    "description": "strike (with content)"
+  },
+  "strong": {
+    "prefix": "strong",
+    "body": [
+      "<strong>${TM_SELECTED_TEXT}${0}</strong>"
+    ],
+    "description": "strong"
+  },
+  "strong (with content)": {
+    "prefix": "strongx",
+    "body": [
+      "<strong>${1:content}</strong>${0}"
+    ],
+    "description": "strong (with content)"
+  },
+  "style": {
+    "prefix": "style",
+    "body": [
+      "<style>${TM_SELECTED_TEXT}${0}</style>"
+    ],
+    "description": "style"
+  },
+  "style (with content)": {
+    "prefix": "stylex",
+    "body": [
+      "<style>${1:content}</style>${0}"
+    ],
+    "description": "style (with content)"
+  },
+  "sub": {
+    "prefix": "sub",
+    "body": [
+      "<sub>${TM_SELECTED_TEXT}${0}</sub>"
+    ],
+    "description": "sub"
+  },
+  "sub (with content)": {
+    "prefix": "subx",
+    "body": [
+      "<sub>${1:content}</sub>${0}"
+    ],
+    "description": "sub (with content)"
+  },
+  "summary": {
+    "prefix": "summary",
+    "body": [
+      "<summary>${TM_SELECTED_TEXT}${0}</summary>"
+    ],
+    "description": "summary"
+  },
+  "summary (with content)": {
+    "prefix": "summaryx",
+    "body": [
+      "<summary>${1:content}</summary>${0}"
+    ],
+    "description": "summary (with content)"
+  },
+  "sup": {
+    "prefix": "sup",
+    "body": [
+      "<sup>${TM_SELECTED_TEXT}${0}</sup>"
+    ],
+    "description": "sup"
+  },
+  "sup (with content)": {
+    "prefix": "supx",
+    "body": [
+      "<sup>${1:content}</sup>${0}"
+    ],
+    "description": "sup (with content)"
+  },
+  "table": {
+    "prefix": "table",
+    "body": [
+      "<table>",
+      "\t<caption>${0}</caption>",
+      "\t<tr>",
+      "\t\t<th></th>",
+      "\t</tr>",
+      "\t<tr>",
+      "\t\t<td></td>",
+      "\t</tr>",
+      "</table>"
+    ],
+    "description": "table"
+  },
+  "tbody": {
+    "prefix": "tbody",
+    "body": [
+      "<tbody>${TM_SELECTED_TEXT}${0}</tbody>"
+    ],
+    "description": "tbody"
+  },
+  "tbody (with content)": {
+    "prefix": "tbodyx",
+    "body": [
+      "<tbody>${1:content}</tbody>${0}"
+    ],
+    "description": "tbody (with content)"
+  },
+  "td": {
+    "prefix": "td",
+    "body": [
+      "<td>${TM_SELECTED_TEXT}${0}</td>"
+    ],
+    "description": "td"
+  },
+  "td (with content)": {
+    "prefix": "tdx",
+    "body": [
+      "<td>${1:content}</td>${0}"
+    ],
+    "description": "td (with content)"
+  },
+  "textarea": {
+    "prefix": "textarea",
+    "body": [
+      "<textarea>${TM_SELECTED_TEXT}${0}</textarea>"
+    ],
+    "description": "textarea"
+  },
+  "textarea (with content)": {
+    "prefix": "textareax",
+    "body": [
+      "<textarea>${1:content}</textarea>${0}"
+    ],
+    "description": "textarea (with content)"
+  },
+  "tfoot": {
+    "prefix": "tfoot",
+    "body": [
+      "<tfoot>${TM_SELECTED_TEXT}${0}</tfoot>"
+    ],
+    "description": "tfoot"
+  },
+  "tfoot (with content)": {
+    "prefix": "tfootx",
+    "body": [
+      "<tfoot>${1:content}</tfoot>${0}"
+    ],
+    "description": "tfoot (with content)"
+  },
+  "th": {
+    "prefix": "th",
+    "body": [
+      "<th>${TM_SELECTED_TEXT}${0}</th>"
+    ],
+    "description": "th"
+  },
+  "th (with content)": {
+    "prefix": "thx",
+    "body": [
+      "<th>${1:content}</th>${0}"
+    ],
+    "description": "th (with content)"
+  },
+  "thead": {
+    "prefix": "thead",
+    "body": [
+      "<thead>${TM_SELECTED_TEXT}${0}</thead>"
+    ],
+    "description": "thead"
+  },
+  "thead (with content)": {
+    "prefix": "theadx",
+    "body": [
+      "<thead>${1:content}</thead>${0}"
+    ],
+    "description": "thead (with content)"
+  },
+  "time": {
+    "prefix": "time",
+    "body": [
+      "<time datetime=\"${1:datetime}\">${TM_SELECTED_TEXT}${0}</time>"
+    ],
+    "description": "time"
+  },
+  "time (with content)": {
+    "prefix": "timex",
+    "body": [
+      "<time datetime=\"${1:datetime}\">${2:content}</time>${0}"
+    ],
+    "description": "time (with content)"
+  },
+  "title": {
+    "prefix": "title",
+    "body": [
+      "<title>${TM_SELECTED_TEXT}${0}</title>"
+    ],
+    "description": "title"
+  },
+  "title (with content)": {
+    "prefix": "titlex",
+    "body": [
+      "<title>${1:content}</title>${0}"
+    ],
+    "description": "title (with content)"
+  },
+  "tr": {
+    "prefix": "tr",
+    "body": [
+      "<tr>${TM_SELECTED_TEXT}${0}</tr>"
+    ],
+    "description": "tr"
+  },
+  "tr (with content)": {
+    "prefix": "trx",
+    "body": [
+      "<tr>${1:content}</tr>${0}"
+    ],
+    "description": "tr (with content)"
+  },
+  "track": {
+    "prefix": "track",
+    "body": [
+      "<track src=\"${1:url}\">${0}"
+    ],
+    "description": "track"
+  },
+  "tt": {
+    "prefix": "tt",
+    "body": [
+      "<tt>${TM_SELECTED_TEXT}${0}</tt>"
+    ],
+    "description": "tt"
+  },
+  "tt (with content)": {
+    "prefix": "ttx",
+    "body": [
+      "<tt>${1:content}</tt>${0}"
+    ],
+    "description": "tt (with content)"
+  },
+  "u": {
+    "prefix": "u",
+    "body": [
+      "<u>${TM_SELECTED_TEXT}${0}</u>"
+    ],
+    "description": "u"
+  },
+  "u (with content)": {
+    "prefix": "ux",
+    "body": [
+      "<u>${1:content}</u>${0}"
+    ],
+    "description": "u (with content)"
+  },
+  "ul": {
+    "prefix": "ul",
+    "body": [
+      "<ul>",
+      "\t<li>${TM_SELECTED_TEXT}${0}</li>",
+      "</ul>"
+    ],
+    "description": "ul"
+  },
+  "ul (with content)": {
+    "prefix": "ulx",
+    "body": [
+      "<ul>",
+      "\t<li>${1:content}</li>${0}",
+      "</ul>"
+    ],
+    "description": "ul (with content)"
+  },
+  "var": {
+    "prefix": "var",
+    "body": [
+      "<var>${TM_SELECTED_TEXT}${0}</var>"
+    ],
+    "description": "var"
+  },
+  "var (with content)": {
+    "prefix": "varx",
+    "body": [
+      "<var>${1:content}</var>${0}"
+    ],
+    "description": "var (with content)"
+  },
+  "video": {
+    "prefix": "video",
+    "body": [
+      "<video controls=\"controls\">",
+      "\t${TM_SELECTED_TEXT}",
+      "\t<source src=\"${1:url}\" type=\"${2:audio/mp4}\">${0}",
+      "</video>"
+    ],
+    "description": "video"
+  },
+  "wbr": {
+    "prefix": "wbr",
+    "body": [
+      "<wbr>${0}"
+    ],
+    "description": "wbr"
+  }
+}

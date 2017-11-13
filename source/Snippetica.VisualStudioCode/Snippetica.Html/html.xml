@@ -1,0 +1,4966 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>a</Title>
+      <Shortcut>a</Shortcut>
+      <Description>a</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name a</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>href</ID>
+          <Default>#</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<a href="$href$">$selected$$end$</a>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>a (with content)</Title>
+      <Shortcut>ax</Shortcut>
+      <Description>a (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name a_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>href</ID>
+          <Default>#</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<a href="$href$">$content$</a>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>abbr</Title>
+      <Shortcut>abbr</Shortcut>
+      <Description>abbr</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name abbr</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>title</ID>
+          <Default>title</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<abbr title="$title$">$selected$$end$</abbr>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>abbr (with content)</Title>
+      <Shortcut>abbrx</Shortcut>
+      <Description>abbr (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name abbr_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>title</ID>
+          <Default>title</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<abbr title="$title$">$content$</abbr>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>acronym</Title>
+      <Shortcut>acronym</Shortcut>
+      <Description>acronym</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name acronym</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>title</ID>
+          <Default>title</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<acronym title="$title$">$selected$$end$</acronym>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>acronym (with content)</Title>
+      <Shortcut>acronymx</Shortcut>
+      <Description>acronym (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name acronym_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>title</ID>
+          <Default>title</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<acronym title="$title$">$content$</acronym>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>address</Title>
+      <Shortcut>address</Shortcut>
+      <Description>address</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name address</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<address>$selected$$end$</address>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>address (with content)</Title>
+      <Shortcut>addressx</Shortcut>
+      <Description>address (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name address_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<address>$content$</address>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>applet</Title>
+      <Shortcut>applet</Shortcut>
+      <Description>applet</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name applet</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>code</ID>
+          <Default>url</Default>
+        </Literal>
+        <Literal>
+          <ID>object</ID>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<applet code="$code$" object="$object$">$selected$$end$</applet>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>applet (with content)</Title>
+      <Shortcut>appletx</Shortcut>
+      <Description>applet (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name applet_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>code</ID>
+          <Default>url</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>object</ID>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<applet code="$code$" object="$object$">$content$</applet>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>area</Title>
+      <Shortcut>area</Shortcut>
+      <Description>area</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name area</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <Default>attribute=""</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<area $attribute$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>article</Title>
+      <Shortcut>article</Shortcut>
+      <Description>article</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name article</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<article>$selected$$end$</article>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>article (with content)</Title>
+      <Shortcut>articlex</Shortcut>
+      <Description>article (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name article_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<article>$content$</article>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>aside</Title>
+      <Shortcut>aside</Shortcut>
+      <Description>aside</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name aside</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<aside>$selected$$end$</aside>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>aside (with content)</Title>
+      <Shortcut>asidex</Shortcut>
+      <Description>aside (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name aside_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<aside>$content$</aside>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>audio</Title>
+      <Shortcut>audio</Shortcut>
+      <Description>audio</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name audio</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>src</ID>
+          <ToolTip>URL of the media file</ToolTip>
+          <Default>url</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Media type</ToolTip>
+          <Default>audio/mpeg</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<audio controls="controls">
+	<source src="$src$" type="$type$">
+</audio>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>b</Title>
+      <Shortcut>b</Shortcut>
+      <Description>b</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name b</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<b>$selected$$end$</b>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>b (with content)</Title>
+      <Shortcut>bx</Shortcut>
+      <Description>b (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name b_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<b>$content$</b>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>base</Title>
+      <Shortcut>base</Shortcut>
+      <Description>base</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name base</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>href</ID>
+          <Default>url</Default>
+        </Literal>
+        <Literal>
+          <ID>target</ID>
+          <Default>_blank</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<base href="$href$" target="$target$">$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>basefont</Title>
+      <Shortcut>basefont</Shortcut>
+      <Description>basefont</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name basefont</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <Default>attribute=""</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<basefont $attribute$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>bdi</Title>
+      <Shortcut>bdi</Shortcut>
+      <Description>bdi</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name bdi</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<bdi>$selected$$end$</bdi>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>bdi (with content)</Title>
+      <Shortcut>bdix</Shortcut>
+      <Description>bdi (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name bdi_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<bdi>$content$</bdi>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>bdo</Title>
+      <Shortcut>bdo</Shortcut>
+      <Description>bdo</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name bdo</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>dir</ID>
+          <ToolTip>Text direction</ToolTip>
+          <Default>rtl</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<bdo dir="$dir$">$selected$$end$</bdo>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>bdo (with content)</Title>
+      <Shortcut>bdox</Shortcut>
+      <Description>bdo (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name bdo_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>dir</ID>
+          <ToolTip>Text direction</ToolTip>
+          <Default>rtl</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<bdo dir="$dir$">$content$</bdo>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>big</Title>
+      <Shortcut>big</Shortcut>
+      <Description>big</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name big</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<big>$selected$$end$</big>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>big (with content)</Title>
+      <Shortcut>bigx</Shortcut>
+      <Description>big (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name big_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<big>$content$</big>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>blockquote</Title>
+      <Shortcut>blockquote</Shortcut>
+      <Description>blockquote</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name blockquote</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>cite</ID>
+          <Default>url</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<blockquote cite="$cite$">$selected$$end$</blockquote>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>blockquote (with content)</Title>
+      <Shortcut>blockquotex</Shortcut>
+      <Description>blockquote (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name blockquote_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>cite</ID>
+          <Default>url</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<blockquote cite="$cite$">$content$</blockquote>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>body</Title>
+      <Shortcut>body</Shortcut>
+      <Description>body</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name body</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<body>$selected$$end$</body>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>body (with content)</Title>
+      <Shortcut>bodyx</Shortcut>
+      <Description>body (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name body_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<body>$content$</body>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>br</Title>
+      <Shortcut>br</Shortcut>
+      <Description>br</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name br</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<br />$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>button</Title>
+      <Shortcut>button</Shortcut>
+      <Description>button</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name button</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <Default>button</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<button type="$type$">$selected$$end$</button>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>button (with content)</Title>
+      <Shortcut>buttonx</Shortcut>
+      <Description>button (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name button_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <Default>button</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<button type="$type$">$content$</button>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>canvas</Title>
+      <Shortcut>canvas</Shortcut>
+      <Description>canvas</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name canvas</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<canvas>$selected$$end$</canvas>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>canvas (with content)</Title>
+      <Shortcut>canvasx</Shortcut>
+      <Description>canvas (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name canvas_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<canvas>$content$</canvas>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>caption</Title>
+      <Shortcut>caption</Shortcut>
+      <Description>caption</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name caption</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<caption>$selected$$end$</caption>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>caption (with content)</Title>
+      <Shortcut>captionx</Shortcut>
+      <Description>caption (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name caption_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<caption>$content$</caption>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>CDATA section</Title>
+      <Shortcut>cdata</Shortcut>
+      <Description>CDATA section</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name CDataSection</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>CDATA section (with content)</Title>
+      <Shortcut>cdatax</Shortcut>
+      <Description>CDATA section (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name CDataSectionWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>center</Title>
+      <Shortcut>center</Shortcut>
+      <Description>center</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name center</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<center>$selected$$end$</center>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>center (with content)</Title>
+      <Shortcut>centerx</Shortcut>
+      <Description>center (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name center_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<center>$content$</center>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>cite</Title>
+      <Shortcut>cite</Shortcut>
+      <Description>cite</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name cite</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<cite>$selected$$end$</cite>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>cite (with content)</Title>
+      <Shortcut>citex</Shortcut>
+      <Description>cite (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name cite_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<cite>$content$</cite>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>code</Title>
+      <Shortcut>code</Shortcut>
+      <Description>code</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name code</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<code>$end$</code>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>col</Title>
+      <Shortcut>col</Shortcut>
+      <Description>col</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name col</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <Default>attribute=""</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<col $attribute$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>colgroup</Title>
+      <Shortcut>colgroup</Shortcut>
+      <Description>colgroup</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name colgroup</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<colgroup>
+	<col $end$>
+</colgroup>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>comment</Title>
+      <Shortcut>c</Shortcut>
+      <Description>comment</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Comment</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>comment</ID>
+          <ToolTip>Comment</ToolTip>
+          <Default>comment</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<!-- $selected$$comment$ -->$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>datalist</Title>
+      <Shortcut>datalist</Shortcut>
+      <Description>datalist</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name datalist</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>value</ID>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<datalist>
+	<option value="$value$">$end$
+</datalist>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>dd</Title>
+      <Shortcut>dd</Shortcut>
+      <Description>dd</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name dd</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<dd>$selected$$end$</dd>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>dd (with content)</Title>
+      <Shortcut>ddx</Shortcut>
+      <Description>dd (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name dd_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<dd>$content$</dd>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>del</Title>
+      <Shortcut>del</Shortcut>
+      <Description>del</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name del</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<del>$selected$$end$</del>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>del+ins</Title>
+      <Shortcut>delins</Shortcut>
+      <Description>del+ins</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name del_ins</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>deleted</ID>
+          <Default>deleted</Default>
+        </Literal>
+        <Literal>
+          <ID>inserted</ID>
+          <Default>inserted</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<del>$deleted$</del><ins>$inserted$</ins>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>del (with content)</Title>
+      <Shortcut>delx</Shortcut>
+      <Description>del (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name del_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<del>$content$</del>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>details</Title>
+      <Shortcut>details</Shortcut>
+      <Description>details</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name details</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>summary</ID>
+          <Default>summary</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<details>
+	<summary>$summary$</summary>$end$
+</details>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>dfn</Title>
+      <Shortcut>dfn</Shortcut>
+      <Description>dfn</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name dfn</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<dfn>$selected$$end$</dfn>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>dfn (with content)</Title>
+      <Shortcut>dfnx</Shortcut>
+      <Description>dfn (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name dfn_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<dfn>$content$</dfn>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>dialog</Title>
+      <Shortcut>dialog</Shortcut>
+      <Description>dialog</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name dialog</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<dialog open>$selected$$end$</dialog>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>dialog (with content)</Title>
+      <Shortcut>dialogx</Shortcut>
+      <Description>dialog (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name dialog_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<dialog open>$content$</dialog>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>dir</Title>
+      <Shortcut>dir</Shortcut>
+      <Description>dir</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name dir</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<dir>
+	<li>$selected$$end$</li>
+</dir>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>dir (with content)</Title>
+      <Shortcut>dirx</Shortcut>
+      <Description>dir (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name dir_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<dir>
+	<li>$content$</li>$end$
+</dir>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>div</Title>
+      <Shortcut>div</Shortcut>
+      <Description>div</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name div</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<div>$selected$$end$</div>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>div (with content)</Title>
+      <Shortcut>divx</Shortcut>
+      <Description>div (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name div_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<div>$content$</div>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>dl</Title>
+      <Shortcut>dl</Shortcut>
+      <Description>dl</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name dl</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<dl>
+	<dt>$end$</dt>
+	<dd></dd>
+</dl>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>dt</Title>
+      <Shortcut>dt</Shortcut>
+      <Description>dt</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name dt</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<dt>$selected$$end$</dt>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>dt (with content)</Title>
+      <Shortcut>dtx</Shortcut>
+      <Description>dt (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name dt_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<dt>$content$</dt>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>element</Title>
+      <Shortcut>e</Shortcut>
+      <Description>element</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Element</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>element</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>element</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<$element$>
+	$selected$$end$
+</$element$>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>element (with attribute)</Title>
+      <Shortcut>ea</Shortcut>
+      <Description>element (with attribute)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ElementWithAttribute</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>attribute</Default>
+        </Literal>
+        <Literal>
+          <ID>element</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>element</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<$element$ $attribute$="$value$">
+	$selected$$end$
+</$element$>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>element (with attribute, with content)</Title>
+      <Shortcut>eax</Shortcut>
+      <Description>element (with attribute, with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ElementWithAttributeWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>attribute</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <ToolTip>Content</ToolTip>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>element</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>element</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<$element$ $attribute$="$value$">$content$</$element$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>element (with content)</Title>
+      <Shortcut>ex</Shortcut>
+      <Description>element (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ElementWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <ToolTip>Content</ToolTip>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>element</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>element</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<$element$>$content$</$element$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>em</Title>
+      <Shortcut>em</Shortcut>
+      <Description>em</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name em</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<em>$selected$$end$</em>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>em (with content)</Title>
+      <Shortcut>emx</Shortcut>
+      <Description>em (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name em_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<em>$content$</em>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>embed</Title>
+      <Shortcut>embed</Shortcut>
+      <Description>embed</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name embed</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>src</ID>
+          <Default>url</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<embed src="$src$">$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>fieldset</Title>
+      <Shortcut>fieldset</Shortcut>
+      <Description>fieldset</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name fieldset</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<fieldset>
+	<legend>$selected$$end$</legend>
+</fieldset>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>fieldset (with content)</Title>
+      <Shortcut>fieldsetx</Shortcut>
+      <Description>fieldset (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name fieldset_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<fieldset>
+	<legend>$content$</legend>$end$
+</fieldset>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>figure</Title>
+      <Shortcut>figure</Shortcut>
+      <Description>figure</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name figure</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>alt</ID>
+          <Default>alt</Default>
+        </Literal>
+        <Literal>
+          <ID>caption</ID>
+          <Default>caption</Default>
+        </Literal>
+        <Literal>
+          <ID>src</ID>
+          <Default>url</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<figure>
+	<img src="$src$" alt="$alt$">
+	<figcaption>$caption$</figcaption>
+</figure>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>font</Title>
+      <Shortcut>font</Shortcut>
+      <Description>font</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name font</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <Default>attribute=""</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<font $attribute$>$selected$$end$</font>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>font (with content)</Title>
+      <Shortcut>fontx</Shortcut>
+      <Description>font (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name font_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <Default>attribute=""</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<font $attribute$>$content$</font>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>footer</Title>
+      <Shortcut>footer</Shortcut>
+      <Description>footer</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name footer</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<footer>$selected$$end$</footer>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>footer (with content)</Title>
+      <Shortcut>footerx</Shortcut>
+      <Description>footer (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name footer_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<footer>$content$</footer>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>form</Title>
+      <Shortcut>form</Shortcut>
+      <Description>form</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name form</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>action</ID>
+          <Default>/</Default>
+        </Literal>
+        <Literal>
+          <ID>method</ID>
+          <Default>post</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<form action="$action$" method="$method$">$selected$$end$</form>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>form (with content)</Title>
+      <Shortcut>formx</Shortcut>
+      <Description>form (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name form_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>action</ID>
+          <Default>/</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>method</ID>
+          <Default>post</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<form action="$action$" method="$method$">$content$</form>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>frame</Title>
+      <Shortcut>frame</Shortcut>
+      <Description>frame</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name frame</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <Default>attribute=""</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<frame $attribute$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>frameset</Title>
+      <Shortcut>frameset</Shortcut>
+      <Description>frameset</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name frameset</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<frameset>$selected$$end$</frameset>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>frameset (with content)</Title>
+      <Shortcut>framesetx</Shortcut>
+      <Description>frameset (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name frameset_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<frameset>$content$</frameset>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>h1</Title>
+      <Shortcut>h</Shortcut>
+      <Description>h</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name h1</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<h1>$selected$$end$</h1>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>h1 (with content)</Title>
+      <Shortcut>hx</Shortcut>
+      <Description>h (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name h1_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<h1>$content$</h1>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>h2</Title>
+      <Shortcut>h2</Shortcut>
+      <Description>h2</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name h2</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<h2>$selected$$end$</h2>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>h2 (with content)</Title>
+      <Shortcut>h2x</Shortcut>
+      <Description>h2 (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name h2_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<h2>$content$</h2>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>h3</Title>
+      <Shortcut>h3</Shortcut>
+      <Description>h3</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name h3</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<h3>$selected$$end$</h3>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>h3 (with content)</Title>
+      <Shortcut>h3x</Shortcut>
+      <Description>h3 (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name h3_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<h3>$content$</h3>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>h4</Title>
+      <Shortcut>h4</Shortcut>
+      <Description>h4</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name h4</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<h4>$selected$$end$</h4>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>h4 (with content)</Title>
+      <Shortcut>h4x</Shortcut>
+      <Description>h4 (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name h4_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<h4>$content$</h4>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>h5</Title>
+      <Shortcut>h5</Shortcut>
+      <Description>h5</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name h5</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<h5>$selected$$end$</h5>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>h5 (with content)</Title>
+      <Shortcut>h5x</Shortcut>
+      <Description>h5 (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name h5_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<h5>$content$</h5>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>h6</Title>
+      <Shortcut>h6</Shortcut>
+      <Description>h6</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name h6</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<h6>$selected$$end$</h6>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>h6 (with content)</Title>
+      <Shortcut>h6x</Shortcut>
+      <Description>h6 (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name h6_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<h6>$content$</h6>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>head</Title>
+      <Shortcut>head</Shortcut>
+      <Description>head</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name head</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<head>$selected$$end$</head>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>head (with content)</Title>
+      <Shortcut>headx</Shortcut>
+      <Description>head (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name head_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<head>$content$</head>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>header</Title>
+      <Shortcut>header</Shortcut>
+      <Description>header</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name header</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<header>$selected$$end$</header>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>header (with content)</Title>
+      <Shortcut>headerx</Shortcut>
+      <Description>header (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name header_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<header>$content$</header>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>hr</Title>
+      <Shortcut>hr</Shortcut>
+      <Description>hr</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name hr</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<hr />$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>html</Title>
+      <Shortcut>html</Shortcut>
+      <Description>html</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name html</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>title</ID>
+          <ToolTip>Title</ToolTip>
+          <Default>title</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>$title$</title>
+	</head>
+	<body>$end$
+	</body>
+</html>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>i</Title>
+      <Shortcut>i</Shortcut>
+      <Description>i</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name i</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<i>$selected$$end$</i>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>i (with content)</Title>
+      <Shortcut>ix</Shortcut>
+      <Description>i (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name i_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<i>$content$</i>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>iframe</Title>
+      <Shortcut>iframe</Shortcut>
+      <Description>iframe</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name iframe</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>src</ID>
+          <Default>url</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<iframe scr="$src$">$selected$$end$</iframe>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>iframe (with content)</Title>
+      <Shortcut>iframex</Shortcut>
+      <Description>iframe (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name iframe_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>src</ID>
+          <Default>url</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<iframe scr="$src$">$content$</iframe>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>img</Title>
+      <Shortcut>img</Shortcut>
+      <Description>img</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name img</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>alt</ID>
+          <Default>alt</Default>
+        </Literal>
+        <Literal>
+          <ID>src</ID>
+          <Default>url</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<img src="$src$" alt="$alt$">$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>input</Title>
+      <Shortcut>input</Shortcut>
+      <Description>input</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name input</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <Default>name</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <Default>type</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<input type="$type$" name="$name$" value="$value$">$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ins</Title>
+      <Shortcut>ins</Shortcut>
+      <Description>ins</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ins</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<ins>$selected$$end$</ins>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ins (with content)</Title>
+      <Shortcut>insx</Shortcut>
+      <Description>ins (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ins_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<ins>$content$</ins>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>kbd</Title>
+      <Shortcut>kbd</Shortcut>
+      <Description>kbd</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name kbd</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<kbd>$selected$$end$</kbd>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>kbd (with content)</Title>
+      <Shortcut>kbdx</Shortcut>
+      <Description>kbd (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name kbd_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<kbd>$content$</kbd>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>keygen</Title>
+      <Shortcut>keygen</Shortcut>
+      <Description>keygen</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name keygen</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <Default>attribute=""</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<keygen $attribute$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>label</Title>
+      <Shortcut>label</Shortcut>
+      <Description>label</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name label</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>for</ID>
+          <Default>for</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<label for="$for$">$selected$$end$</label>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>label (with content)</Title>
+      <Shortcut>labelx</Shortcut>
+      <Description>label (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name label_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>for</ID>
+          <Default>for</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<label for="$for$">$content$</label>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>legend</Title>
+      <Shortcut>legend</Shortcut>
+      <Description>legend</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name legend</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<legend>$selected$$end$</legend>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>legend (with content)</Title>
+      <Shortcut>legendx</Shortcut>
+      <Description>legend (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name legend_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<legend>$content$</legend>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>li</Title>
+      <Shortcut>li</Shortcut>
+      <Description>li</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name li</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<li>$selected$$end$</li>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>li (with content)</Title>
+      <Shortcut>lix</Shortcut>
+      <Description>li (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name li_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<li>$content$</li>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>link</Title>
+      <Shortcut>link</Shortcut>
+      <Description>link</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name link</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>href</ID>
+          <Default>css</Default>
+        </Literal>
+        <Literal>
+          <ID>rel</ID>
+          <Default>stylesheet</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <Default>text/css</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<link rel="$rel$" type="$type$" href="$href$">$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>main</Title>
+      <Shortcut>main</Shortcut>
+      <Description>main</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name main</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<main>$selected$$end$</main>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>main (with content)</Title>
+      <Shortcut>mainx</Shortcut>
+      <Description>main (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name main_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<main>$content$</main>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>map</Title>
+      <Shortcut>map</Shortcut>
+      <Description>map</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name map</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<map name="$name$">
+<area>
+</map>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>mark</Title>
+      <Shortcut>mark</Shortcut>
+      <Description>mark</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name mark</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<mark>$selected$$end$</mark>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>mark (with content)</Title>
+      <Shortcut>markx</Shortcut>
+      <Description>mark (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name mark_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<mark>$content$</mark>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>menu</Title>
+      <Shortcut>menu</Shortcut>
+      <Description>menu</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name menu</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<menu>$selected$$end$</menu>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>menu (with content)</Title>
+      <Shortcut>menux</Shortcut>
+      <Description>menu (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name menu_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<menu>$content$</menu>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>menuitem</Title>
+      <Shortcut>menuitem</Shortcut>
+      <Description>menuitem</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name menuitem</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>label</ID>
+          <Default>text</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<menuitem label="$label$"></menuitem>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>meta</Title>
+      <Shortcut>meta</Shortcut>
+      <Description>meta</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name meta</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <Default>attribute=""</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<meta $attribute$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>meter</Title>
+      <Shortcut>meter</Shortcut>
+      <Description>meter</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name meter</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>value</ID>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<meter value="$value$">$selected$$end$</meter>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>meter (with content)</Title>
+      <Shortcut>meterx</Shortcut>
+      <Description>meter (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name meter_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<meter value="$value$">$content$</meter>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>nav</Title>
+      <Shortcut>nav</Shortcut>
+      <Description>nav</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name nav</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<nav>$selected$$end$</nav>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>nav (with content)</Title>
+      <Shortcut>navx</Shortcut>
+      <Description>nav (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name nav_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<nav>$content$</nav>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>noframes</Title>
+      <Shortcut>noframes</Shortcut>
+      <Description>noframes</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name noframes</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<noframes>$selected$$end$</noframes>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>noframes (with content)</Title>
+      <Shortcut>noframesx</Shortcut>
+      <Description>noframes (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name noframes_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<noframes>$content$</noframes>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>noscript</Title>
+      <Shortcut>noscript</Shortcut>
+      <Description>noscript</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name noscript</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<noscript>$selected$$end$</noscript>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>noscript (with content)</Title>
+      <Shortcut>noscriptx</Shortcut>
+      <Description>noscript (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name noscript_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<noscript>$content$</noscript>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>object</Title>
+      <Shortcut>object</Shortcut>
+      <Description>object</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name object</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attributes</ID>
+          <Default>data=""</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<object $attributes$>$selected$$end$</object>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>object (with content)</Title>
+      <Shortcut>objectx</Shortcut>
+      <Description>object (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name object_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attributes</ID>
+          <Default>data=""</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<object $attributes$>$content$</object>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ol</Title>
+      <Shortcut>ol</Shortcut>
+      <Description>ol</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ol</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<ol>
+	<li>$selected$$end$</li>
+</ol>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ol (with content)</Title>
+      <Shortcut>olx</Shortcut>
+      <Description>ol (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ol_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<ol>
+	<li>$content$</li>$end$
+</ol>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>optgroup</Title>
+      <Shortcut>optgroup</Shortcut>
+      <Description>optgroup</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name optgroup</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>value</ID>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<optgroup>
+	<option value="$value$">$selected$$end$</option>
+</optgroup>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>optgroup (with content)</Title>
+      <Shortcut>optgroupx</Shortcut>
+      <Description>optgroup (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name optgroup_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<optgroup>
+	<option value="$value$">$content$</option>$end$
+</optgroup>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>option</Title>
+      <Shortcut>option</Shortcut>
+      <Description>option</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name option</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>value</ID>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<option value="$value$">$selected$$end$</option>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>option (with content)</Title>
+      <Shortcut>optionx</Shortcut>
+      <Description>option (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name option_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<option value="$value$">$content$</option>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>output</Title>
+      <Shortcut>output</Shortcut>
+      <Description>output</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name output</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>for</ID>
+          <Default>for</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<output name="$name$" for="$for$"></output>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>p</Title>
+      <Shortcut>p</Shortcut>
+      <Description>p</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name p</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<p>$selected$$end$</p>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>p (with content)</Title>
+      <Shortcut>px</Shortcut>
+      <Description>p (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name p_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<p>$content$</p>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>param</Title>
+      <Shortcut>param</Shortcut>
+      <Description>param</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name param</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <Default>name</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<param name="$name$" value="$value$">$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>pre</Title>
+      <Shortcut>pre</Shortcut>
+      <Description>pre</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name pre</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<pre>$selected$$end$</pre>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>pre (with content)</Title>
+      <Shortcut>prex</Shortcut>
+      <Description>pre (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name pre_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<pre>$content$</pre>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>progress</Title>
+      <Shortcut>progress</Shortcut>
+      <Description>progress</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name progress</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>max</ID>
+          <Default>100</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<progress value="$value$" value="$max$">$selected$$end$</progress>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>progress (with content)</Title>
+      <Shortcut>progressx</Shortcut>
+      <Description>progress (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name progress_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>max</ID>
+          <Default>100</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<progress value="$value$" value="$max$">$content$</progress>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>q</Title>
+      <Shortcut>q</Shortcut>
+      <Description>q</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name q</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<q>$selected$$end$</q>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>q (with content)</Title>
+      <Shortcut>qx</Shortcut>
+      <Description>q (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name q_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<q>$content$</q>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>region</Title>
+      <Shortcut>r</Shortcut>
+      <Description>region</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name region</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Region name</ToolTip>
+          <Default>region</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<!-- #region $name$ -->$end$
+<!-- #endregion -->]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>rp</Title>
+      <Shortcut>rp</Shortcut>
+      <Description>rp</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name rp</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<rp>$selected$$end$</rp>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>rp (with content)</Title>
+      <Shortcut>rpx</Shortcut>
+      <Description>rp (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name rp_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<rp>$content$</rp>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>rt</Title>
+      <Shortcut>rt</Shortcut>
+      <Description>rt</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name rt</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<rt>$selected$$end$</rt>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>rt (with content)</Title>
+      <Shortcut>rtx</Shortcut>
+      <Description>rt (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name rt_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<rt>$content$</rt>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ruby</Title>
+      <Shortcut>ruby</Shortcut>
+      <Description>ruby</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ruby</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<ruby>$selected$$end$</ruby>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ruby (with content)</Title>
+      <Shortcut>rubyx</Shortcut>
+      <Description>ruby (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ruby_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<ruby>$content$</ruby>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>s</Title>
+      <Shortcut>s</Shortcut>
+      <Description>s</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name s</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<s>$selected$$end$</s>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>s (with content)</Title>
+      <Shortcut>sx</Shortcut>
+      <Description>s (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name s_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<s>$content$</s>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>samp</Title>
+      <Shortcut>samp</Shortcut>
+      <Description>samp</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name samp</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<samp>$selected$$end$</samp>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>samp (with content)</Title>
+      <Shortcut>sampx</Shortcut>
+      <Description>samp (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name samp_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<samp>$content$</samp>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>script</Title>
+      <Shortcut>script</Shortcut>
+      <Description>script</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name script</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<script>$selected$$end$</script>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>script (with content)</Title>
+      <Shortcut>scriptx</Shortcut>
+      <Description>script (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name script_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<script>$content$</script>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>section</Title>
+      <Shortcut>section</Shortcut>
+      <Description>section</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name section</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<section>$selected$$end$</section>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>section (with content)</Title>
+      <Shortcut>sectionx</Shortcut>
+      <Description>section (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name section_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<section>$content$</section>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>select</Title>
+      <Shortcut>select</Shortcut>
+      <Description>select</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name select</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>value</ID>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<select>
+	<option value="$value$">$selected$$end$</option>
+</select>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>select (with content)</Title>
+      <Shortcut>selectx</Shortcut>
+      <Description>select (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name select_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<select>
+	<option value="$value$">$content$</option>$end$
+</select>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>self-closing element</Title>
+      <Shortcut>es</Shortcut>
+      <Description>self-closing element</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name SelfClosingElement</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>element</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>element</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<$element$ />$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>self-closing element (with attribute)</Title>
+      <Shortcut>eas</Shortcut>
+      <Description>self-closing element (with attribute)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name SelfClosingElementWithAttribute</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>attribute</ID>
+          <ToolTip>Attribute name</ToolTip>
+          <Default>attribute</Default>
+        </Literal>
+        <Literal>
+          <ID>element</ID>
+          <ToolTip>Element name</ToolTip>
+          <Default>element</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Attribute value</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<$element$ $attribute$="$value$" />$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>small</Title>
+      <Shortcut>small</Shortcut>
+      <Description>small</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name small</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<small>$selected$$end$</small>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>small (with content)</Title>
+      <Shortcut>smallx</Shortcut>
+      <Description>small (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name small_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<small>$content$</small>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>source</Title>
+      <Shortcut>source</Shortcut>
+      <Description>source</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name source</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>src</ID>
+          <Default>url</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <Default>audio/mpeg</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<source src="$src$" type="$type$">$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>span</Title>
+      <Shortcut>span</Shortcut>
+      <Description>span</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name span</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<span>$selected$$end$</span>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>span (with content)</Title>
+      <Shortcut>spanx</Shortcut>
+      <Description>span (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name span_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<span>$content$</span>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>strike</Title>
+      <Shortcut>strike</Shortcut>
+      <Description>strike</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name strike</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<strike>$selected$$end$</strike>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>strike (with content)</Title>
+      <Shortcut>strikex</Shortcut>
+      <Description>strike (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name strike_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<strike>$content$</strike>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>strong</Title>
+      <Shortcut>strong</Shortcut>
+      <Description>strong</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name strong</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<strong>$selected$$end$</strong>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>strong (with content)</Title>
+      <Shortcut>strongx</Shortcut>
+      <Description>strong (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name strong_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<strong>$content$</strong>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>style</Title>
+      <Shortcut>style</Shortcut>
+      <Description>style</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name style</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<style>$selected$$end$</style>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>style (with content)</Title>
+      <Shortcut>stylex</Shortcut>
+      <Description>style (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name style_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<style>$content$</style>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>sub</Title>
+      <Shortcut>sub</Shortcut>
+      <Description>sub</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name sub</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<sub>$selected$$end$</sub>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>sub (with content)</Title>
+      <Shortcut>subx</Shortcut>
+      <Description>sub (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name sub_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<sub>$content$</sub>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>summary</Title>
+      <Shortcut>summary</Shortcut>
+      <Description>summary</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name summary</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<summary>$selected$$end$</summary>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>summary (with content)</Title>
+      <Shortcut>summaryx</Shortcut>
+      <Description>summary (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name summary_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<summary>$content$</summary>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>sup</Title>
+      <Shortcut>sup</Shortcut>
+      <Description>sup</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name sup</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<sup>$selected$$end$</sup>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>sup (with content)</Title>
+      <Shortcut>supx</Shortcut>
+      <Description>sup (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name sup_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<sup>$content$</sup>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>table</Title>
+      <Shortcut>table</Shortcut>
+      <Description>table</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name table</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<table>
+	<caption>$end$</caption>
+	<tr>
+		<th></th>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+</table>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>tbody</Title>
+      <Shortcut>tbody</Shortcut>
+      <Description>tbody</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name tbody</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<tbody>$selected$$end$</tbody>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>tbody (with content)</Title>
+      <Shortcut>tbodyx</Shortcut>
+      <Description>tbody (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name tbody_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<tbody>$content$</tbody>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>td</Title>
+      <Shortcut>td</Shortcut>
+      <Description>td</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name td</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<td>$selected$$end$</td>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>td (with content)</Title>
+      <Shortcut>tdx</Shortcut>
+      <Description>td (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name td_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<td>$content$</td>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>textarea</Title>
+      <Shortcut>textarea</Shortcut>
+      <Description>textarea</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name textarea</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<textarea>$selected$$end$</textarea>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>textarea (with content)</Title>
+      <Shortcut>textareax</Shortcut>
+      <Description>textarea (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name textarea_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<textarea>$content$</textarea>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>tfoot</Title>
+      <Shortcut>tfoot</Shortcut>
+      <Description>tfoot</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name tfoot</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<tfoot>$selected$$end$</tfoot>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>tfoot (with content)</Title>
+      <Shortcut>tfootx</Shortcut>
+      <Description>tfoot (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name tfoot_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<tfoot>$content$</tfoot>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>th</Title>
+      <Shortcut>th</Shortcut>
+      <Description>th</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name th</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<th>$selected$$end$</th>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>th (with content)</Title>
+      <Shortcut>thx</Shortcut>
+      <Description>th (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name th_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<th>$content$</th>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>thead</Title>
+      <Shortcut>thead</Shortcut>
+      <Description>thead</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name thead</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<thead>$selected$$end$</thead>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>thead (with content)</Title>
+      <Shortcut>theadx</Shortcut>
+      <Description>thead (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name thead_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<thead>$content$</thead>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>time</Title>
+      <Shortcut>time</Shortcut>
+      <Description>time</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name time</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>datetime</ID>
+          <ToolTip>Date and time</ToolTip>
+          <Default>datetime</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<time datetime="$datetime$">$selected$$end$</time>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>time (with content)</Title>
+      <Shortcut>timex</Shortcut>
+      <Description>time (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name time_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+        <Literal>
+          <ID>datetime</ID>
+          <ToolTip>Date and time</ToolTip>
+          <Default>datetime</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<time datetime="$datetime$">$content$</time>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>title</Title>
+      <Shortcut>title</Shortcut>
+      <Description>title</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name title</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<title>$selected$$end$</title>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>title (with content)</Title>
+      <Shortcut>titlex</Shortcut>
+      <Description>title (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name title_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<title>$content$</title>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>tr</Title>
+      <Shortcut>tr</Shortcut>
+      <Description>tr</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name tr</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<tr>$selected$$end$</tr>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>tr (with content)</Title>
+      <Shortcut>trx</Shortcut>
+      <Description>tr (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name tr_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<tr>$content$</tr>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>track</Title>
+      <Shortcut>track</Shortcut>
+      <Description>track</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name track</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>src</ID>
+          <Default>url</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<track src="$src$">$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>tt</Title>
+      <Shortcut>tt</Shortcut>
+      <Description>tt</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name tt</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<tt>$selected$$end$</tt>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>tt (with content)</Title>
+      <Shortcut>ttx</Shortcut>
+      <Description>tt (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name tt_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<tt>$content$</tt>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>u</Title>
+      <Shortcut>u</Shortcut>
+      <Description>u</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name u</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<u>$selected$$end$</u>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>u (with content)</Title>
+      <Shortcut>ux</Shortcut>
+      <Description>u (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name u_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<u>$content$</u>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ul</Title>
+      <Shortcut>ul</Shortcut>
+      <Description>ul</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ul</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<ul>
+	<li>$selected$$end$</li>
+</ul>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ul (with content)</Title>
+      <Shortcut>ulx</Shortcut>
+      <Description>ul (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ul_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<ul>
+	<li>$content$</li>$end$
+</ul>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>var</Title>
+      <Shortcut>var</Shortcut>
+      <Description>var</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name var</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<var>$selected$$end$</var>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>var (with content)</Title>
+      <Shortcut>varx</Shortcut>
+      <Description>var (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name var_with_content</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<var>$content$</var>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>video</Title>
+      <Shortcut>video</Shortcut>
+      <Description>video</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name video</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>src</ID>
+          <ToolTip>URL of the media file</ToolTip>
+          <Default>url</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Media type</ToolTip>
+          <Default>audio/mp4</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Html"><![CDATA[<video controls="controls">
+	$selected$
+	<source src="$src$" type="$type$">$end$
+</video>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>wbr</Title>
+      <Shortcut>wbr</Shortcut>
+      <Description>wbr</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name wbr</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Html"><![CDATA[<wbr>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

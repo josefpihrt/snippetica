@@ -15,7 +15,8 @@ namespace Pihrtsoft.Records
             XElement element,
             EntityDefinition baseEntity = null,
             ExtendedKeyedCollection<string, PropertyDefinition> properties = null,
-            ExtendedKeyedCollection<string, Variable> variables = null): this(element, element.AttributeValueOrThrow(AttributeNames.Name), baseEntity, properties, variables)
+            ExtendedKeyedCollection<string, Variable> variables = null)
+            : this(element, element.AttributeValueOrThrow(AttributeNames.Name), baseEntity, properties, variables)
         {
         }
 
@@ -65,7 +66,7 @@ namespace Pihrtsoft.Records
             element: null,
             name: GlobalName,
             baseEntity: null,
-            properties: new ExtendedKeyedCollection<string, PropertyDefinition>(new PropertyDefinition[] { PropertyDefinition.IdProperty }),
+            properties: new ExtendedKeyedCollection<string, PropertyDefinition>(new PropertyDefinition[] { PropertyDefinition.Id }),
             variables: null);
 
         public string Name { get; }

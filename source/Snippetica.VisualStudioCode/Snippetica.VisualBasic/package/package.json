@@ -1,0 +1,38 @@
+{
+  "name": "snippetica-vb",
+  "publisher": "josefpihrt",
+  "displayName": "Snippetica for VB",
+  "description": "A collection of snippets for VB.",
+  "icon": "images/icon.png",
+  "version": "0.6.0",
+  "author": "Josef Pihrt",
+  "license": "SEE LICENSE IN LICENSE.TXT",
+  "homepage": "http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudioCode/Snippetica.VisualBasic/README.md",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/josefpihrt/snippetica.git"
+  },
+  "bugs": {
+    "url": "http://github.com/josefpihrt/snippetica/issues"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "Snippet",
+    "Snippets",
+    "VisualBasic",
+    "VB"
+  ],
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "vb",
+        "path": "./snippets/vb.json"
+      }
+    ]
+  }
+}

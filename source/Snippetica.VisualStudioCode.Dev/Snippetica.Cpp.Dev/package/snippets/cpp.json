@@ -1,0 +1,22 @@
+﻿{
+  "Class with Inline Constructor/Destructor": {
+    "prefix": "ci",
+    "body": [
+      "class ${1:ClassName}",
+      "{",
+      "public:",
+      "\t${1}()",
+      "\t{",
+      "\t}",
+      "",
+      "\t~${1}()",
+      "\t{",
+      "\t}",
+      "",
+      "private:",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};"
+    ],
+    "description": "Class declaration with inline constructor/destructor"
+  }
+}

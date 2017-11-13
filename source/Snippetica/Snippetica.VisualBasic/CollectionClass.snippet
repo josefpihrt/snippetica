@@ -9,7 +9,8 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-ShortcutSuffix CollectionOfT</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -39,15 +40,15 @@
       </Literal>
     </Declarations>
     <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Inherits Collection(Of $type$)
+	Inherits Collection(Of $type$)
 
-    Public Sub New()
-    End Sub
+	Public Sub New()
+	End Sub
 
-    Public Sub New(list As IList(Of $type$))
-        MyBase.New(list)
-    End Sub
-    $end$
+	Public Sub New(list As IList(Of $type$))
+		MyBase.New(list)
+	End Sub
+	$end$
 
 End Class]]></Code>
   </Snippet>

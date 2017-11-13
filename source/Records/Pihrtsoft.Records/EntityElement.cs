@@ -116,16 +116,64 @@ namespace Pihrtsoft.Records
                         {
                             properties = properties ?? new ExtendedKeyedCollection<string, PropertyDefinition>();
 
-                            string propertyName = element.AttributeValueOrThrow(AttributeNames.Name);
+                            string name = null;
+                            bool isCollection = false;
+                            bool isRequired = false;
+                            string defaultValue = null;
+                            string description = null;
 
-                            if (properties.Contains(propertyName))
-                                Throw(ErrorMessages.ItemAlreadyDefined(ElementNames.Property, propertyName), element);
+                            foreach (XAttribute attribute in element.Attributes())
+                            {
+                                switch (attribute.LocalName())
+                                {
+                                    case AttributeNames.Name:
+                                        {
+                                            name = attribute.Value;
+                                            break;
+                                        }
+                                    case AttributeNames.IsCollection:
+                                        {
+                                            isCollection = bool.Parse(attribute.Value);
+                                            break;
+                                        }
+                                    case AttributeNames.IsRequired:
+                                        {
+                                            isRequired = bool.Parse(attribute.Value);
+                                            break;
+                                        }
+                                    case AttributeNames.DefaultValue:
+                                        {
+                                            defaultValue = attribute.Value;
+                                            break;
+                                        }
+                                    case AttributeNames.Description:
+                                        {
+                                            description = attribute.Value;
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            Throw(ErrorMessages.UnknownAttribute(attribute), element);
+                                            break;
+                                        }
+                                }
+                            }
+
+                            if (properties.Contains(name))
+                                Throw(ErrorMessages.ItemAlreadyDefined(ElementNames.Property, name), element);
+
+                            if (isCollection
+                                && defaultValue != null)
+                            {
+                                Throw(ErrorMessages.CollectionPropertyCannotDefineDefaultValue(), element);
+                            }
 
                             var property = new PropertyDefinition(
-                                propertyName,
-                                element.AttributeValueOrDefault(AttributeNames.DefaultValue),
-                                element.AttributeValueAsBooleanOrDefault(AttributeNames.IsCollection),
-                                element.AttributeValueAsBooleanOrDefault(AttributeNames.IsRequired),
+                                name,
+                                isCollection,
+                                isRequired,
+                                defaultValue,
+                                description,
                                 element);
 
                             properties.Add(property);
@@ -142,42 +190,40 @@ namespace Pihrtsoft.Records
 
         private Collection<Record> ReadBaseRecords()
         {
-            if (_baseRecordsElement != null)
-            {
-                var reader = new BaseRecordReader(_baseRecordsElement, Entity, Settings);
+            if (_baseRecordsElement == null)
+                return null;
 
-                IEnumerable<Record> records = reader.ReadRecords();
+            var reader = new BaseRecordReader(_baseRecordsElement, Entity, Settings);
 
-                if (records != null)
-                    return new ExtendedKeyedCollection<string, Record>(records.ToArray(), DefaultComparer.StringComparer);
-            }
+            IEnumerable<Record> records = reader.ReadRecords();
 
-            return null;
+            if (records == null)
+                return null;
+
+            return new ExtendedKeyedCollection<string, Record>(records.ToArray(), DefaultComparer.StringComparer);
         }
 
         public Collection<Record> Records()
         {
-            if (_recordsElement != null)
-            {
-                var reader = new RecordReader(_recordsElement, Entity, Settings, ReadBaseRecords());
+            if (_recordsElement == null)
+                return null;
 
-                return reader.ReadRecords();
-            }
+            var reader = new RecordReader(_recordsElement, Entity, Settings, ReadBaseRecords());
 
-            return null;
+            return reader.ReadRecords();
         }
 
         public IEnumerable<EntityElement> EntityElements()
         {
-            if (_entitiesElement != null)
-            {
-                foreach (XElement element in _entitiesElement.Elements())
-                {
-                    if (element.Kind() != ElementKind.Entity)
-                        ThrowOnUnknownElement(element);
+            if (_entitiesElement == null)
+                yield break;
 
-                    yield return new EntityElement(element, Settings, Entity);
-                }
+            foreach (XElement element in _entitiesElement.Elements())
+            {
+                if (element.Kind() != ElementKind.Entity)
+                    ThrowOnUnknownElement(element);
+
+                yield return new EntityElement(element, Settings, Entity);
             }
         }
 

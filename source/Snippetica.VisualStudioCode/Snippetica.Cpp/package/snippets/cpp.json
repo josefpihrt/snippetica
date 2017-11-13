@@ -1,0 +1,255 @@
+﻿{
+  "#if": {
+    "prefix": "ppif",
+    "body": [
+      "#if ${1:0}",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "#endif"
+    ],
+    "description": "#if directive"
+  },
+  "#ifdef": {
+    "prefix": "ppifd",
+    "body": [
+      "#ifdef ${1:DEBUG}",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "#endif"
+    ],
+    "description": "#ifdef directive"
+  },
+  "#ifndef": {
+    "prefix": "ppifnd",
+    "body": [
+      "#ifndef ${1:1}",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "#endif"
+    ],
+    "description": "#ifndef directive"
+  },
+  "#pragma region": {
+    "prefix": "ppr",
+    "body": [
+      "#pragma region ${1:RegionName}",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "#pragma endregion"
+    ],
+    "description": "#pragma region directive"
+  },
+  "class": {
+    "prefix": "c",
+    "body": [
+      "class ${1:ClassName}",
+      "{",
+      "public:",
+      "\t${1}();",
+      "\t~${1}();",
+      "",
+      "private:",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};",
+      "",
+      "${1}::${1}()",
+      "{",
+      "}",
+      "",
+      "${1}::~${1}()",
+      "{",
+      "}"
+    ],
+    "description": "class declaration"
+  },
+  "constructor": {
+    "prefix": "cr",
+    "body": [
+      "${1:TypeName}()",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "constructor declaration"
+  },
+  "destructor": {
+    "prefix": "dr",
+    "body": [
+      "~${1:TypeName}()",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "destructor declaration"
+  },
+  "do-while": {
+    "prefix": "dw",
+    "body": [
+      "do",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "} while (${1:true});"
+    ],
+    "description": "do-while statement"
+  },
+  "else": {
+    "prefix": "e",
+    "body": [
+      "else",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "else statement"
+  },
+  "else-if": {
+    "prefix": "eif",
+    "body": [
+      "else if (${1:true})",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "else-if"
+  },
+  "enum": {
+    "prefix": "em",
+    "body": [
+      "enum ${1:EnumName}",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};"
+    ],
+    "description": "enum declaration"
+  },
+  "enum class": {
+    "prefix": "emc",
+    "body": [
+      "enum class ${1:EnumClassName}",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};"
+    ],
+    "description": "enum class declaration"
+  },
+  "for": {
+    "prefix": "fr",
+    "body": [
+      "for (${1:size_t} ${2:i} = 0; ${2} < ${3:length}; ${2}++)",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "for statement"
+  },
+  "for (range-based)": {
+    "prefix": "frrb",
+    "body": [
+      "for (auto& ${1:i} : ${2:x})",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "range-based for statement"
+  },
+  "for (reversed)": {
+    "prefix": "frr",
+    "body": [
+      "for (int ${1:i} = ${2:length} - 1; ${1} >= 0; ${1}--)",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "for statement (reversed)"
+  },
+  "for each": {
+    "prefix": "fe",
+    "body": [
+      "for each (${1:object} ${2:var} in ${3:items})",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "for each statement"
+  },
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if (${1:true})",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "if statement"
+  },
+  "interface": {
+    "prefix": "ie",
+    "body": [
+      "__interface ${1:InterfaceName}",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};"
+    ],
+    "description": "interface declaration"
+  },
+  "namespace": {
+    "prefix": "ns",
+    "body": [
+      "namespace ${1:NamespaceName}",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "namespace declaration"
+  },
+  "struct": {
+    "prefix": "st",
+    "body": [
+      "struct ${1:StructName}",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};"
+    ],
+    "description": "struct declaration"
+  },
+  "switch": {
+    "prefix": "sh",
+    "body": [
+      "switch (${1:SwitchOn})",
+      "{",
+      "\t${2:default:",
+      "    break;}${0}",
+      "}"
+    ],
+    "description": "switch statement"
+  },
+  "try-catch": {
+    "prefix": "tc",
+    "body": [
+      "try",
+      "{",
+      "\t${0}",
+      "}",
+      "catch (const std::exception&)",
+      "{",
+      "}"
+    ],
+    "description": "try-catch statement"
+  },
+  "union": {
+    "prefix": "un",
+    "body": [
+      "union ${1:UnionName}",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};"
+    ],
+    "description": "union"
+  },
+  "while": {
+    "prefix": "we",
+    "body": [
+      "while (${1:true})",
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "while statement"
+  }
+}

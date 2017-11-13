@@ -1,0 +1,27 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Enumerable.OrderByDescending</Title>
+    <Shortcut>q_obd</Shortcut>
+    <Description>Enumerable.OrderByDescending method</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System.Linq</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>keySelector</ID>
+        <ToolTip>Key selector</ToolTip>
+        <Default>f</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[.OrderByDescending(f => $keySelector$)$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

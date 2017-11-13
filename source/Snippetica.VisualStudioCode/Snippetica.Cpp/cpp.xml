@@ -1,0 +1,704 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>class</Title>
+      <Shortcut>c</Shortcut>
+      <Description>class declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Class</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Class name</ToolTip>
+          <Default>ClassName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[class $name$
+{
+public:
+	$name$();
+	~$name$();
+
+private:
+	$selected$$end$
+};
+
+$name$::$name$()
+{
+}
+
+$name$::~$name$()
+{
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>constructor</Title>
+      <Shortcut>cr</Shortcut>
+      <Description>constructor declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Constructor</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>typeName</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>TypeName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[$typeName$()
+{
+	$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>destructor</Title>
+      <Shortcut>dr</Shortcut>
+      <Description>destructor declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Destructor</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>typeName</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>TypeName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[~$typeName$()
+{
+	$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>do-while</Title>
+      <Shortcut>dw</Shortcut>
+      <Description>do-while statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name DoWhile</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[do
+{
+	$selected$$end$
+} while ($expression$);]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>else</Title>
+      <Shortcut>e</Shortcut>
+      <Description>else statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Else</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[else
+{
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>else-if</Title>
+      <Shortcut>eif</Shortcut>
+      <Description>else-if</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ElseIf</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[else if ($expression$)
+{
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>enum</Title>
+      <Shortcut>em</Shortcut>
+      <Description>enum declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Enum</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Enum name</ToolTip>
+          <Default>EnumName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[enum $name$
+{
+	$selected$$end$
+};]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>enum class</Title>
+      <Shortcut>emc</Shortcut>
+      <Description>enum class declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name EnumClass</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Enum class name</ToolTip>
+          <Default>EnumClassName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[enum class $name$
+{
+	$selected$$end$
+};]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>for</Title>
+      <Shortcut>fr</Shortcut>
+      <Description>for statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name For</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>index</ID>
+          <ToolTip>Index</ToolTip>
+          <Default>i</Default>
+        </Literal>
+        <Literal>
+          <ID>max</ID>
+          <ToolTip>Max length</ToolTip>
+          <Default>length</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Control variable type</ToolTip>
+          <Default>size_t</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[for ($type$ $index$ = 0; $index$ < $max$; $index$++)
+{
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>for each</Title>
+      <Shortcut>fe</Shortcut>
+      <Description>for each statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ForEach</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_collectionIdentifier</ID>
+          <ToolTip>Name of collection or array</ToolTip>
+          <Default>items</Default>
+        </Literal>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>Element identifier</ToolTip>
+          <Default>var</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Element type</ToolTip>
+          <Default>object</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[for each ($type$ $identifier$ in $_collectionIdentifier$)
+{
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>for (range-based)</Title>
+      <Shortcut>frrb</Shortcut>
+      <Description>range-based for statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ForRangeBased</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>range</ID>
+          <ToolTip>Range</ToolTip>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>variable</ID>
+          <ToolTip>Variable</ToolTip>
+          <Default>i</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[for (auto& $variable$ : $range$)
+{
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>for (reversed)</Title>
+      <Shortcut>frr</Shortcut>
+      <Description>for statement (reversed)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ForReversed</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>index</ID>
+          <ToolTip>Index</ToolTip>
+          <Default>i</Default>
+        </Literal>
+        <Literal>
+          <ID>max</ID>
+          <ToolTip>Max length</ToolTip>
+          <Default>length</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[for (int $index$ = $max$ - 1; $index$ >= 0; $index$--)
+{
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if</Title>
+      <Shortcut>if</Shortcut>
+      <Description>if statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name If</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[if ($expression$)
+{
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>interface</Title>
+      <Shortcut>ie</Shortcut>
+      <Description>interface declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Interface</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Interface name</ToolTip>
+          <Default>InterfaceName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[__interface $name$
+{
+	$selected$$end$
+};]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>namespace</Title>
+      <Shortcut>ns</Shortcut>
+      <Description>namespace declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Namespace</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Namespace name</ToolTip>
+          <Default>NamespaceName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[namespace $name$
+{
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>#if</Title>
+      <Shortcut>ppif</Shortcut>
+      <Description>#if directive</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PreprocessorDirectiveIf</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[#if $expression$
+	$selected$$end$
+#endif]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>#ifdef</Title>
+      <Shortcut>ppifd</Shortcut>
+      <Description>#ifdef directive</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PreprocessorDirectiveIfdef</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>DEBUG</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[#ifdef $expression$
+	$selected$$end$
+#endif]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>#ifndef</Title>
+      <Shortcut>ppifnd</Shortcut>
+      <Description>#ifndef directive</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PreprocessorDirectiveIfndef</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>1</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[#ifndef $expression$
+	$selected$$end$
+#endif]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>#pragma region</Title>
+      <Shortcut>ppr</Shortcut>
+      <Description>#pragma region directive</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PreprocessorDirectiveRegion</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Region name</ToolTip>
+          <Default>RegionName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[#pragma region $name$
+	$selected$$end$
+#pragma endregion]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>struct</Title>
+      <Shortcut>st</Shortcut>
+      <Description>struct declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Struct</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Struct name</ToolTip>
+          <Default>StructName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[struct $name$
+{
+	$selected$$end$
+};]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>switch</Title>
+      <Shortcut>sh</Shortcut>
+      <Description>switch statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Switch</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>cases</ID>
+          <Default>default:
+    break;</Default>
+        </Literal>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to switch on</ToolTip>
+          <Default>SwitchOn</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[switch ($expression$)
+{
+	$cases$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>try-catch</Title>
+      <Shortcut>tc</Shortcut>
+      <Description>try-catch statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Try</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[try
+{
+	$end$
+}
+catch (const std::exception&)
+{
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>union</Title>
+      <Shortcut>un</Shortcut>
+      <Description>union</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Union</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Union name</ToolTip>
+          <Default>UnionName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[union $name$
+{
+	$selected$$end$
+};]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>while</Title>
+      <Shortcut>we</Shortcut>
+      <Description>while statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name While</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[while ($expression$)
+{
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

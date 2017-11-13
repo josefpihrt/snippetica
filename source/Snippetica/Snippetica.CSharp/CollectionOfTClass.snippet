@@ -9,7 +9,8 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-ShortcutSuffix CollectionOfT</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -40,16 +41,16 @@
     </Declarations>
     <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : Collection<$type$>
 {
-    public $name$()
-    {
-    }
+	public $name$()
+	{
+	}
 
-    public $name$(IList<$type$> list)
-        : base(list)
-    {
-    }
+	public $name$(IList<$type$> list)
+		: base(list)
+	{
+	}
 
-    $end$
+	$end$
 }]]></Code>
   </Snippet>
 </CodeSnippet>

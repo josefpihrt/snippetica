@@ -9,7 +9,7 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -31,30 +31,30 @@
       </Literal>
     </Declarations>
     <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Implements IDisposable
+	Implements IDisposable
 
-    Private _disposed As Boolean
+	Private _disposed As Boolean
 
-    Public Sub Dispose() Implements IDisposable.Dispose
+	Public Sub Dispose() Implements IDisposable.Dispose
 
-        Dispose(True)
-        GC.SuppressFinalize(Me)
+		Dispose(True)
+		GC.SuppressFinalize(Me)
 
-    End Sub
+	End Sub
 
-    Protected Overridable Sub Dispose(disposing As Boolean)
+	Protected Overridable Sub Dispose(disposing As Boolean)
 
-        If Not _disposed Then
+		If Not _disposed Then
 
-            If disposing Then
-                Throw New NotImplementedException()
-            End If
+			If disposing Then
+				Throw New NotImplementedException()
+			End If
 
-            _disposed = True
+			_disposed = True
 
-        End If
+		End If
 
-    End Sub
+	End Sub
 
 End Class$end$]]></Code>
   </Snippet>

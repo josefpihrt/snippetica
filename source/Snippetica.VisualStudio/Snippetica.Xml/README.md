@@ -1,25 +1,30 @@
-﻿## Snippetica.Xml
+## Snippetica.Xml
+
+### Snippet Browser
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs&language=xml).
 
 ### Quick Reference
 
-Character\(s\) | Description | Comment
------------- | ----------- | -------
-a|\(element\) with attribute|\-
-e|element|\-
-s|self\-closing \(element\)|\-
-x|\(element\) with content|\-
 
-* [full list of snippets](http://pihrt.net/Snippetica/Snippets?Language=Xml)
+#### 
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+a|\(element\) with attribute|suffix
+e|element|\-
+s|self\-closing \(element\)|suffix
+x|\(element\) with content|suffix
 
 ### List of Selected Snippets
 
-Title | Shortcut
------ | --------
-[CDATA section](CDataSection.snippet)|cdata
-[comment](Comment.snippet)|c
-[element \(with attribute, with content\)](ElementWithAttributeWithContent.snippet)|eax
-[element \(with attribute\)](ElementWithAttribute.snippet)|ea
-[element \(with content\)](ElementWithContent.snippet)|ex
-[element](Element.snippet)|e
-[self\-closing element \(with attribute\)](SelfClosingElementWithAttribute.snippet)|eas
-[self\-closing element](SelfClosingElement.snippet)|es
+Shortcut | Title
+-------- | -----
+c|[comment](Comment.snippet)
+cdata|[CDATA section](CDataSection.snippet)
+cdatax|[CDATA section \(with content\)](CDataSectionWithContent.snippet)
+e|[element](Element.snippet)
+ea|[element \(with attribute\)](ElementWithAttribute.snippet)
+eas|[self\-closing element \(with attribute\)](SelfClosingElementWithAttribute.snippet)
+eax|[element \(with attribute, with content\)](ElementWithAttributeWithContent.snippet)
+es|[self\-closing element](SelfClosingElement.snippet)
+ex|[element \(with content\)](ElementWithContent.snippet)

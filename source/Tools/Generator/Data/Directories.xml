@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Document Version="0.0.1">
+  <Entities>
+    <Entity Name="Directory">
+      <Declarations>
+        <Property Name="Path" IsRequired="true" />
+        <Property Name="Language" IsRequired="true" />
+      </Declarations>
+      <Records>
+        <PrefixMany Path="..\..\..\..\Snippetica\Snippetica">
+          <Set Language="CSharp">
+            <New Path=".CSharp" />
+          </Set>
+          <Set Language="VisualBasic">
+            <New Path=".VisualBasic" />
+          </Set>
+          <Set Language="Cpp">
+            <New Path=".Cpp" />
+          </Set>
+          <Set Language="Html">
+            <New Path=".Html" Tags="GenerateXmlSnippets" />
+          </Set>
+          <Set Language="Xaml">
+            <New Path=".Xaml">
+              <Add Tags="GenerateXmlSnippets" />
+              <Add Tags="ExcludeFromVisualStudioCode" />
+            </New>
+          </Set>
+          <Set Language="Xml">
+            <New Path=".Xml" Tags="GenerateXmlSnippets" />
+            <New Path=".Xml.CodeSnippet">
+              <Add Tags="ExcludeFromVisualStudioCode" />
+              <Add Tags="NoQuickReference" />
+            </New>
+          </Set>
+          <Add Tags="ExcludeFromVisualStudio">
+            <Set Language="Markdown">
+              <New Path=".Markdown" Tags="GenerateXmlSnippets" />
+            </Set>
+            <Set Language="Json">
+              <New Path=".Json" />
+            </Set>
+          </Add>
+        </PrefixMany>
+      </Records>
+    </Entity>
+  </Entities>
+</Document>

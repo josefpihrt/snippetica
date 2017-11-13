@@ -9,7 +9,7 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -32,26 +32,26 @@
     </Declarations>
     <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IDisposable
 {
-    private bool _disposed;
+	private bool _disposed;
 
-    public void Dispose()
-    {
-        Dispose(true);
-        GC.SuppressFinalize(this);
-    }
+	public void Dispose()
+	{
+		Dispose(true);
+		GC.SuppressFinalize(this);
+	}
 
-    protected virtual void Dispose(bool disposing)
-    {
-        if (!_disposed)
-        {
-            if (disposing)
-            {
-                throw new NotImplementedException();
-            }
+	protected virtual void Dispose(bool disposing)
+	{
+		if (!_disposed)
+		{
+			if (disposing)
+			{
+				throw new NotImplementedException();
+			}
 
-            _disposed = true;
-        }
-    }
+			_disposed = true;
+		}
+	}
 }$end$]]></Code>
   </Snippet>
 </CodeSnippet>

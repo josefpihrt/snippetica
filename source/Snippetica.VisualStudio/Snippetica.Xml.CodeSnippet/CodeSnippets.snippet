@@ -9,15 +9,14 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
-      <Keyword>Meta-Tag TitleStartsWithShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-TitleStartsWithShortcut</Keyword>
     </Keywords>
   </Header>
   <Snippet>
     <Declarations>
       <Literal Editable="false">
-        <ID>CDataEnd</ID>
-        <ToolTip>End of CDATA section</ToolTip>
+        <ID>__cdataEnd</ID>
         <Default>]]&gt;</Default>
       </Literal>
       <Literal>
@@ -52,22 +51,20 @@
       </Literal>
     </Declarations>
     <Code Language="Xml"><![CDATA[<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>$title$</Title>
-      <Shortcut>$shortcut$</Shortcut>
-      <Description>$description$</Description>
-      <Author></Author>
-      <SnippetTypes>
-        <SnippetType>$type$</SnippetType>
-      </SnippetTypes>
-    </Header>
-    <Snippet>
-      <Code Language="$language$">
-        <![CDATA[$code$$CDataEnd$
-      </Code>
-    </Snippet>
-  </CodeSnippet>
+	<CodeSnippet Format="1.1.0">
+		<Header>
+			<Title>$title$</Title>
+			<Shortcut>$shortcut$</Shortcut>
+			<Description>$description$</Description>
+			<Author></Author>
+			<SnippetTypes>
+				<SnippetType>$type$</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="$language$"><![CDATA[$code$$__cdataEnd$</Code>
+		</Snippet>
+	</CodeSnippet>
 </CodeSnippets>$end$]]></Code>
   </Snippet>
 </CodeSnippet>

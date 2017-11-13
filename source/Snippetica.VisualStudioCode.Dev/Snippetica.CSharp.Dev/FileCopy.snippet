@@ -1,0 +1,32 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>File.Copy</Title>
+    <Shortcut>iof_c</Shortcut>
+    <Description>File.Copy method.</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System.IO</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>destinationFileName</ID>
+        <ToolTip>Destination file name</ToolTip>
+        <Default>destinationFileName</Default>
+      </Literal>
+      <Literal>
+        <ID>sourceFileName</ID>
+        <ToolTip>Source file name</ToolTip>
+        <Default>sourceFileName</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[File.Copy($sourceFileName$, $destinationFileName$)$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

@@ -9,7 +9,7 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-Tag NonUniqueShortcut</Keyword>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -39,32 +39,32 @@
       </Literal>
     </Declarations>
     <Code Language="VB"><![CDATA[$modifier$ Class $name$
-    Inherits EqualityComparer(Of $type$)
+	Inherits EqualityComparer(Of $type$)
 
-    Public Overrides Function Equals(x As $type$, y As $type$) As Boolean
+	Public Overrides Function Equals(x As $type$, y As $type$) As Boolean
 
-        If Object.ReferenceEquals(x, y) Then
-            Return True
-        End If
+		If Object.ReferenceEquals(x, y) Then
+			Return True
+		End If
 
-        If x Is Nothing OrElse y Is Nothing Then
-            Return False
-        End If
+		If x Is Nothing OrElse y Is Nothing Then
+			Return False
+		End If
 
-        $end$
-        Throw New NotImplementedException()
+		$end$
+		Throw New NotImplementedException()
 
-    End Function
+	End Function
 
-    Public Overrides Function GetHashCode(obj As $type$) As Integer
+	Public Overrides Function GetHashCode(obj As $type$) As Integer
 
-        If obj Is Nothing Then
-            Return 0
-        End If
+		If obj Is Nothing Then
+			Return 0
+		End If
 
-        Throw New NotImplementedException()
+		Throw New NotImplementedException()
 
-    End Function
+	End Function
 
 End Class]]></Code>
   </Snippet>

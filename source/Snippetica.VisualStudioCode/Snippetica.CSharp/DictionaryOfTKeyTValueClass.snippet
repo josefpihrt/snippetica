@@ -1,0 +1,79 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Dictionary&lt;TKey, TValue&gt; class</Title>
+    <Shortcut>c_DictionaryOfTKeyTValue</Shortcut>
+    <Description>class derived from Dictionary&lt;TKey, TValue&gt;</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-ExcludeFromReadme</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System.Collections.Generic</Namespace>
+      </Import>
+      <Import>
+        <Namespace>System.Runtime.Serialization</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>_keyType</ID>
+        <ToolTip>Key type</ToolTip>
+        <Default>object</Default>
+      </Literal>
+      <Literal>
+        <ID>_valueType</ID>
+        <ToolTip>Value type</ToolTip>
+        <Default>object</Default>
+      </Literal>
+      <Literal>
+        <ID>modifier</ID>
+        <ToolTip>Modifier(s)</ToolTip>
+        <Default>public</Default>
+      </Literal>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Dictionary type name</ToolTip>
+        <Default>Dictionary</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : Dictionary<$_keyType$, $_valueType$>
+{
+	public $name$() : base()
+	{
+	}
+
+	public $name$(int capacity) : base(capacity)
+	{
+	}
+
+	public $name$(IEqualityComparer<$_keyType$> comparer) : base(comparer)
+	{
+	}
+
+	public $name$(IDictionary<$_keyType$, $_valueType$> dictionary) : base(dictionary)
+	{
+	}
+
+	public $name$(int capacity, IEqualityComparer<$_keyType$> comparer) : base(capacity, comparer)
+	{
+	}
+
+	public $name$(SerializationInfo info, StreamingContext context) : base(info, context)
+	{
+	}
+
+	public $name$(IDictionary<$_keyType$, $_valueType$> dictionary, IEqualityComparer<$_keyType$> comparer) : base(dictionary, comparer)
+	{
+	}
+
+	$end$
+}]]></Code>
+  </Snippet>
+</CodeSnippet>
