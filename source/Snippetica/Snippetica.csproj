@@ -485,10 +485,10 @@
     <None Include="Snippetica.Json\Pair.snippet" />
     <None Include="Snippetica.Json\ZeroValue.snippet" />
     <None Include="Snippetica.Markdown\Bold.snippet" />
+    <None Include="Snippetica.Markdown\CodeBlockWithContent.snippet" />
     <None Include="Snippetica.Markdown\Dev\BoldItalic.snippet" />
     <None Include="Snippetica.Markdown\CodeInline.snippet" />
     <None Include="Snippetica.Markdown\CodeBlock.snippet" />
-    <None Include="Snippetica.Markdown\CodeBlockWithLanguage.snippet" />
     <None Include="Snippetica.Markdown\Dev\TableWithoutHeader.snippet" />
     <None Include="Snippetica.Markdown\Header1.snippet" />
     <None Include="Snippetica.Markdown\Header2.snippet" />

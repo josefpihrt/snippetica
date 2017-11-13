@@ -9,7 +9,7 @@ a|link
 b|bold
 c|comment
 cb|code block
-cbl|code block with language
+cbx|code block \(with content\)
 cdata|CDATA section
 cdatax|CDATA section \(with content\)
 ci|code \(inline\)
