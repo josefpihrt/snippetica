@@ -6,9 +6,9 @@ using System.Diagnostics;
 namespace Pihrtsoft.Records.Operations
 {
     [DebuggerDisplay("{Kind} {PropertyName,nq} = {Value,nq}")]
-    internal struct MultiPrefixOperation : IPropertyOperation
+    internal struct PostfixManyOperation : IPropertyOperation
     {
-        public MultiPrefixOperation(PropertyDefinition propertyDefinition, string value, int depth)
+        public PostfixManyOperation(PropertyDefinition propertyDefinition, string value, int depth)
         {
             PropertyDefinition = propertyDefinition;
             Value = value;
@@ -23,7 +23,7 @@ namespace Pihrtsoft.Records.Operations
 
         public OperationKind Kind
         {
-            get { return OperationKind.MultiPrefix; }
+            get { return OperationKind.PostfixMany; }
         }
 
         public string PropertyName

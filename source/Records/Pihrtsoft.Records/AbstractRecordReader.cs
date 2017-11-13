@@ -258,12 +258,12 @@ namespace Pihrtsoft.Records
             {
                 switch (pair.Key)
                 {
-                    case OperationKind.MultiPostfix:
+                    case OperationKind.PostfixMany:
                         {
                             new PostfixOperation(propertyDefinition, pair.Value, Depth).Execute(record);
                             break;
                         }
-                    case OperationKind.MultiPrefix:
+                    case OperationKind.PrefixMany:
                         {
                             new PrefixOperation(propertyDefinition, pair.Value, Depth).Execute(record);
                             break;
@@ -368,7 +368,7 @@ namespace Pihrtsoft.Records
                             ThrowInvalidOperation(ErrorMessages.CommandCannotBeUsedAsChildCommandOfNewCommand(element));
 
                         foreach (XAttribute attribute in element.Attributes())
-                            yield return new MultiPostfixOperation(GetProperty(attribute), GetValue(attribute), Depth);
+                            yield return new PostfixManyOperation(GetProperty(attribute), GetValue(attribute), Depth);
 
                         break;
                     }
@@ -385,7 +385,7 @@ namespace Pihrtsoft.Records
                             ThrowInvalidOperation(ErrorMessages.CommandCannotBeUsedAsChildCommandOfNewCommand(element));
 
                         foreach (XAttribute attribute in element.Attributes())
-                            yield return new MultiPrefixOperation(GetProperty(attribute), GetValue(attribute), Depth);
+                            yield return new PrefixManyOperation(GetProperty(attribute), GetValue(attribute), Depth);
 
                         break;
                     }

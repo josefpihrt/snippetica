@@ -49,11 +49,11 @@ namespace Pihrtsoft.Records
                     return ElementKind.RemoveRange;
                 case ElementNames.Postfix:
                     return ElementKind.Postfix;
-                case ElementNames.MultiPostfix:
+                case ElementNames.PostfixMany:
                     return ElementKind.PostfixMany;
                 case ElementNames.Prefix:
                     return ElementKind.Prefix;
-                case ElementNames.MultiPrefix:
+                case ElementNames.PrefixMany:
                     return ElementKind.PrefixMany;
                 default:
                     {

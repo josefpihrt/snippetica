@@ -10,8 +10,8 @@ namespace Pihrtsoft.Records.Operations
         Remove,
         RemoveRange,
         Postfix,
-        MultiPostfix,
+        PostfixMany,
         Prefix,
-        MultiPrefix,
+        PrefixMany,
     }
 }

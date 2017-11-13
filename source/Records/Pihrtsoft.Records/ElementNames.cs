@@ -19,8 +19,8 @@ namespace Pihrtsoft.Records
         public const string Remove = nameof(Remove);
         public const string RemoveRange = nameof(RemoveRange);
         public const string Postfix = nameof(Postfix);
-        public const string MultiPostfix = nameof(MultiPostfix);
+        public const string PostfixMany = nameof(PostfixMany);
         public const string Prefix = nameof(Prefix);
-        public const string MultiPrefix = nameof(MultiPrefix);
+        public const string PrefixMany = nameof(PrefixMany);
     }
 }
