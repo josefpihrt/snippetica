@@ -26,6 +26,8 @@ namespace Snippetica.CodeGeneration.VisualStudio
                     return new VisualStudioSnippetGenerator(LanguageDefinition.VisualBasic);
                 case Language.CSharp:
                     return new VisualStudioSnippetGenerator(LanguageDefinition.CSharp);
+                case Language.Cpp:
+                    return new VisualStudioSnippetGenerator(LanguageDefinition.Cpp);
                 case Language.Xaml:
                     return new XamlSnippetGenerator();
                 case Language.Html:

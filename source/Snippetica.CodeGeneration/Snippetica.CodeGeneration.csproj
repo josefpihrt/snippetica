@@ -56,6 +56,7 @@
     <Compile Include="Commands\ModifierCommand.cs" />
     <Compile Include="Commands\ShortcutToLowercaseCommand.cs" />
     <Compile Include="Commands\SuffixFileNameCommand.cs" />
+    <Compile Include="CppDefinition.cs" />
     <Compile Include="Markdown\ProjectReadmeSettings.cs" />
     <Compile Include="PackageGenerator.cs" />
     <Compile Include="SnippetEnvironment.cs" />

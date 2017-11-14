@@ -1,4 +1,11 @@
 ﻿{
+  " constexpr": {
+    "prefix": "ke",
+    "body": [
+      "constexpr ${1:T} ${2:x} = ${3:nullptr};${0}"
+    ],
+    "description": " constexpr declaration"
+  },
   "Class with Inline Constructor/Destructor": {
     "prefix": "ci",
     "body": [
@@ -18,5 +25,33 @@
       "};"
     ],
     "description": "Class declaration with inline constructor/destructor"
+  },
+  "const cast": {
+    "prefix": "coc",
+    "body": [
+      "const_cast<${1:T}>(${2:expression})"
+    ],
+    "description": "const cast"
+  },
+  "dynamic cast": {
+    "prefix": "cod",
+    "body": [
+      "dynamic_cast<${1:T}>(${2:expression})"
+    ],
+    "description": "dynamic cast"
+  },
+  "reinterpret cast": {
+    "prefix": "cor",
+    "body": [
+      "reinterpret_cast<${1:T}>(${2:expression})"
+    ],
+    "description": "reinterpret cast"
+  },
+  "static cast": {
+    "prefix": "cos",
+    "body": [
+      "static_cast<${1:T}>(${2:expression})"
+    ],
+    "description": "static cast"
   }
 }

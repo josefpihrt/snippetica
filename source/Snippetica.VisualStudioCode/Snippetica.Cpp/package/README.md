@@ -13,19 +13,33 @@ e|else
 eif|else\-if
 em|enum
 emc|enum class
-fe|for each
+f| function
 fr|for
 frr|for \(reversed\)
 frrb|for \(range\-based\)
 ie|interface
 if|if
+k| const
 ns|namespace
+ppd|\#define
+ppe|\#error
+ppi|\#include
 ppif|\#if
 ppifd|\#ifdef
+ppife|\#if \#else
 ppifnd|\#ifndef
+ppl|\#line
 ppr|\#pragma region
+ppu|\#using
+ppud|\#undef
 sh|switch
 st|struct
+t|template
 tc|try\-catch
 un|union
+v|variable declaration
+va|array variable
+vb|Boolean variable
+vi|Int32 variable
+vs|String variable
 we|while

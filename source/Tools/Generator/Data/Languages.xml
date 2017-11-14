@@ -113,6 +113,15 @@
               <New Id="Char" Keyword="Char" DefaultValue='"0"c' />
               <New Id="DateTime" Keyword="Date" DefaultValue="Date.MinValue" />
             </Set>
+            <Set Language="Cpp">
+              <New Id="Void" Title="void" Keyword="void" />
+              <New Id="Boolean" Keyword="bool" DefaultValue="false" />
+              <New Id="Int32" Keyword="int" />
+              <New Id="String" Keyword="string" DefaultValue="nullptr" />
+              <New Id="Double" Keyword="double" />
+              <New Id="Single" Keyword="float" />
+              <New Id="Char" Keyword="char" DefaultValue="0" />
+            </Set>
             <Add Tags="Collection">
               <Set Namespace="System.Collections.Generic">
                 <New Id="Dictionary" />

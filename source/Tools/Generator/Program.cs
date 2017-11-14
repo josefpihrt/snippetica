@@ -171,6 +171,7 @@ namespace Snippetica.CodeGeneration
 
             LanguageDefinition.CSharp = languageDefinitions.First(f => f.Language == Language.CSharp);
             LanguageDefinition.VisualBasic = languageDefinitions.First(f => f.Language == Language.VisualBasic);
+            LanguageDefinition.Cpp = languageDefinitions.First(f => f.Language == Language.Cpp);
         }
     }
 }

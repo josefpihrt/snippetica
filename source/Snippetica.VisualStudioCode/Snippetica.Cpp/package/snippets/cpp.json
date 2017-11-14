@@ -1,39 +1,133 @@
 ﻿{
+  " const": {
+    "prefix": "k",
+    "body": [
+      "const ${1:T} ${2:x} = ${3:nullptr};${0}"
+    ],
+    "description": " const declaration"
+  },
+  " function": {
+    "prefix": "f",
+    "body": [
+      "${1:void} ${2:FunctionName}()",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": " function declaration"
+  },
+  " function (with parameters)": {
+    "prefix": "f_",
+    "body": [
+      "${1:void} ${2:FunctionName}(${3:T parameter})",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": " function declaration (with parameters)"
+  },
+  "#define": {
+    "prefix": "ppd",
+    "body": [
+      "#define ${1:x}${0}"
+    ],
+    "description": "#define preprocessor directive"
+  },
+  "#error": {
+    "prefix": "ppe",
+    "body": [
+      "#error ${1:message}${TM_SELECTED_TEXT}${0}"
+    ],
+    "description": "#error preprocessor directive"
+  },
   "#if": {
     "prefix": "ppif",
     "body": [
-      "#if ${1:0}",
+      "#if ${1:x}",
       "\t${TM_SELECTED_TEXT}${0}",
       "#endif"
     ],
-    "description": "#if directive"
+    "description": "#if preprocessor directive"
+  },
+  "#if #else": {
+    "prefix": "ppife",
+    "body": [
+      "#if ${1:x}",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "#elif ${2:x}",
+      "#else",
+      "#endif"
+    ],
+    "description": "#if #else preprocessor directive"
   },
   "#ifdef": {
     "prefix": "ppifd",
     "body": [
-      "#ifdef ${1:DEBUG}",
+      "#ifdef ${1:x}",
       "\t${TM_SELECTED_TEXT}${0}",
       "#endif"
     ],
-    "description": "#ifdef directive"
+    "description": "#ifdef preprocessor directive"
   },
   "#ifndef": {
     "prefix": "ppifnd",
     "body": [
-      "#ifndef ${1:1}",
+      "#ifndef ${1:x}",
       "\t${TM_SELECTED_TEXT}${0}",
       "#endif"
     ],
-    "description": "#ifndef directive"
+    "description": "#ifndef preprocessor directive"
+  },
+  "#include": {
+    "prefix": "ppi",
+    "body": [
+      "#include <${1:path}${TM_SELECTED_TEXT}>${0}"
+    ],
+    "description": "#include preprocessor directive"
+  },
+  "#line": {
+    "prefix": "ppl",
+    "body": [
+      "#line ${1:0} ${2:file}${0}"
+    ],
+    "description": "#line preprocessor directive"
   },
   "#pragma region": {
     "prefix": "ppr",
     "body": [
       "#pragma region ${1:RegionName}",
       "\t${TM_SELECTED_TEXT}${0}",
-      "#pragma endregion"
+      "#pragma endregion ${1}"
     ],
-    "description": "#pragma region directive"
+    "description": "#pragma region preprocessor directive"
+  },
+  "#undef": {
+    "prefix": "ppud",
+    "body": [
+      "#undef ${1:x}${0}"
+    ],
+    "description": "#undef preprocessor directive"
+  },
+  "#using": {
+    "prefix": "ppu",
+    "body": [
+      "#using ${1:file}${0}"
+    ],
+    "description": "#using preprocessor directive"
+  },
+  "array variable": {
+    "prefix": "va",
+    "body": [
+      "${1:T} ${2:items}[${3:0}];${0}"
+    ],
+    "description": "array variable declaration"
+  },
+  "Boolean variable": {
+    "prefix": "vb",
+    "body": [
+      "bool ${1:f} = ${2:false};${0}"
+    ],
+    "description": "Boolean variable declaration"
   },
   "class": {
     "prefix": "c",
@@ -158,16 +252,6 @@
     ],
     "description": "for statement (reversed)"
   },
-  "for each": {
-    "prefix": "fe",
-    "body": [
-      "for each (${1:object} ${2:var} in ${3:items})",
-      "{",
-      "\t${TM_SELECTED_TEXT}${0}",
-      "}"
-    ],
-    "description": "for each statement"
-  },
   "if": {
     "prefix": "if",
     "body": [
@@ -177,6 +261,13 @@
       "}"
     ],
     "description": "if statement"
+  },
+  "Int32 variable": {
+    "prefix": "vi",
+    "body": [
+      "int ${1:i} = ${2:0};${0}"
+    ],
+    "description": "Int32 variable declaration"
   },
   "interface": {
     "prefix": "ie",
@@ -198,6 +289,13 @@
     ],
     "description": "namespace declaration"
   },
+  "String variable": {
+    "prefix": "vs",
+    "body": [
+      "string ${1:s} = ${2:nullptr};${0}"
+    ],
+    "description": "String variable declaration"
+  },
   "struct": {
     "prefix": "st",
     "body": [
@@ -218,6 +316,13 @@
       "}"
     ],
     "description": "switch statement"
+  },
+  "template": {
+    "prefix": "t",
+    "body": [
+      "template <${1:typename} ${2:T}${TM_SELECTED_TEXT}>${0}"
+    ],
+    "description": "template"
   },
   "try-catch": {
     "prefix": "tc",
@@ -241,6 +346,13 @@
       "};"
     ],
     "description": "union"
+  },
+  "variable declaration": {
+    "prefix": "v",
+    "body": [
+      "${1:T} ${2:x} = ${3:nullptr};${0}"
+    ],
+    "description": " variable declaration"
   },
   "while": {
     "prefix": "we",

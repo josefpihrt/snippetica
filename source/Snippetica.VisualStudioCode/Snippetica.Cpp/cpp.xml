@@ -2,6 +2,69 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>array variable</Title>
+      <Shortcut>va</Shortcut>
+      <Description>array variable declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ArrayOfTVariable</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_arrayLength</ID>
+          <ToolTip>Array length</ToolTip>
+          <Default>0</Default>
+        </Literal>
+        <Literal>
+          <ID>_collectionIdentifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>items</Default>
+        </Literal>
+        <Literal>
+          <ID>_type</ID>
+          <ToolTip>Element type name</ToolTip>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[$_type$ $_collectionIdentifier$[$_arrayLength$];$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Boolean variable</Title>
+      <Shortcut>vb</Shortcut>
+      <Description>Boolean variable declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name BooleanVariable</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>f</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value to assign</ToolTip>
+          <Default>false</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[bool $identifier$ = $value$;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>class</Title>
       <Shortcut>c</Shortcut>
       <Description>class declaration</Description>
@@ -39,6 +102,40 @@ $name$::$name$()
 $name$::~$name$()
 {
 }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title> const</Title>
+      <Shortcut>k</Shortcut>
+      <Description> const declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Const</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_type</ID>
+          <ToolTip>Constant type</ToolTip>
+          <Default>T</Default>
+        </Literal>
+        <Literal>
+          <ID>_value</ID>
+          <ToolTip>Constant value</ToolTip>
+          <Default>nullptr</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Constant name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[const $_type$ $name$ = $_value$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -268,44 +365,6 @@ $name$::~$name$()
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>for each</Title>
-      <Shortcut>fe</Shortcut>
-      <Description>for each statement</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ForEach</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Name of collection or array</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Element identifier</ToolTip>
-          <Default>var</Default>
-        </Literal>
-        <Literal>
-          <ID>type</ID>
-          <ToolTip>Element type</ToolTip>
-          <Default>object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[for each ($type$ $identifier$ in $_collectionIdentifier$)
-{
-	$selected$$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>for (range-based)</Title>
       <Shortcut>frrb</Shortcut>
       <Description>range-based for statement</Description>
@@ -372,6 +431,75 @@ $name$::~$name$()
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title> function</Title>
+      <Shortcut>f</Shortcut>
+      <Description> function declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Function</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_type</ID>
+          <ToolTip>Return type</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Function name</ToolTip>
+          <Default>FunctionName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[$_type$ $name$()
+{
+	$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title> function (with parameters)</Title>
+      <Shortcut>f_</Shortcut>
+      <Description> function declaration (with parameters)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name FunctionWithParameters</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_type</ID>
+          <ToolTip>Return type</ToolTip>
+          <Default>void</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Function name</ToolTip>
+          <Default>FunctionName</Default>
+        </Literal>
+        <Literal>
+          <ID>parameters</ID>
+          <ToolTip>Parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[$_type$ $name$($parameters$)
+{
+	$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>if</Title>
       <Shortcut>if</Shortcut>
       <Description>if statement</Description>
@@ -396,6 +524,35 @@ $name$::~$name$()
 {
 	$selected$$end$
 }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Int32 variable</Title>
+      <Shortcut>vi</Shortcut>
+      <Description>Int32 variable declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Int32Variable</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>i</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value to assign</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[int $identifier$ = $value$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -456,9 +613,58 @@ $name$::~$name$()
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>#define</Title>
+      <Shortcut>ppd</Shortcut>
+      <Description>#define preprocessor directive</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PreprocessorDirectiveDefine</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>id</ID>
+          <ToolTip>Identifier</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[#define $id$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>#error</Title>
+      <Shortcut>ppe</Shortcut>
+      <Description>#error preprocessor directive</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PreprocessorDirectiveError</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>message</ID>
+          <ToolTip>Error message</ToolTip>
+          <Default>message</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[#error $message$$selected$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>#if</Title>
       <Shortcut>ppif</Shortcut>
-      <Description>#if directive</Description>
+      <Description>#if preprocessor directive</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -473,7 +679,7 @@ $name$::~$name$()
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to evaluate</ToolTip>
-          <Default>0</Default>
+          <Default>x</Default>
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[#if $expression$
@@ -485,7 +691,7 @@ $name$::~$name$()
     <Header>
       <Title>#ifdef</Title>
       <Shortcut>ppifd</Shortcut>
-      <Description>#ifdef directive</Description>
+      <Description>#ifdef preprocessor directive</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -500,7 +706,7 @@ $name$::~$name$()
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to evaluate</ToolTip>
-          <Default>DEBUG</Default>
+          <Default>x</Default>
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[#ifdef $expression$
@@ -510,9 +716,43 @@ $name$::~$name$()
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>#if #else</Title>
+      <Shortcut>ppife</Shortcut>
+      <Description>#if #else preprocessor directive</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PreprocessorDirectiveIfElse</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression1</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>expression2</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[#if $expression1$
+	$selected$$end$
+#elif $expression2$
+#else
+#endif]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>#ifndef</Title>
       <Shortcut>ppifnd</Shortcut>
-      <Description>#ifndef directive</Description>
+      <Description>#ifndef preprocessor directive</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -527,7 +767,7 @@ $name$::~$name$()
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to evaluate</ToolTip>
-          <Default>1</Default>
+          <Default>x</Default>
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[#ifndef $expression$
@@ -537,9 +777,63 @@ $name$::~$name$()
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>#include</Title>
+      <Shortcut>ppi</Shortcut>
+      <Description>#include preprocessor directive</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PreprocessorDirectiveInclude</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>path</ID>
+          <ToolTip>File path</ToolTip>
+          <Default>path</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[#include <$path$$selected$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>#line</Title>
+      <Shortcut>ppl</Shortcut>
+      <Description>#line preprocessor directive</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PreprocessorDirectiveLine</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>file</ID>
+          <ToolTip>File name</ToolTip>
+          <Default>file</Default>
+        </Literal>
+        <Literal>
+          <ID>number</ID>
+          <ToolTip>Line number</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[#line $number$ $file$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>#pragma region</Title>
       <Shortcut>ppr</Shortcut>
-      <Description>#pragma region directive</Description>
+      <Description>#pragma region preprocessor directive</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -559,7 +853,84 @@ $name$::~$name$()
       </Declarations>
       <Code Language="Cpp"><![CDATA[#pragma region $name$
 	$selected$$end$
-#pragma endregion]]></Code>
+#pragma endregion $name$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>#undef</Title>
+      <Shortcut>ppud</Shortcut>
+      <Description>#undef preprocessor directive</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PreprocessorDirectiveUndef</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>id</ID>
+          <ToolTip>Identifier</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[#undef $id$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>#using</Title>
+      <Shortcut>ppu</Shortcut>
+      <Description>#using preprocessor directive</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PreprocessorDirectiveUsing</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>file</ID>
+          <ToolTip>File name</ToolTip>
+          <Default>file</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[#using $file$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>String variable</Title>
+      <Shortcut>vs</Shortcut>
+      <Description>String variable declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name StringVariable</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>s</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value to assign</ToolTip>
+          <Default>nullptr</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[string $identifier$ = $value$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -624,6 +995,36 @@ $name$::~$name$()
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>template</Title>
+      <Shortcut>t</Shortcut>
+      <Description>template</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Template</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>T</Default>
+        </Literal>
+        <Literal>
+          <ID>typeName</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>typename</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[template <$typeName$ $type$$selected$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>try-catch</Title>
       <Shortcut>tc</Shortcut>
       <Description>try-catch statement</Description>
@@ -671,6 +1072,40 @@ catch (const std::exception&)
 {
 	$selected$$end$
 };]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>variable declaration</Title>
+      <Shortcut>v</Shortcut>
+      <Description> variable declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Variable</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>_type</ID>
+          <ToolTip>Variable type</ToolTip>
+          <Default>T</Default>
+        </Literal>
+        <Literal>
+          <ID>_value</ID>
+          <ToolTip>Value to assign</ToolTip>
+          <Default>nullptr</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[$_type$ $_identifier$ = $_value$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

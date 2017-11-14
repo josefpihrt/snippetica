@@ -40,6 +40,8 @@ namespace Snippetica.CodeGeneration
                     return new CSharpDefinition();
                 case Language.VisualBasic:
                     return new VisualBasicDefinition();
+                case Language.Cpp:
+                    return new CppDefinition();
                 default:
                     throw new NotSupportedException();
             }

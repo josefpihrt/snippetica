@@ -8,6 +8,7 @@ namespace Snippetica.CodeGeneration
     {
         public static LanguageDefinition CSharp { get; set; }
         public static LanguageDefinition VisualBasic { get; set; }
+        public static LanguageDefinition Cpp { get; set; }
 
         protected LanguageDefinition()
         {
