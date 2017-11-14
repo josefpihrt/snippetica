@@ -12631,50 +12631,33 @@ finally
       </Keywords>
     </Header>
     <Snippet>
+      <Code Language="Json"><![CDATA[[$selected$$end$]]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>array (with content)</Title>
+      <Shortcut>ax</Shortcut>
+      <Description>array (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ArrayWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
       <Declarations>
         <Literal>
-          <ID>name</ID>
-          <ToolTip>Name</ToolTip>
-          <Default>name</Default>
+          <ID>content</ID>
+          <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Json"><![CDATA["$name$": [ $selected$$end$ ]]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>empty array</Title>
-      <Shortcut>ea</Shortcut>
-      <Description>empty array</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name EmptyArray</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="Json"><![CDATA[[ $selected$$end$]]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>empty object</Title>
-      <Shortcut>eo</Shortcut>
-      <Description>empty object</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name EmptyObject</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="Json"><![CDATA[{ $selected$$end$}]]></Code>
+      <Code Language="Json"><![CDATA[[
+	$selected$$content$
+]$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12691,14 +12674,7 @@ finally
       </Keywords>
     </Header>
     <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Name</ToolTip>
-          <Default>name</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Json"><![CDATA["$name$": false$end$]]></Code>
+      <Code Language="Json"><![CDATA[false$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12715,14 +12691,7 @@ finally
       </Keywords>
     </Header>
     <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Name</ToolTip>
-          <Default>name</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Json"><![CDATA["$name$": null$end$]]></Code>
+      <Code Language="Json"><![CDATA[null$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12740,14 +12709,33 @@ finally
       </Keywords>
     </Header>
     <Snippet>
+      <Code Language="Json"><![CDATA[{$selected$$end$}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>object (with content)</Title>
+      <Shortcut>ox</Shortcut>
+      <Description>object (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ObjectWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
       <Declarations>
         <Literal>
-          <ID>name</ID>
-          <ToolTip>Name</ToolTip>
-          <Default>name</Default>
+          <ID>content</ID>
+          <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Json"><![CDATA["$name$": { $selected$$end$ }]]></Code>
+      <Code Language="Json"><![CDATA[{
+	$selected$$content$
+}$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12770,13 +12758,245 @@ finally
           <ToolTip>Name</ToolTip>
           <Default>name</Default>
         </Literal>
+      </Declarations>
+      <Code Language="Json"><![CDATA["$name$": $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>pair with array</Title>
+      <Shortcut>pa</Shortcut>
+      <Description>pair with array</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PairWithArray</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Name</ToolTip>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Json"><![CDATA["$name$": [$selected$$end$]]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>pair with array (with content)</Title>
+      <Shortcut>pax</Shortcut>
+      <Description>pair with array (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PairWithArrayWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Name</ToolTip>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Json"><![CDATA["$name$": [
+	$selected$$content$
+]$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>pair with false value</Title>
+      <Shortcut>pf</Shortcut>
+      <Description>pair with false value</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PairWithFalseValue</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Name</ToolTip>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Json"><![CDATA["$name$": false$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>pair with null value</Title>
+      <Shortcut>pn</Shortcut>
+      <Description>pair with null value</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PairWithNullValue</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Name</ToolTip>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Json"><![CDATA["$name$": null$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>pair with object</Title>
+      <Shortcut>po</Shortcut>
+      <Description>pair with object</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PairWithObject</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Name</ToolTip>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Json"><![CDATA["$name$": {$selected$$end$}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>pair with object (with content)</Title>
+      <Shortcut>pox</Shortcut>
+      <Description>pair with object (with content)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PairWithObjectWithContent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>content</ID>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Name</ToolTip>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Json"><![CDATA["$name$": {
+	$selected$$content$
+}$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>pair with string value</Title>
+      <Shortcut>ps</Shortcut>
+      <Description>pair with string value</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PairWithStringValue</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Name</ToolTip>
+          <Default>name</Default>
+        </Literal>
         <Literal>
           <ID>value</ID>
           <ToolTip>Value</ToolTip>
-          <Default>0</Default>
+          <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Json"><![CDATA["$name$": $value$$end$]]></Code>
+      <Code Language="Json"><![CDATA["$name$": "$value$"$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>pair with true value</Title>
+      <Shortcut>pt</Shortcut>
+      <Description>pair with true value</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PairWithTrueValue</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Name</ToolTip>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Json"><![CDATA["$name$": true$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>pair with zero value</Title>
+      <Shortcut>pz</Shortcut>
+      <Description>pair with zero value</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PairWithZeroValue</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Name</ToolTip>
+          <Default>name</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Json"><![CDATA["$name$": 0$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12795,17 +13015,12 @@ finally
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>name</ID>
-          <ToolTip>Name</ToolTip>
-          <Default>name</Default>
-        </Literal>
-        <Literal>
           <ID>value</ID>
           <ToolTip>Value</ToolTip>
-          <Default>value</Default>
+          <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Json"><![CDATA["$name$": "$value$"$end$]]></Code>
+      <Code Language="Json"><![CDATA["$value$"$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -12822,38 +13037,7 @@ finally
       </Keywords>
     </Header>
     <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Name</ToolTip>
-          <Default>name</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Json"><![CDATA["$name$": true$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>zero value</Title>
-      <Shortcut>z</Shortcut>
-      <Description>zero value</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ZeroValue</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Name</ToolTip>
-          <Default>name</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Json"><![CDATA["$name$": 0$end$]]></Code>
+      <Code Language="Json"><![CDATA[true$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

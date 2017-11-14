@@ -1,12 +1,13 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>key/value pair</Title>
-    <Shortcut>p</Shortcut>
-    <Description>key/value pair</Description>
+    <Title>pair with array</Title>
+    <Shortcut>pa</Shortcut>
+    <Description>pair with array</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
     </SnippetTypes>
   </Header>
   <Snippet>
@@ -17,6 +18,6 @@
         <Default>name</Default>
       </Literal>
     </Declarations>
-    <Code Language="Json"><![CDATA["$name$": $end$]]></Code>
+    <Code Language="Json"><![CDATA["$name$": [$selected$$end$]]]></Code>
   </Snippet>
 </CodeSnippet>

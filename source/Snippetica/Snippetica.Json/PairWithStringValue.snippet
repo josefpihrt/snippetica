@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>key/value pair</Title>
-    <Shortcut>p</Shortcut>
-    <Description>key/value pair</Description>
+    <Title>pair with string value</Title>
+    <Shortcut>ps</Shortcut>
+    <Description>pair with string value</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -16,7 +16,12 @@
         <ToolTip>Name</ToolTip>
         <Default>name</Default>
       </Literal>
+      <Literal>
+        <ID>value</ID>
+        <ToolTip>Value</ToolTip>
+        <Default>x</Default>
+      </Literal>
     </Declarations>
-    <Code Language="Json"><![CDATA["$name$": $end$]]></Code>
+    <Code Language="JSON"><![CDATA["$name$": "$value$"$end$]]></Code>
   </Snippet>
 </CodeSnippet>
