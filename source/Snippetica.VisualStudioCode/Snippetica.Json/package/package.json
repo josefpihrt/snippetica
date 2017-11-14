@@ -1,6 +1,6 @@
 {
   "name": "snippetica-json",
-  "publisher": "josefpihrt",
+  "publisher": "josefpihrt-vscode",
   "displayName": "Snippetica for JSON",
   "description": "A collection of snippets for JSON.",
   "icon": "images/icon.png",

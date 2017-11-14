@@ -70,7 +70,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
             var info = new PackageInfo()
             {
                 Name = "snippetica",
-                Publisher = "josefpihrt",
+                Publisher = "josefpihrt-vscode",
                 DisplayName = "Snippetica",
                 Description = "A collection of snippets for ",
                 Icon = "images/icon.png",

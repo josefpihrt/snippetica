@@ -1,6 +1,6 @@
 {
   "name": "snippetica-csharp",
-  "publisher": "josefpihrt",
+  "publisher": "josefpihrt-vscode",
   "displayName": "Snippetica for C#",
   "description": "A collection of snippets for C#.",
   "icon": "images/icon.png",
