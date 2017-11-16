@@ -63,10 +63,12 @@ namespace Snippetica.CodeGeneration
         {
             foreach (Record record in records.Where(f => f.Entity.Name == Identifiers.Type))
             {
+                string keyword = record.GetStringOrDefault(Identifiers.Keyword);
+
                 yield return new TypeDefinition(
                     record.Id,
-                    record.GetStringOrDefault(Identifiers.Title, record.Id),
-                    record.GetStringOrDefault(Identifiers.Keyword),
+                    record.GetStringOrDefault(Identifiers.Title, keyword),
+                    keyword,
                     record.GetStringOrDefault(Identifiers.Shortcut),
                     record.GetStringOrDefault(Identifiers.DefaultValue),
                     record.GetStringOrDefault(Identifiers.DefaultIdentifier),

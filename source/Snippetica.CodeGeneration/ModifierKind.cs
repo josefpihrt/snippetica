@@ -9,6 +9,9 @@ namespace Snippetica.CodeGeneration
         Protected,
         Private,
         Virtual,
-        Static
+        Static,
+        Inline,
+        Const,
+        ConstExpr
     }
 }

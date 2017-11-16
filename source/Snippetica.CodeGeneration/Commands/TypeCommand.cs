@@ -65,14 +65,14 @@ namespace Snippetica.CodeGeneration.Commands
             }
 
             snippet.Title = snippet.Title
-                .Replace(Placeholders.Type, Type.Keyword)
-                .Replace(Placeholders.OfType, $"of {Type.Keyword}")
-                .Replace(Placeholders.GenericType, language.GetTypeParameterList(Type.Keyword));
+                .Replace(Placeholders.Type, Type.Title)
+                .Replace(Placeholders.OfType, $"of {Type.Title}")
+                .Replace(Placeholders.GenericType, language.GetTypeParameterList(Type.Title));
 
             snippet.Description = snippet.Description
-                .Replace(Placeholders.Type, Type.Keyword)
-                .Replace(Placeholders.OfType, $"of {Type.Keyword}")
-                .Replace(Placeholders.GenericType, language.GetTypeParameterList(Type.Keyword));
+                .Replace(Placeholders.Type, Type.Title)
+                .Replace(Placeholders.OfType, $"of {Type.Title}")
+                .Replace(Placeholders.GenericType, language.GetTypeParameterList(Type.Title));
 
             snippet.AddNamespace(Type.Namespace);
 

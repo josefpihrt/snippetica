@@ -9,13 +9,22 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
+      <Keyword>Meta-GenerateConstExprModifier</Keyword>
+      <Keyword>Meta-GenerateConstModifier</Keyword>
+      <Keyword>Meta-GenerateInlineModifier</Keyword>
       <Keyword>Meta-GenerateParameters</Keyword>
+      <Keyword>Meta-GenerateStaticModifier</Keyword>
       <Keyword>Meta-GenerateType</Keyword>
+      <Keyword>Meta-GenerateVirtualModifier</Keyword>
       <Keyword>Meta-GenerateVoidType</Keyword>
     </Keywords>
   </Header>
   <Snippet>
     <Declarations>
+      <Literal Editable="false">
+        <ID>_modifiers</ID>
+        <ToolTip>Modifier(s)</ToolTip>
+      </Literal>
       <Literal Editable="false">
         <ID>_parameterList</ID>
         <Default>()</Default>
@@ -31,8 +40,7 @@
         <Default>FunctionName</Default>
       </Literal>
     </Declarations>
-    <Code Language="Cpp"><![CDATA[$_type$ $name$$_parameterList$
-{
+    <Code Language="Cpp"><![CDATA[$_modifiers$ $_type$ $name$$_parameterList$ {
 	$end$
 }]]></Code>
   </Snippet>

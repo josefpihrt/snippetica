@@ -37,6 +37,21 @@ namespace Snippetica.CodeGeneration
             get { return Modifiers["Virtual"]; }
         }
 
+        public ModifierDefinition InlineModifier
+        {
+            get { return Modifiers["Inline"]; }
+        }
+
+        public ModifierDefinition ConstModifier
+        {
+            get { return Modifiers["Const"]; }
+        }
+
+        public ModifierDefinition ConstExprModifier
+        {
+            get { return Modifiers["ConstExpr"]; }
+        }
+
         public string DefaultValue
         {
             get { return Object.DefaultValue; }

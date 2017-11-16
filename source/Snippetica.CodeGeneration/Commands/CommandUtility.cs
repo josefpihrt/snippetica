@@ -10,6 +10,9 @@ namespace Snippetica.CodeGeneration.Commands
     {
         public static Command StaticCommand { get; } = new StaticCommand();
         public static Command VirtualCommand { get; } = new VirtualCommand();
+        public static Command InlineCommand { get; } = new InlineCommand();
+        public static Command ConstCommand { get; } = new ConstCommand();
+        public static Command ConstExprCommand { get; } = new ConstExprCommand();
         public static Command InitializerCommand { get; } = new InitializerCommand();
         public static Command ParametersCommand { get; } = new ParametersCommand();
         public static Command ArgumentsCommand { get; } = new ArgumentsCommand();

@@ -9,8 +9,7 @@
   " function": {
     "prefix": "f",
     "body": [
-      "${1:void} ${2:FunctionName}()",
-      "{",
+      "${1:void} ${2:FunctionName}() {",
       "\t${0}",
       "}"
     ],
@@ -19,8 +18,7 @@
   " function (with parameters)": {
     "prefix": "f_",
     "body": [
-      "${1:void} ${2:FunctionName}(${3:T parameter})",
-      "{",
+      "${1:void} ${2:FunctionName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
@@ -122,6 +120,20 @@
     ],
     "description": "array variable declaration"
   },
+  "attribute": {
+    "prefix": "ae",
+    "body": [
+      "[[${1:attribute}${TM_SELECTED_TEXT}]]${0}"
+    ],
+    "description": "attribute"
+  },
+  "auto keyword": {
+    "prefix": "a",
+    "body": [
+      "auto${0}"
+    ],
+    "description": "auto keyword"
+  },
   "Boolean variable": {
     "prefix": "vb",
     "body": [
@@ -129,11 +141,17 @@
     ],
     "description": "Boolean variable declaration"
   },
+  "break statement": {
+    "prefix": "bk",
+    "body": [
+      "break;${0}"
+    ],
+    "description": "break statement"
+  },
   "class": {
     "prefix": "c",
     "body": [
-      "class ${1:ClassName}",
-      "{",
+      "class ${1:ClassName} {",
       "public:",
       "\t${1}();",
       "\t~${1}();",
@@ -142,31 +160,120 @@
       "\t${TM_SELECTED_TEXT}${0}",
       "};",
       "",
-      "${1}::${1}()",
-      "{",
+      "${1}::${1}() {",
       "}",
       "",
-      "${1}::~${1}()",
-      "{",
+      "${1}::~${1}() {",
       "}"
     ],
     "description": "class declaration"
   },
+  "Class with Inline Constructor/Destructor": {
+    "prefix": "ci",
+    "body": [
+      "class ${1:ClassName} {",
+      "public:",
+      "\t${1}() {",
+      "\t}",
+      "",
+      "\t~${1}() {",
+      "\t}",
+      "",
+      "private:",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};"
+    ],
+    "description": "Class declaration with inline constructor/destructor"
+  },
+  "const cast": {
+    "prefix": "coc",
+    "body": [
+      "const_cast<${1:T}>(${2:expression})${0}"
+    ],
+    "description": "const cast"
+  },
+  "const class": {
+    "prefix": "kc",
+    "body": [
+      "",
+      "      const class ${1:ClassName} {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "const class declaration"
+  },
+  "const function": {
+    "prefix": "kf",
+    "body": [
+      "const ${1:void} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "const function declaration"
+  },
+  "const function (with parameters)": {
+    "prefix": "kf_",
+    "body": [
+      "const ${1:void} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "const function declaration (with parameters)"
+  },
+  "const struct": {
+    "prefix": "kst",
+    "body": [
+      "const struct ${1:StructName} {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};"
+    ],
+    "description": "const struct declaration"
+  },
+  "constexpr function": {
+    "prefix": "kef",
+    "body": [
+      "constexpr ${1:void} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "constexpr function declaration"
+  },
+  "constexpr function (with parameters)": {
+    "prefix": "kef_",
+    "body": [
+      "constexpr ${1:void} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "constexpr function declaration (with parameters)"
+  },
   "constructor": {
     "prefix": "cr",
     "body": [
-      "${1:TypeName}()",
-      "{",
+      "${1:TypeName}() {",
       "\t${0}",
       "}"
     ],
     "description": "constructor declaration"
   },
+  "continue statement": {
+    "prefix": "ce",
+    "body": [
+      "continue;${0}"
+    ],
+    "description": "continue statement"
+  },
+  "default keyword": {
+    "prefix": "d",
+    "body": [
+      "default${0}"
+    ],
+    "description": "default keyword"
+  },
   "destructor": {
     "prefix": "dr",
     "body": [
-      "~${1:TypeName}()",
-      "{",
+      "~${1:TypeName}() {",
       "\t${0}",
       "}"
     ],
@@ -175,18 +282,23 @@
   "do-while": {
     "prefix": "dw",
     "body": [
-      "do",
-      "{",
+      "do {",
       "\t${TM_SELECTED_TEXT}${0}",
       "} while (${1:true});"
     ],
     "description": "do-while statement"
   },
+  "dynamic cast": {
+    "prefix": "cod",
+    "body": [
+      "dynamic_cast<${1:T}>(${2:expression})${0}"
+    ],
+    "description": "dynamic cast"
+  },
   "else": {
     "prefix": "e",
     "body": [
-      "else",
-      "{",
+      "else {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
@@ -195,8 +307,7 @@
   "else-if": {
     "prefix": "eif",
     "body": [
-      "else if (${1:true})",
-      "{",
+      "else if (${1:true}) {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
@@ -205,8 +316,7 @@
   "enum": {
     "prefix": "em",
     "body": [
-      "enum ${1:EnumName}",
-      "{",
+      "enum ${1:EnumName} {",
       "\t${TM_SELECTED_TEXT}${0}",
       "};"
     ],
@@ -215,8 +325,7 @@
   "enum class": {
     "prefix": "emc",
     "body": [
-      "enum class ${1:EnumClassName}",
-      "{",
+      "enum class ${1:EnumClassName} {",
       "\t${TM_SELECTED_TEXT}${0}",
       "};"
     ],
@@ -225,8 +334,7 @@
   "for": {
     "prefix": "fr",
     "body": [
-      "for (${1:size_t} ${2:i} = 0; ${2} < ${3:length}; ${2}++)",
-      "{",
+      "for (${1:size_t} ${2:i} = 0; ${2} < ${3:length}; ${2}++) {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
@@ -235,8 +343,7 @@
   "for (range-based)": {
     "prefix": "frrb",
     "body": [
-      "for (auto& ${1:i} : ${2:x})",
-      "{",
+      "for (auto& ${1:i} : ${2:x}) {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
@@ -245,8 +352,7 @@
   "for (reversed)": {
     "prefix": "frr",
     "body": [
-      "for (int ${1:i} = ${2:length} - 1; ${1} >= 0; ${1}--)",
-      "{",
+      "for (int ${1:i} = ${2:length} - 1; ${1} >= 0; ${1}--) {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
@@ -255,12 +361,65 @@
   "if": {
     "prefix": "if",
     "body": [
-      "if (${1:true})",
-      "{",
+      "if (${1:true}) {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
     "description": "if statement"
+  },
+  "if constexpr": {
+    "prefix": "ifke",
+    "body": [
+      "if constexpr (${1:true}) {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "if constexpr statement"
+  },
+  "inline const function": {
+    "prefix": "ilkf",
+    "body": [
+      "inline const ${1:void} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "inline const function declaration"
+  },
+  "inline const function (with parameters)": {
+    "prefix": "ilkf_",
+    "body": [
+      "inline const ${1:void} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "inline const function declaration (with parameters)"
+  },
+  "inline function": {
+    "prefix": "ilf",
+    "body": [
+      "inline ${1:void} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "inline function declaration"
+  },
+  "inline function (with parameters)": {
+    "prefix": "ilf_",
+    "body": [
+      "inline ${1:void} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "inline function declaration (with parameters)"
+  },
+  "inline namespace": {
+    "prefix": "ins",
+    "body": [
+      "inline namespace ${1:NamespaceName} {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "inline namespace declaration"
   },
   "Int32 variable": {
     "prefix": "vi",
@@ -272,35 +431,192 @@
   "interface": {
     "prefix": "ie",
     "body": [
-      "__interface ${1:InterfaceName}",
-      "{",
+      "__interface ${1:InterfaceName} {",
       "\t${TM_SELECTED_TEXT}${0}",
       "};"
     ],
     "description": "interface declaration"
   },
+  "multi-line comment": {
+    "prefix": "mc",
+    "body": [
+      "/*${TM_SELECTED_TEXT}${0}*/"
+    ],
+    "description": "multi-line comment"
+  },
   "namespace": {
     "prefix": "ns",
     "body": [
-      "namespace ${1:NamespaceName}",
-      "{",
+      "namespace ${1:NamespaceName} {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
     "description": "namespace declaration"
   },
+  "noexcept operator": {
+    "prefix": "ne",
+    "body": [
+      "noexcept(${1:expression}${TM_SELECTED_TEXT})${0}"
+    ],
+    "description": "noexcept operator"
+  },
+  "reinterpret cast": {
+    "prefix": "cor",
+    "body": [
+      "reinterpret_cast<${1:T}>(${2:expression})${0}"
+    ],
+    "description": "reinterpret cast"
+  },
+  "return keyword": {
+    "prefix": "r",
+    "body": [
+      "return${0}"
+    ],
+    "description": "return keyword"
+  },
+  "return statement": {
+    "prefix": "re",
+    "body": [
+      "return;${0}"
+    ],
+    "description": "return statement"
+  },
+  "sizeof keyword": {
+    "prefix": "so",
+    "body": [
+      "sizeof${0}"
+    ],
+    "description": "sizeof keyword"
+  },
+  "static assert": {
+    "prefix": "sa",
+    "body": [
+      "static_assert(${1:expression}${TM_SELECTED_TEXT})${0}"
+    ],
+    "description": "static assert"
+  },
+  "static cast": {
+    "prefix": "cos",
+    "body": [
+      "static_cast<${1:T}>(${2:expression})${0}"
+    ],
+    "description": "static cast"
+  },
+  "static const": {
+    "prefix": "sk",
+    "body": [
+      "static const ${1:T} ${2:x} = ${3:nullptr};${0}"
+    ],
+    "description": "static const declaration"
+  },
+  "static const function": {
+    "prefix": "skf",
+    "body": [
+      "static const ${1:void} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "static const function declaration"
+  },
+  "static const function (with parameters)": {
+    "prefix": "skf_",
+    "body": [
+      "static const ${1:void} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "static const function declaration (with parameters)"
+  },
+  "static constexpr function": {
+    "prefix": "skef",
+    "body": [
+      "static constexpr ${1:void} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "static constexpr function declaration"
+  },
+  "static constexpr function (with parameters)": {
+    "prefix": "skef_",
+    "body": [
+      "static constexpr ${1:void} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "static constexpr function declaration (with parameters)"
+  },
+  "static function": {
+    "prefix": "sf",
+    "body": [
+      "static ${1:void} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "static function declaration"
+  },
+  "static function (with parameters)": {
+    "prefix": "sf_",
+    "body": [
+      "static ${1:void} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "static function declaration (with parameters)"
+  },
+  "static inline const function": {
+    "prefix": "silkf",
+    "body": [
+      "static inline const ${1:void} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "static inline const function declaration"
+  },
+  "static inline const function (with parameters)": {
+    "prefix": "silkf_",
+    "body": [
+      "static inline const ${1:void} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "static inline const function declaration (with parameters)"
+  },
+  "static inline function": {
+    "prefix": "silf",
+    "body": [
+      "static inline ${1:void} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "static inline function declaration"
+  },
+  "static inline function (with parameters)": {
+    "prefix": "silf_",
+    "body": [
+      "static inline ${1:void} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "static inline function declaration (with parameters)"
+  },
+  "string type": {
+    "prefix": "s",
+    "body": [
+      "std::string${0}"
+    ],
+    "description": "string type"
+  },
   "String variable": {
     "prefix": "vs",
     "body": [
-      "string ${1:s} = ${2:nullptr};${0}"
+      "std::string ${1:s} = ${2:nullptr};${0}"
     ],
     "description": "String variable declaration"
   },
   "struct": {
     "prefix": "st",
     "body": [
-      "struct ${1:StructName}",
-      "{",
+      "struct ${1:StructName} {",
       "\t${TM_SELECTED_TEXT}${0}",
       "};"
     ],
@@ -309,8 +625,7 @@
   "switch": {
     "prefix": "sh",
     "body": [
-      "switch (${1:SwitchOn})",
-      "{",
+      "switch (${1:SwitchOn}) {",
       "\t${2:default:",
       "    break;}${0}",
       "}"
@@ -320,19 +635,31 @@
   "template": {
     "prefix": "t",
     "body": [
-      "template <${1:typename} ${2:T}${TM_SELECTED_TEXT}>${0}"
+      "template <${1:typename} ${2:T}>${0}"
     ],
     "description": "template"
+  },
+  "template with 2 parameters": {
+    "prefix": "t2",
+    "body": [
+      "template <${1:typename} ${2:T}, ${3:typename} ${4:T2}>${0}"
+    ],
+    "description": "template with 2 parameters"
+  },
+  "throw keyword": {
+    "prefix": "tw",
+    "body": [
+      "throw${0}"
+    ],
+    "description": "throw keyword"
   },
   "try-catch": {
     "prefix": "tc",
     "body": [
-      "try",
-      "{",
+      "try {",
       "\t${0}",
       "}",
-      "catch (const std::exception&)",
-      "{",
+      "catch (const std::exception&) {",
       "}"
     ],
     "description": "try-catch statement"
@@ -340,25 +667,87 @@
   "union": {
     "prefix": "un",
     "body": [
-      "union ${1:UnionName}",
-      "{",
+      "union ${1:UnionName} {",
       "\t${TM_SELECTED_TEXT}${0}",
       "};"
     ],
     "description": "union"
   },
+  "unsigned keyword": {
+    "prefix": "us",
+    "body": [
+      "unsigned${0}"
+    ],
+    "description": "unsigned keyword"
+  },
+  "using declaration": {
+    "prefix": "u",
+    "body": [
+      "using ${1:NamespaceName}::${2:Name};${0}"
+    ],
+    "description": "using declaration"
+  },
+  "using namespace": {
+    "prefix": "uns",
+    "body": [
+      "using namespace ${1:NamespaceName}${TM_SELECTED_TEXT};${0}"
+    ],
+    "description": "using namespace"
+  },
   "variable declaration": {
     "prefix": "v",
     "body": [
-      "${1:T} ${2:x} = ${3:nullptr};${0}"
+      "${1:auto} ${2:x} = ${3:nullptr};${0}"
     ],
     "description": " variable declaration"
+  },
+  "virtual function": {
+    "prefix": "vf",
+    "body": [
+      "virtual ${1:void} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "virtual function declaration"
+  },
+  "virtual function (with parameters)": {
+    "prefix": "vf_",
+    "body": [
+      "virtual ${1:void} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "virtual function declaration (with parameters)"
+  },
+  "virtual inline function": {
+    "prefix": "vilf",
+    "body": [
+      "virtual inline ${1:void} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "virtual inline function declaration"
+  },
+  "virtual inline function (with parameters)": {
+    "prefix": "vilf_",
+    "body": [
+      "virtual inline ${1:void} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "virtual inline function declaration (with parameters)"
+  },
+  "volatile keyword": {
+    "prefix": "ve",
+    "body": [
+      "volatile${0}"
+    ],
+    "description": "volatile keyword"
   },
   "while": {
     "prefix": "we",
     "body": [
-      "while (${1:true})",
-      "{",
+      "while (${1:true}) {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],

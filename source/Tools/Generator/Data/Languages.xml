@@ -38,6 +38,13 @@
               <New Id="Static" Keyword="Shared" />
               <New Id="Virtual" Keyword="Overridable" />
             </Set>
+            <Set Language="Cpp">
+              <New Id="Const" Shortcut="k" Keyword="const" />
+              <New Id="ConstExpr" Shortcut="ke" Keyword="constexpr" />
+              <New Id="Inline" Shortcut="il" Keyword="inline" />
+              <New Id="Static" Keyword="static" />
+              <New Id="Virtual" Keyword="virtual" />
+            </Set>
           </Records>
         </Entity>
         <Entity Name="Type">
@@ -86,7 +93,7 @@
           </BaseRecords>
           <Records>
             <Set Language="CSharp">
-              <New Id="This" Title="containing type name" Keyword="this" DefaultValue="null" />
+              <New Id="This" Title="this" Keyword="this" DefaultValue="null" />
               <New Id="Void" Title="void" Keyword="void" />
               <New Id="Boolean" Keyword="bool" DefaultValue="false" />
               <New Id="Int32" Keyword="int" />
@@ -100,7 +107,7 @@
               <New Id="DateTime" Keyword="DateTime" DefaultValue="DateTime.MinValue" Namespace="System" />
             </Set>
             <Set Language="VisualBasic">
-              <New Id="This" Title="containing type name" Keyword="this" DefaultValue="Nothing" />
+              <New Id="This" Title="this" Keyword="this" DefaultValue="Nothing" />
               <New Id="Void" Title="Sub" Keyword="Sub" />
               <New Id="Boolean" Keyword="Boolean" DefaultValue="False" />
               <New Id="Int32" Keyword="Integer" />
@@ -117,7 +124,7 @@
               <New Id="Void" Title="void" Keyword="void" />
               <New Id="Boolean" Keyword="bool" DefaultValue="false" />
               <New Id="Int32" Keyword="int" />
-              <New Id="String" Keyword="string" DefaultValue="nullptr" />
+              <New Id="String" Title="string" Keyword="std::string" DefaultValue="nullptr" />
               <New Id="Double" Keyword="double" />
               <New Id="Single" Keyword="float" />
               <New Id="Char" Keyword="char" DefaultValue="0" />

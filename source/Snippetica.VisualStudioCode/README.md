@@ -7,7 +7,7 @@
 
 Group|Count| |
 --- | --- | ---:
-[Snippetica.Cpp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|39|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=cpp)
+[Snippetica.Cpp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|89|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=cpp)
 [Snippetica.CSharp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|214|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=csharp)
 [Snippetica.Html](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Html/README.md)|221|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=html)
 [Snippetica.Json](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Json/README.md)|18|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=json)

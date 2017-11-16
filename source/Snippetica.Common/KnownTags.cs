@@ -44,6 +44,9 @@ namespace Snippetica
 
         public const string GenerateStaticModifier = GeneratePrefix + "StaticModifier";
         public const string GenerateVirtualModifier = GeneratePrefix + "VirtualModifier";
+        public const string GenerateInlineModifier = GeneratePrefix + "InlineModifier";
+        public const string GenerateConstModifier = GeneratePrefix + "ConstModifier";
+        public const string GenerateConstExprModifier = GeneratePrefix + "ConstExprModifier";
         public const string GenerateInitializer = GeneratePrefix + "Initializer";
         public const string GenerateParameters = GeneratePrefix + "Parameters";
         public const string GenerateArguments = GeneratePrefix + "Arguments";

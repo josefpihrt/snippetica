@@ -62,19 +62,44 @@
   <ItemGroup>
     <None Include="README.md" />
     <None Include="License.txt" />
+    <None Include="Snippetica.Cpp\ConstClass.snippet" />
+    <None Include="Snippetica.Cpp\DefaultKeyword.snippet" />
+    <None Include="Snippetica.Cpp\NoExceptOperator.snippet" />
+    <None Include="Snippetica.Cpp\ThrowKeyword.snippet" />
+    <None Include="Snippetica.Cpp\SizeOfKeyword.snippet" />
+    <None Include="Snippetica.Cpp\VolatileKeyword.snippet" />
+    <None Include="Snippetica.Cpp\UnsignedKeyword.snippet" />
+    <None Include="Snippetica.Cpp\BreakStatement.snippet" />
+    <None Include="Snippetica.Cpp\ContinueStatement.snippet" />
+    <None Include="Snippetica.Cpp\ReturnStatement.snippet" />
+    <None Include="Snippetica.Cpp\AutoKeyword.snippet" />
+    <None Include="Snippetica.Cpp\IfConstExpr.snippet" />
+    <None Include="Snippetica.Cpp\ReturnKeyword.snippet" />
+    <None Include="Snippetica.Cpp\StaticAssert.snippet" />
     <None Include="Snippetica.Cpp\AutoGeneration\ArrayOfTVariable.snippet" />
-    <None Include="Snippetica.Cpp\AutoGeneration\Function.snippet" />
+    <None Include="Snippetica.Cpp\AutoGeneration\Function.snippet">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Snippetica.Cpp\BooleanVariable.snippet" />
-    <None Include="Snippetica.Cpp\Dev\ReinterpretCast.snippet" />
-    <None Include="Snippetica.Cpp\Dev\ConstCast.snippet" />
-    <None Include="Snippetica.Cpp\Dev\StaticCast.snippet" />
-    <None Include="Snippetica.Cpp\Dev\DynamicCast.snippet" />
+    <None Include="Snippetica.Cpp\ReinterpretCast.snippet" />
+    <None Include="Snippetica.Cpp\ConstCast.snippet" />
+    <None Include="Snippetica.Cpp\StaticCast.snippet" />
+    <None Include="Snippetica.Cpp\DynamicCast.snippet" />
+    <None Include="Snippetica.Cpp\MultilineComment.snippet" />
     <None Include="Snippetica.Cpp\Int32Variable.snippet" />
+    <None Include="Snippetica.Cpp\InlineNamespace.snippet" />
+    <None Include="Snippetica.Cpp\Attribute.snippet" />
+    <None Include="Snippetica.Cpp\TemplateWithTwoParameters.snippet" />
+    <None Include="Snippetica.Cpp\ConstStruct.snippet" />
+    <None Include="Snippetica.Cpp\UsingDeclaration.snippet" />
+    <None Include="Snippetica.Cpp\UsingNamespace.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveIfElse.snippet" />
+    <None Include="Snippetica.Cpp\StringType.snippet" />
     <None Include="Snippetica.Cpp\Template.snippet" />
     <None Include="Snippetica.Cpp\StringVariable.snippet" />
-    <None Include="Snippetica.Cpp\Dev\AutoGeneration\ConstExpr.snippet" />
-    <None Include="Snippetica.Cpp\AutoGeneration\Const.snippet" />
+    <None Include="Snippetica.Cpp\AutoGeneration\Const.snippet">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Snippetica.Cpp\Variable.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveError.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveDefine.snippet" />
@@ -85,7 +110,7 @@
     <None Include="Snippetica.Cpp\Class.snippet" />
     <None Include="Snippetica.Cpp\Constructor.snippet" />
     <None Include="Snippetica.Cpp\Destructor.snippet" />
-    <None Include="Snippetica.Cpp\Dev\ClassWithInlineConstructorDestructor.snippet" />
+    <None Include="Snippetica.Cpp\ClassWithInlineConstructorDestructor.snippet" />
     <None Include="Snippetica.Cpp\DoWhile.snippet" />
     <None Include="Snippetica.Cpp\Else.snippet" />
     <None Include="Snippetica.Cpp\Enum.snippet" />
@@ -134,7 +159,9 @@
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceProperty.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceReadOnlyProperty.snippet" />
     <None Include="Snippetica.CSharp\Dev\AutoGeneration\LocalFunction.snippet" />
-    <None Include="Snippetica.CSharp\AutoGeneration\Method.snippet" />
+    <None Include="Snippetica.CSharp\AutoGeneration\Method.snippet">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Snippetica.CSharp\AutoGeneration\NewVariable.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ParameterArray.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyAutoProperty.snippet" />
@@ -792,6 +819,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Snippetica.Cpp\Dev\AutoGeneration\" />
     <Folder Include="Snippetica.Xml\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

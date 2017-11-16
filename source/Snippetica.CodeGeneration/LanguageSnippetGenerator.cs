@@ -41,6 +41,15 @@ namespace Snippetica.CodeGeneration
             if (snippet.HasTag(KnownTags.GenerateVirtualModifier))
                 commands.AddMultiCommand(CommandUtility.VirtualCommand);
 
+            if (snippet.HasTag(KnownTags.GenerateConstModifier))
+                commands.AddMultiCommand(CommandUtility.ConstCommand);
+
+            if (snippet.HasTag(KnownTags.GenerateConstExprModifier))
+                commands.AddMultiCommand(CommandUtility.ConstExprCommand);
+
+            if (snippet.HasTag(KnownTags.GenerateInlineModifier))
+                commands.AddMultiCommand(CommandUtility.InlineCommand);
+
             if (snippet.HasTag(KnownTags.GenerateInitializer))
                 commands.AddMultiCommand(CommandUtility.InitializerCommand);
 
