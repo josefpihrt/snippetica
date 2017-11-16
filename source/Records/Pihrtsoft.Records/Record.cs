@@ -96,7 +96,7 @@ namespace Pihrtsoft.Records
                 }
 
                 IEnumerable<string> properties = Properties
-                    .Where(f => !DefaultComparer.NameEquals(f.Key, "Id"))
+                    .Where(f => !PropertyDefinition.IsReservedName(f.Key))
                     .Select(f =>
                     {
                         if (f.Value is List<object> list)

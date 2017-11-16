@@ -12,8 +12,8 @@
       <Entities>
         <Entity Name="Modifier">
           <BaseRecords>
-            <Add Tag="AccessModifier">
-              <New Id="Public" Shortcut="" Tag="Default" />
+            <Add Tags="AccessModifier">
+              <New Id="Public" Shortcut="" Tags="Default" />
             </Add>
             <New Id="Static" Shortcut="s" />
           </BaseRecords>
@@ -41,7 +41,7 @@
           <BaseRecords>
             <New Id="Void" Shortcut="{x}" />
             <New Id="Boolean" Shortcut="b" />
-            <Add Tag="Disabled">
+            <Add Tags="Disabled">
               <New Id="Char" Shortcut="c" />
             </Add>
           </BaseRecords>
