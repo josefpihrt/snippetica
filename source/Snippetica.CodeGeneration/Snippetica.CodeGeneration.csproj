@@ -60,6 +60,9 @@
     <Compile Include="Commands\ShortcutToLowercaseCommand.cs" />
     <Compile Include="Commands\SuffixFileNameCommand.cs" />
     <Compile Include="CppDefinition.cs" />
+    <Compile Include="KeywordDefinition.cs" />
+    <Compile Include="KeywordDefinitionCollection.cs" />
+    <Compile Include="LanguageDefinitions.cs" />
     <Compile Include="Markdown\ProjectReadmeSettings.cs" />
     <Compile Include="PackageGenerator.cs" />
     <Compile Include="SnippetEnvironment.cs" />
@@ -113,7 +116,6 @@
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\MultiCommandCollection.cs" />
     <Compile Include="LanguageDefinition.cs" />
-    <Compile Include="LanguageDefinitionMapper.cs" />
     <Compile Include="LanguageExecutionContext.cs" />
     <Compile Include="ModifierDefinition.cs" />
     <Compile Include="ModifierDefinitionCollection.cs" />

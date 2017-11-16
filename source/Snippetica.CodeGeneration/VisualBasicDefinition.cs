@@ -18,7 +18,7 @@ namespace Snippetica.CodeGeneration
 
         public override string GetDefaultParameter()
         {
-            return $"parameter As {Object.Keyword}";
+            return $"parameter As {ObjectType.Keyword}";
         }
 
         public override string GetDictionaryInitializer(string value)

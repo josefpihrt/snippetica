@@ -113,12 +113,33 @@
     ],
     "description": "#using preprocessor directive"
   },
+  "alignas keyword": {
+    "prefix": "aa",
+    "body": [
+      "alignas${0}"
+    ],
+    "description": "alignas keyword"
+  },
+  "alignof keyword": {
+    "prefix": "ao",
+    "body": [
+      "alignof${0}"
+    ],
+    "description": "alignof keyword"
+  },
   "array variable": {
     "prefix": "va",
     "body": [
       "${1:T} ${2:items}[${3:0}];${0}"
     ],
     "description": "array variable declaration"
+  },
+  "array variable (with initializer)": {
+    "prefix": "va_",
+    "body": [
+      "${1:T} ${2:items}[] = { ${3:nullptr} };${0}"
+    ],
+    "description": "array variable declaration (with initializer)"
   },
   "attribute": {
     "prefix": "ae",
@@ -141,12 +162,30 @@
     ],
     "description": "Boolean variable declaration"
   },
+  "braces": {
+    "prefix": "b",
+    "body": [
+      "{",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "braces"
+  },
   "break statement": {
     "prefix": "bk",
     "body": [
       "break;${0}"
     ],
     "description": "break statement"
+  },
+  "catch": {
+    "prefix": "catch",
+    "body": [
+      "catch (const ${1:std::exception}& ${2:e}) {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "catch clause"
   },
   "class": {
     "prefix": "c",
@@ -247,14 +286,14 @@
     ],
     "description": "constexpr function declaration (with parameters)"
   },
-  "constructor": {
-    "prefix": "cr",
+  "constructor (with parameters)": {
+    "prefix": "cr_",
     "body": [
-      "${1:TypeName}() {",
-      "\t${0}",
+      "${1:TypeName}(${2:T parameter}) {",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
-    "description": "constructor declaration"
+    "description": "constructor declaration (with parameters)"
   },
   "continue statement": {
     "prefix": "ce",
@@ -263,12 +302,56 @@
     ],
     "description": "continue statement"
   },
+  "copy assignment operator": {
+    "prefix": "o_ca",
+    "body": [
+      "${1:TypeName}& operator=(${1} ${2:other}) {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "\treturn *this;",
+      "}"
+    ],
+    "description": "copy assignment operator"
+  },
+  "copy assignment operator 2": {
+    "prefix": "o_ca2",
+    "body": [
+      "${1:TypeName}& operator=(const ${1}& ${2:other}) {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "\treturn *this;",
+      "}"
+    ],
+    "description": "copy assignment operator 2"
+  },
+  "copy constructor": {
+    "prefix": "ccr",
+    "body": [
+      "",
+      "      ${1:TypeName}(const ${1}& ${2:x}) {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "copy constructor"
+  },
+  "decltype keyword": {
+    "prefix": "dt",
+    "body": [
+      "decltype${0}"
+    ],
+    "description": "decltype keyword"
+  },
   "default keyword": {
     "prefix": "d",
     "body": [
       "default${0}"
     ],
     "description": "default keyword"
+  },
+  "delete keyword": {
+    "prefix": "de",
+    "body": [
+      "delete${0}"
+    ],
+    "description": "delete keyword"
   },
   "destructor": {
     "prefix": "dr",
@@ -331,6 +414,13 @@
     ],
     "description": "enum class declaration"
   },
+  "extern keyword": {
+    "prefix": "en",
+    "body": [
+      "extern${0}"
+    ],
+    "description": "extern keyword"
+  },
   "for": {
     "prefix": "fr",
     "body": [
@@ -357,6 +447,13 @@
       "}"
     ],
     "description": "for statement (reversed)"
+  },
+  "friend keyword": {
+    "prefix": "fd",
+    "body": [
+      "friend${0}"
+    ],
+    "description": "friend keyword"
   },
   "if": {
     "prefix": "if",
@@ -437,6 +534,62 @@
     ],
     "description": "interface declaration"
   },
+  "lambda expression": {
+    "prefix": "l",
+    "body": [
+      "[${1:&}]() -> ${2:T} {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "lambda expression"
+  },
+  "lambda expression (minimal)": {
+    "prefix": "lm",
+    "body": [
+      "[${1:&}]() {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "lambda expression (minimal)"
+  },
+  "lambda expression (minimal) (with parameters)": {
+    "prefix": "lm_",
+    "body": [
+      "[${1:&}](${2:T parameter}) {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "lambda expression (minimal) (with parameters)"
+  },
+  "lambda expression (with parameters)": {
+    "prefix": "l_",
+    "body": [
+      "[${1:&}](${2:T parameter}) -> ${3:T} {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "lambda expression (with parameters)"
+  },
+  "move assignment operator": {
+    "prefix": "op_ma",
+    "body": [
+      "${1:TypeName}& operator=(${1}&& ${2:other}) {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "\treturn *this;",
+      "}"
+    ],
+    "description": "move assignment operator"
+  },
+  "move constructor": {
+    "prefix": "mcr",
+    "body": [
+      "",
+      "      ${1:TypeName}(${1}&& ${2:x}) {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "move constructor"
+  },
   "multi-line comment": {
     "prefix": "mc",
     "body": [
@@ -453,12 +606,26 @@
     ],
     "description": "namespace declaration"
   },
-  "noexcept operator": {
+  "noexcept keyword": {
     "prefix": "ne",
     "body": [
-      "noexcept(${1:expression}${TM_SELECTED_TEXT})${0}"
+      "noexcept${0}"
     ],
-    "description": "noexcept operator"
+    "description": "noexcept keyword"
+  },
+  "nullptr keyword": {
+    "prefix": "np",
+    "body": [
+      "nullptr${0}"
+    ],
+    "description": "nullptr keyword"
+  },
+  "operator keyword": {
+    "prefix": "or",
+    "body": [
+      "operator${0}"
+    ],
+    "description": "operator keyword"
   },
   "reinterpret cast": {
     "prefix": "cor",
@@ -466,6 +633,13 @@
       "reinterpret_cast<${1:T}>(${2:expression})${0}"
     ],
     "description": "reinterpret cast"
+  },
+  "return false": {
+    "prefix": "ref",
+    "body": [
+      "return false;${0}"
+    ],
+    "description": "return false"
   },
   "return keyword": {
     "prefix": "r",
@@ -480,6 +654,13 @@
       "return;${0}"
     ],
     "description": "return statement"
+  },
+  "return true": {
+    "prefix": "ret",
+    "body": [
+      "return true;${0}"
+    ],
+    "description": "return true"
   },
   "sizeof keyword": {
     "prefix": "so",
@@ -527,6 +708,13 @@
     ],
     "description": "static const function declaration (with parameters)"
   },
+  "static const variable declaration": {
+    "prefix": "skv",
+    "body": [
+      "static const ${1:T} ${2:x} = ${3:nullptr};${0}"
+    ],
+    "description": "static const  variable declaration"
+  },
   "static constexpr function": {
     "prefix": "skef",
     "body": [
@@ -544,6 +732,13 @@
       "}"
     ],
     "description": "static constexpr function declaration (with parameters)"
+  },
+  "static constexpr variable declaration": {
+    "prefix": "skev",
+    "body": [
+      "static constexpr ${1:T} ${2:x} = ${3:nullptr};${0}"
+    ],
+    "description": "static constexpr  variable declaration"
   },
   "static function": {
     "prefix": "sf",
@@ -581,6 +776,13 @@
     ],
     "description": "static inline const function declaration (with parameters)"
   },
+  "static inline const variable declaration": {
+    "prefix": "silkv",
+    "body": [
+      "static inline const ${1:T} ${2:x} = ${3:nullptr};${0}"
+    ],
+    "description": "static inline const  variable declaration"
+  },
   "static inline function": {
     "prefix": "silf",
     "body": [
@@ -598,6 +800,20 @@
       "}"
     ],
     "description": "static inline function declaration (with parameters)"
+  },
+  "static inline variable declaration": {
+    "prefix": "silv",
+    "body": [
+      "static inline ${1:T} ${2:x} = ${3:nullptr};${0}"
+    ],
+    "description": "static inline  variable declaration"
+  },
+  "static variable declaration": {
+    "prefix": "sv",
+    "body": [
+      "static ${1:T} ${2:x} = ${3:nullptr};${0}"
+    ],
+    "description": "static  variable declaration"
   },
   "string type": {
     "prefix": "s",
@@ -646,6 +862,13 @@
     ],
     "description": "template with 2 parameters"
   },
+  "thread_local keyword": {
+    "prefix": "tl",
+    "body": [
+      "thread_local${0}"
+    ],
+    "description": "thread_local keyword"
+  },
   "throw keyword": {
     "prefix": "tw",
     "body": [
@@ -657,12 +880,33 @@
     "prefix": "tc",
     "body": [
       "try {",
-      "\t${0}",
+      "\t${TM_SELECTED_TEXT}${0}",
       "}",
-      "catch (const std::exception&) {",
+      "catch (const ${1:std::exception}& ${2:e}) {",
       "}"
     ],
-    "description": "try-catch statement"
+    "description": "try-catch"
+  },
+  "typedef keyword": {
+    "prefix": "td",
+    "body": [
+      "typedef${0}"
+    ],
+    "description": "typedef keyword"
+  },
+  "typeid keyword": {
+    "prefix": "ti",
+    "body": [
+      "typeid${0}"
+    ],
+    "description": "typeid keyword"
+  },
+  "typename keyword": {
+    "prefix": "tn",
+    "body": [
+      "typename${0}"
+    ],
+    "description": "typename keyword"
   },
   "union": {
     "prefix": "un",
@@ -693,13 +937,6 @@
       "using namespace ${1:NamespaceName}${TM_SELECTED_TEXT};${0}"
     ],
     "description": "using namespace"
-  },
-  "variable declaration": {
-    "prefix": "v",
-    "body": [
-      "${1:auto} ${2:x} = ${3:nullptr};${0}"
-    ],
-    "description": " variable declaration"
   },
   "virtual function": {
     "prefix": "vf",

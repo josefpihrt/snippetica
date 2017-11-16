@@ -1,0 +1,32 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>lambda expression (minimal)</Title>
+    <Shortcut>lm</Shortcut>
+    <Description>lambda expression (minimal)</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-GenerateParameters</Keyword>
+      <Keyword>Meta-GenerateUnchanged</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal Editable="false">
+        <ID>_parameterList</ID>
+        <Default>()</Default>
+      </Literal>
+      <Literal>
+        <ID>captures</ID>
+        <ToolTip>List of captures</ToolTip>
+        <Default>&amp;</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="Cpp"><![CDATA[[$captures$]$_parameterList$ {
+	$selected$$end$
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

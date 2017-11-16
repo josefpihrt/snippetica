@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -77,6 +78,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\HtmlElements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\Types.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Data\Shortcuts.xml">

@@ -75,6 +75,21 @@ namespace Snippetica.CodeGeneration
                 }
             }
 
+            KeywordDefinitionCollection keywords = LanguageDefinition.GetKeywords(directory.Language);
+
+            if (keywords != null)
+            {
+                foreach (KeywordDefinition keyword in keywords)
+                {
+                    if (keyword.IsDevelopment == isDevelopment)
+                    {
+                        Snippet snippet = keyword.ToSnippet();
+                        snippet.Language = directory.Language;
+                        snippets.Add(snippet);
+                    }
+                }
+            }
+
             string autoGenerationPath = Path.Combine(directory.Path, KnownNames.AutoGeneration);
 
             if (Directory.Exists(autoGenerationPath))

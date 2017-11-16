@@ -33,7 +33,7 @@ namespace Snippetica.CodeGeneration
 
             ShortcutInfo.SerializeToXml(Path.Combine(VisualStudioExtensionProjectPath, "Shortcuts.xml"), _shortcuts);
 
-            LoadLanguageDefinitions();
+            LoadLanguages();
 
             SaveChangedSnippets(directories);
 
@@ -162,16 +162,19 @@ namespace Snippetica.CodeGeneration
                 .ToArray();
         }
 
-        private static void LoadLanguageDefinitions()
+        private static void LoadLanguages()
         {
-            LanguageDefinition[] languageDefinitions = Document.ReadRecords(@"..\..\Data\Languages.xml")
+            Document.ReadRecords(@"..\..\Data\Languages.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
-                .ToLanguageDefinitions()
-                .ToArray();
+                .LoadLanguages();
 
-            LanguageDefinition.CSharp = languageDefinitions.First(f => f.Language == Language.CSharp);
-            LanguageDefinition.VisualBasic = languageDefinitions.First(f => f.Language == Language.VisualBasic);
-            LanguageDefinition.Cpp = languageDefinitions.First(f => f.Language == Language.Cpp);
+            foreach (TypeDefinition typeDefinition in Document.ReadRecords(@"..\..\Data\Types.xml")
+                .Where(f => !f.HasTag(KnownTags.Disabled))
+                .Select(Mapper.CreateType))
+            {
+                LanguageDefinitions.CSharp.Types.Add(typeDefinition);
+                LanguageDefinitions.VisualBasic.Types.Add(typeDefinition);
+            }
         }
     }
 }

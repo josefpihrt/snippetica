@@ -62,19 +62,32 @@
   <ItemGroup>
     <None Include="README.md" />
     <None Include="License.txt" />
+    <None Include="Snippetica.Cpp\AutoGeneration\LambdaExpression.snippet">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Snippetica.Cpp\AutoGeneration\LambdaExpressionMinimal.snippet">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Snippetica.Cpp\Braces.snippet" />
     <None Include="Snippetica.Cpp\ConstClass.snippet" />
-    <None Include="Snippetica.Cpp\DefaultKeyword.snippet" />
-    <None Include="Snippetica.Cpp\NoExceptOperator.snippet" />
-    <None Include="Snippetica.Cpp\ThrowKeyword.snippet" />
-    <None Include="Snippetica.Cpp\SizeOfKeyword.snippet" />
-    <None Include="Snippetica.Cpp\VolatileKeyword.snippet" />
-    <None Include="Snippetica.Cpp\UnsignedKeyword.snippet" />
+    <None Include="Snippetica.Cpp\MoveConstructor.snippet" />
+    <None Include="Snippetica.Cpp\CopyConstructor.snippet" />
+    <None Include="Snippetica.Cpp\MoveAssignmentOperator.snippet">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Snippetica.Cpp\CopyAssignmentOperator2.snippet">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Snippetica.Cpp\CopyAssignmentOperator.snippet">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Snippetica.Cpp\ReturnFalse.snippet" />
+    <None Include="Snippetica.Cpp\ReturnTrue.snippet" />
+    <None Include="Snippetica.Cpp\Catch.snippet" />
     <None Include="Snippetica.Cpp\BreakStatement.snippet" />
     <None Include="Snippetica.Cpp\ContinueStatement.snippet" />
     <None Include="Snippetica.Cpp\ReturnStatement.snippet" />
-    <None Include="Snippetica.Cpp\AutoKeyword.snippet" />
     <None Include="Snippetica.Cpp\IfConstExpr.snippet" />
-    <None Include="Snippetica.Cpp\ReturnKeyword.snippet" />
     <None Include="Snippetica.Cpp\StaticAssert.snippet" />
     <None Include="Snippetica.Cpp\AutoGeneration\ArrayOfTVariable.snippet" />
     <None Include="Snippetica.Cpp\AutoGeneration\Function.snippet">
@@ -100,7 +113,7 @@
     <None Include="Snippetica.Cpp\AutoGeneration\Const.snippet">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Snippetica.Cpp\Variable.snippet" />
+    <None Include="Snippetica.Cpp\AutoGeneration\Variable.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveError.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveDefine.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveUsing.snippet" />
@@ -108,7 +121,7 @@
     <None Include="Snippetica.Cpp\PreprocessorDirectiveLine.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveInclude.snippet" />
     <None Include="Snippetica.Cpp\Class.snippet" />
-    <None Include="Snippetica.Cpp\Constructor.snippet" />
+    <None Include="Snippetica.Cpp\AutoGeneration\Constructor.snippet" />
     <None Include="Snippetica.Cpp\Destructor.snippet" />
     <None Include="Snippetica.Cpp\ClassWithInlineConstructorDestructor.snippet" />
     <None Include="Snippetica.Cpp\DoWhile.snippet" />
@@ -128,7 +141,7 @@
     <None Include="Snippetica.Cpp\PreprocessorDirectiveRegion.snippet" />
     <None Include="Snippetica.Cpp\Struct.snippet" />
     <None Include="Snippetica.Cpp\Switch.snippet" />
-    <None Include="Snippetica.Cpp\Try.snippet" />
+    <None Include="Snippetica.Cpp\TryCatch.snippet" />
     <None Include="Snippetica.Cpp\Union.snippet" />
     <None Include="Snippetica.Cpp\While.snippet" />
     <None Include="Snippetica.CSharp\AttributeClass.snippet" />

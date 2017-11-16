@@ -16,7 +16,7 @@ namespace Snippetica.CodeGeneration.Commands
         {
             LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
-            AddInitializer(snippet, GetInitializer(snippet, language), language.Object.DefaultValue);
+            AddInitializer(snippet, GetInitializer(snippet, language), language.GetDefaultValue());
         }
 
         private string GetInitializer(Snippet snippet, LanguageDefinition language)

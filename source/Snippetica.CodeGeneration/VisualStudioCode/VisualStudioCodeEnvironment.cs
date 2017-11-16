@@ -23,11 +23,11 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
             switch (directory.Language)
             {
                 case Language.VisualBasic:
-                    return new VisualStudioCodeSnippetGenerator(LanguageDefinition.VisualBasic);
+                    return new VisualStudioCodeSnippetGenerator(LanguageDefinitions.VisualBasic);
                 case Language.CSharp:
-                    return new VisualStudioCodeSnippetGenerator(LanguageDefinition.CSharp);
+                    return new VisualStudioCodeSnippetGenerator(LanguageDefinitions.CSharp);
                 case Language.Cpp:
-                    return new VisualStudioCodeSnippetGenerator(LanguageDefinition.Cpp);
+                    return new VisualStudioCodeSnippetGenerator(LanguageDefinitions.Cpp);
                 case Language.Xaml:
                     return new XamlSnippetGenerator();
                 case Language.Html:

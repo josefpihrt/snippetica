@@ -36,5 +36,10 @@ namespace Snippetica.CodeGeneration
         {
             return "";
         }
+
+        public override string GetDefaultValue()
+        {
+            return "nullptr";
+        }
     }
 }
