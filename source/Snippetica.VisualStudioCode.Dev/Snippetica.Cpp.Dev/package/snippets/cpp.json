@@ -1,1 +1,100 @@
-﻿{}
+﻿{
+  "alignas keyword": {
+    "prefix": "aa",
+    "body": [
+      "alignas${0}"
+    ],
+    "description": "alignas keyword"
+  },
+  "alignof keyword": {
+    "prefix": "ao",
+    "body": [
+      "alignof${0}"
+    ],
+    "description": "alignof keyword"
+  },
+  "auto keyword": {
+    "prefix": "a",
+    "body": [
+      "auto${0}"
+    ],
+    "description": "auto keyword"
+  },
+  "delete keyword": {
+    "prefix": "de",
+    "body": [
+      "delete${0}"
+    ],
+    "description": "delete keyword"
+  },
+  "extern keyword": {
+    "prefix": "en",
+    "body": [
+      "extern${0}"
+    ],
+    "description": "extern keyword"
+  },
+  "friend keyword": {
+    "prefix": "fd",
+    "body": [
+      "friend${0}"
+    ],
+    "description": "friend keyword"
+  },
+  "noexcept keyword": {
+    "prefix": "ne",
+    "body": [
+      "noexcept${0}"
+    ],
+    "description": "noexcept keyword"
+  },
+  "thread_local keyword": {
+    "prefix": "tl",
+    "body": [
+      "thread_local${0}"
+    ],
+    "description": "thread_local keyword"
+  },
+  "throw keyword": {
+    "prefix": "tw",
+    "body": [
+      "throw${0}"
+    ],
+    "description": "throw keyword"
+  },
+  "typedef keyword": {
+    "prefix": "td",
+    "body": [
+      "typedef${0}"
+    ],
+    "description": "typedef keyword"
+  },
+  "typeid keyword": {
+    "prefix": "ti",
+    "body": [
+      "typeid${0}"
+    ],
+    "description": "typeid keyword"
+  },
+  "typename keyword": {
+    "prefix": "tn",
+    "body": [
+      "typename${0}"
+    ],
+    "description": "typename keyword"
+  },
+  "unsigned keyword": {
+    "prefix": "us",
+    "body": [
+      "unsigned${0}"
+    ],
+    "description": "unsigned keyword"
+  },
+  "volatile keyword": {
+    "prefix": "ve",
+    "body": [
+      "volatile${0}"
+    ],
+    "description": "volatile keyword"
+  }
+}

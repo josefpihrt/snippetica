@@ -124,26 +124,28 @@
       </Declarations>
       <Records>
         <Set Language="Cpp">
-          <New Name="AlignAs" Value="alignas" Shortcut="aa" />
-          <New Name="AlignOf" Value="alignof" Shortcut="ao" />
-          <New Name="Auto" Value="auto" Shortcut="a" />
+          <New Name="AlignAs" Value="alignas" Shortcut="aa" IsDevelopment="true" />
+          <New Name="AlignOf" Value="alignof" Shortcut="ao" IsDevelopment="true" />
+          <New Name="Auto" Value="auto" Shortcut="a" IsDevelopment="true" />
+          <New Name="ConstExpr" Value="constexpr" Shortcut="ce" />
           <New Name="DeclType" Value="decltype" Shortcut="dt" />
           <New Name="Default" Value="default" Shortcut="d" />
-          <New Name="Delete" Value="delete" Shortcut="de" />
-          <New Name="Extern" Value="extern" Shortcut="en" />
-          <New Name="Friend" Value="friend" Shortcut="fd" />
-          <New Name="NoExcept" Value="noexcept" Shortcut="ne" />
+          <New Name="Delete" Value="delete" Shortcut="de" IsDevelopment="true" />
+          <New Name="Extern" Value="extern" Shortcut="en" IsDevelopment="true" />
+          <New Name="Friend" Value="friend" Shortcut="fd" IsDevelopment="true" />
+          <New Name="Inline" Value="inline" Shortcut="il" />
+          <New Name="NoExcept" Value="noexcept" Shortcut="ne" IsDevelopment="true" />
           <New Name="NullPtr" Value="nullptr" Shortcut="np" />
           <New Name="Operator" Value="operator" Shortcut="or" />
           <New Name="Return" Value="return" Shortcut="r" />
           <New Name="SizeOf" Value="sizeof" Shortcut="so" />
-          <New Name="ThreadLocal" Value="thread_local" Shortcut="tl" />
-          <New Name="Throw" Value="throw" Shortcut="tw" />
-          <New Name="TypeDef" Value="typedef" Shortcut="td" />
-          <New Name="TypeId" Value="typeid" Shortcut="ti" />
-          <New Name="TypeName" Value="typename" Shortcut="tn" />
-          <New Name="Unsigned" Value="unsigned" Shortcut="us" />
-          <New Name="Volatile" Value="volatile" Shortcut="ve" />
+          <New Name="ThreadLocal" Value="thread_local" Shortcut="tl" IsDevelopment="true" />
+          <New Name="Throw" Value="throw" Shortcut="tw" IsDevelopment="true" />
+          <New Name="TypeDef" Value="typedef" Shortcut="td" IsDevelopment="true" />
+          <New Name="TypeId" Value="typeid" Shortcut="ti" IsDevelopment="true" />
+          <New Name="TypeName" Value="typename" Shortcut="tn" IsDevelopment="true" />
+          <New Name="Unsigned" Value="unsigned" Shortcut="us" IsDevelopment="true" />
+          <New Name="Volatile" Value="volatile" Shortcut="ve" IsDevelopment="true" />
         </Set>
       </Records>
     </Entity>

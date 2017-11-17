@@ -1,4 +1,22 @@
 ﻿{
+  " function": {
+    "prefix": "f",
+    "body": [
+      "${1:T} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": " function declaration"
+  },
+  " function (with parameters)": {
+    "prefix": "fx",
+    "body": [
+      "${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": " function declaration (with parameters)"
+  },
   "#define": {
     "prefix": "ppd",
     "body": [
@@ -117,19 +135,12 @@
     ],
     "description": "move assignment operator"
   },
-  "alignas keyword": {
-    "prefix": "aa",
+  "array variable": {
+    "prefix": "va",
     "body": [
-      "alignas${0}"
+      "${1:T} ${2:items}[${3:1}];${0}"
     ],
-    "description": "alignas keyword"
-  },
-  "alignof keyword": {
-    "prefix": "ao",
-    "body": [
-      "alignof${0}"
-    ],
-    "description": "alignof keyword"
+    "description": "array variable declaration"
   },
   "array variable (with initializer)": {
     "prefix": "vax",
@@ -144,13 +155,6 @@
       "[[${1:attribute}${TM_SELECTED_TEXT}]]${0}"
     ],
     "description": "attribute"
-  },
-  "auto keyword": {
-    "prefix": "a",
-    "body": [
-      "auto${0}"
-    ],
-    "description": "auto keyword"
   },
   "Boolean variable": {
     "prefix": "vb",
@@ -169,7 +173,7 @@
     "description": "braces"
   },
   "break statement": {
-    "prefix": "bk",
+    "prefix": "bs",
     "body": [
       "break;${0}"
     ],
@@ -204,8 +208,8 @@
     ],
     "description": "class declaration"
   },
-  "Class with Inline Constructor/Destructor": {
-    "prefix": "ci",
+  "class with inline constructor/destructor": {
+    "prefix": "cil",
     "body": [
       "class ${1:ClassName} {",
       "public:",
@@ -219,7 +223,7 @@
       "\t${TM_SELECTED_TEXT}${0}",
       "};"
     ],
-    "description": "Class declaration with inline constructor/destructor"
+    "description": "class declaration with inline constructor/destructor"
   },
   "conditional operator": {
     "prefix": "co",
@@ -240,9 +244,27 @@
     "body": [
       "const class ${1:ClassName} {",
       "\t${TM_SELECTED_TEXT}${0}",
-      "}"
+      "};"
     ],
     "description": "const class declaration"
+  },
+  "const function": {
+    "prefix": "cf",
+    "body": [
+      "const ${1:T} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "const function declaration"
+  },
+  "const function (with parameters)": {
+    "prefix": "cfx",
+    "body": [
+      "const ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "const function declaration (with parameters)"
   },
   "const struct": {
     "prefix": "cst",
@@ -252,6 +274,45 @@
       "};"
     ],
     "description": "const struct declaration"
+  },
+  "const variable declaration": {
+    "prefix": "cv",
+    "body": [
+      "const ${1:T} ${2:x} = ${3:nullptr};${0}"
+    ],
+    "description": "const  variable declaration"
+  },
+  "constexpr function": {
+    "prefix": "cef",
+    "body": [
+      "constexpr ${1:T} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "constexpr function declaration"
+  },
+  "constexpr function (with parameters)": {
+    "prefix": "cefx",
+    "body": [
+      "constexpr ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "constexpr function declaration (with parameters)"
+  },
+  "constexpr keyword": {
+    "prefix": "ce",
+    "body": [
+      "constexpr${0}"
+    ],
+    "description": "constexpr keyword"
+  },
+  "constexpr variable declaration": {
+    "prefix": "cev",
+    "body": [
+      "constexpr ${1:T} ${2:x} = ${3:nullptr};${0}"
+    ],
+    "description": "constexpr  variable declaration"
   },
   "constructor": {
     "prefix": "cr",
@@ -272,7 +333,7 @@
     "description": "constructor declaration (with parameters)"
   },
   "continue statement": {
-    "prefix": "ce",
+    "prefix": "cs",
     "body": [
       "continue;${0}"
     ],
@@ -301,13 +362,6 @@
       "default${0}"
     ],
     "description": "default keyword"
-  },
-  "delete keyword": {
-    "prefix": "de",
-    "body": [
-      "delete${0}"
-    ],
-    "description": "delete keyword"
   },
   "destructor": {
     "prefix": "dr",
@@ -370,6 +424,15 @@
     ],
     "description": "enum class declaration"
   },
+  "enum struct": {
+    "prefix": "emst",
+    "body": [
+      "enum struct ${1:EnumStructName} {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};"
+    ],
+    "description": "enum struct declaration"
+  },
   "explicit constructor": {
     "prefix": "ecr",
     "body": [
@@ -397,13 +460,6 @@
     ],
     "description": "explicit operator (with const)"
   },
-  "extern keyword": {
-    "prefix": "en",
-    "body": [
-      "extern${0}"
-    ],
-    "description": "extern keyword"
-  },
   "for": {
     "prefix": "fr",
     "body": [
@@ -430,13 +486,6 @@
       "}"
     ],
     "description": "for statement (reversed)"
-  },
-  "friend keyword": {
-    "prefix": "fd",
-    "body": [
-      "friend${0}"
-    ],
-    "description": "friend keyword"
   },
   "if": {
     "prefix": "if",
@@ -474,6 +523,56 @@
     ],
     "description": "implicit operator (with const)"
   },
+  "inline const function": {
+    "prefix": "ilcf",
+    "body": [
+      "inline const ${1:T} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "inline const function declaration"
+  },
+  "inline const function (with parameters)": {
+    "prefix": "ilcfx",
+    "body": [
+      "inline const ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "inline const function declaration (with parameters)"
+  },
+  "inline const variable declaration": {
+    "prefix": "ilcv",
+    "body": [
+      "inline const ${1:T} ${2:x} = ${3:nullptr};${0}"
+    ],
+    "description": "inline const  variable declaration"
+  },
+  "inline function": {
+    "prefix": "ilf",
+    "body": [
+      "inline ${1:T} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "inline function declaration"
+  },
+  "inline function (with parameters)": {
+    "prefix": "ilfx",
+    "body": [
+      "inline ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "inline function declaration (with parameters)"
+  },
+  "inline keyword": {
+    "prefix": "il",
+    "body": [
+      "inline${0}"
+    ],
+    "description": "inline keyword"
+  },
   "inline namespace": {
     "prefix": "ilns",
     "body": [
@@ -482,6 +581,13 @@
       "}"
     ],
     "description": "inline namespace declaration"
+  },
+  "inline variable declaration": {
+    "prefix": "ilv",
+    "body": [
+      "inline ${1:T} ${2:x} = ${3:nullptr};${0}"
+    ],
+    "description": "inline  variable declaration"
   },
   "Int32 variable": {
     "prefix": "vi",
@@ -561,13 +667,6 @@
     ],
     "description": "namespace declaration"
   },
-  "noexcept keyword": {
-    "prefix": "ne",
-    "body": [
-      "noexcept${0}"
-    ],
-    "description": "noexcept keyword"
-  },
   "nullptr keyword": {
     "prefix": "np",
     "body": [
@@ -604,7 +703,7 @@
     "description": "return keyword"
   },
   "return statement": {
-    "prefix": "re",
+    "prefix": "rs",
     "body": [
       "return;${0}"
     ],
@@ -810,20 +909,6 @@
     ],
     "description": "template with 2 parameters"
   },
-  "thread_local keyword": {
-    "prefix": "tl",
-    "body": [
-      "thread_local${0}"
-    ],
-    "description": "thread_local keyword"
-  },
-  "throw keyword": {
-    "prefix": "tw",
-    "body": [
-      "throw${0}"
-    ],
-    "description": "throw keyword"
-  },
   "try-catch": {
     "prefix": "tc",
     "body": [
@@ -834,27 +919,6 @@
     ],
     "description": "try-catch"
   },
-  "typedef keyword": {
-    "prefix": "td",
-    "body": [
-      "typedef${0}"
-    ],
-    "description": "typedef keyword"
-  },
-  "typeid keyword": {
-    "prefix": "ti",
-    "body": [
-      "typeid${0}"
-    ],
-    "description": "typeid keyword"
-  },
-  "typename keyword": {
-    "prefix": "tn",
-    "body": [
-      "typename${0}"
-    ],
-    "description": "typename keyword"
-  },
   "union": {
     "prefix": "un",
     "body": [
@@ -863,13 +927,6 @@
       "};"
     ],
     "description": "union"
-  },
-  "unsigned keyword": {
-    "prefix": "us",
-    "body": [
-      "unsigned${0}"
-    ],
-    "description": "unsigned keyword"
   },
   "using declaration": {
     "prefix": "u",
@@ -892,12 +949,41 @@
     ],
     "description": " variable declaration"
   },
-  "volatile keyword": {
-    "prefix": "ve",
+  "virtual function": {
+    "prefix": "vf",
     "body": [
-      "volatile${0}"
+      "virtual ${1:T} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
     ],
-    "description": "volatile keyword"
+    "description": "virtual function declaration"
+  },
+  "virtual function (with parameters)": {
+    "prefix": "vfx",
+    "body": [
+      "virtual ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "virtual function declaration (with parameters)"
+  },
+  "virtual inline function": {
+    "prefix": "vilf",
+    "body": [
+      "virtual inline ${1:T} ${2:FunctionName}() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "virtual inline function declaration"
+  },
+  "virtual inline function (with parameters)": {
+    "prefix": "vilfx",
+    "body": [
+      "virtual inline ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "virtual inline function declaration (with parameters)"
   },
   "while": {
     "prefix": "we",
