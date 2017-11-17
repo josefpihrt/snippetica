@@ -65,7 +65,7 @@
     <None Include="Snippetica.Cpp\AutoGeneration\LambdaExpression.snippet">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Snippetica.Cpp\AutoGeneration\LambdaExpressionMinimal.snippet">
+    <None Include="Snippetica.Cpp\Dev\AutoGeneration\LambdaExpressionMinimal.snippet">
       <SubType>Designer</SubType>
     </None>
     <None Include="Snippetica.Cpp\Braces.snippet" />
@@ -84,7 +84,9 @@
     <None Include="Snippetica.Cpp\OverloadedOperatorExplicit.snippet">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Snippetica.Cpp\ExplicitConstructor.snippet" />
+    <None Include="Snippetica.Cpp\Dev\ExplicitConstructor.snippet">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Snippetica.Cpp\MoveConstructor.snippet" />
     <None Include="Snippetica.Cpp\CopyConstructor.snippet">
       <SubType>Designer</SubType>
@@ -98,12 +100,14 @@
     <None Include="Snippetica.Cpp\OverloadedOperatorCopyAssignment.snippet">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Snippetica.Cpp\ReturnFalse.snippet" />
-    <None Include="Snippetica.Cpp\ReturnTrue.snippet" />
+    <None Include="Snippetica.Cpp\Dev\ReturnFalse.snippet" />
+    <None Include="Snippetica.Cpp\Dev\ReturnTrue.snippet">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Snippetica.Cpp\Catch.snippet" />
-    <None Include="Snippetica.Cpp\BreakStatement.snippet" />
-    <None Include="Snippetica.Cpp\ContinueStatement.snippet" />
-    <None Include="Snippetica.Cpp\ReturnStatement.snippet" />
+    <None Include="Snippetica.Cpp\Dev\BreakStatement.snippet" />
+    <None Include="Snippetica.Cpp\Dev\ContinueStatement.snippet" />
+    <None Include="Snippetica.Cpp\Dev\ReturnStatement.snippet" />
     <None Include="Snippetica.Cpp\IfConstExpr.snippet" />
     <None Include="Snippetica.Cpp\StaticAssert.snippet" />
     <None Include="Snippetica.Cpp\AutoGeneration\ArrayOfTVariable.snippet" />
@@ -111,17 +115,19 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Snippetica.Cpp\BooleanVariable.snippet" />
-    <None Include="Snippetica.Cpp\ReinterpretCast.snippet" />
-    <None Include="Snippetica.Cpp\ConstCast.snippet" />
-    <None Include="Snippetica.Cpp\StaticCast.snippet" />
-    <None Include="Snippetica.Cpp\DynamicCast.snippet" />
+    <None Include="Snippetica.Cpp\Dev\ReinterpretCast.snippet" />
+    <None Include="Snippetica.Cpp\Dev\ConstCast.snippet" />
+    <None Include="Snippetica.Cpp\Dev\StaticCast.snippet" />
+    <None Include="Snippetica.Cpp\Dev\DynamicCast.snippet" />
     <None Include="Snippetica.Cpp\MultilineComment.snippet" />
     <None Include="Snippetica.Cpp\Int32Variable.snippet" />
     <None Include="Snippetica.Cpp\InlineNamespace.snippet" />
     <None Include="Snippetica.Cpp\Attribute.snippet" />
     <None Include="Snippetica.Cpp\TemplateWithTwoParameters.snippet" />
     <None Include="Snippetica.Cpp\ConstStruct.snippet" />
-    <None Include="Snippetica.Cpp\UsingDeclaration.snippet" />
+    <None Include="Snippetica.Cpp\Dev\UsingDeclaration.snippet">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Snippetica.Cpp\UsingNamespace.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveIfElse.snippet" />
     <None Include="Snippetica.Cpp\StringType.snippet" />
@@ -139,7 +145,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Snippetica.Cpp\Destructor.snippet" />
-    <None Include="Snippetica.Cpp\ClassWithInlineConstructorDestructor.snippet" />
+    <None Include="Snippetica.Cpp\Dev\ClassWithInlineConstructorDestructor.snippet" />
     <None Include="Snippetica.Cpp\DoWhile.snippet" />
     <None Include="Snippetica.Cpp\Else.snippet" />
     <None Include="Snippetica.Cpp\Enum.snippet" />
@@ -856,7 +862,6 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Snippetica.Cpp\Dev\AutoGeneration\" />
     <Folder Include="Snippetica.Xml\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

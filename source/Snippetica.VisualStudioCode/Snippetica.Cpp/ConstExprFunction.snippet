@@ -15,17 +15,17 @@
   <Snippet>
     <Declarations>
       <Literal>
-        <ID>_type</ID>
-        <ToolTip>Return type</ToolTip>
-        <Default>T</Default>
-      </Literal>
-      <Literal>
         <ID>name</ID>
         <ToolTip>Function name</ToolTip>
         <Default>FunctionName</Default>
       </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Return type</ToolTip>
+        <Default>void</Default>
+      </Literal>
     </Declarations>
-    <Code Language="Cpp"><![CDATA[constexpr $_type$ $name$() {
+    <Code Language="Cpp"><![CDATA[constexpr $type$ $name$() {
 	$end$
 }]]></Code>
   </Snippet>

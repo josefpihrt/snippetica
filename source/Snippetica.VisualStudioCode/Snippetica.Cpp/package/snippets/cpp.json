@@ -2,7 +2,7 @@
   " function": {
     "prefix": "f",
     "body": [
-      "${1:T} ${2:FunctionName}() {",
+      "${1:void} ${2:FunctionName}() {",
       "\t${0}",
       "}"
     ],
@@ -11,7 +11,7 @@
   " function (with parameters)": {
     "prefix": "fx",
     "body": [
-      "${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "${1:void} ${2:FunctionName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
@@ -138,14 +138,14 @@
   "array variable": {
     "prefix": "va",
     "body": [
-      "${1:T} ${2:items}[${3:1}];${0}"
+      "${1:auto} ${2:items}[${3:1}];${0}"
     ],
     "description": "array variable declaration"
   },
   "array variable (with initializer)": {
     "prefix": "vax",
     "body": [
-      "${1:T} ${2:items}[] = { ${3:nullptr} };${0}"
+      "${1:auto} ${2:items}[] = { ${3:nullptr} };${0}"
     ],
     "description": "array variable declaration (with initializer)"
   },
@@ -171,13 +171,6 @@
       "}"
     ],
     "description": "braces"
-  },
-  "break statement": {
-    "prefix": "bs",
-    "body": [
-      "break;${0}"
-    ],
-    "description": "break statement"
   },
   "catch": {
     "prefix": "catch",
@@ -208,36 +201,12 @@
     ],
     "description": "class declaration"
   },
-  "class with inline constructor/destructor": {
-    "prefix": "cil",
-    "body": [
-      "class ${1:ClassName} {",
-      "public:",
-      "\t${1}() {",
-      "\t}",
-      "",
-      "\t~${1}() {",
-      "\t}",
-      "",
-      "private:",
-      "\t${TM_SELECTED_TEXT}${0}",
-      "};"
-    ],
-    "description": "class declaration with inline constructor/destructor"
-  },
   "conditional operator": {
     "prefix": "co",
     "body": [
       "${1:condition} ? ${2:true} : ${3:false}${0}"
     ],
     "description": "conditional operator"
-  },
-  "const cast": {
-    "prefix": "cct",
-    "body": [
-      "const_cast<${1:T}>(${2:expression})${0}"
-    ],
-    "description": "const cast"
   },
   "const class": {
     "prefix": "cc",
@@ -251,7 +220,7 @@
   "const function": {
     "prefix": "cf",
     "body": [
-      "const ${1:T} ${2:FunctionName}() {",
+      "const ${1:void} ${2:FunctionName}() {",
       "\t${0}",
       "}"
     ],
@@ -260,7 +229,7 @@
   "const function (with parameters)": {
     "prefix": "cfx",
     "body": [
-      "const ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "const ${1:void} ${2:FunctionName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
@@ -278,14 +247,14 @@
   "const variable declaration": {
     "prefix": "cv",
     "body": [
-      "const ${1:T} ${2:x} = ${3:nullptr};${0}"
+      "const ${1:auto} ${2:x} = ${3:nullptr};${0}"
     ],
     "description": "const  variable declaration"
   },
   "constexpr function": {
     "prefix": "cef",
     "body": [
-      "constexpr ${1:T} ${2:FunctionName}() {",
+      "constexpr ${1:void} ${2:FunctionName}() {",
       "\t${0}",
       "}"
     ],
@@ -294,7 +263,7 @@
   "constexpr function (with parameters)": {
     "prefix": "cefx",
     "body": [
-      "constexpr ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "constexpr ${1:void} ${2:FunctionName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
@@ -310,7 +279,7 @@
   "constexpr variable declaration": {
     "prefix": "cev",
     "body": [
-      "constexpr ${1:T} ${2:x} = ${3:nullptr};${0}"
+      "constexpr ${1:auto} ${2:x} = ${3:nullptr};${0}"
     ],
     "description": "constexpr  variable declaration"
   },
@@ -332,18 +301,10 @@
     ],
     "description": "constructor declaration (with parameters)"
   },
-  "continue statement": {
-    "prefix": "cs",
-    "body": [
-      "continue;${0}"
-    ],
-    "description": "continue statement"
-  },
   "copy constructor": {
     "prefix": "ccr",
     "body": [
-      "",
-      "      ${1:TypeName}(const ${1}& ${2:x}) {",
+      "${1:TypeName}(const ${1}& ${2:x}) {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
@@ -380,13 +341,6 @@
       "} while (${1:true});"
     ],
     "description": "do-while statement"
-  },
-  "dynamic cast": {
-    "prefix": "dct",
-    "body": [
-      "dynamic_cast<${1:T}>(${2:expression})${0}"
-    ],
-    "description": "dynamic cast"
   },
   "else": {
     "prefix": "e",
@@ -432,15 +386,6 @@
       "};"
     ],
     "description": "enum struct declaration"
-  },
-  "explicit constructor": {
-    "prefix": "ecr",
-    "body": [
-      "explicit ${1:TypeName}() {",
-      "\t${TM_SELECTED_TEXT}${0}",
-      "}"
-    ],
-    "description": "explicit constructor declaration"
   },
   "explicit operator": {
     "prefix": "oo_Explicit",
@@ -526,7 +471,7 @@
   "inline const function": {
     "prefix": "ilcf",
     "body": [
-      "inline const ${1:T} ${2:FunctionName}() {",
+      "inline const ${1:void} ${2:FunctionName}() {",
       "\t${0}",
       "}"
     ],
@@ -535,7 +480,7 @@
   "inline const function (with parameters)": {
     "prefix": "ilcfx",
     "body": [
-      "inline const ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "inline const ${1:void} ${2:FunctionName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
@@ -544,14 +489,14 @@
   "inline const variable declaration": {
     "prefix": "ilcv",
     "body": [
-      "inline const ${1:T} ${2:x} = ${3:nullptr};${0}"
+      "inline const ${1:auto} ${2:x} = ${3:nullptr};${0}"
     ],
     "description": "inline const  variable declaration"
   },
   "inline function": {
     "prefix": "ilf",
     "body": [
-      "inline ${1:T} ${2:FunctionName}() {",
+      "inline ${1:void} ${2:FunctionName}() {",
       "\t${0}",
       "}"
     ],
@@ -560,7 +505,7 @@
   "inline function (with parameters)": {
     "prefix": "ilfx",
     "body": [
-      "inline ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "inline ${1:void} ${2:FunctionName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
@@ -585,7 +530,7 @@
   "inline variable declaration": {
     "prefix": "ilv",
     "body": [
-      "inline ${1:T} ${2:x} = ${3:nullptr};${0}"
+      "inline ${1:auto} ${2:x} = ${3:nullptr};${0}"
     ],
     "description": "inline  variable declaration"
   },
@@ -613,24 +558,6 @@
       "};"
     ],
     "description": "lambda expression"
-  },
-  "lambda expression (minimal)": {
-    "prefix": "lm",
-    "body": [
-      "[${1:&}]() {",
-      "\t${TM_SELECTED_TEXT}${0}",
-      "};"
-    ],
-    "description": "lambda expression (minimal)"
-  },
-  "lambda expression (minimal) (with parameters)": {
-    "prefix": "lmx",
-    "body": [
-      "[${1:&}](${2:T parameter}) {",
-      "\t${TM_SELECTED_TEXT}${0}",
-      "};"
-    ],
-    "description": "lambda expression (minimal) (with parameters)"
   },
   "lambda expression (with parameters)": {
     "prefix": "lx",
@@ -681,40 +608,12 @@
     ],
     "description": "operator keyword"
   },
-  "reinterpret cast": {
-    "prefix": "rct",
-    "body": [
-      "reinterpret_cast<${1:T}>(${2:expression})${0}"
-    ],
-    "description": "reinterpret cast"
-  },
-  "return false": {
-    "prefix": "ref",
-    "body": [
-      "return false;${0}"
-    ],
-    "description": "return false"
-  },
   "return keyword": {
     "prefix": "r",
     "body": [
       "return${0}"
     ],
     "description": "return keyword"
-  },
-  "return statement": {
-    "prefix": "rs",
-    "body": [
-      "return;${0}"
-    ],
-    "description": "return statement"
-  },
-  "return true": {
-    "prefix": "ret",
-    "body": [
-      "return true;${0}"
-    ],
-    "description": "return true"
   },
   "sizeof keyword": {
     "prefix": "so",
@@ -730,17 +629,10 @@
     ],
     "description": "static assert"
   },
-  "static cast": {
-    "prefix": "sct",
-    "body": [
-      "static_cast<${1:T}>(${2:expression})${0}"
-    ],
-    "description": "static cast"
-  },
   "static const function": {
     "prefix": "scf",
     "body": [
-      "static const ${1:T} ${2:FunctionName}() {",
+      "static const ${1:void} ${2:FunctionName}() {",
       "\t${0}",
       "}"
     ],
@@ -749,7 +641,7 @@
   "static const function (with parameters)": {
     "prefix": "scfx",
     "body": [
-      "static const ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "static const ${1:void} ${2:FunctionName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
@@ -758,14 +650,14 @@
   "static const variable declaration": {
     "prefix": "scv",
     "body": [
-      "static const ${1:T} ${2:x} = ${3:nullptr};${0}"
+      "static const ${1:auto} ${2:x} = ${3:nullptr};${0}"
     ],
     "description": "static const  variable declaration"
   },
   "static constexpr function": {
     "prefix": "scef",
     "body": [
-      "static constexpr ${1:T} ${2:FunctionName}() {",
+      "static constexpr ${1:void} ${2:FunctionName}() {",
       "\t${0}",
       "}"
     ],
@@ -774,7 +666,7 @@
   "static constexpr function (with parameters)": {
     "prefix": "scefx",
     "body": [
-      "static constexpr ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "static constexpr ${1:void} ${2:FunctionName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
@@ -783,14 +675,14 @@
   "static constexpr variable declaration": {
     "prefix": "scev",
     "body": [
-      "static constexpr ${1:T} ${2:x} = ${3:nullptr};${0}"
+      "static constexpr ${1:auto} ${2:x} = ${3:nullptr};${0}"
     ],
     "description": "static constexpr  variable declaration"
   },
   "static function": {
     "prefix": "sf",
     "body": [
-      "static ${1:T} ${2:FunctionName}() {",
+      "static ${1:void} ${2:FunctionName}() {",
       "\t${0}",
       "}"
     ],
@@ -799,7 +691,7 @@
   "static function (with parameters)": {
     "prefix": "sfx",
     "body": [
-      "static ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "static ${1:void} ${2:FunctionName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
@@ -808,7 +700,7 @@
   "static inline const function": {
     "prefix": "silcf",
     "body": [
-      "static inline const ${1:T} ${2:FunctionName}() {",
+      "static inline const ${1:void} ${2:FunctionName}() {",
       "\t${0}",
       "}"
     ],
@@ -817,7 +709,7 @@
   "static inline const function (with parameters)": {
     "prefix": "silcfx",
     "body": [
-      "static inline const ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "static inline const ${1:void} ${2:FunctionName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
@@ -826,14 +718,14 @@
   "static inline const variable declaration": {
     "prefix": "silcv",
     "body": [
-      "static inline const ${1:T} ${2:x} = ${3:nullptr};${0}"
+      "static inline const ${1:auto} ${2:x} = ${3:nullptr};${0}"
     ],
     "description": "static inline const  variable declaration"
   },
   "static inline function": {
     "prefix": "silf",
     "body": [
-      "static inline ${1:T} ${2:FunctionName}() {",
+      "static inline ${1:void} ${2:FunctionName}() {",
       "\t${0}",
       "}"
     ],
@@ -842,7 +734,7 @@
   "static inline function (with parameters)": {
     "prefix": "silfx",
     "body": [
-      "static inline ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "static inline ${1:void} ${2:FunctionName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
@@ -851,14 +743,14 @@
   "static inline variable declaration": {
     "prefix": "silv",
     "body": [
-      "static inline ${1:T} ${2:x} = ${3:nullptr};${0}"
+      "static inline ${1:auto} ${2:x} = ${3:nullptr};${0}"
     ],
     "description": "static inline  variable declaration"
   },
   "static variable declaration": {
     "prefix": "sv",
     "body": [
-      "static ${1:T} ${2:x} = ${3:nullptr};${0}"
+      "static ${1:auto} ${2:x} = ${3:nullptr};${0}"
     ],
     "description": "static  variable declaration"
   },
@@ -928,13 +820,6 @@
     ],
     "description": "union"
   },
-  "using declaration": {
-    "prefix": "u",
-    "body": [
-      "using ${1:NamespaceName}::${2:Name};${0}"
-    ],
-    "description": "using declaration"
-  },
   "using namespace": {
     "prefix": "uns",
     "body": [
@@ -945,14 +830,14 @@
   "variable declaration": {
     "prefix": "v",
     "body": [
-      "${1:T} ${2:x} = ${3:nullptr};${0}"
+      "${1:auto} ${2:x} = ${3:nullptr};${0}"
     ],
     "description": " variable declaration"
   },
   "virtual function": {
     "prefix": "vf",
     "body": [
-      "virtual ${1:T} ${2:FunctionName}() {",
+      "virtual ${1:void} ${2:FunctionName}() {",
       "\t${0}",
       "}"
     ],
@@ -961,7 +846,7 @@
   "virtual function (with parameters)": {
     "prefix": "vfx",
     "body": [
-      "virtual ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "virtual ${1:void} ${2:FunctionName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
@@ -970,7 +855,7 @@
   "virtual inline function": {
     "prefix": "vilf",
     "body": [
-      "virtual inline ${1:T} ${2:FunctionName}() {",
+      "virtual inline ${1:void} ${2:FunctionName}() {",
       "\t${0}",
       "}"
     ],
@@ -979,7 +864,7 @@
   "virtual inline function (with parameters)": {
     "prefix": "vilfx",
     "body": [
-      "virtual inline ${1:T} ${2:FunctionName}(${3:T parameter}) {",
+      "virtual inline ${1:void} ${2:FunctionName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],

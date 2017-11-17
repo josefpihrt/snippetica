@@ -20,12 +20,66 @@
     ],
     "description": "auto keyword"
   },
+  "break statement": {
+    "prefix": "bs",
+    "body": [
+      "break;${0}"
+    ],
+    "description": "break statement"
+  },
+  "class with inline constructor/destructor": {
+    "prefix": "cil",
+    "body": [
+      "class ${1:ClassName} {",
+      "public:",
+      "\t${1}() {",
+      "\t}",
+      "",
+      "\t~${1}() {",
+      "\t}",
+      "",
+      "private:",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};"
+    ],
+    "description": "class declaration with inline constructor/destructor"
+  },
+  "const cast": {
+    "prefix": "cct",
+    "body": [
+      "const_cast<${1:T}>(${2:expression})${0}"
+    ],
+    "description": "const cast"
+  },
+  "continue statement": {
+    "prefix": "cs",
+    "body": [
+      "continue;${0}"
+    ],
+    "description": "continue statement"
+  },
   "delete keyword": {
     "prefix": "de",
     "body": [
       "delete${0}"
     ],
     "description": "delete keyword"
+  },
+  "dynamic cast": {
+    "prefix": "dct",
+    "body": [
+      "dynamic_cast<${1:T}>(${2:expression})${0}"
+    ],
+    "description": "dynamic cast"
+  },
+  "explicit constructor": {
+    "prefix": "ecr",
+    "body": [
+      "explicit ${1:TypeName}() {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "}"
+    ],
+    "description": "explicit constructor declaration"
   },
   "extern keyword": {
     "prefix": "en",
@@ -41,12 +95,65 @@
     ],
     "description": "friend keyword"
   },
+  "lambda expression (minimal)": {
+    "prefix": "lm",
+    "body": [
+      "[${1:&}]() {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};"
+    ],
+    "description": "lambda expression (minimal)"
+  },
+  "lambda expression (minimal) (with parameters)": {
+    "prefix": "lmx",
+    "body": [
+      "[${1:&}](${2:T parameter}) {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};"
+    ],
+    "description": "lambda expression (minimal) (with parameters)"
+  },
   "noexcept keyword": {
     "prefix": "ne",
     "body": [
       "noexcept${0}"
     ],
     "description": "noexcept keyword"
+  },
+  "reinterpret cast": {
+    "prefix": "rct",
+    "body": [
+      "reinterpret_cast<${1:T}>(${2:expression})${0}"
+    ],
+    "description": "reinterpret cast"
+  },
+  "return false": {
+    "prefix": "rf",
+    "body": [
+      "return false;${0}"
+    ],
+    "description": "return false"
+  },
+  "return statement": {
+    "prefix": "rs",
+    "body": [
+      "return;${0}"
+    ],
+    "description": "return statement"
+  },
+  "return true": {
+    "prefix": "rt",
+    "body": [
+      "return true;${0}"
+    ],
+    "description": "return true"
+  },
+  "static cast": {
+    "prefix": "sct",
+    "body": [
+      "static_cast<${1:T}>(${2:expression})${0}"
+    ],
+    "description": "static cast"
   },
   "thread_local keyword": {
     "prefix": "tl",
@@ -89,6 +196,13 @@
       "unsigned${0}"
     ],
     "description": "unsigned keyword"
+  },
+  "using declaration": {
+    "prefix": "u",
+    "body": [
+      "using ${1:NamespaceName}::${2:Name};${0}"
+    ],
+    "description": "using declaration"
   },
   "volatile keyword": {
     "prefix": "ve",
