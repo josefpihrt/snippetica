@@ -39,8 +39,8 @@
               <New Id="Virtual" Keyword="Overridable" />
             </Set>
             <Set Language="Cpp">
-              <New Id="Const" Shortcut="k" Keyword="const" />
-              <New Id="ConstExpr" Shortcut="ke" Keyword="constexpr" />
+              <New Id="Const" Shortcut="c" Keyword="const" />
+              <New Id="ConstExpr" Shortcut="ce" Keyword="constexpr" />
               <New Id="Inline" Shortcut="il" Keyword="inline" />
               <New Id="Static" Keyword="static" />
               <New Id="Virtual" Keyword="virtual" />

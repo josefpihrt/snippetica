@@ -55,7 +55,7 @@ namespace Snippetica.CodeGeneration.Commands
             if (snippet.HasTag(KnownTags.Initializer) && Tags.Contains(KnownTags.Initializer))
             {
                 var clone = (Snippet)snippet.Clone();
-                InitializerCommand.AddInitializer(clone, GetInitializer(language), language.GetDefaultValue());
+                InitializerCommand.AddInitializer(context, clone, GetInitializer(language), language.GetDefaultValue());
                 context.Snippets.Add(clone);
             }
             else

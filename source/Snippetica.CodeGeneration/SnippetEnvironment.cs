@@ -178,5 +178,13 @@ namespace Snippetica.CodeGeneration
         public abstract PackageGenerator CreatePackageGenerator();
 
         public abstract bool IsSupportedLanguage(Language language);
+
+        public virtual string GetShortcutSuffix(Language language)
+        {
+            if (language == Language.Cpp)
+                return "x";
+
+            return "_";
+        }
     }
 }

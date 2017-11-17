@@ -13,39 +13,34 @@ b|braces
 bk|break statement
 c|class
 catch|catch
+cc|const class
 ccr|copy constructor
+cct|const cast
 ce|continue statement
 ci|Class with Inline Constructor/Destructor
-coc|const cast
-cod|dynamic cast
-cor|reinterpret cast
-cos|static cast
+co|conditional operator
+cr|constructor
+cst|const struct
 d|default keyword
+dct|dynamic cast
 de|delete keyword
 dr|destructor
 dt|decltype keyword
 dw|do\-while
 e|else
+ecr|explicit constructor
 eif|else\-if
 em|enum
 emc|enum class
 en|extern keyword
-f| function
 fd|friend keyword
 fr|for
 frr|for \(reversed\)
 frrb|for \(range\-based\)
 ie|interface
 if|if
-ifke|if constexpr
-ilf|inline function
-ilkf|inline const function
-ins|inline namespace
-k| const
-kc|const class
-kef|constexpr function
-kf|const function
-kst|const struct
+ifce|if constexpr
+ilns|inline namespace
 l|lambda expression
 lm|lambda expression \(minimal\)
 mc|multi\-line comment
@@ -53,9 +48,6 @@ mcr|move constructor
 ne|noexcept keyword
 np|nullptr keyword
 ns|namespace
-o\_ca|copy assignment operator
-o\_ca2|copy assignment operator 2
-op\_ma|move assignment operator
 or|operator keyword
 ppd|\#define
 ppe|\#error
@@ -69,22 +61,23 @@ ppr|\#pragma region
 ppu|\#using
 ppud|\#undef
 r|return keyword
+rct|reinterpret cast
 re|return statement
 ref|return false
 ret|return true
 s|string type
 sa|static assert
+scef|static constexpr function
+scev|static constexpr variable declaration
+scf|static const function
+sct|static cast
+scv|static const variable declaration
 sf|static function
 sh|switch
+silcf|static inline const function
+silcv|static inline const variable declaration
 silf|static inline function
-silkf|static inline const function
-silkv|static inline const variable declaration
 silv|static inline variable declaration
-sk|static const
-skef|static constexpr function
-skev|static constexpr variable declaration
-skf|static const function
-skv|static const variable declaration
 so|sizeof keyword
 st|struct
 sv|static variable declaration
@@ -100,11 +93,9 @@ u|using declaration
 un|union
 uns|using namespace
 us|unsigned keyword
-va|array variable
+v|variable declaration
 vb|Boolean variable
 ve|volatile keyword
-vf|virtual function
 vi|Int32 variable
-vilf|virtual inline function
 vs|String variable
 we|while

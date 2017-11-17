@@ -14,7 +14,7 @@ namespace Snippetica.CodeGeneration.Commands
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {
             snippet.SuffixTitle(" (with arguments)");
-            snippet.SuffixShortcut(ShortcutChars.WithArguments);
+            snippet.SuffixShortcut(context.WithArgumentsSuffix(snippet));
             snippet.SuffixDescription(" (with arguments)");
             snippet.SuffixFileName("WithArguments");
 

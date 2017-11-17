@@ -16,7 +16,7 @@ namespace Snippetica.CodeGeneration.Commands
         {
             LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
-            AddInitializer(snippet, GetInitializer(snippet, language), language.GetDefaultValue());
+            AddInitializer(context, snippet, GetInitializer(snippet, language), language.GetDefaultValue());
         }
 
         private string GetInitializer(Snippet snippet, LanguageDefinition language)
@@ -34,10 +34,10 @@ namespace Snippetica.CodeGeneration.Commands
             return null;
         }
 
-        internal static Snippet AddInitializer(Snippet snippet, string initializer, string defaultValue)
+        internal static Snippet AddInitializer(ExecutionContext context, Snippet snippet, string initializer, string defaultValue)
         {
             snippet.SuffixTitle(" (with initializer)");
-            snippet.SuffixShortcut(ShortcutChars.WithInitializer);
+            snippet.SuffixShortcut(context.WithInitializerSuffix(snippet));
             snippet.SuffixDescription(" (with initializer)");
 
             snippet.ReplacePlaceholders(LiteralIdentifiers.Initializer, initializer);

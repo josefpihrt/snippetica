@@ -16,7 +16,7 @@ namespace Snippetica.CodeGeneration.Commands
             LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
             snippet.SuffixTitle(" (with parameters)");
-            snippet.SuffixShortcut(ShortcutChars.WithParameters);
+            snippet.SuffixShortcut(context.WithParametersSuffix(snippet));
             snippet.SuffixDescription(" (with parameters)");
             snippet.SuffixFileName("WithParameters");
 

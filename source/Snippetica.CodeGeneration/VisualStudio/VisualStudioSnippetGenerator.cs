@@ -4,10 +4,10 @@ using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration.VisualStudio
 {
-    public class VisualStudioSnippetGenerator : LanguageSnippetGenerator
+    public class VisualStudioSnippetGenerator : EnvironmentSnippetGenerator
     {
-        public VisualStudioSnippetGenerator(LanguageDefinition languageDefinition)
-            : base(languageDefinition)
+        public VisualStudioSnippetGenerator(SnippetEnvironment environment, LanguageDefinition languageDefinition)
+            : base(environment, languageDefinition)
         {
         }
 

@@ -69,16 +69,31 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Snippetica.Cpp\Braces.snippet" />
+    <None Include="Snippetica.Cpp\ConditionalOperator.snippet" />
     <None Include="Snippetica.Cpp\ConstClass.snippet" />
+    <None Include="Snippetica.Cpp\OverloadedOperatorExplicitWithConst.snippet">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Snippetica.Cpp\OverloadedOperatorImplicitWithConst.snippet">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Snippetica.Cpp\OverloadedOperatorImplicit.snippet">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Snippetica.Cpp\OverloadedOperatorExplicit.snippet">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Snippetica.Cpp\ExplicitConstructor.snippet" />
+    <None Include="Snippetica.Cpp\Constructor.snippet" />
     <None Include="Snippetica.Cpp\MoveConstructor.snippet" />
     <None Include="Snippetica.Cpp\CopyConstructor.snippet" />
-    <None Include="Snippetica.Cpp\MoveAssignmentOperator.snippet">
+    <None Include="Snippetica.Cpp\OverloadedOperatorMoveAssignment.snippet">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Snippetica.Cpp\CopyAssignmentOperator2.snippet">
+    <None Include="Snippetica.Cpp\OverloadedOperatorCopyAssignmentWithConst.snippet">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Snippetica.Cpp\CopyAssignmentOperator.snippet">
+    <None Include="Snippetica.Cpp\OverloadedOperatorCopyAssignment.snippet">
       <SubType>Designer</SubType>
     </None>
     <None Include="Snippetica.Cpp\ReturnFalse.snippet" />
@@ -110,9 +125,6 @@
     <None Include="Snippetica.Cpp\StringType.snippet" />
     <None Include="Snippetica.Cpp\Template.snippet" />
     <None Include="Snippetica.Cpp\StringVariable.snippet" />
-    <None Include="Snippetica.Cpp\AutoGeneration\Const.snippet">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Snippetica.Cpp\AutoGeneration\Variable.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveError.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveDefine.snippet" />

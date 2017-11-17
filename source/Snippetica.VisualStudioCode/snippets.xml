@@ -36,42 +36,8 @@
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>array variable</Title>
-      <Shortcut>va</Shortcut>
-      <Description>array variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ArrayOfTVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_arrayLength</ID>
-          <ToolTip>Array length</ToolTip>
-          <Default>0</Default>
-        </Literal>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Element type name</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[$_type$ $_collectionIdentifier$[$_arrayLength$];$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>array variable (with initializer)</Title>
-      <Shortcut>va_</Shortcut>
+      <Shortcut>vax</Shortcut>
       <Description>array variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -315,42 +281,42 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title> const</Title>
-      <Shortcut>k</Shortcut>
-      <Description> const declaration</Description>
+      <Title>conditional operator</Title>
+      <Shortcut>co</Shortcut>
+      <Description>conditional operator</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name Const</Keyword>
+        <Keyword>Meta-Name ConditionalOperator</Keyword>
       </Keywords>
     </Header>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>_type</ID>
-          <ToolTip>Constant type</ToolTip>
-          <Default>T</Default>
+          <ID>condition</ID>
+          <ToolTip>Condition to evaluate</ToolTip>
+          <Default>condition</Default>
         </Literal>
         <Literal>
-          <ID>_value</ID>
-          <ToolTip>Constant value</ToolTip>
-          <Default>nullptr</Default>
+          <ID>false</ID>
+          <ToolTip>When false</ToolTip>
+          <Default>false</Default>
         </Literal>
         <Literal>
-          <ID>name</ID>
-          <ToolTip>Constant name</ToolTip>
-          <Default>x</Default>
+          <ID>true</ID>
+          <ToolTip>When true</ToolTip>
+          <Default>true</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[const $_type$ $name$ = $_value$;$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[$condition$ ? $true$ : $false$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>const cast</Title>
-      <Shortcut>coc</Shortcut>
+      <Shortcut>cct</Shortcut>
       <Description>const cast</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -379,7 +345,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>const class</Title>
-      <Shortcut>kc</Shortcut>
+      <Shortcut>cc</Shortcut>
       <Description>const class declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -398,150 +364,42 @@ private:
           <Default>ClassName</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[
-      const class $name$ {
+      <Code Language="Cpp"><![CDATA[const class $name$ {
 	$selected$$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>constexpr function</Title>
-      <Shortcut>kef</Shortcut>
-      <Description>constexpr function declaration</Description>
+      <Title>constructor</Title>
+      <Shortcut>cr</Shortcut>
+      <Description>constructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ConstExprFunction</Keyword>
+        <Keyword>Meta-Name Constructor</Keyword>
       </Keywords>
     </Header>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
+          <ID>typeName</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>TypeName</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[constexpr $_type$ $name$() {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>constexpr function (with parameters)</Title>
-      <Shortcut>kef_</Shortcut>
-      <Description>constexpr function declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ConstExprFunctionWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>T parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[constexpr $_type$ $name$($parameters$) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>const function</Title>
-      <Shortcut>kf</Shortcut>
-      <Description>const function declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ConstFunction</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[const $_type$ $name$() {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>const function (with parameters)</Title>
-      <Shortcut>kf_</Shortcut>
-      <Description>const function declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ConstFunctionWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>T parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[const $_type$ $name$($parameters$) {
-	$end$
+      <Code Language="Cpp"><![CDATA[$typeName$() {
+	$selected$$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>constructor (with parameters)</Title>
-      <Shortcut>cr_</Shortcut>
+      <Shortcut>crx</Shortcut>
       <Description>constructor declaration (with parameters)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -573,7 +431,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>const struct</Title>
-      <Shortcut>kst</Shortcut>
+      <Shortcut>cst</Shortcut>
       <Description>const struct declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -612,72 +470,6 @@ private:
     </Header>
     <Snippet>
       <Code Language="Cpp"><![CDATA[continue;$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>copy assignment operator</Title>
-      <Shortcut>o_ca</Shortcut>
-      <Description>copy assignment operator</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name CopyAssignmentOperator</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>other</ID>
-          <ToolTip>Other</ToolTip>
-          <Default>other</Default>
-        </Literal>
-        <Literal>
-          <ID>typeName</ID>
-          <ToolTip>Type name</ToolTip>
-          <Default>TypeName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[$typeName$& operator=($typeName$ $other$) {
-	$selected$$end$
-	return *this;
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>copy assignment operator 2</Title>
-      <Shortcut>o_ca2</Shortcut>
-      <Description>copy assignment operator 2</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name CopyAssignmentOperator2</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>other</ID>
-          <ToolTip>Other</ToolTip>
-          <Default>other</Default>
-        </Literal>
-        <Literal>
-          <ID>typeName</ID>
-          <ToolTip>Type name</ToolTip>
-          <Default>TypeName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[$typeName$& operator=(const $typeName$& $other$) {
-	$selected$$end$
-	return *this;
-}]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -820,7 +612,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>dynamic cast</Title>
-      <Shortcut>cod</Shortcut>
+      <Shortcut>dct</Shortcut>
       <Description>dynamic cast</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -945,6 +737,33 @@ private:
       <Code Language="Cpp"><![CDATA[enum class $name$ {
 	$selected$$end$
 };]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>explicit constructor</Title>
+      <Shortcut>ecr</Shortcut>
+      <Description>explicit constructor declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ExplicitConstructor</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>typeName</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>TypeName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[explicit $typeName$() {
+	$selected$$end$
+}]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -1084,73 +903,6 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title> function</Title>
-      <Shortcut>f</Shortcut>
-      <Description> function declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name Function</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[$_type$ $name$() {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title> function (with parameters)</Title>
-      <Shortcut>f_</Shortcut>
-      <Description> function declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name FunctionWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>T parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[$_type$ $name$($parameters$) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>if</Title>
       <Shortcut>if</Shortcut>
       <Description>if statement</Description>
@@ -1179,7 +931,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>if constexpr</Title>
-      <Shortcut>ifke</Shortcut>
+      <Shortcut>ifce</Shortcut>
       <Description>if constexpr statement</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1205,142 +957,8 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>inline const function</Title>
-      <Shortcut>ilkf</Shortcut>
-      <Description>inline const function declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InlineConstFunction</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[inline const $_type$ $name$() {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>inline const function (with parameters)</Title>
-      <Shortcut>ilkf_</Shortcut>
-      <Description>inline const function declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InlineConstFunctionWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>T parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[inline const $_type$ $name$($parameters$) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>inline function</Title>
-      <Shortcut>ilf</Shortcut>
-      <Description>inline function declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InlineFunction</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[inline $_type$ $name$() {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>inline function (with parameters)</Title>
-      <Shortcut>ilf_</Shortcut>
-      <Description>inline function declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InlineFunctionWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>T parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[inline $_type$ $name$($parameters$) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>inline namespace</Title>
-      <Shortcut>ins</Shortcut>
+      <Shortcut>ilns</Shortcut>
       <Description>inline namespace declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1443,12 +1061,12 @@ private:
         <Literal>
           <ID>returnType</ID>
           <ToolTip>Return type</ToolTip>
-          <Default>T</Default>
+          <Default>auto</Default>
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[[$captures$]() -> $returnType$ {
 	$selected$$end$
-}]]></Code>
+};]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -1474,13 +1092,13 @@ private:
       </Declarations>
       <Code Language="Cpp"><![CDATA[[$captures$]() {
 	$selected$$end$
-}]]></Code>
+};]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>lambda expression (minimal) (with parameters)</Title>
-      <Shortcut>lm_</Shortcut>
+      <Shortcut>lmx</Shortcut>
       <Description>lambda expression (minimal) (with parameters)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1505,13 +1123,13 @@ private:
       </Declarations>
       <Code Language="Cpp"><![CDATA[[$captures$]($parameters$) {
 	$selected$$end$
-}]]></Code>
+};]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>lambda expression (with parameters)</Title>
-      <Shortcut>l_</Shortcut>
+      <Shortcut>lx</Shortcut>
       <Description>lambda expression (with parameters)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1536,45 +1154,12 @@ private:
         <Literal>
           <ID>returnType</ID>
           <ToolTip>Return type</ToolTip>
-          <Default>T</Default>
+          <Default>auto</Default>
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[[$captures$]($parameters$) -> $returnType$ {
 	$selected$$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>move assignment operator</Title>
-      <Shortcut>op_ma</Shortcut>
-      <Description>move assignment operator</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name MoveAssignmentOperator</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>other</ID>
-          <ToolTip>Other</ToolTip>
-          <Default>other</Default>
-        </Literal>
-        <Literal>
-          <ID>typeName</ID>
-          <ToolTip>Type name</ToolTip>
-          <Default>TypeName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[$typeName$& operator=($typeName$&& $other$) {
-	$selected$$end$
-	return *this;
-}]]></Code>
+};]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -1625,7 +1210,14 @@ private:
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Cpp"><![CDATA[/*$selected$$end$*/]]></Code>
+      <Declarations>
+        <Literal>
+          <ID>comment</ID>
+          <ToolTip>Comment</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[/*$comment$$selected$*/$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -1708,6 +1300,213 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>= copy assignment operator</Title>
+      <Shortcut>oo_CopyAssignment</Shortcut>
+      <Description>copy assignment operator</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name OverloadedOperatorCopyAssignment</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>other</ID>
+          <ToolTip>Other</ToolTip>
+          <Default>other</Default>
+        </Literal>
+        <Literal>
+          <ID>typeName</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>TypeName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[$typeName$& operator=($typeName$ $other$) {
+	$selected$$end$
+	return *this;
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>= copy assignment operator (with const)</Title>
+      <Shortcut>oo_CopyAssignmentWithConst</Shortcut>
+      <Description>copy assignment operator (with const)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name OverloadedOperatorCopyAssignmentWithConst</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>other</ID>
+          <ToolTip>Other</ToolTip>
+          <Default>other</Default>
+        </Literal>
+        <Literal>
+          <ID>typeName</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>TypeName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[$typeName$& operator=(const $typeName$& $other$) {
+	$selected$$end$
+	return *this;
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>explicit operator</Title>
+      <Shortcut>oo_Explicit</Shortcut>
+      <Description>explicit operator</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name OverloadedOperatorExplicit</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>auto</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[explicit operator $type$() {
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>explicit operator (with const)</Title>
+      <Shortcut>oo_ExplicitWithConst</Shortcut>
+      <Description>explicit operator (with const)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name OverloadedOperatorExplicitWithConst</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>auto</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[explicit operator $type$() const {
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>implicit operator</Title>
+      <Shortcut>oo_Implicit</Shortcut>
+      <Description>implicit operator</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name OverloadedOperatorImplicit</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>auto</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[operator $type$() {
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>implicit operator (with const)</Title>
+      <Shortcut>oo_ImplicitWithConst</Shortcut>
+      <Description>implicit operator (with const)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name OverloadedOperatorImplicitWithConst</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>auto</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[operator $type$() const {
+	$selected$$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>= move assignment operator</Title>
+      <Shortcut>oo_MoveAssignment</Shortcut>
+      <Description>move assignment operator</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name OverloadedOperatorMoveAssignment</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>other</ID>
+          <ToolTip>Other</ToolTip>
+          <Default>other</Default>
+        </Literal>
+        <Literal>
+          <ID>typeName</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>TypeName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[$typeName$& operator=($typeName$&& $other$) {
+	$selected$$end$
+	return *this;
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>#define</Title>
       <Shortcut>ppd</Shortcut>
       <Description>#define preprocessor directive</Description>
@@ -1724,7 +1523,7 @@ private:
         <Literal>
           <ID>id</ID>
           <ToolTip>Identifier</ToolTip>
-          <Default>x</Default>
+          <Default>X</Default>
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[#define $id$$end$]]></Code>
@@ -1826,19 +1625,13 @@ private:
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>expression1</ID>
-          <ToolTip>Expression to evaluate</ToolTip>
-          <Default>x</Default>
-        </Literal>
-        <Literal>
-          <ID>expression2</ID>
+          <ID>expression</ID>
           <ToolTip>Expression to evaluate</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[#if $expression1$
+      <Code Language="Cpp"><![CDATA[#if $expression$
 	$selected$$end$
-#elif $expression2$
 #else
 #endif]]></Code>
     </Snippet>
@@ -2002,7 +1795,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>reinterpret cast</Title>
-      <Shortcut>cor</Shortcut>
+      <Shortcut>rct</Shortcut>
       <Description>reinterpret cast</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2140,7 +1933,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static cast</Title>
-      <Shortcut>cos</Shortcut>
+      <Shortcut>sct</Shortcut>
       <Description>static cast</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2168,42 +1961,8 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>static const</Title>
-      <Shortcut>sk</Shortcut>
-      <Description>static const declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StaticConst</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Constant type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>_value</ID>
-          <ToolTip>Constant value</ToolTip>
-          <Default>nullptr</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Constant name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[static const $_type$ $name$ = $_value$;$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>static constexpr function</Title>
-      <Shortcut>skef</Shortcut>
+      <Shortcut>scef</Shortcut>
       <Description>static constexpr function declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2218,7 +1977,7 @@ private:
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
+          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>name</ID>
@@ -2234,7 +1993,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static constexpr function (with parameters)</Title>
-      <Shortcut>skef_</Shortcut>
+      <Shortcut>scefx</Shortcut>
       <Description>static constexpr function declaration (with parameters)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2249,7 +2008,7 @@ private:
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
+          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>name</ID>
@@ -2270,7 +2029,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static constexpr variable declaration</Title>
-      <Shortcut>skev</Shortcut>
+      <Shortcut>scev</Shortcut>
       <Description>static constexpr  variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2304,7 +2063,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static const function</Title>
-      <Shortcut>skf</Shortcut>
+      <Shortcut>scf</Shortcut>
       <Description>static const function declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2319,7 +2078,7 @@ private:
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
+          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>name</ID>
@@ -2335,7 +2094,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static const function (with parameters)</Title>
-      <Shortcut>skf_</Shortcut>
+      <Shortcut>scfx</Shortcut>
       <Description>static const function declaration (with parameters)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2350,7 +2109,7 @@ private:
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
+          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>name</ID>
@@ -2371,7 +2130,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static const variable declaration</Title>
-      <Shortcut>skv</Shortcut>
+      <Shortcut>scv</Shortcut>
       <Description>static const  variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2420,7 +2179,7 @@ private:
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
+          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>name</ID>
@@ -2436,7 +2195,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static function (with parameters)</Title>
-      <Shortcut>sf_</Shortcut>
+      <Shortcut>sfx</Shortcut>
       <Description>static function declaration (with parameters)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2451,7 +2210,7 @@ private:
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
+          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>name</ID>
@@ -2472,7 +2231,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static inline const function</Title>
-      <Shortcut>silkf</Shortcut>
+      <Shortcut>silcf</Shortcut>
       <Description>static inline const function declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2487,7 +2246,7 @@ private:
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
+          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>name</ID>
@@ -2503,7 +2262,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static inline const function (with parameters)</Title>
-      <Shortcut>silkf_</Shortcut>
+      <Shortcut>silcfx</Shortcut>
       <Description>static inline const function declaration (with parameters)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2518,7 +2277,7 @@ private:
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
+          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>name</ID>
@@ -2539,7 +2298,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static inline const variable declaration</Title>
-      <Shortcut>silkv</Shortcut>
+      <Shortcut>silcv</Shortcut>
       <Description>static inline const  variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2588,7 +2347,7 @@ private:
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
+          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>name</ID>
@@ -2604,7 +2363,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static inline function (with parameters)</Title>
-      <Shortcut>silf_</Shortcut>
+      <Shortcut>silfx</Shortcut>
       <Description>static inline function declaration (with parameters)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2619,7 +2378,7 @@ private:
         <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
+          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>name</ID>
@@ -2940,8 +2699,7 @@ private:
       </Declarations>
       <Code Language="Cpp"><![CDATA[try {
 	$selected$$end$
-}
-catch (const $exception$& $_identifier$) {
+} catch (const $exception$& $_identifier$) {
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3096,136 +2854,36 @@ catch (const $exception$& $_identifier$) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>virtual function</Title>
-      <Shortcut>vf</Shortcut>
-      <Description>virtual function declaration</Description>
+      <Title>variable declaration</Title>
+      <Shortcut>v</Shortcut>
+      <Description> variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name VirtualFunction</Keyword>
+        <Keyword>Meta-Name Variable</Keyword>
       </Keywords>
     </Header>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
+          <ID>_identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>x</Default>
         </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[virtual $_type$ $name$() {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>virtual function (with parameters)</Title>
-      <Shortcut>vf_</Shortcut>
-      <Description>virtual function declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name VirtualFunctionWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
         <Literal>
           <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
+          <ToolTip>Variable type</ToolTip>
+          <Default>T</Default>
         </Literal>
         <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>T parameter</Default>
+          <ID>_value</ID>
+          <ToolTip>Value to assign</ToolTip>
+          <Default>nullptr</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[virtual $_type$ $name$($parameters$) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>virtual inline function</Title>
-      <Shortcut>vilf</Shortcut>
-      <Description>virtual inline function declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name VirtualInlineFunction</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[virtual inline $_type$ $name$() {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>virtual inline function (with parameters)</Title>
-      <Shortcut>vilf_</Shortcut>
-      <Description>virtual inline function declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name VirtualInlineFunctionWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Function name</ToolTip>
-          <Default>FunctionName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>T parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[virtual inline $_type$ $name$($parameters$) {
-	$end$
-}]]></Code>
+      <Code Language="Cpp"><![CDATA[$_type$ $_identifier$ = $_value$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
