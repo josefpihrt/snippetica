@@ -72,15 +72,6 @@
     ],
     "description": "dynamic cast"
   },
-  "explicit constructor": {
-    "prefix": "ecr",
-    "body": [
-      "explicit ${1:TypeName}() {",
-      "\t${TM_SELECTED_TEXT}${0}",
-      "}"
-    ],
-    "description": "explicit constructor declaration"
-  },
   "extern keyword": {
     "prefix": "en",
     "body": [
@@ -94,24 +85,6 @@
       "friend${0}"
     ],
     "description": "friend keyword"
-  },
-  "lambda expression (minimal)": {
-    "prefix": "lm",
-    "body": [
-      "[${1:&}]() {",
-      "\t${TM_SELECTED_TEXT}${0}",
-      "};"
-    ],
-    "description": "lambda expression (minimal)"
-  },
-  "lambda expression (minimal) (with parameters)": {
-    "prefix": "lmx",
-    "body": [
-      "[${1:&}](${2:T parameter}) {",
-      "\t${TM_SELECTED_TEXT}${0}",
-      "};"
-    ],
-    "description": "lambda expression (minimal) (with parameters)"
   },
   "noexcept keyword": {
     "prefix": "ne",
@@ -168,13 +141,6 @@
       "throw${0}"
     ],
     "description": "throw keyword"
-  },
-  "typedef keyword": {
-    "prefix": "td",
-    "body": [
-      "typedef${0}"
-    ],
-    "description": "typedef keyword"
   },
   "typeid keyword": {
     "prefix": "ti",

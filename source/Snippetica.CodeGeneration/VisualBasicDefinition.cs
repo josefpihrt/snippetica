@@ -35,5 +35,10 @@ namespace Snippetica.CodeGeneration
         {
             return " {" + value + "}";
         }
+
+        public override string GetVariableInitializer(string value)
+        {
+            return $" = {value}";
+        }
     }
 }

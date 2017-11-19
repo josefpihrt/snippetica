@@ -303,6 +303,11 @@ namespace Snippetica
             SetFileName(snippet, Path.GetFileNameWithoutExtension(snippet.FilePath) + value + Path.GetExtension(snippet.FilePath));
         }
 
+        public static void AppendCode(this Snippet snippet, string code)
+        {
+            snippet.CodeText += code;
+        }
+
         public static void SetFileName(this Snippet snippet, string fileName)
         {
             snippet.FilePath = Path.Combine(Path.GetDirectoryName(snippet.FilePath), fileName);

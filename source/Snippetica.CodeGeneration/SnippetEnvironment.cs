@@ -152,7 +152,7 @@ namespace Snippetica.CodeGeneration
 
             if (!settings.IsDevelopment)
             {
-                //TODO: 
+                //TODO: ?
                 string filePath = $@"..\..\..\..\..\text\{result.DirectoryName}.md";
 
                 if (File.Exists(filePath))
@@ -178,13 +178,5 @@ namespace Snippetica.CodeGeneration
         public abstract PackageGenerator CreatePackageGenerator();
 
         public abstract bool IsSupportedLanguage(Language language);
-
-        public virtual string GetShortcutSuffix(Language language)
-        {
-            if (language == Language.Cpp)
-                return "x";
-
-            return "_";
-        }
     }
 }

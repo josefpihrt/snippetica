@@ -20,6 +20,7 @@ namespace Snippetica
         public const string CollectionIdentifier = Prefix + "collectionIdentifier";
         public const string DictionaryIdentifier =  Prefix + "dictionaryIdentifier";
         public const string Identifier = Prefix + "identifier";
+        public const string Semicolon = Prefix + "semicolon";
 
         public const string KeyType = "keyType";
         public const string ValueType = "valueType";

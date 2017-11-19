@@ -3,21 +3,24 @@
   <Header>
     <Title>constructor</Title>
     <Shortcut>cr</Shortcut>
-    <Description>constructor declaration</Description>
+    <Description>constructor</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
-      <SnippetType>SurroundsWith</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-GenerateParameters</Keyword>
+      <Keyword>Meta-GenerateDeclarationAndDefinition</Keyword>
     </Keywords>
   </Header>
   <Snippet>
     <Declarations>
       <Literal Editable="false">
-        <ID>_parameterList</ID>
-        <Default>()</Default>
+        <ID>_definition</ID>
+      </Literal>
+      <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>T parameter</Default>
       </Literal>
       <Literal Editable="false">
         <ID>typeName</ID>
@@ -26,8 +29,6 @@
         <Function>TypeName()</Function>
       </Literal>
     </Declarations>
-    <Code Language="Cpp"><![CDATA[$typeName$$_parameterList$ {
-	$selected$$end$
-}]]></Code>
+    <Code Language="Cpp"><![CDATA[$typeName$($_parameters$)$_definition$;]]></Code>
   </Snippet>
 </CodeSnippet>

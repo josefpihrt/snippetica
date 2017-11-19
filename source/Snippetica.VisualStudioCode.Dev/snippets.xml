@@ -197,33 +197,6 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>explicit constructor</Title>
-      <Shortcut>ecr</Shortcut>
-      <Description>explicit constructor declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ExplicitConstructor</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>typeName</ID>
-          <ToolTip>Type name</ToolTip>
-          <Default>TypeName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[explicit $typeName$() {
-	$selected$$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>extern keyword</Title>
       <Shortcut>en</Shortcut>
       <Description>extern keyword</Description>
@@ -254,63 +227,6 @@ private:
     </Header>
     <Snippet>
       <Code Language="Cpp"><![CDATA[friend$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>lambda expression (minimal)</Title>
-      <Shortcut>lm</Shortcut>
-      <Description>lambda expression (minimal)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name LambdaExpressionMinimal</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>captures</ID>
-          <ToolTip>List of captures</ToolTip>
-          <Default>&amp;</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[[$captures$]() {
-	$selected$$end$
-};]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>lambda expression (minimal) (with parameters)</Title>
-      <Shortcut>lmx</Shortcut>
-      <Description>lambda expression (minimal) (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name LambdaExpressionMinimalWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>captures</ID>
-          <ToolTip>List of captures</ToolTip>
-          <Default>&amp;</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>T parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[[$captures$]($parameters$) {
-	$selected$$end$
-};]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -471,23 +387,6 @@ private:
     </Header>
     <Snippet>
       <Code Language="Cpp"><![CDATA[throw$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>typedef keyword</Title>
-      <Shortcut>td</Shortcut>
-      <Description>typedef keyword</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name TypeDefKeyword</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="Cpp"><![CDATA[typedef$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

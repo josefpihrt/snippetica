@@ -1037,9 +1037,6 @@
     <Content Include="Snippetica.Cpp.Dev\DynamicCast.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp.Dev\ExplicitConstructor.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.Cpp.Dev\ReinterpretCast.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1085,9 +1082,6 @@
     <Content Include="Snippetica.Cpp.Dev\ThrowKeyword.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp.Dev\TypeDefKeyword.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.Cpp.Dev\TypeIdKeyword.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1098,12 +1092,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp.Dev\VolatileKeyword.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Cpp.Dev\LambdaExpressionMinimal.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Cpp.Dev\LambdaExpressionMinimalWithParameters.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Html.Dev\div_class.snippet">

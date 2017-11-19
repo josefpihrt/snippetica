@@ -55,11 +55,14 @@
     <Compile Include="Commands\CommandUtility.cs" />
     <Compile Include="Commands\ConstCommand.cs" />
     <Compile Include="Commands\ConstExprCommand.cs" />
+    <Compile Include="Commands\DefinitionCommand.cs" />
+    <Compile Include="Commands\DeclarationCommand.cs" />
     <Compile Include="Commands\EmptyCommand.cs" />
     <Compile Include="Commands\InlineCommand.cs" />
     <Compile Include="Commands\ModifierCommand.cs" />
     <Compile Include="Commands\ShortcutToLowercaseCommand.cs" />
     <Compile Include="Commands\SuffixFileNameCommand.cs" />
+    <Compile Include="Commands\SuffixShortcutCommand.cs" />
     <Compile Include="CppDefinition.cs" />
     <Compile Include="EnvironmentExecutionContext.cs" />
     <Compile Include="KeywordDefinition.cs" />

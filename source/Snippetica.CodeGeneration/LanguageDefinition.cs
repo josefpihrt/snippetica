@@ -61,6 +61,8 @@ namespace Snippetica.CodeGeneration
 
         public abstract string GetArrayInitializer(string value);
 
+        public abstract string GetVariableInitializer(string value);
+
         public virtual string GetDefaultValue()
         {
             return ObjectType.DefaultValue;

@@ -113,6 +113,13 @@ namespace Snippetica.CodeGeneration.Commands
 
                         break;
                     }
+                case CommandKind.InlineModifier:
+                    {
+                        if (command2.Kind == CommandKind.Declaration)
+                            return true;
+
+                        break;
+                    }
             }
 
             return false;

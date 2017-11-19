@@ -6,6 +6,8 @@ namespace Snippetica.CodeGeneration.Commands
     {
         None,
         Multi,
+        Declaration,
+        Definition,
         Initializer,
         Type,
         Collection,
@@ -22,6 +24,7 @@ namespace Snippetica.CodeGeneration.Commands
         PrefixTitle,
         SuffixFileName,
         ShortcutToLowercase,
+        SuffixShortcut,
         Empty,
     }
 }

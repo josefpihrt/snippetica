@@ -141,7 +141,6 @@
           <New Name="SizeOf" Value="sizeof" Shortcut="so" />
           <New Name="ThreadLocal" Value="thread_local" Shortcut="tl" IsDevelopment="true" />
           <New Name="Throw" Value="throw" Shortcut="tw" IsDevelopment="true" />
-          <New Name="TypeDef" Value="typedef" Shortcut="td" IsDevelopment="true" />
           <New Name="TypeId" Value="typeid" Shortcut="ti" IsDevelopment="true" />
           <New Name="TypeName" Value="typename" Shortcut="tn" IsDevelopment="true" />
           <New Name="Unsigned" Value="unsigned" Shortcut="us" IsDevelopment="true" />

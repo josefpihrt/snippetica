@@ -7,41 +7,51 @@ Shortcut | Title
 -------- | -----
 ae|attribute
 b|braces
-c|class
+c|class declaration
 catch|catch
 cc|const class
 ccr|copy constructor
 ce|constexpr keyword
-cef|constexpr function
-cev|constexpr variable declaration
-cf|const function
+cef|constexpr function declaration
+cefx|constexpr function definition
+cev|constexpr variable
+cf|const function declaration
+cfx|const function definition
 co|conditional operator
-cr|constructor
+cr|constructor declaration
+crx|constructor definition
 cst|const struct
-cv|const variable declaration
+cv|const variable
+cx|class definition
 d|default keyword
-dr|destructor
+dr|destructor declaration
+drx|destructor definition
 dt|decltype keyword
 dw|do\-while
 e|else
+ecr|explicit constructor declaration
+ecrx|explicit constructor definition
 eif|else\-if
-em|enum
-emc|enum class
-emst|enum struct
-f| function
+em|enum declaration
+emc|enum class declaration
+emcx|enum class definition
+emst|enum struct declaration
+emstx|enum struct definition
+emx|enum definition
+f|function declaration
 fr|for
 frr|for \(reversed\)
 frrb|for \(range\-based\)
+fx|function definition
 ie|interface
 if|if
 ifce|if constexpr
 il|inline keyword
-ilcf|inline const function
-ilcv|inline const variable declaration
-ilf|inline function
+ilcfx|inline const function definition
+ilcv|inline const variable
+ilfx|inline function definition
 ilns|inline namespace
-ilv|inline variable declaration
-l|lambda expression
+ilv|inline variable
 mc|multi\-line comment
 mcr|move constructor
 np|nullptr keyword
@@ -61,29 +71,35 @@ ppud|\#undef
 r|return keyword
 s|string type
 sa|static assert
-scef|static constexpr function
-scev|static constexpr variable declaration
-scf|static const function
-scv|static const variable declaration
-sf|static function
+scef|static constexpr function declaration
+scefx|static constexpr function definition
+scev|static constexpr variable
+scf|static const function declaration
+scfx|static const function definition
+scv|static const variable
+sf|static function declaration
+sfx|static function definition
 sh|switch
-silcf|static inline const function
-silcv|static inline const variable declaration
-silf|static inline function
-silv|static inline variable declaration
+silcfx|static inline const function definition
+silcv|static inline const variable
+silfx|static inline function definition
+silv|static inline variable
 so|sizeof keyword
-st|struct
-sv|static variable declaration
+st|struct declaration
+stx|struct definition
+sv|static variable
 t|template
 t2|template with 2 parameters
 tc|try\-catch
+td|typedef declaration
 un|union
 uns|using namespace
-v|variable declaration
+v|variable
 va|array variable
-vb|Boolean variable
-vf|virtual function
-vi|Int32 variable
-vilf|virtual inline function
-vs|String variable
+vb|bool variable
+vf|virtual function declaration
+vfx|virtual function definition
+vi|int variable
+vilfx|virtual inline function definition
+vs|string variable
 we|while

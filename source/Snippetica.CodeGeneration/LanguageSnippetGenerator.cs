@@ -25,6 +25,15 @@ namespace Snippetica.CodeGeneration
         {
             var commands = new MultiCommandCollection();
 
+            if (snippet.HasTag(KnownTags.GenerateDeclarationAndDefinition))
+            {
+                commands.AddMultiCommands(new Command[]
+                {
+                    CommandUtility.Declaration,
+                    CommandUtility.Definition
+                });
+            }
+
             commands.AddMultiCommands(GetTypeCommands(snippet));
 
             if (snippet.HasTag(KnownTags.GenerateCollection))
@@ -114,9 +123,11 @@ namespace Snippetica.CodeGeneration
             snippet.RemoveTag(KnownTags.GenerateArguments);
             snippet.RemoveTag(KnownTags.GenerateCollection);
             snippet.RemoveTag(KnownTags.GenerateImmutableCollection);
+            snippet.RemoveTag(KnownTags.GenerateDeclarationAndDefinition);
             snippet.RemoveTag(KnownTags.Array);
             snippet.RemoveTag(KnownTags.Collection);
             snippet.RemoveTag(KnownTags.Dictionary);
+            snippet.RemoveTag(KnownTags.Variable);
             snippet.RemoveTag(KnownTags.TryParse);
             snippet.RemoveTag(KnownTags.Initializer);
 

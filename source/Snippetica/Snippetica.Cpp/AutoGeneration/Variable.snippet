@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>variable declaration</Title>
+    <Title>variable</Title>
     <Shortcut>v</Shortcut>
-    <Description> variable declaration</Description>
+    <Description> variable</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -11,8 +11,10 @@
     <Keywords>
       <Keyword>Meta-GenerateConstExprModifier</Keyword>
       <Keyword>Meta-GenerateConstModifier</Keyword>
+      <Keyword>Meta-GenerateInitializer</Keyword>
       <Keyword>Meta-GenerateInlineModifier</Keyword>
       <Keyword>Meta-GenerateStaticModifier</Keyword>
+      <Keyword>Meta-Variable</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -23,13 +25,12 @@
         <Default>x</Default>
       </Literal>
       <Literal Editable="false">
+        <ID>_initializer</ID>
+        <ToolTip>Initializer</ToolTip>
+      </Literal>
+      <Literal Editable="false">
         <ID>_modifiers</ID>
         <ToolTip>Modifier(s)</ToolTip>
-      </Literal>
-      <Literal>
-        <ID>_value</ID>
-        <ToolTip>Value to assign</ToolTip>
-        <Default>nullptr</Default>
       </Literal>
       <Literal>
         <ID>type</ID>
@@ -37,6 +38,6 @@
         <Default>auto</Default>
       </Literal>
     </Declarations>
-    <Code Language="Cpp"><![CDATA[$_modifiers$ $type$ $_identifier$ = $_value$;$end$]]></Code>
+    <Code Language="Cpp"><![CDATA[$_modifiers$ $type$ $_identifier$$_initializer$;$end$]]></Code>
   </Snippet>
 </CodeSnippet>

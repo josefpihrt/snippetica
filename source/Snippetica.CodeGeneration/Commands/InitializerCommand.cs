@@ -30,15 +30,20 @@ namespace Snippetica.CodeGeneration.Commands
             if (snippet.HasTag(KnownTags.Collection))
                 return language.GetCollectionInitializer($"${LiteralIdentifiers.Value}$");
 
+            if (snippet.HasTag(KnownTags.Variable))
+                return language.GetVariableInitializer($"${LiteralIdentifiers.Value}$");
+
             Debug.Fail("");
             return null;
         }
 
         internal static Snippet AddInitializer(ExecutionContext context, Snippet snippet, string initializer, string defaultValue)
         {
-            snippet.SuffixTitle(" (with initializer)");
+            string suffix = (snippet.Language == Language.Cpp) ? " (with initialization)" : " (with initializer)";
+
+            snippet.SuffixTitle(suffix);
             snippet.SuffixShortcut(context.WithInitializerSuffix(snippet));
-            snippet.SuffixDescription(" (with initializer)");
+            snippet.SuffixDescription(suffix);
 
             snippet.ReplacePlaceholders(LiteralIdentifiers.Initializer, initializer);
 
@@ -50,7 +55,7 @@ namespace Snippetica.CodeGeneration.Commands
 
             snippet.AddTag(KnownTags.ExcludeFromReadme);
 
-            snippet.SuffixFileName("WithInitializer");
+            snippet.SuffixFileName((snippet.Language == Language.Cpp) ? "WithInitialization" : "WithInitializer");
 
             return snippet;
         }

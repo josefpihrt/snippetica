@@ -8,15 +8,13 @@
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
-    <Keywords>
-      <Keyword>Meta-GenerateParameters</Keyword>
-    </Keywords>
   </Header>
   <Snippet>
     <Declarations>
-      <Literal Editable="false">
-        <ID>_parameterList</ID>
-        <Default>()</Default>
+      <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>T parameter</Default>
       </Literal>
       <Literal>
         <ID>captures</ID>
@@ -29,7 +27,7 @@
         <Default>auto</Default>
       </Literal>
     </Declarations>
-    <Code Language="Cpp"><![CDATA[[$captures$]$_parameterList$ -> $returnType$ {
+    <Code Language="Cpp"><![CDATA[[$captures$]($_parameters$) -> $returnType$ {
 	$selected$$end$
 };]]></Code>
   </Snippet>
