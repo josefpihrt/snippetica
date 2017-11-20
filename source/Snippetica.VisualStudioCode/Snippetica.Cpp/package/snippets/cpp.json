@@ -120,14 +120,14 @@
   "array variable": {
     "prefix": "va",
     "body": [
-      "${1:auto} ${2:items}[${3:1}];${0}"
+      "${1:T} ${2:items}[${3:1}];${0}"
     ],
     "description": "array variable"
   },
   "array variable (with initialization)": {
     "prefix": "vax",
     "body": [
-      "${1:auto} ${2:items}[] = { ${3:nullptr} };${0}"
+      "${1:auto} ${2:items}[${3:1}] = { ${4:nullptr} };${0}"
     ],
     "description": "array variable (with initialization)"
   },
@@ -137,13 +137,6 @@
       "[[${1:attribute}${TM_SELECTED_TEXT}]]${0}"
     ],
     "description": "attribute"
-  },
-  "bool variable": {
-    "prefix": "vb",
-    "body": [
-      "bool ${1:f} = ${2:false};${0}"
-    ],
-    "description": "bool variable"
   },
   "braces": {
     "prefix": "b",
@@ -234,7 +227,7 @@
   "const variable": {
     "prefix": "cv",
     "body": [
-      "const ${1:auto} ${2:x};${0}"
+      "const ${1:T} ${2:x};${0}"
     ],
     "description": "const  variable"
   },
@@ -271,7 +264,7 @@
   "constexpr variable": {
     "prefix": "cev",
     "body": [
-      "constexpr ${1:auto} ${2:x};${0}"
+      "constexpr ${1:T} ${2:x};${0}"
     ],
     "description": "constexpr  variable"
   },
@@ -298,14 +291,21 @@
     ],
     "description": "constructor definition"
   },
-  "copy constructor": {
+  "copy constructor declaration": {
     "prefix": "ccr",
+    "body": [
+      "${1:TypeName}(const ${1}& ${2:x});${0}"
+    ],
+    "description": "copy constructor declaration"
+  },
+  "copy constructor definition": {
+    "prefix": "ccrx",
     "body": [
       "${1:TypeName}(const ${1}& ${2:x}) {",
       "\t${TM_SELECTED_TEXT}${0}",
-      "}"
+      "};"
     ],
-    "description": "copy constructor"
+    "description": "copy constructor definition"
   },
   "decltype keyword": {
     "prefix": "dt",
@@ -537,7 +537,7 @@
   "inline const variable": {
     "prefix": "ilcv",
     "body": [
-      "inline const ${1:auto} ${2:x};${0}"
+      "inline const ${1:T} ${2:x};${0}"
     ],
     "description": "inline const  variable"
   },
@@ -576,7 +576,7 @@
   "inline variable": {
     "prefix": "ilv",
     "body": [
-      "inline ${1:auto} ${2:x};${0}"
+      "inline ${1:T} ${2:x};${0}"
     ],
     "description": "inline  variable"
   },
@@ -587,13 +587,6 @@
     ],
     "description": "inline  variable (with initialization)"
   },
-  "int variable": {
-    "prefix": "vi",
-    "body": [
-      "int ${1:i} = ${2:0};${0}"
-    ],
-    "description": "int variable"
-  },
   "interface": {
     "prefix": "ie",
     "body": [
@@ -603,15 +596,23 @@
     ],
     "description": "interface definition"
   },
-  "move constructor": {
+  "move constructor declaration": {
     "prefix": "mcr",
+    "body": [
+      "",
+      "      ${1:TypeName}(${1}&& ${2:x});${0}"
+    ],
+    "description": "move constructor declaration"
+  },
+  "move constructor definition": {
+    "prefix": "mcrx",
     "body": [
       "",
       "      ${1:TypeName}(${1}&& ${2:x}) {",
       "\t${TM_SELECTED_TEXT}${0}",
-      "}"
+      "};"
     ],
-    "description": "move constructor"
+    "description": "move constructor definition"
   },
   "multi-line comment": {
     "prefix": "mc",
@@ -683,7 +684,7 @@
   "static const variable": {
     "prefix": "scv",
     "body": [
-      "static const ${1:auto} ${2:x};${0}"
+      "static const ${1:T} ${2:x};${0}"
     ],
     "description": "static const  variable"
   },
@@ -713,7 +714,7 @@
   "static constexpr variable": {
     "prefix": "scev",
     "body": [
-      "static constexpr ${1:auto} ${2:x};${0}"
+      "static constexpr ${1:T} ${2:x};${0}"
     ],
     "description": "static constexpr  variable"
   },
@@ -752,7 +753,7 @@
   "static inline const variable": {
     "prefix": "silcv",
     "body": [
-      "static inline const ${1:auto} ${2:x};${0}"
+      "static inline const ${1:T} ${2:x};${0}"
     ],
     "description": "static inline const  variable"
   },
@@ -775,7 +776,7 @@
   "static inline variable": {
     "prefix": "silv",
     "body": [
-      "static inline ${1:auto} ${2:x};${0}"
+      "static inline ${1:T} ${2:x};${0}"
     ],
     "description": "static inline  variable"
   },
@@ -789,7 +790,7 @@
   "static variable": {
     "prefix": "sv",
     "body": [
-      "static ${1:auto} ${2:x};${0}"
+      "static ${1:T} ${2:x};${0}"
     ],
     "description": "static  variable"
   },
@@ -806,13 +807,6 @@
       "std::string${0}"
     ],
     "description": "string type"
-  },
-  "string variable": {
-    "prefix": "vs",
-    "body": [
-      "std::string ${1:s} = ${2:nullptr};${0}"
-    ],
-    "description": "string variable"
   },
   "struct declaration": {
     "prefix": "st",
@@ -834,8 +828,7 @@
     "prefix": "sh",
     "body": [
       "switch (${1:SwitchOn}) {",
-      "\t${2:default:",
-      "    break;}${0}",
+      "\t${0}",
       "}"
     ],
     "description": "switch statement"
@@ -890,7 +883,7 @@
   "variable": {
     "prefix": "v",
     "body": [
-      "${1:auto} ${2:x};${0}"
+      "${1:T} ${2:x};${0}"
     ],
     "description": " variable"
   },

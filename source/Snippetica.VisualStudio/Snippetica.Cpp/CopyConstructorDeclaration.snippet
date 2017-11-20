@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>constexpr variable</Title>
-    <Shortcut>cev</Shortcut>
-    <Description>constexpr  variable</Description>
+    <Title>copy constructor declaration</Title>
+    <Shortcut>ccr</Shortcut>
+    <Description>copy constructor declaration</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -15,16 +15,17 @@
   <Snippet>
     <Declarations>
       <Literal>
-        <ID>_identifier</ID>
-        <ToolTip>Identifier name</ToolTip>
+        <ID>parameter</ID>
+        <ToolTip>Parameter name</ToolTip>
         <Default>x</Default>
       </Literal>
-      <Literal>
-        <ID>_type</ID>
-        <ToolTip>Variable type name</ToolTip>
-        <Default>T</Default>
+      <Literal Editable="false">
+        <ID>typeName</ID>
+        <ToolTip>Type name</ToolTip>
+        <Default>TypeName</Default>
+        <Function>TypeName()</Function>
       </Literal>
     </Declarations>
-    <Code Language="Cpp"><![CDATA[constexpr $_type$ $_identifier$;$end$]]></Code>
+    <Code Language="Cpp"><![CDATA[$typeName$(const $typeName$& $parameter$);$end$]]></Code>
   </Snippet>
 </CodeSnippet>

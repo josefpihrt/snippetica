@@ -53,6 +53,35 @@
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>bool variable</Title>
+      <Shortcut>vb</Shortcut>
+      <Description>bool variable</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name BoolVariable</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>f</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value to assign</ToolTip>
+          <Default>false</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[bool $identifier$ = $value$;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>break statement</Title>
       <Shortcut>bs</Shortcut>
       <Description>break statement</Description>
@@ -231,6 +260,35 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>int variable</Title>
+      <Shortcut>vi</Shortcut>
+      <Description>int variable</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IntVariable</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>i</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value to assign</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[int $identifier$ = $value$;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>noexcept keyword</Title>
       <Shortcut>ne</Shortcut>
       <Description>noexcept keyword</Description>
@@ -353,6 +411,35 @@ private:
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[static_cast<$type$>($expression$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>string variable</Title>
+      <Shortcut>vs</Shortcut>
+      <Description>string variable</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name StringVariable</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>s</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value to assign</ToolTip>
+          <Default>nullptr</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[std::string $identifier$ = $value$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

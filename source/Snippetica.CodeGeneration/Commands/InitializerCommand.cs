@@ -51,9 +51,18 @@ namespace Snippetica.CodeGeneration.Commands
 
             snippet.RemoveLiteral(LiteralIdentifiers.Initializer);
 
-            snippet.RemoveLiteralAndPlaceholders(LiteralIdentifiers.ArrayLength);
+            if (snippet.Language == Language.Cpp)
+            {
+                Literal typeLiteral = snippet.Literals.Find(LiteralIdentifiers.Type);
+                typeLiteral.DefaultValue = "auto";
 
-            snippet.AddTag(KnownTags.ExcludeFromReadme);
+                LiteralRenamer.Rename(snippet, LiteralIdentifiers.Type, "type");
+            }
+            else
+            {
+                snippet.RemoveLiteralAndPlaceholders(LiteralIdentifiers.ArrayLength);
+                snippet.AddTag(KnownTags.ExcludeFromReadme);
+            }
 
             snippet.SuffixFileName((snippet.Language == Language.Cpp) ? "WithInitialization" : "WithInitializer");
 

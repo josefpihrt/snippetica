@@ -7,11 +7,16 @@
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
-      <SnippetType>SurroundsWith</SnippetType>
     </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-GenerateDeclarationAndDefinition</Keyword>
+    </Keywords>
   </Header>
   <Snippet>
     <Declarations>
+      <Literal Editable="false">
+        <ID>_definition</ID>
+      </Literal>
       <Literal>
         <ID>parameter</ID>
         <ToolTip>Parameter name</ToolTip>
@@ -24,9 +29,7 @@
         <Function>TypeName()</Function>
       </Literal>
     </Declarations>
-    <Code Language="Cpp"><![CDATA[
-      $typeName$($typeName$&& $parameter$) {
-	$selected$$end$
-}]]></Code>
+    <Code Language="Cpp">
+      <![CDATA[$typeName$($typeName$&& $parameter$)$_definition$;]]></Code>
   </Snippet>
 </CodeSnippet>

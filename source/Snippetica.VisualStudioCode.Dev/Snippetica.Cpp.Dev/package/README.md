@@ -25,4 +25,7 @@ tn|typename keyword
 tw|throw keyword
 u|using declaration
 us|unsigned keyword
+vb|bool variable
 ve|volatile keyword
+vi|int variable
+vs|string variable

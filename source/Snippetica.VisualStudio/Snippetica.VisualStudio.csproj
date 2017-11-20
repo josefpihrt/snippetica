@@ -4786,9 +4786,6 @@
     <Content Include="Snippetica.Cpp\Attribute.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\BoolVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.Cpp\Braces.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -4804,19 +4801,16 @@
     <Content Include="Snippetica.Cpp\ConstStruct.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\CopyConstructor.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.Cpp\DoWhile.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\else.snippet">
+    <Content Include="Snippetica.Cpp\Else2.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\ElseIf.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\for.snippet">
+    <Content Include="Snippetica.Cpp\For2.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\ForRangeBased.snippet">
@@ -4825,7 +4819,7 @@
     <Content Include="Snippetica.Cpp\ForReversed.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\if.snippet">
+    <Content Include="Snippetica.Cpp\If2.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\IfConstExpr.snippet">
@@ -4834,19 +4828,13 @@
     <Content Include="Snippetica.Cpp\InlineNamespace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\Interface.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Cpp\IntVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Cpp\MoveConstructor.snippet">
+    <Content Include="Snippetica.Cpp\Interface2.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\MultilineComment.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\Namespace.snippet">
+    <Content Include="Snippetica.Cpp\Namespace2.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\OverloadedOperatorCopyAssignment.snippet">
@@ -4909,10 +4897,7 @@
     <Content Include="Snippetica.Cpp\StringType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\StringVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Cpp\switch.snippet">
+    <Content Include="Snippetica.Cpp\Switch2.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\Template.snippet">
@@ -4927,13 +4912,13 @@
     <Content Include="Snippetica.Cpp\TypeDefDeclaration.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\union.snippet">
+    <Content Include="Snippetica.Cpp\Union2.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\UsingNamespace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\while.snippet">
+    <Content Include="Snippetica.Cpp\While2.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\ConstExprKeyword.snippet">
@@ -4966,16 +4951,22 @@
     <Content Include="Snippetica.Cpp\ArrayOfTVariableWithInitialization.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\ClassDeclaration.snippet">
+    <Content Include="Snippetica.Cpp\Class2Declaration.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\ClassDefinition.snippet">
+    <Content Include="Snippetica.Cpp\Class2Definition.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\ConstructorDeclaration.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\ConstructorDefinition.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.Cpp\CopyConstructorDeclaration.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.Cpp\CopyConstructorDefinition.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\DestructorDeclaration.snippet">
@@ -5063,6 +5054,12 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\StaticInlineConstFunctionDefinition.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.Cpp\MoveConstructorDeclaration.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.Cpp\MoveConstructorDefinition.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\StructDeclaration.snippet">

@@ -26,12 +26,12 @@
           <Default>items</Default>
         </Literal>
         <Literal>
-          <ID>type</ID>
+          <ID>_type</ID>
           <ToolTip>Element type name</ToolTip>
-          <Default>auto</Default>
+          <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[$type$ $_collectionIdentifier$[$_arrayLength$];$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[$_type$ $_collectionIdentifier$[$_arrayLength$];$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -50,6 +50,11 @@
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_arrayLength</ID>
+          <ToolTip>Array length</ToolTip>
+          <Default>1</Default>
+        </Literal>
+        <Literal>
           <ID>_collectionIdentifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>items</Default>
@@ -64,7 +69,7 @@
           <Default>auto</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[$type$ $_collectionIdentifier$[] = { $_value$ };$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[$type$ $_collectionIdentifier$[$_arrayLength$] = { $_value$ };$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -89,35 +94,6 @@
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[[[$attribute$$selected$]]$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>bool variable</Title>
-      <Shortcut>vb</Shortcut>
-      <Description>bool variable</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name BoolVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>f</Default>
-        </Literal>
-        <Literal>
-          <ID>value</ID>
-          <ToolTip>Value to assign</ToolTip>
-          <Default>false</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[bool $identifier$ = $value$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -182,7 +158,7 @@
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ClassDeclaration</Keyword>
+        <Keyword>Meta-Name Class2Declaration</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -207,7 +183,7 @@
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ClassDefinition</Keyword>
+        <Keyword>Meta-Name Class2Definition</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -404,12 +380,12 @@ $name$::~$name$() {
           <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
-          <Default>auto</Default>
+          <ID>_type</ID>
+          <ToolTip>Variable type name</ToolTip>
+          <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[constexpr $type$ $_identifier$;$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[constexpr $_type$ $_identifier$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -438,7 +414,7 @@ $name$::~$name$() {
         </Literal>
         <Literal>
           <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
+          <ToolTip>Variable type name</ToolTip>
           <Default>auto</Default>
         </Literal>
       </Declarations>
@@ -625,12 +601,12 @@ $name$::~$name$() {
           <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
-          <Default>auto</Default>
+          <ID>_type</ID>
+          <ToolTip>Variable type name</ToolTip>
+          <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[const $type$ $_identifier$;$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[const $_type$ $_identifier$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -659,7 +635,7 @@ $name$::~$name$() {
         </Literal>
         <Literal>
           <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
+          <ToolTip>Variable type name</ToolTip>
           <Default>auto</Default>
         </Literal>
       </Declarations>
@@ -668,16 +644,45 @@ $name$::~$name$() {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>copy constructor</Title>
+      <Title>copy constructor declaration</Title>
       <Shortcut>ccr</Shortcut>
-      <Description>copy constructor</Description>
+      <Description>copy constructor declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name CopyConstructorDeclaration</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>parameter</ID>
+          <ToolTip>Parameter name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>typeName</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>TypeName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[$typeName$(const $typeName$& $parameter$);$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>copy constructor definition</Title>
+      <Shortcut>ccrx</Shortcut>
+      <Description>copy constructor definition</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name CopyConstructor</Keyword>
+        <Keyword>Meta-Name CopyConstructorDefinition</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -695,7 +700,7 @@ $name$::~$name$() {
       </Declarations>
       <Code Language="Cpp"><![CDATA[$typeName$(const $typeName$& $parameter$) {
 	$selected$$end$
-}]]></Code>
+};]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -821,7 +826,7 @@ $name$::~$name$() {
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name else</Keyword>
+        <Keyword>Meta-Name Else2</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1082,7 +1087,7 @@ $name$::~$name$() {
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name for</Keyword>
+        <Keyword>Meta-Name For2</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1254,7 +1259,7 @@ $name$::~$name$() {
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name if</Keyword>
+        <Keyword>Meta-Name If2</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1355,12 +1360,12 @@ $name$::~$name$() {
           <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
-          <Default>auto</Default>
+          <ID>_type</ID>
+          <ToolTip>Variable type name</ToolTip>
+          <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[inline const $type$ $_identifier$;$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[inline const $_type$ $_identifier$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -1389,7 +1394,7 @@ $name$::~$name$() {
         </Literal>
         <Literal>
           <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
+          <ToolTip>Variable type name</ToolTip>
           <Default>auto</Default>
         </Literal>
       </Declarations>
@@ -1498,12 +1503,12 @@ $name$::~$name$() {
           <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
-          <Default>auto</Default>
+          <ID>_type</ID>
+          <ToolTip>Variable type name</ToolTip>
+          <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[inline $type$ $_identifier$;$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[inline $_type$ $_identifier$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -1532,7 +1537,7 @@ $name$::~$name$() {
         </Literal>
         <Literal>
           <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
+          <ToolTip>Variable type name</ToolTip>
           <Default>auto</Default>
         </Literal>
       </Declarations>
@@ -1550,7 +1555,7 @@ $name$::~$name$() {
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name Interface</Keyword>
+        <Keyword>Meta-Name Interface2</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1568,45 +1573,46 @@ $name$::~$name$() {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>int variable</Title>
-      <Shortcut>vi</Shortcut>
-      <Description>int variable</Description>
+      <Title>move constructor declaration</Title>
+      <Shortcut>mcr</Shortcut>
+      <Description>move constructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name IntVariable</Keyword>
+        <Keyword>Meta-Name MoveConstructorDeclaration</Keyword>
       </Keywords>
     </Header>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>i</Default>
+          <ID>parameter</ID>
+          <ToolTip>Parameter name</ToolTip>
+          <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>value</ID>
-          <ToolTip>Value to assign</ToolTip>
-          <Default>0</Default>
+          <ID>typeName</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>TypeName</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[int $identifier$ = $value$;$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[
+      $typeName$($typeName$&& $parameter$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>move constructor</Title>
-      <Shortcut>mcr</Shortcut>
-      <Description>move constructor</Description>
+      <Title>move constructor definition</Title>
+      <Shortcut>mcrx</Shortcut>
+      <Description>move constructor definition</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name MoveConstructor</Keyword>
+        <Keyword>Meta-Name MoveConstructorDefinition</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1625,7 +1631,7 @@ $name$::~$name$() {
       <Code Language="Cpp"><![CDATA[
       $typeName$($typeName$&& $parameter$) {
 	$selected$$end$
-}]]></Code>
+};]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -1664,7 +1670,7 @@ $name$::~$name$() {
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name Namespace</Keyword>
+        <Keyword>Meta-Name Namespace2</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2358,12 +2364,12 @@ $name$::~$name$() {
           <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
-          <Default>auto</Default>
+          <ID>_type</ID>
+          <ToolTip>Variable type name</ToolTip>
+          <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[static constexpr $type$ $_identifier$;$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[static constexpr $_type$ $_identifier$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -2392,7 +2398,7 @@ $name$::~$name$() {
         </Literal>
         <Literal>
           <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
+          <ToolTip>Variable type name</ToolTip>
           <Default>auto</Default>
         </Literal>
       </Declarations>
@@ -2491,12 +2497,12 @@ $name$::~$name$() {
           <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
-          <Default>auto</Default>
+          <ID>_type</ID>
+          <ToolTip>Variable type name</ToolTip>
+          <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[static const $type$ $_identifier$;$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[static const $_type$ $_identifier$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -2525,7 +2531,7 @@ $name$::~$name$() {
         </Literal>
         <Literal>
           <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
+          <ToolTip>Variable type name</ToolTip>
           <Default>auto</Default>
         </Literal>
       </Declarations>
@@ -2661,12 +2667,12 @@ $name$::~$name$() {
           <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
-          <Default>auto</Default>
+          <ID>_type</ID>
+          <ToolTip>Variable type name</ToolTip>
+          <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[static inline const $type$ $_identifier$;$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[static inline const $_type$ $_identifier$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -2695,7 +2701,7 @@ $name$::~$name$() {
         </Literal>
         <Literal>
           <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
+          <ToolTip>Variable type name</ToolTip>
           <Default>auto</Default>
         </Literal>
       </Declarations>
@@ -2760,12 +2766,12 @@ $name$::~$name$() {
           <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
-          <Default>auto</Default>
+          <ID>_type</ID>
+          <ToolTip>Variable type name</ToolTip>
+          <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[static inline $type$ $_identifier$;$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[static inline $_type$ $_identifier$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -2794,7 +2800,7 @@ $name$::~$name$() {
         </Literal>
         <Literal>
           <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
+          <ToolTip>Variable type name</ToolTip>
           <Default>auto</Default>
         </Literal>
       </Declarations>
@@ -2822,12 +2828,12 @@ $name$::~$name$() {
           <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
-          <Default>auto</Default>
+          <ID>_type</ID>
+          <ToolTip>Variable type name</ToolTip>
+          <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[static $type$ $_identifier$;$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[static $_type$ $_identifier$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -2856,7 +2862,7 @@ $name$::~$name$() {
         </Literal>
         <Literal>
           <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
+          <ToolTip>Variable type name</ToolTip>
           <Default>auto</Default>
         </Literal>
       </Declarations>
@@ -2878,35 +2884,6 @@ $name$::~$name$() {
     </Header>
     <Snippet>
       <Code Language="Cpp"><![CDATA[std::string$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>string variable</Title>
-      <Shortcut>vs</Shortcut>
-      <Description>string variable</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StringVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>s</Default>
-        </Literal>
-        <Literal>
-          <ID>value</ID>
-          <ToolTip>Value to assign</ToolTip>
-          <Default>nullptr</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[std::string $identifier$ = $value$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -2970,16 +2947,11 @@ $name$::~$name$() {
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name switch</Keyword>
+        <Keyword>Meta-Name Switch2</Keyword>
       </Keywords>
     </Header>
     <Snippet>
       <Declarations>
-        <Literal>
-          <ID>cases</ID>
-          <Default>default:
-    break;</Default>
-        </Literal>
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to switch on</ToolTip>
@@ -2987,7 +2959,7 @@ $name$::~$name$() {
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[switch ($expression$) {
-	$cases$$end$
+	$end$
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3132,7 +3104,7 @@ $name$::~$name$() {
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name union</Keyword>
+        <Keyword>Meta-Name Union2</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3194,12 +3166,12 @@ $name$::~$name$() {
           <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
-          <Default>auto</Default>
+          <ID>_type</ID>
+          <ToolTip>Variable type name</ToolTip>
+          <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[$type$ $_identifier$;$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[$_type$ $_identifier$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -3228,7 +3200,7 @@ $name$::~$name$() {
         </Literal>
         <Literal>
           <ID>type</ID>
-          <ToolTip>Variable type</ToolTip>
+          <ToolTip>Variable type name</ToolTip>
           <Default>auto</Default>
         </Literal>
       </Declarations>
@@ -3354,7 +3326,7 @@ $name$::~$name$() {
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name while</Keyword>
+        <Keyword>Meta-Name While2</Keyword>
       </Keywords>
     </Header>
     <Snippet>

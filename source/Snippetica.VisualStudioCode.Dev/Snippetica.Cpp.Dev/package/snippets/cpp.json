@@ -20,6 +20,13 @@
     ],
     "description": "auto keyword"
   },
+  "bool variable": {
+    "prefix": "vb",
+    "body": [
+      "bool ${1:f} = ${2:false};${0}"
+    ],
+    "description": "bool variable"
+  },
   "break statement": {
     "prefix": "bs",
     "body": [
@@ -86,6 +93,13 @@
     ],
     "description": "friend keyword"
   },
+  "int variable": {
+    "prefix": "vi",
+    "body": [
+      "int ${1:i} = ${2:0};${0}"
+    ],
+    "description": "int variable"
+  },
   "noexcept keyword": {
     "prefix": "ne",
     "body": [
@@ -127,6 +141,13 @@
       "static_cast<${1:T}>(${2:expression})${0}"
     ],
     "description": "static cast"
+  },
+  "string variable": {
+    "prefix": "vs",
+    "body": [
+      "std::string ${1:s} = ${2:nullptr};${0}"
+    ],
+    "description": "string variable"
   },
   "thread_local keyword": {
     "prefix": "tl",

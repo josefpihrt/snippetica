@@ -10,11 +10,13 @@ b|braces
 c|class declaration
 catch|catch
 cc|const class
-ccr|copy constructor
+ccr|copy constructor declaration
+ccrx|copy constructor definition
 ce|constexpr keyword
 cef|constexpr function declaration
 cefx|constexpr function definition
 cev|constexpr variable
+cevx|constexpr variable \(with initialization\)
 cf|const function declaration
 cfx|const function definition
 co|conditional operator
@@ -22,6 +24,7 @@ cr|constructor declaration
 crx|constructor definition
 cst|const struct
 cv|const variable
+cvx|const variable \(with initialization\)
 cx|class definition
 d|default keyword
 dr|destructor declaration
@@ -49,11 +52,14 @@ ifce|if constexpr
 il|inline keyword
 ilcfx|inline const function definition
 ilcv|inline const variable
+ilcvx|inline const variable \(with initialization\)
 ilfx|inline function definition
 ilns|inline namespace
 ilv|inline variable
+ilvx|inline variable \(with initialization\)
 mc|multi\-line comment
-mcr|move constructor
+mcr|move constructor declaration
+mcrx|move constructor definition
 np|nullptr keyword
 ns|namespace
 or|operator keyword
@@ -74,20 +80,25 @@ sa|static assert
 scef|static constexpr function declaration
 scefx|static constexpr function definition
 scev|static constexpr variable
+scevx|static constexpr variable \(with initialization\)
 scf|static const function declaration
 scfx|static const function definition
 scv|static const variable
+scvx|static const variable \(with initialization\)
 sf|static function declaration
 sfx|static function definition
 sh|switch
 silcfx|static inline const function definition
 silcv|static inline const variable
+silcvx|static inline const variable \(with initialization\)
 silfx|static inline function definition
 silv|static inline variable
+silvx|static inline variable \(with initialization\)
 so|sizeof keyword
 st|struct declaration
 stx|struct definition
 sv|static variable
+svx|static variable \(with initialization\)
 t|template
 t2|template with 2 parameters
 tc|try\-catch
@@ -96,10 +107,9 @@ un|union
 uns|using namespace
 v|variable
 va|array variable
-vb|bool variable
+vax|array variable \(with initialization\)
 vf|virtual function declaration
 vfx|virtual function definition
-vi|int variable
 vilfx|virtual inline function definition
-vs|string variable
+vx|variable \(with initialization\)
 we|while
