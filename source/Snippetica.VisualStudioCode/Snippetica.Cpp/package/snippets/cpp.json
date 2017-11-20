@@ -127,7 +127,7 @@
   "array variable (with initialization)": {
     "prefix": "vax",
     "body": [
-      "${1:auto} ${2:items}[${3:1}] = { ${4:nullptr} };${0}"
+      "${1:auto} ${2:items}[${3:1}] = { ${4:0} };${0}"
     ],
     "description": "array variable (with initialization)"
   },
@@ -234,7 +234,7 @@
   "const variable (with initialization)": {
     "prefix": "cvx",
     "body": [
-      "const ${1:auto} ${2:x} = ${3:nullptr};${0}"
+      "const ${1:auto} ${2:x} = ${3:0};${0}"
     ],
     "description": "const  variable (with initialization)"
   },
@@ -271,7 +271,7 @@
   "constexpr variable (with initialization)": {
     "prefix": "cevx",
     "body": [
-      "constexpr ${1:auto} ${2:x} = ${3:nullptr};${0}"
+      "constexpr ${1:auto} ${2:x} = ${3:0};${0}"
     ],
     "description": "constexpr  variable (with initialization)"
   },
@@ -544,7 +544,7 @@
   "inline const variable (with initialization)": {
     "prefix": "ilcvx",
     "body": [
-      "inline const ${1:auto} ${2:x} = ${3:nullptr};${0}"
+      "inline const ${1:auto} ${2:x} = ${3:0};${0}"
     ],
     "description": "inline const  variable (with initialization)"
   },
@@ -583,7 +583,7 @@
   "inline variable (with initialization)": {
     "prefix": "ilvx",
     "body": [
-      "inline ${1:auto} ${2:x} = ${3:nullptr};${0}"
+      "inline ${1:auto} ${2:x} = ${3:0};${0}"
     ],
     "description": "inline  variable (with initialization)"
   },
@@ -691,7 +691,7 @@
   "static const variable (with initialization)": {
     "prefix": "scvx",
     "body": [
-      "static const ${1:auto} ${2:x} = ${3:nullptr};${0}"
+      "static const ${1:auto} ${2:x} = ${3:0};${0}"
     ],
     "description": "static const  variable (with initialization)"
   },
@@ -721,7 +721,7 @@
   "static constexpr variable (with initialization)": {
     "prefix": "scevx",
     "body": [
-      "static constexpr ${1:auto} ${2:x} = ${3:nullptr};${0}"
+      "static constexpr ${1:auto} ${2:x} = ${3:0};${0}"
     ],
     "description": "static constexpr  variable (with initialization)"
   },
@@ -760,7 +760,7 @@
   "static inline const variable (with initialization)": {
     "prefix": "silcvx",
     "body": [
-      "static inline const ${1:auto} ${2:x} = ${3:nullptr};${0}"
+      "static inline const ${1:auto} ${2:x} = ${3:0};${0}"
     ],
     "description": "static inline const  variable (with initialization)"
   },
@@ -783,7 +783,7 @@
   "static inline variable (with initialization)": {
     "prefix": "silvx",
     "body": [
-      "static inline ${1:auto} ${2:x} = ${3:nullptr};${0}"
+      "static inline ${1:auto} ${2:x} = ${3:0};${0}"
     ],
     "description": "static inline  variable (with initialization)"
   },
@@ -797,7 +797,7 @@
   "static variable (with initialization)": {
     "prefix": "svx",
     "body": [
-      "static ${1:auto} ${2:x} = ${3:nullptr};${0}"
+      "static ${1:auto} ${2:x} = ${3:0};${0}"
     ],
     "description": "static  variable (with initialization)"
   },
@@ -890,7 +890,7 @@
   "variable (with initialization)": {
     "prefix": "vx",
     "body": [
-      "${1:auto} ${2:x} = ${3:nullptr};${0}"
+      "${1:auto} ${2:x} = ${3:0};${0}"
     ],
     "description": " variable (with initialization)"
   },

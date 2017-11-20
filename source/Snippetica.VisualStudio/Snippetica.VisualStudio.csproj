@@ -4804,13 +4804,13 @@
     <Content Include="Snippetica.Cpp\DoWhile.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\Else2.snippet">
+    <Content Include="Snippetica.Cpp\Else.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\ElseIf.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\For2.snippet">
+    <Content Include="Snippetica.Cpp\For.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\ForRangeBased.snippet">
@@ -4819,7 +4819,7 @@
     <Content Include="Snippetica.Cpp\ForReversed.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\If2.snippet">
+    <Content Include="Snippetica.Cpp\If.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\IfConstExpr.snippet">
@@ -4828,13 +4828,13 @@
     <Content Include="Snippetica.Cpp\InlineNamespace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\Interface2.snippet">
+    <Content Include="Snippetica.Cpp\Interface.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\MultilineComment.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\Namespace2.snippet">
+    <Content Include="Snippetica.Cpp\Namespace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\OverloadedOperatorCopyAssignment.snippet">
@@ -4897,7 +4897,7 @@
     <Content Include="Snippetica.Cpp\StringType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\Switch2.snippet">
+    <Content Include="Snippetica.Cpp\Switch.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\Template.snippet">
@@ -4912,13 +4912,13 @@
     <Content Include="Snippetica.Cpp\TypeDefDeclaration.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\Union2.snippet">
+    <Content Include="Snippetica.Cpp\Union.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\UsingNamespace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\While2.snippet">
+    <Content Include="Snippetica.Cpp\While.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\ConstExprKeyword.snippet">
@@ -4951,10 +4951,10 @@
     <Content Include="Snippetica.Cpp\ArrayOfTVariableWithInitialization.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\Class2Declaration.snippet">
+    <Content Include="Snippetica.Cpp\ClassDeclaration.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\Class2Definition.snippet">
+    <Content Include="Snippetica.Cpp\ClassDefinition.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\ConstructorDeclaration.snippet">

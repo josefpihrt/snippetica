@@ -149,7 +149,7 @@
     <None Include="Snippetica.Cpp\PreprocessorDirectiveUndef.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveLine.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveInclude.snippet" />
-    <None Include="Snippetica.Cpp\AutoGeneration\Class2.snippet">
+    <None Include="Snippetica.Cpp\AutoGeneration\Class.snippet">
       <SubType>Designer</SubType>
     </None>
     <None Include="Snippetica.Cpp\AutoGeneration\Constructor.snippet">
@@ -160,20 +160,20 @@
     </None>
     <None Include="Snippetica.Cpp\Dev\ClassWithInlineConstructorDestructor.snippet" />
     <None Include="Snippetica.Cpp\DoWhile.snippet" />
-    <None Include="Snippetica.Cpp\Else2.snippet" />
+    <None Include="Snippetica.Cpp\Else.snippet" />
     <None Include="Snippetica.Cpp\AutoGeneration\Enum.snippet">
       <SubType>Designer</SubType>
     </None>
     <None Include="Snippetica.Cpp\AutoGeneration\EnumClass.snippet">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Snippetica.Cpp\For2.snippet" />
+    <None Include="Snippetica.Cpp\For.snippet" />
     <None Include="Snippetica.Cpp\ForRangeBased.snippet" />
     <None Include="Snippetica.Cpp\ForReversed.snippet" />
-    <None Include="Snippetica.Cpp\If2.snippet" />
+    <None Include="Snippetica.Cpp\If.snippet" />
     <None Include="Snippetica.Cpp\ElseIf.snippet" />
-    <None Include="Snippetica.Cpp\Interface2.snippet" />
-    <None Include="Snippetica.Cpp\Namespace2.snippet" />
+    <None Include="Snippetica.Cpp\Interface.snippet" />
+    <None Include="Snippetica.Cpp\Namespace.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveIf.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveIfdef.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveIfndef.snippet" />
@@ -181,11 +181,11 @@
     <None Include="Snippetica.Cpp\AutoGeneration\Struct.snippet">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Snippetica.Cpp\Switch2.snippet" />
+    <None Include="Snippetica.Cpp\Switch.snippet" />
     <None Include="Snippetica.Cpp\TryCatch.snippet" />
-    <None Include="Snippetica.Cpp\Union2.snippet" />
+    <None Include="Snippetica.Cpp\Union.snippet" />
     <None Include="Snippetica.Cpp\TypeDefDeclaration.snippet" />
-    <None Include="Snippetica.Cpp\While2.snippet" />
+    <None Include="Snippetica.Cpp\While.snippet" />
     <None Include="Snippetica.CSharp\AttributeClass.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ArrayOfTVariable.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\AutoProperty.snippet" />
