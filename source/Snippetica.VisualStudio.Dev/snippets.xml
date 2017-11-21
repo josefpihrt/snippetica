@@ -134,35 +134,6 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>const cast</Title>
-      <Shortcut>cct</Shortcut>
-      <Description>const cast</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ConstCast</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression</ToolTip>
-          <Default>expression</Default>
-        </Literal>
-        <Literal>
-          <ID>type</ID>
-          <ToolTip>Type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[const_cast<$type$>($expression$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>continue statement</Title>
       <Shortcut>cs</Shortcut>
       <Description>continue statement</Description>
@@ -193,35 +164,6 @@ private:
     </Header>
     <Snippet>
       <Code Language="Cpp"><![CDATA[delete$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>dynamic cast</Title>
-      <Shortcut>dct</Shortcut>
-      <Description>dynamic cast</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DynamicCast</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression</ToolTip>
-          <Default>expression</Default>
-        </Literal>
-        <Literal>
-          <ID>type</ID>
-          <ToolTip>Type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[dynamic_cast<$type$>($expression$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -289,6 +231,37 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>lambda expression (minimal)</Title>
+      <Shortcut>lm</Shortcut>
+      <Description>lambda expression (minimal)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name LambdaExpressionMinimal</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>captures</ID>
+          <ToolTip>List of captures</ToolTip>
+          <Default>&amp;</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[[$captures$]($_parameters$) {
+	$selected$$end$
+};]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>noexcept keyword</Title>
       <Shortcut>ne</Shortcut>
       <Description>noexcept keyword</Description>
@@ -302,35 +275,6 @@ private:
     </Header>
     <Snippet>
       <Code Language="Cpp"><![CDATA[noexcept$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>reinterpret cast</Title>
-      <Shortcut>rct</Shortcut>
-      <Description>reinterpret cast</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ReinterpretCast</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression</ToolTip>
-          <Default>expression</Default>
-        </Literal>
-        <Literal>
-          <ID>type</ID>
-          <ToolTip>Type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[reinterpret_cast<$type$>($expression$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -382,35 +326,6 @@ private:
     </Header>
     <Snippet>
       <Code Language="Cpp"><![CDATA[return true;$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>static cast</Title>
-      <Shortcut>sct</Shortcut>
-      <Description>static cast</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StaticCast</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression</ToolTip>
-          <Default>expression</Default>
-        </Literal>
-        <Literal>
-          <ID>type</ID>
-          <ToolTip>Type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[static_cast<$type$>($expression$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -525,35 +440,6 @@ private:
     </Header>
     <Snippet>
       <Code Language="Cpp"><![CDATA[unsigned$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>using declaration</Title>
-      <Shortcut>u</Shortcut>
-      <Description>using declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name UsingDeclaration</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Name</ToolTip>
-          <Default>Name</Default>
-        </Literal>
-        <Literal>
-          <ID>namespaceName</ID>
-          <ToolTip>Namespace name</ToolTip>
-          <Default>NamespaceName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[using $namespaceName$::$name$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

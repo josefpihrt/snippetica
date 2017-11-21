@@ -36,7 +36,7 @@ namespace Snippetica
         public const string GenerateXmlSnippets = "GenerateXmlSnippets";
 
         public const string MetaPrefix = "Meta-";
-        private const string GeneratePrefix = "Generate";
+        public const string GeneratePrefix = "Generate";
 
         public const string GenerateAccessModifier = GeneratePrefix + "AccessModifier";
         public const string GeneratePublicModifier = GeneratePrefix + "PublicModifier";

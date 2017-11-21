@@ -190,6 +190,13 @@
     ],
     "description": "conditional operator"
   },
+  "const cast": {
+    "prefix": "cct",
+    "body": [
+      "const_cast<${1:T}>(${2:expression})${0}"
+    ],
+    "description": "const cast"
+  },
   "const class": {
     "prefix": "cc",
     "body": [
@@ -345,6 +352,13 @@
       "} while (${1:true});"
     ],
     "description": "do-while statement"
+  },
+  "dynamic cast": {
+    "prefix": "dct",
+    "body": [
+      "dynamic_cast<${1:T}>(${2:expression})${0}"
+    ],
+    "description": "dynamic cast"
   },
   "else": {
     "prefix": "e",
@@ -596,6 +610,15 @@
     ],
     "description": "interface definition"
   },
+  "lambda expression": {
+    "prefix": "l",
+    "body": [
+      "[${1:&}](${2:T parameter}) -> ${3:auto} {",
+      "\t${TM_SELECTED_TEXT}${0}",
+      "};"
+    ],
+    "description": "lambda expression"
+  },
   "move constructor declaration": {
     "prefix": "mcr",
     "body": [
@@ -644,6 +667,20 @@
     ],
     "description": "operator keyword"
   },
+  "pure virtual function": {
+    "prefix": "pvf",
+    "body": [
+      "virtual ${1:void} ${2:FunctionName}(${3:T parameter}) = 0;${0}"
+    ],
+    "description": "pure virtual function"
+  },
+  "reinterpret cast": {
+    "prefix": "rct",
+    "body": [
+      "reinterpret_cast<${1:T}>(${2:expression})${0}"
+    ],
+    "description": "reinterpret cast"
+  },
   "return keyword": {
     "prefix": "r",
     "body": [
@@ -664,6 +701,13 @@
       "static_assert(${1:expression}${TM_SELECTED_TEXT})${0}"
     ],
     "description": "static assert"
+  },
+  "static cast": {
+    "prefix": "sct",
+    "body": [
+      "static_cast<${1:T}>(${2:expression})${0}"
+    ],
+    "description": "static cast"
   },
   "static const function declaration": {
     "prefix": "scf",
@@ -872,6 +916,13 @@
       "};"
     ],
     "description": "union"
+  },
+  "using declaration": {
+    "prefix": "u",
+    "body": [
+      "using ${1:NamespaceName}::${2:Name};${0}"
+    ],
+    "description": "using declaration"
   },
   "using namespace": {
     "prefix": "uns",

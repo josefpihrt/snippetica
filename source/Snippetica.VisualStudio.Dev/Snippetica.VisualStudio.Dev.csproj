@@ -1031,19 +1031,13 @@
     <Content Include="Snippetica.Cpp.Dev\ClassWithInlineConstructorDestructor.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp.Dev\ConstCast.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.Cpp.Dev\ContinueStatement.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Cpp.Dev\DynamicCast.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp.Dev\IntVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp.Dev\ReinterpretCast.snippet">
+    <Content Include="Snippetica.Cpp.Dev\LambdaExpressionMinimal.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp.Dev\ReturnFalse.snippet">
@@ -1055,13 +1049,7 @@
     <Content Include="Snippetica.Cpp.Dev\ReturnTrue.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp.Dev\StaticCast.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.Cpp.Dev\StringVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Cpp.Dev\UsingDeclaration.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp.Dev\AlignAsKeyword.snippet">

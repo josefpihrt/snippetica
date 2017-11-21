@@ -62,13 +62,13 @@
   <ItemGroup>
     <None Include="README.md" />
     <None Include="License.txt" />
-    <None Include="Snippetica.Cpp\AutoGeneration\PureVirtualFunction.snippet">
+    <None Include="Snippetica.Cpp\PureVirtualFunction.snippet">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Snippetica.Cpp\AutoGeneration\LambdaExpression.snippet">
+    <None Include="Snippetica.Cpp\LambdaExpression.snippet">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Snippetica.Cpp\Dev\AutoGeneration\LambdaExpressionMinimal.snippet">
+    <None Include="Snippetica.Cpp\Dev\LambdaExpressionMinimal.snippet">
       <SubType>Designer</SubType>
     </None>
     <None Include="Snippetica.Cpp\Braces.snippet" />
@@ -122,17 +122,17 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Snippetica.Cpp\Dev\BoolVariable.snippet" />
-    <None Include="Snippetica.Cpp\Dev\ReinterpretCast.snippet" />
-    <None Include="Snippetica.Cpp\Dev\ConstCast.snippet" />
-    <None Include="Snippetica.Cpp\Dev\StaticCast.snippet" />
-    <None Include="Snippetica.Cpp\Dev\DynamicCast.snippet" />
+    <None Include="Snippetica.Cpp\ReinterpretCast.snippet" />
+    <None Include="Snippetica.Cpp\ConstCast.snippet" />
+    <None Include="Snippetica.Cpp\StaticCast.snippet" />
+    <None Include="Snippetica.Cpp\DynamicCast.snippet" />
     <None Include="Snippetica.Cpp\MultilineComment.snippet" />
     <None Include="Snippetica.Cpp\Dev\IntVariable.snippet" />
     <None Include="Snippetica.Cpp\InlineNamespace.snippet" />
     <None Include="Snippetica.Cpp\Attribute.snippet" />
     <None Include="Snippetica.Cpp\TemplateWithTwoParameters.snippet" />
     <None Include="Snippetica.Cpp\ConstStruct.snippet" />
-    <None Include="Snippetica.Cpp\Dev\UsingDeclaration.snippet">
+    <None Include="Snippetica.Cpp\UsingDeclaration.snippet">
       <SubType>Designer</SubType>
     </None>
     <None Include="Snippetica.Cpp\UsingNamespace.snippet" />
@@ -316,7 +316,9 @@
     <None Include="Snippetica.CSharp\Dev\IO\PathHasExtension.snippet" />
     <None Include="Snippetica.CSharp\LambdaExpressionWithTwoParameters.snippet" />
     <None Include="Snippetica.CSharp\Dev\Linq\EnumerableCast.snippet" />
-    <None Include="Snippetica.CSharp\Dev\Linq\EnumerableEmpty.snippet" />
+    <None Include="Snippetica.CSharp\Dev\Linq\EnumerableEmpty.snippet">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Snippetica.CSharp\Dev\Linq\EnumerableFirst.snippet" />
     <None Include="Snippetica.CSharp\Dev\Linq\EnumerableFirstOrDefault.snippet" />
     <None Include="Snippetica.CSharp\Dev\Linq\EnumerableGroupBy.snippet" />
@@ -882,6 +884,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Snippetica.Cpp\Dev\AutoGeneration\" />
     <Folder Include="Snippetica.Xml\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

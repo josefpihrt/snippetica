@@ -12,6 +12,7 @@ catch|catch
 cc|const class
 ccr|copy constructor declaration
 ccrx|copy constructor definition
+cct|const cast
 ce|constexpr keyword
 cef|constexpr function declaration
 cefx|constexpr function definition
@@ -27,6 +28,7 @@ cv|const variable
 cvx|const variable \(with initialization\)
 cx|class definition
 d|default keyword
+dct|dynamic cast
 dr|destructor declaration
 drx|destructor definition
 dt|decltype keyword
@@ -57,6 +59,7 @@ ilfx|inline function definition
 ilns|inline namespace
 ilv|inline variable
 ilvx|inline variable \(with initialization\)
+l|lambda expression
 mc|multi\-line comment
 mcr|move constructor declaration
 mcrx|move constructor definition
@@ -74,7 +77,9 @@ ppl|\#line
 ppr|\#pragma region
 ppu|\#using
 ppud|\#undef
+pvf|pure virtual function
 r|return keyword
+rct|reinterpret cast
 s|string type
 sa|static assert
 scef|static constexpr function declaration
@@ -83,6 +88,7 @@ scev|static constexpr variable
 scevx|static constexpr variable \(with initialization\)
 scf|static const function declaration
 scfx|static const function definition
+sct|static cast
 scv|static const variable
 scvx|static const variable \(with initialization\)
 sf|static function declaration
@@ -103,6 +109,7 @@ t|template
 t2|template with 2 parameters
 tc|try\-catch
 td|typedef declaration
+u|using declaration
 un|union
 uns|using namespace
 v|variable
