@@ -4912,9 +4912,6 @@
     <Content Include="Snippetica.Cpp\StaticCast.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.Cpp\StringType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.Cpp\Switch.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -4955,9 +4952,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\NullPtrKeyword.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.Cpp\OperatorKeyword.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\ReturnKeyword.snippet">

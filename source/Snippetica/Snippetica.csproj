@@ -62,6 +62,7 @@
   <ItemGroup>
     <None Include="README.md" />
     <None Include="License.txt" />
+    <None Include="Snippetica.Cpp\Dev\LogicalNotOperator.snippet" />
     <None Include="Snippetica.Cpp\PureVirtualFunction.snippet">
       <SubType>Designer</SubType>
     </None>
@@ -137,7 +138,7 @@
     </None>
     <None Include="Snippetica.Cpp\UsingNamespace.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveIfElse.snippet" />
-    <None Include="Snippetica.Cpp\StringType.snippet" />
+    <None Include="Snippetica.Cpp\Dev\StringType.snippet" />
     <None Include="Snippetica.Cpp\Template.snippet" />
     <None Include="Snippetica.Cpp\Dev\StringVariable.snippet" />
     <None Include="Snippetica.Cpp\AutoGeneration\Variable.snippet">

@@ -1,4 +1,11 @@
 ﻿{
+  "! operator": {
+    "prefix": "x",
+    "body": [
+      "!(${1:x})${0}"
+    ],
+    "description": "! operator"
+  },
   "alignas keyword": {
     "prefix": "aa",
     "body": [
@@ -102,6 +109,13 @@
     ],
     "description": "noexcept keyword"
   },
+  "operator keyword": {
+    "prefix": "or",
+    "body": [
+      "operator${0}"
+    ],
+    "description": "operator keyword"
+  },
   "return false": {
     "prefix": "rf",
     "body": [
@@ -122,6 +136,13 @@
       "return true;${0}"
     ],
     "description": "return true"
+  },
+  "string type": {
+    "prefix": "s",
+    "body": [
+      "std::string${0}"
+    ],
+    "description": "string type"
   },
   "string variable": {
     "prefix": "vs",

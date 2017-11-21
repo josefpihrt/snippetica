@@ -14,8 +14,12 @@ namespace Snippetica.CodeGeneration
                     return "";
                 case ShortcutKind.MemberDeclaration:
                     return "Member Declaration";
+                case ShortcutKind.DeclarationDefinition:
+                    return "Declaration/Definition";
                 case ShortcutKind.Modifier:
                     return "Modifer";
+                case ShortcutKind.Specifier:
+                    return "Specifier";
                 case ShortcutKind.Statement:
                     return "Statement";
                 case ShortcutKind.Operator:

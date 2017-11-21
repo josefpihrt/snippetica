@@ -1,6 +1,65 @@
 ### Snippet Browser
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=cpp).
 
+### Quick Reference
+
+
+#### Declaration/Definition
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+c|class declaration/definition|\-
+cr|constructor declaration/definition|\-
+dr|destructor declaration/definition|\-
+em|enum declaration/definition|\-
+f|function declaration/definition|\-
+ns|namespace definition|\-
+st|struct declaration/definition|\-
+td|typedef declaration|\-
+u|using declaration|\-
+un|union definition|\-
+v|variable declaration/definition|\-
+
+#### Specifier
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+c|const|prefix
+ce|constexpr|prefix
+il|inline|prefix
+s|static|prefix
+v|virtual|prefix
+
+#### Statement
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+dw|do\-while statement|\-
+fe|foreach statement|\-
+fr|for statement|\-
+if|if statement|\-
+sh|switch statement|\-
+tc|try/catch statement|\-
+we|while statement|\-
+
+#### Other
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+ae|attribute|\-
+co|conditional operator|\-
+ct|cast|suffix
+d|default keyword|\-
+dt|decltype keyword|\-
+e|else clause|\-
+l|lambda expression|\-
+np|nullptr|\-
+oo|operator overload|\-
+pp|preprocessor directive|prefix
+r|return keyword|\-
+so|sizeof keyword|\-
+t|template|\-
+
 ### List of Selected Snippets
 
 Shortcut | Title
@@ -65,7 +124,6 @@ mcr|move constructor declaration
 mcrx|move constructor definition
 np|nullptr keyword
 ns|namespace
-or|operator keyword
 ppd|\#define
 ppe|\#error
 ppi|\#include
@@ -80,7 +138,6 @@ ppud|\#undef
 pvf|pure virtual function
 r|return keyword
 rct|reinterpret cast
-s|string type
 sa|static assert
 scef|static constexpr function declaration
 scefx|static constexpr function definition

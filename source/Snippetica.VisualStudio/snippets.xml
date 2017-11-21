@@ -1809,23 +1809,6 @@ $name$::~$name$() {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>operator keyword</Title>
-      <Shortcut>or</Shortcut>
-      <Description>operator keyword</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name OperatorKeyword</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="Cpp"><![CDATA[operator$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>= copy assignment operator</Title>
       <Shortcut>oo</Shortcut>
       <Description>copy assignment operator</Description>
@@ -3066,23 +3049,6 @@ $name$::~$name$() {
         </Literal>
       </Declarations>
       <Code Language="Cpp"><![CDATA[static $type$ $_identifier$ = $_value$;$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>string type</Title>
-      <Shortcut>s</Shortcut>
-      <Description>string type</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StringType</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="Cpp"><![CDATA[std::string$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

@@ -6,7 +6,9 @@ namespace Snippetica.CodeGeneration
     {
         None,
         MemberDeclaration,
+        DeclarationDefinition,
         Modifier,
+        Specifier,
         Statement,
         Operator,
         Keyword,

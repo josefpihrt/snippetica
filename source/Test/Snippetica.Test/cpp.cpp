@@ -2,5 +2,6 @@
 namespace Namespace
 {
     class ClassName {
+
     };
 }

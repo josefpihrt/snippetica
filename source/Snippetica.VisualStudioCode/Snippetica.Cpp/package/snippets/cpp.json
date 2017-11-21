@@ -660,13 +660,6 @@
     ],
     "description": "nullptr keyword"
   },
-  "operator keyword": {
-    "prefix": "or",
-    "body": [
-      "operator${0}"
-    ],
-    "description": "operator keyword"
-  },
   "pure virtual function": {
     "prefix": "pvf",
     "body": [
@@ -844,13 +837,6 @@
       "static ${1:auto} ${2:x} = ${3:0};${0}"
     ],
     "description": "static  variable (with initialization)"
-  },
-  "string type": {
-    "prefix": "s",
-    "body": [
-      "std::string${0}"
-    ],
-    "description": "string type"
   },
   "struct declaration": {
     "prefix": "st",

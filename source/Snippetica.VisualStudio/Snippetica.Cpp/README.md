@@ -3,6 +3,65 @@
 ### Snippet Browser
 * Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs&language=cpp).
 
+### Quick Reference
+
+
+#### Declaration/Definition
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+c|class declaration/definition|\-
+cr|constructor declaration/definition|\-
+dr|destructor declaration/definition|\-
+em|enum declaration/definition|\-
+f|function declaration/definition|\-
+ns|namespace definition|\-
+st|struct declaration/definition|\-
+td|typedef declaration|\-
+u|using declaration|\-
+un|union definition|\-
+v|variable declaration/definition|\-
+
+#### Specifier
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+c|const|prefix
+ce|constexpr|prefix
+il|inline|prefix
+s|static|prefix
+v|virtual|prefix
+
+#### Statement
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+dw|do\-while statement|\-
+fe|foreach statement|\-
+fr|for statement|\-
+if|if statement|\-
+sh|switch statement|\-
+tc|try/catch statement|\-
+we|while statement|\-
+
+#### Other
+
+Shortcut | Description | Comment
+-------- | ----------- | -------
+ae|attribute|\-
+co|conditional operator|\-
+ct|cast|suffix
+d|default keyword|\-
+dt|decltype keyword|\-
+e|else clause|\-
+l|lambda expression|\-
+np|nullptr|\-
+oo|operator overload|\-
+pp|preprocessor directive|prefix
+r|return keyword|\-
+so|sizeof keyword|\-
+t|template|\-
+
 ### List of Selected Snippets
 
 Shortcut | Title
@@ -74,7 +133,6 @@ oo|[explicit operator \(with const\)](OverloadedOperatorExplicitWithConst.snippe
 oo|[explicit operator](OverloadedOperatorExplicit.snippet)
 oo|[implicit operator \(with const\)](OverloadedOperatorImplicitWithConst.snippet)
 oo|[implicit operator](OverloadedOperatorImplicit.snippet)
-or|[operator keyword](OperatorKeyword.snippet)
 ppd|[\#define](PreprocessorDirectiveDefine.snippet)
 ppe|[\#error](PreprocessorDirectiveError.snippet)
 ppi|[\#include](PreprocessorDirectiveInclude.snippet)
@@ -89,7 +147,6 @@ ppud|[\#undef](PreprocessorDirectiveUndef.snippet)
 pvf|[pure virtual function](PureVirtualFunction.snippet)
 r|[return keyword](ReturnKeyword.snippet)
 rct|[reinterpret cast](ReinterpretCast.snippet)
-s|[string type](StringType.snippet)
 sa|[static assert](StaticAssert.snippet)
 scef|[static constexpr function declaration](StaticConstExprFunctionDeclaration.snippet)
 scefx|[static constexpr function definition](StaticConstExprFunctionDefinition.snippet)

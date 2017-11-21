@@ -542,4 +542,220 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
+  <ShortcutInfo Value="c" Description="class declaration/definition" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="cr" Description="constructor declaration/definition" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="dr" Description="destructor declaration/definition" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="em" Description="enum declaration/definition" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="f" Description="function declaration/definition" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="ns" Description="namespace definition" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="st" Description="struct declaration/definition" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="td" Description="typedef declaration" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="u" Description="using declaration" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="un" Description="union definition" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="v" Description="variable declaration/definition" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="c" Description="const" Comment="prefix">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="ce" Description="constexpr" Comment="prefix">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="il" Description="inline" Comment="prefix">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="s" Description="static" Comment="prefix">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="v" Description="virtual" Comment="prefix">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="dw" Description="do-while statement" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="fe" Description="foreach statement" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="fr" Description="for statement" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="if" Description="if statement" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="sh" Description="switch statement" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="tc" Description="try/catch statement" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="we" Description="while statement" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="ae" Description="attribute" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="co" Description="conditional operator" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="ct" Description="cast" Comment="suffix">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="d" Description="default keyword" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="dt" Description="decltype keyword" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="e" Description="else clause" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="l" Description="lambda expression" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="np" Description="nullptr" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="oo" Description="operator overload" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="pp" Description="preprocessor directive" Comment="prefix">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="r" Description="return keyword" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="so" Description="sizeof keyword" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="t" Description="template" Comment="-">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
 </Shortcuts>

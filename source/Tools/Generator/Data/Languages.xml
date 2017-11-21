@@ -136,7 +136,7 @@
           <New Name="Inline" Value="inline" Shortcut="il" />
           <New Name="NoExcept" Value="noexcept" Shortcut="ne" IsDevelopment="true" />
           <New Name="NullPtr" Value="nullptr" Shortcut="np" />
-          <New Name="Operator" Value="operator" Shortcut="or" />
+          <New Name="Operator" Value="operator" Shortcut="or" IsDevelopment="true" />
           <New Name="Return" Value="return" Shortcut="r" />
           <New Name="SizeOf" Value="sizeof" Shortcut="so" />
           <New Name="ThreadLocal" Value="thread_local" Shortcut="tl" IsDevelopment="true" />
