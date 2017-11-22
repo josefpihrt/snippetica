@@ -542,67 +542,67 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="c" Description="class declaration/definition" Comment="-">
+  <ShortcutInfo Value="c" Description="class" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="cr" Description="constructor declaration/definition" Comment="-">
+  <ShortcutInfo Value="cr" Description="constructor" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="dr" Description="destructor declaration/definition" Comment="-">
+  <ShortcutInfo Value="dr" Description="destructor" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="em" Description="enum declaration/definition" Comment="-">
+  <ShortcutInfo Value="em" Description="enum" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="f" Description="function declaration/definition" Comment="-">
+  <ShortcutInfo Value="f" Description="function" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="ns" Description="namespace definition" Comment="-">
+  <ShortcutInfo Value="ns" Description="namespace" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="st" Description="struct declaration/definition" Comment="-">
+  <ShortcutInfo Value="st" Description="struct" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="td" Description="typedef declaration" Comment="-">
+  <ShortcutInfo Value="td" Description="typedef" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="u" Description="using declaration" Comment="-">
+  <ShortcutInfo Value="u" Description="using" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="un" Description="union definition" Comment="-">
+  <ShortcutInfo Value="un" Description="union" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="v" Description="variable declaration/definition" Comment="-">
+  <ShortcutInfo Value="v" Description="variable" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
@@ -638,43 +638,43 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="dw" Description="do-while statement" Comment="-">
+  <ShortcutInfo Value="dw" Description="do-while" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="fe" Description="foreach statement" Comment="-">
+  <ShortcutInfo Value="fe" Description="foreach" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="fr" Description="for statement" Comment="-">
+  <ShortcutInfo Value="fr" Description="for" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="if" Description="if statement" Comment="-">
+  <ShortcutInfo Value="if" Description="if" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="sh" Description="switch statement" Comment="-">
+  <ShortcutInfo Value="sh" Description="switch" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="tc" Description="try/catch statement" Comment="-">
+  <ShortcutInfo Value="tc" Description="try/catch" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="we" Description="while statement" Comment="-">
+  <ShortcutInfo Value="we" Description="while" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>

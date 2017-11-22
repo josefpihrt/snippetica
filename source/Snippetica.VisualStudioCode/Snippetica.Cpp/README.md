@@ -10,17 +10,17 @@
 
 Shortcut | Description | Comment
 -------- | ----------- | -------
-c|class declaration/definition|\-
-cr|constructor declaration/definition|\-
-dr|destructor declaration/definition|\-
-em|enum declaration/definition|\-
-f|function declaration/definition|\-
-ns|namespace definition|\-
-st|struct declaration/definition|\-
-td|typedef declaration|\-
-u|using declaration|\-
-un|union definition|\-
-v|variable declaration/definition|\-
+c|class|\-
+cr|constructor|\-
+dr|destructor|\-
+em|enum|\-
+f|function|\-
+ns|namespace|\-
+st|struct|\-
+td|typedef|\-
+u|using|\-
+un|union|\-
+v|variable|\-
 
 #### Specifier
 
@@ -36,13 +36,13 @@ v|virtual|prefix
 
 Shortcut | Description | Comment
 -------- | ----------- | -------
-dw|do\-while statement|\-
-fe|foreach statement|\-
-fr|for statement|\-
-if|if statement|\-
-sh|switch statement|\-
-tc|try/catch statement|\-
-we|while statement|\-
+dw|do\-while|\-
+fe|foreach|\-
+fr|for|\-
+if|if|\-
+sh|switch|\-
+tc|try/catch|\-
+we|while|\-
 
 #### Other
 

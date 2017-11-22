@@ -122,17 +122,17 @@
           </AddRange>
           <AddRange Languages="Cpp">
             <Set Kind="DeclarationDefinition">
-              <New Value="c" Description="class declaration/definition" />
-              <New Value="cr" Description="constructor declaration/definition" />
-              <New Value="dr" Description="destructor declaration/definition" />
-              <New Value="em" Description="enum declaration/definition" />
-              <New Value="f" Description="function declaration/definition" />
-              <New Value="ns" Description="namespace definition" />
-              <New Value="st" Description="struct declaration/definition" />
-              <New Value="td" Description="typedef declaration" />
-              <New Value="u" Description="using declaration" />
-              <New Value="un" Description="union definition" />
-              <New Value="v" Description="variable declaration/definition" />
+              <New Value="c" Description="class" />
+              <New Value="cr" Description="constructor" />
+              <New Value="dr" Description="destructor" />
+              <New Value="em" Description="enum" />
+              <New Value="f" Description="function" />
+              <New Value="ns" Description="namespace" />
+              <New Value="st" Description="struct" />
+              <New Value="td" Description="typedef" />
+              <New Value="u" Description="using" />
+              <New Value="un" Description="union" />
+              <New Value="v" Description="variable" />
             </Set>
             <Set Kind="Specifier">
               <New Value="c" Description="const" Comment="prefix" />
@@ -142,13 +142,13 @@
               <New Value="v" Description="virtual" Comment="prefix" />
             </Set>
             <Set Kind="Statement">
-              <New Value="dw" Description="do-while statement" />
-              <New Value="fe" Description="foreach statement" />
-              <New Value="fr" Description="for statement" />
-              <New Value="if" Description="if statement" />
-              <New Value="sh" Description="switch statement" Kind="Statement" />
-              <New Value="tc" Description="try/catch statement" />
-              <New Value="we" Description="while statement" />
+              <New Value="dw" Description="do-while" />
+              <New Value="fe" Description="foreach" />
+              <New Value="fr" Description="for" />
+              <New Value="if" Description="if" />
+              <New Value="sh" Description="switch" />
+              <New Value="tc" Description="try/catch" />
+              <New Value="we" Description="while" />
             </Set>
             <Set Kind="Other">
               <New Value="ae" Description="attribute" />
