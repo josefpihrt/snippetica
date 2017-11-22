@@ -3923,12 +3923,12 @@ $modifier$ class $name$Attribute : $base$
         <Literal>
           <ID>false</ID>
           <ToolTip>False expression</ToolTip>
-          <Default>null</Default>
+          <Default>false</Default>
         </Literal>
         <Literal>
           <ID>true</ID>
           <ToolTip>True expression</ToolTip>
-          <Default>null</Default>
+          <Default>true</Default>
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[($expression$) ? $true$ : $false$$end$]]></Code>
@@ -3957,12 +3957,12 @@ $modifier$ class $name$Attribute : $base$
         <Literal>
           <ID>false</ID>
           <ToolTip>False expression</ToolTip>
-          <Default>null</Default>
+          <Default>false</Default>
         </Literal>
         <Literal>
           <ID>true</ID>
           <ToolTip>True expression</ToolTip>
-          <Default>null</Default>
+          <Default>true</Default>
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[($expression$ == null) ? $true$ : $false$$end$]]></Code>
@@ -3991,12 +3991,12 @@ $modifier$ class $name$Attribute : $base$
         <Literal>
           <ID>false</ID>
           <ToolTip>False expression</ToolTip>
-          <Default>null</Default>
+          <Default>false</Default>
         </Literal>
         <Literal>
           <ID>true</ID>
           <ToolTip>True expression</ToolTip>
-          <Default>null</Default>
+          <Default>true</Default>
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[($expression$ != null) ? $true$ : $false$$end$]]></Code>

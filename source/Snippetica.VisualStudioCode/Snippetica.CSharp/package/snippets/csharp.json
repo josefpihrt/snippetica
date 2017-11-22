@@ -333,21 +333,21 @@
   "conditional operator": {
     "prefix": "co",
     "body": [
-      "(${1:expression}) ? ${2:null} : ${3:null}${0}"
+      "(${1:expression}) ? ${2:true} : ${3:false}${0}"
     ],
     "description": "conditional operator"
   },
   "conditional operator (equal to null)": {
     "prefix": "con",
     "body": [
-      "(${1:expression} == null) ? ${2:null} : ${3:null}${0}"
+      "(${1:expression} == null) ? ${2:true} : ${3:false}${0}"
     ],
     "description": "conditional operator with condition whether the expression is equal to null"
   },
   "conditional operator (not equal to null)": {
     "prefix": "coxn",
     "body": [
-      "(${1:expression} != null) ? ${2:null} : ${3:null}${0}"
+      "(${1:expression} != null) ? ${2:true} : ${3:false}${0}"
     ],
     "description": "conditional operator with condition whether the expression is not equal to null"
   },
