@@ -16,7 +16,26 @@ namespace Snippetica.CodeGeneration.Commands
         {
             LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
-            AddInitializer(context, snippet, GetInitializer(snippet, language), language.GetDefaultValue());
+            if (snippet.HasTag(KnownTags.Array))
+            {
+                AddInitializer(context, snippet, language.GetArrayInitializer($"${LiteralIdentifiers.Value}$"), language.GetDefaultValue());
+            }
+            else if (snippet.HasTag(KnownTags.Dictionary))
+            {
+                AddInitializer(context, snippet, language.GetDictionaryInitializer($"${LiteralIdentifiers.Value}$"), language.GetDefaultValue());
+            }
+            else if (snippet.HasTag(KnownTags.Collection))
+            {
+                AddInitializer(context, snippet, language.GetCollectionInitializer($"${LiteralIdentifiers.Value}$"), language.GetDefaultValue());
+            }
+            else if (snippet.HasTag(KnownTags.Variable))
+            {
+                AddInitializer(context, snippet, language.GetVariableInitializer($"${LiteralIdentifiers.Value}$"), language.GetDefaultValue());
+            }
+            else
+            {
+                AddInitializer(context, snippet, language.GetObjectInitializer($"${LiteralIdentifiers.Value}$"), "x");
+            }
         }
 
         private string GetInitializer(Snippet snippet, LanguageDefinition language)
@@ -33,8 +52,7 @@ namespace Snippetica.CodeGeneration.Commands
             if (snippet.HasTag(KnownTags.Variable))
                 return language.GetVariableInitializer($"${LiteralIdentifiers.Value}$");
 
-            Debug.Fail("");
-            return null;
+            return language.GetObjectInitializer($"${LiteralIdentifiers.Value}$");
         }
 
         internal static Snippet AddInitializer(ExecutionContext context, Snippet snippet, string initializer, string defaultValue)

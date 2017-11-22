@@ -1104,16 +1104,16 @@
   "new variable": {
     "prefix": "vn",
     "body": [
-      "Dim ${1:x} = New ${2:Object}()${0}"
+      "Dim ${1:x} = New ${2:Object}(${3:arguments})${0}"
     ],
     "description": "variable declaration with new object creation"
   },
-  "new variable (with arguments)": {
+  "new variable (with initializer)": {
     "prefix": "vn_",
     "body": [
-      "Dim ${1:x} = New ${2:Object}(${3:arguments})${0}"
+      "Dim ${1:x} = New ${2:Object}(${3:arguments}) With {${4:x}}${0}"
     ],
-    "description": "variable declaration with new object creation (with arguments)"
+    "description": "variable declaration with new object creation (with initializer)"
   },
   "Not operator overloading": {
     "prefix": "oo_Not",

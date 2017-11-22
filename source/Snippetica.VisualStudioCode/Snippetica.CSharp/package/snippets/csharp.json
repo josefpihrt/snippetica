@@ -1236,16 +1236,16 @@
   "new variable": {
     "prefix": "vn",
     "body": [
-      "var ${1:x} = new ${2:object}();${0}"
+      "var ${1:x} = new ${2:object}(${3:arguments});${0}"
     ],
     "description": "variable declaration with new object creation"
   },
-  "new variable (with arguments)": {
+  "new variable (with initializer)": {
     "prefix": "vn_",
     "body": [
-      "var ${1:x} = new ${2:object}(${3:arguments});${0}"
+      "var ${1:x} = new ${2:object}(${3:arguments}) { ${4:x} };${0}"
     ],
-    "description": "variable declaration with new object creation (with arguments)"
+    "description": "variable declaration with new object creation (with initializer)"
   },
   "not equal to null": {
     "prefix": "xn",

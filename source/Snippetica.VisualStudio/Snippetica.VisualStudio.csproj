@@ -1909,7 +1909,7 @@
     <Content Include="Snippetica.CSharp\NewVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\NewVariableWithArguments.snippet">
+    <Content Include="Snippetica.CSharp\NewVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\ThisParameterArray.snippet">
@@ -4195,7 +4195,7 @@
     <Content Include="Snippetica.VisualBasic\NewVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\NewVariableWithArguments.snippet">
+    <Content Include="Snippetica.VisualBasic\NewVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\ThisParameterArray.snippet">

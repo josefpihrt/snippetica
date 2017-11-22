@@ -65,9 +65,6 @@ namespace Snippetica.CodeGeneration
             if (snippet.HasTag(KnownTags.GenerateParameters))
                 commands.AddMultiCommand(CommandUtility.ParametersCommand, duplicateWhenEmpty: true);
 
-            if (snippet.HasTag(KnownTags.GenerateArguments))
-                commands.AddMultiCommand(CommandUtility.ArgumentsCommand, duplicateWhenEmpty: true);
-
             return commands;
         }
 
@@ -120,7 +117,6 @@ namespace Snippetica.CodeGeneration
             snippet.RemoveTag(KnownTags.GenerateAccessModifier);
             snippet.RemoveTag(KnownTags.GenerateInitializer);
             snippet.RemoveTag(KnownTags.GenerateParameters);
-            snippet.RemoveTag(KnownTags.GenerateArguments);
             snippet.RemoveTag(KnownTags.GenerateCollection);
             snippet.RemoveTag(KnownTags.GenerateImmutableCollection);
             snippet.RemoveTag(KnownTags.GenerateDeclarationAndDefinition);

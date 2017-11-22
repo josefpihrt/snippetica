@@ -50,7 +50,6 @@ namespace Snippetica
         public const string GenerateConstExprModifier = GeneratePrefix + "ConstExprModifier";
         public const string GenerateInitializer = GeneratePrefix + "Initializer";
         public const string GenerateParameters = GeneratePrefix + "Parameters";
-        public const string GenerateArguments = GeneratePrefix + "Arguments";
         public const string GenerateXamlProperty = GeneratePrefix + "XamlProperty";
         public const string GenerateCollection = GeneratePrefix + "Collection";
         public const string GenerateImmutableCollection = GeneratePrefix + "ImmutableCollection";

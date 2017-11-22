@@ -15,7 +15,6 @@ namespace Snippetica.CodeGeneration.Commands
         public static Command ConstExprCommand { get; } = new ConstExprCommand();
         public static Command InitializerCommand { get; } = new InitializerCommand();
         public static Command ParametersCommand { get; } = new ParametersCommand();
-        public static Command ArgumentsCommand { get; } = new ArgumentsCommand();
         public static Command ShortcutToLowercase { get; } = new ShortcutToLowercaseCommand();
         public static Command SuffixFileNameWithUnderscore { get; } = new SuffixFileNameCommand("_");
         public static Command Declaration { get; } = new DeclarationCommand();

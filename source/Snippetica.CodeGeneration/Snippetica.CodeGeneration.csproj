@@ -108,7 +108,6 @@
     <Compile Include="Commands\CommandKind.cs" />
     <Compile Include="Commands\SnippetCommand.cs" />
     <Compile Include="Commands\ImmutableCollectionTypeCommand.cs" />
-    <Compile Include="Commands\ArgumentsCommand.cs" />
     <Compile Include="Commands\ParametersCommand.cs" />
     <Compile Include="Commands\AccessModifierCommand.cs" />
     <Compile Include="Commands\PrefixTitleCommand.cs" />

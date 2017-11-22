@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>new variable (with arguments)</Title>
+    <Title>new variable (with initializer)</Title>
     <Shortcut>vn_</Shortcut>
-    <Description>variable declaration with new object creation (with arguments)</Description>
+    <Description>variable declaration with new object creation (with initializer)</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -16,9 +16,13 @@
   <Snippet>
     <Declarations>
       <Literal>
-        <ID>arguments</ID>
-        <ToolTip>Arguments</ToolTip>
+        <ID>_arguments</ID>
+        <ToolTip>List of arguments</ToolTip>
         <Default>arguments</Default>
+      </Literal>
+      <Literal>
+        <ID>_value</ID>
+        <Default>x</Default>
       </Literal>
       <Literal>
         <ID>identifier</ID>
@@ -31,6 +35,6 @@
         <Default>Object</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Dim $identifier$ = New $type$($arguments$)$end$]]></Code>
+    <Code Language="VB"><![CDATA[Dim $identifier$ = New $type$($_arguments$) With {$_value$}$end$]]></Code>
   </Snippet>
 </CodeSnippet>
