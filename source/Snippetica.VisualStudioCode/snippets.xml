@@ -5138,6 +5138,69 @@ if ($_type$.TryParse($value$, out $result$))
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
+      <Title>interface event</Title>
+      <Shortcut>_et</Shortcut>
+      <Description>interface event declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InterfaceEvent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Event name</ToolTip>
+          <Default>EventName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[event EventHandler $name$;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>interface event with EventHandler&lt;T&gt;</Title>
+      <Shortcut>_ett</Shortcut>
+      <Description>interface event declaration with EventHandler&lt;T&gt;</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InterfaceEventWithEventHandlerOfT</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>eventArgs</ID>
+          <ToolTip>EventArgs type name</ToolTip>
+          <Default>EventArgs</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Event name</ToolTip>
+          <Default>EventName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[event EventHandler<$eventArgs$> $name$;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
       <Title>interface indexer</Title>
       <Shortcut>_ir</Shortcut>
       <Description>interface indexer declaration</Description>
@@ -18084,6 +18147,69 @@ End If]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Dim $identifier$ As Integer = $value$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>interface event</Title>
+      <Shortcut>_et</Shortcut>
+      <Description>interface event declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InterfaceEvent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Event name</ToolTip>
+          <Default>EventName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Event $name$ As EventHandler$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>interface event with EventHandler&lt;T&gt;</Title>
+      <Shortcut>_ett</Shortcut>
+      <Description>interface event declaration with EventHandler&lt;T&gt;</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InterfaceEventWithEventHandlerOfT</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>eventArgs</ID>
+          <ToolTip>EventArgs type name</ToolTip>
+          <Default>EventArgs</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Event name</ToolTip>
+          <Default>EventName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Event $name$ As EventHandler(Of $eventArgs$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">

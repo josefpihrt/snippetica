@@ -1,16 +1,13 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>interface event with EventHandler&lt;T&gt;</Title>
+    <Title>interface event</Title>
     <Shortcut>_et</Shortcut>
-    <Description>interface event declaration with EventHandler&lt;T&gt;</Description>
+    <Description>interface event declaration</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
-    <Keywords>
-      <Keyword>Meta-NonUniqueShortcut</Keyword>
-    </Keywords>
   </Header>
   <Snippet>
     <Imports>
@@ -20,16 +17,11 @@
     </Imports>
     <Declarations>
       <Literal>
-        <ID>eventArgs</ID>
-        <ToolTip>EventArgs type name</ToolTip>
-        <Default>EventArgs</Default>
-      </Literal>
-      <Literal>
         <ID>name</ID>
         <ToolTip>Event name</ToolTip>
         <Default>EventName</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Event $name$ As EventHandler(Of $eventArgs$)$end$]]></Code>
+    <Code Language="VB"><![CDATA[Event $name$ As EventHandler$end$]]></Code>
   </Snippet>
 </CodeSnippet>

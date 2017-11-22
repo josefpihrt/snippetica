@@ -159,7 +159,7 @@
   "Enumerable.Empty": {
     "prefix": "q_e",
     "body": [
-      "Enumerable.Empty<${1:object}>()${0}"
+      "Enumerable.Empty<${1:T}>()${0}"
     ],
     "description": "Enumerable.Empty method"
   },
@@ -229,7 +229,7 @@
   "Enumerable.OfType": {
     "prefix": "q_ot",
     "body": [
-      ".OfType<${1:object}>()${0}"
+      ".OfType<${1:T}>()${0}"
     ],
     "description": "Enumerable.OfType method"
   },
@@ -556,6 +556,17 @@
     ],
     "description": "if not return true"
   },
+  "if not TryGetValue": {
+    "prefix": "ifxtgv",
+    "body": [
+      "${1:T} ${2:value};",
+      "if (!${3:x}.TryGetValue(${4:key}, out ${2}))",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "if statement with condition whether TryGetValue method returns false."
+  },
   "if return": {
     "prefix": "ifre",
     "body": [
@@ -607,6 +618,17 @@
       "}"
     ],
     "description": "if string.IsNullOrWhiteSpace"
+  },
+  "if TryGetValue": {
+    "prefix": "iftgv",
+    "body": [
+      "${1:T} ${2:value};",
+      "if (${3:x}.TryGetValue(${4:key}, out ${2}))",
+      "{",
+      "\t${0}",
+      "}"
+    ],
+    "description": "if statement with condition whether TryGetValue method returns true."
   },
   "List<T> type": {
     "prefix": "gl",

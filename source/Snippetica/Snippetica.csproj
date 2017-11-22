@@ -208,8 +208,8 @@
     <None Include="Snippetica.CSharp\AutoGeneration\ImmutableCollectionOfTVariable.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Indexer.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Interface.snippet" />
-    <None Include="Snippetica.CSharp\AutoGeneration\InterfaceEvent.snippet" />
-    <None Include="Snippetica.CSharp\AutoGeneration\InterfaceEventWithEventHandlerOfT.snippet" />
+    <None Include="Snippetica.CSharp\InterfaceEvent.snippet" />
+    <None Include="Snippetica.CSharp\InterfaceEventWithEventHandlerOfT.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceIndexer.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceMethod.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceProperty.snippet" />
@@ -656,8 +656,8 @@
     <None Include="Snippetica.VisualBasic\AutoGeneration\ImmutableCollectionOfTVariable.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\Indexer.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\Interface.snippet" />
-    <None Include="Snippetica.VisualBasic\AutoGeneration\InterfaceEvent.snippet" />
-    <None Include="Snippetica.VisualBasic\AutoGeneration\InterfaceEventWithEventHandlerOfT.snippet" />
+    <None Include="Snippetica.VisualBasic\InterfaceEvent.snippet" />
+    <None Include="Snippetica.VisualBasic\InterfaceEventWithEventHandlerOfT.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\InterfaceIndexer.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\InterfaceMethod.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\InterfaceProperty.snippet" />

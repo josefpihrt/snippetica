@@ -98,6 +98,8 @@ y|yield|prefix
 
 Shortcut | Title
 -------- | -----
+\_et|interface event
+\_ett|interface event with EventHandler&lt;T&gt;
 \_ir|interface indexer
 \_m|interface method
 \_p|interface property

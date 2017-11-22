@@ -887,6 +887,20 @@
     ],
     "description": "Int32 variable declaration"
   },
+  "interface event": {
+    "prefix": "_et",
+    "body": [
+      "event EventHandler ${1:EventName};${0}"
+    ],
+    "description": "interface event declaration"
+  },
+  "interface event with EventHandler<T>": {
+    "prefix": "_ett",
+    "body": [
+      "event EventHandler<${1:EventArgs}> ${2:EventName};${0}"
+    ],
+    "description": "interface event declaration with EventHandler<T>"
+  },
   "interface indexer": {
     "prefix": "_ir",
     "body": [
