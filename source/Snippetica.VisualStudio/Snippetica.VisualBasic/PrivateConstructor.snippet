@@ -14,7 +14,14 @@
     </Keywords>
   </Header>
   <Snippet>
-    <Code Language="VB"><![CDATA[Private Sub New()
+    <Declarations>
+      <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>parameter As T</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="VB"><![CDATA[Private Sub New($_parameters$)
 	$end$
 End Sub]]></Code>
   </Snippet>

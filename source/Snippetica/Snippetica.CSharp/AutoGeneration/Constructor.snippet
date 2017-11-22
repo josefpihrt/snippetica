@@ -10,7 +10,6 @@
     </SnippetTypes>
     <Keywords>
       <Keyword>Meta-GenerateAccessModifier</Keyword>
-      <Keyword>Meta-GenerateParameters</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -20,9 +19,10 @@
         <ToolTip>Modifier(s)</ToolTip>
         <Default>public</Default>
       </Literal>
-      <Literal Editable="false">
-        <ID>_parameterList</ID>
-        <Default>()</Default>
+      <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>T parameter</Default>
       </Literal>
       <Literal Editable="false">
         <ID>thisName</ID>
@@ -31,7 +31,7 @@
         <Function>ClassName()</Function>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$_modifiers$ $thisName$$_parameterList$
+    <Code Language="CSharp"><![CDATA[$_modifiers$ $thisName$($_parameters$)
 {
 	$end$
 }]]></Code>

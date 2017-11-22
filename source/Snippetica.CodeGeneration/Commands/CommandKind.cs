@@ -17,7 +17,6 @@ namespace Snippetica.CodeGeneration.Commands
         StaticModifier,
         VirtualModifier,
         AccessModifier,
-        Parameters,
         AlternativeShortcut,
         XamlProperty,
         PrefixTitle,

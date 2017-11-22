@@ -19,12 +19,17 @@
   <Snippet>
     <Declarations>
       <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>T parameter</Default>
+      </Literal>
+      <Literal>
         <ID>name</ID>
         <ToolTip>Method name</ToolTip>
         <Default>MethodName</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[private int $name$()
+    <Code Language="CSharp"><![CDATA[private int $name$($_parameters$)
 {
 	$end$
 }]]></Code>

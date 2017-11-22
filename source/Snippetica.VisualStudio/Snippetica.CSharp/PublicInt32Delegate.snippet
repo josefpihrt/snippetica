@@ -19,11 +19,16 @@
   <Snippet>
     <Declarations>
       <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>T parameter</Default>
+      </Literal>
+      <Literal>
         <ID>name</ID>
         <ToolTip>Delegate name</ToolTip>
         <Default>DelegateName</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[public delegate int $name$();$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[public delegate int $name$($_parameters$);$end$]]></Code>
   </Snippet>
 </CodeSnippet>

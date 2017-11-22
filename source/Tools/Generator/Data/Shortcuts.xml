@@ -99,7 +99,6 @@
               </Remove>
             </Set>
             <Set Kind="Other">
-              <New Value="_" Description="with parameters" Comment="suffix" />
               <New Value="_" Description="with initializer" Comment="suffix" />
               <New Value="c" Description="catch clause" />
               <New Value="d" Description="default keyword" />

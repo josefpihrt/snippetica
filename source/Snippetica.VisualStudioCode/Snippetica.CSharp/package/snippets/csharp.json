@@ -897,16 +897,9 @@
   "interface method": {
     "prefix": "_m",
     "body": [
-      "${1:void} ${2:MethodName}();${0}"
+      "${1:void} ${2:MethodName}(${3:T parameter});${0}"
     ],
     "description": "interface method declaration"
-  },
-  "interface method (with parameters)": {
-    "prefix": "_m_",
-    "body": [
-      "${1:void} ${2:MethodName}(${3:object parameter});${0}"
-    ],
-    "description": "interface method declaration (with parameters)"
   },
   "interface property": {
     "prefix": "_p",
@@ -956,36 +949,19 @@
   "internal constructor": {
     "prefix": "icr",
     "body": [
-      "internal ${1:ThisName}()",
+      "internal ${1:ThisName}(${2:T parameter})",
       "{",
       "\t${0}",
       "}"
     ],
     "description": "internal constructor declaration"
   },
-  "internal constructor (with parameters)": {
-    "prefix": "icr_",
-    "body": [
-      "internal ${1:ThisName}(${2:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "internal constructor declaration (with parameters)"
-  },
   "internal delegate": {
     "prefix": "ide",
     "body": [
-      "internal delegate ${1:void} ${2:DelegateName}();${0}"
+      "internal delegate ${1:void} ${2:DelegateName}(${3:T parameter});${0}"
     ],
     "description": "internal delegate declaration"
-  },
-  "internal delegate (with parameters)": {
-    "prefix": "ide_",
-    "body": [
-      "internal delegate ${1:void} ${2:DelegateName}(${3:object parameter});${0}"
-    ],
-    "description": "internal delegate declaration (with parameters)"
   },
   "internal enum": {
     "prefix": "iem",
@@ -1049,22 +1025,12 @@
   "internal method": {
     "prefix": "im",
     "body": [
-      "internal ${1:void} ${2:MethodName}()",
+      "internal ${1:void} ${2:MethodName}(${3:T parameter})",
       "{",
       "\t${0}",
       "}"
     ],
     "description": "internal method declaration"
-  },
-  "internal method (with parameters)": {
-    "prefix": "im_",
-    "body": [
-      "internal ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "internal method declaration (with parameters)"
   },
   "internal read-only auto property": {
     "prefix": "irp",
@@ -1103,22 +1069,12 @@
   "internal static method": {
     "prefix": "ism",
     "body": [
-      "internal static ${1:void} ${2:MethodName}()",
+      "internal static ${1:void} ${2:MethodName}(${3:T parameter})",
       "{",
       "\t${0}",
       "}"
     ],
     "description": "internal static method declaration"
-  },
-  "internal static method (with parameters)": {
-    "prefix": "ism_",
-    "body": [
-      "internal static ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "internal static method declaration (with parameters)"
   },
   "internal static read-only auto property": {
     "prefix": "isrp",
@@ -1164,22 +1120,12 @@
   "internal virtual method": {
     "prefix": "ivm",
     "body": [
-      "internal virtual ${1:void} ${2:MethodName}()",
+      "internal virtual ${1:void} ${2:MethodName}(${3:T parameter})",
       "{",
       "\t${0}",
       "}"
     ],
     "description": "internal virtual method declaration"
-  },
-  "internal virtual method (with parameters)": {
-    "prefix": "ivm_",
-    "body": [
-      "internal virtual ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "internal virtual method declaration (with parameters)"
   },
   "internal virtual read-only auto property": {
     "prefix": "ivrp",
@@ -1326,36 +1272,19 @@
   "private constructor": {
     "prefix": "pcr",
     "body": [
-      "private ${1:ThisName}()",
+      "private ${1:ThisName}(${2:T parameter})",
       "{",
       "\t${0}",
       "}"
     ],
     "description": "private constructor declaration"
   },
-  "private constructor (with parameters)": {
-    "prefix": "pcr_",
-    "body": [
-      "private ${1:ThisName}(${2:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "private constructor declaration (with parameters)"
-  },
   "private delegate": {
     "prefix": "pde",
     "body": [
-      "private delegate ${1:void} ${2:DelegateName}();${0}"
+      "private delegate ${1:void} ${2:DelegateName}(${3:T parameter});${0}"
     ],
     "description": "private delegate declaration"
-  },
-  "private delegate (with parameters)": {
-    "prefix": "pde_",
-    "body": [
-      "private delegate ${1:void} ${2:DelegateName}(${3:object parameter});${0}"
-    ],
-    "description": "private delegate declaration (with parameters)"
   },
   "private enum": {
     "prefix": "pem",
@@ -1416,22 +1345,12 @@
   "private method": {
     "prefix": "pm",
     "body": [
-      "private ${1:void} ${2:MethodName}()",
+      "private ${1:void} ${2:MethodName}(${3:T parameter})",
       "{",
       "\t${0}",
       "}"
     ],
     "description": "private method declaration"
-  },
-  "private method (with parameters)": {
-    "prefix": "pm_",
-    "body": [
-      "private ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "private method declaration (with parameters)"
   },
   "private read-only auto property": {
     "prefix": "prp",
@@ -1477,22 +1396,12 @@
   "private static method": {
     "prefix": "psm",
     "body": [
-      "private static ${1:void} ${2:MethodName}()",
+      "private static ${1:void} ${2:MethodName}(${3:T parameter})",
       "{",
       "\t${0}",
       "}"
     ],
     "description": "private static method declaration"
-  },
-  "private static method (with parameters)": {
-    "prefix": "psm_",
-    "body": [
-      "private static ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "private static method declaration (with parameters)"
   },
   "private static read-only auto property": {
     "prefix": "psrp",
@@ -1562,36 +1471,19 @@
   "public constructor": {
     "prefix": "cr",
     "body": [
-      "public ${1:ThisName}()",
+      "public ${1:ThisName}(${2:T parameter})",
       "{",
       "\t${0}",
       "}"
     ],
     "description": "public constructor declaration"
   },
-  "public constructor (with parameters)": {
-    "prefix": "cr_",
-    "body": [
-      "public ${1:ThisName}(${2:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "public constructor declaration (with parameters)"
-  },
   "public delegate": {
     "prefix": "de",
     "body": [
-      "public delegate ${1:void} ${2:DelegateName}();${0}"
+      "public delegate ${1:void} ${2:DelegateName}(${3:T parameter});${0}"
     ],
     "description": "public delegate declaration"
-  },
-  "public delegate (with parameters)": {
-    "prefix": "de_",
-    "body": [
-      "public delegate ${1:void} ${2:DelegateName}(${3:object parameter});${0}"
-    ],
-    "description": "public delegate declaration (with parameters)"
   },
   "public enum": {
     "prefix": "em",
@@ -1662,22 +1554,12 @@
   "public method": {
     "prefix": "m",
     "body": [
-      "public ${1:void} ${2:MethodName}()",
+      "public ${1:void} ${2:MethodName}(${3:T parameter})",
       "{",
       "\t${0}",
       "}"
     ],
     "description": "public method declaration"
-  },
-  "public method (with parameters)": {
-    "prefix": "m_",
-    "body": [
-      "public ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "public method declaration (with parameters)"
   },
   "public read-only auto property": {
     "prefix": "rp",
@@ -1723,22 +1605,12 @@
   "public static method": {
     "prefix": "sm",
     "body": [
-      "public static ${1:void} ${2:MethodName}()",
+      "public static ${1:void} ${2:MethodName}(${3:T parameter})",
       "{",
       "\t${0}",
       "}"
     ],
     "description": "public static method declaration"
-  },
-  "public static method (with parameters)": {
-    "prefix": "sm_",
-    "body": [
-      "public static ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "public static method declaration (with parameters)"
   },
   "public static read-only auto property": {
     "prefix": "srp",
@@ -1784,22 +1656,12 @@
   "public virtual method": {
     "prefix": "vm",
     "body": [
-      "public virtual ${1:void} ${2:MethodName}()",
+      "public virtual ${1:void} ${2:MethodName}(${3:T parameter})",
       "{",
       "\t${0}",
       "}"
     ],
     "description": "public virtual method declaration"
-  },
-  "public virtual method (with parameters)": {
-    "prefix": "vm_",
-    "body": [
-      "public virtual ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "public virtual method declaration (with parameters)"
   },
   "public virtual read-only auto property": {
     "prefix": "vrp",

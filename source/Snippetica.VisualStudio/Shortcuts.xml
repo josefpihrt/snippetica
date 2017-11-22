@@ -423,13 +423,6 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="_" Description="with parameters" Comment="suffix">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
   <ShortcutInfo Value="_" Description="with initializer" Comment="suffix">
     <Languages>
       <Language>CSharp</Language>

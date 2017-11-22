@@ -1658,6 +1658,11 @@ if ($_type$.TryParse($value$, out $result$))
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -1668,41 +1673,7 @@ if ($_type$.TryParse($value$, out $result$))
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$_type$ $name$();$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>interface method (with parameters)</Title>
-      <Shortcut>_m_</Shortcut>
-      <Description>interface method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InterfaceMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[$_type$ $name$($parameters$);$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[$_type$ $name$($_parameters$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1898,36 +1869,9 @@ if ($_type$.TryParse($value$, out $result$))
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>thisName</ID>
-          <ToolTip>Containing type name</ToolTip>
-          <Default>ThisName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[internal $thisName$()
-{
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>internal constructor (with parameters)</Title>
-      <Shortcut>icr_</Shortcut>
-      <Description>internal constructor declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalConstructorWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
         </Literal>
         <Literal>
           <ID>thisName</ID>
@@ -1935,7 +1879,7 @@ if ($_type$.TryParse($value$, out $result$))
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal $thisName$($parameters$)
+      <Code Language="CSharp"><![CDATA[internal $thisName$($_parameters$)
 {
 	$end$
 }]]></Code>
@@ -1957,6 +1901,11 @@ if ($_type$.TryParse($value$, out $result$))
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -1967,41 +1916,7 @@ if ($_type$.TryParse($value$, out $result$))
           <Default>DelegateName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal delegate $_type$ $name$();$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>internal delegate (with parameters)</Title>
-      <Shortcut>ide_</Shortcut>
-      <Description>internal delegate declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalDelegateWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Delegate name</ToolTip>
-          <Default>DelegateName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[internal delegate $_type$ $name$($parameters$);$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[internal delegate $_type$ $name$($_parameters$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -2184,6 +2099,11 @@ protected virtual void On$name$($eventArgs$ e)
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -2194,44 +2114,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal $_type$ $name$()
-{
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>internal method (with parameters)</Title>
-      <Shortcut>im_</Shortcut>
-      <Description>internal method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[internal $_type$ $name$($parameters$)
+      <Code Language="CSharp"><![CDATA[internal $_type$ $name$($_parameters$)
 {
 	$end$
 }]]></Code>
@@ -2375,6 +2258,11 @@ protected virtual void On$name$($eventArgs$ e)
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -2385,44 +2273,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal static $_type$ $name$()
-{
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>internal static method (with parameters)</Title>
-      <Shortcut>ism_</Shortcut>
-      <Description>internal static method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalStaticMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[internal static $_type$ $name$($parameters$)
+      <Code Language="CSharp"><![CDATA[internal static $_type$ $name$($_parameters$)
 {
 	$end$
 }]]></Code>
@@ -2595,6 +2446,11 @@ protected virtual void On$name$($eventArgs$ e)
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -2605,44 +2461,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal virtual $_type$ $name$()
-{
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>internal virtual method (with parameters)</Title>
-      <Shortcut>ivm_</Shortcut>
-      <Description>internal virtual method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalVirtualMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[internal virtual $_type$ $name$($parameters$)
+      <Code Language="CSharp"><![CDATA[internal virtual $_type$ $name$($_parameters$)
 {
 	$end$
 }]]></Code>
@@ -4056,36 +3875,9 @@ public static bool operator false($thisName$ $operand$)
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>thisName</ID>
-          <ToolTip>Containing type name</ToolTip>
-          <Default>ThisName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[private $thisName$()
-{
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>private constructor (with parameters)</Title>
-      <Shortcut>pcr_</Shortcut>
-      <Description>private constructor declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PrivateConstructorWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
         </Literal>
         <Literal>
           <ID>thisName</ID>
@@ -4093,7 +3885,7 @@ public static bool operator false($thisName$ $operand$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private $thisName$($parameters$)
+      <Code Language="CSharp"><![CDATA[private $thisName$($_parameters$)
 {
 	$end$
 }]]></Code>
@@ -4115,6 +3907,11 @@ public static bool operator false($thisName$ $operand$)
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -4125,41 +3922,7 @@ public static bool operator false($thisName$ $operand$)
           <Default>DelegateName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private delegate $_type$ $name$();$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>private delegate (with parameters)</Title>
-      <Shortcut>pde_</Shortcut>
-      <Description>private delegate declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PrivateDelegateWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Delegate name</ToolTip>
-          <Default>DelegateName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[private delegate $_type$ $name$($parameters$);$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[private delegate $_type$ $name$($_parameters$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -4344,6 +4107,11 @@ protected virtual void On$name$($eventArgs$ e)
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -4354,44 +4122,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private $_type$ $name$()
-{
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>private method (with parameters)</Title>
-      <Shortcut>pm_</Shortcut>
-      <Description>private method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PrivateMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[private $_type$ $name$($parameters$)
+      <Code Language="CSharp"><![CDATA[private $_type$ $name$($_parameters$)
 {
 	$end$
 }]]></Code>
@@ -4564,6 +4295,11 @@ protected virtual void On$name$($eventArgs$ e)
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -4574,44 +4310,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private static $_type$ $name$()
-{
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>private static method (with parameters)</Title>
-      <Shortcut>psm_</Shortcut>
-      <Description>private static method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PrivateStaticMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[private static $_type$ $name$($parameters$)
+      <Code Language="CSharp"><![CDATA[private static $_type$ $name$($_parameters$)
 {
 	$end$
 }]]></Code>
@@ -4874,36 +4573,9 @@ protected virtual void On$name$($eventArgs$ e)
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>thisName</ID>
-          <ToolTip>Containing type name</ToolTip>
-          <Default>ThisName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[public $thisName$()
-{
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>public constructor (with parameters)</Title>
-      <Shortcut>cr_</Shortcut>
-      <Description>public constructor declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicConstructorWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
         </Literal>
         <Literal>
           <ID>thisName</ID>
@@ -4911,7 +4583,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public $thisName$($parameters$)
+      <Code Language="CSharp"><![CDATA[public $thisName$($_parameters$)
 {
 	$end$
 }]]></Code>
@@ -4933,6 +4605,11 @@ protected virtual void On$name$($eventArgs$ e)
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -4943,41 +4620,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>DelegateName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public delegate $_type$ $name$();$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>public delegate (with parameters)</Title>
-      <Shortcut>de_</Shortcut>
-      <Description>public delegate declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicDelegateWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Delegate name</ToolTip>
-          <Default>DelegateName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[public delegate $_type$ $name$($parameters$);$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[public delegate $_type$ $name$($_parameters$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -5189,6 +4832,11 @@ protected virtual void On$name$($eventArgs$ e)
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -5199,44 +4847,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public $_type$ $name$()
-{
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>public method (with parameters)</Title>
-      <Shortcut>m_</Shortcut>
-      <Description>public method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[public $_type$ $name$($parameters$)
+      <Code Language="CSharp"><![CDATA[public $_type$ $name$($_parameters$)
 {
 	$end$
 }]]></Code>
@@ -5409,6 +5020,11 @@ protected virtual void On$name$($eventArgs$ e)
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -5419,44 +5035,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $_type$ $name$()
-{
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>public static method (with parameters)</Title>
-      <Shortcut>sm_</Shortcut>
-      <Description>public static method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicStaticMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $_type$ $name$($parameters$)
+      <Code Language="CSharp"><![CDATA[public static $_type$ $name$($_parameters$)
 {
 	$end$
 }]]></Code>
@@ -5629,6 +5208,11 @@ protected virtual void On$name$($eventArgs$ e)
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -5639,44 +5223,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public virtual $_type$ $name$()
-{
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>public virtual method (with parameters)</Title>
-      <Shortcut>vm_</Shortcut>
-      <Description>public virtual method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicVirtualMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[public virtual $_type$ $name$($parameters$)
+      <Code Language="CSharp"><![CDATA[public virtual $_type$ $name$($_parameters$)
 {
 	$end$
 }]]></Code>

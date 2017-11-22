@@ -90,7 +90,6 @@ wr|Writer|suffix
 Shortcut | Description | Comment
 -------- | ----------- | -------
 \_|with initializer|suffix
-\_|with parameters|suffix
 c|catch clause|\-
 d|default keyword|\-
 e|else clause|\-

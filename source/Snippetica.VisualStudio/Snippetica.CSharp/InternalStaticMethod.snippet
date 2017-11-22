@@ -18,6 +18,11 @@
   <Snippet>
     <Declarations>
       <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>T parameter</Default>
+      </Literal>
+      <Literal>
         <ID>_type</ID>
         <ToolTip>Return type</ToolTip>
         <Default>T</Default>
@@ -28,7 +33,7 @@
         <Default>MethodName</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[internal static $_type$ $name$()
+    <Code Language="CSharp"><![CDATA[internal static $_type$ $name$($_parameters$)
 {
 	$end$
 }]]></Code>

@@ -3086,6 +3086,11 @@ if (!Enum.TryParse($value$, out $result$))
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>T</Default>
@@ -3096,45 +3101,7 @@ if (!Enum.TryParse($value$, out $result$))
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$_type$ $name$()
-{
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>local function (with parameters)</Title>
-      <Shortcut>lf_</Shortcut>
-      <Description> local function declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name LocalFunctionWithParameters</Keyword>
-        <Keyword>Meta-SubmenuShortcut a</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[$_type$ $name$($parameters$)
+      <Code Language="CSharp"><![CDATA[$_type$ $name$($_parameters$)
 {
 	$end$
 }]]></Code>
