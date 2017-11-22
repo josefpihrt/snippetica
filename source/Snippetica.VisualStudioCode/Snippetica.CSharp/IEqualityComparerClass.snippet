@@ -38,17 +38,13 @@
         <Default>object</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IEqualityComparer
-{
-	new public bool Equals(object x, object y)
-	{
-		if (object.ReferenceEquals(x, y))
-		{
+    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IEqualityComparer {
+	new public bool Equals(object x, object y) {
+		if (object.ReferenceEquals(x, y)) {
 			return true;
 		}
 
-		if (x == null || y == null)
-		{
+		if (x == null || y == null) {
 			return false;
 		}
 
@@ -59,10 +55,8 @@
 		throw new NotImplementedException();
 	}
 
-	public int GetHashCode(object obj)
-	{
-		if (obj == null)
-		{
+	public int GetHashCode(object obj) {
+		if (obj == null) {
 			return 0;
 		}
 

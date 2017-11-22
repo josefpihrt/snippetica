@@ -2,8 +2,7 @@
   " local function": {
     "prefix": "lf",
     "body": [
-      "${1:void} ${2:MethodName}(${3:T parameter})",
-      "{",
+      "${1:void} ${2:MethodName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
@@ -383,8 +382,7 @@
   "FileStream Variable": {
     "prefix": "u_fesm",
     "body": [
-      "using (var ${1:fs} = new FileStream(${2:path}, FileMode${3:.OpenOrCreate}))",
-      "{",
+      "using (var ${1:fs} = new FileStream(${2:path}, FileMode${3:.OpenOrCreate})) {",
       "\t${0}",
       "}"
     ],
@@ -421,8 +419,7 @@
   "if !string.IsNullOrEmpty": {
     "prefix": "ifxsne",
     "body": [
-      "if (!string.IsNullOrEmpty(${1:s}))",
-      "{",
+      "if (!string.IsNullOrEmpty(${1:s})) {",
       "\t${0}",
       "}"
     ],
@@ -431,8 +428,7 @@
   "if !string.IsNullOrWhiteSpace": {
     "prefix": "ifxsnw",
     "body": [
-      "if (!string.IsNullOrWhiteSpace(${1:s}))",
-      "{",
+      "if (!string.IsNullOrWhiteSpace(${1:s})) {",
       "\t${0}",
       "}"
     ],
@@ -442,8 +438,7 @@
     "prefix": "ifemtp",
     "body": [
       "${1:TEnum} ${2:x};",
-      "if (Enum.TryParse(${3:value}, out ${2}))",
-      "{",
+      "if (Enum.TryParse(${3:value}, out ${2})) {",
       "\t${0}",
       "}"
     ],
@@ -485,8 +480,7 @@
     "prefix": "ifxemtp",
     "body": [
       "${1:TEnum} ${2:x};",
-      "if (!Enum.TryParse(${3:value}, out ${2}))",
-      "{",
+      "if (!Enum.TryParse(${3:value}, out ${2})) {",
       "\t${0}",
       "}"
     ],
@@ -560,8 +554,7 @@
     "prefix": "ifxtgv",
     "body": [
       "${1:T} ${2:value};",
-      "if (!${3:x}.TryGetValue(${4:key}, out ${2}))",
-      "{",
+      "if (!${3:x}.TryGetValue(${4:key}, out ${2})) {",
       "\t${0}",
       "}"
     ],
@@ -602,8 +595,7 @@
   "if string.IsNullOrEmpty": {
     "prefix": "ifsne",
     "body": [
-      "if (string.IsNullOrEmpty(${1:s}))",
-      "{",
+      "if (string.IsNullOrEmpty(${1:s})) {",
       "\t${0}",
       "}"
     ],
@@ -612,8 +604,7 @@
   "if string.IsNullOrWhiteSpace": {
     "prefix": "ifsnw",
     "body": [
-      "if (string.IsNullOrWhiteSpace(${1:s}))",
-      "{",
+      "if (string.IsNullOrWhiteSpace(${1:s})) {",
       "\t${0}",
       "}"
     ],
@@ -623,8 +614,7 @@
     "prefix": "iftgv",
     "body": [
       "${1:T} ${2:value};",
-      "if (${3:x}.TryGetValue(${4:key}, out ${2}))",
-      "{",
+      "if (${3:x}.TryGetValue(${4:key}, out ${2})) {",
       "\t${0}",
       "}"
     ],
@@ -654,8 +644,7 @@
   "MemoryStream Variable": {
     "prefix": "u_mysm",
     "body": [
-      "using (var ${1:ms} = new MemoryStream(${2:0}))",
-      "{",
+      "using (var ${1:ms} = new MemoryStream(${2:0})) {",
       "\t${0}",
       "}"
     ],
@@ -664,8 +653,7 @@
   "namespace": {
     "prefix": "ns",
     "body": [
-      "namespace ${1:NamespaceName}",
-      "{",
+      "namespace ${1:NamespaceName} {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
@@ -822,8 +810,7 @@
     "prefix": "vasxn",
     "body": [
       "var ${1:x} = ${2:expression} as ${3:T};",
-      "if (${1} != null)",
-      "{",
+      "if (${1} != null) {",
       "\t${0}",
       "}"
     ],

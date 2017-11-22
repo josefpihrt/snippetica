@@ -2152,8 +2152,7 @@ private:
           <Default>path</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new FileStream($path$, FileMode$fileMode$))
-{
+      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new FileStream($path$, FileMode$fileMode$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2408,8 +2407,7 @@ private:
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[$type$ $result$;
-if (Enum.TryParse($value$, out $result$))
-{
+if (Enum.TryParse($value$, out $result$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2551,8 +2549,7 @@ if (Enum.TryParse($value$, out $result$))
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[$type$ $result$;
-if (!Enum.TryParse($value$, out $result$))
-{
+if (!Enum.TryParse($value$, out $result$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2778,8 +2775,7 @@ if (!Enum.TryParse($value$, out $result$))
           <Default>s</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if (!string.IsNullOrEmpty($expression$))
-{
+      <Code Language="CSharp"><![CDATA[if (!string.IsNullOrEmpty($expression$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2805,8 +2801,7 @@ if (!Enum.TryParse($value$, out $result$))
           <Default>s</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if (!string.IsNullOrWhiteSpace($expression$))
-{
+      <Code Language="CSharp"><![CDATA[if (!string.IsNullOrWhiteSpace($expression$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2849,8 +2844,7 @@ if (!Enum.TryParse($value$, out $result$))
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[$_type$ $value$;
-if (!$identifier$.TryGetValue($key$, out $value$))
-{
+if (!$identifier$.TryGetValue($key$, out $value$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2976,8 +2970,7 @@ if (!$identifier$.TryGetValue($key$, out $value$))
           <Default>s</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if (string.IsNullOrEmpty($expression$))
-{
+      <Code Language="CSharp"><![CDATA[if (string.IsNullOrEmpty($expression$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3003,8 +2996,7 @@ if (!$identifier$.TryGetValue($key$, out $value$))
           <Default>s</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if (string.IsNullOrWhiteSpace($expression$))
-{
+      <Code Language="CSharp"><![CDATA[if (string.IsNullOrWhiteSpace($expression$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3047,8 +3039,7 @@ if (!$identifier$.TryGetValue($key$, out $value$))
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[$_type$ $value$;
-if ($identifier$.TryGetValue($key$, out $value$))
-{
+if ($identifier$.TryGetValue($key$, out $value$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3189,8 +3180,7 @@ if ($identifier$.TryGetValue($key$, out $value$))
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$_type$ $name$($_parameters$)
-{
+      <Code Language="CSharp"><![CDATA[$_type$ $name$($_parameters$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3251,8 +3241,7 @@ if ($identifier$.TryGetValue($key$, out $value$))
           <Default>0</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new MemoryStream($parameters$))
-{
+      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new MemoryStream($parameters$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3279,8 +3268,7 @@ if ($identifier$.TryGetValue($key$, out $value$))
           <Default>NamespaceName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[namespace $name$
-{
+      <Code Language="CSharp"><![CDATA[namespace $name$ {
 	$selected$$end$
 }]]></Code>
     </Snippet>
@@ -3926,8 +3914,7 @@ if ($identifier$.TryGetValue($key$, out $value$))
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[var $identifier$ = $expression$ as $_type$;
-if ($identifier$ != null)
-{
+if ($identifier$ != null) {
 	$end$
 }]]></Code>
     </Snippet>

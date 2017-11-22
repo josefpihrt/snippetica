@@ -112,8 +112,7 @@
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[[AttributeUsage(AttributeTargets$target$, AllowMultiple = $allowMultiple$)]
-$modifier$ class $name$Attribute : $base$
-{
+$modifier$ class $name$Attribute : $base$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -198,8 +197,7 @@ $modifier$ class $name$Attribute : $base$
           <Default>Exception</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[catch ($type$ $name$)
-{
+      <Code Language="CSharp"><![CDATA[catch ($type$ $name$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -243,15 +241,11 @@ $modifier$ class $name$Attribute : $base$
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : Collection<$type$>
-{
-	public $name$()
-	{
+      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : Collection<$type$> {
+	public $name$() {
 	}
 
-	public $name$(IList<$type$> list)
-		: base(list)
-	{
+	public $name$(IList<$type$> list) : base(list) {
 	}
 
 	$end$
@@ -506,34 +500,26 @@ $modifier$ class $name$Attribute : $base$
           <Default>Dictionary</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : Dictionary<$_keyType$, $_valueType$>
-{
-	public $name$() : base()
-	{
+      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : Dictionary<$_keyType$, $_valueType$> {
+	public $name$() : base() {
 	}
 
-	public $name$(int capacity) : base(capacity)
-	{
+	public $name$(int capacity) : base(capacity) {
 	}
 
-	public $name$(IEqualityComparer<$_keyType$> comparer) : base(comparer)
-	{
+	public $name$(IEqualityComparer<$_keyType$> comparer) : base(comparer) {
 	}
 
-	public $name$(IDictionary<$_keyType$, $_valueType$> dictionary) : base(dictionary)
-	{
+	public $name$(IDictionary<$_keyType$, $_valueType$> dictionary) : base(dictionary) {
 	}
 
-	public $name$(int capacity, IEqualityComparer<$_keyType$> comparer) : base(capacity, comparer)
-	{
+	public $name$(int capacity, IEqualityComparer<$_keyType$> comparer) : base(capacity, comparer) {
 	}
 
-	public $name$(SerializationInfo info, StreamingContext context) : base(info, context)
-	{
+	public $name$(SerializationInfo info, StreamingContext context) : base(info, context) {
 	}
 
-	public $name$(IDictionary<$_keyType$, $_valueType$> dictionary, IEqualityComparer<$_keyType$> comparer) : base(dictionary, comparer)
-	{
+	public $name$(IDictionary<$_keyType$, $_valueType$> dictionary, IEqualityComparer<$_keyType$> comparer) : base(dictionary, comparer) {
 	}
 
 	$end$
@@ -571,22 +557,17 @@ $modifier$ class $name$Attribute : $base$
           <Default>ClassName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IDisposable
-{
+      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IDisposable {
 	private bool _disposed;
 
-	public void Dispose()
-	{
+	public void Dispose() {
 		Dispose(true);
 		GC.SuppressFinalize(this);
 	}
 
-	protected virtual void Dispose(bool disposing)
-	{
-		if (!_disposed)
-		{
-			if (disposing)
-			{
+	protected virtual void Dispose(bool disposing) {
+		if (!_disposed) {
+			if (disposing) {
 				throw new NotImplementedException();
 			}
 
@@ -617,18 +598,14 @@ $modifier$ class $name$Attribute : $base$
       </Imports>
       <Code Language="CSharp"><![CDATA[private bool _disposed;
 
-public void Dispose()
-{
+public void Dispose() {
 	Dispose(true);
 	GC.SuppressFinalize(this);
 }
 
-protected virtual void Dispose(bool disposing)
-{
-	if (!_disposed)
-	{
-		if (disposing)
-		{
+protected virtual void Dispose(bool disposing) {
+	if (!_disposed) {
+		if (disposing) {
 			throw new NotImplementedException();
 		}
 
@@ -658,8 +635,7 @@ protected virtual void Dispose(bool disposing)
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[do
-{
+      <Code Language="CSharp"><![CDATA[do {
 	$end$
 
 } while ($expression$ != null);]]></Code>
@@ -686,8 +662,7 @@ protected virtual void Dispose(bool disposing)
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[do
-{
+      <Code Language="CSharp"><![CDATA[do {
 	$end$
 
 } while ($expression$ == null);]]></Code>
@@ -708,8 +683,7 @@ protected virtual void Dispose(bool disposing)
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="CSharp"><![CDATA[else
-{
+      <Code Language="CSharp"><![CDATA[else {
 	$selected$$end$
 }]]></Code>
     </Snippet>
@@ -735,8 +709,7 @@ protected virtual void Dispose(bool disposing)
           <Default>true</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[else if ($expression$)
-{
+      <Code Language="CSharp"><![CDATA[else if ($expression$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -767,11 +740,9 @@ protected virtual void Dispose(bool disposing)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public override bool Equals(object obj)
-{
+      <Code Language="CSharp"><![CDATA[public override bool Equals(object obj) {
 	var other = obj as $thisName$;
-	if (other == null)
-	{
+	if (other == null) {
 		return false;
 	}
 
@@ -779,8 +750,7 @@ protected virtual void Dispose(bool disposing)
 	throw new NotImplementedException();
 }
 
-public override int GetHashCode()
-{
+public override int GetHashCode() {
 	throw new NotImplementedException();
 }]]></Code>
     </Snippet>
@@ -811,10 +781,8 @@ public override int GetHashCode()
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public override bool Equals(object obj)
-{
-	if(!(obj is $thisName$))
-	{
+      <Code Language="CSharp"><![CDATA[public override bool Equals(object obj) {
+	if(!(obj is $thisName$)) {
 		return false;
 	}
 
@@ -824,8 +792,7 @@ public override int GetHashCode()
 	throw new NotImplementedException();
 }
 
-public override int GetHashCode()
-{
+public override int GetHashCode() {
 	throw new NotImplementedException();
 }]]></Code>
     </Snippet>
@@ -894,25 +861,17 @@ public override int GetHashCode()
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[[Serializable]
-$modifier$ class $name$Exception : $base$
-{
-	public $name$Exception()
-	{
+$modifier$ class $name$Exception : $base$ {
+	public $name$Exception() {
 	}
 
-	public $name$Exception(string message)
-		: base(message)
-	{
+	public $name$Exception(string message) : base(message) {
 	}
 
-	public $name$Exception(string message, Exception inner)
-		: base(message, inner)
-	{
+	public $name$Exception(string message, Exception inner) : base(message, inner) {
 	}
 
-	protected $name$Exception(SerializationInfo info, StreamingContext context)
-		: base(info, context)
-	{
+	protected $name$Exception(SerializationInfo info, StreamingContext context) : base(info, context) {
 	}$end$
 }]]></Code>
     </Snippet>
@@ -960,8 +919,7 @@ $modifier$ class $name$Exception : $base$
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="CSharp"><![CDATA[finally
-{
+      <Code Language="CSharp"><![CDATA[finally {
 	$end$
 }]]></Code>
     </Snippet>
@@ -992,8 +950,7 @@ $modifier$ class $name$Exception : $base$
           <Default>length</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[for (int $index$ = 0; $index$ < $length$; $index$++)
-{
+      <Code Language="CSharp"><![CDATA[for (int $index$ = 0; $index$ < $length$; $index$++) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -1024,8 +981,7 @@ $modifier$ class $name$Exception : $base$
           <Default>item</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[foreach (var $identifier$ in $_collection$)
-{
+      <Code Language="CSharp"><![CDATA[foreach (var $identifier$ in $_collection$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -1056,8 +1012,7 @@ $modifier$ class $name$Exception : $base$
           <Default>length</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[for (int $index$ = $length$ - 1; $index$ >= 0; $index$--)
-{
+      <Code Language="CSharp"><![CDATA[for (int $index$ = $length$ - 1; $index$ >= 0; $index$--) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -1130,22 +1085,17 @@ $modifier$ class $name$Exception : $base$
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IComparer
-{
-	public int Compare(object x, object y)
-	{
-		if (object.ReferenceEquals(x, y))
-		{
+      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IComparer {
+	public int Compare(object x, object y) {
+		if (object.ReferenceEquals(x, y)) {
 			return 0;
 		}
 
-		if (x == null)
-		{
+		if (x == null) {
 			return (y == null) ? 0 : -1;
 		}
 
-		if (y == null)
-		{
+		if (y == null) {
 			return 1;
 		}
 
@@ -1197,22 +1147,17 @@ $modifier$ class $name$Exception : $base$
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IComparer<$type$>
-{
-	public int Compare($type$ x, $type$ y)
-	{
-		if (object.ReferenceEquals(x, y))
-		{
+      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IComparer<$type$> {
+	public int Compare($type$ x, $type$ y) {
+		if (object.ReferenceEquals(x, y)) {
 			return 0;
 		}
 
-		if (x == null)
-		{
+		if (x == null) {
 			return -1;
 		}
 
-		if (y == null)
-		{
+		if (y == null) {
 			return 1;
 		}
 
@@ -1277,10 +1222,8 @@ $modifier$ class $name$Exception : $base$
           <Default>en</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $enumerator$ = $_collectionIdentifier$.GetEnumerator())
-{
-	while ($enumerator$.MoveNext())
-	{
+      <Code Language="CSharp"><![CDATA[using (var $enumerator$ = $_collectionIdentifier$.GetEnumerator()) {
+	while ($enumerator$.MoveNext()) {
 		$end$
 	}
 }]]></Code>
@@ -1325,17 +1268,13 @@ $modifier$ class $name$Exception : $base$
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IEqualityComparer
-{
-	new public bool Equals(object x, object y)
-	{
-		if (object.ReferenceEquals(x, y))
-		{
+      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IEqualityComparer {
+	new public bool Equals(object x, object y) {
+		if (object.ReferenceEquals(x, y)) {
 			return true;
 		}
 
-		if (x == null || y == null)
-		{
+		if (x == null || y == null) {
 			return false;
 		}
 
@@ -1346,10 +1285,8 @@ $modifier$ class $name$Exception : $base$
 		throw new NotImplementedException();
 	}
 
-	public int GetHashCode(object obj)
-	{
-		if (obj == null)
-		{
+	public int GetHashCode(object obj) {
+		if (obj == null) {
 			return 0;
 		}
 
@@ -1397,17 +1334,13 @@ $modifier$ class $name$Exception : $base$
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : EqualityComparer<$type$>
-{
-	public override bool Equals($type$ x, $type$ y)
-	{
-		if (object.ReferenceEquals(x, y))
-		{
+      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : EqualityComparer<$type$> {
+	public override bool Equals($type$ x, $type$ y) {
+		if (object.ReferenceEquals(x, y)) {
 			return true;
 		}
 
-		if (x == null || y == null)
-		{
+		if (x == null || y == null) {
 			return false;
 		}
 
@@ -1415,10 +1348,8 @@ $modifier$ class $name$Exception : $base$
 		throw new NotImplementedException();
 	}
 
-	public override int GetHashCode($type$ obj)
-	{
-		if (obj == null)
-		{
+	public override int GetHashCode($type$ obj) {
+		if (obj == null) {
 			return 0;
 		}
 
@@ -1448,8 +1379,7 @@ $modifier$ class $name$Exception : $base$
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ == null)
-{
+      <Code Language="CSharp"><![CDATA[if ($expression$ == null) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -1475,8 +1405,7 @@ $modifier$ class $name$Exception : $base$
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if (!$expression$)
-{
+      <Code Language="CSharp"><![CDATA[if (!$expression$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -1502,8 +1431,7 @@ $modifier$ class $name$Exception : $base$
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ != null)
-{
+      <Code Language="CSharp"><![CDATA[if ($expression$ != null) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -1540,8 +1468,7 @@ $modifier$ class $name$Exception : $base$
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[$_type$ $result$;
-if (!$_type$.TryParse($value$, out $result$))
-{
+if (!$_type$.TryParse($value$, out $result$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -1578,8 +1505,7 @@ if (!$_type$.TryParse($value$, out $result$))
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[$_type$ $result$;
-if ($_type$.TryParse($value$, out $result$))
-{
+if ($_type$.TryParse($value$, out $result$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -1876,8 +1802,7 @@ if ($_type$.TryParse($value$, out $result$))
           <Default>ClassName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal class $name$
-{
+      <Code Language="CSharp"><![CDATA[internal class $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -1942,8 +1867,7 @@ if ($_type$.TryParse($value$, out $result$))
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal $thisName$($_parameters$)
-{
+      <Code Language="CSharp"><![CDATA[internal $thisName$($_parameters$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2003,8 +1927,7 @@ if ($_type$.TryParse($value$, out $result$))
           <Default>EnumName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal enum $name$
-{
+      <Code Language="CSharp"><![CDATA[internal enum $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2037,11 +1960,11 @@ if ($_type$.TryParse($value$, out $result$))
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal event EventHandler $name$;
 
-protected virtual void On$name$(EventArgs e)
-{
+protected virtual void On$name$(EventArgs e) {
 	EventHandler handler = $name$;
-	if (handler != null)
+	if (handler != null) {
 		handler(this, e);
+	}
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2078,11 +2001,11 @@ protected virtual void On$name$(EventArgs e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[internal event EventHandler<$eventArgs$> $name$;
 
-protected virtual void On$name$($eventArgs$ e)
-{
+protected virtual void On$name$($eventArgs$ e) {
 	EventHandler<$eventArgs$> handler = $name$;
-	if (handler != null)
+	if (handler != null) {
 		handler(this, e);
+	}
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2112,8 +2035,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>int index</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal $_type$ this[$parameter$]
-{
+      <Code Language="CSharp"><![CDATA[internal $_type$ this[$parameter$] {
 	get { $end$}
 	set { }
 }]]></Code>
@@ -2140,8 +2062,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>InterfaceName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal interface $name$
-{
+      <Code Language="CSharp"><![CDATA[internal interface $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2177,8 +2098,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal $_type$ $name$($_parameters$)
-{
+      <Code Language="CSharp"><![CDATA[internal $_type$ $name$($_parameters$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2272,8 +2192,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>value</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal $_type$ $name$
-{
+      <Code Language="CSharp"><![CDATA[internal $_type$ $name$ {
 	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
@@ -2299,8 +2218,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>ClassName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal static class $name$
-{
+      <Code Language="CSharp"><![CDATA[internal static class $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2336,8 +2254,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal static $_type$ $name$($_parameters$)
-{
+      <Code Language="CSharp"><![CDATA[internal static $_type$ $name$($_parameters$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2431,8 +2348,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>value</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal static $_type$ $name$
-{
+      <Code Language="CSharp"><![CDATA[internal static $_type$ $name$ {
 	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
@@ -2458,8 +2374,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>StructName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal struct $name$
-{
+      <Code Language="CSharp"><![CDATA[internal struct $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2524,8 +2439,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal virtual $_type$ $name$($_parameters$)
-{
+      <Code Language="CSharp"><![CDATA[internal virtual $_type$ $name$($_parameters$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2590,8 +2504,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>value</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[internal virtual $_type$ $name$
-{
+      <Code Language="CSharp"><![CDATA[internal virtual $_type$ $name$ {
 	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
@@ -2854,20 +2767,14 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : ObservableCollection<$type$>
-{
-	public $name$()
-	{
+      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : ObservableCollection<$type$> {
+	public $name$() {
 	}
 
-	public $name$(IEnumerable<$type$> collection)
-		: base(collection)
-	{
+	public $name$(IEnumerable<$type$> collection) : base(collection) {
 	}
 
-	public $name$(IList<$type$> list)
-		: base(list)
-	{
+	public $name$(IList<$type$> list) : base(list) {
 	}
 
 	$end$
@@ -2905,8 +2812,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator &($thisName$ $left$, $thisName$ $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator &($thisName$ $left$, $thisName$ $right$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2942,8 +2848,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator *($thisName$ $left$, $thisName$ $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator *($thisName$ $left$, $thisName$ $right$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2979,8 +2884,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator ^($thisName$ $left$, $thisName$ $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator ^($thisName$ $left$, $thisName$ $right$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3016,13 +2920,11 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static bool operator ==($thisName$ $left$, $thisName$ $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static bool operator ==($thisName$ $left$, $thisName$ $right$) {
 	$end$
 }
 
-public static bool operator !=($thisName$ $left$, $thisName$ $right$)
-{
+public static bool operator !=($thisName$ $left$, $thisName$ $right$) {
 	return !($left$ == $right$);
 }]]></Code>
     </Snippet>
@@ -3053,8 +2955,7 @@ public static bool operator !=($thisName$ $left$, $thisName$ $right$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator !($thisName$ $operand$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator !($thisName$ $operand$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3090,13 +2991,11 @@ public static bool operator !=($thisName$ $left$, $thisName$ $right$)
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static explicit operator $thisName$($type$ $operand$)
-{
+      <Code Language="CSharp"><![CDATA[public static explicit operator $thisName$($type$ $operand$) {
 	$end$
 }
 
-public static explicit operator $type$($thisName$ $operand$)
-{
+public static explicit operator $type$($thisName$ $operand$) {
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3131,12 +3030,10 @@ public static explicit operator $type$($thisName$ $operand$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static bool operator <($thisName$ $left$, $thisName$ $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static bool operator <($thisName$ $left$, $thisName$ $right$) {
 }
 
-public static bool operator >($thisName$ $left$, $thisName$ $right$)
-{
+public static bool operator >($thisName$ $left$, $thisName$ $right$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3172,8 +3069,7 @@ public static bool operator >($thisName$ $left$, $thisName$ $right$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator >>($thisName$ $left$, int $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator >>($thisName$ $left$, int $right$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3209,12 +3105,10 @@ public static bool operator >($thisName$ $left$, $thisName$ $right$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static bool operator <=($thisName$ $left$, $thisName$ $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static bool operator <=($thisName$ $left$, $thisName$ $right$) {
 }
 
-public static bool operator >=($thisName$ $left$, $thisName$ $right$)
-{
+public static bool operator >=($thisName$ $left$, $thisName$ $right$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3250,13 +3144,11 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static implicit operator $thisName$($type$ $operand$)
-{
+      <Code Language="CSharp"><![CDATA[public static implicit operator $thisName$($type$ $operand$) {
 	$end$
 }
 
-public static implicit operator $type$($thisName$ $operand$)
-{
+public static implicit operator $type$($thisName$ $operand$) {
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3291,13 +3183,11 @@ public static implicit operator $type$($thisName$ $operand$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static bool operator <($thisName$ $left$, $thisName$ $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static bool operator <($thisName$ $left$, $thisName$ $right$) {
 	$end$
 }
 
-public static bool operator >($thisName$ $left$, $thisName$ $right$)
-{
+public static bool operator >($thisName$ $left$, $thisName$ $right$) {
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3332,8 +3222,7 @@ public static bool operator >($thisName$ $left$, $thisName$ $right$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator <<($thisName$ $left$, int $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator <<($thisName$ $left$, int $right$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3369,13 +3258,11 @@ public static bool operator >($thisName$ $left$, $thisName$ $right$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static bool operator <=($thisName$ $left$, $thisName$ $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static bool operator <=($thisName$ $left$, $thisName$ $right$) {
 	$end$
 }
 
-public static bool operator >=($thisName$ $left$, $thisName$ $right$)
-{
+public static bool operator >=($thisName$ $left$, $thisName$ $right$) {
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3410,8 +3297,7 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator -($thisName$ $left$, $thisName$ $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator -($thisName$ $left$, $thisName$ $right$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3442,8 +3328,7 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator --($thisName$ $operand$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator --($thisName$ $operand$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3479,8 +3364,7 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator %($thisName$ $left$, $thisName$ $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator %($thisName$ $left$, $thisName$ $right$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3516,8 +3400,7 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator +($thisName$ $left$, $thisName$ $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator +($thisName$ $left$, $thisName$ $right$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3548,8 +3431,7 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator ++($thisName$ $operand$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator ++($thisName$ $operand$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3585,8 +3467,7 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator /($thisName$ $left$, $thisName$ $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator /($thisName$ $left$, $thisName$ $right$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3617,8 +3498,7 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator ~($thisName$ $operand$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator ~($thisName$ $operand$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3649,13 +3529,11 @@ public static bool operator >=($thisName$ $left$, $thisName$ $right$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static bool operator true($thisName$ $operand$)
-{
+      <Code Language="CSharp"><![CDATA[public static bool operator true($thisName$ $operand$) {
 	$end$
 }
 
-public static bool operator false($thisName$ $operand$)
-{
+public static bool operator false($thisName$ $operand$) {
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -3690,8 +3568,7 @@ public static bool operator false($thisName$ $operand$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $thisName$ operator |($thisName$ $left$, $thisName$ $right$)
-{
+      <Code Language="CSharp"><![CDATA[public static $thisName$ operator |($thisName$ $left$, $thisName$ $right$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3882,8 +3759,7 @@ public static bool operator false($thisName$ $operand$)
           <Default>ClassName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private class $name$
-{
+      <Code Language="CSharp"><![CDATA[private class $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3948,8 +3824,7 @@ public static bool operator false($thisName$ $operand$)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private $thisName$($_parameters$)
-{
+      <Code Language="CSharp"><![CDATA[private $thisName$($_parameters$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -4009,8 +3884,7 @@ public static bool operator false($thisName$ $operand$)
           <Default>EnumName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private enum $name$
-{
+      <Code Language="CSharp"><![CDATA[private enum $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -4043,11 +3917,11 @@ public static bool operator false($thisName$ $operand$)
       </Declarations>
       <Code Language="CSharp"><![CDATA[private event EventHandler $name$;
 
-protected virtual void On$name$(EventArgs e)
-{
+protected virtual void On$name$(EventArgs e) {
 	EventHandler handler = $name$;
-	if (handler != null)
+	if (handler != null) {
 		handler(this, e);
+	}
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4084,11 +3958,11 @@ protected virtual void On$name$(EventArgs e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[private event EventHandler<$eventArgs$> $name$;
 
-protected virtual void On$name$($eventArgs$ e)
-{
+protected virtual void On$name$($eventArgs$ e) {
 	EventHandler<$eventArgs$> handler = $name$;
-	if (handler != null)
+	if (handler != null) {
 		handler(this, e);
+	}
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4147,8 +4021,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>int index</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private $_type$ this[$parameter$]
-{
+      <Code Language="CSharp"><![CDATA[private $_type$ this[$parameter$] {
 	get { $end$}
 	set { }
 }]]></Code>
@@ -4185,8 +4058,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private $_type$ $name$($_parameters$)
-{
+      <Code Language="CSharp"><![CDATA[private $_type$ $name$($_parameters$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -4280,8 +4152,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>value</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private $_type$ $name$
-{
+      <Code Language="CSharp"><![CDATA[private $_type$ $name$ {
 	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
@@ -4307,8 +4178,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>ClassName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private static class $name$
-{
+      <Code Language="CSharp"><![CDATA[private static class $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -4373,8 +4243,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private static $_type$ $name$($_parameters$)
-{
+      <Code Language="CSharp"><![CDATA[private static $_type$ $name$($_parameters$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -4468,8 +4337,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>value</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private static $_type$ $name$
-{
+      <Code Language="CSharp"><![CDATA[private static $_type$ $name$ {
 	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
@@ -4495,8 +4363,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>StructName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private struct $name$
-{
+      <Code Language="CSharp"><![CDATA[private struct $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -4580,8 +4447,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>ClassName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public class $name$
-{
+      <Code Language="CSharp"><![CDATA[public class $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -4646,8 +4512,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public $thisName$($_parameters$)
-{
+      <Code Language="CSharp"><![CDATA[public $thisName$($_parameters$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -4707,8 +4572,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>EnumName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public enum $name$
-{
+      <Code Language="CSharp"><![CDATA[public enum $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -4741,11 +4605,11 @@ protected virtual void On$name$($eventArgs$ e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public event EventHandler $name$;
 
-protected virtual void On$name$(EventArgs e)
-{
+protected virtual void On$name$(EventArgs e) {
 	EventHandler handler = $name$;
-	if (handler != null)
+	if (handler != null) {
 		handler(this, e);
+	}
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4782,11 +4646,11 @@ protected virtual void On$name$(EventArgs e)
       </Declarations>
       <Code Language="CSharp"><![CDATA[public event EventHandler<$eventArgs$> $name$;
 
-protected virtual void On$name$($eventArgs$ e)
-{
+protected virtual void On$name$($eventArgs$ e) {
 	EventHandler<$eventArgs$> handler = $name$;
-	if (handler != null)
+	if (handler != null) {
 		handler(this, e);
+	}
 }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -4845,8 +4709,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>int index</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public $_type$ this[$parameter$]
-{
+      <Code Language="CSharp"><![CDATA[public $_type$ this[$parameter$] {
 	get { $end$}
 	set { }
 }]]></Code>
@@ -4873,8 +4736,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>InterfaceName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public interface $name$
-{
+      <Code Language="CSharp"><![CDATA[public interface $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -4910,8 +4772,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public $_type$ $name$($_parameters$)
-{
+      <Code Language="CSharp"><![CDATA[public $_type$ $name$($_parameters$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -5005,8 +4866,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>value</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public $_type$ $name$
-{
+      <Code Language="CSharp"><![CDATA[public $_type$ $name$ {
 	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
@@ -5032,8 +4892,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>ClassName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static class $name$
-{
+      <Code Language="CSharp"><![CDATA[public static class $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -5098,8 +4957,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $_type$ $name$($_parameters$)
-{
+      <Code Language="CSharp"><![CDATA[public static $_type$ $name$($_parameters$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -5193,8 +5051,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>value</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public static $_type$ $name$
-{
+      <Code Language="CSharp"><![CDATA[public static $_type$ $name$ {
 	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
@@ -5220,8 +5077,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>StructName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public struct $name$
-{
+      <Code Language="CSharp"><![CDATA[public struct $name$ {
 	$end$
 }]]></Code>
     </Snippet>
@@ -5286,8 +5142,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public virtual $_type$ $name$($_parameters$)
-{
+      <Code Language="CSharp"><![CDATA[public virtual $_type$ $name$($_parameters$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -5352,8 +5207,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>value</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[public virtual $_type$ $name$
-{
+      <Code Language="CSharp"><![CDATA[public virtual $_type$ $name$ {
 	get { return $value$; }
 }$end$]]></Code>
     </Snippet>
@@ -5397,11 +5251,8 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : ReadOnlyCollection<$type$>
-{
-	public $name$(IList<$type$> list)
-		: base(list)
-	{
+      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : ReadOnlyCollection<$type$> {
+	public $name$(IList<$type$> list) : base(list) {
 	}
 
 	$end$
@@ -5507,16 +5358,13 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>value</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$modifier$ class $name$
-{
+      <Code Language="CSharp"><![CDATA[$modifier$ class $name$ {
 	private static readonly $name$ _instance = $value$;
 
-	private $name$()
-	{
+	private $name$() {
 	}
 
-	public static $name$ Instance
-	{
+	public static $name$ Instance {
 		get { return _instance; }
 	}
 }$end$]]></Code>
@@ -5543,8 +5391,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>ThisName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[static $thisName$()
-{
+      <Code Language="CSharp"><![CDATA[static $thisName$() {
 	$end$
 }]]></Code>
     </Snippet>
@@ -5580,8 +5427,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>stream</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StreamReader($parameters$))
-{
+      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StreamReader($parameters$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -5625,8 +5471,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>path</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StreamWriter($parameters$, $_encoding$))
-{
+      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StreamWriter($parameters$, $_encoding$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -5727,8 +5572,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>s</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StringReader($string$))
-{
+      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StringReader($string$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -5788,8 +5632,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>sw</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StringWriter())
-{
+      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StringWriter()) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -5815,8 +5658,7 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>SwitchOn</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[switch ($expression$)
-{
+      <Code Language="CSharp"><![CDATA[switch ($expression$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -6100,12 +5942,10 @@ protected virtual void On$name$($eventArgs$ e)
           <Default>ex</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[try
-{
+      <Code Language="CSharp"><![CDATA[try {
 	$selected$$end$
 }
-catch ($exceptionType$ $identifier$)
-{
+catch ($exceptionType$ $identifier$) {
 	throw;
 }]]></Code>
     </Snippet>
@@ -6142,16 +5982,13 @@ catch ($exceptionType$ $identifier$)
           <Default>ex</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[try
-{
+      <Code Language="CSharp"><![CDATA[try {
 	$selected$$end$
 }
-catch ($exceptionType$ $identifier$)
-{
+catch ($exceptionType$ $identifier$) {
 	throw;
 }
-finally
-{
+finally {
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6170,12 +6007,10 @@ finally
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="CSharp"><![CDATA[try
-{
+      <Code Language="CSharp"><![CDATA[try {
 	$selected$$end$
 }
-finally
-{
+finally {
 }]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -6248,8 +6083,7 @@ finally
           <Default>disposable</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using ($disposable$)
-{
+      <Code Language="CSharp"><![CDATA[using ($disposable$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -6297,8 +6131,7 @@ finally
           <Default>expression</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $_identifier$ = $_value$)
-{
+      <Code Language="CSharp"><![CDATA[using (var $_identifier$ = $_value$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -6387,8 +6220,7 @@ finally
           <Default>true</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[while ($expression$)
-{
+      <Code Language="CSharp"><![CDATA[while ($expression$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -6414,8 +6246,7 @@ finally
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[while ($expression$ != null)
-{
+      <Code Language="CSharp"><![CDATA[while ($expression$ != null) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -6441,8 +6272,7 @@ finally
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[while ($expression$ == null)
-{
+      <Code Language="CSharp"><![CDATA[while ($expression$ == null) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -6478,8 +6308,7 @@ finally
           <Default>reader</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = XmlReader.Create($argument$))
-{
+      <Code Language="CSharp"><![CDATA[using (var $identifier$ = XmlReader.Create($argument$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -6515,8 +6344,7 @@ finally
           <Default>writer</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = XmlWriter.Create($argument$))
-{
+      <Code Language="CSharp"><![CDATA[using (var $identifier$ = XmlWriter.Create($argument$)) {
 	$end$
 }]]></Code>
     </Snippet>

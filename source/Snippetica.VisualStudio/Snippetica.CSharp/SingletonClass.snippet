@@ -30,16 +30,13 @@
         <Default>value</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$modifier$ class $name$
-{
+    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ {
 	private static readonly $name$ _instance = $value$;
 
-	private $name$()
-	{
+	private $name$() {
 	}
 
-	public static $name$ Instance
-	{
+	public static $name$ Instance {
 		get { return _instance; }
 	}
 }$end$]]></Code>
