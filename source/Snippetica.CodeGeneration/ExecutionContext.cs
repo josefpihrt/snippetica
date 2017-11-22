@@ -15,5 +15,20 @@ namespace Snippetica.CodeGeneration
         public bool IsCanceled { get; set; }
 
         public Collection<Snippet> Snippets { get; }
+
+        public virtual string WithArgumentsSuffix(Snippet snippet)
+        {
+            return "_";
+        }
+
+        public virtual string WithParametersSuffix(Snippet snippet)
+        {
+            return "_";
+        }
+
+        public virtual string WithInitializerSuffix(Snippet snippet)
+        {
+            return "_";
+        }
     }
 }

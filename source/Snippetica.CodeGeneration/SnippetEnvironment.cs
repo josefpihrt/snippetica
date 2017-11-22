@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -57,6 +59,21 @@ namespace Snippetica.CodeGeneration
 
             snippets.AddRange(EnumerateSnippets(directory.Path));
 
+            //TODO: uncomment
+            //#if DEBUG
+            //            foreach (Snippet snippet in snippets)
+            //            {
+            //                foreach (string keyword in snippet.Keywords)
+            //                {
+            //                    if (keyword.StartsWith(KnownTags.MetaPrefix + KnownTags.GeneratePrefix, StringComparison.OrdinalIgnoreCase))
+            //                    {
+            //                        Debug.Fail(keyword + "\r\n" + snippet.FilePath);
+            //                        break;
+            //                    }
+            //                }
+            //            }
+            //#endif
+
             snippets.AddRange(SnippetGenerator.GenerateAlternativeShortcuts(snippets));
 
             if (!isDevelopment
@@ -72,6 +89,21 @@ namespace Snippetica.CodeGeneration
                             snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(directory.Language));
                             break;
                         }
+                }
+            }
+
+            KeywordDefinitionCollection keywords = LanguageDefinition.GetKeywords(directory.Language);
+
+            if (keywords != null)
+            {
+                foreach (KeywordDefinition keyword in keywords)
+                {
+                    if (keyword.IsDevelopment == isDevelopment)
+                    {
+                        Snippet snippet = keyword.ToSnippet();
+                        snippet.Language = directory.Language;
+                        snippets.Add(snippet);
+                    }
                 }
             }
 
@@ -137,7 +169,7 @@ namespace Snippetica.CodeGeneration
 
             if (!settings.IsDevelopment)
             {
-                //TODO: 
+                //TODO: ?
                 string filePath = $@"..\..\..\..\..\text\{result.DirectoryName}.md";
 
                 if (File.Exists(filePath))

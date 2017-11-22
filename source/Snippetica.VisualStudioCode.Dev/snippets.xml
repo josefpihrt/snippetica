@@ -2,9 +2,106 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>Class with Inline Constructor/Destructor</Title>
-      <Shortcut>ci</Shortcut>
-      <Description>Class declaration with inline constructor/destructor</Description>
+      <Title>alignas keyword</Title>
+      <Shortcut>aa</Shortcut>
+      <Description>alignas keyword</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name AlignAsKeyword</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[alignas$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>alignof keyword</Title>
+      <Shortcut>ao</Shortcut>
+      <Description>alignof keyword</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name AlignOfKeyword</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[alignof$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>auto keyword</Title>
+      <Shortcut>a</Shortcut>
+      <Description>auto keyword</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name AutoKeyword</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[auto$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>bool variable</Title>
+      <Shortcut>vb</Shortcut>
+      <Description>bool variable</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name BoolVariable</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>f</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value to assign</ToolTip>
+          <Default>false</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[bool $identifier$ = $value$;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>break statement</Title>
+      <Shortcut>bs</Shortcut>
+      <Description>break statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name BreakStatement</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[break;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>class with inline constructor/destructor</Title>
+      <Shortcut>cil</Shortcut>
+      <Description>class declaration with inline constructor/destructor</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -22,15 +119,12 @@
           <Default>ClassName</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[class $name$
-{
+      <Code Language="Cpp"><![CDATA[class $name$ {
 public:
-	$name$()
-	{
+	$name$() {
 	}
 
-	~$name$()
-	{
+	~$name$() {
 	}
 
 private:
@@ -40,15 +134,143 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>const cast</Title>
-      <Shortcut>coc</Shortcut>
-      <Description>const cast</Description>
+      <Title>continue statement</Title>
+      <Shortcut>cs</Shortcut>
+      <Description>continue statement</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ConstCast</Keyword>
+        <Keyword>Meta-Name ContinueStatement</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[continue;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>delete keyword</Title>
+      <Shortcut>de</Shortcut>
+      <Description>delete keyword</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name DeleteKeyword</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[delete$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>extern keyword</Title>
+      <Shortcut>en</Shortcut>
+      <Description>extern keyword</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ExternKeyword</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[extern$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>friend keyword</Title>
+      <Shortcut>fd</Shortcut>
+      <Description>friend keyword</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name FriendKeyword</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[friend$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>int variable</Title>
+      <Shortcut>vi</Shortcut>
+      <Description>int variable</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IntVariable</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>i</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value to assign</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[int $identifier$ = $value$;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>lambda expression (minimal)</Title>
+      <Shortcut>lm</Shortcut>
+      <Description>lambda expression (minimal)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name LambdaExpressionMinimal</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>captures</ID>
+          <ToolTip>List of captures</ToolTip>
+          <Default>&amp;</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Cpp"><![CDATA[[$captures$]($_parameters$) {
+	$selected$$end$
+};]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>! operator</Title>
+      <Shortcut>x</Shortcut>
+      <Description>! operator</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name LogicalNotOperator</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -56,136 +278,243 @@ private:
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression</ToolTip>
-          <Default>expression</Default>
-        </Literal>
-        <Literal>
-          <ID>type</ID>
-          <ToolTip>Type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[const_cast<$type$>($expression$)]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title> constexpr</Title>
-      <Shortcut>ke</Shortcut>
-      <Description> constexpr declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ConstExpr</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Constant expression type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>_value</ID>
-          <ToolTip>Constant expression value</ToolTip>
-          <Default>nullptr</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Constant expression name</ToolTip>
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[constexpr $_type$ $name$ = $_value$;$end$]]></Code>
+      <Code Language="Cpp"><![CDATA[!($expression$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>dynamic cast</Title>
-      <Shortcut>cod</Shortcut>
-      <Description>dynamic cast</Description>
+      <Title>noexcept keyword</Title>
+      <Shortcut>ne</Shortcut>
+      <Description>noexcept keyword</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name DynamicCast</Keyword>
+        <Keyword>Meta-Name NoExceptKeyword</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression</ToolTip>
-          <Default>expression</Default>
-        </Literal>
-        <Literal>
-          <ID>type</ID>
-          <ToolTip>Type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[dynamic_cast<$type$>($expression$)]]></Code>
+      <Code Language="Cpp"><![CDATA[noexcept$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>reinterpret cast</Title>
-      <Shortcut>cor</Shortcut>
-      <Description>reinterpret cast</Description>
+      <Title>operator keyword</Title>
+      <Shortcut>or</Shortcut>
+      <Description>operator keyword</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ReinterpretCast</Keyword>
+        <Keyword>Meta-Name OperatorKeyword</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression</ToolTip>
-          <Default>expression</Default>
-        </Literal>
-        <Literal>
-          <ID>type</ID>
-          <ToolTip>Type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="Cpp"><![CDATA[reinterpret_cast<$type$>($expression$)]]></Code>
+      <Code Language="Cpp"><![CDATA[operator$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>static cast</Title>
-      <Shortcut>cos</Shortcut>
-      <Description>static cast</Description>
+      <Title>return false</Title>
+      <Shortcut>rf</Shortcut>
+      <Description>return false</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name StaticCast</Keyword>
+        <Keyword>Meta-Name ReturnFalse</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[return false;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>return statement</Title>
+      <Shortcut>rs</Shortcut>
+      <Description>return statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ReturnStatement</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[return;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>return true</Title>
+      <Shortcut>rt</Shortcut>
+      <Description>return true</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ReturnTrue</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[return true;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>string type</Title>
+      <Shortcut>s</Shortcut>
+      <Description>string type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name StringType</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[std::string$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>string variable</Title>
+      <Shortcut>vs</Shortcut>
+      <Description>string variable</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name StringVariable</Keyword>
       </Keywords>
     </Header>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression</ToolTip>
-          <Default>expression</Default>
+          <ID>identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>s</Default>
         </Literal>
         <Literal>
-          <ID>type</ID>
-          <ToolTip>Type</ToolTip>
-          <Default>T</Default>
+          <ID>value</ID>
+          <ToolTip>Value to assign</ToolTip>
+          <Default>nullptr</Default>
         </Literal>
       </Declarations>
-      <Code Language="Cpp"><![CDATA[static_cast<$type$>($expression$)]]></Code>
+      <Code Language="Cpp"><![CDATA[std::string $identifier$ = $value$;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>thread_local keyword</Title>
+      <Shortcut>tl</Shortcut>
+      <Description>thread_local keyword</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ThreadLocalKeyword</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[thread_local$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>throw keyword</Title>
+      <Shortcut>tw</Shortcut>
+      <Description>throw keyword</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ThrowKeyword</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[throw$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>typeid keyword</Title>
+      <Shortcut>ti</Shortcut>
+      <Description>typeid keyword</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name TypeIdKeyword</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[typeid$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>typename keyword</Title>
+      <Shortcut>tn</Shortcut>
+      <Description>typename keyword</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name TypeNameKeyword</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[typename$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>unsigned keyword</Title>
+      <Shortcut>us</Shortcut>
+      <Description>unsigned keyword</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name UnsignedKeyword</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[unsigned$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>volatile keyword</Title>
+      <Shortcut>ve</Shortcut>
+      <Description>volatile keyword</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name VolatileKeyword</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[volatile$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

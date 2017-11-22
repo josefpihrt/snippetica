@@ -1,39 +1,48 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>@type@ function</Title>
+    <Title>function</Title>
     <Shortcut>f</Shortcut>
-    <Description>@type@ function declaration</Description>
+    <Description>function</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-GenerateParameters</Keyword>
-      <Keyword>Meta-GenerateType</Keyword>
-      <Keyword>Meta-GenerateVoidType</Keyword>
+      <Keyword>Meta-GenerateConstExprModifier</Keyword>
+      <Keyword>Meta-GenerateConstModifier</Keyword>
+      <Keyword>Meta-GenerateDeclarationAndDefinition</Keyword>
+      <Keyword>Meta-GenerateInlineModifier</Keyword>
+      <Keyword>Meta-GenerateStaticModifier</Keyword>
+      <Keyword>Meta-GenerateVirtualModifier</Keyword>
     </Keywords>
   </Header>
   <Snippet>
     <Declarations>
       <Literal Editable="false">
-        <ID>_parameterList</ID>
-        <Default>()</Default>
+        <ID>_definition</ID>
+        <Default>;</Default>
+      </Literal>
+      <Literal Editable="false">
+        <ID>_modifiers</ID>
+        <ToolTip>Modifier(s)</ToolTip>
       </Literal>
       <Literal>
-        <ID>_type</ID>
-        <ToolTip>Return type</ToolTip>
-        <Default>void</Default>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>T parameter</Default>
       </Literal>
       <Literal>
         <ID>name</ID>
         <ToolTip>Function name</ToolTip>
         <Default>FunctionName</Default>
       </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Return type</ToolTip>
+        <Default>void</Default>
+      </Literal>
     </Declarations>
-    <Code Language="Cpp"><![CDATA[$_type$ $name$$_parameterList$
-{
-	$end$
-}]]></Code>
+    <Code Language="Cpp"><![CDATA[$_modifiers$ $type$ $name$($_parameters$)$_definition$]]></Code>
   </Snippet>
 </CodeSnippet>

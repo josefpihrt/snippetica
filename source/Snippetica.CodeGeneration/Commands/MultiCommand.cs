@@ -76,8 +76,11 @@ namespace Snippetica.CodeGeneration.Commands
             {
                 for (int j = i + 1; j < commands.Count; j++)
                 {
-                    if (IsMutuallyExclusive(commands[i], commands[j]))
+                    if (IsMutuallyExclusive(commands[i], commands[j])
+                        || IsMutuallyExclusive(commands[j], commands[i]))
+                    {
                         return true;
+                    }
                 }
             }
 
@@ -88,42 +91,38 @@ namespace Snippetica.CodeGeneration.Commands
         {
             switch (command1.Kind)
             {
-                case CommandKind.StaticModifier:
-                    {
-                        if (command2.Kind == CommandKind.VirtualModifier)
-                            return true;
-
-                        break;
-                    }
                 case CommandKind.VirtualModifier:
                     {
                         if (command2.Kind == CommandKind.StaticModifier
-                            || IsPrivateModifier(command2))
+                            || command2.Kind == CommandKind.ConstModifier
+                            || command2.Kind == CommandKind.ConstExprModifier
+                            || (command2 as AccessModifierCommand)?.Modifier.Kind == ModifierKind.Private)
                         {
                             return true;
                         }
 
                         break;
                     }
-                case CommandKind.AccessModifier:
+                case CommandKind.ConstExprModifier:
                     {
-                        if (IsPrivateModifier(command1)
-                            && command2.Kind == CommandKind.VirtualModifier)
+                        if (command2.Kind == CommandKind.ConstModifier
+                            || command2.Kind == CommandKind.InlineModifier)
                         {
                             return true;
                         }
+
+                        break;
+                    }
+                case CommandKind.InlineModifier:
+                    {
+                        if (command2.Kind == CommandKind.Declaration)
+                            return true;
 
                         break;
                     }
             }
 
             return false;
-        }
-
-        private static bool IsPrivateModifier(Command command)
-        {
-            return command.Kind == CommandKind.AccessModifier
-                && ((AccessModifierCommand)command).Modifier.Kind == ModifierKind.Private;
         }
     }
 }

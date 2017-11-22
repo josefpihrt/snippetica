@@ -303,6 +303,11 @@ namespace Snippetica
             SetFileName(snippet, Path.GetFileNameWithoutExtension(snippet.FilePath) + value + Path.GetExtension(snippet.FilePath));
         }
 
+        public static void AppendCode(this Snippet snippet, string code)
+        {
+            snippet.CodeText += code;
+        }
+
         public static void SetFileName(this Snippet snippet, string fileName)
         {
             snippet.FilePath = Path.Combine(Path.GetDirectoryName(snippet.FilePath), fileName);
@@ -399,7 +404,30 @@ namespace Snippetica
 
         public static void ReplacePlaceholders(this Snippet snippet, string identifier, string replacement)
         {
-            snippet.CodeText = snippet.Code.ReplacePlaceholders(identifier, replacement);
+            string s = snippet.CodeText;
+
+            if (string.IsNullOrEmpty(s))
+                return;
+
+            bool startsWithWhitespace = char.IsWhiteSpace(s[0]);
+
+            bool endsWithWhitespace = char.IsWhiteSpace(s[s.Length - 1]);
+
+            s = snippet.Code.ReplacePlaceholders(identifier, replacement);
+
+            if (!startsWithWhitespace
+                && char.IsWhiteSpace(s[0]))
+            {
+                s = s.TrimStart();
+            }
+
+            if (!endsWithWhitespace
+                && char.IsWhiteSpace(s[s.Length - 1]))
+            {
+                s = s.TrimEnd();
+            }
+
+            snippet.CodeText = s;
         }
 
         public static void RemovePlaceholders(this Snippet snippet, string identifier)

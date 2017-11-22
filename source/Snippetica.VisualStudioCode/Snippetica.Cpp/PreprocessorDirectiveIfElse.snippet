@@ -13,19 +13,13 @@
   <Snippet>
     <Declarations>
       <Literal>
-        <ID>expression1</ID>
-        <ToolTip>Expression to evaluate</ToolTip>
-        <Default>x</Default>
-      </Literal>
-      <Literal>
-        <ID>expression2</ID>
+        <ID>expression</ID>
         <ToolTip>Expression to evaluate</ToolTip>
         <Default>x</Default>
       </Literal>
     </Declarations>
-    <Code Language="Cpp"><![CDATA[#if $expression1$
+    <Code Language="Cpp"><![CDATA[#if $expression$
 	$selected$$end$
-#elif $expression2$
 #else
 #endif]]></Code>
   </Snippet>

@@ -120,7 +120,55 @@
               </Remove>
             </Set>
           </AddRange>
-        </AddRange>
+          <AddRange Languages="Cpp">
+            <Set Kind="DeclarationDefinition">
+              <New Value="c" Description="class" />
+              <New Value="cr" Description="constructor" />
+              <New Value="dr" Description="destructor" />
+              <New Value="em" Description="enum" />
+              <New Value="f" Description="function" />
+              <New Value="ns" Description="namespace" />
+              <New Value="st" Description="struct" />
+              <New Value="td" Description="typedef" />
+              <New Value="u" Description="using" />
+              <New Value="un" Description="union" />
+              <New Value="v" Description="variable" />
+              <New Value="x" Description="definition" Comment="suffix" />
+              <New Value="x" Description="(variable) with initialization" Comment="suffix" />
+            </Set>
+            <Set Kind="Specifier">
+              <New Value="c" Description="const" Comment="prefix" />
+              <New Value="ce" Description="constexpr" Comment="prefix" />
+              <New Value="il" Description="inline" Comment="prefix" />
+              <New Value="s" Description="static" Comment="prefix" />
+              <New Value="v" Description="virtual" Comment="prefix" />
+            </Set>
+            <Set Kind="Statement">
+              <New Value="dw" Description="do-while" />
+              <New Value="fe" Description="foreach" />
+              <New Value="fr" Description="for" />
+              <New Value="if" Description="if" />
+              <New Value="sh" Description="switch" />
+              <New Value="tc" Description="try-catch" />
+              <New Value="we" Description="while" />
+            </Set>
+            <Set Kind="Other">
+              <New Value="ae" Description="attribute" />
+              <New Value="co" Description="conditional operator" />
+              <New Value="ct" Description="cast" Comment="suffix" />
+              <New Value="d" Description="default keyword" />
+              <New Value="dt" Description="decltype keyword" />
+              <New Value="e" Description="else clause" />
+              <New Value="l" Description="lambda expression" />
+              <New Value="np" Description="nullptr" />
+              <New Value="oo" Description="operator overload" />
+              <New Value="pp" Description="preprocessor directive" Comment="prefix" />
+              <New Value="r" Description="return keyword" />
+              <New Value="so" Description="sizeof keyword" />
+              <New Value="t" Description="template" />
+            </Set>
+          </AddRange>
+    </AddRange>
       </Records>
     </Entity>
   </Entities>

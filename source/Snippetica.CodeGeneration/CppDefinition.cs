@@ -32,9 +32,19 @@ namespace Snippetica.CodeGeneration
             throw new InvalidOperationException();
         }
 
+        public override string GetVariableInitializer(string value)
+        {
+            return $" = {value}";
+        }
+
         public override string GetTypeParameterList(string typeName)
         {
             return "";
+        }
+
+        public override string GetDefaultValue()
+        {
+            return "0";
         }
     }
 }

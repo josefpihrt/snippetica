@@ -47,10 +47,13 @@ namespace Snippetica.CodeGeneration.Commands
             }
         }
 
-        public void AddMultiCommand(Command command)
+        public void AddMultiCommand(Command command, bool duplicateWhenEmpty = false)
         {
             if (Count == 0)
             {
+                if (duplicateWhenEmpty)
+                    Add(new MultiCommand());
+
                 Add(new MultiCommand(command));
             }
             else

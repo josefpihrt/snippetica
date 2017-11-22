@@ -6,10 +6,10 @@ using Snippetica.CodeGeneration.Commands;
 
 namespace Snippetica.CodeGeneration.VisualStudioCode
 {
-    public class VisualStudioCodeSnippetGenerator : LanguageSnippetGenerator
+    public class VisualStudioCodeSnippetGenerator : EnvironmentSnippetGenerator
     {
-        public VisualStudioCodeSnippetGenerator(LanguageDefinition languageDefinition)
-            : base(languageDefinition)
+        public VisualStudioCodeSnippetGenerator(SnippetEnvironment environment, LanguageDefinition languageDefinition)
+            : base(environment, languageDefinition)
         {
         }
 

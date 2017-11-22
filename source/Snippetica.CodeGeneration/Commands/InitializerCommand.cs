@@ -16,7 +16,7 @@ namespace Snippetica.CodeGeneration.Commands
         {
             LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
-            AddInitializer(snippet, GetInitializer(snippet, language), language.Object.DefaultValue);
+            AddInitializer(context, snippet, GetInitializer(snippet, language), language.GetDefaultValue());
         }
 
         private string GetInitializer(Snippet snippet, LanguageDefinition language)
@@ -30,15 +30,20 @@ namespace Snippetica.CodeGeneration.Commands
             if (snippet.HasTag(KnownTags.Collection))
                 return language.GetCollectionInitializer($"${LiteralIdentifiers.Value}$");
 
+            if (snippet.HasTag(KnownTags.Variable))
+                return language.GetVariableInitializer($"${LiteralIdentifiers.Value}$");
+
             Debug.Fail("");
             return null;
         }
 
-        internal static Snippet AddInitializer(Snippet snippet, string initializer, string defaultValue)
+        internal static Snippet AddInitializer(ExecutionContext context, Snippet snippet, string initializer, string defaultValue)
         {
-            snippet.SuffixTitle(" (with initializer)");
-            snippet.SuffixShortcut(ShortcutChars.WithInitializer);
-            snippet.SuffixDescription(" (with initializer)");
+            string suffix = (snippet.Language == Language.Cpp) ? " (with initialization)" : " (with initializer)";
+
+            snippet.SuffixTitle(suffix);
+            snippet.SuffixShortcut(context.WithInitializerSuffix(snippet));
+            snippet.SuffixDescription(suffix);
 
             snippet.ReplacePlaceholders(LiteralIdentifiers.Initializer, initializer);
 
@@ -46,11 +51,21 @@ namespace Snippetica.CodeGeneration.Commands
 
             snippet.RemoveLiteral(LiteralIdentifiers.Initializer);
 
-            snippet.RemoveLiteralAndPlaceholders(LiteralIdentifiers.ArrayLength);
+            if (snippet.Language == Language.Cpp)
+            {
+                Literal typeLiteral = snippet.Literals.Find(LiteralIdentifiers.Type);
+                typeLiteral.DefaultValue = "auto";
+
+                LiteralRenamer.Rename(snippet, LiteralIdentifiers.Type, "type");
+            }
+            else
+            {
+                snippet.RemoveLiteralAndPlaceholders(LiteralIdentifiers.ArrayLength);
+            }
 
             snippet.AddTag(KnownTags.ExcludeFromReadme);
 
-            snippet.SuffixFileName("WithInitializer");
+            snippet.SuffixFileName((snippet.Language == Language.Cpp) ? "WithInitialization" : "WithInitializer");
 
             return snippet;
         }

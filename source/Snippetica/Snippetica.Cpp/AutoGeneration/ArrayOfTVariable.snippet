@@ -1,16 +1,16 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>array @ofType@ variable</Title>
+    <Title>array variable</Title>
     <Shortcut>va</Shortcut>
-    <Description>array @ofType@ variable declaration</Description>
+    <Description>array variable</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
       <Keyword>Meta-Array</Keyword>
-      <Keyword>Meta-GenerateType</Keyword>
+      <Keyword>Meta-GenerateInitializer</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -18,7 +18,7 @@
       <Literal>
         <ID>_arrayLength</ID>
         <ToolTip>Array length</ToolTip>
-        <Default>0</Default>
+        <Default>1</Default>
       </Literal>
       <Literal>
         <ID>_collectionIdentifier</ID>
@@ -32,7 +32,7 @@
       <Literal>
         <ID>_type</ID>
         <ToolTip>Element type name</ToolTip>
-        <Default>object</Default>
+        <Default>T</Default>
       </Literal>
     </Declarations>
     <Code Language="Cpp"><![CDATA[$_type$ $_collectionIdentifier$[$_arrayLength$]$_initializer$;$end$]]></Code>

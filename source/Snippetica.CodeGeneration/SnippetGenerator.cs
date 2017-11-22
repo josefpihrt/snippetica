@@ -19,6 +19,9 @@ namespace Snippetica.CodeGeneration
 
         public IEnumerable<Snippet> GenerateSnippets(Snippet snippet)
         {
+            //TODO: uncomment
+            //Debug.Assert(snippet.Keywords.Any(f => f.StartsWith(KnownTags.MetaPrefix + KnownTags.GeneratePrefix, StringComparison.OrdinalIgnoreCase)), snippet.FilePath);
+
             foreach (Command command in CreateCommands(snippet))
             {
                 ExecutionContext context = CreateExecutionContext(snippet);
