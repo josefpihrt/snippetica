@@ -608,6 +608,18 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
+  <ShortcutInfo Value="x" Description="definition" Comment="suffix">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="x" Description="(variable) with initialization" Comment="suffix">
+    <Languages>
+      <Language>CPlusPlus</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
   <ShortcutInfo Value="c" Description="const" Comment="prefix">
     <Languages>
       <Language>CPlusPlus</Language>
@@ -668,7 +680,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="tc" Description="try/catch" Comment="-">
+  <ShortcutInfo Value="tc" Description="try-catch" Comment="-">
     <Languages>
       <Language>CPlusPlus</Language>
     </Languages>

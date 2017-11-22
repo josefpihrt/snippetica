@@ -133,6 +133,8 @@
               <New Value="u" Description="using" />
               <New Value="un" Description="union" />
               <New Value="v" Description="variable" />
+              <New Value="x" Description="definition" Comment="suffix" />
+              <New Value="x" Description="(variable) with initialization" Comment="suffix" />
             </Set>
             <Set Kind="Specifier">
               <New Value="c" Description="const" Comment="prefix" />
@@ -147,7 +149,7 @@
               <New Value="fr" Description="for" />
               <New Value="if" Description="if" />
               <New Value="sh" Description="switch" />
-              <New Value="tc" Description="try/catch" />
+              <New Value="tc" Description="try-catch" />
               <New Value="we" Description="while" />
             </Set>
             <Set Kind="Other">

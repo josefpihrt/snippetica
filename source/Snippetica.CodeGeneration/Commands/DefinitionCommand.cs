@@ -18,6 +18,7 @@ namespace Snippetica.CodeGeneration.Commands
             snippet.SuffixDescription(" definition");
             snippet.SnippetTypes |= SnippetTypes.SurroundsWith;
             snippet.SuffixFileName("Definition");
+            snippet.AddTag(KnownTags.ExcludeFromReadme);
 
             PlaceholderCollection placeholders = snippet.Code.Placeholders;
 

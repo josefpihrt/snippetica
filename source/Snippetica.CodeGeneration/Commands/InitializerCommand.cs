@@ -61,8 +61,9 @@ namespace Snippetica.CodeGeneration.Commands
             else
             {
                 snippet.RemoveLiteralAndPlaceholders(LiteralIdentifiers.ArrayLength);
-                snippet.AddTag(KnownTags.ExcludeFromReadme);
             }
+
+            snippet.AddTag(KnownTags.ExcludeFromReadme);
 
             snippet.SuffixFileName((snippet.Language == Language.Cpp) ? "WithInitialization" : "WithInitializer");
 
