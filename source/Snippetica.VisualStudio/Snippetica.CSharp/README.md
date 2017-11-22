@@ -89,7 +89,6 @@ wr|Writer|suffix
 
 Shortcut | Description | Comment
 -------- | ----------- | -------
-\_|with initializer|suffix
 c|catch clause|\-
 d|default keyword|\-
 e|else clause|\-
@@ -104,6 +103,7 @@ ps|private set|\-
 r|return keyword|\-
 this|containing type name|\-
 v|local variable declaration|\-
+x|with initializer|suffix
 y|yield|prefix
 
 ### List of Selected Snippets

@@ -14,7 +14,7 @@
     "description": "Dictionary(Of TKey, TValue) variable declaration"
   },
   "Dictionary(Of TKey, TValue) variable (with initializer)": {
-    "prefix": "vd_",
+    "prefix": "vdx",
     "body": [
       "Dim ${1:dic} = new Dictionary(Of ${2:Object}, ${3:Object})() From {{0, ${4:Nothing}}}${0}"
     ],
@@ -35,7 +35,7 @@
     "description": "HashSet(Of T) variable declaration"
   },
   "HashSet(Of T) variable (with initializer)": {
-    "prefix": "vhs_",
+    "prefix": "vhsx",
     "body": [
       "Dim ${1:items} = new HashSet(Of ${2:T})() From {${3:Nothing}}${0}"
     ],
@@ -76,7 +76,7 @@
     "description": "List(Of T) variable declaration"
   },
   "List(Of T) variable (with initializer)": {
-    "prefix": "vl_",
+    "prefix": "vlx",
     "body": [
       "Dim ${1:items} = new List(Of ${2:T})() From {${3:Nothing}}${0}"
     ],
@@ -120,7 +120,7 @@
     "description": "ObservableCollection(Of T) variable declaration"
   },
   "ObservableCollection(Of T) variable (with initializer)": {
-    "prefix": "voc_",
+    "prefix": "vocx",
     "body": [
       "Dim ${1:items} = new ObservableCollection(Of ${2:T})() From {${3:Nothing}}${0}"
     ],

@@ -37,7 +37,7 @@
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>array variable (with initializer)</Title>
-      <Shortcut>va_</Shortcut>
+      <Shortcut>vax</Shortcut>
       <Description>array variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2628,7 +2628,7 @@ protected virtual void On$name$($eventArgs$ e)
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>new variable (with initializer)</Title>
-      <Shortcut>vn_</Shortcut>
+      <Shortcut>vnx</Shortcut>
       <Description>variable declaration with new object creation (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>

@@ -268,7 +268,7 @@
     "description": "array variable declaration"
   },
   "array variable (with initializer)": {
-    "prefix": "va_",
+    "prefix": "vax",
     "body": [
       "var ${1:items} = new ${2:T}[] { ${3:null} };${0}"
     ],
@@ -1187,7 +1187,7 @@
     "description": "variable declaration with new object creation"
   },
   "new variable (with initializer)": {
-    "prefix": "vn_",
+    "prefix": "vnx",
     "body": [
       "var ${1:x} = new ${2:object}(${3:arguments}) { ${4:x} };${0}"
     ],

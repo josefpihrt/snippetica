@@ -789,7 +789,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Dictionary&lt;TKey, TValue&gt; variable (with initializer)</Title>
-      <Shortcut>vd_</Shortcut>
+      <Shortcut>vdx</Shortcut>
       <Description>Dictionary&lt;TKey, TValue&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2285,7 +2285,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>HashSet&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vhs_</Shortcut>
+      <Shortcut>vhsx</Shortcut>
       <Description>HashSet&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2980,7 +2980,7 @@ if (!Enum.TryParse($value$, out $result$))
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>List&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vl_</Shortcut>
+      <Shortcut>vlx</Shortcut>
       <Description>List&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3173,7 +3173,7 @@ if (!Enum.TryParse($value$, out $result$))
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>new array (with initializer)</Title>
-      <Shortcut>na_</Shortcut>
+      <Shortcut>nax</Shortcut>
       <Description>new array (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3264,7 +3264,7 @@ if (!Enum.TryParse($value$, out $result$))
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ObservableCollection&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>voc_</Shortcut>
+      <Shortcut>vocx</Shortcut>
       <Description>ObservableCollection&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4054,7 +4054,7 @@ if ($identifier$ != null)
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Dictionary(Of TKey, TValue) variable (with initializer)</Title>
-      <Shortcut>vd_</Shortcut>
+      <Shortcut>vdx</Shortcut>
       <Description>Dictionary(Of TKey, TValue) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4160,7 +4160,7 @@ if ($identifier$ != null)
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>HashSet(Of T) variable (with initializer)</Title>
-      <Shortcut>vhs_</Shortcut>
+      <Shortcut>vhsx</Shortcut>
       <Description>HashSet(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4345,7 +4345,7 @@ End If]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>List(Of T) variable (with initializer)</Title>
-      <Shortcut>vl_</Shortcut>
+      <Shortcut>vlx</Shortcut>
       <Description>List(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4519,7 +4519,7 @@ End Namespace]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ObservableCollection(Of T) variable (with initializer)</Title>
-      <Shortcut>voc_</Shortcut>
+      <Shortcut>vocx</Shortcut>
       <Description>ObservableCollection(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>

@@ -194,7 +194,7 @@
     "description": "array variable declaration"
   },
   "array variable (with initializer)": {
-    "prefix": "va_",
+    "prefix": "vax",
     "body": [
       "Dim ${1:items} = New ${2:T}() {${3:Nothing}}${0}"
     ],
@@ -1059,7 +1059,7 @@
     "description": "variable declaration with new object creation"
   },
   "new variable (with initializer)": {
-    "prefix": "vn_",
+    "prefix": "vnx",
     "body": [
       "Dim ${1:x} = New ${2:Object}(${3:arguments}) With {${4:x}}${0}"
     ],

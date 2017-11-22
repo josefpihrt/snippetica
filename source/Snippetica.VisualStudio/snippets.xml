@@ -3574,7 +3574,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>array variable (with initializer)</Title>
-      <Shortcut>va_</Shortcut>
+      <Shortcut>vax</Shortcut>
       <Description>array variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3864,7 +3864,7 @@ $modifier$ class $name$Attribute : $base$
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Collection&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>Collection&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4281,7 +4281,7 @@ $modifier$ class $name$Attribute : $base$
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Dictionary&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>Dictionary&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4941,7 +4941,7 @@ $modifier$ class $name$Exception : $base$
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>HashSet&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>HashSet&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -7184,7 +7184,7 @@ protected virtual void On$name$($eventArgs$ e)
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>List&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>List&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -7281,7 +7281,7 @@ protected virtual void On$name$($eventArgs$ e)
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>new variable (with initializer)</Title>
-      <Shortcut>vn_</Shortcut>
+      <Shortcut>vnx</Shortcut>
       <Description>variable declaration with new object creation (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -7532,7 +7532,7 @@ protected virtual void On$name$($eventArgs$ e)
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ObservableCollection&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>ObservableCollection&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -10560,7 +10560,7 @@ protected virtual void On$name$($eventArgs$ e)
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>SortedDictionary&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>SortedDictionary&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -10667,7 +10667,7 @@ protected virtual void On$name$($eventArgs$ e)
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>SortedSet&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>SortedSet&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -16836,7 +16836,7 @@ finally
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>array variable (with initializer)</Title>
-      <Shortcut>va_</Shortcut>
+      <Shortcut>vax</Shortcut>
       <Description>array variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -17103,7 +17103,7 @@ End Class]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Collection(Of T) variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>Collection(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -17465,7 +17465,7 @@ End Class]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Dictionary(Of T) variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>Dictionary(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -17957,7 +17957,7 @@ Next]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>HashSet(Of T) variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>HashSet(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -20271,7 +20271,7 @@ End Property$end$]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>List(Of T) variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>List(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -20368,7 +20368,7 @@ End Property$end$]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>new variable (with initializer)</Title>
-      <Shortcut>vn_</Shortcut>
+      <Shortcut>vnx</Shortcut>
       <Description>variable declaration with new object creation (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -20586,7 +20586,7 @@ End Class]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ObservableCollection(Of T) variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>ObservableCollection(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -23543,7 +23543,7 @@ End Class$end$]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>SortedDictionary(Of T) variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>SortedDictionary(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -23650,7 +23650,7 @@ End Class$end$]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>SortedSet(Of T) variable (with initializer)</Title>
-      <Shortcut>vc_</Shortcut>
+      <Shortcut>vcx</Shortcut>
       <Description>SortedSet(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>

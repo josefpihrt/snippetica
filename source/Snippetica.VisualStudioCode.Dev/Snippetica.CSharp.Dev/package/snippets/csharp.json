@@ -87,7 +87,7 @@
     "description": "Dictionary<TKey, TValue> variable declaration"
   },
   "Dictionary<TKey, TValue> variable (with initializer)": {
-    "prefix": "vd_",
+    "prefix": "vdx",
     "body": [
       "var ${1:dic} = new Dictionary<${2:object}, ${3:object}>() { [0] = ${4:null} };${0}"
     ],
@@ -412,7 +412,7 @@
     "description": "HashSet<T> variable declaration"
   },
   "HashSet<T> variable (with initializer)": {
-    "prefix": "vhs_",
+    "prefix": "vhsx",
     "body": [
       "var ${1:items} = new HashSet<${2:T}>() { ${3:null} };${0}"
     ],
@@ -623,7 +623,7 @@
     "description": "List<T> variable declaration"
   },
   "List<T> variable (with initializer)": {
-    "prefix": "vl_",
+    "prefix": "vlx",
     "body": [
       "var ${1:items} = new List<${2:T}>() { ${3:null} };${0}"
     ],
@@ -657,7 +657,7 @@
     "description": "new array "
   },
   "new array (with initializer)": {
-    "prefix": "na_",
+    "prefix": "nax",
     "body": [
       "new ${1:T}[] { ${2:null} }${0}"
     ],
@@ -678,7 +678,7 @@
     "description": "ObservableCollection<T> variable declaration"
   },
   "ObservableCollection<T> variable (with initializer)": {
-    "prefix": "voc_",
+    "prefix": "vocx",
     "body": [
       "var ${1:items} = new ObservableCollection<${2:T}>() { ${3:null} };${0}"
     ],
