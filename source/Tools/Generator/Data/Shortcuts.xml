@@ -27,7 +27,7 @@
               <New Value="em" Description="enum declaration" />
               <New Value="et" Description="event declaration" />
               <New Value="f" Description="field declaration" />
-              <New Value="ie" Description="inteface declaration" />
+              <New Value="ie" Description="interface declaration" />
               <New Value="ir" Description="indexer declaration" />
               <New Value="k" Description="constant declaration" />
               <New Value="m" Description="method declaration" />

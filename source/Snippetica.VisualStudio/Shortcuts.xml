@@ -81,7 +81,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="ie" Description="inteface declaration" Comment="-">
+  <ShortcutInfo Value="ie" Description="interface declaration" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>

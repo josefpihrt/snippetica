@@ -18,7 +18,7 @@ de|delegate declaration|\-
 em|enum declaration|\-
 et|event declaration|\-
 f|field declaration|\-
-ie|inteface declaration|\-
+ie|interface declaration|\-
 ir|indexer declaration|\-
 k|constant declaration|\-
 m|method declaration|\-
