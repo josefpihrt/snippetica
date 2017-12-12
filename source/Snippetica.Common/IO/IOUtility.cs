@@ -84,15 +84,25 @@ namespace Snippetica.IO
             };
         }
 
-        public static void SaveSnippetsToSingleFile(IEnumerable<Snippet> snippets, string filePath)
+        public static void SaveSnippetsToSingleFile(
+            IEnumerable<Snippet> snippets,
+            string filePath,
+            bool onlyIfChanged = true)
         {
             if (snippets == null)
                 throw new ArgumentNullException(nameof(snippets));
 
+            SaveSettings settings = CreateSaveSettings();
+
+            string content = SnippetSerializer.CreateXml(snippets, settings);
+
+            if (!ShouldSave(filePath, content, Encoding.UTF8, onlyIfChanged))
+                return;
+
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
                 Console.WriteLine($"saving file {filePath}");
-                SnippetSerializer.Serialize(fileStream, snippets, CreateSaveSettings());
+                SnippetSerializer.Serialize(fileStream, snippets, settings);
             }
         }
 
