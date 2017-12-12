@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="ShortcutInfo.cs" />
     <Compile Include="EnvironmentKind.cs" />
     <Compile Include="EnvironmentKindExtensions.cs" />
