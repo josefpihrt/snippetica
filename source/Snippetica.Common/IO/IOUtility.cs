@@ -143,11 +143,6 @@ namespace Snippetica.IO
             File.WriteAllText(filePath, content, encoding);
         }
 
-        private static bool NewMethod(string filePath)
-        {
-            return !Directory.Exists(Path.GetDirectoryName(filePath));
-        }
-
         private static bool ShouldSave(string filePath, string content, Encoding encoding, bool onlyIfChanged)
         {
             if (!onlyIfChanged)
