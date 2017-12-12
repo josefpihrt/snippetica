@@ -544,229 +544,229 @@
   </ShortcutInfo>
   <ShortcutInfo Value="c" Description="class" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="cr" Description="constructor" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="dr" Description="destructor" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="em" Description="enum" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="f" Description="function" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="ns" Description="namespace" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="st" Description="struct" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="td" Description="typedef" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="u" Description="using" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="un" Description="union" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="v" Description="variable" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="x" Description="definition" Comment="suffix">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="x" Description="(variable) with initialization" Comment="suffix">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="c" Description="const" Comment="prefix">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="ce" Description="constexpr" Comment="prefix">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="il" Description="inline" Comment="prefix">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="s" Description="static" Comment="prefix">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="v" Description="virtual" Comment="prefix">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="dw" Description="do-while" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="fe" Description="foreach" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="fr" Description="for" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="if" Description="if" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="sh" Description="switch" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="tc" Description="try-catch" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="we" Description="while" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="ae" Description="attribute" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="co" Description="conditional operator" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="ct" Description="cast" Comment="suffix">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="d" Description="default keyword" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="dt" Description="decltype keyword" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="e" Description="else clause" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="l" Description="lambda expression" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="np" Description="nullptr" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="oo" Description="operator overload" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="pp" Description="preprocessor directive" Comment="prefix">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="r" Description="return keyword" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="so" Description="sizeof keyword" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="t" Description="template" Comment="-">
     <Languages>
-      <Language>CPlusPlus</Language>
+      <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
