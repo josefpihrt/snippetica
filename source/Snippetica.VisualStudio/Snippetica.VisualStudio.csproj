@@ -92,16 +92,6 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Snippetica.Cpp\AlignAsKeyword">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Snippetica.Cpp\AlignAsKeyword">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Snippetica.CSharp\AttributeClass.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

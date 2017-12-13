@@ -4,7 +4,7 @@
   "displayName": "Snippetica for VB",
   "description": "A collection of snippets for VB.",
   "icon": "images/icon.png",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "author": "Josef Pihrt",
   "license": "SEE LICENSE IN LICENSE.TXT",
   "homepage": "http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudioCode/Snippetica.VisualBasic.Dev/README.md",
