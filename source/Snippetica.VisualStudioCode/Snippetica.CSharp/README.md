@@ -80,8 +80,6 @@ wr|Writer|suffix
 
 Shortcut | Description | Comment
 -------- | ----------- | -------
-\_|with initializer|suffix
-\_|with parameters|suffix
 c|catch clause|\-
 d|default keyword|\-
 e|else clause|\-
@@ -95,12 +93,15 @@ pp|preprocessor directive|prefix
 ps|private set|\-
 r|return keyword|\-
 v|local variable declaration|\-
+x|with initializer|suffix
 y|yield|prefix
 
 ### List of Selected Snippets
 
 Shortcut | Title
 -------- | -----
+\_et|[interface event](InterfaceEvent.snippet)
+\_ett|[interface event with EventHandler&lt;T&gt;](InterfaceEventWithEventHandlerOfT.snippet)
 \_ir|[interface indexer](InterfaceIndexer.snippet)
 \_m|[interface method](InterfaceMethod.snippet)
 \_p|[interface property](InterfaceProperty.snippet)

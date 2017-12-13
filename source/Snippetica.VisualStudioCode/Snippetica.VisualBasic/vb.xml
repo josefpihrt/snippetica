@@ -37,7 +37,7 @@
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>array variable (with initializer)</Title>
-      <Shortcut>va_</Shortcut>
+      <Shortcut>vax</Shortcut>
       <Description>array variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1429,6 +1429,69 @@ End If]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
+      <Title>interface event</Title>
+      <Shortcut>_et</Shortcut>
+      <Description>interface event declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InterfaceEvent</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Event name</ToolTip>
+          <Default>EventName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Event $name$ As EventHandler$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>interface event with EventHandler&lt;T&gt;</Title>
+      <Shortcut>_ett</Shortcut>
+      <Description>interface event declaration with EventHandler&lt;T&gt;</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InterfaceEventWithEventHandlerOfT</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>eventArgs</ID>
+          <ToolTip>EventArgs type name</ToolTip>
+          <Default>EventArgs</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Event name</ToolTip>
+          <Default>EventName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Event $name$ As EventHandler(Of $eventArgs$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
       <Title>interface indexer</Title>
       <Shortcut>_ir</Shortcut>
       <Description>interface indexer</Description>
@@ -1472,6 +1535,11 @@ End If]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -1482,41 +1550,7 @@ End If]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Function $name$() As $_type$;$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>interface method (with parameters)</Title>
-      <Shortcut>_m_</Shortcut>
-      <Description>interface method (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InterfaceMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Function $name$($parameters$) As $_type$;$end$]]></Code>
+      <Code Language="VB"><![CDATA[Function $name$($_parameters$) As $_type$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1680,33 +1714,14 @@ End Class]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="VB"><![CDATA[Friend Sub New()
-	$end$
-End Sub]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Friend constructor (with parameters)</Title>
-      <Shortcut>icr_</Shortcut>
-      <Description>Friend constructor declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalConstructorWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
       <Declarations>
         <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Friend Sub New($parameters$)
+      <Code Language="VB"><![CDATA[Friend Sub New($_parameters$)
 	$end$
 End Sub]]></Code>
     </Snippet>
@@ -1727,6 +1742,11 @@ End Sub]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -1737,41 +1757,7 @@ End Sub]]></Code>
           <Default>DelegateName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Friend Delegate Function $name$() As $_type$$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Friend delegate (with parameters)</Title>
-      <Shortcut>ide_</Shortcut>
-      <Description>Friend delegate declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalDelegateWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Delegate name</ToolTip>
-          <Default>DelegateName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Friend Delegate Function $name$($parameters$) As $_type$$end$]]></Code>
+      <Code Language="VB"><![CDATA[Friend Delegate Function $name$($_parameters$) As $_type$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -1958,6 +1944,11 @@ End Interface]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -1968,43 +1959,7 @@ End Interface]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Friend Function $name$() As $_type$
-	$end$
-End Function]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Friend method (with parameters)</Title>
-      <Shortcut>im_</Shortcut>
-      <Description>Friend method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Friend Function $name$($parameters$) As $_type$
+      <Code Language="VB"><![CDATA[Friend Function $name$($_parameters$) As $_type$
 	$end$
 End Function]]></Code>
     </Snippet>
@@ -2147,6 +2102,11 @@ End Property$end$]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -2157,43 +2117,7 @@ End Property$end$]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Friend Shared Function $name$() As $_type$
-	$end$
-End Function]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Friend Shared method (with parameters)</Title>
-      <Shortcut>ism_</Shortcut>
-      <Description>Friend Shared method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalStaticMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Friend Shared Function $name$($parameters$) As $_type$
+      <Code Language="VB"><![CDATA[Friend Shared Function $name$($_parameters$) As $_type$
 	$end$
 End Function]]></Code>
     </Snippet>
@@ -2365,6 +2289,11 @@ End Structure]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -2375,43 +2304,7 @@ End Structure]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Friend Overridable Function $name$() As $_type$
-	$end$
-End Function]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Friend Overridable method (with parameters)</Title>
-      <Shortcut>ivm_</Shortcut>
-      <Description>Friend Overridable method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalVirtualMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Friend Overridable Function $name$($parameters$) As $_type$
+      <Code Language="VB"><![CDATA[Friend Overridable Function $name$($_parameters$) As $_type$
 	$end$
 End Function]]></Code>
     </Snippet>
@@ -2605,37 +2498,8 @@ End Property$end$]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-        <Literal>
-          <ID>type</ID>
-          <ToolTip>Type name</ToolTip>
-          <Default>Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $identifier$ = New $type$()$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>new variable (with arguments)</Title>
-      <Shortcut>vn_</Shortcut>
-      <Description>variable declaration with new object creation (with arguments)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name NewVariableWithArguments</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Arguments</ToolTip>
+          <ID>_arguments</ID>
+          <ToolTip>List of arguments</ToolTip>
           <Default>arguments</Default>
         </Literal>
         <Literal>
@@ -2649,7 +2513,45 @@ End Property$end$]]></Code>
           <Default>Object</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $identifier$ = New $type$($arguments$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $identifier$ = New $type$($_arguments$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>new variable (with initializer)</Title>
+      <Shortcut>vnx</Shortcut>
+      <Description>variable declaration with new object creation (with initializer)</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name NewVariableWithInitializer</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_arguments</ID>
+          <ToolTip>List of arguments</ToolTip>
+          <Default>arguments</Default>
+        </Literal>
+        <Literal>
+          <ID>_value</ID>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>Object</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Dim $identifier$ = New $type$($_arguments$) With {$_value$}$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -3820,33 +3722,14 @@ End Class]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="VB"><![CDATA[Private Sub New()
-	$end$
-End Sub]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Private constructor (with parameters)</Title>
-      <Shortcut>pcr_</Shortcut>
-      <Description>Private constructor declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PrivateConstructorWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
       <Declarations>
         <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Private Sub New($parameters$)
+      <Code Language="VB"><![CDATA[Private Sub New($_parameters$)
 	$end$
 End Sub]]></Code>
     </Snippet>
@@ -3867,6 +3750,11 @@ End Sub]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -3877,41 +3765,7 @@ End Sub]]></Code>
           <Default>DelegateName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Private Delegate Function $name$() As $_type$$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Private delegate (with parameters)</Title>
-      <Shortcut>pde_</Shortcut>
-      <Description>Private delegate declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PrivateDelegateWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Delegate name</ToolTip>
-          <Default>DelegateName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Private Delegate Function $name$($parameters$) As $_type$$end$]]></Code>
+      <Code Language="VB"><![CDATA[Private Delegate Function $name$($_parameters$) As $_type$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -4101,6 +3955,11 @@ End Property]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -4111,43 +3970,7 @@ End Property]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Private Function $name$() As $_type$
-	$end$
-End Function]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Private method (with parameters)</Title>
-      <Shortcut>pm_</Shortcut>
-      <Description>Private method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PrivateMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Private Function $name$($parameters$) As $_type$
+      <Code Language="VB"><![CDATA[Private Function $name$($_parameters$) As $_type$
 	$end$
 End Function]]></Code>
     </Snippet>
@@ -4293,6 +4116,11 @@ End Property$end$]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -4303,43 +4131,7 @@ End Property$end$]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Private Shared Function $name$() As $_type$
-	$end$
-End Function]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Private Shared method (with parameters)</Title>
-      <Shortcut>psm_</Shortcut>
-      <Description>Private Shared method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PrivateStaticMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Private Shared Function $name$($parameters$) As $_type$
+      <Code Language="VB"><![CDATA[Private Shared Function $name$($_parameters$) As $_type$
 	$end$
 End Function]]></Code>
     </Snippet>
@@ -4569,33 +4361,14 @@ End Class]]></Code>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="VB"><![CDATA[Public Sub New()
-	$end$
-End Sub]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Public constructor (with parameters)</Title>
-      <Shortcut>cr_</Shortcut>
-      <Description>Public constructor declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicConstructorWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
       <Declarations>
         <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Sub New($parameters$)
+      <Code Language="VB"><![CDATA[Public Sub New($_parameters$)
 	$end$
 End Sub]]></Code>
     </Snippet>
@@ -4616,6 +4389,11 @@ End Sub]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -4626,41 +4404,7 @@ End Sub]]></Code>
           <Default>DelegateName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Delegate Function $name$() As $_type$$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Public delegate (with parameters)</Title>
-      <Shortcut>de_</Shortcut>
-      <Description>Public delegate declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicDelegateWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Delegate name</ToolTip>
-          <Default>DelegateName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Public Delegate Function $name$($parameters$) As $_type$$end$]]></Code>
+      <Code Language="VB"><![CDATA[Public Delegate Function $name$($_parameters$) As $_type$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -4876,6 +4620,11 @@ End Interface]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -4886,43 +4635,7 @@ End Interface]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Function $name$() As $_type$
-	$end$
-End Function]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Public method (with parameters)</Title>
-      <Shortcut>m_</Shortcut>
-      <Description>Public method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Public Function $name$($parameters$) As $_type$
+      <Code Language="VB"><![CDATA[Public Function $name$($_parameters$) As $_type$
 	$end$
 End Function]]></Code>
     </Snippet>
@@ -5094,6 +4807,11 @@ End Property$end$]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -5104,43 +4822,7 @@ End Property$end$]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Function $name$() As $_type$
-	$end$
-End Function]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Public Shared method (with parameters)</Title>
-      <Shortcut>sm_</Shortcut>
-      <Description>Public Shared method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicStaticMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Public Shared Function $name$($parameters$) As $_type$
+      <Code Language="VB"><![CDATA[Public Shared Function $name$($_parameters$) As $_type$
 	$end$
 End Function]]></Code>
     </Snippet>
@@ -5312,6 +4994,11 @@ End Structure]]></Code>
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>parameter As T</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>void</Default>
@@ -5322,43 +5009,7 @@ End Structure]]></Code>
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Public Overridable Function $name$() As $_type$
-	$end$
-End Function]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Public Overridable method (with parameters)</Title>
-      <Shortcut>vm_</Shortcut>
-      <Description>Public Overridable method declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicVirtualMethodWithParameters</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>parameter As Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Public Overridable Function $name$($parameters$) As $_type$
+      <Code Language="VB"><![CDATA[Public Overridable Function $name$($_parameters$) As $_type$
 	$end$
 End Function]]></Code>
     </Snippet>

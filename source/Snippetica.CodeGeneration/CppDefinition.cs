@@ -12,6 +12,11 @@ namespace Snippetica.CodeGeneration
             get { return Language.Cpp; }
         }
 
+        public override string GetObjectInitializer(string value)
+        {
+            throw new InvalidOperationException();
+        }
+
         public override string GetArrayInitializer(string value)
         {
             return " = { " + value + " }";

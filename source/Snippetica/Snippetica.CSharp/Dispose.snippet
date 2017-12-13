@@ -17,18 +17,14 @@
     </Imports>
     <Code Language="CSharp"><![CDATA[private bool _disposed;
 
-public void Dispose()
-{
+public void Dispose() {
 	Dispose(true);
 	GC.SuppressFinalize(this);
 }
 
-protected virtual void Dispose(bool disposing)
-{
-	if (!_disposed)
-	{
-		if (disposing)
-		{
+protected virtual void Dispose(bool disposing) {
+	if (!_disposed) {
+		if (disposing) {
 			throw new NotImplementedException();
 		}
 

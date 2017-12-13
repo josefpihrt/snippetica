@@ -27,6 +27,7 @@ ifren|if return null
 ifret|if return true
 ifsne|if string\.IsNullOrEmpty
 ifsnw|if string\.IsNullOrWhiteSpace
+iftgv|if TryGetValue
 ifxemtp|if not Enum\.TryParse
 ifxnre|if not equal to null return
 ifxnref|if not equal to null return false
@@ -38,6 +39,7 @@ ifxren|if not return null
 ifxret|if not return true
 ifxsne|if \!string\.IsNullOrEmpty
 ifxsnw|if \!string\.IsNullOrWhiteSpace
+ifxtgv|if not TryGetValue
 iod\_cd|Directory\.CreateDirectory
 iod\_d|Directory\.Delete
 iod\_e|Directory\.Exists

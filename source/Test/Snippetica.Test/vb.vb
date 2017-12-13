@@ -1,4 +1,5 @@
-﻿Public Class ClassName
+﻿
+Public Class ClassName
 
     Private Shared Sub MethodName()
 

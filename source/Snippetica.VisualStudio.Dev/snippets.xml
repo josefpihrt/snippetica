@@ -794,7 +794,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Dictionary&lt;TKey, TValue&gt; variable (with initializer)</Title>
-      <Shortcut>vd_</Shortcut>
+      <Shortcut>vdx</Shortcut>
       <Description>Dictionary&lt;TKey, TValue&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1177,7 +1177,7 @@ private:
         <Literal>
           <ID>_type</ID>
           <ToolTip>Type name</ToolTip>
-          <Default>object</Default>
+          <Default>T</Default>
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[Enumerable.Empty<$_type$>()$end$]]></Code>
@@ -1507,7 +1507,7 @@ private:
         <Literal>
           <ID>_type</ID>
           <ToolTip>Generic type</ToolTip>
-          <Default>object</Default>
+          <Default>T</Default>
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[.OfType<$_type$>()$end$]]></Code>
@@ -2152,8 +2152,7 @@ private:
           <Default>path</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new FileStream($path$, FileMode$fileMode$))
-{
+      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new FileStream($path$, FileMode$fileMode$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2335,7 +2334,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>HashSet&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vhs_</Shortcut>
+      <Shortcut>vhsx</Shortcut>
       <Description>HashSet&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2408,8 +2407,7 @@ private:
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[$type$ $result$;
-if (Enum.TryParse($value$, out $result$))
-{
+if (Enum.TryParse($value$, out $result$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2551,8 +2549,7 @@ if (Enum.TryParse($value$, out $result$))
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[$type$ $result$;
-if (!Enum.TryParse($value$, out $result$))
-{
+if (!Enum.TryParse($value$, out $result$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2778,8 +2775,7 @@ if (!Enum.TryParse($value$, out $result$))
           <Default>s</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if (!string.IsNullOrEmpty($expression$))
-{
+      <Code Language="CSharp"><![CDATA[if (!string.IsNullOrEmpty($expression$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2805,8 +2801,50 @@ if (!Enum.TryParse($value$, out $result$))
           <Default>s</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if (!string.IsNullOrWhiteSpace($expression$))
-{
+      <Code Language="CSharp"><![CDATA[if (!string.IsNullOrWhiteSpace($expression$)) {
+	$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>if not TryGetValue</Title>
+      <Shortcut>ifxtgv</Shortcut>
+      <Description>if statement with condition whether TryGetValue method returns false.</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfNotTryGetValue</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_type</ID>
+          <ToolTip>The type of the value to get</ToolTip>
+          <Default>T</Default>
+        </Literal>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>The expression to get value from</ToolTip>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>key</ID>
+          <ToolTip>The key of the value to get</ToolTip>
+          <Default>key</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>The value associated with the specified key</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[$_type$ $value$;
+if (!$identifier$.TryGetValue($key$, out $value$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2932,8 +2970,7 @@ if (!Enum.TryParse($value$, out $result$))
           <Default>s</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if (string.IsNullOrEmpty($expression$))
-{
+      <Code Language="CSharp"><![CDATA[if (string.IsNullOrEmpty($expression$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -2959,8 +2996,50 @@ if (!Enum.TryParse($value$, out $result$))
           <Default>s</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if (string.IsNullOrWhiteSpace($expression$))
-{
+      <Code Language="CSharp"><![CDATA[if (string.IsNullOrWhiteSpace($expression$)) {
+	$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>if TryGetValue</Title>
+      <Shortcut>iftgv</Shortcut>
+      <Description>if statement with condition whether TryGetValue method returns true.</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfTryGetValue</Keyword>
+        <Keyword>Meta-SubmenuShortcut a</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_type</ID>
+          <ToolTip>The type of the value to get</ToolTip>
+          <Default>T</Default>
+        </Literal>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>The expression to get value from</ToolTip>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>key</ID>
+          <ToolTip>The key of the value to get</ToolTip>
+          <Default>key</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>The value associated with the specified key</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[$_type$ $value$;
+if ($identifier$.TryGetValue($key$, out $value$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3033,7 +3112,7 @@ if (!Enum.TryParse($value$, out $result$))
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>List&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vl_</Shortcut>
+      <Shortcut>vlx</Shortcut>
       <Description>List&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3086,6 +3165,11 @@ if (!Enum.TryParse($value$, out $result$))
     <Snippet>
       <Declarations>
         <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
           <ID>_type</ID>
           <ToolTip>Return type</ToolTip>
           <Default>T</Default>
@@ -3096,46 +3180,7 @@ if (!Enum.TryParse($value$, out $result$))
           <Default>MethodName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$_type$ $name$()
-{
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>local function (with parameters)</Title>
-      <Shortcut>lf_</Shortcut>
-      <Description> local function declaration (with parameters)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name LocalFunctionWithParameters</Keyword>
-        <Keyword>Meta-SubmenuShortcut a</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Return type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Method name</ToolTip>
-          <Default>MethodName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Parameters</ToolTip>
-          <Default>object parameter</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[$_type$ $name$($parameters$)
-{
+      <Code Language="CSharp"><![CDATA[$_type$ $name$($_parameters$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3196,8 +3241,7 @@ if (!Enum.TryParse($value$, out $result$))
           <Default>0</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new MemoryStream($parameters$))
-{
+      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new MemoryStream($parameters$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -3224,8 +3268,7 @@ if (!Enum.TryParse($value$, out $result$))
           <Default>NamespaceName</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[namespace $name$
-{
+      <Code Language="CSharp"><![CDATA[namespace $name$ {
 	$selected$$end$
 }]]></Code>
     </Snippet>
@@ -3263,7 +3306,7 @@ if (!Enum.TryParse($value$, out $result$))
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>new array (with initializer)</Title>
-      <Shortcut>na_</Shortcut>
+      <Shortcut>nax</Shortcut>
       <Description>new array (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3357,7 +3400,7 @@ if (!Enum.TryParse($value$, out $result$))
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ObservableCollection&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>voc_</Shortcut>
+      <Shortcut>vocx</Shortcut>
       <Description>ObservableCollection&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3871,8 +3914,7 @@ if (!Enum.TryParse($value$, out $result$))
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[var $identifier$ = $expression$ as $_type$;
-if ($identifier$ != null)
-{
+if ($identifier$ != null) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -4133,7 +4175,7 @@ if ($identifier$ != null)
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Dictionary(Of TKey, TValue) variable (with initializer)</Title>
-      <Shortcut>vd_</Shortcut>
+      <Shortcut>vdx</Shortcut>
       <Description>Dictionary(Of TKey, TValue) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4241,7 +4283,7 @@ if ($identifier$ != null)
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>HashSet(Of T) variable (with initializer)</Title>
-      <Shortcut>vhs_</Shortcut>
+      <Shortcut>vhsx</Shortcut>
       <Description>HashSet(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4429,7 +4471,7 @@ End If]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>List(Of T) variable (with initializer)</Title>
-      <Shortcut>vl_</Shortcut>
+      <Shortcut>vlx</Shortcut>
       <Description>List(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4607,7 +4649,7 @@ End Namespace]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ObservableCollection(Of T) variable (with initializer)</Title>
-      <Shortcut>voc_</Shortcut>
+      <Shortcut>vocx</Shortcut>
       <Description>ObservableCollection(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>

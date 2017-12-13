@@ -44,34 +44,26 @@
         <Default>Dictionary</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : Dictionary<$_keyType$, $_valueType$>
-{
-	public $name$() : base()
-	{
+    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : Dictionary<$_keyType$, $_valueType$> {
+	public $name$() : base() {
 	}
 
-	public $name$(int capacity) : base(capacity)
-	{
+	public $name$(int capacity) : base(capacity) {
 	}
 
-	public $name$(IEqualityComparer<$_keyType$> comparer) : base(comparer)
-	{
+	public $name$(IEqualityComparer<$_keyType$> comparer) : base(comparer) {
 	}
 
-	public $name$(IDictionary<$_keyType$, $_valueType$> dictionary) : base(dictionary)
-	{
+	public $name$(IDictionary<$_keyType$, $_valueType$> dictionary) : base(dictionary) {
 	}
 
-	public $name$(int capacity, IEqualityComparer<$_keyType$> comparer) : base(capacity, comparer)
-	{
+	public $name$(int capacity, IEqualityComparer<$_keyType$> comparer) : base(capacity, comparer) {
 	}
 
-	public $name$(SerializationInfo info, StreamingContext context) : base(info, context)
-	{
+	public $name$(SerializationInfo info, StreamingContext context) : base(info, context) {
 	}
 
-	public $name$(IDictionary<$_keyType$, $_valueType$> dictionary, IEqualityComparer<$_keyType$> comparer) : base(dictionary, comparer)
-	{
+	public $name$(IDictionary<$_keyType$, $_valueType$> dictionary, IEqualityComparer<$_keyType$> comparer) : base(dictionary, comparer) {
 	}
 
 	$end$

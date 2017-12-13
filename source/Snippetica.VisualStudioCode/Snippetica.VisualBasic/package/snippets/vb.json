@@ -194,7 +194,7 @@
     "description": "array variable declaration"
   },
   "array variable (with initializer)": {
-    "prefix": "va_",
+    "prefix": "vax",
     "body": [
       "Dim ${1:items} = New ${2:T}() {${3:Nothing}}${0}"
     ],
@@ -513,34 +513,18 @@
   "Friend constructor": {
     "prefix": "icr",
     "body": [
-      "Friend Sub New()",
+      "Friend Sub New(${1:parameter As T})",
       "\t${0}",
       "End Sub"
     ],
     "description": "Friend constructor declaration"
   },
-  "Friend constructor (with parameters)": {
-    "prefix": "icr_",
-    "body": [
-      "Friend Sub New(${1:parameter As Object})",
-      "\t${0}",
-      "End Sub"
-    ],
-    "description": "Friend constructor declaration (with parameters)"
-  },
   "Friend delegate": {
     "prefix": "ide",
     "body": [
-      "Friend Delegate Function ${1:DelegateName}() As ${2:void}${0}"
+      "Friend Delegate Function ${1:DelegateName}(${2:parameter As T}) As ${3:void}${0}"
     ],
     "description": "Friend delegate declaration"
-  },
-  "Friend delegate (with parameters)": {
-    "prefix": "ide_",
-    "body": [
-      "Friend Delegate Function ${1:DelegateName}(${2:parameter As Object}) As ${3:void}${0}"
-    ],
-    "description": "Friend delegate declaration (with parameters)"
   },
   "Friend enum": {
     "prefix": "iem",
@@ -598,20 +582,11 @@
   "Friend method": {
     "prefix": "im",
     "body": [
-      "Friend Function ${1:MethodName}() As ${2:void}",
+      "Friend Function ${1:MethodName}(${2:parameter As T}) As ${3:void}",
       "\t${0}",
       "End Function"
     ],
     "description": "Friend method declaration"
-  },
-  "Friend method (with parameters)": {
-    "prefix": "im_",
-    "body": [
-      "Friend Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "\t${0}",
-      "End Function"
-    ],
-    "description": "Friend method declaration (with parameters)"
   },
   "Friend module": {
     "prefix": "ime",
@@ -632,20 +607,11 @@
   "Friend Overridable method": {
     "prefix": "ivm",
     "body": [
-      "Friend Overridable Function ${1:MethodName}() As ${2:void}",
+      "Friend Overridable Function ${1:MethodName}(${2:parameter As T}) As ${3:void}",
       "\t${0}",
       "End Function"
     ],
     "description": "Friend Overridable method declaration"
-  },
-  "Friend Overridable method (with parameters)": {
-    "prefix": "ivm_",
-    "body": [
-      "Friend Overridable Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "\t${0}",
-      "End Function"
-    ],
-    "description": "Friend Overridable method declaration (with parameters)"
   },
   "Friend Overridable read-only auto property": {
     "prefix": "ivrp",
@@ -693,20 +659,11 @@
   "Friend Shared method": {
     "prefix": "ism",
     "body": [
-      "Friend Shared Function ${1:MethodName}() As ${2:void}",
+      "Friend Shared Function ${1:MethodName}(${2:parameter As T}) As ${3:void}",
       "\t${0}",
       "End Function"
     ],
     "description": "Friend Shared method declaration"
-  },
-  "Friend Shared method (with parameters)": {
-    "prefix": "ism_",
-    "body": [
-      "Friend Shared Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "\t${0}",
-      "End Function"
-    ],
-    "description": "Friend Shared method declaration (with parameters)"
   },
   "Friend Shared read-only auto property": {
     "prefix": "isrp",
@@ -975,6 +932,20 @@
     ],
     "description": "Int32 variable declaration"
   },
+  "interface event": {
+    "prefix": "_et",
+    "body": [
+      "Event ${1:EventName} As EventHandler${0}"
+    ],
+    "description": "interface event declaration"
+  },
+  "interface event with EventHandler<T>": {
+    "prefix": "_ett",
+    "body": [
+      "Event ${1:EventName} As EventHandler(Of ${2:EventArgs})${0}"
+    ],
+    "description": "interface event declaration with EventHandler<T>"
+  },
   "interface indexer": {
     "prefix": "_ir",
     "body": [
@@ -985,16 +956,9 @@
   "interface method": {
     "prefix": "_m",
     "body": [
-      "Function ${1:MethodName}() As ${2:void};${0}"
+      "Function ${1:MethodName}(${2:parameter As T}) As ${3:void};${0}"
     ],
     "description": "interface method"
-  },
-  "interface method (with parameters)": {
-    "prefix": "_m_",
-    "body": [
-      "Function ${1:MethodName}(${2:parameter As Object}) As ${3:void};${0}"
-    ],
-    "description": "interface method (with parameters)"
   },
   "interface property": {
     "prefix": "_p",
@@ -1104,16 +1068,16 @@
   "new variable": {
     "prefix": "vn",
     "body": [
-      "Dim ${1:x} = New ${2:Object}()${0}"
+      "Dim ${1:x} = New ${2:Object}(${3:arguments})${0}"
     ],
     "description": "variable declaration with new object creation"
   },
-  "new variable (with arguments)": {
-    "prefix": "vn_",
+  "new variable (with initializer)": {
+    "prefix": "vnx",
     "body": [
-      "Dim ${1:x} = New ${2:Object}(${3:arguments})${0}"
+      "Dim ${1:x} = New ${2:Object}(${3:arguments}) With {${4:x}}${0}"
     ],
-    "description": "variable declaration with new object creation (with arguments)"
+    "description": "variable declaration with new object creation (with initializer)"
   },
   "Not operator overloading": {
     "prefix": "oo_Not",
@@ -1188,34 +1152,18 @@
   "Private constructor": {
     "prefix": "pcr",
     "body": [
-      "Private Sub New()",
+      "Private Sub New(${1:parameter As T})",
       "\t${0}",
       "End Sub"
     ],
     "description": "Private constructor declaration"
   },
-  "Private constructor (with parameters)": {
-    "prefix": "pcr_",
-    "body": [
-      "Private Sub New(${1:parameter As Object})",
-      "\t${0}",
-      "End Sub"
-    ],
-    "description": "Private constructor declaration (with parameters)"
-  },
   "Private delegate": {
     "prefix": "pde",
     "body": [
-      "Private Delegate Function ${1:DelegateName}() As ${2:void}${0}"
+      "Private Delegate Function ${1:DelegateName}(${2:parameter As T}) As ${3:void}${0}"
     ],
     "description": "Private delegate declaration"
-  },
-  "Private delegate (with parameters)": {
-    "prefix": "pde_",
-    "body": [
-      "Private Delegate Function ${1:DelegateName}(${2:parameter As Object}) As ${3:void}${0}"
-    ],
-    "description": "Private delegate declaration (with parameters)"
   },
   "Private enum": {
     "prefix": "pem",
@@ -1271,20 +1219,11 @@
   "Private method": {
     "prefix": "pm",
     "body": [
-      "Private Function ${1:MethodName}() As ${2:void}",
+      "Private Function ${1:MethodName}(${2:parameter As T}) As ${3:void}",
       "\t${0}",
       "End Function"
     ],
     "description": "Private method declaration"
-  },
-  "Private method (with parameters)": {
-    "prefix": "pm_",
-    "body": [
-      "Private Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "\t${0}",
-      "End Function"
-    ],
-    "description": "Private method declaration (with parameters)"
   },
   "Private read-only auto property": {
     "prefix": "prp",
@@ -1321,20 +1260,11 @@
   "Private Shared method": {
     "prefix": "psm",
     "body": [
-      "Private Shared Function ${1:MethodName}() As ${2:void}",
+      "Private Shared Function ${1:MethodName}(${2:parameter As T}) As ${3:void}",
       "\t${0}",
       "End Function"
     ],
     "description": "Private Shared method declaration"
-  },
-  "Private Shared method (with parameters)": {
-    "prefix": "psm_",
-    "body": [
-      "Private Shared Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "\t${0}",
-      "End Function"
-    ],
-    "description": "Private Shared method declaration (with parameters)"
   },
   "Private Shared read-only auto property": {
     "prefix": "psrp",
@@ -1396,34 +1326,18 @@
   "Public constructor": {
     "prefix": "cr",
     "body": [
-      "Public Sub New()",
+      "Public Sub New(${1:parameter As T})",
       "\t${0}",
       "End Sub"
     ],
     "description": "Public constructor declaration"
   },
-  "Public constructor (with parameters)": {
-    "prefix": "cr_",
-    "body": [
-      "Public Sub New(${1:parameter As Object})",
-      "\t${0}",
-      "End Sub"
-    ],
-    "description": "Public constructor declaration (with parameters)"
-  },
   "Public delegate": {
     "prefix": "de",
     "body": [
-      "Public Delegate Function ${1:DelegateName}() As ${2:void}${0}"
+      "Public Delegate Function ${1:DelegateName}(${2:parameter As T}) As ${3:void}${0}"
     ],
     "description": "Public delegate declaration"
-  },
-  "Public delegate (with parameters)": {
-    "prefix": "de_",
-    "body": [
-      "Public Delegate Function ${1:DelegateName}(${2:parameter As Object}) As ${3:void}${0}"
-    ],
-    "description": "Public delegate declaration (with parameters)"
   },
   "Public enum": {
     "prefix": "em",
@@ -1488,20 +1402,11 @@
   "Public method": {
     "prefix": "m",
     "body": [
-      "Public Function ${1:MethodName}() As ${2:void}",
+      "Public Function ${1:MethodName}(${2:parameter As T}) As ${3:void}",
       "\t${0}",
       "End Function"
     ],
     "description": "Public method declaration"
-  },
-  "Public method (with parameters)": {
-    "prefix": "m_",
-    "body": [
-      "Public Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "\t${0}",
-      "End Function"
-    ],
-    "description": "Public method declaration (with parameters)"
   },
   "Public module": {
     "prefix": "me",
@@ -1522,20 +1427,11 @@
   "Public Overridable method": {
     "prefix": "vm",
     "body": [
-      "Public Overridable Function ${1:MethodName}() As ${2:void}",
+      "Public Overridable Function ${1:MethodName}(${2:parameter As T}) As ${3:void}",
       "\t${0}",
       "End Function"
     ],
     "description": "Public Overridable method declaration"
-  },
-  "Public Overridable method (with parameters)": {
-    "prefix": "vm_",
-    "body": [
-      "Public Overridable Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "\t${0}",
-      "End Function"
-    ],
-    "description": "Public Overridable method declaration (with parameters)"
   },
   "Public Overridable read-only auto property": {
     "prefix": "vrp",
@@ -1590,20 +1486,11 @@
   "Public Shared method": {
     "prefix": "sm",
     "body": [
-      "Public Shared Function ${1:MethodName}() As ${2:void}",
+      "Public Shared Function ${1:MethodName}(${2:parameter As T}) As ${3:void}",
       "\t${0}",
       "End Function"
     ],
     "description": "Public Shared method declaration"
-  },
-  "Public Shared method (with parameters)": {
-    "prefix": "sm_",
-    "body": [
-      "Public Shared Function ${1:MethodName}(${2:parameter As Object}) As ${3:void}",
-      "\t${0}",
-      "End Function"
-    ],
-    "description": "Public Shared method declaration (with parameters)"
   },
   "Public Shared read-only auto property": {
     "prefix": "srp",

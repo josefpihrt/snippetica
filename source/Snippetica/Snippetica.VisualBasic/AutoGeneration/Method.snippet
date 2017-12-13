@@ -10,7 +10,6 @@
     </SnippetTypes>
     <Keywords>
       <Keyword>Meta-GenerateAccessModifier</Keyword>
-      <Keyword>Meta-GenerateParameters</Keyword>
       <Keyword>Meta-GenerateStaticModifier</Keyword>
       <Keyword>Meta-GenerateType</Keyword>
       <Keyword>Meta-GenerateVirtualModifier</Keyword>
@@ -30,9 +29,10 @@
         <ToolTip>Modifier(s)</ToolTip>
         <Default>Public</Default>
       </Literal>
-      <Literal Editable="false">
-        <ID>_parameterList</ID>
-        <Default>()</Default>
+      <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>parameter As T</Default>
       </Literal>
       <Literal>
         <ID>_subOrFunction</ID>
@@ -50,7 +50,7 @@
         <Default>MethodName</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[$_modifiers$ $_subOrFunction$ $name$$_parameterList$ $_as$ $_type$
+    <Code Language="VB"><![CDATA[$_modifiers$ $_subOrFunction$ $name$($_parameters$) $_as$ $_type$
 	$end$
 End $_subOrFunction$]]></Code>
   </Snippet>

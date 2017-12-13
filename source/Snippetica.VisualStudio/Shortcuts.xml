@@ -423,20 +423,6 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="_" Description="with parameters" Comment="suffix">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="_" Description="with initializer" Comment="suffix">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
   <ShortcutInfo Value="c" Description="catch clause" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -522,6 +508,13 @@
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="v" Description="local variable declaration" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
+  <ShortcutInfo Value="x" Description="with initializer" Comment="suffix">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>

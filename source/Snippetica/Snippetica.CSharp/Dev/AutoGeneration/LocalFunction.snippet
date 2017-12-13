@@ -9,16 +9,16 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-GenerateParameters</Keyword>
       <Keyword>Meta-GenerateType</Keyword>
       <Keyword>Meta-GenerateVoidType</Keyword>
     </Keywords>
   </Header>
   <Snippet>
     <Declarations>
-      <Literal Editable="false">
-        <ID>_parameterList</ID>
-        <Default>()</Default>
+      <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>T parameter</Default>
       </Literal>
       <Literal>
         <ID>_type</ID>
@@ -31,8 +31,7 @@
         <Default>MethodName</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$_type$ $name$$_parameterList$
-{
+    <Code Language="CSharp"><![CDATA[$_type$ $name$($_parameters$) {
 	$end$
 }]]></Code>
   </Snippet>

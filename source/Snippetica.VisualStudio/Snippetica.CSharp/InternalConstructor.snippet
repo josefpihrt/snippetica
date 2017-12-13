@@ -15,6 +15,11 @@
   </Header>
   <Snippet>
     <Declarations>
+      <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>T parameter</Default>
+      </Literal>
       <Literal Editable="false">
         <ID>thisName</ID>
         <ToolTip>Containing type name</ToolTip>
@@ -22,8 +27,7 @@
         <Function>ClassName()</Function>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[internal $thisName$()
-{
+    <Code Language="CSharp"><![CDATA[internal $thisName$($_parameters$) {
 	$end$
 }]]></Code>
   </Snippet>

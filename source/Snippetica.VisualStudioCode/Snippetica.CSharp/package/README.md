@@ -78,8 +78,6 @@ wr|Writer|suffix
 
 Shortcut | Description | Comment
 -------- | ----------- | -------
-\_|with initializer|suffix
-\_|with parameters|suffix
 c|catch clause|\-
 d|default keyword|\-
 e|else clause|\-
@@ -93,12 +91,15 @@ pp|preprocessor directive|prefix
 ps|private set|\-
 r|return keyword|\-
 v|local variable declaration|\-
+x|with initializer|suffix
 y|yield|prefix
 
 ### List of Selected Snippets
 
 Shortcut | Title
 -------- | -----
+\_et|interface event
+\_ett|interface event with EventHandler&lt;T&gt;
 \_ir|interface indexer
 \_m|interface method
 \_p|interface property

@@ -1,7 +1,9 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Pihrtsoft.Snippets;
@@ -19,8 +21,7 @@ namespace Snippetica.CodeGeneration
 
         public IEnumerable<Snippet> GenerateSnippets(Snippet snippet)
         {
-            //TODO: uncomment
-            //Debug.Assert(snippet.Keywords.Any(f => f.StartsWith(KnownTags.MetaPrefix + KnownTags.GeneratePrefix, StringComparison.OrdinalIgnoreCase)), snippet.FilePath);
+            Debug.Assert(snippet.Language == Language.Html || snippet.Keywords.Any(f => f.StartsWith(KnownTags.MetaPrefix + KnownTags.GeneratePrefix, StringComparison.OrdinalIgnoreCase)), snippet.FilePath);
 
             foreach (Command command in CreateCommands(snippet))
             {
