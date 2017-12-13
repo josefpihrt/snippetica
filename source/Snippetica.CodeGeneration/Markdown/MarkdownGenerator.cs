@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using Pihrtsoft.Snippets;
 using static Snippetica.CodeGeneration.CodeGenerationUtility;
 using static Snippetica.KnownNames;
@@ -144,6 +145,56 @@ namespace Snippetica.CodeGeneration.Markdown
             }
 
             return snippets;
+        }
+
+        public static string GenerateVisualStudioMarketplaceOverview(IEnumerable<SnippetGeneratorResult> results)
+        {
+            var sb = new StringBuilder();
+
+            sb.AppendLine("### Introduction").AppendLine();
+
+            sb.Append("* ").AppendLine(GetProjectSubtitle(results)).AppendLine();
+
+            sb.Append("### ").AppendLine("Links").AppendLine();
+
+            sb.Append("* ").Append("[Project Website](").Append(GitHubUrl).AppendLine(")");
+            sb.Append("* ").Append("[Release Notes](").Append(MasterGitHubUrl).Append("/").Append(ChangeLogFileName).AppendLine(")");
+            sb.Append("* ").Append("Browse all available snippets with [Snippet Browser](").Append(GetSnippetBrowserUrl(EnvironmentKind.VisualStudio)).AppendLine(")").AppendLine();
+
+            sb.Append("### ").AppendLine("Snippets").AppendLine();
+
+            sb.AppendLine("Language|Count|Snippet Browser|");
+
+            sb.AppendLine("--- | ---:|:---:");
+
+            foreach (SnippetGeneratorResult result in results)
+            {
+                string directoryName = result.DirectoryName;
+
+                sb
+                    .Append("")
+                    .Append("[")
+                    .Append(directoryName)
+                    .Append("](")
+                    .Append(VisualStudioExtensionGitHubUrl)
+                    .Append("/")
+                    .Append(directoryName)
+                    .Append("/")
+                    .Append(ReadMeFileName)
+                    .Append(")")
+                    .Append("|")
+
+                    .Append(result.Snippets.Count)
+                    .Append("|")
+
+                    .Append("[browse](")
+                    .Append(GetSnippetBrowserUrl(EnvironmentKind.VisualStudio, result.Language))
+                    .AppendLine(")");
+            }
+
+            sb.AppendLine();
+
+            return sb.ToString();
         }
     }
 }

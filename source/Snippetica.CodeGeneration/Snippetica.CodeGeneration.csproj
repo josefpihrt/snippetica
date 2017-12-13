@@ -74,7 +74,6 @@
     <Compile Include="VisualStudioCode\VisualStudioCodeEnvironment.cs" />
     <Compile Include="VisualStudioCode\VisualStudioCodePackageGenerator.cs" />
     <Compile Include="VisualStudio\EnvironmentSnippetGenerator.cs" />
-    <Compile Include="VisualStudio\HtmlGenerator.cs" />
     <Compile Include="VisualStudio\PkgDefGenerator.cs" />
     <Compile Include="VisualStudio\ProjectDocument.cs" />
     <Compile Include="VisualStudio\VisualStudioEnvironment.cs" />

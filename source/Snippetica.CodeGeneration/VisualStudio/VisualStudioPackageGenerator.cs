@@ -23,8 +23,8 @@ namespace Snippetica.CodeGeneration.VisualStudio
             List<Snippet> snippets = base.GeneratePackageFiles(directoryPath, results);
 
             IOUtility.WriteAllText(
-                Path.Combine(directoryPath, "description.html"),
-                HtmlGenerator.GenerateVisualStudioMarketplaceDescription(results));
+                Path.Combine(directoryPath, "Overview.md"),
+                MarkdownGenerator.GenerateVisualStudioMarketplaceOverview(results));
 
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, "regedit.pkgdef"),
