@@ -46,6 +46,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
                 createDirectory: true);
 
             PackageInfo info = GetDefaultPackageInfo();
+            info.Version = Environment.GetVersion(result.Language);
             info.Name += "-" + languageId;
             info.DisplayName += " for " + language.GetTitle();
             info.Description += language.GetTitle() + ".";
@@ -74,7 +75,6 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
                 DisplayName = "Snippetica",
                 Description = "A collection of snippets for ",
                 Icon = "images/icon.png",
-                Version = "0.6.0",
                 Author = "Josef Pihrt",
                 License = "SEE LICENSE IN LICENSE.TXT",
                 Homepage = $"{SourceGitHubUrl}/{VisualStudioCodeExtensionProjectName}",

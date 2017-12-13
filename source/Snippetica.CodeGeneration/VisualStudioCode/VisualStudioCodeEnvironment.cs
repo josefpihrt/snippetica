@@ -61,5 +61,26 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
         {
             return new VisualStudioCodePackageGenerator(this);
         }
+
+        public override string GetVersion(Language language)
+        {
+            switch (language)
+            {
+                case Language.CSharp:
+                case Language.VisualBasic:
+                    return "0.7.0";
+                case Language.Cpp:
+                case Language.Xml:
+                case Language.JavaScript:
+                case Language.Sql:
+                case Language.Html:
+                case Language.Css:
+                case Language.Json:
+                case Language.Markdown:
+                    return "0.6.0";
+                default:
+                    throw new ArgumentException("", nameof(language));
+            }
+        }
     }
 }

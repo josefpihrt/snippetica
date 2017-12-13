@@ -194,5 +194,7 @@ namespace Snippetica.CodeGeneration
         public abstract PackageGenerator CreatePackageGenerator();
 
         public abstract bool IsSupportedLanguage(Language language);
+
+        public abstract string GetVersion(Language language);
     }
 }
