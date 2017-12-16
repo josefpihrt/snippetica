@@ -29,6 +29,13 @@
     ],
     "description": "Assembly attribute"
   },
+  "attribute": {
+    "prefix": "ae",
+    "body": [
+      "[${TM_SELECTED_TEXT}${0}]"
+    ],
+    "description": "attribute"
+  },
   "break statement": {
     "prefix": "bk",
     "body": [
@@ -42,6 +49,34 @@
       "[Conditional(${1:\"DEBUG\"})]${0}"
     ],
     "description": "Conditional attribute"
+  },
+  "conditional operator (!string.IsNullOrEmpty)": {
+    "prefix": "coxsne",
+    "body": [
+      "(!string.IsNullOrEmpty(${1:s})) ? ${2:true} : ${3:false}${0}"
+    ],
+    "description": "conditional operator with condition whether the string is not equal to null or empty"
+  },
+  "conditional operator (!string.IsNullOrWhiteSpace)": {
+    "prefix": "coxsnw",
+    "body": [
+      "(!string.IsNullOrWhiteSpace(${1:s})) ? ${2:true} : ${3:false}${0}"
+    ],
+    "description": "conditional operator with condition whether the string is not equal to null or white-space"
+  },
+  "conditional operator (string.IsNullOrEmpty)": {
+    "prefix": "cosne",
+    "body": [
+      "(string.IsNullOrEmpty(${1:s})) ? ${2:true} : ${3:false}${0}"
+    ],
+    "description": "conditional operator with condition whether the string is equal to null or empty"
+  },
+  "conditional operator (string.IsNullOrWhiteSpace)": {
+    "prefix": "cosnw",
+    "body": [
+      "(string.IsNullOrWhiteSpace(${1:s})) ? ${2:true} : ${3:false}${0}"
+    ],
+    "description": "conditional operator with condition whether the string is equal to null or white-space"
   },
   "continue statement": {
     "prefix": "ce",

@@ -5,6 +5,7 @@
 Shortcut | Title
 -------- | -----
 a|[array type](ArrayOfTType.snippet)
+ae|[attribute](Attribute.snippet)
 ae\_ay|[Assembly attribute](AssemblyAttribute.snippet)
 ae\_cl|[Conditional attribute](ConditionalAttribute.snippet)
 ae\_dd|[DebuggerDisplay attribute](DebuggerDisplayAttribute.snippet)
@@ -13,6 +14,10 @@ ae\_fs|[Flags attribute](FlagsAttribute.snippet)
 ae\_oe|[Obsolete attribute](ObsoleteAttribute.snippet)
 bk|[break statement](BreakStatement.snippet)
 ce|[continue statement](ContinueStatement.snippet)
+cosne|[conditional operator \(string\.IsNullOrEmpty\)](ConditionalOperatorStringIsNullOrEmpty.snippet)
+cosnw|[conditional operator \(string\.IsNullOrWhiteSpace\)](ConditionalOperatorStringIsNullOrWhiteSpace.snippet)
+coxsne|[conditional operator \(\!string\.IsNullOrEmpty\)](ConditionalOperatorNotStringIsNullOrEmpty.snippet)
+coxsnw|[conditional operator \(\!string\.IsNullOrWhiteSpace\)](ConditionalOperatorNotStringIsNullOrWhiteSpace.snippet)
 daxn|[Debug\.Assert \!= null](DebugAssertNotNull.snippet)
 gd|[Dictionary&lt;TKey, TValue&gt; type](DictionaryOfTKeyTValueType.snippet)
 ghs|[HashSet&lt;T&gt; type](HashSetOfTType.snippet)

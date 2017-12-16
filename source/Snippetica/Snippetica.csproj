@@ -210,6 +210,11 @@
     <None Include="Snippetica.CSharp\AutoGeneration\ImmutableCollectionOfTVariable.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Indexer.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Interface.snippet" />
+    <None Include="Snippetica.CSharp\Dev\Attributes\Attribute.snippet" />
+    <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotStringIsNullOrWhiteSpace.snippet" />
+    <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotStringIsNullOrEmpty.snippet" />
+    <None Include="Snippetica.CSharp\Dev\ConditionalOperatorStringIsNullOrWhiteSpace.snippet" />
+    <None Include="Snippetica.CSharp\Dev\ConditionalOperatorStringIsNullOrEmpty.snippet" />
     <None Include="Snippetica.CSharp\InterfaceEvent.snippet" />
     <None Include="Snippetica.CSharp\InterfaceEventWithEventHandlerOfT.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceIndexer.snippet" />

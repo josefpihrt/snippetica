@@ -12,7 +12,7 @@
 
 Language|Count|Snippet Browser|
 --- | ---:|:---:
-[Snippetica.CSharp.Dev](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp.Dev/README.md)|219|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=csharp)
+[Snippetica.CSharp.Dev](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp.Dev/README.md)|224|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=csharp)
 [Snippetica.VisualBasic.Dev](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic.Dev/README.md)|101|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=vb)
 [Snippetica.Cpp.Dev](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp.Dev/README.md)|26|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=cpp)
 [Snippetica.Html.Dev](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Html.Dev/README.md)|6|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=html)

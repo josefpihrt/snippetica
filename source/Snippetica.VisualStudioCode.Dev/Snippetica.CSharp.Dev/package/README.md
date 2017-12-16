@@ -3,6 +3,7 @@
 Shortcut | Title
 -------- | -----
 a|array type
+ae|attribute
 ae\_ay|Assembly attribute
 ae\_cl|Conditional attribute
 ae\_dd|DebuggerDisplay attribute
@@ -11,6 +12,10 @@ ae\_fs|Flags attribute
 ae\_oe|Obsolete attribute
 bk|break statement
 ce|continue statement
+cosne|conditional operator \(string\.IsNullOrEmpty\)
+cosnw|conditional operator \(string\.IsNullOrWhiteSpace\)
+coxsne|conditional operator \(\!string\.IsNullOrEmpty\)
+coxsnw|conditional operator \(\!string\.IsNullOrWhiteSpace\)
 daxn|Debug\.Assert \!= null
 gd|Dictionary&lt;TKey, TValue&gt; type
 ghs|HashSet&lt;T&gt; type

@@ -569,6 +569,25 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>attribute</Title>
+      <Shortcut>ae</Shortcut>
+      <Description>attribute</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Attribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut -</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp"><![CDATA[[$selected$$end$]]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>break statement</Title>
       <Shortcut>bk</Shortcut>
       <Description>break statement</Description>
@@ -612,6 +631,142 @@ private:
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[[Conditional($conditionString$)]$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>conditional operator (!string.IsNullOrEmpty)</Title>
+      <Shortcut>coxsne</Shortcut>
+      <Description>conditional operator with condition whether the string is not equal to null or empty</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ConditionalOperatorNotStringIsNullOrEmpty</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>String expression</ToolTip>
+          <Default>s</Default>
+        </Literal>
+        <Literal>
+          <ID>false</ID>
+          <ToolTip>False expression</ToolTip>
+          <Default>false</Default>
+        </Literal>
+        <Literal>
+          <ID>true</ID>
+          <ToolTip>True expression</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[(!string.IsNullOrEmpty($expression$)) ? $true$ : $false$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>conditional operator (!string.IsNullOrWhiteSpace)</Title>
+      <Shortcut>coxsnw</Shortcut>
+      <Description>conditional operator with condition whether the string is not equal to null or white-space</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ConditionalOperatorNotStringIsNullOrWhiteSpace</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>String expression</ToolTip>
+          <Default>s</Default>
+        </Literal>
+        <Literal>
+          <ID>false</ID>
+          <ToolTip>False expression</ToolTip>
+          <Default>false</Default>
+        </Literal>
+        <Literal>
+          <ID>true</ID>
+          <ToolTip>True expression</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[(!string.IsNullOrWhiteSpace($expression$)) ? $true$ : $false$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>conditional operator (string.IsNullOrEmpty)</Title>
+      <Shortcut>cosne</Shortcut>
+      <Description>conditional operator with condition whether the string is equal to null or empty</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ConditionalOperatorStringIsNullOrEmpty</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>String expression</ToolTip>
+          <Default>s</Default>
+        </Literal>
+        <Literal>
+          <ID>false</ID>
+          <ToolTip>False expression</ToolTip>
+          <Default>false</Default>
+        </Literal>
+        <Literal>
+          <ID>true</ID>
+          <ToolTip>True expression</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[(string.IsNullOrEmpty($expression$)) ? $true$ : $false$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>conditional operator (string.IsNullOrWhiteSpace)</Title>
+      <Shortcut>cosnw</Shortcut>
+      <Description>conditional operator with condition whether the string is equal to null or white-space</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ConditionalOperatorStringIsNullOrWhiteSpace</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>String expression</ToolTip>
+          <Default>s</Default>
+        </Literal>
+        <Literal>
+          <ID>false</ID>
+          <ToolTip>False expression</ToolTip>
+          <Default>false</Default>
+        </Literal>
+        <Literal>
+          <ID>true</ID>
+          <ToolTip>True expression</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[(string.IsNullOrWhiteSpace($expression$)) ? $true$ : $false$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

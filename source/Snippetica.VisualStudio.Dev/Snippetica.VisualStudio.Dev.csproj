@@ -86,6 +86,9 @@
     <Content Include="Snippetica.CSharp.Dev\AssemblyAttribute.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\Attribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\ConditionalAttribute.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -255,6 +258,18 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\BreakStatement.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\ConditionalOperatorNotStringIsNullOrEmpty.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\ConditionalOperatorNotStringIsNullOrWhiteSpace.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\ConditionalOperatorStringIsNullOrEmpty.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\ConditionalOperatorStringIsNullOrWhiteSpace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\ContinueStatement.snippet">
