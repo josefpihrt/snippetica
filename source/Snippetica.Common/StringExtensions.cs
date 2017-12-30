@@ -14,7 +14,7 @@ namespace Snippetica
             if (enclosingValue == null)
                 throw new ArgumentNullException(nameof(enclosingValue));
 
-            return $"{enclosingValue}{value}{enclosingValue}";
+            return enclosingValue + value + enclosingValue;
         }
 
         public static string FirstCharToLowerInvariant(this string value)

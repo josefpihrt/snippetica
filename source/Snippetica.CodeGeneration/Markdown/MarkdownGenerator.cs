@@ -58,7 +58,7 @@ namespace Snippetica.CodeGeneration.Markdown
         {
             using (var sw = new StringWriter())
             {
-                snippets = GenerateDirectoryReadme(snippets, sw, settings);
+                GenerateDirectoryReadme(snippets, sw, settings);
 
                 return sw.ToString();
             }
@@ -172,7 +172,6 @@ namespace Snippetica.CodeGeneration.Markdown
                 string directoryName = result.DirectoryName;
 
                 sb
-                    .Append("")
                     .Append("[")
                     .Append(directoryName)
                     .Append("](")

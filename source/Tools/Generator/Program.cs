@@ -64,7 +64,7 @@ namespace Snippetica.CodeGeneration
                     .Select(f => f.Language).Distinct();
 
                 sw.WriteLine($"* {CodeGenerationUtility.GetProjectSubtitle(languages)}");
-                sw.WriteLine($"* [Release Notes]({MasterGitHubUrl}/{$"{ChangeLogFileName}"}).");
+                sw.WriteLine($"* [Release Notes]({MasterGitHubUrl}/{ChangeLogFileName}).");
                 sw.WriteLine();
 
                 MarkdownGenerator.GenerateProjectReadme(visualStudioResults, sw, visualStudio.CreateProjectReadmeSettings());

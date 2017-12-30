@@ -16,11 +16,6 @@ namespace Pihrtsoft.Records
         private XElement _recordsElement;
         private XElement _entitiesElement;
 
-        public EntityElement(XElement element, DocumentSettings settings)
-            : this(element, settings, baseEntity: null)
-        {
-        }
-
         public EntityElement(XElement element, DocumentSettings settings, EntityDefinition baseEntity = null)
         {
             Settings = settings;
@@ -195,7 +190,7 @@ namespace Pihrtsoft.Records
 
             var reader = new BaseRecordReader(_baseRecordsElement, Entity, Settings);
 
-            IEnumerable<Record> records = reader.ReadRecords();
+            Collection<Record> records = reader.ReadRecords();
 
             if (records == null)
                 return null;
