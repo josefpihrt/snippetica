@@ -1,9 +1,9 @@
-## Snippetica.Html.Dev
+## Snippetica\.Html\.Dev
 
 ### List of Selected Snippets
 
-Shortcut | Title
--------- | -----
+Shortcut|Title
+--------|-----
 divcs|[div with class attribute](div_class.snippet)
 divid|[div with id attribute](div_id.snippet)
 metavp|[meta viewport](meta_viewport.snippet)

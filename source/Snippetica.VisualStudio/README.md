@@ -1,12 +1,12 @@
 ## Snippetica for Visual Studio
 
-* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs).
-* Download extension from [Marketplace](http://marketplace.visualstudio.com/search?term=publisher%3A"Josef%20Pihrt"%20Snippetica&target=vs&sortBy=Name).
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs)\.
+* Download extension from [Marketplace](http://marketplace.visualstudio.com/search?term=publisher%3A"Josef%20Pihrt"%20Snippetica&target=vs&sortBy=Name)\.
 
 ### Snippets
 
 Group|Count| |
---- | --- | ---:
+-----|-----|---:
 [Snippetica.Cpp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|120|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=cpp)
 [Snippetica.CSharp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|690|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=csharp)
 [Snippetica.Html](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Html/README.md)|221|[Browse](http://pihrt.net/snippetica/snippets?engine=vs&language=html)

@@ -1,17 +1,15 @@
-## Snippetica.Html
+## Snippetica\.Html
 
 ### Snippet Browser
-* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs&language=html).
+
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vs&language=html)\.
 
 ### Quick Reference
 
 * Snippet can be inserted by providing full name of an element (for example **div**).
 * If you want to provide element's content right during snippet insertion you can do it by appending **x** to the element name (for example **divx**).
-
-#### 
-
-Shortcut | Description | Comment
--------- | ----------- | -------
+Shortcut|Description|Comment
+--------|-----------|-------
 a|\(element\) with attribute|suffix
 e|element|\-
 s|self\-closing \(element\)|suffix
@@ -19,8 +17,8 @@ x|\(element\) with content|suffix
 
 ### List of Selected Snippets
 
-Shortcut | Title
--------- | -----
+Shortcut|Title
+--------|-----
 a|[a](a.snippet)
 abbr|[abbr](abbr.snippet)
 acronym|[acronym](acronym.snippet)
@@ -44,7 +42,7 @@ c|[comment](Comment.snippet)
 canvas|[canvas](canvas.snippet)
 caption|[caption](caption.snippet)
 cdata|[CDATA section](CDataSection.snippet)
-cdatax|[CDATA section \(with content\)](CDataSectionWithContent.snippet)
+cdatax|[CDATA section (with content)](CDataSectionWithContent.snippet)
 center|[center](center.snippet)
 cite|[cite](cite.snippet)
 code|[code](code.snippet)
@@ -53,7 +51,7 @@ colgroup|[colgroup](colgroup.snippet)
 datalist|[datalist](datalist.snippet)
 dd|[dd](dd.snippet)
 del|[del](del.snippet)
-delins|[del\+ins](del_ins.snippet)
+delins|[del+ins](del_ins.snippet)
 details|[details](details.snippet)
 dfn|[dfn](dfn.snippet)
 dialog|[dialog](dialog.snippet)
@@ -62,13 +60,13 @@ div|[div](div.snippet)
 dl|[dl](dl.snippet)
 dt|[dt](dt.snippet)
 e|[element](Element.snippet)
-ea|[element \(with attribute\)](ElementWithAttribute.snippet)
-eas|[self\-closing element \(with attribute\)](SelfClosingElementWithAttribute.snippet)
-eax|[element \(with attribute, with content\)](ElementWithAttributeWithContent.snippet)
+ea|[element (with attribute)](ElementWithAttribute.snippet)
+eas|[self-closing element (with attribute)](SelfClosingElementWithAttribute.snippet)
+eax|[element (with attribute, with content)](ElementWithAttributeWithContent.snippet)
 em|[em](em.snippet)
 embed|[embed](embed.snippet)
-es|[self\-closing element](SelfClosingElement.snippet)
-ex|[element \(with content\)](ElementWithContent.snippet)
+es|[self-closing element](SelfClosingElement.snippet)
+ex|[element (with content)](ElementWithContent.snippet)
 fieldset|[fieldset](fieldset.snippet)
 figure|[figure](figure.snippet)
 font|[font](font.snippet)

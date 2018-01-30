@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Snippetica.CodeGeneration</RootNamespace>
     <AssemblyName>Snippetica.CodeGeneration</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,6 +33,9 @@
     <CodeAnalysisRuleSet>..\global.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotMarkdown, Version=0.1.0.0, Culture=neutral, PublicKeyToken=117de6512634d621, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DotMarkdown.0.1.0-beta\lib\net45\DotMarkdown.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -68,7 +72,7 @@
     <Compile Include="KeywordDefinition.cs" />
     <Compile Include="KeywordDefinitionCollection.cs" />
     <Compile Include="LanguageDefinitions.cs" />
-    <Compile Include="Markdown\ProjectReadmeSettings.cs" />
+    <Compile Include="ProjectReadmeSettings.cs" />
     <Compile Include="PackageGenerator.cs" />
     <Compile Include="SnippetEnvironment.cs" />
     <Compile Include="VisualStudioCode\VisualStudioCodeEnvironment.cs" />
@@ -87,21 +91,9 @@
     <Compile Include="Json\Package\RepositoryInfo.cs" />
     <Compile Include="Json\Package\SnippetInfo.cs" />
     <Compile Include="LanguageSnippetGenerator.cs" />
-    <Compile Include="Markdown\ColumnDefinition.cs" />
     <Compile Include="Markdown\MarkdownGenerator.cs" />
-    <Compile Include="Markdown\MarkdownHelper.cs" />
-    <Compile Include="Markdown\MarkdownTableWriter.cs" />
-    <Compile Include="Markdown\MarkdownWriter.cs" />
-    <Compile Include="Markdown\ShortcutCommentColumnDefinition.cs" />
-    <Compile Include="Markdown\ShortcutDescriptionColumnDefinition.cs" />
-    <Compile Include="Markdown\ShortcutInfoColumnDefinition.cs" />
-    <Compile Include="Markdown\ShortcutInfoTableWriter.cs" />
-    <Compile Include="Markdown\LanguageColumnDefinition.cs" />
-    <Compile Include="Markdown\DirectoryReadmeSettings.cs" />
-    <Compile Include="Markdown\ShortcutColumnDefinition.cs" />
-    <Compile Include="Markdown\SnippetTableWriter.cs" />
-    <Compile Include="Markdown\TitleColumnDefinition.cs" />
-    <Compile Include="Markdown\TitleWithLinkColumnDefinition.cs" />
+    <Compile Include="Markdown\MarkdownFileWriter.cs" />
+    <Compile Include="DirectoryReadmeSettings.cs" />
     <Compile Include="ModifierKind.cs" />
     <Compile Include="Commands\GenerateAlternativeShortcutCommand.cs" />
     <Compile Include="Commands\CommandKind.cs" />

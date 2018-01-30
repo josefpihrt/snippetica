@@ -1,7 +1,7 @@
 ### List of Selected Snippets
 
-Shortcut | Title
--------- | -----
+Shortcut|Title
+--------|-----
 a|array type
 ae|attribute
 ae\_ay|Assembly attribute
@@ -17,10 +17,10 @@ cosnw|conditional operator \(string\.IsNullOrWhiteSpace\)
 coxsne|conditional operator \(\!string\.IsNullOrEmpty\)
 coxsnw|conditional operator \(\!string\.IsNullOrWhiteSpace\)
 daxn|Debug\.Assert \!= null
-gd|Dictionary&lt;TKey, TValue&gt; type
-ghs|HashSet&lt;T&gt; type
-gl|List&lt;T&gt; type
-goc|ObservableCollection&lt;T&gt; type
+gd|Dictionary\<TKey, TValue> type
+ghs|HashSet\<T> type
+gl|List\<T> type
+goc|ObservableCollection\<T> type
 ifemtp|if Enum\.TryParse
 ifnre|if equal to null return
 ifnref|if equal to null return false
@@ -106,10 +106,10 @@ tw|throw statement
 u\_fesm|FileStream Variable
 u\_mysm|MemoryStream Variable
 vasxn|variable declaration with as operator \+ if not null
-vd|Dictionary&lt;TKey, TValue&gt; variable
-vhs|HashSet&lt;T&gt; variable
-vl|List&lt;T&gt; variable
-voc|ObservableCollection&lt;T&gt; variable
+vd|Dictionary\<TKey, TValue> variable
+vhs|HashSet\<T> variable
+vl|List\<T> variable
+voc|ObservableCollection\<T> variable
 vsb|StringBuilder variable
 x|\! operator
 yrn|yield return new

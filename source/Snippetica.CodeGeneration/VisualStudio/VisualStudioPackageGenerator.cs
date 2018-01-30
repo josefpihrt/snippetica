@@ -39,7 +39,7 @@ namespace Snippetica.CodeGeneration.VisualStudio
 
             DirectoryReadmeSettings settings = Environment.CreateDirectoryReadmeSettings(result);
 
-            MarkdownWriter.WriteDirectoryReadme(result.Path, snippets, settings);
+            MarkdownFileWriter.WriteDirectoryReadme(result.Path, snippets, settings);
         }
 
         protected override void SaveAllSnippets(string projectPath, List<Snippet> allSnippets)

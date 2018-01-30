@@ -8,7 +8,7 @@ using static Snippetica.KnownNames;
 
 namespace Snippetica.CodeGeneration.Markdown
 {
-    public static class MarkdownWriter
+    public static class MarkdownFileWriter
     {
         public static void WriteProjectReadme(
             string directoryPath,

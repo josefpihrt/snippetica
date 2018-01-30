@@ -1,7 +1,7 @@
 ### List of Selected Snippets
 
-Shortcut | Title
--------- | -----
+Shortcut|Title
+--------|-----
 divcs|div with class attribute
 divid|div with id attribute
 metavp|meta viewport

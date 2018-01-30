@@ -1,7 +1,7 @@
 ### List of Selected Snippets
 
-Shortcut | Title
--------- | -----
+Shortcut|Title
+--------|-----
 a|auto keyword
 aa|alignas keyword
 ao|alignof keyword

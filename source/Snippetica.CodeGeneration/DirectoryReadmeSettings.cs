@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration.Markdown
+namespace Snippetica.CodeGeneration
 {
     public class DirectoryReadmeSettings
     {

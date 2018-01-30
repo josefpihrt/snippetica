@@ -1,6 +1,6 @@
 ﻿### Introduction
 
-* A collection of snippets for C#, C++, HTML, VB, XAML and XML.
+* A collection of snippets for C\#, C\+\+, HTML, VB, XAML and XML\.
 
 ### Links
 
@@ -10,8 +10,8 @@
 
 ### Snippets
 
-Language|Count|Snippet Browser|
---- | ---:|:---:
+Language|Count | Snippet Browser 
+--------|-----:|:---------------:
 [Snippetica.CSharp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|690|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=csharp)
 [Snippetica.VisualBasic](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|653|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=vb)
 [Snippetica.Cpp](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|120|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=cpp)

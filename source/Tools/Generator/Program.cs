@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using DotMarkdown;
+using DotMarkdown.Linq;
 using Pihrtsoft.Records;
 using Pihrtsoft.Snippets;
 using Pihrtsoft.Snippets.Comparers;
@@ -12,6 +14,7 @@ using Snippetica.CodeGeneration.Markdown;
 using Snippetica.CodeGeneration.VisualStudio;
 using Snippetica.CodeGeneration.VisualStudioCode;
 using Snippetica.IO;
+using static DotMarkdown.Linq.MFactory;
 using static Snippetica.KnownNames;
 using static Snippetica.KnownPaths;
 
@@ -54,27 +57,21 @@ namespace Snippetica.CodeGeneration
             CheckDuplicateShortcuts(visualStudioSnippets, visualStudio);
             CheckDuplicateShortcuts(visualStudioCodeSnippets, visualStudioCode);
 
-            using (var sw = new StringWriter())
-            {
-                sw.WriteLine($"# {ProductName}");
-                sw.WriteLine();
+            IEnumerable<Language> languages = visualStudioResults
+                .Concat(visualStudioCodeResults)
+                .Select(f => f.Language).Distinct();
 
-                IEnumerable<Language> languages = visualStudioResults
-                    .Concat(visualStudioCodeResults)
-                    .Select(f => f.Language).Distinct();
+            var document = new MDocument(
+                Heading1(ProductName),
+                BulletList(
+                    CodeGenerationUtility.GetProjectSubtitle(languages),
+                    BulletItem(Link("Release Notes", $"{MasterGitHubUrl}/{ChangeLogFileName}"), ".")));
 
-                sw.WriteLine($"* {CodeGenerationUtility.GetProjectSubtitle(languages)}");
-                sw.WriteLine($"* [Release Notes]({MasterGitHubUrl}/{ChangeLogFileName}).");
-                sw.WriteLine();
+            MarkdownGenerator.GenerateProjectReadme(visualStudioResults, document, visualStudio.CreateProjectReadmeSettings());
 
-                MarkdownGenerator.GenerateProjectReadme(visualStudioResults, sw, visualStudio.CreateProjectReadmeSettings());
+            MarkdownGenerator.GenerateProjectReadme(visualStudioCodeResults, document, visualStudioCode.CreateProjectReadmeSettings());
 
-                sw.WriteLine();
-
-                MarkdownGenerator.GenerateProjectReadme(visualStudioCodeResults, sw, visualStudioCode.CreateProjectReadmeSettings());
-
-                IOUtility.WriteAllText(Path.Combine(SolutionDirectoryPath, ReadMeFileName), sw.ToString(), IOUtility.UTF8NoBom);
-            }
+            IOUtility.WriteAllText(Path.Combine(SolutionDirectoryPath, ReadMeFileName), document.ToString(MarkdownFormat.Default.WithTableOptions(TableOptions.FormatHeader)), IOUtility.UTF8NoBom);
 
             Console.WriteLine("*** END ***");
             Console.ReadKey();
@@ -110,7 +107,7 @@ namespace Snippetica.CodeGeneration
 
             snippets.AddRange(generator.GeneratePackageFiles(projectPath + DevSuffix, devResults));
 
-            MarkdownWriter.WriteProjectReadme(projectPath, results, environment.CreateProjectReadmeSettings());
+            MarkdownFileWriter.WriteProjectReadme(projectPath, results, environment.CreateProjectReadmeSettings());
 
             return (results, snippets);
         }
@@ -156,7 +153,7 @@ namespace Snippetica.CodeGeneration
 
         private static SnippetDirectory[] LoadDirectories(string url)
         {
-            return Document.ReadRecords(url)
+            return Pihrtsoft.Records.Document.ReadRecords(url)
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .Select(SnippetDirectoryMapper.MapFromRecord)
                 .ToArray();
@@ -164,11 +161,11 @@ namespace Snippetica.CodeGeneration
 
         private static void LoadLanguages()
         {
-            Document.ReadRecords(@"..\..\Data\Languages.xml")
+            Pihrtsoft.Records.Document.ReadRecords(@"..\..\Data\Languages.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .LoadLanguages();
 
-            foreach (TypeDefinition typeDefinition in Document.ReadRecords(@"..\..\Data\Types.xml")
+            foreach (TypeDefinition typeDefinition in Pihrtsoft.Records.Document.ReadRecords(@"..\..\Data\Types.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .Select(Mapper.CreateType))
             {

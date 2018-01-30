@@ -1,7 +1,7 @@
 ### List of Selected Snippets
 
-Shortcut | Title
--------- | -----
+Shortcut|Title
+--------|-----
 a|array type
 ghs|HashSet\(Of T\) type
 gl|List\(Of T\) type

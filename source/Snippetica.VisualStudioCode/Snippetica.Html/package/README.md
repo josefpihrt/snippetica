@@ -1,15 +1,13 @@
 ### Snippet Browser
-* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=html).
+
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=html)\.
 
 ### Quick Reference
 
 * Snippet can be inserted by providing full name of an element (for example **div**).
 * If you want to provide element's content right during snippet insertion you can do it by appending **x** to the element name (for example **divx**).
-
-#### 
-
-Shortcut | Description | Comment
--------- | ----------- | -------
+Shortcut|Description|Comment
+--------|-----------|-------
 a|\(element\) with attribute|suffix
 e|element|\-
 s|self\-closing \(element\)|suffix
@@ -17,8 +15,8 @@ x|\(element\) with content|suffix
 
 ### List of Selected Snippets
 
-Shortcut | Title
--------- | -----
+Shortcut|Title
+--------|-----
 a|a
 abbr|abbr
 acronym|acronym
