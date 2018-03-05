@@ -26,3 +26,5 @@ eas|[self-closing element (with attribute)](SelfClosingElementWithAttribute.snip
 eax|[element (with attribute, with content)](ElementWithAttributeWithContent.snippet)
 es|[self-closing element](SelfClosingElement.snippet)
 ex|[element (with content)](ElementWithContent.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

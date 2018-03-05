@@ -194,3 +194,5 @@ wexn|While IsNot Nothing
 xn|IsNot Nothing
 xsne|String\.IsNullOrEmpty = False
 xsnw|String\.IsNullOrWhiteSpace = False
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

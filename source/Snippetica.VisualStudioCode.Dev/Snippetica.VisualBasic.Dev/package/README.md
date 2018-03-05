@@ -22,3 +22,5 @@ vl|List\(Of T\) variable
 voc|ObservableCollection\(Of T\) variable
 vsb|StringBuilder variable
 y|Yield keyword
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

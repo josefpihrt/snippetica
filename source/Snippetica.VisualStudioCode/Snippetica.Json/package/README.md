@@ -24,3 +24,5 @@ pt|pair with true value
 pz|pair with zero value
 s|string value
 t|true value
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

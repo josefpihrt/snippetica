@@ -150,3 +150,5 @@ ul|[ul](ul.snippet)
 var|[var](var.snippet)
 video|[video](video.snippet)
 wbr|[wbr](wbr.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

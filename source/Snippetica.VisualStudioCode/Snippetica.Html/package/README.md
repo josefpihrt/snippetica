@@ -148,3 +148,5 @@ ul|ul
 var|var
 video|video
 wbr|wbr
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

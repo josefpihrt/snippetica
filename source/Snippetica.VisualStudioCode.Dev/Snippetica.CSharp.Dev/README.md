@@ -115,3 +115,5 @@ voc|[ObservableCollection\<T> variable](ObservableCollectionOfTVariable.snippet)
 vsb|[StringBuilder variable](StringBuilderVariable.snippet)
 x|[! operator](LogicalNotOperator.snippet)
 yrn|[yield return new](YieldReturnNew.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

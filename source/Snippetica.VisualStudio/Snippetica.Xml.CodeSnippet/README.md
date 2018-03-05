@@ -30,3 +30,5 @@ s|[SnippetType](SnippetType.snippet)
 s|[SnippetType Expansion](SnippetTypeExpansion.snippet)
 s|[SnippetType SurroundsWith](SnippetTypeSurroundsWith.snippet)
 s|[SnippetTypes](SnippetTypes.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

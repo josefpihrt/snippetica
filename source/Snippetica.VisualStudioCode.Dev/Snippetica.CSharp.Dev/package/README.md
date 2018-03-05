@@ -113,3 +113,5 @@ voc|ObservableCollection\<T> variable
 vsb|StringBuilder variable
 x|\! operator
 yrn|yield return new
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

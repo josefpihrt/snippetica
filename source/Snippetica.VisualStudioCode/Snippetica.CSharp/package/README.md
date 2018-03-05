@@ -199,3 +199,5 @@ xsne|\!string\.IsNullOrEmpty
 xsnw|\!string\.IsNullOrWhiteSpace
 yb|yield break statement
 yr|yield return statement
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

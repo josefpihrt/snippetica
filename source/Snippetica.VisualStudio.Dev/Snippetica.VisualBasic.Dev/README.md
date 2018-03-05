@@ -24,3 +24,5 @@ vl|[List(Of T) variable](ListOfTVariable.snippet)
 voc|[ObservableCollection(Of T) variable](ObservableCollectionOfTVariable.snippet)
 vsb|[StringBuilder variable](StringBuilderVariable.snippet)
 y|[Yield keyword](YieldKeyword.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

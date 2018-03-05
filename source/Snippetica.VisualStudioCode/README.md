@@ -14,3 +14,5 @@ Group|Count| |
 [Snippetica.Markdown](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Markdown/README.md)|47|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=markdown)
 [Snippetica.VisualBasic](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|185|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=vb)
 [Snippetica.Xml](http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudio/Snippetica.Xml/README.md)|9|[Browse](http://pihrt.net/snippetica/snippets?engine=vscode&language=xml)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

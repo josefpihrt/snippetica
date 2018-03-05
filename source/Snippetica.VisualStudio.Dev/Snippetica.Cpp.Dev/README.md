@@ -30,3 +30,5 @@ ve|[volatile keyword](VolatileKeyword.snippet)
 vi|[int variable](IntVariable.snippet)
 vs|[string variable](StringVariable.snippet)
 x|[! operator](LogicalNotOperator.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

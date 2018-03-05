@@ -67,7 +67,7 @@ namespace Snippetica.CodeGeneration
                     CodeGenerationUtility.GetProjectSubtitle(languages),
                     BulletItem(Link("Release Notes", $"{MasterGitHubUrl}/{ChangeLogFileName}"), ".")));
 
-            MarkdownGenerator.GenerateProjectReadme(visualStudioResults, document, visualStudio.CreateProjectReadmeSettings());
+            MarkdownGenerator.GenerateProjectReadme(visualStudioResults, document, visualStudio.CreateProjectReadmeSettings(), addFootnote: false);
 
             MarkdownGenerator.GenerateProjectReadme(visualStudioCodeResults, document, visualStudioCode.CreateProjectReadmeSettings());
 

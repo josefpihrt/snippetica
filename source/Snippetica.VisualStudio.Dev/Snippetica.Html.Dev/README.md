@@ -10,3 +10,5 @@ metavp|[meta viewport](meta_viewport.snippet)
 spancs|[span with class attribute](span_class.snippet)
 spanid|[span with id attribute](span_id.snippet)
 table2|[table with sections](table_with_sections.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

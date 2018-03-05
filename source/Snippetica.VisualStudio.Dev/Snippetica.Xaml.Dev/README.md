@@ -17,3 +17,5 @@ p|[WrapPanel](WrapPanel.snippet)
 p|[WrapPanel (horizontal)](WrapPanelHorizontal.snippet)
 p|[WrapPanel (vertical)](WrapPanelVertical.snippet)
 tlbrty|[ToolBarTray](ToolBarTray.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

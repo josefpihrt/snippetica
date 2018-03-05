@@ -53,3 +53,5 @@ ul3|unordered list item \(level 3\)
 ull|unordered list items
 ull2|unordered list items \(level 2\)
 ull3|unordered list items \(level 3\)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

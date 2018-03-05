@@ -55,3 +55,5 @@ ul3|[unordered list item (level 3)](UnorderedListItemLevel3.snippet)
 ull|[unordered list items](UnorderedListItems.snippet)
 ull2|[unordered list items (level 2)](UnorderedListItemsLevel2.snippet)
 ull3|[unordered list items (level 3)](UnorderedListItemsLevel3.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

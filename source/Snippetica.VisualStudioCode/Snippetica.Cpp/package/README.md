@@ -146,3 +146,5 @@ v|variable
 va|array variable
 vf|virtual function declaration
 we|while
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

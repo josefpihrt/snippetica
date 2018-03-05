@@ -110,3 +110,5 @@ wppl|[WrapPanel (vertical)](WrapPanelVertical_.snippet)
 wrappanel|[WrapPanel](WrapPanel.snippet)
 wrappanel|[WrapPanel (horizontal)](WrapPanelHorizontal.snippet)
 wrappanel|[WrapPanel (vertical)](WrapPanelVertical.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

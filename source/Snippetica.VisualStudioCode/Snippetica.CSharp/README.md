@@ -201,3 +201,5 @@ xsne|[!string.IsNullOrEmpty](NotStringIsNullOrEmpty.snippet)
 xsnw|[!string.IsNullOrWhiteSpace](NotStringIsNullOrWhiteSpace.snippet)
 yb|[yield break statement](YieldBreak.snippet)
 yr|[yield return statement](YieldReturn.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

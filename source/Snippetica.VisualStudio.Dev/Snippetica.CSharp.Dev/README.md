@@ -117,3 +117,5 @@ vsb|[StringBuilder variable](StringBuilderVariable.snippet)
 x|[! operator](LogicalNotOperator.snippet)
 yrn|[yield return new](YieldReturnNew.snippet)
 yrnthis|[yield return new containing type](YieldReturnNewThis.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

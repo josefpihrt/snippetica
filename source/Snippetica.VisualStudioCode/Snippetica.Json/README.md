@@ -26,3 +26,5 @@ pt|[pair with true value](PairWithTrueValue.snippet)
 pz|[pair with zero value](PairWithZeroValue.snippet)
 s|[string value](StringValue.snippet)
 t|[true value](TrueValue.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

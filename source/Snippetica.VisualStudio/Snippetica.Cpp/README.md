@@ -155,3 +155,5 @@ v|[variable](Variable.snippet)
 va|[array variable](ArrayOfTVariable.snippet)
 vf|[virtual function declaration](VirtualFunctionDeclaration.snippet)
 we|[while](While.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

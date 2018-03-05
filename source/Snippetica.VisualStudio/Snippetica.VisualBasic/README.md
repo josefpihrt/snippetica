@@ -221,3 +221,5 @@ wexn|[While IsNot Nothing](WhileIsNotNothing.snippet)
 xn|[IsNot Nothing](IsNotNothing.snippet)
 xsne|[String.IsNullOrEmpty = False](NotStringIsNullOrEmpty.snippet)
 xsnw|[String.IsNullOrWhiteSpace = False](NotStringIsNullOrWhiteSpace.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

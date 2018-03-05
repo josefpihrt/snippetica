@@ -24,3 +24,5 @@ eas|self\-closing element \(with attribute\)
 eax|element \(with attribute, with content\)
 es|self\-closing element
 ex|element \(with content\)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

@@ -17,8 +17,11 @@ namespace Snippetica.CodeGeneration.Markdown
 {
     public static class MarkdownGenerator
     {
-        private static string GetString(this MDocument document)
+        private static string GetString(this MDocument document, bool addFootnote = true)
         {
+            if (addFootnote)
+                document.Add(NewLine, Italic("(Generated with ", Link("DotMarkdown", "http://github.com/JosefPihrt/DotMarkdown"), ")"));
+
             return document.ToString(MarkdownFormat.Default.WithTableOptions(TableOptions.FormatHeader));
         }
 
@@ -28,15 +31,14 @@ namespace Snippetica.CodeGeneration.Markdown
         {
             MDocument document = Document();
 
-            GenerateProjectReadme(results, document, settings);
-
-            return document.GetString();
+            return GenerateProjectReadme(results, document, settings);
         }
 
         public static string GenerateProjectReadme(
             IEnumerable<SnippetGeneratorResult> results,
             MDocument document,
-            ProjectReadmeSettings settings)
+            ProjectReadmeSettings settings,
+            bool addFootnote = true)
         {
             document.Add(
                 (!string.IsNullOrEmpty(settings.Header)) ? Heading2(settings.Header) : null,
@@ -53,7 +55,7 @@ namespace Snippetica.CodeGeneration.Markdown
                             Link("Browse", GetSnippetBrowserUrl(settings.Environment.Kind, f.Language)));
                     })));
 
-            return document.GetString();
+            return document.GetString(addFootnote: addFootnote);
         }
 
         public static string GenerateDirectoryReadme(
@@ -62,9 +64,7 @@ namespace Snippetica.CodeGeneration.Markdown
         {
             MDocument document = Document();
 
-            GenerateDirectoryReadme(snippets, document, settings);
-
-            return document.GetString();
+            return GenerateDirectoryReadme(snippets, document, settings);
         }
 
         public static string GenerateDirectoryReadme(
@@ -188,7 +188,7 @@ namespace Snippetica.CodeGeneration.Markdown
                     })),
                 NewLine);
 
-            return document.GetString();
+            return document.GetString(addFootnote: false);
         }
     }
 }
