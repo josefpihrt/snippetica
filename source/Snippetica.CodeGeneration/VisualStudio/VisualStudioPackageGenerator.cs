@@ -68,7 +68,7 @@ namespace Snippetica.CodeGeneration.VisualStudio
             return base.PostProcess(snippets);
         }
 
-        private IEnumerable<Snippet> PostProcessCore(IEnumerable<Snippet> snippets)
+        private static IEnumerable<Snippet> PostProcessCore(IEnumerable<Snippet> snippets)
         {
             foreach (Snippet snippet in snippets)
             {

@@ -12,7 +12,7 @@ namespace Snippetica.CodeGeneration
     {
         private static readonly Version _formatVersion = new Version(1, 1, 0);
 
-        public static KeywordDefinition Default { get; } = new KeywordDefinition(null, null, null, null, false, new string[0]);
+        public static KeywordDefinition Default { get; } = new KeywordDefinition(null, null, null, null, false, Array.Empty<string>());
 
         public KeywordDefinition(
             string name,
