@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}"
 EndProject
@@ -30,6 +30,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6696AB95-B549-41A6-816A-2E5B772A2E7A}"
 	ProjectSection(SolutionItems) = preProject
 		ChangeLog.md = ChangeLog.md
+		source\global.ruleset = source\global.ruleset
 		README.md = README.md
 		text\RecordsTodo.md = text\RecordsTodo.md
 	EndProjectSection
