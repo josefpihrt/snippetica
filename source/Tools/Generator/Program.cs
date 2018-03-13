@@ -67,11 +67,13 @@ namespace Snippetica.CodeGeneration
                     CodeGenerationUtility.GetProjectSubtitle(languages),
                     BulletItem(Link("Release Notes", $"{MasterGitHubUrl}/{ChangeLogFileName}"), ".")));
 
+#if !DEBUG
             MarkdownGenerator.GenerateProjectReadme(visualStudioResults, document, visualStudio.CreateProjectReadmeSettings(), addFootnote: false);
 
             MarkdownGenerator.GenerateProjectReadme(visualStudioCodeResults, document, visualStudioCode.CreateProjectReadmeSettings());
 
             IOUtility.WriteAllText(Path.Combine(SolutionDirectoryPath, ReadMeFileName), document.ToString(MarkdownFormat.Default.WithTableOptions(TableOptions.FormatHeader)), IOUtility.UTF8NoBom);
+#endif
 
             Console.WriteLine("*** END ***");
             Console.ReadKey();
@@ -107,7 +109,9 @@ namespace Snippetica.CodeGeneration
 
             snippets.AddRange(generator.GeneratePackageFiles(projectPath + DevSuffix, devResults));
 
+#if !DEBUG
             MarkdownFileWriter.WriteProjectReadme(projectPath, results, environment.CreateProjectReadmeSettings());
+#endif
 
             return (results, snippets);
         }

@@ -22,9 +22,11 @@ namespace Snippetica.CodeGeneration.VisualStudio
         {
             List<Snippet> snippets = base.GeneratePackageFiles(directoryPath, results);
 
+#if !DEBUG
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, "Overview.md"),
                 MarkdownGenerator.GenerateVisualStudioMarketplaceOverview(results));
+#endif
 
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, "regedit.pkgdef"),
@@ -37,9 +39,11 @@ namespace Snippetica.CodeGeneration.VisualStudio
         {
             base.SaveSnippets(snippets, result);
 
+#if !DEBUG
             DirectoryReadmeSettings settings = Environment.CreateDirectoryReadmeSettings(result);
 
             MarkdownFileWriter.WriteDirectoryReadme(result.Path, snippets, settings);
+#endif
         }
 
         protected override void SaveAllSnippets(string projectPath, List<Snippet> allSnippets)

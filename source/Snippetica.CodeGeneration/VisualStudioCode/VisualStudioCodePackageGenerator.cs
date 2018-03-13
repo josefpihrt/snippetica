@@ -58,12 +58,16 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
             DirectoryReadmeSettings settings = Environment.CreateDirectoryReadmeSettings(result);
 
+#if !DEBUG
             MarkdownFileWriter.WriteDirectoryReadme(directoryPath, snippets, settings);
+#endif
 
             settings.AddLinkToTitle = false;
             settings.Header = null;
 
+#if !DEBUG
             MarkdownFileWriter.WriteDirectoryReadme(packageDirectoryPath, snippets, settings);
+#endif
         }
 
         private static PackageInfo GetDefaultPackageInfo()
