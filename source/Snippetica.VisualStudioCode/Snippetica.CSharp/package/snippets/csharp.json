@@ -952,6 +952,15 @@
     ],
     "description": "internal read-only field declaration"
   },
+  "internal read-only indexer": {
+    "prefix": "irir",
+    "body": [
+      "internal ${1:T} this[${2:int index}] {",
+      "\tget { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "internal read-only indexer declaration"
+  },
   "internal read-only property": {
     "prefix": "irpp",
     "body": [
@@ -1254,6 +1263,15 @@
     ],
     "description": "private read-only field declaration"
   },
+  "private read-only indexer": {
+    "prefix": "prir",
+    "body": [
+      "private ${1:T} this[${2:int index}] {",
+      "\tget { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "private read-only indexer declaration"
+  },
   "private read-only property": {
     "prefix": "prpp",
     "body": [
@@ -1451,6 +1469,15 @@
       "public readonly ${1:T} ${2:FieldName};${0}"
     ],
     "description": "public read-only field declaration"
+  },
+  "public read-only indexer": {
+    "prefix": "rir",
+    "body": [
+      "public ${1:T} this[${2:int index}] {",
+      "\tget { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "public read-only indexer declaration"
   },
   "public read-only property": {
     "prefix": "rpp",

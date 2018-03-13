@@ -645,6 +645,17 @@
     ],
     "description": "Friend read-only field declaration"
   },
+  "Friend read-only indexer": {
+    "prefix": "irir",
+    "body": [
+      "Default Friend Property Item(${1:ByVal index As Integer}) As ${2:T}",
+      "\tGet",
+      "\t\tReturn ${3:value}",
+      "\tEnd Get",
+      "End Property${0}"
+    ],
+    "description": "Friend read-only indexer declaration"
+  },
   "Friend read-only Property": {
     "prefix": "irpp",
     "body": [
@@ -1239,6 +1250,17 @@
     ],
     "description": "Private read-only field declaration"
   },
+  "Private read-only indexer": {
+    "prefix": "prir",
+    "body": [
+      "Default Private Property Item(${1:ByVal index As Integer}) As ${2:T}",
+      "\tGet",
+      "\t\tReturn ${3:value}",
+      "\tEnd Get",
+      "End Property${0}"
+    ],
+    "description": "Private read-only indexer declaration"
+  },
   "Private read-only Property": {
     "prefix": "prpp",
     "body": [
@@ -1464,6 +1486,17 @@
       "Public ReadOnly ${1:FieldName} As ${2:T}${0}"
     ],
     "description": "Public read-only field declaration"
+  },
+  "Public read-only indexer": {
+    "prefix": "rir",
+    "body": [
+      "Default Public Property Item(${1:ByVal index As Integer}) As ${2:T}",
+      "\tGet",
+      "\t\tReturn ${3:value}",
+      "\tEnd Get",
+      "End Property${0}"
+    ],
+    "description": "Public read-only indexer declaration"
   },
   "Public read-only Property": {
     "prefix": "rpp",

@@ -208,6 +208,7 @@
     <None Include="Snippetica.CSharp\AutoGeneration\IfTryParse.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ImmutableCollectionOfTType.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ImmutableCollectionOfTVariable.snippet" />
+    <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyIndexer.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Indexer.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Interface.snippet" />
     <None Include="Snippetica.CSharp\Dev\Attributes\Attribute.snippet" />
@@ -662,6 +663,7 @@
     <None Include="Snippetica.VisualBasic\AutoGeneration\IfTryParse.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\ImmutableCollectionOfTType.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\ImmutableCollectionOfTVariable.snippet" />
+    <None Include="Snippetica.VisualBasic\AutoGeneration\ReadOnlyIndexer.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\Indexer.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\Interface.snippet" />
     <None Include="Snippetica.VisualBasic\InterfaceEvent.snippet" />

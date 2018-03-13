@@ -1888,12 +1888,12 @@ End Sub$end$]]></Code>
           <Default>T</Default>
         </Literal>
         <Literal>
-          <ID>parameter</ID>
-          <ToolTip>Indexer parameter</ToolTip>
+          <ID>parameters</ID>
+          <ToolTip>Parameters</ToolTip>
           <Default>ByVal index As Integer</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Default Friend Property Item($parameter$) As $_type$
+      <Code Language="VB"><![CDATA[Default Friend Property Item($parameters$) As $_type$
 	Get
 		$end$
 	End Get
@@ -2046,6 +2046,44 @@ End Module]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Friend ReadOnly $name$ As $_type$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Friend read-only indexer</Title>
+      <Shortcut>irir</Shortcut>
+      <Description>Friend read-only indexer declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InternalReadOnlyIndexer</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_type</ID>
+          <ToolTip>Indexer type</ToolTip>
+          <Default>T</Default>
+        </Literal>
+        <Literal>
+          <ID>parameters</ID>
+          <ToolTip>Parameters</ToolTip>
+          <Default>ByVal index As Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Default Friend Property Item($parameters$) As $_type$
+	Get
+		Return $value$
+	End Get
+End Property$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -3925,12 +3963,12 @@ End Sub$end$]]></Code>
           <Default>T</Default>
         </Literal>
         <Literal>
-          <ID>parameter</ID>
-          <ToolTip>Indexer parameter</ToolTip>
+          <ID>parameters</ID>
+          <ToolTip>Parameters</ToolTip>
           <Default>ByVal index As Integer</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Default Private Property Item($parameter$) As $_type$
+      <Code Language="VB"><![CDATA[Default Private Property Item($parameters$) As $_type$
 	Get
 		$end$
 	End Get
@@ -4031,6 +4069,44 @@ End Function]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Private ReadOnly $name$ As $_type$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Private read-only indexer</Title>
+      <Shortcut>prir</Shortcut>
+      <Description>Private read-only indexer declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PrivateReadOnlyIndexer</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_type</ID>
+          <ToolTip>Indexer type</ToolTip>
+          <Default>T</Default>
+        </Literal>
+        <Literal>
+          <ID>parameters</ID>
+          <ToolTip>Parameters</ToolTip>
+          <Default>ByVal index As Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Default Private Property Item($parameters$) As $_type$
+	Get
+		Return $value$
+	End Get
+End Property$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -4564,12 +4640,12 @@ End Sub$end$]]></Code>
           <Default>T</Default>
         </Literal>
         <Literal>
-          <ID>parameter</ID>
-          <ToolTip>Indexer parameter</ToolTip>
+          <ID>parameters</ID>
+          <ToolTip>Parameters</ToolTip>
           <Default>ByVal index As Integer</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Default Public Property Item($parameter$) As $_type$
+      <Code Language="VB"><![CDATA[Default Public Property Item($parameters$) As $_type$
 	Get
 		$end$
 	End Get
@@ -4722,6 +4798,44 @@ End Module]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Public ReadOnly $name$ As $_type$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Public read-only indexer</Title>
+      <Shortcut>rir</Shortcut>
+      <Description>Public read-only indexer declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PublicReadOnlyIndexer</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_type</ID>
+          <ToolTip>Indexer type</ToolTip>
+          <Default>T</Default>
+        </Literal>
+        <Literal>
+          <ID>parameters</ID>
+          <ToolTip>Parameters</ToolTip>
+          <Default>ByVal index As Integer</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value</ToolTip>
+          <Default>value</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Default Public Property Item($parameters$) As $_type$
+	Get
+		Return $value$
+	End Get
+End Property$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
