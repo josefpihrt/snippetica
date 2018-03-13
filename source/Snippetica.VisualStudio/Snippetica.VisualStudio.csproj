@@ -2202,6 +2202,15 @@
     <Content Include="Snippetica.CSharp\InternalVirtualDateTimeReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\PublicReadOnlyStruct.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\InternalReadOnlyStruct.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\PrivateReadOnlyStruct.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\PublicStruct.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

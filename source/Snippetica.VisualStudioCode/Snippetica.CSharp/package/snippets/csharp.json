@@ -970,6 +970,15 @@
     ],
     "description": "internal read-only property declaration"
   },
+  "internal read-only struct": {
+    "prefix": "irst",
+    "body": [
+      "internal readonly struct ${1:StructName} {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "internal read-only struct declaration"
+  },
   "internal static class": {
     "prefix": "isc",
     "body": [
@@ -1281,6 +1290,15 @@
     ],
     "description": "private read-only property declaration"
   },
+  "private read-only struct": {
+    "prefix": "prst",
+    "body": [
+      "private readonly struct ${1:StructName} {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "private read-only struct declaration"
+  },
   "private static class": {
     "prefix": "psc",
     "body": [
@@ -1487,6 +1505,15 @@
       "}${0}"
     ],
     "description": "public read-only property declaration"
+  },
+  "public read-only struct": {
+    "prefix": "rst",
+    "body": [
+      "public readonly struct ${1:StructName} {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "public read-only struct declaration"
   },
   "public static class": {
     "prefix": "sc",

@@ -211,6 +211,7 @@
     <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyIndexer.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Indexer.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Interface.snippet" />
+    <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyStruct.snippet" />
     <None Include="Snippetica.CSharp\Dev\Attributes\Attribute.snippet" />
     <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotStringIsNullOrEmpty.snippet" />
