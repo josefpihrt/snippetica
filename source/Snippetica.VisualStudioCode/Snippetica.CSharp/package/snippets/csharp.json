@@ -1744,6 +1744,13 @@
     ],
     "description": "throw new NotSupportedException"
   },
+  "throw new ObjectDisposedException": {
+    "prefix": "twn_ode",
+    "body": [
+      "throw new ObjectDisposedException(${1:args});${0}"
+    ],
+    "description": "throw new ObjectDisposedException"
+  },
   "TODO comment": {
     "prefix": "td",
     "body": [

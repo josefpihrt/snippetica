@@ -399,6 +399,9 @@
     <Content Include="Snippetica.CSharp\ThrowNewNotSupportedException.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\ThrowNewObjectDisposedException.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\TodoComment.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2446,6 +2449,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\ThrowNewNotSupportedException.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\ThrowNewObjectDisposedException.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\TodoComment.snippet">

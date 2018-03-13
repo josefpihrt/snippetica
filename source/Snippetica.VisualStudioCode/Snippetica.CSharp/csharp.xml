@@ -5893,6 +5893,35 @@ protected virtual void On$name$($eventArgs$ e) {
       <Code Language="CSharp"><![CDATA[throw new NotSupportedException($_exceptionMessage$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>throw new ObjectDisposedException</Title>
+      <Shortcut>twn_ode</Shortcut>
+      <Description>throw new ObjectDisposedException</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ThrowNewObjectDisposedException</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>_arguments</ID>
+          <ToolTip>Arguments</ToolTip>
+          <Default>args</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[throw new ObjectDisposedException($_arguments$);$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>TODO comment</Title>

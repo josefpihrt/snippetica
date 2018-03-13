@@ -358,6 +358,7 @@
     <None Include="Snippetica.CSharp\Dev\ThrowStatement.snippet" />
     <None Include="Snippetica.CSharp\Dev\TimeSpanType.snippet" />
     <None Include="Snippetica.CSharp\Dev\VariableAsTIfNotNull.snippet" />
+    <None Include="Snippetica.CSharp\ThrowNewObjectDisposedException.snippet" />
     <None Include="Snippetica.CSharp\WhileNotNull.snippet" />
     <None Include="Snippetica.CSharp\WhileNull.snippet" />
     <None Include="Snippetica.CSharp\Dev\YieldReturnNew.snippet" />
@@ -716,6 +717,7 @@
     <None Include="Snippetica.VisualBasic\Dev\StringKeyword.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\ThrowStatement.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\TimeSpanType.snippet" />
+    <None Include="Snippetica.VisualBasic\ThrowNewObjectDisposedException.snippet" />
     <None Include="Snippetica.VisualBasic\WhileIsNotNothing.snippet" />
     <None Include="Snippetica.VisualBasic\WhileIsNothing.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\YieldKeyword.snippet" />
