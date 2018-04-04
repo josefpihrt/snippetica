@@ -9,15 +9,15 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-GenerateArguments</Keyword>
-      <Keyword>Meta-GenerateUnchanged</Keyword>
+      <Keyword>Meta-GenerateInitializer</Keyword>
     </Keywords>
   </Header>
   <Snippet>
     <Declarations>
-      <Literal Editable="false">
-        <ID>_argumentList</ID>
-        <Default>()</Default>
+      <Literal>
+        <ID>_arguments</ID>
+        <ToolTip>List of arguments</ToolTip>
+        <Default>arguments</Default>
       </Literal>
       <Literal Editable="false">
         <ID>_initializer</ID>
@@ -34,6 +34,6 @@
         <Default>Object</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Dim $identifier$ = New $type$$_argumentList$$_initializer$$end$]]></Code>
+    <Code Language="VB"><![CDATA[Dim $identifier$ = New $type$($_arguments$)$_initializer$$end$]]></Code>
   </Snippet>
 </CodeSnippet>

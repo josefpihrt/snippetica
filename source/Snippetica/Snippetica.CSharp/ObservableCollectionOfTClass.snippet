@@ -39,20 +39,14 @@
         <Default>object</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : ObservableCollection<$type$>
-{
-	public $name$()
-	{
+    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : ObservableCollection<$type$> {
+	public $name$() {
 	}
 
-	public $name$(IEnumerable<$type$> collection)
-		: base(collection)
-	{
+	public $name$(IEnumerable<$type$> collection) : base(collection) {
 	}
 
-	public $name$(IList<$type$> list)
-		: base(list)
-	{
+	public $name$(IList<$type$> list) : base(list) {
 	}
 
 	$end$

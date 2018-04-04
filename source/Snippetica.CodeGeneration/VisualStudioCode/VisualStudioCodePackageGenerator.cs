@@ -46,6 +46,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
                 createDirectory: true);
 
             PackageInfo info = GetDefaultPackageInfo();
+            info.Version = Environment.GetVersion(result.Language);
             info.Name += "-" + languageId;
             info.DisplayName += " for " + language.GetTitle();
             info.Description += language.GetTitle() + ".";
@@ -57,12 +58,16 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
 
             DirectoryReadmeSettings settings = Environment.CreateDirectoryReadmeSettings(result);
 
-            MarkdownWriter.WriteDirectoryReadme(directoryPath, snippets, settings);
+#if !DEBUG
+            MarkdownFileWriter.WriteDirectoryReadme(directoryPath, snippets, settings);
+#endif
 
             settings.AddLinkToTitle = false;
             settings.Header = null;
 
-            MarkdownWriter.WriteDirectoryReadme(packageDirectoryPath, snippets, settings);
+#if !DEBUG
+            MarkdownFileWriter.WriteDirectoryReadme(packageDirectoryPath, snippets, settings);
+#endif
         }
 
         private static PackageInfo GetDefaultPackageInfo()
@@ -70,11 +75,10 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
             var info = new PackageInfo()
             {
                 Name = "snippetica",
-                Publisher = "josefpihrt",
+                Publisher = "josefpihrt-vscode",
                 DisplayName = "Snippetica",
                 Description = "A collection of snippets for ",
                 Icon = "images/icon.png",
-                Version = "0.6.0",
                 Author = "Josef Pihrt",
                 License = "SEE LICENSE IN LICENSE.TXT",
                 Homepage = $"{SourceGitHubUrl}/{VisualStudioCodeExtensionProjectName}",

@@ -39,7 +39,13 @@
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Markdown"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>__cdataEnd</ID>
+          <Default>]]&gt;</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[<![CDATA[$selected$$end$$__cdataEnd$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -50,14 +56,24 @@
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name CDataSectionWithContent</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="Markdown"><![CDATA[<![CDATA[$selected$$end$__cdataEnd]]></Code>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>__cdataEnd</ID>
+          <Default>]]&gt;</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <ToolTip>Content</ToolTip>
+          <Default>content</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="Markdown"><![CDATA[<![CDATA[$content$$__cdataEnd$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -77,27 +93,27 @@
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>content</ID>
-          <Default>x</Default>
+          <ID>language</ID>
+          <Default>language</Default>
         </Literal>
       </Declarations>
-      <Code Language="Markdown"><![CDATA[```
-$selected$$content$
-```$end$]]></Code>
+      <Code Language="Markdown"><![CDATA[```$language$
+$selected$$end$
+```]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>code block with language</Title>
-      <Shortcut>cbl</Shortcut>
-      <Description>code block with language</Description>
+      <Title>code block (with content)</Title>
+      <Shortcut>cbx</Shortcut>
+      <Description>code block (with content)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name CodeBlockWithLanguage</Keyword>
+        <Keyword>Meta-Name CodeBlockWithContent</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -479,7 +495,7 @@ $selected$$content$
         </Literal>
         <Literal>
           <ID>url</ID>
-          <Default>url</Default>
+          <Default>http://</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[![$text$]($url$)$end$]]></Code>
@@ -506,7 +522,7 @@ $selected$$content$
         </Literal>
         <Literal>
           <ID>url</ID>
-          <Default>url</Default>
+          <Default>http://</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[![$text$]($url$)$end$]]></Code>
@@ -557,7 +573,7 @@ $selected$$content$
         </Literal>
         <Literal>
           <ID>url</ID>
-          <Default>http://www.url.com</Default>
+          <Default>http://</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[[$text$]($url$)$end$]]></Code>
@@ -584,7 +600,7 @@ $selected$$content$
         </Literal>
         <Literal>
           <ID>url</ID>
-          <Default>http://www.url.com</Default>
+          <Default>http://</Default>
         </Literal>
       </Declarations>
       <Code Language="Markdown"><![CDATA[[$text$]($url$)$end$]]></Code>

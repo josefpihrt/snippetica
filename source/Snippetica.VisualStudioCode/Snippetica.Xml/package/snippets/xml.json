@@ -2,14 +2,14 @@
   "CDATA section": {
     "prefix": "cdata",
     "body": [
-      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
+      "<![CDATA[${TM_SELECTED_TEXT}${0}]]>"
     ],
     "description": "CDATA section"
   },
   "CDATA section (with content)": {
     "prefix": "cdatax",
     "body": [
-      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
+      "<![CDATA[${1:content}]]>${0}"
     ],
     "description": "CDATA section (with content)"
   },

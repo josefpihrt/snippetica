@@ -10,11 +10,14 @@ namespace Snippetica.CodeGeneration.Commands
     {
         public static Command StaticCommand { get; } = new StaticCommand();
         public static Command VirtualCommand { get; } = new VirtualCommand();
+        public static Command InlineCommand { get; } = new InlineCommand();
+        public static Command ConstCommand { get; } = new ConstCommand();
+        public static Command ConstExprCommand { get; } = new ConstExprCommand();
         public static Command InitializerCommand { get; } = new InitializerCommand();
-        public static Command ParametersCommand { get; } = new ParametersCommand();
-        public static Command ArgumentsCommand { get; } = new ArgumentsCommand();
         public static Command ShortcutToLowercase { get; } = new ShortcutToLowercaseCommand();
         public static Command SuffixFileNameWithUnderscore { get; } = new SuffixFileNameCommand("_");
+        public static Command Declaration { get; } = new DeclarationCommand();
+        public static Command Definition { get; } = new DefinitionCommand();
         public static Command GenerateAlternativeShortcuts { get; } = new GenerateAlternativeShortcutCommand();
 
         public static IEnumerable<Command> GetTypeCommands(Snippet snippet, LanguageDefinition languageDefinition)

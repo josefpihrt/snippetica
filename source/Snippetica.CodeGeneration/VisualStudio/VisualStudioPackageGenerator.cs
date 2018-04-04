@@ -22,9 +22,11 @@ namespace Snippetica.CodeGeneration.VisualStudio
         {
             List<Snippet> snippets = base.GeneratePackageFiles(directoryPath, results);
 
+#if !DEBUG
             IOUtility.WriteAllText(
-                Path.Combine(directoryPath, "description.html"),
-                HtmlGenerator.GenerateVisualStudioMarketplaceDescription(results));
+                Path.Combine(directoryPath, "Overview.md"),
+                MarkdownGenerator.GenerateVisualStudioMarketplaceOverview(results));
+#endif
 
             IOUtility.WriteAllText(
                 Path.Combine(directoryPath, "regedit.pkgdef"),
@@ -37,9 +39,11 @@ namespace Snippetica.CodeGeneration.VisualStudio
         {
             base.SaveSnippets(snippets, result);
 
+#if !DEBUG
             DirectoryReadmeSettings settings = Environment.CreateDirectoryReadmeSettings(result);
 
-            MarkdownWriter.WriteDirectoryReadme(result.Path, snippets, settings);
+            MarkdownFileWriter.WriteDirectoryReadme(result.Path, snippets, settings);
+#endif
         }
 
         protected override void SaveAllSnippets(string projectPath, List<Snippet> allSnippets)
@@ -68,7 +72,7 @@ namespace Snippetica.CodeGeneration.VisualStudio
             return base.PostProcess(snippets);
         }
 
-        private IEnumerable<Snippet> PostProcessCore(IEnumerable<Snippet> snippets)
+        private static IEnumerable<Snippet> PostProcessCore(IEnumerable<Snippet> snippets)
         {
             foreach (Snippet snippet in snippets)
             {

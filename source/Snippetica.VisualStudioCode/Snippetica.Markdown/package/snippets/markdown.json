@@ -9,14 +9,14 @@
   "CDATA section": {
     "prefix": "cdata",
     "body": [
-      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
+      "<![CDATA[${TM_SELECTED_TEXT}${0}]]>"
     ],
     "description": "CDATA section"
   },
   "CDATA section (with content)": {
     "prefix": "cdatax",
     "body": [
-      "<![CDATA[${TM_SELECTED_TEXT}${0}__cdataEnd"
+      "<![CDATA[${1:content}]]>${0}"
     ],
     "description": "CDATA section (with content)"
   },
@@ -30,20 +30,20 @@
   "code block": {
     "prefix": "cb",
     "body": [
-      "```",
-      "${TM_SELECTED_TEXT}${1:x}",
-      "```${0}"
+      "```${1:language}",
+      "${TM_SELECTED_TEXT}${0}",
+      "```"
     ],
     "description": "code block"
   },
-  "code block with language": {
-    "prefix": "cbl",
+  "code block (with content)": {
+    "prefix": "cbx",
     "body": [
       "```${1:language}",
       "${TM_SELECTED_TEXT}${2:x}",
       "```${0}"
     ],
-    "description": "code block with language"
+    "description": "code block (with content)"
   },
   "comment": {
     "prefix": "c",
@@ -150,14 +150,14 @@
   "image": {
     "prefix": "ie",
     "body": [
-      "![${1:text}](${2:url})${0}"
+      "![${1:text}](${2:http://})${0}"
     ],
     "description": "image"
   },
   "image _": {
     "prefix": "img",
     "body": [
-      "![${1:text}](${2:url})${0}"
+      "![${1:text}](${2:http://})${0}"
     ],
     "description": "image"
   },
@@ -171,14 +171,14 @@
   "link": {
     "prefix": "l",
     "body": [
-      "[${1:text}](${2:http://www.url.com})${0}"
+      "[${1:text}](${2:http://})${0}"
     ],
     "description": "link"
   },
   "link _": {
     "prefix": "a",
     "body": [
-      "[${1:text}](${2:http://www.url.com})${0}"
+      "[${1:text}](${2:http://})${0}"
     ],
     "description": "link"
   },

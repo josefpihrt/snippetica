@@ -56,7 +56,7 @@ namespace Snippetica.CodeGeneration.VisualStudio
                 .Where(f => f.LocalName() == "ItemGroup");
         }
 
-        public IEnumerable<XElement> GetReferencedSnippetFiles(XElement itemGroup)
+        public static IEnumerable<XElement> GetReferencedSnippetFiles(XElement itemGroup)
         {
             foreach (XElement element in itemGroup.Elements())
             {

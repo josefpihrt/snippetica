@@ -9,19 +9,22 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-GenerateArguments</Keyword>
-      <Keyword>Meta-GenerateUnchanged</Keyword>
+      <Keyword>Meta-GenerateInitializer</Keyword>
     </Keywords>
   </Header>
   <Snippet>
     <Declarations>
-      <Literal Editable="false">
-        <ID>_argumentList</ID>
-        <Default>()</Default>
+      <Literal>
+        <ID>_arguments</ID>
+        <ToolTip>List of arguments</ToolTip>
+        <Default>arguments</Default>
       </Literal>
       <Literal Editable="false">
         <ID>_initializer</ID>
         <ToolTip>Initializer</ToolTip>
+      </Literal>
+      <Literal Editable="false">
+        <ID>_initializer</ID>
       </Literal>
       <Literal>
         <ID>identifier</ID>
@@ -34,6 +37,6 @@
         <Default>object</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[var $identifier$ = new $type$$_argumentList$$_initializer$;$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[var $identifier$ = new $type$($_arguments$)$_initializer$;$end$]]></Code>
   </Snippet>
 </CodeSnippet>

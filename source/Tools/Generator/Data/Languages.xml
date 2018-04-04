@@ -38,6 +38,13 @@
               <New Id="Static" Keyword="Shared" />
               <New Id="Virtual" Keyword="Overridable" />
             </Set>
+            <Set Language="Cpp">
+              <New Id="Const" Shortcut="c" Keyword="const" />
+              <New Id="ConstExpr" Shortcut="ce" Keyword="constexpr" />
+              <New Id="Inline" Shortcut="il" Keyword="inline" />
+              <New Id="Static" Keyword="static" />
+              <New Id="Virtual" Keyword="virtual" />
+            </Set>
           </Records>
         </Entity>
         <Entity Name="Type">
@@ -64,29 +71,10 @@
                 <New Id="Single" Shortcut="se" DefaultValue="0" />
               </Add>
             </Add>
-            <Add Tags="Initializer">
-              <New Id="Collection" Shortcut="c" />
-              <New Id="ObservableCollection" Shortcut="oc" />
-              <New Id="Dictionary" Shortcut="d" Tags="Dictionary" />
-              <New Id="HashSet" Shortcut="hs" />
-              <New Id="List" Shortcut="l" />
-              <New Id="SortedDictionary" Shortcut="sd" Tags="Dictionary" />
-              <New Id="SortedSet" Shortcut="ss" />
-            </Add>
-            <New Id="ReadOnlyCollection" Shortcut="rc" Tags="ArgumentList" />
-            <New Id="ReadOnlyDictionary" Shortcut="rd">
-              <Add Tags="Dictionary" />
-              <Add Tags="ArgumentList" />
-            </New>
-            <New Id="LinkedList" Shortcut="ll" />
-            <New Id="Queue" Shortcut="q" />
-            <New Id="Stack" Shortcut="s" />
-            <New Id="IEnumerable" Shortcut="e" Tags="Interface" />
-            <New Id="Array" Shortcut="a" />
           </BaseRecords>
           <Records>
             <Set Language="CSharp">
-              <New Id="This" Title="containing type name" Keyword="this" DefaultValue="null" />
+              <New Id="This" Title="this" Keyword="this" DefaultValue="null" />
               <New Id="Void" Title="void" Keyword="void" />
               <New Id="Boolean" Keyword="bool" DefaultValue="false" />
               <New Id="Int32" Keyword="int" />
@@ -100,7 +88,7 @@
               <New Id="DateTime" Keyword="DateTime" DefaultValue="DateTime.MinValue" Namespace="System" />
             </Set>
             <Set Language="VisualBasic">
-              <New Id="This" Title="containing type name" Keyword="this" DefaultValue="Nothing" />
+              <New Id="This" Title="this" Keyword="this" DefaultValue="Nothing" />
               <New Id="Void" Title="Sub" Keyword="Sub" />
               <New Id="Boolean" Keyword="Boolean" DefaultValue="False" />
               <New Id="Int32" Keyword="Integer" />
@@ -113,44 +101,52 @@
               <New Id="Char" Keyword="Char" DefaultValue='"0"c' />
               <New Id="DateTime" Keyword="Date" DefaultValue="Date.MinValue" />
             </Set>
-            <Add Tags="Collection">
-              <Set Namespace="System.Collections.Generic">
-                <New Id="Dictionary" />
-                <New Id="HashSet" />
-                <New Id="List" />
-                <New Id="LinkedList" />
-                <New Id="Queue" />
-                <New Id="SortedDictionary" />
-                <New Id="SortedSet" />
-                <New Id="Stack" />
-                <Add Tags="Disabled">
-                  <New Id="IEnumerable" />
-                </Add>
-              </Set>
-              <Set Namespace="System.Collections.ObjectModel">
-                <New Id="Collection" />
-                <New Id="ObservableCollection" />
-                <New Id="ReadOnlyCollection" />
-                <New Id="ReadOnlyDictionary" />
-              </Set>
-              <Set Namespace="System.Collections.Immutable">
-                <Add Tags="Immutable">
-                  <Prefix Id="Immutable" Shortcut="i">
-                    <New Id="Array" />
-                    <New Id="Dictionary" />
-                    <New Id="HashSet" />
-                    <New Id="List" />
-                    <New Id="Queue" />
-                    <New Id="Stack" />
-                    <New Id="SortedDictionary" />
-                    <New Id="SortedSet" />
-                  </Prefix>
-                </Add>
-              </Set>
-            </Add>
+            <Set Language="Cpp">
+              <New Id="Void" Title="void" Keyword="void" />
+              <New Id="Boolean" Keyword="bool" DefaultValue="false" />
+              <New Id="Int32" Keyword="int" />
+              <New Id="String" Title="string" Keyword="std::string" DefaultValue="nullptr" />
+              <New Id="Double" Keyword="double" />
+              <New Id="Single" Keyword="float" />
+              <New Id="Char" Keyword="char" DefaultValue="0" />
+            </Set>
           </Records>
         </Entity>
       </Entities>
+    </Entity>
+    <Entity Name="Keyword">
+      <Declarations>
+        <Property Name="Language" IsRequired="true" />
+        <Property Name="Name" IsRequired="true" />
+        <Property Name="Value" IsRequired="true" />
+        <Property Name="Shortcut" IsRequired="true" />
+        <Property Name="IsDevelopment" />
+      </Declarations>
+      <Records>
+        <Set Language="Cpp">
+          <New Name="AlignAs" Value="alignas" Shortcut="aa" IsDevelopment="true" />
+          <New Name="AlignOf" Value="alignof" Shortcut="ao" IsDevelopment="true" />
+          <New Name="Auto" Value="auto" Shortcut="a" IsDevelopment="true" />
+          <New Name="ConstExpr" Value="constexpr" Shortcut="ce" />
+          <New Name="DeclType" Value="decltype" Shortcut="dt" />
+          <New Name="Default" Value="default" Shortcut="d" />
+          <New Name="Delete" Value="delete" Shortcut="de" IsDevelopment="true" />
+          <New Name="Extern" Value="extern" Shortcut="en" IsDevelopment="true" />
+          <New Name="Friend" Value="friend" Shortcut="fd" IsDevelopment="true" />
+          <New Name="Inline" Value="inline" Shortcut="il" />
+          <New Name="NoExcept" Value="noexcept" Shortcut="ne" IsDevelopment="true" />
+          <New Name="NullPtr" Value="nullptr" Shortcut="np" />
+          <New Name="Operator" Value="operator" Shortcut="or" IsDevelopment="true" />
+          <New Name="Return" Value="return" Shortcut="r" />
+          <New Name="SizeOf" Value="sizeof" Shortcut="so" />
+          <New Name="ThreadLocal" Value="thread_local" Shortcut="tl" IsDevelopment="true" />
+          <New Name="Throw" Value="throw" Shortcut="tw" IsDevelopment="true" />
+          <New Name="TypeId" Value="typeid" Shortcut="ti" IsDevelopment="true" />
+          <New Name="TypeName" Value="typename" Shortcut="tn" IsDevelopment="true" />
+          <New Name="Unsigned" Value="unsigned" Shortcut="us" IsDevelopment="true" />
+          <New Name="Volatile" Value="volatile" Shortcut="ve" IsDevelopment="true" />
+        </Set>
+      </Records>
     </Entity>
   </Entities>
 </Document>

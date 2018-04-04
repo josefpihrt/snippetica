@@ -1,10 +1,10 @@
 {
   "name": "snippetica-csharp",
-  "publisher": "josefpihrt",
+  "publisher": "josefpihrt-vscode",
   "displayName": "Snippetica for C#",
   "description": "A collection of snippets for C#.",
   "icon": "images/icon.png",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "author": "Josef Pihrt",
   "license": "SEE LICENSE IN LICENSE.TXT",
   "homepage": "http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudioCode/Snippetica.CSharp/README.md",

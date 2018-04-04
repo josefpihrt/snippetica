@@ -38,6 +38,7 @@
   <ItemGroup>
     <Compile Include="AttributeValueParser.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Operations\AddRangeOperation.cs" />
     <Compile Include="Operations\AddOperation.cs" />
     <Compile Include="Operations\OperationKind.cs" />

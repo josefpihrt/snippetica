@@ -1,15 +1,16 @@
 ### Snippet Browser
-* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=markdown).
+
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=markdown)\.
 
 ### List of Selected Snippets
 
-Shortcut | Title
--------- | -----
+Shortcut|Title
+--------|-----
 a|link
 b|bold
 c|comment
 cb|code block
-cbl|code block with language
+cbx|code block \(with content\)
 cdata|CDATA section
 cdatax|CDATA section \(with content\)
 ci|code \(inline\)
@@ -52,3 +53,5 @@ ul3|unordered list item \(level 3\)
 ull|unordered list items
 ull2|unordered list items \(level 2\)
 ull3|unordered list items \(level 3\)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

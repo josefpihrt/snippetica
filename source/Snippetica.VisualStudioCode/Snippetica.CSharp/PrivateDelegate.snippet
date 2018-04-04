@@ -16,6 +16,11 @@
   <Snippet>
     <Declarations>
       <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>T parameter</Default>
+      </Literal>
+      <Literal>
         <ID>_type</ID>
         <ToolTip>Return type</ToolTip>
         <Default>void</Default>
@@ -26,6 +31,6 @@
         <Default>DelegateName</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[private delegate $_type$ $name$();$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[private delegate $_type$ $name$($_parameters$);$end$]]></Code>
   </Snippet>
 </CodeSnippet>

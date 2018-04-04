@@ -6,13 +6,11 @@ namespace Snippetica.CodeGeneration
 {
     public abstract class LanguageDefinition
     {
-        public static LanguageDefinition CSharp { get; set; }
-        public static LanguageDefinition VisualBasic { get; set; }
-
         protected LanguageDefinition()
         {
             Modifiers = new ModifierDefinitionCollection();
             Types = new TypeDefinitionCollection();
+            Keywords = new KeywordDefinitionCollection();
         }
 
         public abstract Language Language { get; }
@@ -21,7 +19,9 @@ namespace Snippetica.CodeGeneration
 
         public TypeDefinitionCollection Types { get; }
 
-        public TypeDefinition Object
+        public KeywordDefinitionCollection Keywords { get; }
+
+        public TypeDefinition ObjectType
         {
             get { return Types["Object"]; }
         }
@@ -36,19 +36,68 @@ namespace Snippetica.CodeGeneration
             get { return Modifiers["Virtual"]; }
         }
 
-        public string DefaultValue
+        public ModifierDefinition InlineModifier
         {
-            get { return Object.DefaultValue; }
+            get { return Modifiers["Inline"]; }
+        }
+
+        public ModifierDefinition ConstModifier
+        {
+            get { return Modifiers["Const"]; }
+        }
+
+        public ModifierDefinition ConstExprModifier
+        {
+            get { return Modifiers["ConstExpr"]; }
         }
 
         public abstract string GetTypeParameterList(string typeName);
 
         public abstract string GetDefaultParameter();
 
+        public abstract string GetObjectInitializer(string value);
+
         public abstract string GetCollectionInitializer(string value);
 
         public abstract string GetDictionaryInitializer(string value);
 
         public abstract string GetArrayInitializer(string value);
+
+        public abstract string GetVariableInitializer(string value);
+
+        public virtual string GetDefaultValue()
+        {
+            return ObjectType.DefaultValue;
+        }
+
+        public static LanguageDefinition FromLanguage(Language language)
+        {
+            switch (language)
+            {
+                case Language.CSharp:
+                    return LanguageDefinitions.CSharp;
+                case Language.VisualBasic:
+                    return LanguageDefinitions.VisualBasic;
+                case Language.Cpp:
+                    return LanguageDefinitions.Cpp;
+                default:
+                    return null;
+            }
+        }
+
+        public static KeywordDefinitionCollection GetKeywords(Language language)
+        {
+            switch (language)
+            {
+                case Language.CSharp:
+                    return LanguageDefinitions.CSharp.Keywords;
+                case Language.VisualBasic:
+                    return LanguageDefinitions.VisualBasic.Keywords;
+                case Language.Cpp:
+                    return LanguageDefinitions.Cpp.Keywords;
+                default:
+                    return null;
+            }
+        }
     }
 }

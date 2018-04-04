@@ -15,5 +15,10 @@ namespace Snippetica.CodeGeneration
         public bool IsCanceled { get; set; }
 
         public Collection<Snippet> Snippets { get; }
+
+        public virtual string WithInitializerSuffix(Snippet snippet)
+        {
+            return "x";
+        }
     }
 }

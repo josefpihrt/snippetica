@@ -36,6 +36,10 @@ namespace Snippetica.CodeGeneration.Json
 
         private static string GetTextMateBody(Snippet snippet)
         {
+            snippet = (Snippet)snippet.Clone();
+
+            snippet.RemoveLiteralAndReplacePlaceholders(XmlSnippetGenerator.CDataIdentifier, "]]>");
+
             LiteralCollection literals = snippet.Literals;
 
             string s = snippet.CodeText;

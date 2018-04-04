@@ -18,7 +18,12 @@ namespace Snippetica.CodeGeneration
 
         public override string GetDefaultParameter()
         {
-            return $"{Object.Keyword} parameter";
+            return $"{ObjectType.Keyword} parameter";
+        }
+
+        public override string GetObjectInitializer(string value)
+        {
+            return " { " + value + " }";
         }
 
         public override string GetDictionaryInitializer(string value)
@@ -34,6 +39,11 @@ namespace Snippetica.CodeGeneration
         public override string GetArrayInitializer(string value)
         {
             return GetCollectionInitializer(value);
+        }
+
+        public override string GetVariableInitializer(string value)
+        {
+            return $" = {value}";
         }
     }
 }

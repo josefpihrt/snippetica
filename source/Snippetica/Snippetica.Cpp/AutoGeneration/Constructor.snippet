@@ -1,0 +1,34 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>constructor</Title>
+    <Shortcut>cr</Shortcut>
+    <Description>constructor</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-GenerateDeclarationAndDefinition</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal Editable="false">
+        <ID>_definition</ID>
+      </Literal>
+      <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>T parameter</Default>
+      </Literal>
+      <Literal Editable="false">
+        <ID>typeName</ID>
+        <ToolTip>Type name</ToolTip>
+        <Default>TypeName</Default>
+        <Function>TypeName()</Function>
+      </Literal>
+    </Declarations>
+    <Code Language="Cpp"><![CDATA[$typeName$($_parameters$)$_definition$;]]></Code>
+  </Snippet>
+</CodeSnippet>

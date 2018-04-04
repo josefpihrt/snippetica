@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 
@@ -8,7 +9,7 @@ namespace Snippetica.CodeGeneration
     [DebuggerDisplay("{Name,nq}")]
     public  class TypeDefinition
     {
-        public static TypeDefinition Default { get; } = new TypeDefinition(null, null, null, "a", null, null, null, new string[0]);
+        public static TypeDefinition Default { get; } = new TypeDefinition(null, null, null, "a", null, null, null, Array.Empty<string>());
 
         public TypeDefinition(
             string name,

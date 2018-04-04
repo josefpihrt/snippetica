@@ -1,6 +1,6 @@
 {
   "name": "snippetica-xml",
-  "publisher": "josefpihrt",
+  "publisher": "josefpihrt-vscode",
   "displayName": "Snippetica for XML",
   "description": "A collection of snippets for XML.",
   "icon": "images/icon.png",

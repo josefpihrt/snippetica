@@ -36,8 +36,8 @@ namespace Snippetica.CodeGeneration.Commands
             if (Tags.Contains(KnownTags.Dictionary))
             {
                 snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.GenericType, $"${LiteralIdentifiers.KeyType}$, ${LiteralIdentifiers.ValueType}$");
-                snippet.AddLiteral(LiteralIdentifiers.KeyType, null, language.Object.Keyword);
-                snippet.AddLiteral(LiteralIdentifiers.ValueType, null, language.Object.Keyword);
+                snippet.AddLiteral(LiteralIdentifiers.KeyType, null, language.ObjectType.Keyword);
+                snippet.AddLiteral(LiteralIdentifiers.ValueType, null, language.ObjectType.Keyword);
 
                 LiteralRenamer.Rename(snippet, LiteralIdentifiers.CollectionIdentifier, LiteralIdentifiers.DictionaryIdentifier);
 
@@ -55,7 +55,7 @@ namespace Snippetica.CodeGeneration.Commands
             if (snippet.HasTag(KnownTags.Initializer) && Tags.Contains(KnownTags.Initializer))
             {
                 var clone = (Snippet)snippet.Clone();
-                InitializerCommand.AddInitializer(clone, GetInitializer(language), language.DefaultValue);
+                InitializerCommand.AddInitializer(context, clone, GetInitializer(language), language.GetDefaultValue());
                 context.Snippets.Add(clone);
             }
             else

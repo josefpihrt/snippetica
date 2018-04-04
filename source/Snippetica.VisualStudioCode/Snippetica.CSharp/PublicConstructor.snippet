@@ -15,13 +15,17 @@
   <Snippet>
     <Declarations>
       <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>T parameter</Default>
+      </Literal>
+      <Literal>
         <ID>thisName</ID>
         <ToolTip>Containing type name</ToolTip>
         <Default>ThisName</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[public $thisName$()
-{
+    <Code Language="CSharp"><![CDATA[public $thisName$($_parameters$) {
 	$end$
 }]]></Code>
   </Snippet>

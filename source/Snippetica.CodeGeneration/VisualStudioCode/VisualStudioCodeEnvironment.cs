@@ -23,9 +23,11 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
             switch (directory.Language)
             {
                 case Language.VisualBasic:
-                    return new VisualStudioCodeSnippetGenerator(LanguageDefinition.VisualBasic);
+                    return new VisualStudioCodeSnippetGenerator(this, LanguageDefinitions.VisualBasic);
                 case Language.CSharp:
-                    return new VisualStudioCodeSnippetGenerator(LanguageDefinition.CSharp);
+                    return new VisualStudioCodeSnippetGenerator(this, LanguageDefinitions.CSharp);
+                case Language.Cpp:
+                    return new VisualStudioCodeSnippetGenerator(this, LanguageDefinitions.Cpp);
                 case Language.Xaml:
                     return new XamlSnippetGenerator();
                 case Language.Html:
@@ -58,6 +60,27 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
         public override PackageGenerator CreatePackageGenerator()
         {
             return new VisualStudioCodePackageGenerator(this);
+        }
+
+        public override string GetVersion(Language language)
+        {
+            switch (language)
+            {
+                case Language.CSharp:
+                case Language.VisualBasic:
+                    return "0.7.0";
+                case Language.Cpp:
+                case Language.Xml:
+                case Language.JavaScript:
+                case Language.Sql:
+                case Language.Html:
+                case Language.Css:
+                case Language.Json:
+                case Language.Markdown:
+                    return "0.6.0";
+                default:
+                    throw new ArgumentException("", nameof(language));
+            }
         }
     }
 }
