@@ -12,6 +12,6 @@ namespace Snippetica.CodeGeneration
         Static,
         Inline,
         Const,
-        ConstExpr
+        ConstExpr,
     }
 }

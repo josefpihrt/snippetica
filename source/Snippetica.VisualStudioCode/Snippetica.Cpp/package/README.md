@@ -1,13 +1,13 @@
 ### Snippet Browser
-* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=cpp).
+
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=cpp)\.
 
 ### Quick Reference
 
-
 #### Declaration/Definition
 
-Shortcut | Description | Comment
--------- | ----------- | -------
+Shortcut|Description|Comment
+--------|-----------|-------
 c|class|\-
 cr|constructor|\-
 dr|destructor|\-
@@ -24,8 +24,8 @@ x|definition|suffix
 
 #### Specifier
 
-Shortcut | Description | Comment
--------- | ----------- | -------
+Shortcut|Description|Comment
+--------|-----------|-------
 c|const|prefix
 ce|constexpr|prefix
 il|inline|prefix
@@ -34,8 +34,8 @@ v|virtual|prefix
 
 #### Statement
 
-Shortcut | Description | Comment
--------- | ----------- | -------
+Shortcut|Description|Comment
+--------|-----------|-------
 dw|do\-while|\-
 fe|foreach|\-
 fr|for|\-
@@ -46,8 +46,8 @@ we|while|\-
 
 #### Other
 
-Shortcut | Description | Comment
--------- | ----------- | -------
+Shortcut|Description|Comment
+--------|-----------|-------
 ae|attribute|\-
 co|conditional operator|\-
 ct|cast|suffix
@@ -64,8 +64,8 @@ t|template|\-
 
 ### List of Selected Snippets
 
-Shortcut | Title
--------- | -----
+Shortcut|Title
+--------|-----
 ae|attribute
 b|braces
 c|class declaration
@@ -146,3 +146,5 @@ v|variable
 va|array variable
 vf|virtual function declaration
 we|while
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

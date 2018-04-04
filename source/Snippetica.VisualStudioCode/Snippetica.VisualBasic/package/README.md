@@ -1,5 +1,6 @@
 ### Snippet Browser
-* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=vb).
+
+* Browse all available snippets with [Snippet Browser](http://pihrt.net/snippetica/snippets?engine=vscode&language=vb)\.
 
 ### Quick Reference
 
@@ -7,8 +8,8 @@
 
 #### Member Declaration
 
-Shortcut | Description | Comment
--------- | ----------- | -------
+Shortcut|Description|Comment
+--------|-----------|-------
 \_|interface member declaration|prefix
 c|class declaration|\-
 cr|constructor declaration|\-
@@ -16,7 +17,7 @@ de|delegate declaration|\-
 em|enum declaration|\-
 et|event declaration|\-
 f|field declaration|\-
-ie|inteface declaration|\-
+ie|interface declaration|\-
 ir|indexer declaration|\-
 k|constant declaration|\-
 m|method declaration|\-
@@ -27,8 +28,8 @@ st|struct declaration|\-
 
 #### Modifer
 
-Shortcut | Description | Comment
--------- | ----------- | -------
+Shortcut|Description|Comment
+--------|-----------|-------
 i|internal \(Friend\)|prefix
 p|private|prefix
 r|read\-only|prefix \(after access modifier\)
@@ -37,8 +38,8 @@ v|virtual \(Overridable\)|prefix \(after access modifier\)
 
 #### Statement
 
-Shortcut | Description | Comment
--------- | ----------- | -------
+Shortcut|Description|Comment
+--------|-----------|-------
 fe|foreach statement|\-
 fr|for statement|\-
 if|if statement|\-
@@ -51,8 +52,8 @@ we|while statement|\-
 
 #### Operator
 
-Shortcut | Description | Comment
--------- | ----------- | -------
+Shortcut|Description|Comment
+--------|-----------|-------
 gt|GetType operator|\-
 n|new object creation|\-
 no|nameof operator|\-
@@ -62,13 +63,13 @@ x|logical not operator|prefix
 
 #### Type
 
-Shortcut | Description | Comment
--------- | ----------- | -------
+Shortcut|Description|Comment
+--------|-----------|-------
 a|Array|\-
 b|Boolean|\-
 dt|DateTime|\-
 i|Int32|\-
-l|List&lt;T&gt;|\-
+l|List\<T>|\-
 o|Object|\-
 rr|Reader|suffix
 s|String|\-
@@ -76,8 +77,8 @@ wr|Writer|suffix
 
 #### Other
 
-Shortcut | Description | Comment
--------- | ----------- | -------
+Shortcut|Description|Comment
+--------|-----------|-------
 c|catch clause|\-
 d|default keyword|\-
 e|else clause|\-
@@ -96,10 +97,10 @@ y|yield|prefix
 
 ### List of Selected Snippets
 
-Shortcut | Title
--------- | -----
+Shortcut|Title
+--------|-----
 \_et|interface event
-\_ett|interface event with EventHandler&lt;T&gt;
+\_ett|interface event with EventHandler\<T>
 \_ir|interface indexer
 \_m|interface method
 \_p|interface property
@@ -193,3 +194,5 @@ wexn|While IsNot Nothing
 xn|IsNot Nothing
 xsne|String\.IsNullOrEmpty = False
 xsnw|String\.IsNullOrWhiteSpace = False
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

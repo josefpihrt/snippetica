@@ -145,7 +145,7 @@ namespace Pihrtsoft.Records
             return new RecordCollection(records);
         }
 
-        private XElement EntitiesElement(XElement rootElement)
+        private static XElement EntitiesElement(XElement rootElement)
         {
             XElement entitiesElement = null;
 

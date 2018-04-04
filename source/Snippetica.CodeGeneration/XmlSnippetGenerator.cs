@@ -108,7 +108,7 @@ namespace Snippetica.CodeGeneration
             }
             else
             {
-                snippet.ReplacePlaceholders(ContentIdentifier, $"{SelectedPlaceholder}{EndPlaceholder}");
+                snippet.ReplacePlaceholders(ContentIdentifier, SelectedPlaceholder + EndPlaceholder);
             }
         }
 

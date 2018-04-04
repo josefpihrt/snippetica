@@ -60,5 +60,10 @@ namespace Snippetica.CodeGeneration.VisualStudio
         {
             return new VisualStudioPackageGenerator(this);
         }
+
+        public override string GetVersion(Language language)
+        {
+            throw new InvalidOperationException();
+        }
     }
 }

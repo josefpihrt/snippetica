@@ -1,5 +1,11 @@
 ﻿# Release Notes
 
+## 0.7.0 (2017-12-13)
+
+* Rewrite C++ snippets
+* Change shortcut for '...WithInitializer' snippets from '_' to 'x' (C# and VB)
+* Remove '...WithArguments' snippets and '...WithParameters' snippets (C# and VB)
+
 ## 0.6.0 (2017-09-24)
 
 ### New Shortcuts

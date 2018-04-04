@@ -38,23 +38,6 @@ namespace Snippetica.CodeGeneration.Commands
             }
         }
 
-        private string GetInitializer(Snippet snippet, LanguageDefinition language)
-        {
-            if (snippet.HasTag(KnownTags.Array))
-                return language.GetArrayInitializer($"${LiteralIdentifiers.Value}$");
-
-            if (snippet.HasTag(KnownTags.Dictionary))
-                return language.GetDictionaryInitializer($"${LiteralIdentifiers.Value}$");
-
-            if (snippet.HasTag(KnownTags.Collection))
-                return language.GetCollectionInitializer($"${LiteralIdentifiers.Value}$");
-
-            if (snippet.HasTag(KnownTags.Variable))
-                return language.GetVariableInitializer($"${LiteralIdentifiers.Value}$");
-
-            return language.GetObjectInitializer($"${LiteralIdentifiers.Value}$");
-        }
-
         internal static Snippet AddInitializer(ExecutionContext context, Snippet snippet, string initializer, string defaultValue)
         {
             string suffix = (snippet.Language == Language.Cpp) ? " (with initialization)" : " (with initializer)";

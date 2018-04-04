@@ -952,6 +952,15 @@
     ],
     "description": "internal read-only field declaration"
   },
+  "internal read-only indexer": {
+    "prefix": "irir",
+    "body": [
+      "internal ${1:T} this[${2:int index}] {",
+      "\tget { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "internal read-only indexer declaration"
+  },
   "internal read-only property": {
     "prefix": "irpp",
     "body": [
@@ -960,6 +969,15 @@
       "}${0}"
     ],
     "description": "internal read-only property declaration"
+  },
+  "internal read-only struct": {
+    "prefix": "irst",
+    "body": [
+      "internal readonly struct ${1:StructName} {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "internal read-only struct declaration"
   },
   "internal static class": {
     "prefix": "isc",
@@ -1254,6 +1272,15 @@
     ],
     "description": "private read-only field declaration"
   },
+  "private read-only indexer": {
+    "prefix": "prir",
+    "body": [
+      "private ${1:T} this[${2:int index}] {",
+      "\tget { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "private read-only indexer declaration"
+  },
   "private read-only property": {
     "prefix": "prpp",
     "body": [
@@ -1262,6 +1289,15 @@
       "}${0}"
     ],
     "description": "private read-only property declaration"
+  },
+  "private read-only struct": {
+    "prefix": "prst",
+    "body": [
+      "private readonly struct ${1:StructName} {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "private read-only struct declaration"
   },
   "private static class": {
     "prefix": "psc",
@@ -1452,6 +1488,15 @@
     ],
     "description": "public read-only field declaration"
   },
+  "public read-only indexer": {
+    "prefix": "rir",
+    "body": [
+      "public ${1:T} this[${2:int index}] {",
+      "\tget { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "public read-only indexer declaration"
+  },
   "public read-only property": {
     "prefix": "rpp",
     "body": [
@@ -1460,6 +1505,15 @@
       "}${0}"
     ],
     "description": "public read-only property declaration"
+  },
+  "public read-only struct": {
+    "prefix": "rst",
+    "body": [
+      "public readonly struct ${1:StructName} {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "public read-only struct declaration"
   },
   "public static class": {
     "prefix": "sc",
@@ -1743,6 +1797,13 @@
       "throw new NotSupportedException(${1:message});${0}"
     ],
     "description": "throw new NotSupportedException"
+  },
+  "throw new ObjectDisposedException": {
+    "prefix": "twn_ode",
+    "body": [
+      "throw new ObjectDisposedException(${1:args});${0}"
+    ],
+    "description": "throw new ObjectDisposedException"
   },
   "TODO comment": {
     "prefix": "td",

@@ -1,7 +1,7 @@
 ### List of Selected Snippets
 
-Shortcut | Title
--------- | -----
+Shortcut|Title
+--------|-----
 a|auto keyword
 aa|alignas keyword
 ao|alignof keyword
@@ -28,3 +28,5 @@ ve|volatile keyword
 vi|int variable
 vs|string variable
 x|\! operator
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*
