@@ -151,6 +151,7 @@ ref|Return False
 ren|Return Nothing
 ret|Return True
 rf|Public read\-only field
+rir|Public read\-only indexer
 rp|Public read\-only auto property
 rpp|Public read\-only Property
 sc|Select Case statement

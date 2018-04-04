@@ -1,5 +1,16 @@
 ﻿# Release Notes
 
+## 0.8.0 (2018-04-04)
+
+### New Snippets for C# and VB
+
+* Read-only indexer (rir)
+* ThrowNewObjectDisposedException (twn ode)
+
+### New Snippets for C#
+
+* Read-only struct (rst)
+
 ## 0.7.0 (2017-12-13)
 
 * Rewrite C++ snippets

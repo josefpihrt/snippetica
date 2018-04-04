@@ -156,8 +156,10 @@ ref|return false
 ren|return null
 ret|return true
 rf|public read\-only field
+rir|public read\-only indexer
 rp|public read\-only auto property
 rpp|public read\-only property
+rst|public read\-only struct
 s|string keyword
 sc|public static class
 scr|static constructor
