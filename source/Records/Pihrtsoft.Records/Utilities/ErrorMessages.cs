@@ -101,5 +101,10 @@ namespace Pihrtsoft.Records.Utilities
         {
             return "Collection property cannot define default value.";
         }
+
+        internal static string CommandCannotBeUsedAsChildCommandOfNewCommand(XElement element)
+        {
+            return $"Command '{element.LocalName()}' cannot be used as a child command of 'New' command.";
+        }
     }
 }

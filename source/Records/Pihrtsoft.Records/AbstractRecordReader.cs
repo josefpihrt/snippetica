@@ -189,7 +189,7 @@ namespace Pihrtsoft.Records
             {
                 Current = child;
 
-                CreateOperationsFromElement(child).ExecuteAll(record);
+                CreateOperationsFromElement(child, throwOnMultiCommand: true).ExecuteAll(record);
             }
 
             Current = element;
@@ -340,7 +340,7 @@ namespace Pihrtsoft.Records
             }
         }
 
-        private IEnumerable<IPropertyOperation> CreateOperationsFromElement(XElement element)
+        private IEnumerable<IPropertyOperation> CreateOperationsFromElement(XElement element, bool throwOnMultiCommand = false)
         {
             Debug.Assert(element.HasAttributes, element.ToString());
 
@@ -364,6 +364,9 @@ namespace Pihrtsoft.Records
                     }
                 case ElementKind.PostfixMany:
                     {
+                        if (throwOnMultiCommand)
+                            ThrowInvalidOperation(ErrorMessages.CommandCannotBeUsedAsChildCommandOfNewCommand(element));
+
                         foreach (XAttribute attribute in element.Attributes())
                             yield return new PostfixManyOperation(GetProperty(attribute), GetValue(attribute), Depth);
 
@@ -378,6 +381,9 @@ namespace Pihrtsoft.Records
                     }
                 case ElementKind.PrefixMany:
                     {
+                        if (throwOnMultiCommand)
+                            ThrowInvalidOperation(ErrorMessages.CommandCannotBeUsedAsChildCommandOfNewCommand(element));
+
                         foreach (XAttribute attribute in element.Attributes())
                             yield return new PrefixManyOperation(GetProperty(attribute), GetValue(attribute), Depth);
 

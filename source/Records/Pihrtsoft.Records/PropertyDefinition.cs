@@ -18,13 +18,10 @@ namespace Pihrtsoft.Records
             XElement element = null)
         {
             if (!object.ReferenceEquals(name, IdName)
-                && !object.ReferenceEquals(name, TagsName))
+                && !object.ReferenceEquals(name, TagsName)
+                && IsReservedName(name))
             {
-                if (DefaultComparer.NameEquals(name, IdName))
-                    ThrowHelper.ThrowInvalidOperation(ErrorMessages.PropertyNameIsReserved(IdName), element);
-
-                if (DefaultComparer.NameEquals(name, TagsName))
-                    ThrowHelper.ThrowInvalidOperation(ErrorMessages.PropertyNameIsReserved(TagsName), element);
+                ThrowHelper.ThrowInvalidOperation(ErrorMessages.PropertyNameIsReserved(name), element);
             }
 
             Name = name;
@@ -55,6 +52,12 @@ namespace Pihrtsoft.Records
         string IKey<string>.GetKey()
         {
             return Name;
+        }
+
+        internal static bool IsReservedName(string name)
+        {
+            return DefaultComparer.NameEquals(name, IdName)
+                || DefaultComparer.NameEquals(name, TagsName);
         }
     }
 }
