@@ -16,25 +16,26 @@ namespace Snippetica.CodeGeneration.Commands
         {
             LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
-            AddInitializer(context, snippet, GetInitializer(snippet, language), language.GetDefaultValue());
-        }
-
-        private string GetInitializer(Snippet snippet, LanguageDefinition language)
-        {
             if (snippet.HasTag(KnownTags.Array))
-                return language.GetArrayInitializer($"${LiteralIdentifiers.Value}$");
-
-            if (snippet.HasTag(KnownTags.Dictionary))
-                return language.GetDictionaryInitializer($"${LiteralIdentifiers.Value}$");
-
-            if (snippet.HasTag(KnownTags.Collection))
-                return language.GetCollectionInitializer($"${LiteralIdentifiers.Value}$");
-
-            if (snippet.HasTag(KnownTags.Variable))
-                return language.GetVariableInitializer($"${LiteralIdentifiers.Value}$");
-
-            Debug.Fail("");
-            return null;
+            {
+                AddInitializer(context, snippet, language.GetArrayInitializer($"${LiteralIdentifiers.Value}$"), language.GetDefaultValue());
+            }
+            else if (snippet.HasTag(KnownTags.Dictionary))
+            {
+                AddInitializer(context, snippet, language.GetDictionaryInitializer($"${LiteralIdentifiers.Value}$"), language.GetDefaultValue());
+            }
+            else if (snippet.HasTag(KnownTags.Collection))
+            {
+                AddInitializer(context, snippet, language.GetCollectionInitializer($"${LiteralIdentifiers.Value}$"), language.GetDefaultValue());
+            }
+            else if (snippet.HasTag(KnownTags.Variable))
+            {
+                AddInitializer(context, snippet, language.GetVariableInitializer($"${LiteralIdentifiers.Value}$"), language.GetDefaultValue());
+            }
+            else
+            {
+                AddInitializer(context, snippet, language.GetObjectInitializer($"${LiteralIdentifiers.Value}$"), "x");
+            }
         }
 
         internal static Snippet AddInitializer(ExecutionContext context, Snippet snippet, string initializer, string defaultValue)

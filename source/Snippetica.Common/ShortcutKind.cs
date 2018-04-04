@@ -13,6 +13,6 @@ namespace Snippetica.CodeGeneration
         Operator,
         Keyword,
         Type,
-        Other
+        Other,
     }
 }

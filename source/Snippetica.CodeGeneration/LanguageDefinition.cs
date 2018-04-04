@@ -55,6 +55,8 @@ namespace Snippetica.CodeGeneration
 
         public abstract string GetDefaultParameter();
 
+        public abstract string GetObjectInitializer(string value);
+
         public abstract string GetCollectionInitializer(string value);
 
         public abstract string GetDictionaryInitializer(string value);

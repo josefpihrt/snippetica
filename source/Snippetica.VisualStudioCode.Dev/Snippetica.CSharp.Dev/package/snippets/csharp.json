@@ -2,22 +2,11 @@
   " local function": {
     "prefix": "lf",
     "body": [
-      "${1:void} ${2:MethodName}()",
-      "{",
+      "${1:void} ${2:MethodName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
     "description": " local function declaration"
-  },
-  " local function (with parameters)": {
-    "prefix": "lf_",
-    "body": [
-      "${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": " local function declaration (with parameters)"
   },
   "! operator": {
     "prefix": "x",
@@ -40,6 +29,13 @@
     ],
     "description": "Assembly attribute"
   },
+  "attribute": {
+    "prefix": "ae",
+    "body": [
+      "[${TM_SELECTED_TEXT}${0}]"
+    ],
+    "description": "attribute"
+  },
   "break statement": {
     "prefix": "bk",
     "body": [
@@ -53,6 +49,34 @@
       "[Conditional(${1:\"DEBUG\"})]${0}"
     ],
     "description": "Conditional attribute"
+  },
+  "conditional operator (!string.IsNullOrEmpty)": {
+    "prefix": "coxsne",
+    "body": [
+      "(!string.IsNullOrEmpty(${1:s})) ? ${2:true} : ${3:false}${0}"
+    ],
+    "description": "conditional operator with condition whether the string is not equal to null or empty"
+  },
+  "conditional operator (!string.IsNullOrWhiteSpace)": {
+    "prefix": "coxsnw",
+    "body": [
+      "(!string.IsNullOrWhiteSpace(${1:s})) ? ${2:true} : ${3:false}${0}"
+    ],
+    "description": "conditional operator with condition whether the string is not equal to null or white-space"
+  },
+  "conditional operator (string.IsNullOrEmpty)": {
+    "prefix": "cosne",
+    "body": [
+      "(string.IsNullOrEmpty(${1:s})) ? ${2:true} : ${3:false}${0}"
+    ],
+    "description": "conditional operator with condition whether the string is equal to null or empty"
+  },
+  "conditional operator (string.IsNullOrWhiteSpace)": {
+    "prefix": "cosnw",
+    "body": [
+      "(string.IsNullOrWhiteSpace(${1:s})) ? ${2:true} : ${3:false}${0}"
+    ],
+    "description": "conditional operator with condition whether the string is equal to null or white-space"
   },
   "continue statement": {
     "prefix": "ce",
@@ -97,7 +121,7 @@
     "description": "Dictionary<TKey, TValue> variable declaration"
   },
   "Dictionary<TKey, TValue> variable (with initializer)": {
-    "prefix": "vd_",
+    "prefix": "vdx",
     "body": [
       "var ${1:dic} = new Dictionary<${2:object}, ${3:object}>() { [0] = ${4:null} };${0}"
     ],
@@ -169,7 +193,7 @@
   "Enumerable.Empty": {
     "prefix": "q_e",
     "body": [
-      "Enumerable.Empty<${1:object}>()${0}"
+      "Enumerable.Empty<${1:T}>()${0}"
     ],
     "description": "Enumerable.Empty method"
   },
@@ -239,7 +263,7 @@
   "Enumerable.OfType": {
     "prefix": "q_ot",
     "body": [
-      ".OfType<${1:object}>()${0}"
+      ".OfType<${1:T}>()${0}"
     ],
     "description": "Enumerable.OfType method"
   },
@@ -393,8 +417,7 @@
   "FileStream Variable": {
     "prefix": "u_fesm",
     "body": [
-      "using (var ${1:fs} = new FileStream(${2:path}, FileMode${3:.OpenOrCreate}))",
-      "{",
+      "using (var ${1:fs} = new FileStream(${2:path}, FileMode${3:.OpenOrCreate})) {",
       "\t${0}",
       "}"
     ],
@@ -422,7 +445,7 @@
     "description": "HashSet<T> variable declaration"
   },
   "HashSet<T> variable (with initializer)": {
-    "prefix": "vhs_",
+    "prefix": "vhsx",
     "body": [
       "var ${1:items} = new HashSet<${2:T}>() { ${3:null} };${0}"
     ],
@@ -431,8 +454,7 @@
   "if !string.IsNullOrEmpty": {
     "prefix": "ifxsne",
     "body": [
-      "if (!string.IsNullOrEmpty(${1:s}))",
-      "{",
+      "if (!string.IsNullOrEmpty(${1:s})) {",
       "\t${0}",
       "}"
     ],
@@ -441,8 +463,7 @@
   "if !string.IsNullOrWhiteSpace": {
     "prefix": "ifxsnw",
     "body": [
-      "if (!string.IsNullOrWhiteSpace(${1:s}))",
-      "{",
+      "if (!string.IsNullOrWhiteSpace(${1:s})) {",
       "\t${0}",
       "}"
     ],
@@ -452,8 +473,7 @@
     "prefix": "ifemtp",
     "body": [
       "${1:TEnum} ${2:x};",
-      "if (Enum.TryParse(${3:value}, out ${2}))",
-      "{",
+      "if (Enum.TryParse(${3:value}, out ${2})) {",
       "\t${0}",
       "}"
     ],
@@ -495,8 +515,7 @@
     "prefix": "ifxemtp",
     "body": [
       "${1:TEnum} ${2:x};",
-      "if (!Enum.TryParse(${3:value}, out ${2}))",
-      "{",
+      "if (!Enum.TryParse(${3:value}, out ${2})) {",
       "\t${0}",
       "}"
     ],
@@ -566,6 +585,16 @@
     ],
     "description": "if not return true"
   },
+  "if not TryGetValue": {
+    "prefix": "ifxtgv",
+    "body": [
+      "${1:T} ${2:value};",
+      "if (!${3:x}.TryGetValue(${4:key}, out ${2})) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "if statement with condition whether TryGetValue method returns false."
+  },
   "if return": {
     "prefix": "ifre",
     "body": [
@@ -601,8 +630,7 @@
   "if string.IsNullOrEmpty": {
     "prefix": "ifsne",
     "body": [
-      "if (string.IsNullOrEmpty(${1:s}))",
-      "{",
+      "if (string.IsNullOrEmpty(${1:s})) {",
       "\t${0}",
       "}"
     ],
@@ -611,12 +639,21 @@
   "if string.IsNullOrWhiteSpace": {
     "prefix": "ifsnw",
     "body": [
-      "if (string.IsNullOrWhiteSpace(${1:s}))",
-      "{",
+      "if (string.IsNullOrWhiteSpace(${1:s})) {",
       "\t${0}",
       "}"
     ],
     "description": "if string.IsNullOrWhiteSpace"
+  },
+  "if TryGetValue": {
+    "prefix": "iftgv",
+    "body": [
+      "${1:T} ${2:value};",
+      "if (${3:x}.TryGetValue(${4:key}, out ${2})) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "if statement with condition whether TryGetValue method returns true."
   },
   "List<T> type": {
     "prefix": "gl",
@@ -633,7 +670,7 @@
     "description": "List<T> variable declaration"
   },
   "List<T> variable (with initializer)": {
-    "prefix": "vl_",
+    "prefix": "vlx",
     "body": [
       "var ${1:items} = new List<${2:T}>() { ${3:null} };${0}"
     ],
@@ -642,8 +679,7 @@
   "MemoryStream Variable": {
     "prefix": "u_mysm",
     "body": [
-      "using (var ${1:ms} = new MemoryStream(${2:0}))",
-      "{",
+      "using (var ${1:ms} = new MemoryStream(${2:0})) {",
       "\t${0}",
       "}"
     ],
@@ -652,8 +688,7 @@
   "namespace": {
     "prefix": "ns",
     "body": [
-      "namespace ${1:NamespaceName}",
-      "{",
+      "namespace ${1:NamespaceName} {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
@@ -667,7 +702,7 @@
     "description": "new array "
   },
   "new array (with initializer)": {
-    "prefix": "na_",
+    "prefix": "nax",
     "body": [
       "new ${1:T}[] { ${2:null} }${0}"
     ],
@@ -688,7 +723,7 @@
     "description": "ObservableCollection<T> variable declaration"
   },
   "ObservableCollection<T> variable (with initializer)": {
-    "prefix": "voc_",
+    "prefix": "vocx",
     "body": [
       "var ${1:items} = new ObservableCollection<${2:T}>() { ${3:null} };${0}"
     ],
@@ -810,8 +845,7 @@
     "prefix": "vasxn",
     "body": [
       "var ${1:x} = ${2:expression} as ${3:T};",
-      "if (${1} != null)",
-      "{",
+      "if (${1} != null) {",
       "\t${0}",
       "}"
     ],

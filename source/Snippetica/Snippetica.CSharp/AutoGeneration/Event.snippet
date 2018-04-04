@@ -34,11 +34,11 @@
     </Declarations>
     <Code Language="CSharp"><![CDATA[$_modifiers$ event EventHandler $name$;
 
-protected virtual void On$name$(EventArgs e)
-{
+protected virtual void On$name$(EventArgs e) {
 	EventHandler handler = $name$;
-	if (handler != null)
+	if (handler != null) {
 		handler(this, e);
+	}
 }$end$]]></Code>
   </Snippet>
 </CodeSnippet>

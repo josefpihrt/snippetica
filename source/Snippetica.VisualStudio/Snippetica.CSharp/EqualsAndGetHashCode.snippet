@@ -26,11 +26,9 @@
         <Function>ClassName()</Function>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[public override bool Equals(object obj)
-{
+    <Code Language="CSharp"><![CDATA[public override bool Equals(object obj) {
 	var other = obj as $thisName$;
-	if (other == null)
-	{
+	if (other == null) {
 		return false;
 	}
 
@@ -38,8 +36,7 @@
 	throw new NotImplementedException();
 }
 
-public override int GetHashCode()
-{
+public override int GetHashCode() {
 	throw new NotImplementedException();
 }]]></Code>
   </Snippet>

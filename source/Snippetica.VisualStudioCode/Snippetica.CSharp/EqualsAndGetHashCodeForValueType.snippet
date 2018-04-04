@@ -25,10 +25,8 @@
         <Default>ThisName</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[public override bool Equals(object obj)
-{
-	if(!(obj is $thisName$))
-	{
+    <Code Language="CSharp"><![CDATA[public override bool Equals(object obj) {
+	if(!(obj is $thisName$)) {
 		return false;
 	}
 
@@ -38,8 +36,7 @@
 	throw new NotImplementedException();
 }
 
-public override int GetHashCode()
-{
+public override int GetHashCode() {
 	throw new NotImplementedException();
 }]]></Code>
   </Snippet>

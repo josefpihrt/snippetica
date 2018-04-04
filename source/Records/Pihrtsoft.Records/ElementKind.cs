@@ -22,6 +22,6 @@ namespace Pihrtsoft.Records
         Postfix,
         PostfixMany,
         Prefix,
-        PrefixMany
+        PrefixMany,
     }
 }

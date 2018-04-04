@@ -45,22 +45,22 @@ namespace Snippetica.Validations
 
         public static void ThrowOnDuplicateFileName(IEnumerable<Snippet> snippets)
         {
-            foreach (IGrouping<string, Snippet> grouping in snippets
+            IGrouping<string, Snippet> duplicate = snippets
                 .GroupBy(f => Path.GetFileNameWithoutExtension(f.FilePath))
-                .Where(f => f.CountExceeds(1)))
-            {
-                throw new InvalidOperationException($"Multiple snippets with same file name '{grouping.Key}'");
-            }
+                .FirstOrDefault(f => f.CountExceeds(1));
+
+            if (duplicate != null)
+                throw new InvalidOperationException($"Multiple snippets with same file name '{duplicate.Key}'");
         }
 
         public static void ThrowOnDuplicateShortcut(IEnumerable<Snippet> snippets)
         {
-            foreach (IGrouping<string, Snippet> grouping in snippets
+            IGrouping<string, Snippet> duplicate = snippets
                 .GroupBy(f => f.Shortcut)
-                .Where(f => f.CountExceeds(1)))
-            {
-                throw new InvalidOperationException($"Multiple snippets with same shortcut '{grouping.Key}'");
-            }
+                .FirstOrDefault(f => f.CountExceeds(1));
+
+            if (duplicate != null)
+                throw new InvalidOperationException($"Multiple snippets with same shortcut '{duplicate.Key}'");
         }
     }
 }

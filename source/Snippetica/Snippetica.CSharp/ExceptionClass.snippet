@@ -40,25 +40,17 @@
       </Literal>
     </Declarations>
     <Code Language="CSharp"><![CDATA[[Serializable]
-$modifier$ class $name$Exception : $base$
-{
-	public $name$Exception()
-	{
+$modifier$ class $name$Exception : $base$ {
+	public $name$Exception() {
 	}
 
-	public $name$Exception(string message)
-		: base(message)
-	{
+	public $name$Exception(string message) : base(message) {
 	}
 
-	public $name$Exception(string message, Exception inner)
-		: base(message, inner)
-	{
+	public $name$Exception(string message, Exception inner) : base(message, inner) {
 	}
 
-	protected $name$Exception(SerializationInfo info, StreamingContext context)
-		: base(info, context)
-	{
+	protected $name$Exception(SerializationInfo info, StreamingContext context) : base(info, context) {
 	}$end$
 }]]></Code>
   </Snippet>

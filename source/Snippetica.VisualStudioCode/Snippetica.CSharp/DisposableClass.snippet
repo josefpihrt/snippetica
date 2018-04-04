@@ -30,22 +30,17 @@
         <Default>ClassName</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IDisposable
-{
+    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IDisposable {
 	private bool _disposed;
 
-	public void Dispose()
-	{
+	public void Dispose() {
 		Dispose(true);
 		GC.SuppressFinalize(this);
 	}
 
-	protected virtual void Dispose(bool disposing)
-	{
-		if (!_disposed)
-		{
-			if (disposing)
-			{
+	protected virtual void Dispose(bool disposing) {
+		if (!_disposed) {
+			if (disposing) {
 				throw new NotImplementedException();
 			}
 

@@ -16,19 +16,9 @@ namespace Snippetica.CodeGeneration
 
         public Collection<Snippet> Snippets { get; }
 
-        public virtual string WithArgumentsSuffix(Snippet snippet)
-        {
-            return "_";
-        }
-
-        public virtual string WithParametersSuffix(Snippet snippet)
-        {
-            return "_";
-        }
-
         public virtual string WithInitializerSuffix(Snippet snippet)
         {
-            return "_";
+            return "x";
         }
     }
 }

@@ -39,17 +39,13 @@
         <Default>object</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : EqualityComparer<$type$>
-{
-	public override bool Equals($type$ x, $type$ y)
-	{
-		if (object.ReferenceEquals(x, y))
-		{
+    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : EqualityComparer<$type$> {
+	public override bool Equals($type$ x, $type$ y) {
+		if (object.ReferenceEquals(x, y)) {
 			return true;
 		}
 
-		if (x == null || y == null)
-		{
+		if (x == null || y == null) {
 			return false;
 		}
 
@@ -57,10 +53,8 @@
 		throw new NotImplementedException();
 	}
 
-	public override int GetHashCode($type$ obj)
-	{
-		if (obj == null)
-		{
+	public override int GetHashCode($type$ obj) {
+		if (obj == null) {
 			return 0;
 		}
 

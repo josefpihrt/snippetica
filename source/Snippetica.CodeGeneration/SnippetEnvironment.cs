@@ -59,20 +59,19 @@ namespace Snippetica.CodeGeneration
 
             snippets.AddRange(EnumerateSnippets(directory.Path));
 
-            //TODO: uncomment
-            //#if DEBUG
-            //            foreach (Snippet snippet in snippets)
-            //            {
-            //                foreach (string keyword in snippet.Keywords)
-            //                {
-            //                    if (keyword.StartsWith(KnownTags.MetaPrefix + KnownTags.GeneratePrefix, StringComparison.OrdinalIgnoreCase))
-            //                    {
-            //                        Debug.Fail(keyword + "\r\n" + snippet.FilePath);
-            //                        break;
-            //                    }
-            //                }
-            //            }
-            //#endif
+#if DEBUG
+            foreach (Snippet snippet in snippets)
+            {
+                foreach (string keyword in snippet.Keywords)
+                {
+                    if (keyword.StartsWith(KnownTags.MetaPrefix + KnownTags.GeneratePrefix, StringComparison.OrdinalIgnoreCase))
+                    {
+                        Debug.Fail(keyword + "\r\n" + snippet.FilePath);
+                        break;
+                    }
+                }
+            }
+#endif
 
             snippets.AddRange(SnippetGenerator.GenerateAlternativeShortcuts(snippets));
 
@@ -195,5 +194,7 @@ namespace Snippetica.CodeGeneration
         public abstract PackageGenerator CreatePackageGenerator();
 
         public abstract bool IsSupportedLanguage(Language language);
+
+        public abstract string GetVersion(Language language);
     }
 }

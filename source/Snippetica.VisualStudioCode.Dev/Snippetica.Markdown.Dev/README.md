@@ -1,9 +1,11 @@
-## Snippetica.Markdown.Dev
+## Snippetica\.Markdown\.Dev
 
 ### List of Selected Snippets
 
-Shortcut | Title
--------- | -----
+Shortcut|Title
+--------|-----
 bi|[bold italic](BoldItalic.snippet)
 ib|[italic bold](ItalicBold.snippet)
-twoh|[table with 1 column \(without header\)](TableWithoutHeader.snippet)
+twoh|[table with 1 column (without header)](TableWithoutHeader.snippet)
+
+*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

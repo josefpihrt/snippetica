@@ -27,7 +27,7 @@
               <New Value="em" Description="enum declaration" />
               <New Value="et" Description="event declaration" />
               <New Value="f" Description="field declaration" />
-              <New Value="ie" Description="inteface declaration" />
+              <New Value="ie" Description="interface declaration" />
               <New Value="ir" Description="indexer declaration" />
               <New Value="k" Description="constant declaration" />
               <New Value="m" Description="method declaration" />
@@ -99,8 +99,6 @@
               </Remove>
             </Set>
             <Set Kind="Other">
-              <New Value="_" Description="with parameters" Comment="suffix" />
-              <New Value="_" Description="with initializer" Comment="suffix" />
               <New Value="c" Description="catch clause" />
               <New Value="d" Description="default keyword" />
               <New Value="e" Description="else clause" />
@@ -114,6 +112,7 @@
               <New Value="ps" Description="private set" />
               <New Value="r" Description="return keyword" />
               <New Value="v" Description="local variable declaration" />
+              <New Value="x" Description="with initializer" Comment="suffix" />
               <New Value="y" Description="yield" Comment="prefix" />
               <Remove Environments="VisualStudioCode">
                 <New Value="this" Description="containing type name" />

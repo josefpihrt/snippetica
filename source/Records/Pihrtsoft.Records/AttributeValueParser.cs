@@ -52,41 +52,38 @@ namespace Pihrtsoft.Records
                                     }
                                 }
                             }
-                            else
+                            else if (value[i] == settings.OpenVariableDelimiter)
                             {
-                                if (value[i] == settings.OpenVariableDelimiter)
+                                if (i - startIndex == 1)
                                 {
-                                    if (i - startIndex == 1)
-                                    {
-                                        fInside = false;
-                                        startIndex = -1;
-                                    }
-                                    else
-                                    {
-                                        Throw.VariableNameCannotContainCharacter(value, settings.OpenVariableDelimiter);
-                                    }
-                                }
-                                else if (value[i] == settings.CloseVariableDelimiter)
-                                {
-                                    int length = i - startIndex - 1;
-
-                                    if (length == 0)
-                                        Throw.VariableNameCannotBeEmpty(value);
-
-                                    string variableName = value.Substring(startIndex + 1, length);
-
-                                    Variable variable = reader.FindVariable(variableName);
-
-                                    if (variable == null)
-                                        Throw.VariableIsNotDefined(value, variableName);
-
-                                    sb.Append(value, lastEndIndex, startIndex - lastEndIndex);
-                                    sb.Append(variable.Value);
-
                                     fInside = false;
                                     startIndex = -1;
-                                    lastEndIndex = i + 1;
                                 }
+                                else
+                                {
+                                    Throw.VariableNameCannotContainCharacter(value, settings.OpenVariableDelimiter);
+                                }
+                            }
+                            else if (value[i] == settings.CloseVariableDelimiter)
+                            {
+                                int length = i - startIndex - 1;
+
+                                if (length == 0)
+                                    Throw.VariableNameCannotBeEmpty(value);
+
+                                string variableName = value.Substring(startIndex + 1, length);
+
+                                Variable variable = reader.FindVariable(variableName);
+
+                                if (variable == null)
+                                    Throw.VariableIsNotDefined(value, variableName);
+
+                                sb.Append(value, lastEndIndex, startIndex - lastEndIndex);
+                                sb.Append(variable.Value);
+
+                                fInside = false;
+                                startIndex = -1;
+                                lastEndIndex = i + 1;
                             }
 
                             i++;

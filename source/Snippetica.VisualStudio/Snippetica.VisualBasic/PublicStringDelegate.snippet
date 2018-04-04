@@ -19,11 +19,16 @@
   <Snippet>
     <Declarations>
       <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>parameter As T</Default>
+      </Literal>
+      <Literal>
         <ID>name</ID>
         <ToolTip>Delegate name</ToolTip>
         <Default>DelegateName</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Public Delegate Function $name$() As String$end$]]></Code>
+    <Code Language="VB"><![CDATA[Public Delegate Function $name$($_parameters$) As String$end$]]></Code>
   </Snippet>
 </CodeSnippet>

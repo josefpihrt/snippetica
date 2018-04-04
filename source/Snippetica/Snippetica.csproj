@@ -55,6 +55,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>..\global.ruleset</CodeAnalysisRuleSet>
+    <CreateVsixContainer>False</CreateVsixContainer>
+    <DeployExtension>False</DeployExtension>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -206,10 +208,17 @@
     <None Include="Snippetica.CSharp\AutoGeneration\IfTryParse.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ImmutableCollectionOfTType.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ImmutableCollectionOfTVariable.snippet" />
+    <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyIndexer.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Indexer.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Interface.snippet" />
-    <None Include="Snippetica.CSharp\AutoGeneration\InterfaceEvent.snippet" />
-    <None Include="Snippetica.CSharp\AutoGeneration\InterfaceEventWithEventHandlerOfT.snippet" />
+    <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyStruct.snippet" />
+    <None Include="Snippetica.CSharp\Dev\Attributes\Attribute.snippet" />
+    <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotStringIsNullOrWhiteSpace.snippet" />
+    <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotStringIsNullOrEmpty.snippet" />
+    <None Include="Snippetica.CSharp\Dev\ConditionalOperatorStringIsNullOrWhiteSpace.snippet" />
+    <None Include="Snippetica.CSharp\Dev\ConditionalOperatorStringIsNullOrEmpty.snippet" />
+    <None Include="Snippetica.CSharp\InterfaceEvent.snippet" />
+    <None Include="Snippetica.CSharp\InterfaceEventWithEventHandlerOfT.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceIndexer.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceMethod.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceProperty.snippet" />
@@ -351,6 +360,7 @@
     <None Include="Snippetica.CSharp\Dev\ThrowStatement.snippet" />
     <None Include="Snippetica.CSharp\Dev\TimeSpanType.snippet" />
     <None Include="Snippetica.CSharp\Dev\VariableAsTIfNotNull.snippet" />
+    <None Include="Snippetica.CSharp\ThrowNewObjectDisposedException.snippet" />
     <None Include="Snippetica.CSharp\WhileNotNull.snippet" />
     <None Include="Snippetica.CSharp\WhileNull.snippet" />
     <None Include="Snippetica.CSharp\Dev\YieldReturnNew.snippet" />
@@ -654,10 +664,11 @@
     <None Include="Snippetica.VisualBasic\AutoGeneration\IfTryParse.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\ImmutableCollectionOfTType.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\ImmutableCollectionOfTVariable.snippet" />
+    <None Include="Snippetica.VisualBasic\AutoGeneration\ReadOnlyIndexer.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\Indexer.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\Interface.snippet" />
-    <None Include="Snippetica.VisualBasic\AutoGeneration\InterfaceEvent.snippet" />
-    <None Include="Snippetica.VisualBasic\AutoGeneration\InterfaceEventWithEventHandlerOfT.snippet" />
+    <None Include="Snippetica.VisualBasic\InterfaceEvent.snippet" />
+    <None Include="Snippetica.VisualBasic\InterfaceEventWithEventHandlerOfT.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\InterfaceIndexer.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\InterfaceMethod.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\InterfaceProperty.snippet" />
@@ -709,6 +720,7 @@
     <None Include="Snippetica.VisualBasic\Dev\StringKeyword.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\ThrowStatement.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\TimeSpanType.snippet" />
+    <None Include="Snippetica.VisualBasic\ThrowNewObjectDisposedException.snippet" />
     <None Include="Snippetica.VisualBasic\WhileIsNotNothing.snippet" />
     <None Include="Snippetica.VisualBasic\WhileIsNothing.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\YieldKeyword.snippet" />

@@ -19,11 +19,16 @@
   <Snippet>
     <Declarations>
       <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>parameter As T</Default>
+      </Literal>
+      <Literal>
         <ID>name</ID>
         <ToolTip>Delegate name</ToolTip>
         <Default>DelegateName</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Friend Delegate Function $name$() As Long$end$]]></Code>
+    <Code Language="VB"><![CDATA[Friend Delegate Function $name$($_parameters$) As Long$end$]]></Code>
   </Snippet>
 </CodeSnippet>

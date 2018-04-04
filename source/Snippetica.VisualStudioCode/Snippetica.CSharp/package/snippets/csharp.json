@@ -2,8 +2,7 @@
   "- operator overloading": {
     "prefix": "oo_Minus",
     "body": [
-      "public static ${1:ThisName} operator -(${1} ${2:left}, ${1} ${3:right})",
-      "{",
+      "public static ${1:ThisName} operator -(${1} ${2:left}, ${1} ${3:right}) {",
       "\t${0}",
       "}"
     ],
@@ -12,8 +11,7 @@
   "-- operator overloading": {
     "prefix": "oo_MinusMinus",
     "body": [
-      "public static ${1:ThisName} operator --(${1} ${2:value})",
-      "{",
+      "public static ${1:ThisName} operator --(${1} ${2:value}) {",
       "\t${0}",
       "}"
     ],
@@ -29,8 +27,7 @@
   "! operator overloading": {
     "prefix": "oo_ExclamationMark",
     "body": [
-      "public static ${1:ThisName} operator !(${1} ${2:value})",
-      "{",
+      "public static ${1:ThisName} operator !(${1} ${2:value}) {",
       "\t${0}",
       "}"
     ],
@@ -82,8 +79,7 @@
   "% operator overloading": {
     "prefix": "oo_Percent",
     "body": [
-      "public static ${1:ThisName} operator %(${1} ${2:left}, ${1} ${3:right})",
-      "{",
+      "public static ${1:ThisName} operator %(${1} ${2:left}, ${1} ${3:right}) {",
       "\t${0}",
       "}"
     ],
@@ -92,8 +88,7 @@
   "& operator overloading": {
     "prefix": "oo_Ampersand",
     "body": [
-      "public static ${1:ThisName} operator &(${1} ${2:left}, ${1} ${3:right})",
-      "{",
+      "public static ${1:ThisName} operator &(${1} ${2:left}, ${1} ${3:right}) {",
       "\t${0}",
       "}"
     ],
@@ -102,8 +97,7 @@
   "* operator overloading": {
     "prefix": "oo_Asterisk",
     "body": [
-      "public static ${1:ThisName} operator *(${1} ${2:left}, ${1} ${3:right})",
-      "{",
+      "public static ${1:ThisName} operator *(${1} ${2:left}, ${1} ${3:right}) {",
       "\t${0}",
       "}"
     ],
@@ -112,8 +106,7 @@
   "/ operator overloading": {
     "prefix": "oo_Slash",
     "body": [
-      "public static ${1:ThisName} operator /(${1} ${2:left}, ${1} ${3:right})",
-      "{",
+      "public static ${1:ThisName} operator /(${1} ${2:left}, ${1} ${3:right}) {",
       "\t${0}",
       "}"
     ],
@@ -122,8 +115,7 @@
   "^ operator overloading": {
     "prefix": "oo_Caret",
     "body": [
-      "public static ${1:ThisName} operator ^(${1} ${2:left}, ${1} ${3:right})",
-      "{",
+      "public static ${1:ThisName} operator ^(${1} ${2:left}, ${1} ${3:right}) {",
       "\t${0}",
       "}"
     ],
@@ -132,8 +124,7 @@
   "| operator overloading": {
     "prefix": "oo_VerticalBar",
     "body": [
-      "public static ${1:ThisName} operator |(${1} ${2:left}, ${1} ${3:right})",
-      "{",
+      "public static ${1:ThisName} operator |(${1} ${2:left}, ${1} ${3:right}) {",
       "\t${0}",
       "}"
     ],
@@ -142,8 +133,7 @@
   "~ operator overloading": {
     "prefix": "oo_Tilde",
     "body": [
-      "public static ${1:ThisName} operator ~(${1} ${2:value})",
-      "{",
+      "public static ${1:ThisName} operator ~(${1} ${2:value}) {",
       "\t${0}",
       "}"
     ],
@@ -152,8 +142,7 @@
   "+ operator overloading": {
     "prefix": "oo_Plus",
     "body": [
-      "public static ${1:ThisName} operator +(${1} ${2:left}, ${1} ${3:right})",
-      "{",
+      "public static ${1:ThisName} operator +(${1} ${2:left}, ${1} ${3:right}) {",
       "\t${0}",
       "}"
     ],
@@ -162,8 +151,7 @@
   "++ operator overloading": {
     "prefix": "oo_PlusPlus",
     "body": [
-      "public static ${1:ThisName} operator ++(${1} ${2:value})",
-      "{",
+      "public static ${1:ThisName} operator ++(${1} ${2:value}) {",
       "\t${0}",
       "}"
     ],
@@ -172,13 +160,11 @@
   "< operator overloading": {
     "prefix": "oo_LessThan",
     "body": [
-      "public static bool operator <(${1:ThisName} ${2:left}, ${1} ${3:right})",
-      "{",
+      "public static bool operator <(${1:ThisName} ${2:left}, ${1} ${3:right}) {",
       "\t${0}",
       "}",
       "",
-      "public static bool operator >(${1} ${2}, ${1} ${3})",
-      "{",
+      "public static bool operator >(${1} ${2}, ${1} ${3}) {",
       "}"
     ],
     "description": "< operator overloading"
@@ -186,8 +172,7 @@
   "<< operator overloading": {
     "prefix": "oo_LessThanLessThan",
     "body": [
-      "public static ${1:ThisName} operator <<(${1} ${2:left}, int ${3:count})",
-      "{",
+      "public static ${1:ThisName} operator <<(${1} ${2:left}, int ${3:count}) {",
       "\t${0}",
       "}"
     ],
@@ -196,13 +181,11 @@
   "<= operator overloading": {
     "prefix": "oo_LessThanEquals",
     "body": [
-      "public static bool operator <=(${1:ThisName} ${2:left}, ${1} ${3:right})",
-      "{",
+      "public static bool operator <=(${1:ThisName} ${2:left}, ${1} ${3:right}) {",
       "\t${0}",
       "}",
       "",
-      "public static bool operator >=(${1} ${2}, ${1} ${3})",
-      "{",
+      "public static bool operator >=(${1} ${2}, ${1} ${3}) {",
       "}"
     ],
     "description": "<= operator overloading"
@@ -210,13 +193,11 @@
   "== operator overloading": {
     "prefix": "oo_EqualsEquals",
     "body": [
-      "public static bool operator ==(${1:ThisName} ${2:left}, ${1} ${3:right})",
-      "{",
+      "public static bool operator ==(${1:ThisName} ${2:left}, ${1} ${3:right}) {",
       "\t${0}",
       "}",
       "",
-      "public static bool operator !=(${1} ${2}, ${1} ${3})",
-      "{",
+      "public static bool operator !=(${1} ${2}, ${1} ${3}) {",
       "\treturn !(${2} == ${3});",
       "}"
     ],
@@ -225,12 +206,10 @@
   "> operator overloading": {
     "prefix": "oo_GreaterThan",
     "body": [
-      "public static bool operator <(${1:ThisName} ${2:left}, ${1} ${3:right})",
-      "{",
+      "public static bool operator <(${1:ThisName} ${2:left}, ${1} ${3:right}) {",
       "}",
       "",
-      "public static bool operator >(${1} ${2}, ${1} ${3})",
-      "{",
+      "public static bool operator >(${1} ${2}, ${1} ${3}) {",
       "\t${0}",
       "}"
     ],
@@ -239,12 +218,10 @@
   ">= operator overloading": {
     "prefix": "oo_GreaterThanEquals",
     "body": [
-      "public static bool operator <=(${1:ThisName} ${2:left}, ${1} ${3:right})",
-      "{",
+      "public static bool operator <=(${1:ThisName} ${2:left}, ${1} ${3:right}) {",
       "}",
       "",
-      "public static bool operator >=(${1} ${2}, ${1} ${3})",
-      "{",
+      "public static bool operator >=(${1} ${2}, ${1} ${3}) {",
       "\t${0}",
       "}"
     ],
@@ -253,8 +230,7 @@
   ">> operator overloading": {
     "prefix": "oo_GreaterThanGreaterThan",
     "body": [
-      "public static ${1:ThisName} operator >>(${1} ${2:left}, int ${3:count})",
-      "{",
+      "public static ${1:ThisName} operator >>(${1} ${2:left}, int ${3:count}) {",
       "\t${0}",
       "}"
     ],
@@ -268,7 +244,7 @@
     "description": "array variable declaration"
   },
   "array variable (with initializer)": {
-    "prefix": "va_",
+    "prefix": "vax",
     "body": [
       "var ${1:items} = new ${2:T}[] { ${3:null} };${0}"
     ],
@@ -278,8 +254,7 @@
     "prefix": "c_Attribute",
     "body": [
       "[AttributeUsage(AttributeTargets${1:.All}, AllowMultiple = ${2:false})]",
-      "${3:public sealed} class ${4:My}Attribute : ${5:Attribute}",
-      "{",
+      "${3:public sealed} class ${4:My}Attribute : ${5:Attribute} {",
       "\t${0}",
       "}"
     ],
@@ -304,8 +279,7 @@
   "catch clause": {
     "prefix": "catch",
     "body": [
-      "catch (${1:Exception} ${2:ex})",
-      "{",
+      "catch (${1:Exception} ${2:ex}) {",
       "\t${0}",
       "}"
     ],
@@ -314,15 +288,11 @@
   "Collection<T> class": {
     "prefix": "c_CollectionOfT",
     "body": [
-      "${1:public} class ${2:Collection} : Collection<${3:object}>",
-      "{",
-      "\tpublic ${2}()",
-      "\t{",
+      "${1:public} class ${2:Collection} : Collection<${3:object}> {",
+      "\tpublic ${2}() {",
       "\t}",
       "",
-      "\tpublic ${2}(IList<${3}> list)",
-      "\t\t: base(list)",
-      "\t{",
+      "\tpublic ${2}(IList<${3}> list) : base(list) {",
       "\t}",
       "",
       "\t${0}",
@@ -333,21 +303,21 @@
   "conditional operator": {
     "prefix": "co",
     "body": [
-      "(${1:expression}) ? ${2:null} : ${3:null}${0}"
+      "(${1:expression}) ? ${2:true} : ${3:false}${0}"
     ],
     "description": "conditional operator"
   },
   "conditional operator (equal to null)": {
     "prefix": "con",
     "body": [
-      "(${1:expression} == null) ? ${2:null} : ${3:null}${0}"
+      "(${1:expression} == null) ? ${2:true} : ${3:false}${0}"
     ],
     "description": "conditional operator with condition whether the expression is equal to null"
   },
   "conditional operator (not equal to null)": {
     "prefix": "coxn",
     "body": [
-      "(${1:expression} != null) ? ${2:null} : ${3:null}${0}"
+      "(${1:expression} != null) ? ${2:true} : ${3:false}${0}"
     ],
     "description": "conditional operator with condition whether the expression is not equal to null"
   },
@@ -382,34 +352,26 @@
   "Dictionary<TKey, TValue> class": {
     "prefix": "c_DictionaryOfTKeyTValue",
     "body": [
-      "${1:public} class ${2:Dictionary} : Dictionary<${3:object}, ${4:object}>",
-      "{",
-      "\tpublic ${2}() : base()",
-      "\t{",
+      "${1:public} class ${2:Dictionary} : Dictionary<${3:object}, ${4:object}> {",
+      "\tpublic ${2}() : base() {",
       "\t}",
       "",
-      "\tpublic ${2}(int capacity) : base(capacity)",
-      "\t{",
+      "\tpublic ${2}(int capacity) : base(capacity) {",
       "\t}",
       "",
-      "\tpublic ${2}(IEqualityComparer<${3}> comparer) : base(comparer)",
-      "\t{",
+      "\tpublic ${2}(IEqualityComparer<${3}> comparer) : base(comparer) {",
       "\t}",
       "",
-      "\tpublic ${2}(IDictionary<${3}, ${4}> dictionary) : base(dictionary)",
-      "\t{",
+      "\tpublic ${2}(IDictionary<${3}, ${4}> dictionary) : base(dictionary) {",
       "\t}",
       "",
-      "\tpublic ${2}(int capacity, IEqualityComparer<${3}> comparer) : base(capacity, comparer)",
-      "\t{",
+      "\tpublic ${2}(int capacity, IEqualityComparer<${3}> comparer) : base(capacity, comparer) {",
       "\t}",
       "",
-      "\tpublic ${2}(SerializationInfo info, StreamingContext context) : base(info, context)",
-      "\t{",
+      "\tpublic ${2}(SerializationInfo info, StreamingContext context) : base(info, context) {",
       "\t}",
       "",
-      "\tpublic ${2}(IDictionary<${3}, ${4}> dictionary, IEqualityComparer<${3}> comparer) : base(dictionary, comparer)",
-      "\t{",
+      "\tpublic ${2}(IDictionary<${3}, ${4}> dictionary, IEqualityComparer<${3}> comparer) : base(dictionary, comparer) {",
       "\t}",
       "",
       "\t${0}",
@@ -420,22 +382,17 @@
   "Disposable class": {
     "prefix": "c_Disposable",
     "body": [
-      "${1:public} class ${2:ClassName} : IDisposable",
-      "{",
+      "${1:public} class ${2:ClassName} : IDisposable {",
       "\tprivate bool _disposed;",
       "",
-      "\tpublic void Dispose()",
-      "\t{",
+      "\tpublic void Dispose() {",
       "\t\tDispose(true);",
       "\t\tGC.SuppressFinalize(this);",
       "\t}",
       "",
-      "\tprotected virtual void Dispose(bool disposing)",
-      "\t{",
-      "\t\tif (!_disposed)",
-      "\t\t{",
-      "\t\t\tif (disposing)",
-      "\t\t\t{",
+      "\tprotected virtual void Dispose(bool disposing) {",
+      "\t\tif (!_disposed) {",
+      "\t\t\tif (disposing) {",
       "\t\t\t\tthrow new NotImplementedException();",
       "\t\t\t}",
       "",
@@ -451,18 +408,14 @@
     "body": [
       "private bool _disposed;",
       "",
-      "public void Dispose()",
-      "{",
+      "public void Dispose() {",
       "\tDispose(true);",
       "\tGC.SuppressFinalize(this);",
       "}",
       "",
-      "protected virtual void Dispose(bool disposing)",
-      "{",
-      "\tif (!_disposed)",
-      "\t{",
-      "\t\tif (disposing)",
-      "\t\t{",
+      "protected virtual void Dispose(bool disposing) {",
+      "\tif (!_disposed) {",
+      "\t\tif (disposing) {",
       "\t\t\tthrow new NotImplementedException();",
       "\t\t}",
       "",
@@ -475,8 +428,7 @@
   "do while not null": {
     "prefix": "doxn",
     "body": [
-      "do",
-      "{",
+      "do {",
       "\t${0}",
       "",
       "} while (${1:x} != null);"
@@ -486,8 +438,7 @@
   "do while null": {
     "prefix": "don",
     "body": [
-      "do",
-      "{",
+      "do {",
       "\t${0}",
       "",
       "} while (${1:x} == null);"
@@ -497,8 +448,7 @@
   "else clause": {
     "prefix": "e",
     "body": [
-      "else",
-      "{",
+      "else {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}"
     ],
@@ -507,8 +457,7 @@
   "else-if": {
     "prefix": "eif",
     "body": [
-      "else if (${1:true})",
-      "{",
+      "else if (${1:true}) {",
       "\t${0}",
       "}"
     ],
@@ -524,11 +473,9 @@
   "Equals and GetHashCode": {
     "prefix": "equals",
     "body": [
-      "public override bool Equals(object obj)",
-      "{",
+      "public override bool Equals(object obj) {",
       "\tvar other = obj as ${1:ThisName};",
-      "\tif (other == null)",
-      "\t{",
+      "\tif (other == null) {",
       "\t\treturn false;",
       "\t}",
       "",
@@ -536,8 +483,7 @@
       "\tthrow new NotImplementedException();",
       "}",
       "",
-      "public override int GetHashCode()",
-      "{",
+      "public override int GetHashCode() {",
       "\tthrow new NotImplementedException();",
       "}"
     ],
@@ -546,10 +492,8 @@
   "Equals and GetHashCode for value type": {
     "prefix": "equals_ValueType",
     "body": [
-      "public override bool Equals(object obj)",
-      "{",
-      "\tif(!(obj is ${1:ThisName}))",
-      "\t{",
+      "public override bool Equals(object obj) {",
+      "\tif(!(obj is ${1:ThisName})) {",
       "\t\treturn false;",
       "\t}",
       "",
@@ -559,8 +503,7 @@
       "\tthrow new NotImplementedException();",
       "}",
       "",
-      "public override int GetHashCode()",
-      "{",
+      "public override int GetHashCode() {",
       "\tthrow new NotImplementedException();",
       "}"
     ],
@@ -570,25 +513,17 @@
     "prefix": "c_Exception",
     "body": [
       "[Serializable]",
-      "${1:public} class ${2:My}Exception : ${3:Exception}",
-      "{",
-      "\tpublic ${2}Exception()",
-      "\t{",
+      "${1:public} class ${2:My}Exception : ${3:Exception} {",
+      "\tpublic ${2}Exception() {",
       "\t}",
       "",
-      "\tpublic ${2}Exception(string message)",
-      "\t\t: base(message)",
-      "\t{",
+      "\tpublic ${2}Exception(string message) : base(message) {",
       "\t}",
       "",
-      "\tpublic ${2}Exception(string message, Exception inner)",
-      "\t\t: base(message, inner)",
-      "\t{",
+      "\tpublic ${2}Exception(string message, Exception inner) : base(message, inner) {",
       "\t}",
       "",
-      "\tprotected ${2}Exception(SerializationInfo info, StreamingContext context)",
-      "\t\t: base(info, context)",
-      "\t{",
+      "\tprotected ${2}Exception(SerializationInfo info, StreamingContext context) : base(info, context) {",
       "\t}${0}",
       "}"
     ],
@@ -604,13 +539,11 @@
   "explicit operator overloading": {
     "prefix": "oo_Explicit",
     "body": [
-      "public static explicit operator ${1:ThisName}(${2:object} ${3:value})",
-      "{",
+      "public static explicit operator ${1:ThisName}(${2:object} ${3:value}) {",
       "\t${0}",
       "}",
       "",
-      "public static explicit operator ${2}(${1} ${3})",
-      "{",
+      "public static explicit operator ${2}(${1} ${3}) {",
       "}"
     ],
     "description": "explicit operator overloading"
@@ -618,8 +551,7 @@
   "finally clause": {
     "prefix": "finally",
     "body": [
-      "finally",
-      "{",
+      "finally {",
       "\t${0}",
       "}"
     ],
@@ -628,8 +560,7 @@
   "for statement": {
     "prefix": "fr",
     "body": [
-      "for (int ${1:i} = 0; ${1} < ${2:length}; ${1}++)",
-      "{",
+      "for (int ${1:i} = 0; ${1} < ${2:length}; ${1}++) {",
       "\t${0}",
       "}"
     ],
@@ -638,8 +569,7 @@
   "for statement (reversed)": {
     "prefix": "frr",
     "body": [
-      "for (int ${1:i} = ${2:length} - 1; ${1} >= 0; ${1}--)",
-      "{",
+      "for (int ${1:i} = ${2:length} - 1; ${1} >= 0; ${1}--) {",
       "\t${0}",
       "}"
     ],
@@ -648,8 +578,7 @@
   "foreach statement": {
     "prefix": "fe",
     "body": [
-      "foreach (var ${1:item} in ${2:items})",
-      "{",
+      "foreach (var ${1:item} in ${2:items}) {",
       "\t${0}",
       "}"
     ],
@@ -665,22 +594,17 @@
   "IComparer class": {
     "prefix": "c_IComparer",
     "body": [
-      "${1:public} class ${2:Comparer} : IComparer",
-      "{",
-      "\tpublic int Compare(object x, object y)",
-      "\t{",
-      "\t\tif (object.ReferenceEquals(x, y))",
-      "\t\t{",
+      "${1:public} class ${2:Comparer} : IComparer {",
+      "\tpublic int Compare(object x, object y) {",
+      "\t\tif (object.ReferenceEquals(x, y)) {",
       "\t\t\treturn 0;",
       "\t\t}",
       "",
-      "\t\tif (x == null)",
-      "\t\t{",
+      "\t\tif (x == null) {",
       "\t\t\treturn (y == null) ? 0 : -1;",
       "\t\t}",
       "",
-      "\t\tif (y == null)",
-      "\t\t{",
+      "\t\tif (y == null) {",
       "\t\t\treturn 1;",
       "\t\t}",
       "",
@@ -697,22 +621,17 @@
   "IComparer<T> class": {
     "prefix": "c_IComparerOfT",
     "body": [
-      "${1:public} class ${2:Comparer} : IComparer<${3:object}>",
-      "{",
-      "\tpublic int Compare(${3} x, ${3} y)",
-      "\t{",
-      "\t\tif (object.ReferenceEquals(x, y))",
-      "\t\t{",
+      "${1:public} class ${2:Comparer} : IComparer<${3:object}> {",
+      "\tpublic int Compare(${3} x, ${3} y) {",
+      "\t\tif (object.ReferenceEquals(x, y)) {",
       "\t\t\treturn 0;",
       "\t\t}",
       "",
-      "\t\tif (x == null)",
-      "\t\t{",
+      "\t\tif (x == null) {",
       "\t\t\treturn -1;",
       "\t\t}",
       "",
-      "\t\tif (y == null)",
-      "\t\t{",
+      "\t\tif (y == null) {",
       "\t\t\treturn 1;",
       "\t\t}",
       "",
@@ -733,10 +652,8 @@
   "IEnumerator<T> variable": {
     "prefix": "u_er",
     "body": [
-      "using (var ${1:en} = ${2:items}.GetEnumerator())",
-      "{",
-      "\twhile (${1}.MoveNext())",
-      "\t{",
+      "using (var ${1:en} = ${2:items}.GetEnumerator()) {",
+      "\twhile (${1}.MoveNext()) {",
       "\t\t${0}",
       "\t}",
       "}"
@@ -746,17 +663,13 @@
   "IEqualityComparer class": {
     "prefix": "c_IEqualityComparer",
     "body": [
-      "${1:public} class ${2:EqualityComparer} : IEqualityComparer",
-      "{",
-      "\tnew public bool Equals(object x, object y)",
-      "\t{",
-      "\t\tif (object.ReferenceEquals(x, y))",
-      "\t\t{",
+      "${1:public} class ${2:EqualityComparer} : IEqualityComparer {",
+      "\tnew public bool Equals(object x, object y) {",
+      "\t\tif (object.ReferenceEquals(x, y)) {",
       "\t\t\treturn true;",
       "\t\t}",
       "",
-      "\t\tif (x == null || y == null)",
-      "\t\t{",
+      "\t\tif (x == null || y == null) {",
       "\t\t\treturn false;",
       "\t\t}",
       "",
@@ -767,10 +680,8 @@
       "\t\tthrow new NotImplementedException();",
       "\t}",
       "",
-      "\tpublic int GetHashCode(object obj)",
-      "\t{",
-      "\t\tif (obj == null)",
-      "\t\t{",
+      "\tpublic int GetHashCode(object obj) {",
+      "\t\tif (obj == null) {",
       "\t\t\treturn 0;",
       "\t\t}",
       "",
@@ -783,17 +694,13 @@
   "IEqualityComparer<T> class": {
     "prefix": "c_IEqualityComparerOfT",
     "body": [
-      "${1:public} class ${2:EqualityComparer} : EqualityComparer<${3:object}>",
-      "{",
-      "\tpublic override bool Equals(${3} x, ${3} y)",
-      "\t{",
-      "\t\tif (object.ReferenceEquals(x, y))",
-      "\t\t{",
+      "${1:public} class ${2:EqualityComparer} : EqualityComparer<${3:object}> {",
+      "\tpublic override bool Equals(${3} x, ${3} y) {",
+      "\t\tif (object.ReferenceEquals(x, y)) {",
       "\t\t\treturn true;",
       "\t\t}",
       "",
-      "\t\tif (x == null || y == null)",
-      "\t\t{",
+      "\t\tif (x == null || y == null) {",
       "\t\t\treturn false;",
       "\t\t}",
       "",
@@ -801,10 +708,8 @@
       "\t\tthrow new NotImplementedException();",
       "\t}",
       "",
-      "\tpublic override int GetHashCode(${3} obj)",
-      "\t{",
-      "\t\tif (obj == null)",
-      "\t\t{",
+      "\tpublic override int GetHashCode(${3} obj) {",
+      "\t\tif (obj == null) {",
       "\t\t\treturn 0;",
       "\t\t}",
       "",
@@ -817,8 +722,7 @@
   "if equal to null": {
     "prefix": "ifn",
     "body": [
-      "if (${1:x} == null)",
-      "{",
+      "if (${1:x} == null) {",
       "\t${0}",
       "}"
     ],
@@ -827,8 +731,7 @@
   "if not": {
     "prefix": "ifx",
     "body": [
-      "if (!${1:x})",
-      "{",
+      "if (!${1:x}) {",
       "\t${0}",
       "}"
     ],
@@ -837,8 +740,7 @@
   "if not equal to null": {
     "prefix": "ifxn",
     "body": [
-      "if (${1:x} != null)",
-      "{",
+      "if (${1:x} != null) {",
       "\t${0}",
       "}"
     ],
@@ -848,8 +750,7 @@
     "prefix": "ifxtp",
     "body": [
       "${1:T} ${2:x};",
-      "if (!${1}.TryParse(${3:value}, out ${2}))",
-      "{",
+      "if (!${1}.TryParse(${3:value}, out ${2})) {",
       "\t${0}",
       "}"
     ],
@@ -859,8 +760,7 @@
     "prefix": "iftp",
     "body": [
       "${1:T} ${2:x};",
-      "if (${1}.TryParse(${3:value}, out ${2}))",
-      "{",
+      "if (${1}.TryParse(${3:value}, out ${2})) {",
       "\t${0}",
       "}"
     ],
@@ -869,13 +769,11 @@
   "implicit operator overloading": {
     "prefix": "oo_Implicit",
     "body": [
-      "public static implicit operator ${1:ThisName}(${2:object} ${3:value})",
-      "{",
+      "public static implicit operator ${1:ThisName}(${2:object} ${3:value}) {",
       "\t${0}",
       "}",
       "",
-      "public static implicit operator ${2}(${1} ${3})",
-      "{",
+      "public static implicit operator ${2}(${1} ${3}) {",
       "}"
     ],
     "description": "implicit operator overloading"
@@ -887,6 +785,20 @@
     ],
     "description": "Int32 variable declaration"
   },
+  "interface event": {
+    "prefix": "_et",
+    "body": [
+      "event EventHandler ${1:EventName};${0}"
+    ],
+    "description": "interface event declaration"
+  },
+  "interface event with EventHandler<T>": {
+    "prefix": "_ett",
+    "body": [
+      "event EventHandler<${1:EventArgs}> ${2:EventName};${0}"
+    ],
+    "description": "interface event declaration with EventHandler<T>"
+  },
   "interface indexer": {
     "prefix": "_ir",
     "body": [
@@ -897,16 +809,9 @@
   "interface method": {
     "prefix": "_m",
     "body": [
-      "${1:void} ${2:MethodName}();${0}"
+      "${1:void} ${2:MethodName}(${3:T parameter});${0}"
     ],
     "description": "interface method declaration"
-  },
-  "interface method (with parameters)": {
-    "prefix": "_m_",
-    "body": [
-      "${1:void} ${2:MethodName}(${3:object parameter});${0}"
-    ],
-    "description": "interface method declaration (with parameters)"
   },
   "interface property": {
     "prefix": "_p",
@@ -939,8 +844,7 @@
   "internal class": {
     "prefix": "ic",
     "body": [
-      "internal class ${1:ClassName}",
-      "{",
+      "internal class ${1:ClassName} {",
       "\t${0}",
       "}"
     ],
@@ -956,42 +860,23 @@
   "internal constructor": {
     "prefix": "icr",
     "body": [
-      "internal ${1:ThisName}()",
-      "{",
+      "internal ${1:ThisName}(${2:T parameter}) {",
       "\t${0}",
       "}"
     ],
     "description": "internal constructor declaration"
   },
-  "internal constructor (with parameters)": {
-    "prefix": "icr_",
-    "body": [
-      "internal ${1:ThisName}(${2:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "internal constructor declaration (with parameters)"
-  },
   "internal delegate": {
     "prefix": "ide",
     "body": [
-      "internal delegate ${1:void} ${2:DelegateName}();${0}"
+      "internal delegate ${1:void} ${2:DelegateName}(${3:T parameter});${0}"
     ],
     "description": "internal delegate declaration"
-  },
-  "internal delegate (with parameters)": {
-    "prefix": "ide_",
-    "body": [
-      "internal delegate ${1:void} ${2:DelegateName}(${3:object parameter});${0}"
-    ],
-    "description": "internal delegate declaration (with parameters)"
   },
   "internal enum": {
     "prefix": "iem",
     "body": [
-      "internal enum ${1:EnumName}",
-      "{",
+      "internal enum ${1:EnumName} {",
       "\t${0}",
       "}"
     ],
@@ -1002,11 +887,11 @@
     "body": [
       "internal event EventHandler ${1:EventName};",
       "",
-      "protected virtual void On${1}(EventArgs e)",
-      "{",
+      "protected virtual void On${1}(EventArgs e) {",
       "\tEventHandler handler = ${1};",
-      "\tif (handler != null)",
+      "\tif (handler != null) {",
       "\t\thandler(this, e);",
+      "\t}",
       "}${0}"
     ],
     "description": "internal event declaration"
@@ -1016,11 +901,11 @@
     "body": [
       "internal event EventHandler<${1:EventArgs}> ${2:EventName};",
       "",
-      "protected virtual void On${2}(${1} e)",
-      "{",
+      "protected virtual void On${2}(${1} e) {",
       "\tEventHandler<${1}> handler = ${2};",
-      "\tif (handler != null)",
+      "\tif (handler != null) {",
       "\t\thandler(this, e);",
+      "\t}",
       "}${0}"
     ],
     "description": "internal event declaration with EventHandler<T>"
@@ -1028,8 +913,7 @@
   "internal indexer": {
     "prefix": "iir",
     "body": [
-      "internal ${1:T} this[${2:int index}]",
-      "{",
+      "internal ${1:T} this[${2:int index}] {",
       "\tget { ${0}}",
       "\tset { }",
       "}"
@@ -1039,8 +923,7 @@
   "internal interface": {
     "prefix": "iie",
     "body": [
-      "internal interface ${1:InterfaceName}",
-      "{",
+      "internal interface ${1:InterfaceName} {",
       "\t${0}",
       "}"
     ],
@@ -1049,22 +932,11 @@
   "internal method": {
     "prefix": "im",
     "body": [
-      "internal ${1:void} ${2:MethodName}()",
-      "{",
+      "internal ${1:void} ${2:MethodName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
     "description": "internal method declaration"
-  },
-  "internal method (with parameters)": {
-    "prefix": "im_",
-    "body": [
-      "internal ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "internal method declaration (with parameters)"
   },
   "internal read-only auto property": {
     "prefix": "irp",
@@ -1080,21 +952,37 @@
     ],
     "description": "internal read-only field declaration"
   },
+  "internal read-only indexer": {
+    "prefix": "irir",
+    "body": [
+      "internal ${1:T} this[${2:int index}] {",
+      "\tget { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "internal read-only indexer declaration"
+  },
   "internal read-only property": {
     "prefix": "irpp",
     "body": [
-      "internal ${1:T} ${2:PropertyName}",
-      "{",
+      "internal ${1:T} ${2:PropertyName} {",
       "\tget { return ${3:value}; }",
       "}${0}"
     ],
     "description": "internal read-only property declaration"
   },
+  "internal read-only struct": {
+    "prefix": "irst",
+    "body": [
+      "internal readonly struct ${1:StructName} {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "internal read-only struct declaration"
+  },
   "internal static class": {
     "prefix": "isc",
     "body": [
-      "internal static class ${1:ClassName}",
-      "{",
+      "internal static class ${1:ClassName} {",
       "\t${0}",
       "}"
     ],
@@ -1103,22 +991,11 @@
   "internal static method": {
     "prefix": "ism",
     "body": [
-      "internal static ${1:void} ${2:MethodName}()",
-      "{",
+      "internal static ${1:void} ${2:MethodName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
     "description": "internal static method declaration"
-  },
-  "internal static method (with parameters)": {
-    "prefix": "ism_",
-    "body": [
-      "internal static ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "internal static method declaration (with parameters)"
   },
   "internal static read-only auto property": {
     "prefix": "isrp",
@@ -1137,8 +1014,7 @@
   "internal static read-only property": {
     "prefix": "isrpp",
     "body": [
-      "internal static ${1:T} ${2:PropertyName}",
-      "{",
+      "internal static ${1:T} ${2:PropertyName} {",
       "\tget { return ${3:value}; }",
       "}${0}"
     ],
@@ -1147,8 +1023,7 @@
   "internal struct": {
     "prefix": "ist",
     "body": [
-      "internal struct ${1:StructName}",
-      "{",
+      "internal struct ${1:StructName} {",
       "\t${0}",
       "}"
     ],
@@ -1164,22 +1039,11 @@
   "internal virtual method": {
     "prefix": "ivm",
     "body": [
-      "internal virtual ${1:void} ${2:MethodName}()",
-      "{",
+      "internal virtual ${1:void} ${2:MethodName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
     "description": "internal virtual method declaration"
-  },
-  "internal virtual method (with parameters)": {
-    "prefix": "ivm_",
-    "body": [
-      "internal virtual ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "internal virtual method declaration (with parameters)"
   },
   "internal virtual read-only auto property": {
     "prefix": "ivrp",
@@ -1191,8 +1055,7 @@
   "internal virtual read-only property": {
     "prefix": "ivrpp",
     "body": [
-      "internal virtual ${1:T} ${2:PropertyName}",
-      "{",
+      "internal virtual ${1:T} ${2:PropertyName} {",
       "\tget { return ${3:value}; }",
       "}${0}"
     ],
@@ -1236,16 +1099,16 @@
   "new variable": {
     "prefix": "vn",
     "body": [
-      "var ${1:x} = new ${2:object}();${0}"
+      "var ${1:x} = new ${2:object}(${3:arguments});${0}"
     ],
     "description": "variable declaration with new object creation"
   },
-  "new variable (with arguments)": {
-    "prefix": "vn_",
+  "new variable (with initializer)": {
+    "prefix": "vnx",
     "body": [
-      "var ${1:x} = new ${2:object}(${3:arguments});${0}"
+      "var ${1:x} = new ${2:object}(${3:arguments}) { ${4:x} };${0}"
     ],
-    "description": "variable declaration with new object creation (with arguments)"
+    "description": "variable declaration with new object creation (with initializer)"
   },
   "not equal to null": {
     "prefix": "xn",
@@ -1264,20 +1127,14 @@
   "ObservableCollection<T> class": {
     "prefix": "c_ObservableCollectionOfT",
     "body": [
-      "${1:public} class ${2:Collection} : ObservableCollection<${3:object}>",
-      "{",
-      "\tpublic ${2}()",
-      "\t{",
+      "${1:public} class ${2:Collection} : ObservableCollection<${3:object}> {",
+      "\tpublic ${2}() {",
       "\t}",
       "",
-      "\tpublic ${2}(IEnumerable<${3}> collection)",
-      "\t\t: base(collection)",
-      "\t{",
+      "\tpublic ${2}(IEnumerable<${3}> collection) : base(collection) {",
       "\t}",
       "",
-      "\tpublic ${2}(IList<${3}> list)",
-      "\t\t: base(list)",
-      "\t{",
+      "\tpublic ${2}(IList<${3}> list) : base(list) {",
       "\t}",
       "",
       "\t${0}",
@@ -1309,8 +1166,7 @@
   "private class": {
     "prefix": "pc",
     "body": [
-      "private class ${1:ClassName}",
-      "{",
+      "private class ${1:ClassName} {",
       "\t${0}",
       "}"
     ],
@@ -1326,42 +1182,23 @@
   "private constructor": {
     "prefix": "pcr",
     "body": [
-      "private ${1:ThisName}()",
-      "{",
+      "private ${1:ThisName}(${2:T parameter}) {",
       "\t${0}",
       "}"
     ],
     "description": "private constructor declaration"
   },
-  "private constructor (with parameters)": {
-    "prefix": "pcr_",
-    "body": [
-      "private ${1:ThisName}(${2:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "private constructor declaration (with parameters)"
-  },
   "private delegate": {
     "prefix": "pde",
     "body": [
-      "private delegate ${1:void} ${2:DelegateName}();${0}"
+      "private delegate ${1:void} ${2:DelegateName}(${3:T parameter});${0}"
     ],
     "description": "private delegate declaration"
-  },
-  "private delegate (with parameters)": {
-    "prefix": "pde_",
-    "body": [
-      "private delegate ${1:void} ${2:DelegateName}(${3:object parameter});${0}"
-    ],
-    "description": "private delegate declaration (with parameters)"
   },
   "private enum": {
     "prefix": "pem",
     "body": [
-      "private enum ${1:EnumName}",
-      "{",
+      "private enum ${1:EnumName} {",
       "\t${0}",
       "}"
     ],
@@ -1372,11 +1209,11 @@
     "body": [
       "private event EventHandler ${1:EventName};",
       "",
-      "protected virtual void On${1}(EventArgs e)",
-      "{",
+      "protected virtual void On${1}(EventArgs e) {",
       "\tEventHandler handler = ${1};",
-      "\tif (handler != null)",
+      "\tif (handler != null) {",
       "\t\thandler(this, e);",
+      "\t}",
       "}${0}"
     ],
     "description": "private event declaration"
@@ -1386,11 +1223,11 @@
     "body": [
       "private event EventHandler<${1:EventArgs}> ${2:EventName};",
       "",
-      "protected virtual void On${2}(${1} e)",
-      "{",
+      "protected virtual void On${2}(${1} e) {",
       "\tEventHandler<${1}> handler = ${2};",
-      "\tif (handler != null)",
+      "\tif (handler != null) {",
       "\t\thandler(this, e);",
+      "\t}",
       "}${0}"
     ],
     "description": "private event declaration with EventHandler<T>"
@@ -1405,8 +1242,7 @@
   "private indexer": {
     "prefix": "pir",
     "body": [
-      "private ${1:T} this[${2:int index}]",
-      "{",
+      "private ${1:T} this[${2:int index}] {",
       "\tget { ${0}}",
       "\tset { }",
       "}"
@@ -1416,22 +1252,11 @@
   "private method": {
     "prefix": "pm",
     "body": [
-      "private ${1:void} ${2:MethodName}()",
-      "{",
+      "private ${1:void} ${2:MethodName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
     "description": "private method declaration"
-  },
-  "private method (with parameters)": {
-    "prefix": "pm_",
-    "body": [
-      "private ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "private method declaration (with parameters)"
   },
   "private read-only auto property": {
     "prefix": "prp",
@@ -1447,21 +1272,37 @@
     ],
     "description": "private read-only field declaration"
   },
+  "private read-only indexer": {
+    "prefix": "prir",
+    "body": [
+      "private ${1:T} this[${2:int index}] {",
+      "\tget { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "private read-only indexer declaration"
+  },
   "private read-only property": {
     "prefix": "prpp",
     "body": [
-      "private ${1:T} ${2:PropertyName}",
-      "{",
+      "private ${1:T} ${2:PropertyName} {",
       "\tget { return ${3:value}; }",
       "}${0}"
     ],
     "description": "private read-only property declaration"
   },
+  "private read-only struct": {
+    "prefix": "prst",
+    "body": [
+      "private readonly struct ${1:StructName} {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "private read-only struct declaration"
+  },
   "private static class": {
     "prefix": "psc",
     "body": [
-      "private static class ${1:ClassName}",
-      "{",
+      "private static class ${1:ClassName} {",
       "\t${0}",
       "}"
     ],
@@ -1477,22 +1318,11 @@
   "private static method": {
     "prefix": "psm",
     "body": [
-      "private static ${1:void} ${2:MethodName}()",
-      "{",
+      "private static ${1:void} ${2:MethodName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
     "description": "private static method declaration"
-  },
-  "private static method (with parameters)": {
-    "prefix": "psm_",
-    "body": [
-      "private static ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "private static method declaration (with parameters)"
   },
   "private static read-only auto property": {
     "prefix": "psrp",
@@ -1511,8 +1341,7 @@
   "private static read-only property": {
     "prefix": "psrpp",
     "body": [
-      "private static ${1:T} ${2:PropertyName}",
-      "{",
+      "private static ${1:T} ${2:PropertyName} {",
       "\tget { return ${3:value}; }",
       "}${0}"
     ],
@@ -1521,8 +1350,7 @@
   "private struct": {
     "prefix": "pst",
     "body": [
-      "private struct ${1:StructName}",
-      "{",
+      "private struct ${1:StructName} {",
       "\t${0}",
       "}"
     ],
@@ -1545,8 +1373,7 @@
   "public class": {
     "prefix": "c",
     "body": [
-      "public class ${1:ClassName}",
-      "{",
+      "public class ${1:ClassName} {",
       "\t${0}",
       "}"
     ],
@@ -1562,42 +1389,23 @@
   "public constructor": {
     "prefix": "cr",
     "body": [
-      "public ${1:ThisName}()",
-      "{",
+      "public ${1:ThisName}(${2:T parameter}) {",
       "\t${0}",
       "}"
     ],
     "description": "public constructor declaration"
   },
-  "public constructor (with parameters)": {
-    "prefix": "cr_",
-    "body": [
-      "public ${1:ThisName}(${2:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "public constructor declaration (with parameters)"
-  },
   "public delegate": {
     "prefix": "de",
     "body": [
-      "public delegate ${1:void} ${2:DelegateName}();${0}"
+      "public delegate ${1:void} ${2:DelegateName}(${3:T parameter});${0}"
     ],
     "description": "public delegate declaration"
-  },
-  "public delegate (with parameters)": {
-    "prefix": "de_",
-    "body": [
-      "public delegate ${1:void} ${2:DelegateName}(${3:object parameter});${0}"
-    ],
-    "description": "public delegate declaration (with parameters)"
   },
   "public enum": {
     "prefix": "em",
     "body": [
-      "public enum ${1:EnumName}",
-      "{",
+      "public enum ${1:EnumName} {",
       "\t${0}",
       "}"
     ],
@@ -1608,11 +1416,11 @@
     "body": [
       "public event EventHandler ${1:EventName};",
       "",
-      "protected virtual void On${1}(EventArgs e)",
-      "{",
+      "protected virtual void On${1}(EventArgs e) {",
       "\tEventHandler handler = ${1};",
-      "\tif (handler != null)",
+      "\tif (handler != null) {",
       "\t\thandler(this, e);",
+      "\t}",
       "}${0}"
     ],
     "description": "public event declaration"
@@ -1622,11 +1430,11 @@
     "body": [
       "public event EventHandler<${1:EventArgs}> ${2:EventName};",
       "",
-      "protected virtual void On${2}(${1} e)",
-      "{",
+      "protected virtual void On${2}(${1} e) {",
       "\tEventHandler<${1}> handler = ${2};",
-      "\tif (handler != null)",
+      "\tif (handler != null) {",
       "\t\thandler(this, e);",
+      "\t}",
       "}${0}"
     ],
     "description": "public event declaration with EventHandler<T>"
@@ -1641,8 +1449,7 @@
   "public indexer": {
     "prefix": "ir",
     "body": [
-      "public ${1:T} this[${2:int index}]",
-      "{",
+      "public ${1:T} this[${2:int index}] {",
       "\tget { ${0}}",
       "\tset { }",
       "}"
@@ -1652,8 +1459,7 @@
   "public interface": {
     "prefix": "ie",
     "body": [
-      "public interface ${1:InterfaceName}",
-      "{",
+      "public interface ${1:InterfaceName} {",
       "\t${0}",
       "}"
     ],
@@ -1662,22 +1468,11 @@
   "public method": {
     "prefix": "m",
     "body": [
-      "public ${1:void} ${2:MethodName}()",
-      "{",
+      "public ${1:void} ${2:MethodName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
     "description": "public method declaration"
-  },
-  "public method (with parameters)": {
-    "prefix": "m_",
-    "body": [
-      "public ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "public method declaration (with parameters)"
   },
   "public read-only auto property": {
     "prefix": "rp",
@@ -1693,21 +1488,37 @@
     ],
     "description": "public read-only field declaration"
   },
+  "public read-only indexer": {
+    "prefix": "rir",
+    "body": [
+      "public ${1:T} this[${2:int index}] {",
+      "\tget { return ${3:value}; }",
+      "}${0}"
+    ],
+    "description": "public read-only indexer declaration"
+  },
   "public read-only property": {
     "prefix": "rpp",
     "body": [
-      "public ${1:T} ${2:PropertyName}",
-      "{",
+      "public ${1:T} ${2:PropertyName} {",
       "\tget { return ${3:value}; }",
       "}${0}"
     ],
     "description": "public read-only property declaration"
   },
+  "public read-only struct": {
+    "prefix": "rst",
+    "body": [
+      "public readonly struct ${1:StructName} {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "public read-only struct declaration"
+  },
   "public static class": {
     "prefix": "sc",
     "body": [
-      "public static class ${1:ClassName}",
-      "{",
+      "public static class ${1:ClassName} {",
       "\t${0}",
       "}"
     ],
@@ -1723,22 +1534,11 @@
   "public static method": {
     "prefix": "sm",
     "body": [
-      "public static ${1:void} ${2:MethodName}()",
-      "{",
+      "public static ${1:void} ${2:MethodName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
     "description": "public static method declaration"
-  },
-  "public static method (with parameters)": {
-    "prefix": "sm_",
-    "body": [
-      "public static ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "public static method declaration (with parameters)"
   },
   "public static read-only auto property": {
     "prefix": "srp",
@@ -1757,8 +1557,7 @@
   "public static read-only property": {
     "prefix": "srpp",
     "body": [
-      "public static ${1:T} ${2:PropertyName}",
-      "{",
+      "public static ${1:T} ${2:PropertyName} {",
       "\tget { return ${3:value}; }",
       "}${0}"
     ],
@@ -1767,8 +1566,7 @@
   "public struct": {
     "prefix": "st",
     "body": [
-      "public struct ${1:StructName}",
-      "{",
+      "public struct ${1:StructName} {",
       "\t${0}",
       "}"
     ],
@@ -1784,22 +1582,11 @@
   "public virtual method": {
     "prefix": "vm",
     "body": [
-      "public virtual ${1:void} ${2:MethodName}()",
-      "{",
+      "public virtual ${1:void} ${2:MethodName}(${3:T parameter}) {",
       "\t${0}",
       "}"
     ],
     "description": "public virtual method declaration"
-  },
-  "public virtual method (with parameters)": {
-    "prefix": "vm_",
-    "body": [
-      "public virtual ${1:void} ${2:MethodName}(${3:object parameter})",
-      "{",
-      "\t${0}",
-      "}"
-    ],
-    "description": "public virtual method declaration (with parameters)"
   },
   "public virtual read-only auto property": {
     "prefix": "vrp",
@@ -1811,8 +1598,7 @@
   "public virtual read-only property": {
     "prefix": "vrpp",
     "body": [
-      "public virtual ${1:T} ${2:PropertyName}",
-      "{",
+      "public virtual ${1:T} ${2:PropertyName} {",
       "\tget { return ${3:value}; }",
       "}${0}"
     ],
@@ -1821,11 +1607,8 @@
   "ReadOnlyCollection<T> class": {
     "prefix": "c_ReadOnlyCollectionOfT",
     "body": [
-      "${1:public} class ${2:Collection} : ReadOnlyCollection<${3:object}>",
-      "{",
-      "\tpublic ${2}(IList<${3}> list)",
-      "\t\t: base(list)",
-      "\t{",
+      "${1:public} class ${2:Collection} : ReadOnlyCollection<${3:object}> {",
+      "\tpublic ${2}(IList<${3}> list) : base(list) {",
       "\t}",
       "",
       "\t${0}",
@@ -1864,16 +1647,13 @@
   "Singleton class": {
     "prefix": "c_Singleton",
     "body": [
-      "${1:public sealed} class ${2:ClassName}",
-      "{",
+      "${1:public sealed} class ${2:ClassName} {",
       "\tprivate static readonly ${2} _instance = ${3:value};",
       "",
-      "\tprivate ${2}()",
-      "\t{",
+      "\tprivate ${2}() {",
       "\t}",
       "",
-      "\tpublic static ${2} Instance",
-      "\t{",
+      "\tpublic static ${2} Instance {",
       "\t\tget { return _instance; }",
       "\t}",
       "}${0}"
@@ -1883,8 +1663,7 @@
   "static constructor": {
     "prefix": "scr",
     "body": [
-      "static ${1:ThisName}()",
-      "{",
+      "static ${1:ThisName}() {",
       "\t${0}",
       "}"
     ],
@@ -1893,8 +1672,7 @@
   "StreamReader Variable": {
     "prefix": "u_smrr",
     "body": [
-      "using (var ${1:sr} = new StreamReader(${2:stream}))",
-      "{",
+      "using (var ${1:sr} = new StreamReader(${2:stream})) {",
       "\t${0}",
       "}"
     ],
@@ -1903,8 +1681,7 @@
   "StreamWriter Variable": {
     "prefix": "u_smwr",
     "body": [
-      "using (var ${1:sw} = new StreamWriter(${2:path}, ${3:Encoding.UTF8}))",
-      "{",
+      "using (var ${1:sw} = new StreamWriter(${2:path}, ${3:Encoding.UTF8})) {",
       "\t${0}",
       "}"
     ],
@@ -1941,8 +1718,7 @@
   "StringReader Variable": {
     "prefix": "u_srr",
     "body": [
-      "using (var ${1:sr} = new StringReader(${2:s}))",
-      "{",
+      "using (var ${1:sr} = new StringReader(${2:s})) {",
       "\t${0}",
       "}"
     ],
@@ -1951,8 +1727,7 @@
   "StringWriter Variable": {
     "prefix": "u_swr",
     "body": [
-      "using (var ${1:sw} = new StringWriter())",
-      "{",
+      "using (var ${1:sw} = new StringWriter()) {",
       "\t${0}",
       "}"
     ],
@@ -1961,8 +1736,7 @@
   "switch statement": {
     "prefix": "sh",
     "body": [
-      "switch (${1:SwitchOn})",
-      "{",
+      "switch (${1:SwitchOn}) {",
       "\t${0}",
       "}"
     ],
@@ -2024,6 +1798,13 @@
     ],
     "description": "throw new NotSupportedException"
   },
+  "throw new ObjectDisposedException": {
+    "prefix": "twn_ode",
+    "body": [
+      "throw new ObjectDisposedException(${1:args});${0}"
+    ],
+    "description": "throw new ObjectDisposedException"
+  },
   "TODO comment": {
     "prefix": "td",
     "body": [
@@ -2034,13 +1815,11 @@
   "true-false operator overloading": {
     "prefix": "oo_TrueFalse",
     "body": [
-      "public static bool operator true(${1:ThisName} ${2:value})",
-      "{",
+      "public static bool operator true(${1:ThisName} ${2:value}) {",
       "\t${0}",
       "}",
       "",
-      "public static bool operator false(${1} ${2})",
-      "{",
+      "public static bool operator false(${1} ${2}) {",
       "}"
     ],
     "description": "true-false operator overloading"
@@ -2048,12 +1827,10 @@
   "try-catch": {
     "prefix": "tc",
     "body": [
-      "try",
-      "{",
+      "try {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}",
-      "catch (${1:Exception} ${2:ex})",
-      "{",
+      "catch (${1:Exception} ${2:ex}) {",
       "\tthrow;",
       "}"
     ],
@@ -2062,16 +1839,13 @@
   "try-catch-finally": {
     "prefix": "tcf",
     "body": [
-      "try",
-      "{",
+      "try {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}",
-      "catch (${1:Exception} ${2:ex})",
-      "{",
+      "catch (${1:Exception} ${2:ex}) {",
       "\tthrow;",
       "}",
-      "finally",
-      "{",
+      "finally {",
       "}"
     ],
     "description": "try-catch-finally statement"
@@ -2079,12 +1853,10 @@
   "try-finally": {
     "prefix": "tf",
     "body": [
-      "try",
-      "{",
+      "try {",
       "\t${TM_SELECTED_TEXT}${0}",
       "}",
-      "finally",
-      "{",
+      "finally {",
       "}"
     ],
     "description": "try-finally statement with"
@@ -2099,8 +1871,7 @@
   "using statement": {
     "prefix": "u",
     "body": [
-      "using (${1:disposable})",
-      "{",
+      "using (${1:disposable}) {",
       "\t${0}",
       "}"
     ],
@@ -2116,8 +1887,7 @@
   "using variable": {
     "prefix": "u_v",
     "body": [
-      "using (var ${1:x} = ${2:expression})",
-      "{",
+      "using (var ${1:x} = ${2:expression}) {",
       "\t${0}",
       "}"
     ],
@@ -2126,8 +1896,7 @@
   "while not null": {
     "prefix": "wexn",
     "body": [
-      "while (${1:x} != null)",
-      "{",
+      "while (${1:x} != null) {",
       "\t${0}",
       "}"
     ],
@@ -2136,8 +1905,7 @@
   "while null": {
     "prefix": "wen",
     "body": [
-      "while (${1:x} == null)",
-      "{",
+      "while (${1:x} == null) {",
       "\t${0}",
       "}"
     ],
@@ -2146,8 +1914,7 @@
   "while statement": {
     "prefix": "we",
     "body": [
-      "while (${1:true})",
-      "{",
+      "while (${1:true}) {",
       "\t${0}",
       "}"
     ],
@@ -2156,8 +1923,7 @@
   "XmlReader Variable": {
     "prefix": "u_xmlrr",
     "body": [
-      "using (var ${1:reader} = XmlReader.Create(${2:argument}))",
-      "{",
+      "using (var ${1:reader} = XmlReader.Create(${2:argument})) {",
       "\t${0}",
       "}"
     ],
@@ -2166,8 +1932,7 @@
   "XmlWriter Variable": {
     "prefix": "u_xmlwr",
     "body": [
-      "using (var ${1:writer} = XmlWriter.Create(${2:argument}))",
-      "{",
+      "using (var ${1:writer} = XmlWriter.Create(${2:argument})) {",
       "\t${0}",
       "}"
     ],

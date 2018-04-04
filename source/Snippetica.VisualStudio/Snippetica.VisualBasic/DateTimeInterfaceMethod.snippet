@@ -19,11 +19,16 @@
   <Snippet>
     <Declarations>
       <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>parameter As T</Default>
+      </Literal>
+      <Literal>
         <ID>name</ID>
         <ToolTip>Method name</ToolTip>
         <Default>MethodName</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Function $name$() As Date;$end$]]></Code>
+    <Code Language="VB"><![CDATA[Function $name$($_parameters$) As Date;$end$]]></Code>
   </Snippet>
 </CodeSnippet>

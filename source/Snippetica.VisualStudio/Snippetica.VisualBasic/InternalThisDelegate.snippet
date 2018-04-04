@@ -19,6 +19,11 @@
   <Snippet>
     <Declarations>
       <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>parameter As T</Default>
+      </Literal>
+      <Literal>
         <ID>name</ID>
         <ToolTip>Delegate name</ToolTip>
         <Default>DelegateName</Default>
@@ -30,6 +35,6 @@
         <Function>ClassName()</Function>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Friend Delegate Function $name$() As $this$$end$]]></Code>
+    <Code Language="VB"><![CDATA[Friend Delegate Function $name$($_parameters$) As $this$$end$]]></Code>
   </Snippet>
 </CodeSnippet>

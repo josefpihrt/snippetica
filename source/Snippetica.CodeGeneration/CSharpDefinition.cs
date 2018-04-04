@@ -21,6 +21,11 @@ namespace Snippetica.CodeGeneration
             return $"{ObjectType.Keyword} parameter";
         }
 
+        public override string GetObjectInitializer(string value)
+        {
+            return " { " + value + " }";
+        }
+
         public override string GetDictionaryInitializer(string value)
         {
             return $" {{ [0] = {value} }}";
