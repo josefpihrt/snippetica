@@ -48,7 +48,9 @@ namespace Snippetica.CodeGeneration.VisualStudio
 
         protected override void SaveAllSnippets(string projectPath, List<Snippet> allSnippets)
         {
+#if !DEBUG
             base.SaveAllSnippets(projectPath, allSnippets);
+#endif
 
             string projectName = Path.GetFileName(projectPath);
 

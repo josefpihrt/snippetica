@@ -42,7 +42,9 @@ namespace Snippetica.CodeGeneration
                 allSnippets.AddRange(snippets);
             }
 
+#if !DEBUG
             SaveAllSnippets(directoryPath, allSnippets);
+#endif
 
             return allSnippets;
         }
