@@ -3839,6 +3839,23 @@ if ($identifier$.TryGetValue($key$, out $value$)) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>return default</Title>
+      <Shortcut>red</Shortcut>
+      <Description>return default statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ReturnDefault</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp"><![CDATA[return default;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>return new</Title>
       <Shortcut>rn</Shortcut>
       <Description>return new</Description>

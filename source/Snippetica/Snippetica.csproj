@@ -217,6 +217,7 @@
     <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotStringIsNullOrEmpty.snippet" />
     <None Include="Snippetica.CSharp\Dev\ConditionalOperatorStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp\Dev\ConditionalOperatorStringIsNullOrEmpty.snippet" />
+    <None Include="Snippetica.CSharp\Dev\ReturnDefault.snippet" />
     <None Include="Snippetica.CSharp\InterfaceEvent.snippet" />
     <None Include="Snippetica.CSharp\InterfaceEventWithEventHandlerOfT.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceIndexer.snippet" />

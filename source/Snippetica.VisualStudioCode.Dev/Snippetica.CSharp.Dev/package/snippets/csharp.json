@@ -806,6 +806,13 @@
     ],
     "description": "Regex type declaration"
   },
+  "return default": {
+    "prefix": "red",
+    "body": [
+      "return default;${0}"
+    ],
+    "description": "return default statement"
+  },
   "return new": {
     "prefix": "rn",
     "body": [

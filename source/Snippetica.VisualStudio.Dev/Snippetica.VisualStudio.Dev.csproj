@@ -359,6 +359,9 @@
     <Content Include="Snippetica.CSharp.Dev\Regex.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\ReturnDefault.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\ReturnNew.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
