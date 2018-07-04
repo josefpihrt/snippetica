@@ -270,7 +270,7 @@ $modifier$ class $name$Attribute : $base$ {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to evaluate</ToolTip>
-          <Default>expression</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>false</ID>
@@ -304,7 +304,7 @@ $modifier$ class $name$Attribute : $base$ {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to evaluate</ToolTip>
-          <Default>expression</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>false</ID>
@@ -338,7 +338,7 @@ $modifier$ class $name$Attribute : $base$ {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to evaluate</ToolTip>
-          <Default>expression</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>false</ID>
@@ -894,7 +894,7 @@ $modifier$ class $name$Exception : $base$ {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to cast</ToolTip>
-          <Default>expression</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>type</ID>
@@ -6343,7 +6343,7 @@ finally {
         <Literal>
           <ID>_value</ID>
           <ToolTip>Value to assign</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[using (var $_identifier$ = $_value$) {
@@ -6374,7 +6374,7 @@ finally {
         <Literal>
           <ID>_value</ID>
           <ToolTip>Value to assign</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[var $_identifier$ = $_value$;$end$]]></Code>
@@ -6403,7 +6403,7 @@ finally {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to cast</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
         <Literal>
           <ID>identifier</ID>

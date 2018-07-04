@@ -303,21 +303,21 @@
   "conditional operator": {
     "prefix": "co",
     "body": [
-      "(${1:expression}) ? ${2:true} : ${3:false}${0}"
+      "(${1:x}) ? ${2:true} : ${3:false}${0}"
     ],
     "description": "conditional operator"
   },
   "conditional operator (equal to null)": {
     "prefix": "con",
     "body": [
-      "(${1:expression} == null) ? ${2:true} : ${3:false}${0}"
+      "(${1:x} == null) ? ${2:true} : ${3:false}${0}"
     ],
     "description": "conditional operator with condition whether the expression is equal to null"
   },
   "conditional operator (not equal to null)": {
     "prefix": "coxn",
     "body": [
-      "(${1:expression} != null) ? ${2:true} : ${3:false}${0}"
+      "(${1:x} != null) ? ${2:true} : ${3:false}${0}"
     ],
     "description": "conditional operator with condition whether the expression is not equal to null"
   },
@@ -532,7 +532,7 @@
   "explicit cast operator": {
     "prefix": "t",
     "body": [
-      "((${1:object})${2:expression})${0}"
+      "((${1:object})${2:x})${0}"
     ],
     "description": "explicit cast operator"
   },
@@ -1078,14 +1078,14 @@
   "local variable declaration": {
     "prefix": "v",
     "body": [
-      "var ${1:x} = ${2:expression};${0}"
+      "var ${1:x} = ${2:_};${0}"
     ],
     "description": "local variable declaration"
   },
   "local variable declaration with explicit cast operator": {
     "prefix": "vt",
     "body": [
-      "var ${1:x} = (${2:T})${3:expression};${0}"
+      "var ${1:x} = (${2:T})${3:_};${0}"
     ],
     "description": "local variable declaration with explicit cast operator"
   },
@@ -1887,7 +1887,7 @@
   "using variable": {
     "prefix": "u_v",
     "body": [
-      "using (var ${1:x} = ${2:expression}) {",
+      "using (var ${1:x} = ${2:_}) {",
       "\t${0}",
       "}"
     ],

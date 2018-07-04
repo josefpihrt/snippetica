@@ -1049,14 +1049,14 @@
   "local variable declaration": {
     "prefix": "v",
     "body": [
-      "Dim ${1:x} = ${2:expression}${0}"
+      "Dim ${1:x} = ${2:_}${0}"
     ],
     "description": "local variable declaration"
   },
   "local variable with DirectCast": {
     "prefix": "vt",
     "body": [
-      "Dim ${1:x} = DirectCast(${2:expression}, ${3:T})${0}"
+      "Dim ${1:x} = DirectCast(${2:_}, ${3:T})${0}"
     ],
     "description": "local variable declaration with DirectCast"
   },

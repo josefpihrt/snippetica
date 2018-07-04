@@ -6065,7 +6065,7 @@ End Using]]></Code>
         <Literal>
           <ID>_value</ID>
           <ToolTip>Value to assign</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Dim $_identifier$ = $_value$$end$]]></Code>
@@ -6094,7 +6094,7 @@ End Using]]></Code>
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to cast</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
         <Literal>
           <ID>identifier</ID>

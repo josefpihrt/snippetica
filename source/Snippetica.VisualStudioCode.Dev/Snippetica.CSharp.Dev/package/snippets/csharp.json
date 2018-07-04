@@ -88,7 +88,7 @@
   "Debug.Assert != null": {
     "prefix": "daxn",
     "body": [
-      "Debug.Assert(${1:false} != null, ${2:\"\"});${0}"
+      "Debug.Assert(${1:x} != null, ${2:\"\"});${0}"
     ],
     "description": "Debug.Assert method with condition whether the expression is not equal to null"
   },
@@ -851,7 +851,7 @@
   "variable declaration with as operator + if not null": {
     "prefix": "vasxn",
     "body": [
-      "var ${1:x} = ${2:expression} as ${3:T};",
+      "var ${1:x} = ${2:_} as ${3:T};",
       "if (${1} != null) {",
       "\t${0}",
       "}"
