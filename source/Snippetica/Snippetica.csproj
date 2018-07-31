@@ -65,65 +65,33 @@
     <None Include="README.md" />
     <None Include="License.txt" />
     <None Include="Snippetica.Cpp\Dev\LogicalNotOperator.snippet" />
-    <None Include="Snippetica.Cpp\PureVirtualFunction.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\LambdaExpression.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\Dev\LambdaExpressionMinimal.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.Cpp\PureVirtualFunction.snippet" />
+    <None Include="Snippetica.Cpp\LambdaExpression.snippet" />
+    <None Include="Snippetica.Cpp\Dev\LambdaExpressionMinimal.snippet" />
     <None Include="Snippetica.Cpp\Braces.snippet" />
     <None Include="Snippetica.Cpp\ConditionalOperator.snippet" />
     <None Include="Snippetica.Cpp\ConstClass.snippet" />
-    <None Include="Snippetica.Cpp\AutoGeneration\EnumStruct.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\OverloadedOperatorExplicitWithConst.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\OverloadedOperatorImplicitWithConst.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\OverloadedOperatorImplicit.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\OverloadedOperatorExplicit.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\AutoGeneration\ExplicitConstructor.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.Cpp\AutoGeneration\EnumStruct.snippet" />
+    <None Include="Snippetica.Cpp\OverloadedOperatorExplicitWithConst.snippet" />
+    <None Include="Snippetica.Cpp\OverloadedOperatorImplicitWithConst.snippet" />
+    <None Include="Snippetica.Cpp\OverloadedOperatorImplicit.snippet" />
+    <None Include="Snippetica.Cpp\OverloadedOperatorExplicit.snippet" />
+    <None Include="Snippetica.Cpp\AutoGeneration\ExplicitConstructor.snippet" />
     <None Include="Snippetica.Cpp\AutoGeneration\MoveConstructor.snippet" />
-    <None Include="Snippetica.Cpp\AutoGeneration\CopyConstructor.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\OverloadedOperatorMoveAssignment.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\OverloadedOperatorCopyAssignmentWithConst.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\OverloadedOperatorCopyAssignment.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.Cpp\AutoGeneration\CopyConstructor.snippet" />
+    <None Include="Snippetica.Cpp\OverloadedOperatorMoveAssignment.snippet" />
+    <None Include="Snippetica.Cpp\OverloadedOperatorCopyAssignmentWithConst.snippet" />
+    <None Include="Snippetica.Cpp\OverloadedOperatorCopyAssignment.snippet" />
     <None Include="Snippetica.Cpp\Dev\ReturnFalse.snippet" />
-    <None Include="Snippetica.Cpp\Dev\ReturnTrue.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.Cpp\Dev\ReturnTrue.snippet" />
     <None Include="Snippetica.Cpp\Catch.snippet" />
     <None Include="Snippetica.Cpp\Dev\BreakStatement.snippet" />
     <None Include="Snippetica.Cpp\Dev\ContinueStatement.snippet" />
     <None Include="Snippetica.Cpp\Dev\ReturnStatement.snippet" />
     <None Include="Snippetica.Cpp\IfConstExpr.snippet" />
     <None Include="Snippetica.Cpp\StaticAssert.snippet" />
-    <None Include="Snippetica.Cpp\AutoGeneration\ArrayOfTVariable.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\AutoGeneration\Function.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.Cpp\AutoGeneration\ArrayOfTVariable.snippet" />
+    <None Include="Snippetica.Cpp\AutoGeneration\Function.snippet" />
     <None Include="Snippetica.Cpp\Dev\BoolVariable.snippet" />
     <None Include="Snippetica.Cpp\ReinterpretCast.snippet" />
     <None Include="Snippetica.Cpp\ConstCast.snippet" />
@@ -135,41 +103,27 @@
     <None Include="Snippetica.Cpp\Attribute.snippet" />
     <None Include="Snippetica.Cpp\TemplateWithTwoParameters.snippet" />
     <None Include="Snippetica.Cpp\ConstStruct.snippet" />
-    <None Include="Snippetica.Cpp\UsingDeclaration.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.Cpp\UsingDeclaration.snippet" />
     <None Include="Snippetica.Cpp\UsingNamespace.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveIfElse.snippet" />
     <None Include="Snippetica.Cpp\Dev\StringType.snippet" />
     <None Include="Snippetica.Cpp\Template.snippet" />
     <None Include="Snippetica.Cpp\Dev\StringVariable.snippet" />
-    <None Include="Snippetica.Cpp\AutoGeneration\Variable.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.Cpp\AutoGeneration\Variable.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveError.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveDefine.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveUsing.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveUndef.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveLine.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveInclude.snippet" />
-    <None Include="Snippetica.Cpp\AutoGeneration\Class.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\AutoGeneration\Constructor.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\AutoGeneration\Destructor.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.Cpp\AutoGeneration\Class.snippet" />
+    <None Include="Snippetica.Cpp\AutoGeneration\Constructor.snippet" />
+    <None Include="Snippetica.Cpp\AutoGeneration\Destructor.snippet" />
     <None Include="Snippetica.Cpp\Dev\ClassWithInlineConstructorDestructor.snippet" />
     <None Include="Snippetica.Cpp\DoWhile.snippet" />
     <None Include="Snippetica.Cpp\Else.snippet" />
-    <None Include="Snippetica.Cpp\AutoGeneration\Enum.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.Cpp\AutoGeneration\EnumClass.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.Cpp\AutoGeneration\Enum.snippet" />
+    <None Include="Snippetica.Cpp\AutoGeneration\EnumClass.snippet" />
     <None Include="Snippetica.Cpp\For.snippet" />
     <None Include="Snippetica.Cpp\ForRangeBased.snippet" />
     <None Include="Snippetica.Cpp\ForReversed.snippet" />
@@ -181,9 +135,7 @@
     <None Include="Snippetica.Cpp\PreprocessorDirectiveIfdef.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveIfndef.snippet" />
     <None Include="Snippetica.Cpp\PreprocessorDirectiveRegion.snippet" />
-    <None Include="Snippetica.Cpp\AutoGeneration\Struct.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.Cpp\AutoGeneration\Struct.snippet" />
     <None Include="Snippetica.Cpp\Switch.snippet" />
     <None Include="Snippetica.Cpp\TryCatch.snippet" />
     <None Include="Snippetica.Cpp\Union.snippet" />
@@ -213,9 +165,7 @@
     <None Include="Snippetica.CSharp\AutoGeneration\Interface.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyStruct.snippet" />
     <None Include="Snippetica.CSharp\Dev\Attributes\Attribute.snippet" />
-    <None Include="Snippetica.CSharp\EnumeratorClass.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.CSharp\EnumeratorClass.snippet" />
     <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotStringIsNullOrEmpty.snippet" />
     <None Include="Snippetica.CSharp\Dev\ConditionalOperatorStringIsNullOrWhiteSpace.snippet" />
@@ -228,12 +178,8 @@
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceProperty.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\InterfaceReadOnlyProperty.snippet" />
     <None Include="Snippetica.CSharp\Dev\AutoGeneration\LocalFunction.snippet" />
-    <None Include="Snippetica.CSharp\AutoGeneration\Method.snippet">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Snippetica.CSharp\AutoGeneration\NewVariable.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.CSharp\AutoGeneration\Method.snippet" />
+    <None Include="Snippetica.CSharp\AutoGeneration\NewVariable.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ParameterArray.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyAutoProperty.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyField.snippet" />
@@ -257,9 +203,7 @@
     <None Include="Snippetica.CSharp\Dev\Attributes\FlagsAttribute.snippet" />
     <None Include="Snippetica.CSharp\Dev\Attributes\ObsoleteAttribute.snippet" />
     <None Include="Snippetica.CSharp\Dev\AutoGeneration\ArrayOfTType.snippet" />
-    <None Include="Snippetica.CSharp\Dev\AutoGeneration\DictionaryOfTKeyTValueVariable.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.CSharp\Dev\AutoGeneration\DictionaryOfTKeyTValueVariable.snippet" />
     <None Include="Snippetica.CSharp\Dev\AutoGeneration\HashSetOfTType.snippet" />
     <None Include="Snippetica.CSharp\Dev\AutoGeneration\HashSetOfTVariable.snippet" />
     <None Include="Snippetica.CSharp\Dev\AutoGeneration\IfNotTryGetValue.snippet" />
@@ -330,9 +274,7 @@
     <None Include="Snippetica.CSharp\Dev\IO\PathHasExtension.snippet" />
     <None Include="Snippetica.CSharp\LambdaExpressionWithTwoParameters.snippet" />
     <None Include="Snippetica.CSharp\Dev\Linq\EnumerableCast.snippet" />
-    <None Include="Snippetica.CSharp\Dev\Linq\EnumerableEmpty.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.CSharp\Dev\Linq\EnumerableEmpty.snippet" />
     <None Include="Snippetica.CSharp\Dev\Linq\EnumerableFirst.snippet" />
     <None Include="Snippetica.CSharp\Dev\Linq\EnumerableFirstOrDefault.snippet" />
     <None Include="Snippetica.CSharp\Dev\Linq\EnumerableGroupBy.snippet" />
@@ -474,9 +416,7 @@
     <None Include="Snippetica.Html\AutoGeneration\area.snippet" />
     <None Include="Snippetica.Html\AutoGeneration\article.snippet" />
     <None Include="Snippetica.Html\AutoGeneration\aside.snippet" />
-    <None Include="Snippetica.Html\AutoGeneration\audio.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.Html\AutoGeneration\audio.snippet" />
     <None Include="Snippetica.Html\AutoGeneration\b.snippet" />
     <None Include="Snippetica.Html\AutoGeneration\base.snippet" />
     <None Include="Snippetica.Html\AutoGeneration\basefont.snippet" />
@@ -679,9 +619,7 @@
     <None Include="Snippetica.VisualBasic\AutoGeneration\InterfaceReadOnlyProperty.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\Method.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\Module.snippet" />
-    <None Include="Snippetica.VisualBasic\AutoGeneration\NewVariable.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.VisualBasic\AutoGeneration\NewVariable.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\ParameterArray.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\ReadOnlyAutoProperty.snippet" />
     <None Include="Snippetica.VisualBasic\AutoGeneration\ReadOnlyField.snippet" />
@@ -697,22 +635,14 @@
     <None Include="Snippetica.VisualBasic\DebugAssert.snippet" />
     <None Include="Snippetica.VisualBasic\DebugWriteLine.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\AutoGeneration\ArrayOfTType.snippet" />
-    <None Include="Snippetica.VisualBasic\Dev\AutoGeneration\DictionaryOfTKeyTValueVariable.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.VisualBasic\Dev\AutoGeneration\DictionaryOfTKeyTValueVariable.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\AutoGeneration\HashSetOfTType.snippet" />
-    <None Include="Snippetica.VisualBasic\Dev\AutoGeneration\HashSetOfTVariable.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.VisualBasic\Dev\AutoGeneration\HashSetOfTVariable.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\AutoGeneration\ListOfTType.snippet" />
-    <None Include="Snippetica.VisualBasic\Dev\AutoGeneration\ListOfTVariable.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.VisualBasic\Dev\AutoGeneration\ListOfTVariable.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\AutoGeneration\NewArrayOfT.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\AutoGeneration\ObservableCollectionOfTType.snippet" />
-    <None Include="Snippetica.VisualBasic\Dev\AutoGeneration\ObservableCollectionOfTVariable.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.VisualBasic\Dev\AutoGeneration\ObservableCollectionOfTVariable.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\IfEnumTryParse.snippet" />
     <None Include="Snippetica.VisualBasic\Dev\IfNotEnumTryParse.snippet" />
     <None Include="Snippetica.VisualBasic\LambdaExpressionWithTwoParameters.snippet" />
@@ -872,9 +802,7 @@
     <None Include="Snippetica.Xaml\Dev\WrapPanel.snippet" />
     <None Include="Snippetica.Xaml\Dev\WrapPanelHorizontal.snippet" />
     <None Include="Snippetica.Xaml\Dev\WrapPanelVertical.snippet" />
-    <None Include="Snippetica.Xml.CodeSnippet\Code.snippet">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Snippetica.Xml.CodeSnippet\Code.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\CodeSnippet.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\CodeSnippetCPlusPlus.snippet" />
     <None Include="Snippetica.Xml.CodeSnippet\CodeSnippetCSharp.snippet" />
