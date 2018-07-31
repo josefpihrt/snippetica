@@ -213,6 +213,9 @@
     <None Include="Snippetica.CSharp\AutoGeneration\Interface.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyStruct.snippet" />
     <None Include="Snippetica.CSharp\Dev\Attributes\Attribute.snippet" />
+    <None Include="Snippetica.CSharp\EnumeratorClass.snippet">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotStringIsNullOrEmpty.snippet" />
     <None Include="Snippetica.CSharp\Dev\ConditionalOperatorStringIsNullOrWhiteSpace.snippet" />
