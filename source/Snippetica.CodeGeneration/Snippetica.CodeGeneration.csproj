@@ -33,11 +33,11 @@
     <CodeAnalysisRuleSet>..\global.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotMarkdown, Version=0.1.0.0, Culture=neutral, PublicKeyToken=117de6512634d621, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DotMarkdown.0.1.0-beta\lib\net45\DotMarkdown.dll</HintPath>
+    <Reference Include="DotMarkdown, Version=0.1.0.2, Culture=neutral, PublicKeyToken=117de6512634d621, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DotMarkdown.0.1.0\lib\net45\DotMarkdown.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Pihrtsoft.Snippets, Version=1.3.3.0, Culture=neutral, PublicKeyToken=47d18de6ae9b6208, processorArchitecture=MSIL">
       <HintPath>..\..\packages\SnippetManager.1.3.3\lib\net40\Pihrtsoft.Snippets.dll</HintPath>
