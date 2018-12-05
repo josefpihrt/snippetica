@@ -21,9 +21,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.Validations", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudio", "source\Snippetica.VisualStudio\Snippetica.VisualStudio.csproj", "{C6E1B9F3-6AFA-4849-9CE1-E224EBB08AA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pihrtsoft.Records", "source\Records\Pihrtsoft.Records\Pihrtsoft.Records.csproj", "{5F21280B-2029-4D27-AEE6-C6E3E8C09C29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pihrtsoft.Records", "source\Records\Pihrtsoft.Records\Pihrtsoft.Records.csproj", "{5F21280B-2029-4D27-AEE6-C6E3E8C09C29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pihrtsoft.Records.Test", "source\Records\Pihrtsoft.Records.Test\Pihrtsoft.Records.Test.csproj", "{CE18A42C-A7FD-4B6B-90FE-2F4510B7CB0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pihrtsoft.Records.Test", "source\Records\Pihrtsoft.Records.Test\Pihrtsoft.Records.Test.csproj", "{CE18A42C-A7FD-4B6B-90FE-2F4510B7CB0E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.Test", "source\Test\Snippetica.Test\Snippetica.Test.csproj", "{A8ED9945-2D2B-493C-ABB6-E860315EAFFF}"
 EndProject
@@ -95,7 +95,6 @@ Global
 		{A8ED9945-2D2B-493C-ABB6-E860315EAFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8ED9945-2D2B-493C-ABB6-E860315EAFFF}.ReleaseVisualStudio|Any CPU.ActiveCfg = Release|Any CPU
 		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.ReleaseVisualStudio|Any CPU.ActiveCfg = Release|Any CPU
