@@ -33,20 +33,6 @@
     ],
     "description": "! operator overloading"
   },
-  "!string.IsNullOrEmpty": {
-    "prefix": "xsne",
-    "body": [
-      "!string.IsNullOrEmpty(${1:s})${0}"
-    ],
-    "description": "!string.IsNullOrEmpty method"
-  },
-  "!string.IsNullOrWhiteSpace": {
-    "prefix": "xsnw",
-    "body": [
-      "!string.IsNullOrWhiteSpace(${1:s})${0}"
-    ],
-    "description": "!string.IsNullOrWhiteSpace method"
-  },
   "#if directive": {
     "prefix": "ppif",
     "body": [
@@ -804,34 +790,6 @@
     ],
     "description": "if equal to null"
   },
-  "if not": {
-    "prefix": "ifx",
-    "body": [
-      "if (!${1:x}) {",
-      "\t${0}",
-      "}"
-    ],
-    "description": "if with condition whether the expression is equal to false"
-  },
-  "if not equal to null": {
-    "prefix": "ifxn",
-    "body": [
-      "if (${1:x} != null) {",
-      "\t${0}",
-      "}"
-    ],
-    "description": "if not equal to null"
-  },
-  "if not TryParse": {
-    "prefix": "ifxtp",
-    "body": [
-      "${1:T} ${2:x};",
-      "if (!${1}.TryParse(${3:value}, out ${2})) {",
-      "\t${0}",
-      "}"
-    ],
-    "description": "if statement with condition whether TryParse method returns false."
-  },
   "if TryParse": {
     "prefix": "iftp",
     "body": [
@@ -1185,13 +1143,6 @@
       "var ${1:x} = new ${2:object}(${3:arguments}) { ${4:x} };${0}"
     ],
     "description": "variable declaration with new object creation (with initializer)"
-  },
-  "not equal to null": {
-    "prefix": "xn",
-    "body": [
-      "${1:x} != null${0}"
-    ],
-    "description": "not equal to null"
   },
   "object keyword": {
     "prefix": "o",
