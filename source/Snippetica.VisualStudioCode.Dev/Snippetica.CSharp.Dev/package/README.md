@@ -17,10 +17,6 @@ cosnw|conditional operator \(string\.IsNullOrWhiteSpace\)
 coxsne|conditional operator \(\!string\.IsNullOrEmpty\)
 coxsnw|conditional operator \(\!string\.IsNullOrWhiteSpace\)
 daxn|Debug\.Assert \!= null
-gd|Dictionary\<TKey, TValue> type
-ghs|HashSet\<T> type
-gl|List\<T> type
-goc|ObservableCollection\<T> type
 ifemtp|if Enum\.TryParse
 ifnre|if equal to null return
 ifnref|if equal to null return false
@@ -74,44 +70,14 @@ lf| local function
 na|new array 
 ns|namespace
 oe|override modifier
-q\_c|Enumerable\.Cast
-q\_e|Enumerable\.Empty
-q\_f|Enumerable\.First
-q\_fod|Enumerable\.FirstOrDefault
-q\_gb|Enumerable\.GroupBy
-q\_gj|Enumerable\.GroupJoin
-q\_j|Enumerable\.Join
-q\_l|Enumerable\.Last
-q\_lod|Enumerable\.LastOrDefault
-q\_mn|Enumerable\.Min
-q\_mx|Enumerable\.Max
-q\_ob|Enumerable\.OrderBy
-q\_obd|Enumerable\.OrderByDescending
-q\_ot|Enumerable\.OfType
-q\_s|Enumerable\.Select
-q\_sm|Enumerable\.SelectMany
-q\_sod|Enumerable\.SingleOrDefault
-q\_sw|Enumerable\.SkipWhile
-q\_tb|Enumerable\.ThenBy
-q\_tbd|Enumerable\.ThenByDescending
-q\_tw|Enumerable\.TakeWhile
-q\_w|Enumerable\.Where
-q\_wxn|Enumerable\.Where not equal to null
-q\_z|Enumerable\.Zip
 re|return statement
+red|return default
 rn|return new
-rx|Regex type
-ts|TimeSpan type
 tw|throw statement
 u\_fesm|FileStream Variable
 u\_mysm|MemoryStream Variable
 vasxn|variable declaration with as operator \+ if not null
-vd|Dictionary\<TKey, TValue> variable
-vhs|HashSet\<T> variable
-vl|List\<T> variable
-voc|ObservableCollection\<T> variable
 vsb|StringBuilder variable
-x|\! operator
 yrn|yield return new
 
 *\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

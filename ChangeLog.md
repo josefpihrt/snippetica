@@ -1,5 +1,14 @@
 ﻿# Release Notes
 
+## 0.9.0 (2019-03-21)
+
+### Snippets for C# and VB
+
+* Change shortcut ge to j
+* Change shortcut gc to j
+* Change shortcut vc to vn
+* Change shortcut vcx to vnx
+
 ## 0.8.0 (2018-04-04)
 
 ### New Snippets for C# and VB

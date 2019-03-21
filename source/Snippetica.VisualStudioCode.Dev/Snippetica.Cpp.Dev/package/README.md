@@ -27,6 +27,5 @@ vb|bool variable
 ve|volatile keyword
 vi|int variable
 vs|string variable
-x|\! operator
 
 *\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

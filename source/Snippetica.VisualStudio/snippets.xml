@@ -3793,8 +3793,8 @@ $modifier$ class $name$Attribute : $base$ {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Collection&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>Collection&lt;T&gt; type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>Collection&lt;T&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -3812,18 +3812,17 @@ $modifier$ class $name$Attribute : $base$ {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[Collection<$_genericType$>$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[Collection<$typeParameter$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Collection&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>Collection&lt;T&gt; variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3842,23 +3841,22 @@ $modifier$ class $name$Attribute : $base$ {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>items</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new Collection<$_genericType$>();$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new Collection<$typeParameter$>();$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Collection&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
+      <Shortcut>vnx</Shortcut>
       <Description>Collection&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3877,21 +3875,20 @@ $modifier$ class $name$Attribute : $base$ {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>_value</ID>
           <Default>null</Default>
         </Literal>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new Collection<$_genericType$>() { $_value$ };$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new Collection<$typeParameter$>() { $_value$ };$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -3912,7 +3909,7 @@ $modifier$ class $name$Attribute : $base$ {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to evaluate</ToolTip>
-          <Default>expression</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>false</ID>
@@ -3946,7 +3943,7 @@ $modifier$ class $name$Attribute : $base$ {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to evaluate</ToolTip>
-          <Default>expression</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>false</ID>
@@ -3980,7 +3977,7 @@ $modifier$ class $name$Attribute : $base$ {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to evaluate</ToolTip>
-          <Default>expression</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>false</ID>
@@ -4025,7 +4022,7 @@ $modifier$ class $name$Attribute : $base$ {
     <Header>
       <Title>DateTime type</Title>
       <Shortcut>dt</Shortcut>
-      <Description>DateTime type declaration</Description>
+      <Description>DateTime type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -4195,15 +4192,15 @@ $modifier$ class $name$Attribute : $base$ {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>Dictionary&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>Dictionary&lt;T&gt; type declaration</Description>
+      <Title>Dictionary&lt;TKey, TValue&gt; type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>Dictionary&lt;TKey, TValue&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name DictionaryOfTType</Keyword>
+        <Keyword>Meta-Name DictionaryOfTKeyTValueType</Keyword>
         <Keyword>Meta-SubmenuShortcut d</Keyword>
       </Keywords>
     </Header>
@@ -4228,15 +4225,15 @@ $modifier$ class $name$Attribute : $base$ {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>Dictionary&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>Dictionary&lt;T&gt; variable declaration</Description>
+      <Title>Dictionary&lt;TKey, TValue&gt; variable</Title>
+      <Shortcut>vn</Shortcut>
+      <Description>Dictionary&lt;TKey, TValue&gt; variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name DictionaryOfTVariable</Keyword>
+        <Keyword>Meta-Name DictionaryOfTKeyTValueVariable</Keyword>
         <Keyword>Meta-SubmenuShortcut d</Keyword>
       </Keywords>
     </Header>
@@ -4248,7 +4245,7 @@ $modifier$ class $name$Attribute : $base$ {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_dictionaryIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>dic</Default>
         </Literal>
@@ -4261,20 +4258,20 @@ $modifier$ class $name$Attribute : $base$ {
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_dictionaryIdentifier$ = new Dictionary<$keyType$, $valueType$>();$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new Dictionary<$keyType$, $valueType$>();$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>Dictionary&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
-      <Description>Dictionary&lt;T&gt; variable declaration (with initializer)</Description>
+      <Title>Dictionary&lt;TKey, TValue&gt; variable (with initializer)</Title>
+      <Shortcut>vnx</Shortcut>
+      <Description>Dictionary&lt;TKey, TValue&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name DictionaryOfTVariableWithInitializer</Keyword>
+        <Keyword>Meta-Name DictionaryOfTKeyTValueVariableWithInitializer</Keyword>
         <Keyword>Meta-SubmenuShortcut d</Keyword>
       </Keywords>
     </Header>
@@ -4286,7 +4283,7 @@ $modifier$ class $name$Attribute : $base$ {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_dictionaryIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>dic</Default>
         </Literal>
@@ -4303,7 +4300,7 @@ $modifier$ class $name$Attribute : $base$ {
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_dictionaryIdentifier$ = new Dictionary<$keyType$, $valueType$>() { [0] = $_value$ };$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new Dictionary<$keyType$, $valueType$>() { [0] = $_value$ };$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -4494,6 +4491,123 @@ protected virtual void Dispose(bool disposing) {
 }]]></Code>
     </Snippet>
   </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Enumerator class</Title>
+      <Shortcut>c_</Shortcut>
+      <Description>custom enumerator class</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name EnumeratorClass</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Collections</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Diagnostics.CodeAnalysis</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>elementType</ID>
+          <ToolTip>Element type name</ToolTip>
+          <Default>T</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>TypeName</Default>
+        </Literal>
+        <Literal>
+          <ID>variableName</ID>
+          <ToolTip>Variable name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[
+  IEnumerator<$elementType$> IEnumerable<$elementType$>.GetEnumerator()
+{
+	return new EnumeratorImpl(this);
+}
+
+IEnumerator IEnumerable.GetEnumerator()
+{
+	return new EnumeratorImpl(this);
+}
+
+public Enumerator GetEnumerator()
+{
+	return new Enumerator(this);
+}
+
+[SuppressMessage("Performance", "CA1815")]
+[SuppressMessage("Usage", "CA2231")]
+public struct $end$Enumerator
+{
+	private $type$ _$variableName$;
+	private $elementType$ _current;
+
+	internal Enumerator($type$ $variableName$)
+	{
+		_$variableName$ = $variableName$;
+		_current = null;
+	}
+
+	public bool MoveNext()
+	{
+		throw new NotImplementedException();
+	}
+
+	public $elementType$ Current
+	{
+		get { throw new NotImplementedException(); }
+	}
+
+	public void Reset()
+	{
+		_current = null;
+	}
+
+	public override bool Equals(object obj) => throw new NotSupportedException();
+
+	public override int GetHashCode() => throw new NotSupportedException();
+}
+
+private class EnumeratorImpl : IEnumerator<$elementType$>
+{
+	private Enumerator _en;
+
+	internal EnumeratorImpl($type$ $variableName$)
+	{
+		_en = new Enumerator($variableName$);
+	}
+
+	public $elementType$ Current => _en.Current;
+
+	object IEnumerator.Current => _en.Current;
+
+	public bool MoveNext() => _en.MoveNext();
+
+	public void Reset() => _en.Reset();
+
+	public void Dispose()
+	{
+	}
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Equals and GetHashCode</Title>
@@ -4676,7 +4790,7 @@ $modifier$ class $name$Exception : $base$ {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to cast</ToolTip>
-          <Default>expression</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>type</ID>
@@ -4831,8 +4945,8 @@ $modifier$ class $name$Exception : $base$ {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>HashSet&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>HashSet&lt;T&gt; type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>HashSet&lt;T&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -4850,18 +4964,17 @@ $modifier$ class $name$Exception : $base$ {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[HashSet<$_genericType$>$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[HashSet<$typeParameter$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>HashSet&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>HashSet&lt;T&gt; variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4880,23 +4993,22 @@ $modifier$ class $name$Exception : $base$ {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>items</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new HashSet<$_genericType$>();$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new HashSet<$typeParameter$>();$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>HashSet&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
+      <Shortcut>vnx</Shortcut>
       <Description>HashSet&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4915,21 +5027,49 @@ $modifier$ class $name$Exception : $base$ {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>_value</ID>
           <Default>null</Default>
         </Literal>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new HashSet<$_genericType$>() { $_value$ };$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new HashSet<$typeParameter$>() { $_value$ };$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ICollection&lt;T&gt; type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>ICollection&lt;T&gt; type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ICollectionOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut ic</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[ICollection<$typeParameter$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -5055,16 +5195,16 @@ $modifier$ class $name$Exception : $base$ {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>IEnumerable&lt;T&gt; type</Title>
-      <Shortcut>ge</Shortcut>
-      <Description>IEnumerable&lt;T&gt; type declaration</Description>
+      <Title>IDictionary&lt;TKey, TValue&gt; type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>IDictionary&lt;TKey, TValue&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name IEnumerableOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut a</Keyword>
+        <Keyword>Meta-Name IDictionaryOfTKeyTValueType</Keyword>
+        <Keyword>Meta-SubmenuShortcut id</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -5075,12 +5215,44 @@ $modifier$ class $name$Exception : $base$ {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_type</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>keyType</ID>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>valueType</ID>
+          <Default>object</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[IDictionary<$keyType$, $valueType$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>IEnumerable&lt;T&gt; type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>IEnumerable&lt;T&gt; type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IEnumerableOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut ie</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[IEnumerable<$_type$>$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[IEnumerable<$typeParameter$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -5272,96 +5444,6 @@ $modifier$ class $name$Exception : $base$ {
 }]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>if not</Title>
-      <Shortcut>ifx</Shortcut>
-      <Description>if with condition whether the expression is equal to false</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IfNot</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression to evaluate</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[if (!$expression$) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>if not equal to null</Title>
-      <Shortcut>ifxn</Shortcut>
-      <Description>if not equal to null</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IfNotEqualToNull</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression to evaluate</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ != null) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>if not TryParse</Title>
-      <Shortcut>ifxtp</Shortcut>
-      <Description>if statement with condition whether TryParse method returns false.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IfNotTryParse</Keyword>
-        <Keyword>Meta-SubmenuShortcut a</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>The type of the value to parse</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>result</ID>
-          <ToolTip>The result</ToolTip>
-          <Default>x</Default>
-        </Literal>
-        <Literal>
-          <ID>value</ID>
-          <ToolTip>The value to parse</ToolTip>
-          <Default>value</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[$_type$ $result$;
-if (!$_type$.TryParse($value$, out $result$)) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>if TryParse</Title>
@@ -5402,16 +5484,45 @@ if ($_type$.TryParse($value$, out $result$)) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>IList&lt;T&gt; type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>IList&lt;T&gt; type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IListOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut il</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[IList<$typeParameter$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>ImmutableArray&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableArray&lt;T&gt; type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>ImmutableArray&lt;T&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ImmutableArrayOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut ia</Keyword>
+        <Keyword>Meta-SubmenuShortcut iea</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -5422,66 +5533,25 @@ if ($_type$.TryParse($value$, out $result$)) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[ImmutableArray<$_genericType$>$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[ImmutableArray<$typeParameter$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>ImmutableArray&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableArray&lt;T&gt; variable declaration</Description>
+      <Title>ImmutableDictionary&lt;TKey, TValue&gt; type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>ImmutableDictionary&lt;TKey, TValue&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ImmutableArrayOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut ia</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = ImmutableArray.Create<$_genericType$>($arguments$);$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableDictionary&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableDictionary&lt;T&gt; type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableDictionaryOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut id</Keyword>
+        <Keyword>Meta-Name ImmutableDictionaryOfTKeyTValueType</Keyword>
+        <Keyword>Meta-SubmenuShortcut ied</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -5505,59 +5575,16 @@ if ($_type$.TryParse($value$, out $result$)) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>ImmutableDictionary&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableDictionary&lt;T&gt; variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableDictionaryOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut id</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_dictionaryIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>dic</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-        <Literal>
-          <ID>keyType</ID>
-          <Default>object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <Default>object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_dictionaryIdentifier$ = ImmutableDictionary.Create<$keyType$, $valueType$>($arguments$);$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>ImmutableHashSet&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableHashSet&lt;T&gt; type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>ImmutableHashSet&lt;T&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ImmutableHashSetOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut ihs</Keyword>
+        <Keyword>Meta-SubmenuShortcut iehs</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -5568,66 +5595,25 @@ if ($_type$.TryParse($value$, out $result$)) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[ImmutableHashSet<$_genericType$>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableHashSet&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableHashSet&lt;T&gt; variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableHashSetOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut ihs</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = ImmutableHashSet.Create<$_genericType$>($arguments$);$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[ImmutableHashSet<$typeParameter$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ImmutableList&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableList&lt;T&gt; type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>ImmutableList&lt;T&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ImmutableListOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut il</Keyword>
+        <Keyword>Meta-SubmenuShortcut iel</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -5638,338 +5624,11 @@ if ($_type$.TryParse($value$, out $result$)) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[ImmutableList<$_genericType$>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableList&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableList&lt;T&gt; variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableListOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut il</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = ImmutableList.Create<$_genericType$>($arguments$);$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableQueue&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableQueue&lt;T&gt; type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableQueueOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut iq</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[ImmutableQueue<$_genericType$>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableQueue&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableQueue&lt;T&gt; variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableQueueOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut iq</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = ImmutableQueue.Create<$_genericType$>($arguments$);$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableSortedDictionary&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableSortedDictionary&lt;T&gt; type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableSortedDictionaryOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut isd</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>keyType</ID>
-          <Default>object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <Default>object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[ImmutableSortedDictionary<$keyType$, $valueType$>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableSortedDictionary&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableSortedDictionary&lt;T&gt; variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableSortedDictionaryOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut isd</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_dictionaryIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>dic</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-        <Literal>
-          <ID>keyType</ID>
-          <Default>object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <Default>object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_dictionaryIdentifier$ = ImmutableSortedDictionary.Create<$keyType$, $valueType$>($arguments$);$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableSortedSet&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableSortedSet&lt;T&gt; type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableSortedSetOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut iss</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[ImmutableSortedSet<$_genericType$>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableSortedSet&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableSortedSet&lt;T&gt; variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableSortedSetOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut iss</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = ImmutableSortedSet.Create<$_genericType$>($arguments$);$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableStack&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableStack&lt;T&gt; type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableStackOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut is</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[ImmutableStack<$_genericType$>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableStack&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableStack&lt;T&gt; variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableStackOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut is</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = ImmutableStack.Create<$_genericType$>($arguments$);$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[ImmutableList<$typeParameter$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -7058,6 +6717,97 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>IReadOnlyCollection&lt;T&gt; type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>IReadOnlyCollection&lt;T&gt; type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IReadOnlyCollectionOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut irc</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[IReadOnlyCollection<$typeParameter$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>IReadOnlyDictionary&lt;TKey, TValue&gt; type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>IReadOnlyDictionary&lt;TKey, TValue&gt; type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IReadOnlyDictionaryOfTKeyTValueType</Keyword>
+        <Keyword>Meta-SubmenuShortcut ird</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>keyType</ID>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>valueType</ID>
+          <Default>object</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[IReadOnlyDictionary<$keyType$, $valueType$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>IReadOnlyList&lt;T&gt; type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>IReadOnlyList&lt;T&gt; type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IReadOnlyListOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut irl</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[IReadOnlyList<$typeParameter$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>lambda expression</Title>
       <Shortcut>l</Shortcut>
       <Description>lambda expression</Description>
@@ -7093,8 +6843,8 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>LinkedList&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>LinkedList&lt;T&gt; type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>LinkedList&lt;T&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -7112,18 +6862,17 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[LinkedList<$_genericType$>$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[LinkedList<$typeParameter$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>LinkedList&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>LinkedList&lt;T&gt; variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -7142,24 +6891,23 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>items</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new LinkedList<$_genericType$>();$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new LinkedList<$typeParameter$>();$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>List&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>List&lt;T&gt; type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>List&lt;T&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -7177,18 +6925,17 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[List<$_genericType$>$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[List<$typeParameter$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>List&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>List&lt;T&gt; variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -7207,23 +6954,22 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>items</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new List<$_genericType$>();$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new List<$typeParameter$>();$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>List&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
+      <Shortcut>vnx</Shortcut>
       <Description>List&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -7242,21 +6988,20 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>_value</ID>
           <Default>null</Default>
         </Literal>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new List<$_genericType$>() { $_value$ };$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new List<$typeParameter$>() { $_value$ };$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -7285,9 +7030,9 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>new variable</Title>
+      <Title>- new variable</Title>
       <Shortcut>vn</Shortcut>
-      <Description>variable declaration with new object creation</Description>
+      <Description>new variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -7319,9 +7064,9 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>new variable (with initializer)</Title>
+      <Title>- new variable (with initializer)</Title>
       <Shortcut>vnx</Shortcut>
-      <Description>variable declaration with new object creation (with initializer)</Description>
+      <Description>new variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -7353,78 +7098,6 @@ protected virtual void On$name$($eventArgs$ e) {
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[var $identifier$ = new $type$($_arguments$) { $_value$ };$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>not equal to null</Title>
-      <Shortcut>xn</Shortcut>
-      <Description>not equal to null</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name NotEqualToNull</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>left</ID>
-          <ToolTip>Left operand</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[$left$ != null$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>!string.IsNullOrEmpty</Title>
-      <Shortcut>xsne</Shortcut>
-      <Description>!string.IsNullOrEmpty method</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name NotStringIsNullOrEmpty</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[!string.IsNullOrEmpty($expression$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>!string.IsNullOrWhiteSpace</Title>
-      <Shortcut>xsnw</Shortcut>
-      <Description>!string.IsNullOrWhiteSpace method</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name NotStringIsNullOrWhiteSpace</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[!string.IsNullOrWhiteSpace($expression$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -7500,8 +7173,8 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ObservableCollection&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ObservableCollection&lt;T&gt; type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>ObservableCollection&lt;T&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -7519,18 +7192,17 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[ObservableCollection<$_genericType$>$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[ObservableCollection<$typeParameter$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ObservableCollection&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>ObservableCollection&lt;T&gt; variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -7549,23 +7221,22 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>items</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new ObservableCollection<$_genericType$>();$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new ObservableCollection<$typeParameter$>();$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ObservableCollection&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
+      <Shortcut>vnx</Shortcut>
       <Description>ObservableCollection&lt;T&gt; variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -7584,21 +7255,20 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
         </Literal>
         <Literal>
           <ID>_value</ID>
           <Default>null</Default>
         </Literal>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new ObservableCollection<$_genericType$>() { $_value$ };$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new ObservableCollection<$typeParameter$>() { $_value$ };$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10220,8 +9890,8 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Queue&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>Queue&lt;T&gt; type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>Queue&lt;T&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -10239,18 +9909,17 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[Queue<$_genericType$>$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[Queue<$typeParameter$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Queue&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>Queue&lt;T&gt; variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -10269,17 +9938,16 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>items</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new Queue<$_genericType$>();$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new Queue<$typeParameter$>();$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10332,8 +10000,8 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ReadOnlyCollection&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ReadOnlyCollection&lt;T&gt; type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>ReadOnlyCollection&lt;T&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -10351,18 +10019,17 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[ReadOnlyCollection<$_genericType$>$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[ReadOnlyCollection<$typeParameter$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ReadOnlyCollection&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>ReadOnlyCollection&lt;T&gt; variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -10381,35 +10048,34 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_argumentList</ID>
-          <ToolTip>Constructor arguments</ToolTip>
-          <Default>arguments</Default>
+          <ID>_arguments</ID>
+          <ToolTip>Arguments</ToolTip>
+          <Default>args</Default>
         </Literal>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>items</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new ReadOnlyCollection<$_genericType$>($_argumentList$);$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new ReadOnlyCollection<$typeParameter$>($_arguments$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>ReadOnlyDictionary&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ReadOnlyDictionary&lt;T&gt; type declaration</Description>
+      <Title>ReadOnlyDictionary&lt;TKey, TValue&gt; type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>ReadOnlyDictionary&lt;TKey, TValue&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ReadOnlyDictionaryOfTType</Keyword>
+        <Keyword>Meta-Name ReadOnlyDictionaryOfTKeyTValueType</Keyword>
         <Keyword>Meta-SubmenuShortcut rd</Keyword>
       </Keywords>
     </Header>
@@ -10434,15 +10100,15 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>ReadOnlyDictionary&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ReadOnlyDictionary&lt;T&gt; variable declaration</Description>
+      <Title>ReadOnlyDictionary&lt;TKey, TValue&gt; variable</Title>
+      <Shortcut>vn</Shortcut>
+      <Description>ReadOnlyDictionary&lt;TKey, TValue&gt; variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ReadOnlyDictionaryOfTVariable</Keyword>
+        <Keyword>Meta-Name ReadOnlyDictionaryOfTKeyTValueVariable</Keyword>
         <Keyword>Meta-SubmenuShortcut rd</Keyword>
       </Keywords>
     </Header>
@@ -10454,12 +10120,12 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_argumentList</ID>
-          <ToolTip>Constructor arguments</ToolTip>
-          <Default>arguments</Default>
+          <ID>_arguments</ID>
+          <ToolTip>Arguments</ToolTip>
+          <Default>args</Default>
         </Literal>
         <Literal>
-          <ID>_dictionaryIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>dic</Default>
         </Literal>
@@ -10472,7 +10138,75 @@ protected virtual void On$name$($eventArgs$ e) {
           <Default>object</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_dictionaryIdentifier$ = new ReadOnlyDictionary<$keyType$, $valueType$>($_argumentList$);$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new ReadOnlyDictionary<$keyType$, $valueType$>($_arguments$);$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ReadOnlyObservableCollection&lt;T&gt; type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>ReadOnlyObservableCollection&lt;T&gt; type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ReadOnlyObservableCollectionOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut roc</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.ObjectModel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[ReadOnlyObservableCollection<$typeParameter$>$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ReadOnlyObservableCollection&lt;T&gt; variable</Title>
+      <Shortcut>vn</Shortcut>
+      <Description>ReadOnlyObservableCollection&lt;T&gt; variable declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ReadOnlyObservableCollectionOfTVariable</Keyword>
+        <Keyword>Meta-SubmenuShortcut roc</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.ObjectModel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>_arguments</ID>
+          <ToolTip>Arguments</ToolTip>
+          <Default>args</Default>
+        </Literal>
+        <Literal>
+          <ID>_identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>items</Default>
+        </Literal>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new ReadOnlyObservableCollection<$typeParameter$>($_arguments$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10588,226 +10322,9 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>SortedDictionary&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>SortedDictionary&lt;T&gt; type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name SortedDictionaryOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut sd</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>keyType</ID>
-          <Default>object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <Default>object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[SortedDictionary<$keyType$, $valueType$>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>SortedDictionary&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>SortedDictionary&lt;T&gt; variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name SortedDictionaryOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut sd</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_dictionaryIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>dic</Default>
-        </Literal>
-        <Literal>
-          <ID>keyType</ID>
-          <Default>object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <Default>object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_dictionaryIdentifier$ = new SortedDictionary<$keyType$, $valueType$>();$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>SortedDictionary&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
-      <Description>SortedDictionary&lt;T&gt; variable declaration (with initializer)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name SortedDictionaryOfTVariableWithInitializer</Keyword>
-        <Keyword>Meta-SubmenuShortcut sd</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_dictionaryIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>dic</Default>
-        </Literal>
-        <Literal>
-          <ID>_value</ID>
-          <Default>null</Default>
-        </Literal>
-        <Literal>
-          <ID>keyType</ID>
-          <Default>object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <Default>object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_dictionaryIdentifier$ = new SortedDictionary<$keyType$, $valueType$>() { [0] = $_value$ };$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>SortedSet&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>SortedSet&lt;T&gt; type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name SortedSetOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut ss</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[SortedSet<$_genericType$>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>SortedSet&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>SortedSet&lt;T&gt; variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name SortedSetOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut ss</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new SortedSet<$_genericType$>();$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>SortedSet&lt;T&gt; variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
-      <Description>SortedSet&lt;T&gt; variable declaration (with initializer)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name SortedSetOfTVariableWithInitializer</Keyword>
-        <Keyword>Meta-SubmenuShortcut ss</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>_value</ID>
-          <Default>null</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new SortedSet<$_genericType$>() { $_value$ };$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>Stack&lt;T&gt; type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>Stack&lt;T&gt; type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>Stack&lt;T&gt; type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -10825,18 +10342,17 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[Stack<$_genericType$>$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[Stack<$typeParameter$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Stack&lt;T&gt; variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>Stack&lt;T&gt; variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -10855,17 +10371,16 @@ protected virtual void On$name$($eventArgs$ e) {
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>items</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new Stack<$_genericType$>();$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[var $_identifier$ = new Stack<$typeParameter$>();$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11672,7 +11187,7 @@ finally {
         <Literal>
           <ID>_value</ID>
           <ToolTip>Value to assign</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[using (var $_identifier$ = $_value$) {
@@ -11703,7 +11218,7 @@ finally {
         <Literal>
           <ID>_value</ID>
           <ToolTip>Value to assign</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[var $_identifier$ = $_value$;$end$]]></Code>
@@ -11732,7 +11247,7 @@ finally {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to cast</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
         <Literal>
           <ID>identifier</ID>
@@ -17148,8 +16663,8 @@ End Class]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Collection(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>Collection(Of T) type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>Collection(Of T) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -17167,25 +16682,24 @@ End Class]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Collection(Of $_genericType$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[Collection(Of $typeParameter$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Collection(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>Collection(Of T) variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name CollectionOfTVariable</Keyword>
+        <Keyword>Meta-Name CollectionOfTTypeVariable</Keyword>
         <Keyword>Meta-SubmenuShortcut c</Keyword>
       </Keywords>
     </Header>
@@ -17197,30 +16711,29 @@ End Class]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New Collection(Of $_genericType$)()$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New Collection(Of $typeParameter$)()$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Collection(Of T) variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
+      <Shortcut>vnx</Shortcut>
       <Description>Collection(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name CollectionOfTVariableWithInitializer</Keyword>
+        <Keyword>Meta-Name CollectionOfTTypeVariableWithInitializer</Keyword>
         <Keyword>Meta-SubmenuShortcut c</Keyword>
       </Keywords>
     </Header>
@@ -17232,21 +16745,20 @@ End Class]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>_value</ID>
           <Default>Nothing</Default>
         </Literal>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New Collection(Of $_genericType$)() From {$_value$}$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New Collection(Of $typeParameter$)() From {$_value$}$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -17307,7 +16819,7 @@ End Class]]></Code>
     <Header>
       <Title>DateTime type</Title>
       <Shortcut>dt</Shortcut>
-      <Description>DateTime type declaration</Description>
+      <Description>DateTime type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -17470,48 +16982,14 @@ End Class]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Dictionary(Of TKey, TValue) type</Title>
-      <Shortcut>gd</Shortcut>
-      <Description>Dictionary(Of TKey, TValue) type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>Dictionary(Of TKey, TValue) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name DictionaryOfTKeyTValueType</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>keyType</ID>
-          <ToolTip>Key type</ToolTip>
-          <Default>Object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <ToolTip>Value type</ToolTip>
-          <Default>Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dictionary(Of $keyType$, $valueType$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Dictionary(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>Dictionary(Of T) type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DictionaryOfTType</Keyword>
         <Keyword>Meta-SubmenuShortcut d</Keyword>
       </Keywords>
     </Header>
@@ -17536,15 +17014,15 @@ End Class]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>Dictionary(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>Dictionary(Of T) variable declaration</Description>
+      <Title>Dictionary(Of TKey, TValue) variable</Title>
+      <Shortcut>vn</Shortcut>
+      <Description>Dictionary(Of TKey, TValue) variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name DictionaryOfTVariable</Keyword>
+        <Keyword>Meta-Name DictionaryOfTKeyTValueTypeVariable</Keyword>
         <Keyword>Meta-SubmenuShortcut d</Keyword>
       </Keywords>
     </Header>
@@ -17556,7 +17034,7 @@ End Class]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_dictionaryIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>dic</Default>
         </Literal>
@@ -17569,20 +17047,20 @@ End Class]]></Code>
           <Default>Object</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_dictionaryIdentifier$ = New Dictionary(Of $keyType$, $valueType$)()$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New Dictionary(Of $keyType$, $valueType$)()$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>Dictionary(Of T) variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
-      <Description>Dictionary(Of T) variable declaration (with initializer)</Description>
+      <Title>Dictionary(Of TKey, TValue) variable (with initializer)</Title>
+      <Shortcut>vnx</Shortcut>
+      <Description>Dictionary(Of TKey, TValue) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name DictionaryOfTVariableWithInitializer</Keyword>
+        <Keyword>Meta-Name DictionaryOfTKeyTValueTypeVariableWithInitializer</Keyword>
         <Keyword>Meta-SubmenuShortcut d</Keyword>
       </Keywords>
     </Header>
@@ -17594,7 +17072,7 @@ End Class]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_dictionaryIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>dic</Default>
         </Literal>
@@ -17611,7 +17089,7 @@ End Class]]></Code>
           <Default>Object</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_dictionaryIdentifier$ = New Dictionary(Of $keyType$, $valueType$)() From {{0, $_value$}}$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New Dictionary(Of $keyType$, $valueType$)() From {{0, $_value$}}$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -18002,8 +17480,8 @@ Next]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>HashSet(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>HashSet(Of T) type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>HashSet(Of T) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -18021,25 +17499,24 @@ Next]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[HashSet(Of $_genericType$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[HashSet(Of $typeParameter$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>HashSet(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>HashSet(Of T) variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name HashSetOfTVariable</Keyword>
+        <Keyword>Meta-Name HashSetOfTTypeVariable</Keyword>
         <Keyword>Meta-SubmenuShortcut hs</Keyword>
       </Keywords>
     </Header>
@@ -18051,30 +17528,29 @@ Next]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New HashSet(Of $_genericType$)()$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New HashSet(Of $typeParameter$)()$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>HashSet(Of T) variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
+      <Shortcut>vnx</Shortcut>
       <Description>HashSet(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name HashSetOfTVariableWithInitializer</Keyword>
+        <Keyword>Meta-Name HashSetOfTTypeVariableWithInitializer</Keyword>
         <Keyword>Meta-SubmenuShortcut hs</Keyword>
       </Keywords>
     </Header>
@@ -18086,21 +17562,49 @@ Next]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>_value</ID>
           <Default>Nothing</Default>
         </Literal>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New HashSet(Of $_genericType$)() From {$_value$}$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New HashSet(Of $typeParameter$)() From {$_value$}$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ICollection(Of T) type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>ICollection(Of T) type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ICollectionOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut ic</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[ICollection(Of $typeParameter$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -18236,16 +17740,16 @@ End Class]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>IEnumerable(Of T) type</Title>
-      <Shortcut>ge</Shortcut>
-      <Description>IEnumerable(Of T) type declaration</Description>
+      <Title>IDictionary(Of TKey, TValue) type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>IDictionary(Of TKey, TValue) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name IEnumerableOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut a</Keyword>
+        <Keyword>Meta-Name IDictionaryOfTKeyTValueType</Keyword>
+        <Keyword>Meta-SubmenuShortcut id</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -18256,12 +17760,44 @@ End Class]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_type</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>keyType</ID>
+          <Default>Object</Default>
+        </Literal>
+        <Literal>
+          <ID>valueType</ID>
+          <Default>Object</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[IDictionary(Of $keyType$, $valueType$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>IEnumerable(Of T) type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>IEnumerable(Of T) type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IEnumerableOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut ie</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[IEnumerable(Of $_type$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[IEnumerable(Of $typeParameter$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -18469,96 +18005,6 @@ End If]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>If IsNot Nothing</Title>
-      <Shortcut>ifxn</Shortcut>
-      <Description>If IsNot Nothing</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IfIsNotNothing</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression to evaluate</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[If $expression$ IsNot Nothing Then
-	$end$
-End If]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>If Not</Title>
-      <Shortcut>ifx</Shortcut>
-      <Description>If statement with condition whether the expression is equal to false</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IfNot</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression to evaluate</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[If Not $expression$ Then
-	$end$
-End If]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>if not TryParse</Title>
-      <Shortcut>ifxtp</Shortcut>
-      <Description>if statement with condition whether TryParse method returns false.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IfNotTryParse</Keyword>
-        <Keyword>Meta-SubmenuShortcut a</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>The type of the value to parse</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>result</ID>
-          <ToolTip>The result</ToolTip>
-          <Default>x</Default>
-        </Literal>
-        <Literal>
-          <ID>value</ID>
-          <ToolTip>The value to parse</ToolTip>
-          <Default>value</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $result$ As $_type$
-If Not $_type$.TryParse($value$, $result$)
-	$end$
-End If]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>If TryCast Is Nothing</Title>
       <Shortcut>ifxtc</Shortcut>
       <Description>If TryCast Is Nothing</Description>
@@ -18661,16 +18107,45 @@ End If]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>IList(Of T) type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>IList(Of T) type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IListOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut il</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[IList(Of $typeParameter$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>ImmutableArray(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableArray(Of T) type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>ImmutableArray(Of T) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ImmutableArrayOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut ia</Keyword>
+        <Keyword>Meta-SubmenuShortcut iea</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -18681,66 +18156,25 @@ End If]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[ImmutableArray(Of $_genericType$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[ImmutableArray(Of $typeParameter$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>ImmutableArray(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableArray(Of T) variable declaration</Description>
+      <Title>ImmutableDictionary(Of TKey, TValue) type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>ImmutableDictionary(Of TKey, TValue) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ImmutableArrayOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut ia</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = ImmutableArray.Create(Of $_genericType$)($arguments$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableDictionary(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableDictionary(Of T) type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableDictionaryOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut id</Keyword>
+        <Keyword>Meta-Name ImmutableDictionaryOfTKeyTValueType</Keyword>
+        <Keyword>Meta-SubmenuShortcut ied</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -18764,59 +18198,16 @@ End If]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>ImmutableDictionary(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableDictionary(Of T) variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableDictionaryOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut id</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_dictionaryIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>dic</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-        <Literal>
-          <ID>keyType</ID>
-          <Default>Object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <Default>Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_dictionaryIdentifier$ = ImmutableDictionary.Create(Of $keyType$, $valueType$)($arguments$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>ImmutableHashSet(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableHashSet(Of T) type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>ImmutableHashSet(Of T) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ImmutableHashSetOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut ihs</Keyword>
+        <Keyword>Meta-SubmenuShortcut iehs</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -18827,66 +18218,25 @@ End If]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[ImmutableHashSet(Of $_genericType$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableHashSet(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableHashSet(Of T) variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableHashSetOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut ihs</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = ImmutableHashSet.Create(Of $_genericType$)($arguments$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[ImmutableHashSet(Of $typeParameter$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ImmutableList(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableList(Of T) type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>ImmutableList(Of T) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name ImmutableListOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut il</Keyword>
+        <Keyword>Meta-SubmenuShortcut iel</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -18897,338 +18247,11 @@ End If]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[ImmutableList(Of $_genericType$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableList(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableList(Of T) variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableListOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut il</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = ImmutableList.Create(Of $_genericType$)($arguments$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableQueue(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableQueue(Of T) type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableQueueOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut iq</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[ImmutableQueue(Of $_genericType$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableQueue(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableQueue(Of T) variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableQueueOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut iq</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = ImmutableQueue.Create(Of $_genericType$)($arguments$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableSortedDictionary(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableSortedDictionary(Of T) type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableSortedDictionaryOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut isd</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>keyType</ID>
-          <Default>Object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <Default>Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[ImmutableSortedDictionary(Of $keyType$, $valueType$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableSortedDictionary(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableSortedDictionary(Of T) variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableSortedDictionaryOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut isd</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_dictionaryIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>dic</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-        <Literal>
-          <ID>keyType</ID>
-          <Default>Object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <Default>Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_dictionaryIdentifier$ = ImmutableSortedDictionary.Create(Of $keyType$, $valueType$)($arguments$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableSortedSet(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableSortedSet(Of T) type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableSortedSetOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut iss</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[ImmutableSortedSet(Of $_genericType$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableSortedSet(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableSortedSet(Of T) variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableSortedSetOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut iss</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = ImmutableSortedSet.Create(Of $_genericType$)($arguments$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableStack(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ImmutableStack(Of T) type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableStackOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut is</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[ImmutableStack(Of $_genericType$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>ImmutableStack(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ImmutableStack(Of T) variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ImmutableStackOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut is</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Immutable</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>arguments</ID>
-          <ToolTip>Method arguments</ToolTip>
-          <Default>arguments</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = ImmutableStack.Create(Of $_genericType$)($arguments$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[ImmutableList(Of $typeParameter$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -20270,6 +19293,97 @@ End Property$end$]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>IReadOnlyCollection(Of T) type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>IReadOnlyCollection(Of T) type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IReadOnlyCollectionOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut irc</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[IReadOnlyCollection(Of $typeParameter$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>IReadOnlyDictionary(Of TKey, TValue) type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>IReadOnlyDictionary(Of TKey, TValue) type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IReadOnlyDictionaryOfTKeyTValueType</Keyword>
+        <Keyword>Meta-SubmenuShortcut ird</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>keyType</ID>
+          <Default>Object</Default>
+        </Literal>
+        <Literal>
+          <ID>valueType</ID>
+          <Default>Object</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[IReadOnlyDictionary(Of $keyType$, $valueType$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>IReadOnlyList(Of T) type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>IReadOnlyList(Of T) type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IReadOnlyListOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut irl</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[IReadOnlyList(Of $typeParameter$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>Is Nothing</Title>
       <Shortcut>n</Shortcut>
       <Description>A condition whether the expression is Nothing</Description>
@@ -20290,30 +19404,6 @@ End Property$end$]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[$left$ Is Nothing$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>IsNot Nothing</Title>
-      <Shortcut>xn</Shortcut>
-      <Description>A condition whether the expression is not Nothing</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IsNotNothing</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>left</ID>
-          <ToolTip>Left operand</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[$left$ IsNot Nothing$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -20353,8 +19443,8 @@ End Property$end$]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>LinkedList(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>LinkedList(Of T) type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>LinkedList(Of T) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -20372,25 +19462,24 @@ End Property$end$]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[LinkedList(Of $_genericType$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[LinkedList(Of $typeParameter$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>LinkedList(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>LinkedList(Of T) variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name LinkedListOfTVariable</Keyword>
+        <Keyword>Meta-Name LinkedListOfTTypeVariable</Keyword>
         <Keyword>Meta-SubmenuShortcut ll</Keyword>
       </Keywords>
     </Header>
@@ -20402,24 +19491,23 @@ End Property$end$]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New LinkedList(Of $_genericType$)()$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New LinkedList(Of $typeParameter$)()$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>List(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>List(Of T) type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>List(Of T) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -20437,25 +19525,24 @@ End Property$end$]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[List(Of $_genericType$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[List(Of $typeParameter$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>List(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>List(Of T) variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ListOfTVariable</Keyword>
+        <Keyword>Meta-Name ListOfTTypeVariable</Keyword>
         <Keyword>Meta-SubmenuShortcut l</Keyword>
       </Keywords>
     </Header>
@@ -20467,30 +19554,29 @@ End Property$end$]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New List(Of $_genericType$)()$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New List(Of $typeParameter$)()$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>List(Of T) variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
+      <Shortcut>vnx</Shortcut>
       <Description>List(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ListOfTVariableWithInitializer</Keyword>
+        <Keyword>Meta-Name ListOfTTypeVariableWithInitializer</Keyword>
         <Keyword>Meta-SubmenuShortcut l</Keyword>
       </Keywords>
     </Header>
@@ -20502,21 +19588,20 @@ End Property$end$]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>_value</ID>
           <Default>Nothing</Default>
         </Literal>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New List(Of $_genericType$)() From {$_value$}$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New List(Of $typeParameter$)() From {$_value$}$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -20545,9 +19630,9 @@ End Property$end$]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>new variable</Title>
+      <Title>- new variable</Title>
       <Shortcut>vn</Shortcut>
-      <Description>variable declaration with new object creation</Description>
+      <Description>new variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -20579,9 +19664,9 @@ End Property$end$]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>new variable (with initializer)</Title>
+      <Title>- new variable (with initializer)</Title>
       <Shortcut>vnx</Shortcut>
-      <Description>variable declaration with new object creation (with initializer)</Description>
+      <Description>new variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -20613,64 +19698,6 @@ End Property$end$]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Dim $identifier$ = New $type$($_arguments$) With {$_value$}$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>String.IsNullOrEmpty = False</Title>
-      <Shortcut>xsne</Shortcut>
-      <Description>String.IsNullOrEmpty = False</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name NotStringIsNullOrEmpty</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[String.IsNullOrEmpty($expression$) = False$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>String.IsNullOrWhiteSpace = False</Title>
-      <Shortcut>xsnw</Shortcut>
-      <Description>String.IsNullOrWhiteSpace = False</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name NotStringIsNullOrWhiteSpace</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[String.IsNullOrWhiteSpace($expression$) = False$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -20733,8 +19760,8 @@ End Class]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ObservableCollection(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ObservableCollection(Of T) type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>ObservableCollection(Of T) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -20752,25 +19779,24 @@ End Class]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[ObservableCollection(Of $_genericType$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[ObservableCollection(Of $typeParameter$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ObservableCollection(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>ObservableCollection(Of T) variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ObservableCollectionOfTVariable</Keyword>
+        <Keyword>Meta-Name ObservableCollectionOfTTypeVariable</Keyword>
         <Keyword>Meta-SubmenuShortcut oc</Keyword>
       </Keywords>
     </Header>
@@ -20782,30 +19808,29 @@ End Class]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New ObservableCollection(Of $_genericType$)()$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New ObservableCollection(Of $typeParameter$)()$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ObservableCollection(Of T) variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
+      <Shortcut>vnx</Shortcut>
       <Description>ObservableCollection(Of T) variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ObservableCollectionOfTVariableWithInitializer</Keyword>
+        <Keyword>Meta-Name ObservableCollectionOfTTypeVariableWithInitializer</Keyword>
         <Keyword>Meta-SubmenuShortcut oc</Keyword>
       </Keywords>
     </Header>
@@ -20817,21 +19842,20 @@ End Class]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>_value</ID>
           <Default>Nothing</Default>
         </Literal>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New ObservableCollection(Of $_genericType$)() From {$_value$}$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New ObservableCollection(Of $typeParameter$)() From {$_value$}$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23383,8 +22407,8 @@ End Property$end$]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Queue(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>Queue(Of T) type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>Queue(Of T) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -23402,25 +22426,24 @@ End Property$end$]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Queue(Of $_genericType$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[Queue(Of $typeParameter$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Queue(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>Queue(Of T) variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name QueueOfTVariable</Keyword>
+        <Keyword>Meta-Name QueueOfTTypeVariable</Keyword>
         <Keyword>Meta-SubmenuShortcut q</Keyword>
       </Keywords>
     </Header>
@@ -23432,17 +22455,16 @@ End Property$end$]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New Queue(Of $_genericType$)()$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New Queue(Of $typeParameter$)()$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23498,8 +22520,8 @@ End Class]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ReadOnlyCollection(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ReadOnlyCollection(Of T) type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>ReadOnlyCollection(Of T) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -23517,25 +22539,24 @@ End Class]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[ReadOnlyCollection(Of $_genericType$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[ReadOnlyCollection(Of $typeParameter$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>ReadOnlyCollection(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>ReadOnlyCollection(Of T) variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ReadOnlyCollectionOfTVariable</Keyword>
+        <Keyword>Meta-Name ReadOnlyCollectionOfTTypeVariable</Keyword>
         <Keyword>Meta-SubmenuShortcut rc</Keyword>
       </Keywords>
     </Header>
@@ -23547,35 +22568,34 @@ End Class]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_argumentList</ID>
-          <ToolTip>Constructor arguments</ToolTip>
-          <Default>arguments</Default>
+          <ID>_arguments</ID>
+          <ToolTip>Arguments</ToolTip>
+          <Default>args</Default>
         </Literal>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New ReadOnlyCollection(Of $_genericType$)($_argumentList$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New ReadOnlyCollection(Of $typeParameter$)($_arguments$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>ReadOnlyDictionary(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>ReadOnlyDictionary(Of T) type declaration</Description>
+      <Title>ReadOnlyDictionary(Of TKey, TValue) type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>ReadOnlyDictionary(Of TKey, TValue) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ReadOnlyDictionaryOfTType</Keyword>
+        <Keyword>Meta-Name ReadOnlyDictionaryOfTKeyTValueType</Keyword>
         <Keyword>Meta-SubmenuShortcut rd</Keyword>
       </Keywords>
     </Header>
@@ -23600,15 +22620,15 @@ End Class]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>ReadOnlyDictionary(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>ReadOnlyDictionary(Of T) variable declaration</Description>
+      <Title>ReadOnlyDictionary(Of TKey, TValue) variable</Title>
+      <Shortcut>vn</Shortcut>
+      <Description>ReadOnlyDictionary(Of TKey, TValue) variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name ReadOnlyDictionaryOfTVariable</Keyword>
+        <Keyword>Meta-Name ReadOnlyDictionaryOfTKeyTValueTypeVariable</Keyword>
         <Keyword>Meta-SubmenuShortcut rd</Keyword>
       </Keywords>
     </Header>
@@ -23620,12 +22640,12 @@ End Class]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_argumentList</ID>
-          <ToolTip>Constructor arguments</ToolTip>
-          <Default>arguments</Default>
+          <ID>_arguments</ID>
+          <ToolTip>Arguments</ToolTip>
+          <Default>args</Default>
         </Literal>
         <Literal>
-          <ID>_dictionaryIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
           <Default>dic</Default>
         </Literal>
@@ -23638,7 +22658,75 @@ End Class]]></Code>
           <Default>Object</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_dictionaryIdentifier$ = New ReadOnlyDictionary(Of $keyType$, $valueType$)($_argumentList$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New ReadOnlyDictionary(Of $keyType$, $valueType$)($_arguments$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ReadOnlyObservableCollection(Of T) type</Title>
+      <Shortcut>j</Shortcut>
+      <Description>ReadOnlyObservableCollection(Of T) type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ReadOnlyObservableCollectionOfTType</Keyword>
+        <Keyword>Meta-SubmenuShortcut roc</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.ObjectModel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[ReadOnlyObservableCollection(Of $typeParameter$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>ReadOnlyObservableCollection(Of T) variable</Title>
+      <Shortcut>vn</Shortcut>
+      <Description>ReadOnlyObservableCollection(Of T) variable declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ReadOnlyObservableCollectionOfTTypeVariable</Keyword>
+        <Keyword>Meta-SubmenuShortcut roc</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.ObjectModel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>_arguments</ID>
+          <ToolTip>Arguments</ToolTip>
+          <Default>args</Default>
+        </Literal>
+        <Literal>
+          <ID>_identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>typeParameter</ID>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New ReadOnlyObservableCollection(Of $typeParameter$)($_arguments$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -23761,226 +22849,9 @@ End Class$end$]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>SortedDictionary(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>SortedDictionary(Of T) type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name SortedDictionaryOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut sd</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>keyType</ID>
-          <Default>Object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <Default>Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[SortedDictionary(Of $keyType$, $valueType$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>SortedDictionary(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>SortedDictionary(Of T) variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name SortedDictionaryOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut sd</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_dictionaryIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>dic</Default>
-        </Literal>
-        <Literal>
-          <ID>keyType</ID>
-          <Default>Object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <Default>Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_dictionaryIdentifier$ = New SortedDictionary(Of $keyType$, $valueType$)()$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>SortedDictionary(Of T) variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
-      <Description>SortedDictionary(Of T) variable declaration (with initializer)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name SortedDictionaryOfTVariableWithInitializer</Keyword>
-        <Keyword>Meta-SubmenuShortcut sd</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_dictionaryIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>dic</Default>
-        </Literal>
-        <Literal>
-          <ID>_value</ID>
-          <Default>Nothing</Default>
-        </Literal>
-        <Literal>
-          <ID>keyType</ID>
-          <Default>Object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <Default>Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_dictionaryIdentifier$ = New SortedDictionary(Of $keyType$, $valueType$)() From {{0, $_value$}}$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>SortedSet(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>SortedSet(Of T) type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name SortedSetOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut ss</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[SortedSet(Of $_genericType$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>SortedSet(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
-      <Description>SortedSet(Of T) variable declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name SortedSetOfTVariable</Keyword>
-        <Keyword>Meta-SubmenuShortcut ss</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New SortedSet(Of $_genericType$)()$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>SortedSet(Of T) variable (with initializer)</Title>
-      <Shortcut>vcx</Shortcut>
-      <Description>SortedSet(Of T) variable declaration (with initializer)</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name SortedSetOfTVariableWithInitializer</Keyword>
-        <Keyword>Meta-SubmenuShortcut ss</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>_value</ID>
-          <Default>Nothing</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New SortedSet(Of $_genericType$)() From {$_value$}$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>Stack(Of T) type</Title>
-      <Shortcut>gc</Shortcut>
-      <Description>Stack(Of T) type declaration</Description>
+      <Shortcut>j</Shortcut>
+      <Description>Stack(Of T) type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -23998,25 +22869,24 @@ End Class$end$]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Stack(Of $_genericType$)$end$]]></Code>
+      <Code Language="VB"><![CDATA[Stack(Of $typeParameter$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Stack(Of T) variable</Title>
-      <Shortcut>vc</Shortcut>
+      <Shortcut>vn</Shortcut>
       <Description>Stack(Of T) variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name StackOfTVariable</Keyword>
+        <Keyword>Meta-Name StackOfTTypeVariable</Keyword>
         <Keyword>Meta-SubmenuShortcut s</Keyword>
       </Keywords>
     </Header>
@@ -24028,17 +22898,16 @@ End Class$end$]]></Code>
       </Imports>
       <Declarations>
         <Literal>
-          <ID>_collectionIdentifier</ID>
+          <ID>_identifier</ID>
           <ToolTip>Identifier name</ToolTip>
-          <Default>items</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
-          <ID>_genericType</ID>
-          <ToolTip>Generic type</ToolTip>
+          <ID>typeParameter</ID>
           <Default>T</Default>
         </Literal>
       </Declarations>
-      <Code Language="VB"><![CDATA[Dim $_collectionIdentifier$ = New Stack(Of $_genericType$)()$end$]]></Code>
+      <Code Language="VB"><![CDATA[Dim $_identifier$ = New Stack(Of $typeParameter$)()$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -24758,7 +23627,7 @@ End Using]]></Code>
         <Literal>
           <ID>_value</ID>
           <ToolTip>Value to assign</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Dim $_identifier$ = $_value$$end$]]></Code>
@@ -24787,7 +23656,7 @@ End Using]]></Code>
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to cast</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
         <Literal>
           <ID>identifier</ID>

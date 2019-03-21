@@ -3793,7 +3793,7 @@ $modifier$ class $name$Attribute : $base$ {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to evaluate</ToolTip>
-          <Default>expression</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>false</ID>
@@ -3827,7 +3827,7 @@ $modifier$ class $name$Attribute : $base$ {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to evaluate</ToolTip>
-          <Default>expression</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>false</ID>
@@ -3861,7 +3861,7 @@ $modifier$ class $name$Attribute : $base$ {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to evaluate</ToolTip>
-          <Default>expression</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>false</ID>
@@ -3881,7 +3881,7 @@ $modifier$ class $name$Attribute : $base$ {
     <Header>
       <Title>DateTime type</Title>
       <Shortcut>dt</Shortcut>
-      <Description>DateTime type declaration</Description>
+      <Description>DateTime type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -4237,6 +4237,123 @@ protected virtual void Dispose(bool disposing) {
 }]]></Code>
     </Snippet>
   </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Enumerator class</Title>
+      <Shortcut>c_Enumerator</Shortcut>
+      <Description>custom enumerator class</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name EnumeratorClass</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Collections</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Diagnostics.CodeAnalysis</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>elementType</ID>
+          <ToolTip>Element type name</ToolTip>
+          <Default>T</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>TypeName</Default>
+        </Literal>
+        <Literal>
+          <ID>variableName</ID>
+          <ToolTip>Variable name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[
+  IEnumerator<$elementType$> IEnumerable<$elementType$>.GetEnumerator()
+{
+	return new EnumeratorImpl(this);
+}
+
+IEnumerator IEnumerable.GetEnumerator()
+{
+	return new EnumeratorImpl(this);
+}
+
+public Enumerator GetEnumerator()
+{
+	return new Enumerator(this);
+}
+
+[SuppressMessage("Performance", "CA1815")]
+[SuppressMessage("Usage", "CA2231")]
+public struct $end$Enumerator
+{
+	private $type$ _$variableName$;
+	private $elementType$ _current;
+
+	internal Enumerator($type$ $variableName$)
+	{
+		_$variableName$ = $variableName$;
+		_current = null;
+	}
+
+	public bool MoveNext()
+	{
+		throw new NotImplementedException();
+	}
+
+	public $elementType$ Current
+	{
+		get { throw new NotImplementedException(); }
+	}
+
+	public void Reset()
+	{
+		_current = null;
+	}
+
+	public override bool Equals(object obj) => throw new NotSupportedException();
+
+	public override int GetHashCode() => throw new NotSupportedException();
+}
+
+private class EnumeratorImpl : IEnumerator<$elementType$>
+{
+	private Enumerator _en;
+
+	internal EnumeratorImpl($type$ $variableName$)
+	{
+		_en = new Enumerator($variableName$);
+	}
+
+	public $elementType$ Current => _en.Current;
+
+	object IEnumerator.Current => _en.Current;
+
+	public bool MoveNext() => _en.MoveNext();
+
+	public void Reset() => _en.Reset();
+
+	public void Dispose()
+	{
+	}
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Equals and GetHashCode</Title>
@@ -4417,7 +4534,7 @@ $modifier$ class $name$Exception : $base$ {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to cast</ToolTip>
-          <Default>expression</Default>
+          <Default>x</Default>
         </Literal>
         <Literal>
           <ID>type</ID>
@@ -4690,35 +4807,6 @@ $modifier$ class $name$Exception : $base$ {
 }]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>IEnumerable&lt;T&gt; type</Title>
-      <Shortcut>ge</Shortcut>
-      <Description>IEnumerable&lt;T&gt; type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IEnumerableOfTType</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[IEnumerable<$_type$>$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>IEnumerator&lt;T&gt; variable</Title>
@@ -4903,95 +4991,6 @@ $modifier$ class $name$Exception : $base$ {
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[if ($expression$ == null) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>if not</Title>
-      <Shortcut>ifx</Shortcut>
-      <Description>if with condition whether the expression is equal to false</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IfNot</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression to evaluate</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[if (!$expression$) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>if not equal to null</Title>
-      <Shortcut>ifxn</Shortcut>
-      <Description>if not equal to null</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IfNotEqualToNull</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression to evaluate</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ != null) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>if not TryParse</Title>
-      <Shortcut>ifxtp</Shortcut>
-      <Description>if statement with condition whether TryParse method returns false.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IfNotTryParse</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>The type of the value to parse</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>result</ID>
-          <ToolTip>The result</ToolTip>
-          <Default>x</Default>
-        </Literal>
-        <Literal>
-          <ID>value</ID>
-          <ToolTip>The value to parse</ToolTip>
-          <Default>value</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[$_type$ $result$;
-if (!$_type$.TryParse($value$, out $result$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -6154,9 +6153,9 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>new variable</Title>
+      <Title>- new variable</Title>
       <Shortcut>vn</Shortcut>
-      <Description>variable declaration with new object creation</Description>
+      <Description>new variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -6188,9 +6187,9 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>new variable (with initializer)</Title>
+      <Title>- new variable (with initializer)</Title>
       <Shortcut>vnx</Shortcut>
-      <Description>variable declaration with new object creation (with initializer)</Description>
+      <Description>new variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -6222,78 +6221,6 @@ protected virtual void On$name$($eventArgs$ e) {
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[var $identifier$ = new $type$($_arguments$) { $_value$ };$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>not equal to null</Title>
-      <Shortcut>xn</Shortcut>
-      <Description>not equal to null</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name NotEqualToNull</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>left</ID>
-          <ToolTip>Left operand</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[$left$ != null$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>!string.IsNullOrEmpty</Title>
-      <Shortcut>xsne</Shortcut>
-      <Description>!string.IsNullOrEmpty method</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name NotStringIsNullOrEmpty</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[!string.IsNullOrEmpty($expression$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>!string.IsNullOrWhiteSpace</Title>
-      <Shortcut>xsnw</Shortcut>
-      <Description>!string.IsNullOrWhiteSpace method</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name NotStringIsNullOrWhiteSpace</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[!string.IsNullOrWhiteSpace($expression$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9866,7 +9793,7 @@ finally {
         <Literal>
           <ID>_value</ID>
           <ToolTip>Value to assign</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[using (var $_identifier$ = $_value$) {
@@ -9897,7 +9824,7 @@ finally {
         <Literal>
           <ID>_value</ID>
           <ToolTip>Value to assign</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[var $_identifier$ = $_value$;$end$]]></Code>
@@ -9926,7 +9853,7 @@ finally {
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to cast</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
         <Literal>
           <ID>identifier</ID>
@@ -17033,7 +16960,7 @@ End Class]]></Code>
     <Header>
       <Title>DateTime type</Title>
       <Shortcut>dt</Shortcut>
-      <Description>DateTime type declaration</Description>
+      <Description>DateTime type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -17191,40 +17118,6 @@ End Class]]></Code>
 
 	$end$
 End Class]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Dictionary(Of TKey, TValue) type</Title>
-      <Shortcut>gd</Shortcut>
-      <Description>Dictionary(Of TKey, TValue) type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DictionaryOfTKeyTValueType</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>keyType</ID>
-          <ToolTip>Key type</ToolTip>
-          <Default>Object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <ToolTip>Value type</ToolTip>
-          <Default>Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dictionary(Of $keyType$, $valueType$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -17742,35 +17635,6 @@ End Class]]></Code>
 End Class]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>IEnumerable(Of T) type</Title>
-      <Shortcut>ge</Shortcut>
-      <Description>IEnumerable(Of T) type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IEnumerableOfTType</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[IEnumerable(Of $_type$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>IEnumerator(Of T) variable</Title>
@@ -17969,95 +17833,6 @@ End Class]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[If $expression$ Is Nothing Then
-	$end$
-End If]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>If IsNot Nothing</Title>
-      <Shortcut>ifxn</Shortcut>
-      <Description>If IsNot Nothing</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IfIsNotNothing</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression to evaluate</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[If $expression$ IsNot Nothing Then
-	$end$
-End If]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>If Not</Title>
-      <Shortcut>ifx</Shortcut>
-      <Description>If statement with condition whether the expression is equal to false</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IfNot</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression to evaluate</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[If Not $expression$ Then
-	$end$
-End If]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>if not TryParse</Title>
-      <Shortcut>ifxtp</Shortcut>
-      <Description>if statement with condition whether TryParse method returns false.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IfNotTryParse</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>The type of the value to parse</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>result</ID>
-          <ToolTip>The result</ToolTip>
-          <Default>x</Default>
-        </Literal>
-        <Literal>
-          <ID>value</ID>
-          <ToolTip>The value to parse</ToolTip>
-          <Default>value</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dim $result$ As $_type$
-If Not $_type$.TryParse($value$, $result$)
 	$end$
 End If]]></Code>
     </Snippet>
@@ -19205,30 +18980,6 @@ End Property$end$]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>IsNot Nothing</Title>
-      <Shortcut>xn</Shortcut>
-      <Description>A condition whether the expression is not Nothing</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IsNotNothing</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>left</ID>
-          <ToolTip>Left operand</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[$left$ IsNot Nothing$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>Lambda expression</Title>
       <Shortcut>l</Shortcut>
       <Description>Lambda expression</Description>
@@ -19287,9 +19038,9 @@ End Property$end$]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>new variable</Title>
+      <Title>- new variable</Title>
       <Shortcut>vn</Shortcut>
-      <Description>variable declaration with new object creation</Description>
+      <Description>new variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -19321,9 +19072,9 @@ End Property$end$]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>new variable (with initializer)</Title>
+      <Title>- new variable (with initializer)</Title>
       <Shortcut>vnx</Shortcut>
-      <Description>variable declaration with new object creation (with initializer)</Description>
+      <Description>new variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -19355,64 +19106,6 @@ End Property$end$]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Dim $identifier$ = New $type$($_arguments$) With {$_value$}$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>String.IsNullOrEmpty = False</Title>
-      <Shortcut>xsne</Shortcut>
-      <Description>String.IsNullOrEmpty = False</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name NotStringIsNullOrEmpty</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[String.IsNullOrEmpty($expression$) = False$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>String.IsNullOrWhiteSpace = False</Title>
-      <Shortcut>xsnw</Shortcut>
-      <Description>String.IsNullOrWhiteSpace = False</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name NotStringIsNullOrWhiteSpace</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[String.IsNullOrWhiteSpace($expression$) = False$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -22830,7 +22523,7 @@ End Using]]></Code>
         <Literal>
           <ID>_value</ID>
           <ToolTip>Value to assign</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[Dim $_identifier$ = $_value$$end$]]></Code>
@@ -22859,7 +22552,7 @@ End Using]]></Code>
         <Literal>
           <ID>expression</ID>
           <ToolTip>Expression to cast</ToolTip>
-          <Default>expression</Default>
+          <Default>_</Default>
         </Literal>
         <Literal>
           <ID>identifier</ID>

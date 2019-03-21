@@ -130,13 +130,9 @@ finally|finally clause
 fr|for statement
 frr|for statement \(reversed\)
 g| type parameter
-ge|IEnumerable\<T> type
 ie|public interface
 ifn|if equal to null
 iftp|if TryParse
-ifx|if not
-ifxn|if not equal to null
-ifxtp|if not TryParse
 ir|public indexer
 k|public const
 l|lambda expression
@@ -186,7 +182,7 @@ va|array variable
 vb|Boolean variable
 vi|Int32 variable
 vm|public virtual method
-vn|new variable
+vn|\- new variable
 vp|public virtual auto property
 vrp|public virtual read\-only auto property
 vrpp|public virtual read\-only property
@@ -196,9 +192,6 @@ we|while statement
 wen|while null
 wexn|while not null
 where|generic type constraint
-xn|not equal to null
-xsne|\!string\.IsNullOrEmpty
-xsnw|\!string\.IsNullOrWhiteSpace
 yb|yield break statement
 yr|yield return statement
 
