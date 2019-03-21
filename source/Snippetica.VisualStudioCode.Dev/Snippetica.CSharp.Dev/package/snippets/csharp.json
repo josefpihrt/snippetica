@@ -8,19 +8,12 @@
     ],
     "description": " local function declaration"
   },
-  "! operator": {
-    "prefix": "x",
-    "body": [
-      "!(${1:x})${0}"
-    ],
-    "description": "! operator"
-  },
   "array type": {
     "prefix": "a",
     "body": [
       "${1:T}[]${0}"
     ],
-    "description": "array type declaration"
+    "description": "array type"
   },
   "Assembly attribute": {
     "prefix": "ae_ay",
@@ -105,27 +98,6 @@
       "[DebuggerStepThrough]${0}"
     ],
     "description": "DebuggerStepThrough attribute"
-  },
-  "Dictionary<TKey, TValue> type": {
-    "prefix": "gd",
-    "body": [
-      "Dictionary<${1:object}, ${2:object}>${0}"
-    ],
-    "description": "Dictionary<TKey, TValue> type declaration"
-  },
-  "Dictionary<TKey, TValue> variable": {
-    "prefix": "vd",
-    "body": [
-      "var ${1:dic} = new Dictionary<${2:object}, ${3:object}>();${0}"
-    ],
-    "description": "Dictionary<TKey, TValue> variable declaration"
-  },
-  "Dictionary<TKey, TValue> variable (with initializer)": {
-    "prefix": "vdx",
-    "body": [
-      "var ${1:dic} = new Dictionary<${2:object}, ${3:object}>() { [0] = ${4:null} };${0}"
-    ],
-    "description": "Dictionary<TKey, TValue> variable declaration (with initializer)"
   },
   "Directory.CreateDirectory": {
     "prefix": "iod_cd",
@@ -261,27 +233,6 @@
       "[Flags]${0}"
     ],
     "description": "Flags attribute"
-  },
-  "HashSet<T> type": {
-    "prefix": "ghs",
-    "body": [
-      "HashSet<${1:T}>${0}"
-    ],
-    "description": "HashSet<T> type declaration"
-  },
-  "HashSet<T> variable": {
-    "prefix": "vhs",
-    "body": [
-      "var ${1:items} = new HashSet<${2:T}>();${0}"
-    ],
-    "description": "HashSet<T> variable declaration"
-  },
-  "HashSet<T> variable (with initializer)": {
-    "prefix": "vhsx",
-    "body": [
-      "var ${1:items} = new HashSet<${2:T}>() { ${3:null} };${0}"
-    ],
-    "description": "HashSet<T> variable declaration (with initializer)"
   },
   "if !string.IsNullOrEmpty": {
     "prefix": "ifxsne",
@@ -487,27 +438,6 @@
     ],
     "description": "if statement with condition whether TryGetValue method returns true."
   },
-  "List<T> type": {
-    "prefix": "gl",
-    "body": [
-      "List<${1:T}>${0}"
-    ],
-    "description": "List<T> type declaration"
-  },
-  "List<T> variable": {
-    "prefix": "vl",
-    "body": [
-      "var ${1:items} = new List<${2:T}>();${0}"
-    ],
-    "description": "List<T> variable declaration"
-  },
-  "List<T> variable (with initializer)": {
-    "prefix": "vlx",
-    "body": [
-      "var ${1:items} = new List<${2:T}>() { ${3:null} };${0}"
-    ],
-    "description": "List<T> variable declaration (with initializer)"
-  },
   "MemoryStream Variable": {
     "prefix": "u_mysm",
     "body": [
@@ -539,27 +469,6 @@
       "new ${1:T}[] { ${2:null} }${0}"
     ],
     "description": "new array (with initializer)"
-  },
-  "ObservableCollection<T> type": {
-    "prefix": "goc",
-    "body": [
-      "ObservableCollection<${1:T}>${0}"
-    ],
-    "description": "ObservableCollection<T> type declaration"
-  },
-  "ObservableCollection<T> variable": {
-    "prefix": "voc",
-    "body": [
-      "var ${1:items} = new ObservableCollection<${2:T}>();${0}"
-    ],
-    "description": "ObservableCollection<T> variable declaration"
-  },
-  "ObservableCollection<T> variable (with initializer)": {
-    "prefix": "vocx",
-    "body": [
-      "var ${1:items} = new ObservableCollection<${2:T}>() { ${3:null} };${0}"
-    ],
-    "description": "ObservableCollection<T> variable declaration (with initializer)"
   },
   "Obsolete attribute": {
     "prefix": "ae_oe",
@@ -631,13 +540,6 @@
     ],
     "description": "Path.ChangeExtension method."
   },
-  "Regex type": {
-    "prefix": "rx",
-    "body": [
-      "Regex${0}"
-    ],
-    "description": "Regex type declaration"
-  },
   "return default": {
     "prefix": "red",
     "body": [
@@ -672,13 +574,6 @@
       "throw;${0}"
     ],
     "description": "throw statement"
-  },
-  "TimeSpan type": {
-    "prefix": "ts",
-    "body": [
-      "TimeSpan${0}"
-    ],
-    "description": "TimeSpan type declaration"
   },
   "variable declaration with as operator + if not null": {
     "prefix": "vasxn",

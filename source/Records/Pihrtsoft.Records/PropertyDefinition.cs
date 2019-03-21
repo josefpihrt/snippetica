@@ -1,34 +1,39 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Xml.Linq;
+using System.Linq;
 using Pihrtsoft.Records.Utilities;
 
 namespace Pihrtsoft.Records
 {
-    [DebuggerDisplay("Name = {Name,nq}, IsCollection = {IsCollection}, IsRequired = {IsRequired}, DefaultValue = {DefaultValue}")]
-    public class PropertyDefinition : IKey<string>
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
+    public sealed class PropertyDefinition : IKey<string>
     {
         internal PropertyDefinition(
             string name,
             bool isCollection = false,
             bool isRequired = false,
-            object defaultValue = null,
+            string defaultValue = null,
             string description = null,
-            XElement element = null)
+            char[] separators = null)
         {
-            if (!object.ReferenceEquals(name, IdName)
-                && !object.ReferenceEquals(name, TagsName)
-                && IsReservedName(name))
-            {
-                ThrowHelper.ThrowInvalidOperation(ErrorMessages.PropertyNameIsReserved(name), element);
-            }
-
             Name = name;
             IsCollection = isCollection;
             IsRequired = isRequired;
             DefaultValue = defaultValue;
             Description = description;
+
+            if (separators != null)
+            {
+                SeparatorsArray = separators.ToArray();
+                Separators = new ReadOnlyCollection<char>(separators);
+            }
+            else
+            {
+                SeparatorsArray = System.Array.Empty<char>();
+                Separators = Empty.ReadOnlyCollection<char>();
+            }
         }
 
         internal static string IdName { get; } = "Id";
@@ -37,7 +42,7 @@ namespace Pihrtsoft.Records
 
         internal static PropertyDefinition Id { get; } = new PropertyDefinition(IdName);
 
-        internal static PropertyDefinition Tags { get; } = new PropertyDefinition(TagsName, isCollection: true);
+        internal static PropertyDefinition Tags { get; } = new PropertyDefinition(TagsName, isCollection: true, separators: new char[] { ',' });
 
         public string Name { get; }
 
@@ -45,9 +50,19 @@ namespace Pihrtsoft.Records
 
         public bool IsRequired { get; }
 
-        public object DefaultValue { get; }
+        public string DefaultValue { get; }
 
         public string Description { get; }
+
+        internal char[] SeparatorsArray { get; }
+
+        public ReadOnlyCollection<char> Separators { get; }
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        private string DebuggerDisplay
+        {
+            get { return $"{Name} IsCollection = {IsCollection} IsRequired = {IsRequired} DefaultValue = {DefaultValue}"; }
+        }
 
         string IKey<string>.GetKey()
         {

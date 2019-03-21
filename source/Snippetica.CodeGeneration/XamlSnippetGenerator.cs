@@ -13,8 +13,8 @@ namespace Snippetica.CodeGeneration
 
             if (snippet.HasTag(KnownTags.GenerateAlternativeShortcut))
             {
-                commands.AddMultiCommand(CommandUtility.ShortcutToLowercase);
-                commands.AddMultiCommand(CommandUtility.GenerateAlternativeShortcuts);
+                commands.AddMultiCommand(CommandUtility.ShortcutToLowercaseCommand);
+                commands.AddMultiCommand(CommandUtility.GenerateAlternativeShortcutCommand);
             }
 
             return commands;

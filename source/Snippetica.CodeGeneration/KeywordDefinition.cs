@@ -8,7 +8,7 @@ using Pihrtsoft.Snippets;
 namespace Snippetica.CodeGeneration
 {
     [DebuggerDisplay("{Name,nq}")]
-    public  class KeywordDefinition
+    public class KeywordDefinition
     {
         private static readonly Version _formatVersion = new Version(1, 1, 0);
 

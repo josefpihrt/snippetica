@@ -13,10 +13,7 @@ namespace Snippetica.CodeGeneration.Commands
 
         public string Suffix { get; }
 
-        public override CommandKind Kind
-        {
-            get { return CommandKind.SuffixFileName; }
-        }
+        public override CommandKind Kind => CommandKind.SuffixFileName;
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {

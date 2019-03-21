@@ -1,12 +1,10 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
-using Pihrtsoft.Records;
 using Pihrtsoft.Snippets;
 using Snippetica.IO;
 
@@ -49,23 +47,6 @@ namespace Snippetica.CodeGeneration
         public bool HasTag(string value)
         {
             return Tags.Contains(value);
-        }
-
-        public static IEnumerable<ShortcutInfo> LoadFromFile(string uri)
-        {
-            return Document.ReadRecords(uri)
-                .Where(f => !f.HasTag(KnownTags.Disabled))
-                .Select(record =>
-                {
-                    return new ShortcutInfo(
-                        record.GetString("Value"),
-                        record.GetString("Description"),
-                        record.GetStringOrDefault("Comment", "-"),
-                        record.GetEnumOrDefault("Kind", ShortcutKind.None),
-                        record.GetItems("Languages").Select(f => (Language)Enum.Parse(typeof(Language), f)),
-                        record.GetItems("Environments").Select(f => (EnvironmentKind)Enum.Parse(typeof(EnvironmentKind), f)),
-                        record.GetTags());
-                });
         }
 
         public static void SerializeToXml(string path, IEnumerable<ShortcutInfo> shortcuts)

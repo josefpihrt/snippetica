@@ -6,10 +6,7 @@ namespace Snippetica.CodeGeneration.Commands
 {
     public class ShortcutToLowercaseCommand : SnippetCommand
     {
-        public override CommandKind Kind
-        {
-            get { return CommandKind.ShortcutToLowercase; }
-        }
+        public override CommandKind Kind => CommandKind.ShortcutToLowercase;
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {

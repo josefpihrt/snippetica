@@ -4,10 +4,7 @@ namespace Snippetica.CodeGeneration.Commands
 {
     public class InlineCommand : ModifierCommand
     {
-        public override CommandKind Kind
-        {
-            get { return CommandKind.InlineModifier; }
-        }
+        public override CommandKind Kind => CommandKind.InlineModifier;
 
         protected override ModifierDefinition GetModifier(LanguageDefinition language)
         {

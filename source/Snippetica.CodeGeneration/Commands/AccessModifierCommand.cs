@@ -13,10 +13,9 @@ namespace Snippetica.CodeGeneration.Commands
 
         public ModifierDefinition Modifier { get; }
 
-        public override CommandKind Kind
-        {
-            get { return CommandKind.AccessModifier; }
-        }
+        public override CommandKind Kind => CommandKind.AccessModifier;
+
+        public override bool ShouldRemoveLiteral => true;
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {
@@ -24,11 +23,6 @@ namespace Snippetica.CodeGeneration.Commands
 
             if (!Modifier.Tags.Contains(KnownTags.Default))
                 snippet.AddTag(KnownTags.ExcludeFromReadme);
-        }
-
-        public override bool ShouldRemoveLiteral
-        {
-            get { return true; }
         }
 
         protected override ModifierDefinition GetModifier(LanguageDefinition language)

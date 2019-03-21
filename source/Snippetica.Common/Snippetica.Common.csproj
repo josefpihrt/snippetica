@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="ShortcutInfo.cs" />
     <Compile Include="EnvironmentKind.cs" />
     <Compile Include="EnvironmentKindExtensions.cs" />
@@ -59,7 +58,6 @@
     <Compile Include="ShortcutKind.cs" />
     <Compile Include="ShortcutKindExtensions.cs" />
     <Compile Include="TagInfo.cs" />
-    <Compile Include="SnippetDirectoryMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SnippetExtensions.cs" />
     <Compile Include="StringExtensions.cs" />

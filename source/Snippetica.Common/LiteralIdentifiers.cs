@@ -4,25 +4,21 @@ namespace Snippetica
 {
     public static class LiteralIdentifiers
     {
-        private const string Prefix = "_";
-
-        public const string Modifiers = Prefix + "modifiers";
-        public const string Type = Prefix + "type";
-        public const string As = Prefix + "as";
-        public const string Value = Prefix + "value";
-        public const string ArrayLength = Prefix + "arrayLength";
-        public const string Initializer = Prefix + "initializer";
-        public const string ArgumentList = Prefix + "argumentList";
-        public const string ParameterList = Prefix + "parameterList";
-        public const string SubOrFunction = Prefix + "subOrFunction";
-        public const string Collection = Prefix + "collection";
-        public const string GenericType = Prefix + "genericType";
-        public const string CollectionIdentifier = Prefix + "collectionIdentifier";
-        public const string DictionaryIdentifier =  Prefix + "dictionaryIdentifier";
-        public const string Identifier = Prefix + "identifier";
-        public const string Semicolon = Prefix + "semicolon";
+        public const string Arguments = "_arguments";
+        public const string ArrayLength = "_arrayLength";
+        public const string As = "_as";
+        public const string Identifier = "_identifier";
+        public const string Initializer = "_initializer";
+        public const string Modifiers = "_modifiers";
+        public const string ParameterList = "_parameterList";
+        public const string Semicolon = "_semicolon";
+        public const string SubOrFunction = "_subOrFunction";
+        public const string Type = "_type";
+        public const string TypeParameterList = "_typeParameterList";
+        public const string Value = "_value";
 
         public const string KeyType = "keyType";
         public const string ValueType = "valueType";
+        public const string TypeParameter = "typeParameter";
     }
 }

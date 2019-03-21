@@ -2,8 +2,8 @@
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
     <Title>hs HashSet(Of T) type</Title>
-    <Shortcut>gc</Shortcut>
-    <Description>HashSet(Of T) type declaration</Description>
+    <Shortcut>j</Shortcut>
+    <Description>HashSet(Of T) type</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -23,11 +23,10 @@
     </Imports>
     <Declarations>
       <Literal>
-        <ID>_genericType</ID>
-        <ToolTip>Generic type</ToolTip>
+        <ID>typeParameter</ID>
         <Default>T</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[HashSet(Of $_genericType$)$end$]]></Code>
+    <Code Language="VB"><![CDATA[HashSet(Of $typeParameter$)$end$]]></Code>
   </Snippet>
 </CodeSnippet>

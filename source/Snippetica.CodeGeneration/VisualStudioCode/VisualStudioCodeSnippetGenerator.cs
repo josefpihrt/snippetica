@@ -36,9 +36,9 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
             return snippet;
         }
 
-        protected override IEnumerable<Command> GetTypeCommands(Snippet snippet)
+        protected override IEnumerable<Command> GetBasicTypeCommands(Snippet snippet)
         {
-            if (snippet.HasTag(KnownTags.GenerateType)
+            if (snippet.HasTag(KnownTags.GenerateBasicType)
                 || snippet.HasTag(KnownTags.GenerateVoidType)
                 || snippet.HasTag(KnownTags.GenerateBooleanType)
                 || snippet.HasTag(KnownTags.GenerateDateTimeType)
@@ -50,16 +50,11 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
                 || snippet.HasTag(KnownTags.GenerateStringType)
                 || snippet.HasTag(KnownTags.GenerateSingleType))
             {
-                yield return new TypeCommand(null);
+                yield return new BasicTypeCommand(null);
             }
         }
 
-        protected override IEnumerable<Command> GetImmutableCollectionCommands(Snippet snippet)
-        {
-            yield break;
-        }
-
-        protected override IEnumerable<Command> GetNonImmutableCollectionCommands(Snippet snippet)
+        protected override IEnumerable<Command> GetTypeCommands(Snippet snippet)
         {
             yield break;
         }

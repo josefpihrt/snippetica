@@ -245,9 +245,9 @@ namespace Snippetica
             return literal;
         }
 
-        public static bool RequiresTypeGeneration(this Snippet snippet, string typeName)
+        public static bool RequiresBasicTypeGeneration(this Snippet snippet, string typeName)
         {
-            if (!snippet.HasTag(KnownTags.GenerateType)
+            if (!snippet.HasTag(KnownTags.GenerateBasicType)
                 && !snippet.HasTag(KnownTags.GenerateTypeTag(typeName)))
             {
                 return false;

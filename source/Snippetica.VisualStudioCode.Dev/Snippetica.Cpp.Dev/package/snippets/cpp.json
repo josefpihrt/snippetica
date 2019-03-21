@@ -1,11 +1,4 @@
 ﻿{
-  "! operator": {
-    "prefix": "x",
-    "body": [
-      "!(${1:x})${0}"
-    ],
-    "description": "! operator"
-  },
   "alignas keyword": {
     "prefix": "aa",
     "body": [

@@ -268,7 +268,7 @@ End Class]]></Code>
     <Header>
       <Title>DateTime type</Title>
       <Shortcut>dt</Shortcut>
-      <Description>DateTime type declaration</Description>
+      <Description>DateTime type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -426,40 +426,6 @@ End Class]]></Code>
 
 	$end$
 End Class]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Dictionary(Of TKey, TValue) type</Title>
-      <Shortcut>gd</Shortcut>
-      <Description>Dictionary(Of TKey, TValue) type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DictionaryOfTKeyTValueType</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>keyType</ID>
-          <ToolTip>Key type</ToolTip>
-          <Default>Object</Default>
-        </Literal>
-        <Literal>
-          <ID>valueType</ID>
-          <ToolTip>Value type</ToolTip>
-          <Default>Object</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Dictionary(Of $keyType$, $valueType$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -975,35 +941,6 @@ End Class]]></Code>
 	End Function
 
 End Class]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>IEnumerable(Of T) type</Title>
-      <Shortcut>ge</Shortcut>
-      <Description>IEnumerable(Of T) type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IEnumerableOfTType</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[IEnumerable(Of $_type$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -2409,9 +2346,9 @@ End Property$end$]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>new variable</Title>
+      <Title>- new variable</Title>
       <Shortcut>vn</Shortcut>
-      <Description>variable declaration with new object creation</Description>
+      <Description>new variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -2443,9 +2380,9 @@ End Property$end$]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>new variable (with initializer)</Title>
+      <Title>- new variable (with initializer)</Title>
       <Shortcut>vnx</Shortcut>
-      <Description>variable declaration with new object creation (with initializer)</Description>
+      <Description>new variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>

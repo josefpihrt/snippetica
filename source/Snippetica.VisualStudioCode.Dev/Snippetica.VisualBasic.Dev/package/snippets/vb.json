@@ -4,42 +4,7 @@
     "body": [
       "${1:T}()${0}"
     ],
-    "description": "array type declaration"
-  },
-  "Dictionary(Of TKey, TValue) variable": {
-    "prefix": "vd",
-    "body": [
-      "Dim ${1:dic} = new Dictionary(Of ${2:Object}, ${3:Object})()${0}"
-    ],
-    "description": "Dictionary(Of TKey, TValue) variable declaration"
-  },
-  "Dictionary(Of TKey, TValue) variable (with initializer)": {
-    "prefix": "vdx",
-    "body": [
-      "Dim ${1:dic} = new Dictionary(Of ${2:Object}, ${3:Object})() From {{0, ${4:Nothing}}}${0}"
-    ],
-    "description": "Dictionary(Of TKey, TValue) variable declaration (with initializer)"
-  },
-  "HashSet(Of T) type": {
-    "prefix": "ghs",
-    "body": [
-      "HashSet(Of ${1:T})${0}"
-    ],
-    "description": "HashSet(Of T) type declaration"
-  },
-  "HashSet(Of T) variable": {
-    "prefix": "vhs",
-    "body": [
-      "Dim ${1:items} = new HashSet(Of ${2:T})()${0}"
-    ],
-    "description": "HashSet(Of T) variable declaration"
-  },
-  "HashSet(Of T) variable (with initializer)": {
-    "prefix": "vhsx",
-    "body": [
-      "Dim ${1:items} = new HashSet(Of ${2:T})() From {${3:Nothing}}${0}"
-    ],
-    "description": "HashSet(Of T) variable declaration (with initializer)"
+    "description": "array type"
   },
   "if Enum.TryParse": {
     "prefix": "ifemtp",
@@ -60,27 +25,6 @@
       "End If"
     ],
     "description": "if statement with condition whether Enum.TryParse method returns false."
-  },
-  "List(Of T) type": {
-    "prefix": "gl",
-    "body": [
-      "List(Of ${1:T})${0}"
-    ],
-    "description": "List(Of T) type declaration"
-  },
-  "List(Of T) variable": {
-    "prefix": "vl",
-    "body": [
-      "Dim ${1:items} = new List(Of ${2:T})()${0}"
-    ],
-    "description": "List(Of T) variable declaration"
-  },
-  "List(Of T) variable (with initializer)": {
-    "prefix": "vlx",
-    "body": [
-      "Dim ${1:items} = new List(Of ${2:T})() From {${3:Nothing}}${0}"
-    ],
-    "description": "List(Of T) variable declaration (with initializer)"
   },
   "namespace": {
     "prefix": "ns",
@@ -104,34 +48,6 @@
       "Object${0}"
     ],
     "description": "Object keyword"
-  },
-  "ObservableCollection(Of T) type": {
-    "prefix": "goc",
-    "body": [
-      "ObservableCollection(Of ${1:T})${0}"
-    ],
-    "description": "ObservableCollection(Of T) type declaration"
-  },
-  "ObservableCollection(Of T) variable": {
-    "prefix": "voc",
-    "body": [
-      "Dim ${1:items} = new ObservableCollection(Of ${2:T})()${0}"
-    ],
-    "description": "ObservableCollection(Of T) variable declaration"
-  },
-  "ObservableCollection(Of T) variable (with initializer)": {
-    "prefix": "vocx",
-    "body": [
-      "Dim ${1:items} = new ObservableCollection(Of ${2:T})() From {${3:Nothing}}${0}"
-    ],
-    "description": "ObservableCollection(Of T) variable declaration (with initializer)"
-  },
-  "Regex type": {
-    "prefix": "rx",
-    "body": [
-      "Regex${0}"
-    ],
-    "description": "Regex type declaration"
   },
   "Return keyword": {
     "prefix": "r",
@@ -160,13 +76,6 @@
       "Throw${0}"
     ],
     "description": "Throw statement"
-  },
-  "TimeSpan type": {
-    "prefix": "ts",
-    "body": [
-      "TimeSpan${0}"
-    ],
-    "description": "TimeSpan type declaration"
   },
   "Yield keyword": {
     "prefix": "y",

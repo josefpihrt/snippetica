@@ -2,7 +2,7 @@
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
     <Title>c Collection&lt;T&gt; variable (with initializer)</Title>
-    <Shortcut>vcx</Shortcut>
+    <Shortcut>vnx</Shortcut>
     <Description>Collection&lt;T&gt; variable declaration (with initializer)</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
@@ -23,20 +23,19 @@
     </Imports>
     <Declarations>
       <Literal>
-        <ID>_collectionIdentifier</ID>
+        <ID>_identifier</ID>
         <ToolTip>Identifier name</ToolTip>
         <Default>items</Default>
-      </Literal>
-      <Literal>
-        <ID>_genericType</ID>
-        <ToolTip>Generic type</ToolTip>
-        <Default>T</Default>
       </Literal>
       <Literal>
         <ID>_value</ID>
         <Default>null</Default>
       </Literal>
+      <Literal>
+        <ID>typeParameter</ID>
+        <Default>T</Default>
+      </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new Collection<$_genericType$>() { $_value$ };$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[var $_identifier$ = new Collection<$typeParameter$>() { $_value$ };$end$]]></Code>
   </Snippet>
 </CodeSnippet>

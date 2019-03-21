@@ -2,7 +2,7 @@
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
     <Title>rc ReadOnlyCollection&lt;T&gt; variable</Title>
-    <Shortcut>vc</Shortcut>
+    <Shortcut>vn</Shortcut>
     <Description>ReadOnlyCollection&lt;T&gt; variable declaration</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
@@ -23,21 +23,20 @@
     </Imports>
     <Declarations>
       <Literal>
-        <ID>_argumentList</ID>
-        <ToolTip>Constructor arguments</ToolTip>
-        <Default>arguments</Default>
+        <ID>_arguments</ID>
+        <ToolTip>Arguments</ToolTip>
+        <Default>args</Default>
       </Literal>
       <Literal>
-        <ID>_collectionIdentifier</ID>
+        <ID>_identifier</ID>
         <ToolTip>Identifier name</ToolTip>
         <Default>items</Default>
       </Literal>
       <Literal>
-        <ID>_genericType</ID>
-        <ToolTip>Generic type</ToolTip>
+        <ID>typeParameter</ID>
         <Default>T</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new ReadOnlyCollection<$_genericType$>($_argumentList$);$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[var $_identifier$ = new ReadOnlyCollection<$typeParameter$>($_arguments$);$end$]]></Code>
   </Snippet>
 </CodeSnippet>

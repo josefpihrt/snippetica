@@ -11,10 +11,10 @@ using Pihrtsoft.Snippets;
 
 namespace Snippetica
 {
-    [DebuggerDisplay("{Language} Tags = {TagsText,nq} Path = {Path,nq}")]
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class SnippetDirectory
     {
-        private static readonly ReadOnlyCollection<string> _noTags = new ReadOnlyCollection<string>(new string[0]);
+        private static readonly ReadOnlyCollection<string> _noTags = new ReadOnlyCollection<string>(Array.Empty<string>());
 
         public SnippetDirectory(string path, Language language, params string[] tags)
         {
@@ -74,9 +74,10 @@ namespace Snippetica
             return false;
         }
 
-        private string TagsText
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        private string DebuggerDisplay
         {
-            get { return string.Join(", ", Tags); }
+            get { return $"{Language} Tags = {string.Join(", ", Tags)} Path = {Path}"; }
         }
 
         public IEnumerable<Snippet> EnumerateSnippets(SearchOption searchOption = SearchOption.AllDirectories)

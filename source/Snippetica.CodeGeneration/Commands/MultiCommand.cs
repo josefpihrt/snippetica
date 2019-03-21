@@ -26,10 +26,7 @@ namespace Snippetica.CodeGeneration.Commands
                 Commands.Add(command);
         }
 
-        public override CommandKind Kind
-        {
-            get { return CommandKind.Multi; }
-        }
+        public override CommandKind Kind => CommandKind.Multi;
 
         public Collection<Command> Commands { get; }
 

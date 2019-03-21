@@ -29,18 +29,15 @@ namespace Snippetica.CodeGeneration
             {
                 commands.AddMultiCommands(new Command[]
                 {
-                    CommandUtility.Declaration,
-                    CommandUtility.Definition
+                    CommandUtility.DeclarationCommand,
+                    CommandUtility.DefinitionCommand
                 });
             }
 
-            commands.AddMultiCommands(GetTypeCommands(snippet));
+            commands.AddMultiCommands(GetBasicTypeCommands(snippet));
 
-            if (snippet.HasTag(KnownTags.GenerateCollection))
-                commands.AddMultiCommands(GetNonImmutableCollectionCommands(snippet));
-
-            if (snippet.HasTag(KnownTags.GenerateImmutableCollection))
-                commands.AddMultiCommands(GetImmutableCollectionCommands(snippet));
+            if (snippet.HasTag(KnownTags.GenerateType))
+                commands.AddMultiCommands(GetTypeCommands(snippet));
 
             commands.AddMultiCommands(GetAccessModifierCommands(snippet));
 
@@ -70,19 +67,14 @@ namespace Snippetica.CodeGeneration
             return new LanguageExecutionContext((Snippet)snippet.Clone(), LanguageDefinition);
         }
 
+        protected virtual IEnumerable<Command> GetBasicTypeCommands(Snippet snippet)
+        {
+            return CommandUtility.GetBasicTypeCommands(snippet, LanguageDefinition);
+        }
+
         protected virtual IEnumerable<Command> GetTypeCommands(Snippet snippet)
         {
-            return CommandUtility.GetTypeCommands(snippet, LanguageDefinition);
-        }
-
-        protected virtual IEnumerable<Command> GetNonImmutableCollectionCommands(Snippet snippet)
-        {
-            return CommandUtility.GetNonImmutableCollectionCommands(LanguageDefinition);
-        }
-
-        protected virtual IEnumerable<Command> GetImmutableCollectionCommands(Snippet snippet)
-        {
-            return CommandUtility.GetImmutableCollectionCommands(LanguageDefinition);
+            return CommandUtility.GetTypeCommands(LanguageDefinition);
         }
 
         protected virtual IEnumerable<Command> GetAccessModifierCommands(Snippet snippet)
@@ -110,15 +102,13 @@ namespace Snippetica.CodeGeneration
             snippet.RemoveTags(_generateTypeTags);
             snippet.RemoveTags(_generateModifierTags);
 
-            snippet.RemoveTag(KnownTags.GenerateType);
+            snippet.RemoveTag(KnownTags.GenerateBasicType);
             snippet.RemoveTag(KnownTags.GenerateAccessModifier);
             snippet.RemoveTag(KnownTags.GenerateInitializer);
-            snippet.RemoveTag(KnownTags.GenerateCollection);
-            snippet.RemoveTag(KnownTags.GenerateImmutableCollection);
+            snippet.RemoveTag(KnownTags.GenerateType);
             snippet.RemoveTag(KnownTags.GenerateDeclarationAndDefinition);
             snippet.RemoveTag(KnownTags.Array);
             snippet.RemoveTag(KnownTags.Collection);
-            snippet.RemoveTag(KnownTags.Dictionary);
             snippet.RemoveTag(KnownTags.Variable);
             snippet.RemoveTag(KnownTags.TryParse);
             snippet.RemoveTag(KnownTags.Initializer);

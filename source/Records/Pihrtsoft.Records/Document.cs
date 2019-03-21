@@ -1,175 +1,87 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.Collections.Immutable;
 using System.IO;
 using System.Xml;
 using System.Xml.Linq;
-using Pihrtsoft.Records.Utilities;
-using static Pihrtsoft.Records.Utilities.ThrowHelper;
+using Pihrtsoft.Records.Xml;
 
 namespace Pihrtsoft.Records
 {
-    public class Document
+    public sealed class Document
     {
-        private Document(XDocument document, DocumentSettings settings)
+        private Document(XDocument document, DocumentOptions options)
         {
             XDocument = document;
-            Settings = settings;
+            Options = options;
         }
 
-        private static Version SchemaVersion { get; } = new Version(0, 1, 0);
+        internal static Version SchemaVersion { get; } = new Version(0, 1, 0);
 
         private XDocument XDocument { get; }
 
-        public DocumentSettings Settings { get; }
+        public DocumentOptions Options { get; }
 
-        internal static Document Create(string uri, DocumentSettings settings = null)
+        internal static Document Create(string uri, DocumentOptions options = null)
         {
-            if (settings == null)
-                settings = new DocumentSettings();
+            if (options == null)
+                options = new DocumentOptions();
 
-            return new Document(XDocument.Load(uri, settings.LoadOptions), settings);
+            return new Document(XDocument.Load(uri, options.LoadOptions), options);
         }
 
-        internal static Document Create(Stream stream, DocumentSettings settings = null)
+        internal static Document Create(Stream stream, DocumentOptions options = null)
         {
-            if (settings == null)
-                settings = new DocumentSettings();
+            if (options == null)
+                options = new DocumentOptions();
 
-            return new Document(XDocument.Load(stream, settings.LoadOptions), settings);
+            return new Document(XDocument.Load(stream, options.LoadOptions), options);
         }
 
-        internal static Document Create(TextReader textReader, DocumentSettings settings = null)
+        internal static Document Create(TextReader textReader, DocumentOptions options = null)
         {
-            if (settings == null)
-                settings = new DocumentSettings();
+            if (options == null)
+                options = new DocumentOptions();
 
-            return new Document(XDocument.Load(textReader, settings.LoadOptions), settings);
+            return new Document(XDocument.Load(textReader, options.LoadOptions), options);
         }
 
-        internal static Document Create(XmlReader xmlReader, DocumentSettings settings = null)
+        internal static Document Create(XmlReader xmlReader, DocumentOptions options = null)
         {
-            if (settings == null)
-                settings = new DocumentSettings();
+            if (options == null)
+                options = new DocumentOptions();
 
-            return new Document(XDocument.Load(xmlReader, settings.LoadOptions), settings);
+            return new Document(XDocument.Load(xmlReader, options.LoadOptions), options);
         }
 
-        public static RecordCollection ReadRecords(string uri, DocumentSettings settings = null)
+        public static ImmutableArray<Record> ReadRecords(string uri, DocumentOptions options = null)
         {
-            return Create(uri, settings).Records();
+            return Create(uri, options).Records();
         }
 
-        public static RecordCollection ReadRecords(Stream stream, DocumentSettings settings = null)
+        public static ImmutableArray<Record> ReadRecords(Stream stream, DocumentOptions options = null)
         {
-            return Create(stream, settings).Records();
+            return Create(stream, options).Records();
         }
 
-        public static RecordCollection ReadRecords(TextReader textReader, DocumentSettings settings = null)
+        public static ImmutableArray<Record> ReadRecords(TextReader textReader, DocumentOptions options = null)
         {
-            return Create(textReader, settings).Records();
+            return Create(textReader, options).Records();
         }
 
-        public static RecordCollection ReadRecords(XmlReader xmlReader, DocumentSettings settings = null)
+        public static ImmutableArray<Record> ReadRecords(XmlReader xmlReader, DocumentOptions options = null)
         {
-            return Create(xmlReader, settings).Records();
+            return Create(xmlReader, options).Records();
         }
 
-        public RecordCollection Records()
+        public ImmutableArray<Record> Records()
         {
-            XElement documentElement = XDocument.FirstElement();
+            var reader = new XmlRecordReader(XDocument, Options);
 
-            if (documentElement == null
-                || !DefaultComparer.NameEquals(documentElement, ElementNames.Document))
-            {
-                ThrowInvalidOperation(ErrorMessages.MissingElement(ElementNames.Document));
-            }
+            reader.ReadAll();
 
-            string versionText = documentElement.AttributeValueOrDefault(AttributeNames.Version);
-
-            if (versionText != null)
-            {
-                if (!Version.TryParse(versionText, out Version version))
-                {
-                    ThrowInvalidOperation(ErrorMessages.InvalidDocumentVersion());
-                }
-                else if (version > SchemaVersion)
-                {
-                    ThrowInvalidOperation(ErrorMessages.DocumentVersionIsNotSupported(version, SchemaVersion));
-                }
-            }
-
-            XElement entitiesElement = EntitiesElement(documentElement);
-
-            if (entitiesElement != null)
-            {
-                return ReadRecords(entitiesElement.Elements());
-            }
-            else
-            {
-                return Empty.RecordCollection;
-            }
-        }
-
-        private RecordCollection ReadRecords(IEnumerable<XElement> elements)
-        {
-            var records = new Collection<Record>();
-
-            Queue<EntityElement> entityElements = null;
-
-            foreach (XElement element in elements)
-            {
-                if (element.Kind() != ElementKind.Entity)
-                    ThrowOnUnknownElement(element);
-
-                (entityElements ?? (entityElements = new Queue<EntityElement>())).Enqueue(new EntityElement(element, Settings));
-            }
-
-            if (entityElements != null)
-            {
-                while (entityElements.Any())
-                {
-                    EntityElement entityElement = entityElements.Dequeue();
-
-                    Collection<Record> entityRecords = entityElement.Records();
-
-                    if (entityRecords != null)
-                        records.AddRange(entityRecords);
-
-                    entityElements.EnqueueRange(entityElement.EntityElements());
-                }
-            }
-
-            return new RecordCollection(records);
-        }
-
-        private static XElement EntitiesElement(XElement rootElement)
-        {
-            XElement entitiesElement = null;
-
-            foreach (XElement element in rootElement.Elements())
-            {
-                switch (element.Kind())
-                {
-                    case ElementKind.Entities:
-                        {
-                            if (entitiesElement != null)
-                                ThrowOnMultipleElementsWithEqualName(element);
-
-                            entitiesElement = element;
-                            break;
-                        }
-                    default:
-                        {
-                            ThrowOnUnknownElement(element);
-                            break;
-                        }
-                }
-            }
-
-            return entitiesElement;
+            return reader.Records.ToImmutableArray();
         }
     }
 }

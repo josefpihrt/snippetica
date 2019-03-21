@@ -9,6 +9,5 @@ namespace Snippetica.CodeGeneration
         public const string Type = Delimiter + "type" + Delimiter;
         public const string OfType = Delimiter + "ofType" + Delimiter;
         public const string GenericType = Delimiter + "genericType" + Delimiter;
-        public const string Collection = Delimiter + "collection" + Delimiter;
     }
 }

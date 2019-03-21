@@ -1,123 +1,115 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System;
-using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
-using System.Text.RegularExpressions;
 using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration.Commands
 {
-    public class TypeCommand : SnippetCommand
+    public class TypeCommand : BasicTypeCommand
     {
         public TypeCommand(TypeDefinition type)
+            : base(type)
         {
-            Type = type;
         }
 
-        public TypeDefinition Type { get; }
-
-        public ReadOnlyCollection<string> Tags
-        {
-            get { return Type.Tags; }
-        }
-
-        public override CommandKind Kind
-        {
-            get { return CommandKind.Type; }
-        }
-
-        public override Command ChildCommand
-        {
-            get { return (Type != null) ? new PrefixTitleCommand(Type) : null; }
-        }
+        public override CommandKind Kind => CommandKind.Collection;
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {
-            LanguageDefinition language = ((LanguageExecutionContext)context).Language;
-
-            if (Type == null)
-                return;
-
-            snippet.AddTag(KnownTags.NonUniqueShortcut);
-
-            if (ReferenceEquals(Type, TypeDefinition.Default))
-                return;
-
-            if (snippet.HasTag(KnownTags.TryParse) && !Tags.Contains(KnownTags.TryParse))
+            if (snippet.HasTag(KnownTags.Initializer)
+                && (Type.IsImmutable || Type.IsInterface))
             {
                 context.IsCanceled = true;
                 return;
             }
 
-            if (Type.Name == "Void" && snippet.Language == Language.VisualBasic)
+            LanguageDefinition language = ((LanguageExecutionContext)context).Language;
+
+            string typeName = "";
+            string fileName = "";
+
+            if (Type.IsDictionary)
             {
-                snippet.ReplaceSubOrFunctionLiteral("Sub");
-
-                snippet.RemoveLiteral(LiteralIdentifiers.As);
-                snippet.ReplacePlaceholders(LiteralIdentifiers.Type, "");
-
-                snippet.CodeText = Regex.Replace(snippet.CodeText, $@"[\s-[\r\n]]*\${LiteralIdentifiers.As}\$[\s-[\r\n]]*", "");
+                typeName = language.GetTypeParameterList("TKey, TValue");
+                fileName = "OfTKeyTValue";
             }
-            else
+            else if (Type.Arity == 1)
             {
-                snippet.ReplaceSubOrFunctionLiteral("Function");
+                typeName = language.GetTypeParameterList("T");
+                fileName = "OfT";
             }
 
-            snippet.Title = snippet.Title
-                .Replace(Placeholders.Type, Type.Title)
-                .Replace(Placeholders.OfType, $"of {Type.Title}")
-                .Replace(Placeholders.GenericType, language.GetTypeParameterList(Type.Title));
+            typeName = Type.Name + typeName;
+            fileName = Type.Name + fileName;
 
-            snippet.Description = snippet.Description
-                .Replace(Placeholders.Type, Type.Title)
-                .Replace(Placeholders.OfType, $"of {Type.Title}")
-                .Replace(Placeholders.GenericType, language.GetTypeParameterList(Type.Title));
+            snippet.Title = snippet.Title.Replace(Placeholders.Type, typeName);
+            snippet.Description = snippet.Description.Replace(Placeholders.Type, typeName);
 
             snippet.AddNamespace(Type.Namespace);
 
-            snippet.AddTag(KnownTags.ExcludeFromReadme);
-            snippet.AddTag(KnownTags.ExcludeFromSnippetBrowser);
+            snippet.AddTags(KnownTags.NonUniqueShortcut);
+            snippet.AddTags(KnownTags.TitleStartsWithShortcut);
+            snippet.AddTags(KnownTags.ExcludeFromReadme);
 
-            if (Type.Keyword == "this")
+            snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.Type, Type.Name);
+
+            if (Type.IsDictionary)
             {
-                snippet.AddLiteral(Literal.CreateClassNameLiteral("this", "Containing type name", "ThisName"));
-                snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.Type, "$this$");
+                snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.TypeParameterList, language.GetTypeParameterList($"${LiteralIdentifiers.KeyType}$, ${LiteralIdentifiers.ValueType}$"));
+                snippet.AddLiteral(LiteralIdentifiers.KeyType, null, language.ObjectType.Keyword);
+                snippet.AddLiteral(LiteralIdentifiers.ValueType, null, language.ObjectType.Keyword);
+
+                Literal literal = snippet.Literals.Find(LiteralIdentifiers.Identifier);
+
+                if (literal != null)
+                    literal.DefaultValue = "dic";
+            }
+            else if (Type.Arity == 1)
+            {
+                snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.TypeParameterList, language.GetTypeParameterList($"${LiteralIdentifiers.TypeParameter}$"));
+                snippet.AddLiteral(LiteralIdentifiers.TypeParameter, null, "T");
             }
             else
             {
-                snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.Type, Type.Keyword);
+                snippet.RemoveLiteralAndPlaceholders(LiteralIdentifiers.TypeParameterList);
             }
 
-            Literal valueLiteral = snippet.Literals.Find(LiteralIdentifiers.Value);
-
-            if (valueLiteral != null)
-                valueLiteral.DefaultValue = Type.DefaultValue;
-
-            if (Type.DefaultIdentifier != null)
+            if (!Tags.Contains(KnownTags.Arguments)
+                && !(Type.IsReadOnly && Tags.Contains(KnownTags.Collection)))
             {
-                Literal identifierLiteral = snippet.Literals.Find(LiteralIdentifiers.Identifier);
-
-                if (identifierLiteral != null)
-                    identifierLiteral.DefaultValue = Type.DefaultIdentifier;
+                snippet.RemoveLiteralAndPlaceholders(LiteralIdentifiers.Arguments);
             }
 
-            string fileName = Path.GetFileName(snippet.FilePath);
+            snippet.SetFileName(fileName + Path.GetFileName(snippet.FilePath));
 
-            if (fileName.IndexOf("OfT", StringComparison.Ordinal) != -1)
+            if (snippet.HasTag(KnownTags.Initializer)
+                && Tags.Contains(KnownTags.Initializer))
             {
-                fileName = fileName.Replace("OfT", $"Of{Type.Name}");
-            }
-            else if (snippet.HasTag(KnownTags.TryParse))
-            {
-                fileName = Path.GetFileNameWithoutExtension(fileName) + Type.Name + Path.GetExtension(fileName);
+                var clone = (Snippet)snippet.Clone();
+                InitializerCommand.AddInitializer(context, clone, GetInitializer(language), language.GetDefaultValue());
+                context.Snippets.Add(clone);
             }
             else
             {
-                fileName = Type.Name + fileName;
+                snippet.RemoveLiteralAndPlaceholders(LiteralIdentifiers.Initializer);
             }
+        }
 
-            snippet.SetFileName(fileName);
+        private string GetInitializer(LanguageDefinition language)
+        {
+            if (Type.IsDictionary)
+                return language.GetDictionaryInitializer($"${LiteralIdentifiers.Value}$");
+
+            if (Tags.Contains(KnownTags.Collection))
+                return language.GetCollectionInitializer($"${LiteralIdentifiers.Value}$");
+
+            if (Tags.Contains(KnownTags.Array))
+                return language.GetArrayInitializer($"${LiteralIdentifiers.Value}$");
+
+            Debug.Fail("");
+
+            return null;
         }
     }
 }

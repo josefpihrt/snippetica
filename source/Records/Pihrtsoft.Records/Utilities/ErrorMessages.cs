@@ -2,6 +2,7 @@
 
 using System;
 using System.Xml.Linq;
+using Pihrtsoft.Records.Xml;
 
 namespace Pihrtsoft.Records.Utilities
 {
@@ -42,9 +43,9 @@ namespace Pihrtsoft.Records.Utilities
             return $"Element '{element.Parent?.LocalName()}' cannot contains multiple elements with name '{element.LocalName()}'.";
         }
 
-        public static string MissingBaseRecordIdentifier()
+        public static string MissingWithRecordIdentifier()
         {
-            return $"Base record must define attribute '{PropertyDefinition.IdName}'.";
+            return $"Record must define attribute '{PropertyDefinition.IdName}'.";
         }
 
         public static string ItemAlreadyDefined(string propertyName, string name)
@@ -105,6 +106,11 @@ namespace Pihrtsoft.Records.Utilities
         internal static string CommandCannotBeUsedAsChildCommandOfNewCommand(XElement element)
         {
             return $"Command '{element.LocalName()}' cannot be used as a child command of 'New' command.";
+        }
+
+        public static string InvalidSeparator(string separator)
+        {
+            return $"Invalid separator '{separator}'.";
         }
     }
 }

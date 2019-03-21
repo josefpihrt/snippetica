@@ -4,35 +4,54 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Pihrtsoft.Records;
-using Pihrtsoft.Snippets;
 
 namespace Snippetica.CodeGeneration
 {
     public static class Mapper
     {
+        public static ShortcutInfo MapShortcutInfo(Record record)
+        {
+            return new ShortcutInfo(
+                record.GetString("Value"),
+                record.GetString("Description"),
+                record.GetStringOrDefault("Comment", "-"),
+                record.GetEnumOrDefault("Kind", ShortcutKind.None),
+                record.GetItems("Languages").Select(ParseHelpers.ParseLanguage),
+                record.GetItems("IDE").Select(f => (EnvironmentKind)Enum.Parse(typeof(EnvironmentKind), f)),
+                record.GetTags());
+        }
+
+        public static SnippetDirectory MapSnippetDirectory(Record record)
+        {
+            return new SnippetDirectory(
+                record.GetString("Path"),
+                ParseHelpers.ParseLanguage(record.GetString("Language")),
+                record.GetTags());
+        }
+
         public static void LoadLanguages(this IEnumerable<Record> records)
         {
-            foreach (IGrouping<string, Record> grouping in records.GroupBy(f => f.GetString(Identifiers.Language)))
+            foreach (IGrouping<string, Record> grouping in records.GroupBy(f => f.GetString(PropertyNames.Language)))
             {
-                LanguageDefinition language = LanguageDefinition.FromLanguage((Language)Enum.Parse(typeof(Language), grouping.Key));
+                LanguageDefinition language = LanguageDefinition.FromLanguage(ParseHelpers.ParseLanguage(grouping.Key));
 
                 foreach (Record record in grouping)
                 {
                     switch (record.EntityName)
                     {
-                        case Identifiers.Modifier:
+                        case PropertyNames.Modifier:
                             {
-                                language.Modifiers.Add(CreateModifier(record));
+                                language.Modifiers.Add(MapModifierDefinition(record));
                                 break;
                             }
-                        case Identifiers.Type:
+                        case PropertyNames.Type:
                             {
-                                language.Types.Add(CreateType(record));
+                                language.Types.Add(MapTypeDefinition(record));
                                 break;
                             }
-                        case Identifiers.Keyword:
+                        case PropertyNames.Keyword:
                             {
-                                language.Keywords.Add(CreateKeyword(record));
+                                language.Keywords.Add(MapKeywordDefinition(record));
                                 break;
                             }
                     }
@@ -40,44 +59,45 @@ namespace Snippetica.CodeGeneration
             }
         }
 
-        public static ModifierDefinition CreateModifier(Record record)
+        public static ModifierDefinition MapModifierDefinition(Record record)
         {
             return new ModifierDefinition(
                 record.Id,
-                record.GetStringOrDefault(Identifiers.Keyword),
-                record.GetStringOrDefault(Identifiers.Shortcut),
+                record.GetStringOrDefault(PropertyNames.Keyword),
+                record.GetStringOrDefault(PropertyNames.Shortcut),
                 record.GetTags());
         }
 
-        public static TypeDefinition CreateType(Record record)
+        public static TypeDefinition MapTypeDefinition(Record record)
         {
-            string keyword = record.GetStringOrDefault(Identifiers.Keyword);
+            string keyword = record.GetStringOrDefault(PropertyNames.Keyword);
 
             return new TypeDefinition(
                 record.Id,
-                record.GetStringOrDefault(Identifiers.Title, keyword),
+                record.GetStringOrDefault(PropertyNames.Title, keyword),
                 keyword,
-                record.GetStringOrDefault(Identifiers.Shortcut),
-                record.GetStringOrDefault(Identifiers.DefaultValue),
-                record.GetStringOrDefault(Identifiers.DefaultIdentifier),
-                record.GetStringOrDefault(Identifiers.Namespace),
+                record.GetStringOrDefault(PropertyNames.Shortcut),
+                record.GetStringOrDefault(PropertyNames.DefaultValue),
+                record.GetStringOrDefault(PropertyNames.DefaultIdentifier),
+                record.GetStringOrDefault(PropertyNames.Namespace),
+                record.GetIntOrDefault(PropertyNames.Arity),
                 record.GetTags());
         }
 
-        public static KeywordDefinition CreateKeyword(Record record)
+        public static KeywordDefinition MapKeywordDefinition(Record record)
         {
-            string name = record.GetString(Identifiers.Name);
+            string name = record.GetString(PropertyNames.Name);
 
             return new KeywordDefinition(
                 name,
-                record.GetStringOrDefault(Identifiers.Value),
-                record.GetStringOrDefault(Identifiers.Title, name),
-                record.GetStringOrDefault(Identifiers.Shortcut),
-                record.GetBooleanOrDefault(Identifiers.IsDevelopment),
+                record.GetStringOrDefault(PropertyNames.Value),
+                record.GetStringOrDefault(PropertyNames.Title, name),
+                record.GetStringOrDefault(PropertyNames.Shortcut),
+                record.GetBooleanOrDefault(PropertyNames.IsDevelopment),
                 record.GetTags());
         }
 
-        private static class Identifiers
+        private static class PropertyNames
         {
             public const string Modifier = nameof(Modifier);
             public const string Language = nameof(Language);
@@ -88,6 +108,7 @@ namespace Snippetica.CodeGeneration
             public const string DefaultIdentifier = nameof(DefaultIdentifier);
             public const string Name = nameof(Name);
             public const string Namespace = nameof(Namespace);
+            public const string Arity = nameof(Arity);
             public const string Type = nameof(Type);
             public const string Title = nameof(Title);
             public const string IsDevelopment = nameof(IsDevelopment);

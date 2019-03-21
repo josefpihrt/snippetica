@@ -61,12 +61,10 @@
     <Compile Include="Commands\ConstExprCommand.cs" />
     <Compile Include="Commands\DefinitionCommand.cs" />
     <Compile Include="Commands\DeclarationCommand.cs" />
-    <Compile Include="Commands\EmptyCommand.cs" />
     <Compile Include="Commands\InlineCommand.cs" />
     <Compile Include="Commands\ModifierCommand.cs" />
     <Compile Include="Commands\ShortcutToLowercaseCommand.cs" />
     <Compile Include="Commands\SuffixFileNameCommand.cs" />
-    <Compile Include="Commands\SuffixShortcutCommand.cs" />
     <Compile Include="CppDefinition.cs" />
     <Compile Include="EnvironmentExecutionContext.cs" />
     <Compile Include="KeywordDefinition.cs" />
@@ -98,12 +96,11 @@
     <Compile Include="Commands\GenerateAlternativeShortcutCommand.cs" />
     <Compile Include="Commands\CommandKind.cs" />
     <Compile Include="Commands\SnippetCommand.cs" />
-    <Compile Include="Commands\ImmutableCollectionTypeCommand.cs" />
     <Compile Include="Commands\AccessModifierCommand.cs" />
     <Compile Include="Commands\PrefixTitleCommand.cs" />
     <Compile Include="Commands\StaticCommand.cs" />
     <Compile Include="Commands\InitializerCommand.cs" />
-    <Compile Include="Commands\CollectionTypeCommand.cs" />
+    <Compile Include="Commands\TypeCommand.cs" />
     <Compile Include="Commands\VirtualCommand.cs" />
     <Compile Include="Commands\XamlPropertyCommand.cs" />
     <Compile Include="CSharpDefinition.cs" />
@@ -122,7 +119,7 @@
     <Compile Include="SnippetGeneratorResult.cs" />
     <Compile Include="StringExtensions.cs" />
     <Compile Include="TypeDefinition.cs" />
-    <Compile Include="Commands\TypeCommand.cs" />
+    <Compile Include="Commands\BasicTypeCommand.cs" />
     <Compile Include="TypeDefinitionCollection.cs" />
     <Compile Include="VisualBasicDefinition.cs" />
     <Compile Include="VisualStudioCode\VisualStudioCodeSnippetGenerator.cs" />

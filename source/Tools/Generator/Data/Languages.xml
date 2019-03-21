@@ -9,42 +9,40 @@
       </Declarations>
       <Entities>
         <Entity Name="Modifier">
-          <BaseRecords>
-            <Add Tags="AccessModifier">
+          <With>
+            <With Tags="AccessModifier">
               <New Id="Public" Shortcut="" Tags="Default" />
               <New Id="Internal" Shortcut="i" />
               <New Id="Private" Shortcut="p" />
-              <Add Tags="Disabled">
-                <New Id="Protected" Shortcut="d" />
-              </Add>
-            </Add>
+              <New Id="Protected" Shortcut="d" Tags="Disabled" />
+            </With>
             <New Id="Static" Shortcut="s" />
             <New Id="Virtual" Shortcut="v" />
-          </BaseRecords>
+          </With>
           <Records>
-            <Set Language="CSharp">
+            <With Language="C#">
               <New Id="Public" Keyword="public" />
               <New Id="Internal" Keyword="internal" />
               <New Id="Protected" Keyword="protected" />
               <New Id="Private" Keyword="private" />
               <New Id="Static" Keyword="static" />
               <New Id="Virtual" Keyword="virtual" />
-            </Set>
-            <Set Language="VisualBasic">
+            </With>
+            <With Language="VB">
               <New Id="Public" Keyword="Public" />
               <New Id="Internal" Keyword="Friend" />
               <New Id="Protected" Keyword="Protected" />
               <New Id="Private" Keyword="Private" />
               <New Id="Static" Keyword="Shared" />
               <New Id="Virtual" Keyword="Overridable" />
-            </Set>
-            <Set Language="Cpp">
+            </With>
+            <With Language="Cpp">
               <New Id="Const" Shortcut="c" Keyword="const" />
               <New Id="ConstExpr" Shortcut="ce" Keyword="constexpr" />
               <New Id="Inline" Shortcut="il" Keyword="inline" />
               <New Id="Static" Keyword="static" />
               <New Id="Virtual" Keyword="virtual" />
-            </Set>
+            </With>
           </Records>
         </Entity>
         <Entity Name="Type">
@@ -54,26 +52,28 @@
             <Property Name="DefaultIdentifier" />
             <Property Name="Namespace" />
           </Declarations>
-          <BaseRecords>
-            <New Id="This" Shortcut="t" />
-            <New Id="Void" Shortcut="-" />
-            <New Id="Object" Shortcut="o" />
-            <New Id="String" Shortcut="s" DefaultIdentifier="s" />
-            <Add Tags="TryParse">
-              <New Id="Boolean" Shortcut="b" DefaultIdentifier="f" />
-              <New Id="Int32" Shortcut="i" DefaultValue="0" DefaultIdentifier="i" />
-              <New Id="DateTime" Shortcut="dt"  DefaultIdentifier="dt" />
-              <New Id="Int64" Shortcut="l" DefaultValue="0" DefaultIdentifier="i" />
-              <Add Tags="Disabled">
-                <New Id="Char" Shortcut="c" DefaultIdentifier="ch" />
-                <New Id="Decimal" Shortcut="dl" DefaultValue="0" />
-                <New Id="Double" Shortcut="de" DefaultValue="0" />
-                <New Id="Single" Shortcut="se" DefaultValue="0" />
-              </Add>
-            </Add>
-          </BaseRecords>
+          <With>
+            <With Tags="BasicType">
+              <New Id="This" Shortcut="t" />
+              <New Id="Void" Shortcut="-" />
+              <New Id="Object" Shortcut="o" />
+              <New Id="String" Shortcut="s" DefaultIdentifier="s" />
+              <With Tags="TryParse">
+                <New Id="Boolean" Shortcut="b" DefaultIdentifier="f" />
+                <New Id="Int32" Shortcut="i" DefaultValue="0" DefaultIdentifier="i" />
+                <New Id="DateTime" Shortcut="dt"  DefaultIdentifier="dt" />
+                <New Id="Int64" Shortcut="l" DefaultValue="0" DefaultIdentifier="i" />
+                <With Tags="Disabled">
+                  <New Id="Char" Shortcut="c" DefaultIdentifier="ch" />
+                  <New Id="Decimal" Shortcut="dl" DefaultValue="0" />
+                  <New Id="Double" Shortcut="de" DefaultValue="0" />
+                  <New Id="Single" Shortcut="se" DefaultValue="0" />
+                </With>
+              </With>
+            </With>
+          </With>
           <Records>
-            <Set Language="CSharp">
+            <With Language="C#">
               <New Id="This" Title="this" Keyword="this" DefaultValue="null" />
               <New Id="Void" Title="void" Keyword="void" />
               <New Id="Boolean" Keyword="bool" DefaultValue="false" />
@@ -86,8 +86,8 @@
               <New Id="Single" Keyword="float" />
               <New Id="Char" Keyword="char" DefaultValue="'\0'" />
               <New Id="DateTime" Keyword="DateTime" DefaultValue="DateTime.MinValue" Namespace="System" />
-            </Set>
-            <Set Language="VisualBasic">
+            </With>
+            <With Language="VB">
               <New Id="This" Title="this" Keyword="this" DefaultValue="Nothing" />
               <New Id="Void" Title="Sub" Keyword="Sub" />
               <New Id="Boolean" Keyword="Boolean" DefaultValue="False" />
@@ -100,8 +100,8 @@
               <New Id="Single" Keyword="Single" />
               <New Id="Char" Keyword="Char" DefaultValue='"0"c' />
               <New Id="DateTime" Keyword="Date" DefaultValue="Date.MinValue" />
-            </Set>
-            <Set Language="Cpp">
+            </With>
+            <With Language="Cpp">
               <New Id="Void" Title="void" Keyword="void" />
               <New Id="Boolean" Keyword="bool" DefaultValue="false" />
               <New Id="Int32" Keyword="int" />
@@ -109,7 +109,7 @@
               <New Id="Double" Keyword="double" />
               <New Id="Single" Keyword="float" />
               <New Id="Char" Keyword="char" DefaultValue="0" />
-            </Set>
+            </With>
           </Records>
         </Entity>
       </Entities>
@@ -123,7 +123,7 @@
         <Property Name="IsDevelopment" />
       </Declarations>
       <Records>
-        <Set Language="Cpp">
+        <With Language="Cpp">
           <New Name="AlignAs" Value="alignas" Shortcut="aa" IsDevelopment="true" />
           <New Name="AlignOf" Value="alignof" Shortcut="ao" IsDevelopment="true" />
           <New Name="Auto" Value="auto" Shortcut="a" IsDevelopment="true" />
@@ -145,7 +145,7 @@
           <New Name="TypeName" Value="typename" Shortcut="tn" IsDevelopment="true" />
           <New Name="Unsigned" Value="unsigned" Shortcut="us" IsDevelopment="true" />
           <New Name="Volatile" Value="volatile" Shortcut="ve" IsDevelopment="true" />
-        </Set>
+        </With>
       </Records>
     </Entity>
   </Entities>

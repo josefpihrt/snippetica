@@ -8,18 +8,18 @@
         <Property Name="Comment" />
         <Property Name="Kind" />
         <Property Name="Languages" IsCollection="true" />
-        <Property Name="Environments" IsCollection="true" />
+        <Property Name="IDE" IsCollection="true" />
       </Declarations>
       <Records>
-        <AddRange Environments="VisualStudio,VisualStudioCode">
-          <AddRange Languages="Xml,Xaml,Html">
+        <With IDE="VisualStudio,VisualStudioCode">
+          <With Languages="Xml,Xaml,Html">
             <New Value="a" Description="(element) with attribute" Comment="suffix" />
             <New Value="e" Description="element" />
             <New Value="s" Description="self-closing (element)" Comment="suffix" />
             <New Value="x" Description="(element) with content" Comment="suffix" />
-          </AddRange>
-          <AddRange Languages="CSharp,VisualBasic">
-            <Set Kind="MemberDeclaration">
+          </With>
+          <With Languages="C#,VB">
+            <With Kind="MemberDeclaration">
               <New Value="_" Description="interface member declaration" Comment="prefix" />
               <New Value="c" Description="class declaration" />
               <New Value="cr" Description="constructor declaration" />
@@ -34,33 +34,33 @@
               <New Value="p" Description="property declaration" />
               <New Value="pp" Description="property declaration (expanded)" />
               <New Value="st" Description="struct declaration" />
-              <Remove Languages="CSharp">
+              <Without Languages="C#">
                 <New Value="me" Description="Module declaration" Kind="MemberDeclaration" />
-              </Remove>
-            </Set>
-            <Set Kind="Modifier">
+              </Without>
+            </With>
+            <With Kind="Modifier">
               <New Value="i" Description="internal (Friend)" Comment="prefix" />
               <New Value="p" Description="private" Comment="prefix" />
               <New Value="r" Description="read-only" Comment="prefix (after access modifier)" />
               <New Value="s" Description="static (Shared)" Comment="prefix (after access modifier)" />
               <New Value="v" Description="virtual (Overridable)" Comment="prefix (after access modifier)" />
-            </Set>
-            <Set Kind="Operator">
+            </With>
+            <With Kind="Operator">
               <New Value="n" Description="new object creation" />
               <New Value="no" Description="nameof operator" />
               <New Value="oo" Description="operator overload" />
               <New Value="x" Description="logical not operator" Comment="prefix" />
-              <Remove Languages="VisualBasic">
+              <Without Languages="VB">
                 <New Value="co" Description="conditional operator" Kind="Operator" />
                 <New Value="t" Description="explict cast operator" Kind="Operator" />
                 <New Value="to" Description="typeof operator" Kind="Operator" />
-              </Remove>
-              <Remove Languages="CSharp">
+              </Without>
+              <Without Languages="C#">
                 <New Value="gt" Description="GetType operator" Kind="Operator" />
                 <New Value="tc" Description="TryCast operator" Kind="Operator" />
-              </Remove>
-            </Set>
-            <Set Kind="Statement">
+              </Without>
+            </With>
+            <With Kind="Statement">
               <New Value="fe" Description="foreach statement" />
               <New Value="fr" Description="for statement" />
               <New Value="if" Description="if statement" />
@@ -69,14 +69,14 @@
               <New Value="tw" Description="throw statement" />
               <New Value="u" Description="using statement" />
               <New Value="we" Description="while statement" />
-              <Remove Languages="VisualBasic">
+              <Without Languages="VB">
                 <New Value="sh" Description="switch statement" Kind="Statement" />
-              </Remove>
-              <Remove Languages="CSharp">
+              </Without>
+              <Without Languages="C#">
                 <New Value="sc" Description="Select Case statement" Kind="Statement" />
-              </Remove>
-            </Set>
-            <Set Kind="Type">
+              </Without>
+            </With>
+            <With Kind="Type">
               <New Value="a" Description="Array" />
               <New Value="b" Description="Boolean" />
               <New Value="dt" Description="DateTime" />
@@ -86,7 +86,7 @@
               <New Value="s" Description="String" />
               <New Value="rr" Description="Reader" Comment="suffix" />
               <New Value="wr" Description="Writer" Comment="suffix" />
-              <Remove Environments="VisualStudioCode">
+              <Without IDE="VisualStudioCode">
                 <New Value="c" Description="Collection&lt;T&gt;" />
                 <New Value="d" Description="Dictionary&lt;TKey,TValue&gt;" />
                 <New Value="hs" Description="HashSet&lt;T&gt;" />
@@ -96,9 +96,9 @@
                 <New Value="oc" Description="ObservableCollection&lt;T&gt;" />
                 <New Value="q" Description="Queue&lt;T&gt;" />
                 <New Value="s" Description="Stack&lt;T&gt;" />
-              </Remove>
-            </Set>
-            <Set Kind="Other">
+              </Without>
+            </With>
+            <With Kind="Other">
               <New Value="c" Description="catch clause" />
               <New Value="d" Description="default keyword" />
               <New Value="e" Description="else clause" />
@@ -114,13 +114,13 @@
               <New Value="v" Description="local variable declaration" />
               <New Value="x" Description="with initializer" Comment="suffix" />
               <New Value="y" Description="yield" Comment="prefix" />
-              <Remove Environments="VisualStudioCode">
+              <Without IDE="VisualStudioCode">
                 <New Value="this" Description="containing type name" />
-              </Remove>
-            </Set>
-          </AddRange>
-          <AddRange Languages="Cpp">
-            <Set Kind="DeclarationDefinition">
+              </Without>
+            </With>
+          </With>
+          <With Languages="Cpp">
+            <With Kind="DeclarationDefinition">
               <New Value="c" Description="class" />
               <New Value="cr" Description="constructor" />
               <New Value="dr" Description="destructor" />
@@ -134,15 +134,15 @@
               <New Value="v" Description="variable" />
               <New Value="x" Description="definition" Comment="suffix" />
               <New Value="x" Description="(variable) with initialization" Comment="suffix" />
-            </Set>
-            <Set Kind="Specifier">
+            </With>
+            <With Kind="Specifier">
               <New Value="c" Description="const" Comment="prefix" />
               <New Value="ce" Description="constexpr" Comment="prefix" />
               <New Value="il" Description="inline" Comment="prefix" />
               <New Value="s" Description="static" Comment="prefix" />
               <New Value="v" Description="virtual" Comment="prefix" />
-            </Set>
-            <Set Kind="Statement">
+            </With>
+            <With Kind="Statement">
               <New Value="dw" Description="do-while" />
               <New Value="fe" Description="foreach" />
               <New Value="fr" Description="for" />
@@ -150,8 +150,8 @@
               <New Value="sh" Description="switch" />
               <New Value="tc" Description="try-catch" />
               <New Value="we" Description="while" />
-            </Set>
-            <Set Kind="Other">
+            </With>
+            <With Kind="Other">
               <New Value="ae" Description="attribute" />
               <New Value="co" Description="conditional operator" />
               <New Value="ct" Description="cast" Comment="suffix" />
@@ -165,9 +165,9 @@
               <New Value="r" Description="return keyword" />
               <New Value="so" Description="sizeof keyword" />
               <New Value="t" Description="template" />
-            </Set>
-          </AddRange>
-    </AddRange>
+            </With>
+          </With>
+        </With>
       </Records>
     </Entity>
   </Entities>

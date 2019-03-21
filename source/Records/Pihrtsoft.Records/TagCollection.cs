@@ -7,7 +7,7 @@ using Pihrtsoft.Records.Utilities;
 
 namespace Pihrtsoft.Records
 {
-    [DebuggerDisplay("Count = {Count} {TagsText,nq}")]
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class TagCollection : HashSet<string>
     {
         public TagCollection()
@@ -20,9 +20,15 @@ namespace Pihrtsoft.Records
         {
         }
 
-        private string TagsText
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        private string DebuggerDisplay
         {
-            get { return (Count > 0) ? string.Join(", ", this.OrderBy(f => f)) : ""; }
+            get
+            {
+                string tags = (Count > 0) ? string.Join(", ", this.OrderBy(f => f)) : "";
+
+                return $"Count = {Count} {tags}";
+            }
         }
 
         public bool ContainsAll(params string[] tags)

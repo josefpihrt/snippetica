@@ -13,15 +13,9 @@ namespace Snippetica.CodeGeneration.Commands
     {
         private static readonly Regex _regex = AssertBack(LetterLower()).Assert(LetterUpper()).ToRegex();
 
-        public override CommandKind Kind
-        {
-            get { return CommandKind.AlternativeShortcut; }
-        }
+        public override CommandKind Kind => CommandKind.AlternativeShortcut;
 
-        public override Command ChildCommand
-        {
-            get { return CommandUtility.SuffixFileNameWithUnderscore; }
-        }
+        public override Command ChildCommand => CommandUtility.SuffixFileNameWithUnderscoreCommand;
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {

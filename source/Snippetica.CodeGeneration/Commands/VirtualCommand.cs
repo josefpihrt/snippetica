@@ -4,10 +4,7 @@ namespace Snippetica.CodeGeneration.Commands
 {
     public class VirtualCommand : ModifierCommand
     {
-        public override CommandKind Kind
-        {
-            get { return CommandKind.VirtualModifier; }
-        }
+        public override CommandKind Kind => CommandKind.VirtualModifier;
 
         protected override ModifierDefinition GetModifier(LanguageDefinition language)
         {

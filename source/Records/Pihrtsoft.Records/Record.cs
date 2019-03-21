@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using Pihrtsoft.Records.Utilities;
 
 namespace Pihrtsoft.Records
 {
@@ -66,14 +65,35 @@ namespace Pihrtsoft.Records
             return Properties.ContainsKey(propertyName);
         }
 
-        internal object GetValue(string propertyName)
-        {
-            return Properties[propertyName];
-        }
-
         internal bool TryGetValue(string propertyName, out object value)
         {
             return Properties.TryGetValue(propertyName, out value);
+        }
+
+        internal bool TryGetCollection(string propertyName, out List<object> values)
+        {
+            if (Properties.TryGetValue(propertyName, out object value))
+            {
+                values = (List<object>)value;
+                return true;
+            }
+
+            values = null;
+            return false;
+        }
+
+        internal List<object> GetOrAddCollection(string propertyName)
+        {
+            if (TryGetValue(propertyName, out object value))
+            {
+                return (List<object>)value;
+            }
+            else
+            {
+                var items = new List<object>();
+                this[propertyName] = items;
+                return items;
+            }
         }
 
         private string DebuggerDisplay

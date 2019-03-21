@@ -1,4 +1,18 @@
 ﻿{
+  "- new variable": {
+    "prefix": "vn",
+    "body": [
+      "Dim ${1:x} = New ${2:Object}(${3:arguments})${0}"
+    ],
+    "description": "new variable declaration"
+  },
+  "- new variable (with initializer)": {
+    "prefix": "vnx",
+    "body": [
+      "Dim ${1:x} = New ${2:Object}(${3:arguments}) With {${4:x}}${0}"
+    ],
+    "description": "new variable declaration (with initializer)"
+  },
   "- operator overloading": {
     "prefix": "oo_Minus",
     "body": [
@@ -268,7 +282,7 @@
     "body": [
       "DateTime${0}"
     ],
-    "description": "DateTime type declaration"
+    "description": "DateTime type"
   },
   "Debug.Assert": {
     "prefix": "da",
@@ -322,13 +336,6 @@
       "End Class"
     ],
     "description": "class derived from Dictionary(Of TKey, TValue)"
-  },
-  "Dictionary(Of TKey, TValue) type": {
-    "prefix": "gd",
-    "body": [
-      "Dictionary(Of ${1:Object}, ${2:Object})${0}"
-    ],
-    "description": "Dictionary(Of TKey, TValue) type declaration"
   },
   "Disposable class": {
     "prefix": "c_Disposable",
@@ -778,13 +785,6 @@
     ],
     "description": "class that implements IComparer(Of T)"
   },
-  "IEnumerable(Of T) type": {
-    "prefix": "ge",
-    "body": [
-      "IEnumerable(Of ${1:T})${0}"
-    ],
-    "description": "IEnumerable(Of T) type declaration"
-  },
   "IEnumerator(Of T) variable": {
     "prefix": "u_er",
     "body": [
@@ -1040,20 +1040,6 @@
       "NameOf(${1:value})${0}"
     ],
     "description": "Nameof operator"
-  },
-  "new variable": {
-    "prefix": "vn",
-    "body": [
-      "Dim ${1:x} = New ${2:Object}(${3:arguments})${0}"
-    ],
-    "description": "variable declaration with new object creation"
-  },
-  "new variable (with initializer)": {
-    "prefix": "vnx",
-    "body": [
-      "Dim ${1:x} = New ${2:Object}(${3:arguments}) With {${4:x}}${0}"
-    ],
-    "description": "variable declaration with new object creation (with initializer)"
   },
   "Not operator overloading": {
     "prefix": "oo_Not",

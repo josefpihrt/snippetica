@@ -1,4 +1,18 @@
 ﻿{
+  "- new variable": {
+    "prefix": "vn",
+    "body": [
+      "var ${1:x} = new ${2:object}(${3:arguments});${0}"
+    ],
+    "description": "new variable declaration"
+  },
+  "- new variable (with initializer)": {
+    "prefix": "vnx",
+    "body": [
+      "var ${1:x} = new ${2:object}(${3:arguments}) { ${4:x} };${0}"
+    ],
+    "description": "new variable declaration (with initializer)"
+  },
   "- operator overloading": {
     "prefix": "oo_Minus",
     "body": [
@@ -312,7 +326,7 @@
     "body": [
       "DateTime${0}"
     ],
-    "description": "DateTime type declaration"
+    "description": "DateTime type"
   },
   "Debug.Assert": {
     "prefix": "da",
@@ -646,6 +660,27 @@
     ],
     "description": "foreach statement"
   },
+  "generic collection type [Obsolete]": {
+    "prefix": "gc",
+    "body": [
+      "/* Shortcut 'gc' is obsolete, use 'j' instead. */${0}"
+    ],
+    "description": "generic collection type [Obsolete]"
+  },
+  "generic collection variable (with initializer) [Obsolete]": {
+    "prefix": "vcx",
+    "body": [
+      "/* Shortcut 'vcx' is obsolete, use 'vnx' instead. */${0}"
+    ],
+    "description": "generic collection variable (with initializer) [Obsolete]"
+  },
+  "generic collection variable [Obsolete]": {
+    "prefix": "vc",
+    "body": [
+      "/* Shortcut 'vc' is obsolete, use 'vn' instead. */${0}"
+    ],
+    "description": "generic collection variable [Obsolete]"
+  },
   "generic type constraint": {
     "prefix": "where",
     "body": [
@@ -704,12 +739,12 @@
     ],
     "description": "class that implements IComparer<T>"
   },
-  "IEnumerable<T> type": {
+  "IEnumerable<T> type [Obsolete]": {
     "prefix": "ge",
     "body": [
-      "IEnumerable<${1:T}>${0}"
+      "/* Shortcut 'ge' is obsolete, use 'j' instead. */${0}"
     ],
-    "description": "IEnumerable<T> type declaration"
+    "description": "IEnumerable<T> type [Obsolete]"
   },
   "IEnumerator<T> variable": {
     "prefix": "u_er",
@@ -1129,20 +1164,6 @@
       "nameof(${1:x})${0}"
     ],
     "description": "nameof operator"
-  },
-  "new variable": {
-    "prefix": "vn",
-    "body": [
-      "var ${1:x} = new ${2:object}(${3:arguments});${0}"
-    ],
-    "description": "variable declaration with new object creation"
-  },
-  "new variable (with initializer)": {
-    "prefix": "vnx",
-    "body": [
-      "var ${1:x} = new ${2:object}(${3:arguments}) { ${4:x} };${0}"
-    ],
-    "description": "variable declaration with new object creation (with initializer)"
   },
   "object keyword": {
     "prefix": "o",

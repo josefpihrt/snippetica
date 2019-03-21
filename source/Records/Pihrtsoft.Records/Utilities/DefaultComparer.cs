@@ -2,6 +2,7 @@
 
 using System;
 using System.Xml.Linq;
+using Pihrtsoft.Records.Xml;
 
 namespace Pihrtsoft.Records.Utilities
 {

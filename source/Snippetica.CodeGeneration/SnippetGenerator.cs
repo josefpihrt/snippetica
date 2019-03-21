@@ -53,7 +53,6 @@ namespace Snippetica.CodeGeneration
             return snippet;
         }
 
-        //TODO: přesunout?
         public static IEnumerable<Snippet> GenerateAlternativeShortcuts(List<Snippet> snippets)
         {
             int count = snippets.Count;

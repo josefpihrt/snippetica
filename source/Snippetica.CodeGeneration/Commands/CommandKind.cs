@@ -22,7 +22,5 @@ namespace Snippetica.CodeGeneration.Commands
         PrefixTitle,
         SuffixFileName,
         ShortcutToLowercase,
-        SuffixShortcut,
-        Empty,
     }
 }

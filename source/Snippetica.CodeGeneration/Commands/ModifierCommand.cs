@@ -6,10 +6,7 @@ namespace Snippetica.CodeGeneration.Commands
 {
     public abstract class ModifierCommand : SnippetCommand
     {
-        public virtual bool ShouldRemoveLiteral
-        {
-            get { return false; }
-        }
+        public virtual bool ShouldRemoveLiteral => false;
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {

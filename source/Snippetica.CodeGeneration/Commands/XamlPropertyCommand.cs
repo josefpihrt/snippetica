@@ -7,10 +7,7 @@ namespace Snippetica.CodeGeneration.Commands
 {
     public class XamlPropertyCommand : SnippetCommand
     {
-        public override CommandKind Kind
-        {
-            get { return CommandKind.XamlProperty; }
-        }
+        public override CommandKind Kind => CommandKind.XamlProperty;
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {

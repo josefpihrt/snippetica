@@ -95,7 +95,7 @@ namespace Snippetica.CodeGeneration
                 yield return CreateHtmlEntitySnippet("lt", "less than", "l", "LessThan");
                 yield return CreateHtmlEntitySnippet("gt", "greater than", "g", "GreaterThan");
                 yield return CreateHtmlEntitySnippet("amp", "ampersand", "a", "Ampersand");
-                yield return CreateHtmlEntitySnippet("quot", "double quotation mark" , "d", "DoubleQuotationMark");
+                yield return CreateHtmlEntitySnippet("quot", "double quotation mark", "d", "DoubleQuotationMark");
                 yield return CreateHtmlEntitySnippet("apos", "single quotation mark (apostrophe)", "s", "SingleQuotationMark");
             }
         }
@@ -202,7 +202,7 @@ namespace Snippetica.CodeGeneration
 
             s.Description = s.Title;
 
-            s.AddLiteral(new Literal(CDataIdentifier) { DefaultValue="]]>", IsEditable = false });
+            s.AddLiteral(new Literal(CDataIdentifier) { DefaultValue = "]]>", IsEditable = false });
 
             s.AddLiteral(CreateContentLiteral());
 

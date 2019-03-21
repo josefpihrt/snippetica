@@ -7,41 +7,33 @@
         <Property Name="Language" IsRequired="true" />
       </Declarations>
       <Records>
-        <PrefixMany Path="..\..\..\..\Snippetica\Snippetica">
-          <Set Language="CSharp">
+        <Prefix Path="..\..\..\..\Snippetica\Snippetica">
+          <With Language="C#">
             <New Path=".CSharp" />
-          </Set>
-          <Set Language="VisualBasic">
+          </With>
+          <With Language="VB">
             <New Path=".VisualBasic" />
-          </Set>
-          <Set Language="Cpp">
+          </With>
+          <With Language="Cpp">
             <New Path=".Cpp" />
-          </Set>
-          <Set Language="Html">
+          </With>
+          <With Language="Html">
             <New Path=".Html" Tags="GenerateXmlSnippets" />
-          </Set>
-          <Set Language="Xaml">
-            <New Path=".Xaml">
-              <Add Tags="GenerateXmlSnippets" />
-              <Add Tags="ExcludeFromVisualStudioCode" />
-            </New>
-          </Set>
-          <Set Language="Xml">
+          </With>
+          <With Language="Xaml">
+            <New Path=".Xaml" Tags="GenerateXmlSnippets,ExcludeFromVisualStudioCode" />
+          </With>
+          <With Language="Xml">
             <New Path=".Xml" Tags="GenerateXmlSnippets" />
-            <New Path=".Xml.CodeSnippet">
-              <Add Tags="ExcludeFromVisualStudioCode" />
-              <Add Tags="NoQuickReference" />
-            </New>
-          </Set>
-          <Add Tags="ExcludeFromVisualStudio">
-            <Set Language="Markdown">
-              <New Path=".Markdown" Tags="GenerateXmlSnippets" />
-            </Set>
-            <Set Language="Json">
-              <New Path=".Json" />
-            </Set>
-          </Add>
-        </PrefixMany>
+            <New Path=".Xml.CodeSnippet" Tags="NoQuickReference,ExcludeFromVisualStudioCode" />
+          </With>
+          <With Language="Markdown">
+            <New Path=".Markdown" Tags="GenerateXmlSnippets,ExcludeFromVisualStudio" />
+          </With>
+          <With Language="Json">
+            <New Path=".Json" Tags="ExcludeFromVisualStudio" />
+          </With>
+        </Prefix>
       </Records>
     </Entity>
   </Entities>

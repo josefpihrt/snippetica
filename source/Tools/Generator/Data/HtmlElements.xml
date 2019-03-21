@@ -19,7 +19,7 @@
         <New Name="object" />
         <New Name="table" Shortcut="t" />
         <New Name="video" />
-        <Add Tag="SelfClosing">
+        <With Tags="SelfClosing">
           <New Name="area" />
           <New Name="base" />
           <New Name="basefont" />
@@ -35,13 +35,13 @@
           <New Name="source" />
           <New Name="track" />
           <New Name="wbr" />
-          <AddRange Tag="Generate,Attribute">
+          <With Tags="Generate,Attribute">
             <New Name="keygen" />
             <New Name="meta" />
-          </AddRange>
-        </Add>
-        <Add Tag="WithContent">
-          <Add Tag="Generate">
+          </With>
+        </With>
+        <With Tags="WithContent">
+          <With Tags="Generate">
             <New Name="address" />
             <New Name="article" />
             <New Name="aside" />
@@ -106,14 +106,14 @@
             <New Name="tt" />
             <New Name="u" />
             <New Name="var" />
-            <Add Tag="Attribute">
+            <With Tags="Attribute">
               <New Name="font" />
-            </Add>
-            <AddRange Tag="ClassAttribute,IdAttribute">
+            </With>
+            <With Tags="ClassAttribute,IdAttribute">
               <New Name="span" Shortcut="s" />
               <New Name="div" Shortcut="d" />
-            </AddRange>
-          </Add>
+            </With>
+          </With>
           <New Name="a" />
           <New Name="abbr" />
           <New Name="acronym" />
@@ -140,7 +140,7 @@
           <New Name="select" />
           <New Name="time" />
           <New Name="ul" />
-        </Add>
+        </With>
       </Records>
     </Entity>
   </Entities>

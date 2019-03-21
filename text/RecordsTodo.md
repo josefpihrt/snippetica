@@ -2,5 +2,5 @@
 xsd
 Entity Base="BaseEntity"
 <Namespace>
-<Document> <Settings>
+<Document> <Options>
 <Document> <Header>

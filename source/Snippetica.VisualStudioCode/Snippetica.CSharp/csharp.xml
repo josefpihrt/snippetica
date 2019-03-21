@@ -358,7 +358,7 @@ $modifier$ class $name$Attribute : $base$ {
     <Header>
       <Title>DateTime type</Title>
       <Shortcut>dt</Shortcut>
-      <Description>DateTime type declaration</Description>
+      <Description>DateTime type</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -1282,35 +1282,6 @@ $modifier$ class $name$Exception : $base$ {
 		throw new NotImplementedException();
 	}
 }]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>IEnumerable&lt;T&gt; type</Title>
-      <Shortcut>ge</Shortcut>
-      <Description>IEnumerable&lt;T&gt; type declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IEnumerableOfTType</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Generic type</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[IEnumerable<$_type$>$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -2659,9 +2630,9 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>new variable</Title>
+      <Title>- new variable</Title>
       <Shortcut>vn</Shortcut>
-      <Description>variable declaration with new object creation</Description>
+      <Description>new variable declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -2693,9 +2664,9 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>new variable (with initializer)</Title>
+      <Title>- new variable (with initializer)</Title>
       <Shortcut>vnx</Shortcut>
-      <Description>variable declaration with new object creation (with initializer)</Description>
+      <Description>new variable declaration (with initializer)</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>

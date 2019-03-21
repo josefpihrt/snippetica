@@ -11,7 +11,6 @@ namespace Snippetica.CodeGeneration.Commands
 
         public abstract CommandKind Kind { get; }
 
-        //TODO: přesunout do SnippetCommand?
         public virtual Command ChildCommand { get; }
     }
 }

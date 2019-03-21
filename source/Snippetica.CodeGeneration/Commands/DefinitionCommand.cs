@@ -6,10 +6,7 @@ namespace Snippetica.CodeGeneration.Commands
 {
     public class DefinitionCommand : SnippetCommand
     {
-        public override CommandKind Kind
-        {
-            get { return CommandKind.Definition; }
-        }
+        public override CommandKind Kind => CommandKind.Definition;
 
         protected override void Execute(ExecutionContext context, Snippet snippet)
         {

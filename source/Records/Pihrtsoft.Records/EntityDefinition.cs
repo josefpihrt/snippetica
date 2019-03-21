@@ -3,25 +3,14 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Xml.Linq;
 using Pihrtsoft.Records.Utilities;
 
 namespace Pihrtsoft.Records
 {
-    [DebuggerDisplay("{Name,nq} {BaseEntity.Name,nq} Properties: {PropertiesText,nq}")]
-    public class EntityDefinition : IKey<string>
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
+    public sealed class EntityDefinition : IKey<string>
     {
         internal EntityDefinition(
-            XElement element,
-            EntityDefinition baseEntity = null,
-            ExtendedKeyedCollection<string, PropertyDefinition> properties = null,
-            ExtendedKeyedCollection<string, Variable> variables = null)
-            : this(element, element.AttributeValueOrThrow(AttributeNames.Name), baseEntity, properties, variables)
-        {
-        }
-
-        private EntityDefinition(
-            XElement element,
             string name,
             EntityDefinition baseEntity = null,
             ExtendedKeyedCollection<string, PropertyDefinition> properties = null,
@@ -29,41 +18,18 @@ namespace Pihrtsoft.Records
         {
             Name = name;
 
-            if (baseEntity == null && !IsGlobalEntity)
-                baseEntity = Global;
-
             BaseEntity = baseEntity;
 
-            if (properties != null)
-            {
-                if (!IsGlobalEntity && baseEntity != null)
-                {
-                    foreach (PropertyDefinition property in properties)
-                    {
-                        if (FindProperty(property.Name, baseEntity) != null)
-                            ThrowHelper.ThrowInvalidOperation(ErrorMessages.PropertyAlreadyDefined(property.Name, name), element);
-                    }
-                }
+            Properties = (properties != null)
+                ? new PropertyDefinitionCollection(properties)
+                : Empty.PropertyDefinitionCollection;
 
-                Properties = new PropertyDefinitionCollection(properties);
-            }
-            else
-            {
-                Properties = Empty.PropertyDefinitionCollection;
-            }
-
-            if (variables != null)
-            {
-                Variables = new VariableCollection(variables);
-            }
-            else
-            {
-                Variables = Empty.VariableCollection;
-            }
+            Variables = (variables != null)
+                ? new VariableCollection(variables)
+                : Empty.VariableCollection;
         }
 
         public static EntityDefinition Global { get; } = new EntityDefinition(
-            element: null,
             name: GlobalName,
             baseEntity: null,
             properties: new ExtendedKeyedCollection<string, PropertyDefinition>(new PropertyDefinition[] { PropertyDefinition.Id }),
@@ -73,21 +39,24 @@ namespace Pihrtsoft.Records
 
         public EntityDefinition BaseEntity { get; }
 
-        protected PropertyDefinitionCollection Properties { get; }
+        public PropertyDefinitionCollection Properties { get; }
 
-        protected VariableCollection Variables { get; }
+        public VariableCollection Variables { get; }
 
-        public bool IsGlobalEntity
-        {
-            get { return object.ReferenceEquals(Name, GlobalName); }
-        }
-
-        private string PropertiesText
-        {
-            get { return string.Join(", ", AllProperties().Select(f => f.Name).OrderBy(f => f)); }
-        }
+        public bool IsGlobalEntity => object.ReferenceEquals(Name, GlobalName);
 
         internal static string GlobalName { get; } = "_Global";
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        private string DebuggerDisplay
+        {
+            get
+            {
+                string properties = string.Join(", ", AllProperties().Select(f => f.Name).OrderBy(f => f));
+
+                return $"{Name} {BaseEntity.Name} Properties: {properties}";
+            }
+        }
 
         public IEnumerable<PropertyDefinition> AllProperties()
         {
@@ -119,17 +88,8 @@ namespace Pihrtsoft.Records
 
         public PropertyDefinition FindProperty(string name)
         {
-            return FindProperty(name, this);
-        }
+            var entity = this;
 
-        public bool TryGetProperty(string name, out PropertyDefinition property)
-        {
-            property = FindProperty(name, this);
-            return property != null;
-        }
-
-        private static PropertyDefinition FindProperty(string name, EntityDefinition entity)
-        {
             do
             {
                 if (entity.Properties.TryGetValue(name, out PropertyDefinition property))
@@ -139,7 +99,13 @@ namespace Pihrtsoft.Records
 
             } while (entity != null);
 
-            return default(PropertyDefinition);
+            return default;
+        }
+
+        public bool TryGetProperty(string name, out PropertyDefinition property)
+        {
+            property = FindProperty(name);
+            return property != null;
         }
 
         public Variable FindVariable(string name)
@@ -168,7 +134,7 @@ namespace Pihrtsoft.Records
 
         public bool ContainsVariable(string variableName)
         {
-            return FindVariable(variableName) != null;
+            return !FindVariable(variableName).IsDefault;
         }
 
         public IEnumerable<EntityDefinition> BaseEntities()

@@ -2,7 +2,7 @@
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
     <Title>s Stack&lt;T&gt; variable</Title>
-    <Shortcut>vc</Shortcut>
+    <Shortcut>vn</Shortcut>
     <Description>Stack&lt;T&gt; variable declaration</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
@@ -23,16 +23,15 @@
     </Imports>
     <Declarations>
       <Literal>
-        <ID>_collectionIdentifier</ID>
+        <ID>_identifier</ID>
         <ToolTip>Identifier name</ToolTip>
         <Default>items</Default>
       </Literal>
       <Literal>
-        <ID>_genericType</ID>
-        <ToolTip>Generic type</ToolTip>
+        <ID>typeParameter</ID>
         <Default>T</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[var $_collectionIdentifier$ = new Stack<$_genericType$>();$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[var $_identifier$ = new Stack<$typeParameter$>();$end$]]></Code>
   </Snippet>
 </CodeSnippet>

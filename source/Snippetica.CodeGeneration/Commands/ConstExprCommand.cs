@@ -4,10 +4,7 @@ namespace Snippetica.CodeGeneration.Commands
 {
     public class ConstExprCommand : ModifierCommand
     {
-        public override CommandKind Kind
-        {
-            get { return CommandKind.ConstExprModifier; }
-        }
+        public override CommandKind Kind => CommandKind.ConstExprModifier;
 
         protected override ModifierDefinition GetModifier(LanguageDefinition language)
         {
