@@ -161,6 +161,10 @@
     <None Include="Snippetica.CSharp\AutoGeneration\Interface.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyStruct.snippet" />
     <None Include="Snippetica.CSharp\Dev\Attributes\Attribute.snippet" />
+    <None Include="Snippetica.CSharp\Dev\IfEqualToNullReturnDefault.snippet" />
+    <None Include="Snippetica.CSharp\Dev\IfNotEqualToNullReturnDefault.snippet" />
+    <None Include="Snippetica.CSharp\Dev\IfNotReturnDefault.snippet" />
+    <None Include="Snippetica.CSharp\Dev\IfReturnDefault.snippet" />
     <None Include="Snippetica.CSharp\EnumeratorClass.snippet" />
     <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotStringIsNullOrWhiteSpace.snippet" />
     <None Include="Snippetica.CSharp\Dev\ConditionalOperatorNotStringIsNullOrEmpty.snippet" />

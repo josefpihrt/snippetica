@@ -270,6 +270,14 @@
     ],
     "description": "if equal to null return"
   },
+  "if equal to null return default": {
+    "prefix": "ifnred",
+    "body": [
+      "if (${1:x} == null)",
+      "\treturn default;${0}"
+    ],
+    "description": "if equal to null return default"
+  },
   "if equal to null return false": {
     "prefix": "ifnref",
     "body": [
@@ -312,6 +320,14 @@
     ],
     "description": "if not equal to null return"
   },
+  "if not equal to null return default": {
+    "prefix": "ifxnred",
+    "body": [
+      "if (${1:x} != null)",
+      "\treturn default;${0}"
+    ],
+    "description": "if not equal to null return default"
+  },
   "if not equal to null return false": {
     "prefix": "ifxnref",
     "body": [
@@ -343,6 +359,14 @@
       "\treturn;${0}"
     ],
     "description": "if not return"
+  },
+  "if not return default": {
+    "prefix": "ifxred",
+    "body": [
+      "if (!${1:x})",
+      "\treturn default;${0}"
+    ],
+    "description": "if not return default"
   },
   "if not return false": {
     "prefix": "ifxref",
@@ -385,6 +409,14 @@
       "\treturn;${0}"
     ],
     "description": "if return"
+  },
+  "if return default": {
+    "prefix": "ifred",
+    "body": [
+      "if (${1:true})",
+      "\treturn default;${0}"
+    ],
+    "description": "if return default"
   },
   "if return false": {
     "prefix": "ifref",
