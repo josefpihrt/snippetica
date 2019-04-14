@@ -212,6 +212,9 @@
     <Content Include="Snippetica.CSharp.Dev\IfEqualToNullReturn.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfEqualToNullReturnDefault.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\IfEqualToNullReturnFalse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -227,6 +230,9 @@
     <Content Include="Snippetica.CSharp.Dev\IfNotEqualToNullReturn.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfNotEqualToNullReturnDefault.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\IfNotEqualToNullReturnFalse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -237,6 +243,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\IfNotReturn.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfNotReturnDefault.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\IfNotReturnFalse.snippet">
@@ -255,6 +264,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\IfReturn.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\IfReturnDefault.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\IfReturnFalse.snippet">

@@ -1,3 +1,7 @@
+## 0.9.1 (2019-04-14)
+
+* Put back snippets that were accidentally removed in 0.9.0 (ifxtp, ifx, ifxn, xn, xsne, xsnw).
+
 ## 0.9.0 (2019-03-21)
 
 * Change shortcut ge to j

@@ -19,10 +19,12 @@ coxsnw|conditional operator \(\!string\.IsNullOrWhiteSpace\)
 daxn|Debug\.Assert \!= null
 ifemtp|if Enum\.TryParse
 ifnre|if equal to null return
+ifnred|if equal to null return default
 ifnref|if equal to null return false
 ifnren|if equal to null return null
 ifnret|if equal to null return true
 ifre|if return
+ifred|if return default
 ifref|if return false
 ifren|if return null
 ifret|if return true
@@ -31,10 +33,12 @@ ifsnw|if string\.IsNullOrWhiteSpace
 iftgv|if TryGetValue
 ifxemtp|if not Enum\.TryParse
 ifxnre|if not equal to null return
+ifxnred|if not equal to null return default
 ifxnref|if not equal to null return false
 ifxnren|if not equal to null return null
 ifxnret|if not equal to null return true
 ifxre|if not return
+ifxred|if not return default
 ifxref|if not return false
 ifxren|if not return null
 ifxret|if not return true

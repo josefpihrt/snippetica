@@ -4,7 +4,7 @@
   "displayName": "Snippetica for C#",
   "description": "A collection of snippets for C#.",
   "icon": "images/icon.png",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "author": "Josef Pihrt",
   "license": "SEE LICENSE IN LICENSE.TXT",
   "homepage": "http://github.com/josefpihrt/snippetica/blob/master/source/Snippetica.VisualStudioCode/Snippetica.CSharp.Dev/README.md",

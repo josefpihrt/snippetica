@@ -1,5 +1,16 @@
 ﻿# Release Notes
 
+## 0.9.1 (2019-04-14)
+
+* Put back snippets that were accidentally removed in 0.9.0 (ifxtp, ifx, ifxn, xn, xsne, xsnw).
+
+### Snippets for C# and VB
+
+* Change shortcut ge to j
+* Change shortcut gc to j
+* Change shortcut vc to vn
+* Change shortcut vcx to vnx
+
 ## 0.9.0 (2019-03-21)
 
 ### Snippets for C# and VB

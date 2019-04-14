@@ -128,7 +128,10 @@ ie|Public interface
 ifn|If Is Nothing
 iftc|If TryCast IsNot Nothing
 iftp|if TryParse
+ifx|If Not
+ifxn|If IsNot Nothing
 ifxtc|If TryCast Is Nothing
+ifxtp|if not TryParse
 ir|Public indexer
 k|Public constant
 l|Lambda expression
@@ -187,5 +190,8 @@ vt|local variable with DirectCast
 we|While statement
 wen|While Is Nothing
 wexn|While IsNot Nothing
+xn|IsNot Nothing
+xsne|String\.IsNullOrEmpty = False
+xsnw|String\.IsNullOrWhiteSpace = False
 
 *\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

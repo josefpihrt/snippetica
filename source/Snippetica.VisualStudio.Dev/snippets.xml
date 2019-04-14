@@ -1602,6 +1602,31 @@ if (Enum.TryParse($value$, out $result$)) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>if equal to null return default</Title>
+      <Shortcut>ifnred</Shortcut>
+      <Description>if equal to null return default</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfEqualToNullReturnDefault</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$ == null)
+	return default;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>if equal to null return false</Title>
       <Shortcut>ifnref</Shortcut>
       <Description>if equal to null return false</Description>
@@ -1744,6 +1769,31 @@ if (!Enum.TryParse($value$, out $result$)) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>if not equal to null return default</Title>
+      <Shortcut>ifxnred</Shortcut>
+      <Description>if not equal to null return default</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfNotEqualToNullReturnDefault</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$ != null)
+	return default;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>if not equal to null return false</Title>
       <Shortcut>ifxnref</Shortcut>
       <Description>if not equal to null return false</Description>
@@ -1840,6 +1890,31 @@ if (!Enum.TryParse($value$, out $result$)) {
       </Declarations>
       <Code Language="CSharp"><![CDATA[if (!$expression$)
 	return;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if not return default</Title>
+      <Shortcut>ifxred</Shortcut>
+      <Description>if not return default</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfNotReturnDefault</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if (!$expression$)
+	return default;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -2035,6 +2110,31 @@ if (!$identifier$.TryGetValue($key$, out $value$)) {
       </Declarations>
       <Code Language="CSharp"><![CDATA[if ($expression$)
 	return;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>if return default</Title>
+      <Shortcut>ifred</Shortcut>
+      <Description>if return default</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name IfReturnDefault</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[if ($expression$)
+	return default;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
