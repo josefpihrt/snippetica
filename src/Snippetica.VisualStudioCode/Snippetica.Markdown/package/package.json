@@ -1,0 +1,37 @@
+{
+  "name": "snippetica-markdown",
+  "publisher": "josefpihrt-vscode",
+  "displayName": "Snippetica for Markdown",
+  "description": "A collection of snippets for Markdown.",
+  "icon": "images/icon.png",
+  "version": "0.6.0",
+  "author": "Josef Pihrt",
+  "license": "SEE LICENSE IN LICENSE.TXT",
+  "homepage": "http://github.com/josefpihrt/snippetica/blob/master/src/Snippetica.VisualStudioCode/Snippetica.Markdown/README.md",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/josefpihrt/snippetica.git"
+  },
+  "bugs": {
+    "url": "http://github.com/josefpihrt/snippetica/issues"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "Snippet",
+    "Snippets",
+    "Markdown"
+  ],
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "markdown",
+        "path": "./snippets/markdown.json"
+      }
+    ]
+  }
+}
