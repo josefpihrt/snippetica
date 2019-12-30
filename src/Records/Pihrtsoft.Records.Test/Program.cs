@@ -48,6 +48,7 @@ namespace Pihrtsoft.Records.Tests
             Console.ReadKey();
         }
 
+#pragma warning disable IDE0051, RCS1213
         private static void Indent()
         {
             IndentString += "  ";
@@ -60,6 +61,7 @@ namespace Pihrtsoft.Records.Tests
                 IndentString = IndentString.Remove(IndentString.Length - 2);
             }
         }
+#pragma warning restore IDE0051, RCS1213 
 
         private static string IndentString { get; set; } = "";
 

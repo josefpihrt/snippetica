@@ -202,7 +202,7 @@ namespace Pihrtsoft.Records.Xml
                 {
                     case ElementKind.Variable:
                         {
-                            variables = variables ?? new ExtendedKeyedCollection<string, Variable>(DefaultComparer.StringComparer);
+                            variables ??= new ExtendedKeyedCollection<string, Variable>(DefaultComparer.StringComparer);
 
                             string variableName = element.GetAttributeValueOrThrow(AttributeNames.Name);
 
@@ -218,7 +218,7 @@ namespace Pihrtsoft.Records.Xml
                         }
                     case ElementKind.Property:
                         {
-                            properties = properties ?? new ExtendedKeyedCollection<string, PropertyDefinition>();
+                            properties ??= new ExtendedKeyedCollection<string, PropertyDefinition>();
 
                             string name = null;
                             bool isCollection = false;
@@ -431,7 +431,7 @@ namespace Pihrtsoft.Records.Xml
         {
             foreach (Operation operation in CreateOperationsFromElement(element))
             {
-                _propertyOperations = _propertyOperations ?? new StringKeyedCollection<PropertyOperationCollection>();
+                _propertyOperations ??= new StringKeyedCollection<PropertyOperationCollection>();
 
                 if (!_propertyOperations.TryGetValue(operation.PropertyName, out PropertyOperationCollection propertyOperations))
                 {
@@ -549,7 +549,7 @@ namespace Pihrtsoft.Records.Xml
                     }
                     else
                     {
-                        pendingValues = pendingValues ?? new Dictionary<OperationKind, string>();
+                        pendingValues ??= new Dictionary<OperationKind, string>();
 
                         if (pendingValues.TryGetValue(kind, out string value))
                         {

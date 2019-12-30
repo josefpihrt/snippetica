@@ -43,7 +43,7 @@ namespace Pihrtsoft.Records
 
         public VariableCollection Variables { get; }
 
-        public bool IsGlobalEntity => object.ReferenceEquals(Name, GlobalName);
+        public bool IsGlobalEntity => ReferenceEquals(Name, GlobalName);
 
         internal static string GlobalName { get; } = "_Global";
 

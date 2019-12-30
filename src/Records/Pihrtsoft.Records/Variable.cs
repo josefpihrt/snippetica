@@ -10,10 +10,7 @@ namespace Pihrtsoft.Records
     {
         public Variable(string name, string value)
         {
-            if (name == null)
-                throw new ArgumentNullException(nameof(name));
-
-            Name = name;
+            Name = name ?? throw new ArgumentNullException(nameof(name));
             Value = value;
         }
 
