@@ -1037,6 +1037,13 @@
     ],
     "description": "Lambda expression with 2 parameters"
   },
+  "Lambda expression without parameters": {
+    "prefix": "l0",
+    "body": [
+      "Function() ${0}"
+    ],
+    "description": "Lambda expression without parameters"
+  },
   "Like operator overloading": {
     "prefix": "oo_Like",
     "body": [

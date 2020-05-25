@@ -2418,6 +2418,23 @@ End Property$end$]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>Lambda expression without parameters</Title>
+      <Shortcut>l0</Shortcut>
+      <Description>Lambda expression without parameters</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name LambdaExpressionWithoutParameters</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="VB"><![CDATA[Function() $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>Lambda expression with 2 parameters</Title>
       <Shortcut>l2</Shortcut>
       <Description>Lambda expression with 2 parameters</Description>

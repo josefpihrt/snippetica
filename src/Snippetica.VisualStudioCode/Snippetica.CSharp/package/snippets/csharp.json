@@ -1186,6 +1186,13 @@
     ],
     "description": "lambda expression with 2 parameters"
   },
+  "lambda expression without parameters": {
+    "prefix": "l0",
+    "body": [
+      "() => ${0}"
+    ],
+    "description": "lambda expression without parameters"
+  },
   "local variable declaration": {
     "prefix": "v",
     "body": [

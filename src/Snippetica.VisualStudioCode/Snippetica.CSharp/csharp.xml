@@ -2678,6 +2678,23 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>lambda expression without parameters</Title>
+      <Shortcut>l0</Shortcut>
+      <Description>lambda expression without parameters</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name LambdaExpressionWithoutParameters</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp"><![CDATA[() => $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>lambda expression with 2 parameters</Title>
       <Shortcut>l2</Shortcut>
       <Description>lambda expression with 2 parameters</Description>
