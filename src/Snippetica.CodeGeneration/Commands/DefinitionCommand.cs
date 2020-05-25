@@ -21,7 +21,9 @@ namespace Snippetica.CodeGeneration.Commands
 
             if (placeholders.Contains("_definition"))
             {
-                snippet.CodeText = snippet.Code.ReplacePlaceholders("_definition", @" {
+                snippet.CodeText = snippet.Code.ReplacePlaceholders(
+                    "_definition",
+@" {
 	$selected$$end$
 }");
             }
