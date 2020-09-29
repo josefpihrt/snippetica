@@ -28,10 +28,10 @@ namespace Snippetica.CodeGeneration
             if (snippet.HasTag(KnownTags.GenerateDeclarationAndDefinition))
             {
                 commands.AddMultiCommands(new Command[]
-                {
-                    CommandUtility.DeclarationCommand,
-                    CommandUtility.DefinitionCommand
-                });
+                    {
+                        CommandUtility.DeclarationCommand,
+                        CommandUtility.DefinitionCommand
+                    });
             }
 
             commands.AddMultiCommands(GetBasicTypeCommands(snippet));

@@ -23,7 +23,7 @@ namespace Snippetica.CodeGeneration.Commands
             {
                 snippet.CodeText = snippet.Code.ReplacePlaceholders(
                     "_definition",
-@" {
+                    @" {
 	$selected$$end$
 }");
             }

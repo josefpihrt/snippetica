@@ -116,7 +116,8 @@ namespace Snippetica.CodeGeneration.VisualStudio
 
             XNamespace ns = itemGroup.Name.Namespace;
 
-            itemGroup.Add(new XElement(ns + "Content",
+            itemGroup.Add(new XElement(
+                ns + "Content",
                 new XAttribute("Include", relativePath),
                 new XElement(ns + "IncludeInVSIX", "true")));
         }

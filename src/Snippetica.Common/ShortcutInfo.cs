@@ -56,7 +56,8 @@ namespace Snippetica.CodeGeneration
                     new XElement(
                         "Shortcuts",
                         shortcuts.Select(f =>
-                            new XElement(nameof(ShortcutInfo),
+                            new XElement(
+                                nameof(ShortcutInfo),
                                 new XAttribute(nameof(f.Value), f.Value),
                                 new XAttribute(nameof(f.Description), f.Description),
                                 new XAttribute(nameof(f.Comment), f.Comment),
