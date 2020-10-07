@@ -63,7 +63,8 @@ namespace Snippetica.CodeGeneration
 
             IEnumerable<Language> languages = visualStudioResults
                 .Concat(visualStudioCodeResults)
-                .Select(f => f.Language).Distinct();
+                .Select(f => f.Language)
+                .Distinct();
 
             var document = new MDocument(
                 Heading1(ProductName),

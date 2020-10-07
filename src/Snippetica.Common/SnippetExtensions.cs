@@ -50,7 +50,7 @@ namespace Snippetica
                 && snippet.HasTag(KnownTags.TitleStartsWithShortcut))
             {
                 while (i < s.Length
-                   && s[i] != ' ')
+                    && s[i] != ' ')
                 {
                     i++;
                 }
@@ -68,7 +68,7 @@ namespace Snippetica
                 && snippet.HasTag(KnownTags.TitleEndsWithUnderscore))
             {
                 while (j >= 0
-                   && s[j] == '_')
+                    && s[j] == '_')
                 {
                     j--;
                 }
