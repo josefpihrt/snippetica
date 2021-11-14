@@ -1,3 +1,25 @@
+## 0.9.2 (2021-11-14)
+
+### New Snippets for C#
+
+* Lambda expression without parameters (l0)
+* DateTimeOffset (dto)
+* KeyValuePair (kvp)
+* Record (rd)
+* Record struct (rdst)
+* Readonly record struct (rrdst)
+* Attribute a
+  * AttributeUsage (au)
+  * Conditional (c)
+  * DebuggerDisplay (dd)
+  * DebuggerStepThrough (dst)
+  * DefaultValue (dv)
+  * Description (d)
+  * Flags (f)
+  * Obsolete (o)
+  * Required (r)
+  * TypeConverter (tc)
+
 ## 0.9.1 (2019-04-14)
 
 * Put back snippets that were accidentally removed in 0.9.0 (ifxtp, ifx, ifxn, xn, xsne, xsnw).

@@ -3607,6 +3607,25 @@ $name$::~$name$() {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>attribute</Title>
+      <Shortcut>a</Shortcut>
+      <Description>attribute</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Attribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut -</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp"><![CDATA[[$selected$$end$]]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>Attribute class</Title>
       <Shortcut>c_</Shortcut>
       <Description>class derived from Attribute class</Description>
@@ -3653,6 +3672,39 @@ $name$::~$name$() {
 $modifier$ class $name$Attribute : $base$ {
 	$end$
 }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>AttributeUsage attribute</Title>
+      <Shortcut>a</Shortcut>
+      <Description>AttributeUsage attribute</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name AttributeUsageAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut au</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>allowMultiple</ID>
+          <Default>false</Default>
+        </Literal>
+        <Literal>
+          <ID>target</ID>
+          <Default>.All</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[[AttributeUsage(AttributeTargets$target$, AllowMultiple = $allowMultiple$)]$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -3893,6 +3945,36 @@ $modifier$ class $name$Attribute : $base$ {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>Conditional attribute</Title>
+      <Shortcut>a</Shortcut>
+      <Description>Conditional attribute</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ConditionalAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut c</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Diagnostics</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>conditionString</ID>
+          <ToolTip>Condition string</ToolTip>
+          <Default>"DEBUG"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[[Conditional($conditionString$)]$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>conditional operator</Title>
       <Shortcut>co</Shortcut>
       <Description>conditional operator</Description>
@@ -4020,6 +4102,28 @@ $modifier$ class $name$Attribute : $base$ {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>DateTimeOffset type</Title>
+      <Shortcut>dto</Shortcut>
+      <Description>DateTimeOffset type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name DateTimeOffsetType</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp"><![CDATA[DateTimeOffset$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>DateTime type</Title>
       <Shortcut>dt</Shortcut>
       <Description>DateTime type</Description>
@@ -4076,6 +4180,59 @@ $modifier$ class $name$Attribute : $base$ {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>DebuggerDisplay attribute</Title>
+      <Shortcut>a</Shortcut>
+      <Description>DebuggerDisplay attribute</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name DebuggerDisplayAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut dd</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Diagnostics</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value</ToolTip>
+          <Default>"{}"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[[DebuggerDisplay($value$)]$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>DebuggerStepThrough attribute</Title>
+      <Shortcut>a</Shortcut>
+      <Description>DebuggerStepThrough attribute</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name DebuggerStepThroughAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut dst</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Diagnostics</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp"><![CDATA[[DebuggerStepThrough]$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>Debug.WriteLine</Title>
       <Shortcut>dw</Shortcut>
       <Description>Debug.WriteLine method</Description>
@@ -4118,6 +4275,66 @@ $modifier$ class $name$Attribute : $base$ {
     </Header>
     <Snippet>
       <Code Language="CSharp"><![CDATA[default$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>DefaultValue attribute</Title>
+      <Shortcut>a</Shortcut>
+      <Description>DefaultValue attribute</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name DefaultValueAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut dv</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.ComponentModel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>defaultValue</ID>
+          <ToolTip>Default value</ToolTip>
+          <Default>""</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[[DefaultValue($defaultValue$)]$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Description attribute</Title>
+      <Shortcut>a</Shortcut>
+      <Description>Description attribute</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name DescriptionAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut d</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.ComponentModel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>description</ID>
+          <ToolTip>Description</ToolTip>
+          <Default>""</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[[Description($description$)]$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -4822,6 +5039,29 @@ $modifier$ class $name$Exception : $base$ {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>Flags attribute</Title>
+      <Shortcut>a</Shortcut>
+      <Description>Flags attribute</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name FlagsAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut f</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp"><![CDATA[[Flags]$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>for statement</Title>
       <Shortcut>fr</Shortcut>
       <Description>for statement</Description>
@@ -5520,7 +5760,7 @@ $modifier$ class $name$Exception : $base$ {
         <Literal>
           <ID>result</ID>
           <ToolTip>The result</ToolTip>
-          <Default>x</Default>
+          <Default>result</Default>
         </Literal>
         <Literal>
           <ID>value</ID>
@@ -5558,7 +5798,7 @@ if (!$_type$.TryParse($value$, out $result$)) {
         <Literal>
           <ID>result</ID>
           <ToolTip>The result</ToolTip>
-          <Default>x</Default>
+          <Default>result</Default>
         </Literal>
         <Literal>
           <ID>value</ID>
@@ -6461,6 +6701,35 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>internal readonly record struct</Title>
+      <Shortcut>irrdst</Shortcut>
+      <Description>internal readonly record struct declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InternalReadOnlyRecordStruct</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Struct name</ToolTip>
+          <Default>StructName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[internal readonly record struct $name$($_parameters$);$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>internal read-only struct</Title>
       <Shortcut>irst</Shortcut>
       <Description>internal read-only struct declaration</Description>
@@ -6483,6 +6752,65 @@ protected virtual void On$name$($eventArgs$ e) {
       <Code Language="CSharp"><![CDATA[internal readonly struct $name$ {
 	$end$
 }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>internal record</Title>
+      <Shortcut>ird</Shortcut>
+      <Description>internal record declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InternalRecord</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Record name</ToolTip>
+          <Default>RecordName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[internal record $name$($_parameters$);$end$
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>internal record struct</Title>
+      <Shortcut>irdst</Shortcut>
+      <Description>internal record struct declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InternalRecordStruct</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Struct name</ToolTip>
+          <Default>StructName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[internal record struct $name$($_parameters$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -6898,6 +7226,28 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>KeyValuePair type</Title>
+      <Shortcut>kvp</Shortcut>
+      <Description>KeyValuePair type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name KeyValuePair</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp"><![CDATA[KeyValuePair$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>lambda expression</Title>
       <Shortcut>l</Shortcut>
       <Description>lambda expression</Description>
@@ -6911,6 +7261,23 @@ protected virtual void On$name$($eventArgs$ e) {
     </Header>
     <Snippet>
       <Code Language="CSharp"><![CDATA[f => $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>lambda expression without parameters</Title>
+      <Shortcut>l0</Shortcut>
+      <Description>lambda expression without parameters</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name LambdaExpressionWithoutParameters</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp"><![CDATA[() => $end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -7431,6 +7798,36 @@ protected virtual void On$name$($eventArgs$ e) {
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[var $_identifier$ = new ObservableCollection<$typeParameter$>() { $_value$ };$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Obsolete attribute</Title>
+      <Shortcut>a</Shortcut>
+      <Description>Obsolete attribute</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ObsoleteAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut o</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>parameters</ID>
+          <ToolTip>Parameters</ToolTip>
+          <Default>""</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[[Obsolete($parameters$)]$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -8882,6 +9279,35 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>private readonly record struct</Title>
+      <Shortcut>prrdst</Shortcut>
+      <Description>private readonly record struct declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PrivateReadOnlyRecordStruct</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Struct name</ToolTip>
+          <Default>StructName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[private readonly record struct $name$($_parameters$);$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>private read-only struct</Title>
       <Shortcut>prst</Shortcut>
       <Description>private read-only struct declaration</Description>
@@ -8904,6 +9330,65 @@ protected virtual void On$name$($eventArgs$ e) {
       <Code Language="CSharp"><![CDATA[private readonly struct $name$ {
 	$end$
 }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>private record</Title>
+      <Shortcut>prd</Shortcut>
+      <Description>private record declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PrivateRecord</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Record name</ToolTip>
+          <Default>RecordName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[private record $name$($_parameters$);$end$
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>private record struct</Title>
+      <Shortcut>prdst</Shortcut>
+      <Description>private record struct declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PrivateRecordStruct</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Struct name</ToolTip>
+          <Default>StructName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[private record struct $name$($_parameters$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -9675,6 +10160,35 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>public readonly record struct</Title>
+      <Shortcut>rrdst</Shortcut>
+      <Description>public readonly record struct declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PublicReadOnlyRecordStruct</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Struct name</ToolTip>
+          <Default>StructName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[public readonly record struct $name$($_parameters$);$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>public read-only struct</Title>
       <Shortcut>rst</Shortcut>
       <Description>public read-only struct declaration</Description>
@@ -9697,6 +10211,65 @@ protected virtual void On$name$($eventArgs$ e) {
       <Code Language="CSharp"><![CDATA[public readonly struct $name$ {
 	$end$
 }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>public record</Title>
+      <Shortcut>rd</Shortcut>
+      <Description>public record declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PublicRecord</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Record name</ToolTip>
+          <Default>RecordName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[public record $name$($_parameters$);$end$
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>public record struct</Title>
+      <Shortcut>rdst</Shortcut>
+      <Description>public record struct declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PublicRecordStruct</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Struct name</ToolTip>
+          <Default>StructName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[public record struct $name$($_parameters$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -10369,6 +10942,29 @@ protected virtual void On$name$($eventArgs$ e) {
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[var $_identifier$ = new ReadOnlyObservableCollection<$typeParameter$>($_arguments$);$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Required attribute</Title>
+      <Shortcut>a</Shortcut>
+      <Description>Required attribute</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name RequiredAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut r</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.ComponentModel.DataAnnotations</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp"><![CDATA[[Required]$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -11230,6 +11826,36 @@ finally {
 }
 finally {
 }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>TypeConverter attribute</Title>
+      <Shortcut>a</Shortcut>
+      <Description>TypeConverter attribute</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name TypeConverterAttribute</Keyword>
+        <Keyword>Meta-SubmenuShortcut tc</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.ComponentModel</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>T</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[[TypeConverter(typeof($type$))]$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -18241,7 +18867,7 @@ End If]]></Code>
         <Literal>
           <ID>result</ID>
           <ToolTip>The result</ToolTip>
-          <Default>x</Default>
+          <Default>result</Default>
         </Literal>
         <Literal>
           <ID>value</ID>
@@ -18343,7 +18969,7 @@ End If]]></Code>
         <Literal>
           <ID>result</ID>
           <ToolTip>The result</ToolTip>
-          <Default>x</Default>
+          <Default>result</Default>
         </Literal>
         <Literal>
           <ID>value</ID>
@@ -19697,6 +20323,23 @@ End Property$end$]]></Code>
     </Header>
     <Snippet>
       <Code Language="VB"><![CDATA[Function(f) $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>Lambda expression without parameters</Title>
+      <Shortcut>l0</Shortcut>
+      <Description>Lambda expression without parameters</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name LambdaExpressionWithoutParameters</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="VB"><![CDATA[Function() $end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

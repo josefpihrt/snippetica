@@ -83,27 +83,6 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Snippetica.CSharp.Dev\AssemblyAttribute.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\Attribute.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\ConditionalAttribute.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\DebuggerDisplayAttribute.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\DebuggerStepThroughAttribute.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\FlagsAttribute.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\ObsoleteAttribute.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp.Dev\DirectoryCreateDirectory.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -185,6 +164,12 @@
     <Content Include="Snippetica.CSharp.Dev\PathHasExtension.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\AssemblyAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\AwaitForEach.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\BreakStatement.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -204,6 +189,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\DebugAssertNotNull.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\DebugFail.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\IfEnumTryParse.snippet">
@@ -290,6 +278,12 @@
     <Content Include="Snippetica.CSharp.Dev\OverrideModifier.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\ReturnAwait.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp.Dev\ReturnConditionalOperator.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\ReturnDefault.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -308,6 +302,9 @@
     <Content Include="Snippetica.CSharp.Dev\ThrowStatement.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp.Dev\TimeSpan.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp.Dev\VariableAsTIfNotNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -315,30 +312,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\YieldReturnNewThis.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfThisType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfTType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfBooleanType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfInt32Type.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfObjectType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfStringType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfInt64Type.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp.Dev\ArrayOfDateTimeType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp.Dev\ThisIfNotTryGetValue.snippet">

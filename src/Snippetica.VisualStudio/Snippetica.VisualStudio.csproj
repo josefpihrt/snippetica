@@ -90,6 +90,39 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Snippetica.CSharp\Attribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\AttributeUsageAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\ConditionalAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\DebuggerDisplayAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\DebuggerStepThroughAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\DefaultValueAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\DescriptionAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\FlagsAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\ObsoleteAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\RequiredAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\TypeConverterAttribute.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\AttributeClass.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -115,6 +148,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\ContainingTypeName.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\DateTimeOffsetType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\DateTimeType.snippet">
@@ -216,7 +252,13 @@
     <Content Include="Snippetica.CSharp\InterfaceEventWithEventHandlerOfT.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\KeyValuePair.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\LambdaExpression.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\LambdaExpressionWithoutParameters.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\LambdaExpressionWithTwoParameters.snippet">
@@ -2022,6 +2064,15 @@
     <Content Include="Snippetica.CSharp\InternalVirtualDateTimeReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\PublicReadOnlyRecordStruct.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\InternalReadOnlyRecordStruct.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\PrivateReadOnlyRecordStruct.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\PublicReadOnlyStruct.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2029,6 +2080,24 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateReadOnlyStruct.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\PublicRecord.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\InternalRecord.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\PrivateRecord.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\PublicRecordStruct.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\InternalRecordStruct.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\PrivateRecordStruct.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicStruct.snippet">
@@ -2287,6 +2356,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\LambdaExpression.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\LambdaExpressionWithoutParameters.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\LambdaExpressionWithTwoParameters.snippet">

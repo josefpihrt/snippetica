@@ -495,33 +495,8 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>array type</Title>
-      <Shortcut>a</Shortcut>
-      <Description>array type</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ArrayOfTType</Keyword>
-        <Keyword>Meta-SubmenuShortcut a</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Element type name</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[$_type$[]$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>Assembly attribute</Title>
-      <Shortcut>ae</Shortcut>
+      <Shortcut>aa</Shortcut>
       <Description>Assembly attribute</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -529,7 +504,6 @@ private:
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name AssemblyAttribute</Keyword>
-        <Keyword>Meta-SubmenuShortcut ay</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -545,21 +519,33 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>attribute</Title>
-      <Shortcut>ae</Shortcut>
-      <Description>attribute</Description>
+      <Title>await foreach statement</Title>
+      <Shortcut>afe</Shortcut>
+      <Description>await foreach statement</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name Attribute</Keyword>
-        <Keyword>Meta-SubmenuShortcut -</Keyword>
+        <Keyword>Meta-Name AwaitForEach</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Code Language="CSharp"><![CDATA[[$selected$$end$]]]></Code>
+      <Declarations>
+        <Literal>
+          <ID>_collection</ID>
+          <ToolTip>Collection variable name</ToolTip>
+          <Default>items</Default>
+        </Literal>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>Identifier that represents the element in the collection</ToolTip>
+          <Default>item</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[await foreach (var $identifier$ in $_collection$) {
+	$end$
+}]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -577,36 +563,6 @@ private:
     </Header>
     <Snippet>
       <Code Language="CSharp"><![CDATA[break;$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Conditional attribute</Title>
-      <Shortcut>ae</Shortcut>
-      <Description>Conditional attribute</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ConditionalAttribute</Keyword>
-        <Keyword>Meta-SubmenuShortcut cl</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Diagnostics</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>conditionString</ID>
-          <ToolTip>Condition string</ToolTip>
-          <Default>"DEBUG"</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[[Conditional($conditionString$)]$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -798,16 +754,15 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>DebuggerDisplay attribute</Title>
-      <Shortcut>ae</Shortcut>
-      <Description>DebuggerDisplay attribute</Description>
+      <Title>Debug.Fail</Title>
+      <Shortcut>df</Shortcut>
+      <Description>Debug.Fail method</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name DebuggerDisplayAttribute</Keyword>
-        <Keyword>Meta-SubmenuShortcut dd</Keyword>
+        <Keyword>Meta-Name DebugFail</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -818,35 +773,12 @@ private:
       </Imports>
       <Declarations>
         <Literal>
-          <ID>value</ID>
-          <ToolTip>Value</ToolTip>
-          <Default>"{}"</Default>
+          <ID>message</ID>
+          <ToolTip>The message text</ToolTip>
+          <Default>""</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[[DebuggerDisplay($value$)]$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>DebuggerStepThrough attribute</Title>
-      <Shortcut>ae</Shortcut>
-      <Description>DebuggerStepThrough attribute</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DebuggerStepThroughAttribute</Keyword>
-        <Keyword>Meta-SubmenuShortcut dst</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Diagnostics</Namespace>
-        </Import>
-      </Imports>
-      <Code Language="CSharp"><![CDATA[[DebuggerStepThrough]$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[Debug.Fail($message$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
@@ -1510,29 +1442,6 @@ private:
       <Code Language="CSharp"><![CDATA[File.WriteAllText($path$, $content$, $_encoding$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Flags attribute</Title>
-      <Shortcut>ae</Shortcut>
-      <Description>Flags attribute</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name FlagsAttribute</Keyword>
-        <Keyword>Meta-SubmenuShortcut fs</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Code Language="CSharp"><![CDATA[[Flags]$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>if Enum.TryParse</Title>
@@ -1556,7 +1465,7 @@ private:
         <Literal>
           <ID>result</ID>
           <ToolTip>The result</ToolTip>
-          <Default>x</Default>
+          <Default>result</Default>
         </Literal>
         <Literal>
           <ID>type</ID>
@@ -1723,7 +1632,7 @@ if (Enum.TryParse($value$, out $result$)) {
         <Literal>
           <ID>result</ID>
           <ToolTip>The result</ToolTip>
-          <Default>x</Default>
+          <Default>result</Default>
         </Literal>
         <Literal>
           <ID>type</ID>
@@ -2469,36 +2378,6 @@ if ($identifier$.TryGetValue($key$, out $value$)) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>Obsolete attribute</Title>
-      <Shortcut>ae</Shortcut>
-      <Description>Obsolete attribute</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ObsoleteAttribute</Keyword>
-        <Keyword>Meta-SubmenuShortcut oe</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>message</ID>
-          <ToolTip>Message</ToolTip>
-          <Default>""</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[[Obsolete($message$)]$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>override modifier</Title>
       <Shortcut>oe</Shortcut>
       <Description>override modifier</Description>
@@ -2766,6 +2645,57 @@ if ($identifier$.TryGetValue($key$, out $value$)) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>return await</Title>
+      <Shortcut>ra</Shortcut>
+      <Description>return await</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ReturnAwait</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp"><![CDATA[return await $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>return conditional operator</Title>
+      <Shortcut>reco</Shortcut>
+      <Description>return conditional operator</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name ReturnConditionalOperator</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>condition</ID>
+          <ToolTip>Condition to evaluate</ToolTip>
+          <Default>condition</Default>
+        </Literal>
+        <Literal>
+          <ID>false</ID>
+          <ToolTip>False expression</ToolTip>
+          <Default>false</Default>
+        </Literal>
+        <Literal>
+          <ID>true</ID>
+          <ToolTip>True expression</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[return ($condition$) ? $true$ : $false$;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>return default</Title>
       <Shortcut>red</Shortcut>
       <Description>return default statement</Description>
@@ -2884,6 +2814,28 @@ if ($identifier$.TryGetValue($key$, out $value$)) {
     </Header>
     <Snippet>
       <Code Language="CSharp"><![CDATA[throw;$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>TimeSpan type</Title>
+      <Shortcut>ts</Shortcut>
+      <Description>TimeSpan type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name TimeSpan</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp"><![CDATA[TimeSpan$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -3160,7 +3112,7 @@ if ($identifier$ != null) {
         <Literal>
           <ID>result</ID>
           <ToolTip>The result</ToolTip>
-          <Default>x</Default>
+          <Default>result</Default>
         </Literal>
         <Literal>
           <ID>type</ID>
@@ -3202,7 +3154,7 @@ End If]]></Code>
         <Literal>
           <ID>result</ID>
           <ToolTip>The result</ToolTip>
-          <Default>x</Default>
+          <Default>result</Default>
         </Literal>
         <Literal>
           <ID>type</ID>

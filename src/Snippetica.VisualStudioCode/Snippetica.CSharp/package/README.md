@@ -23,6 +23,7 @@ k|constant declaration|\-
 m|method declaration|\-
 p|property declaration|\-
 pp|property declaration \(expanded\)|\-
+rd|record declaration|\-
 st|struct declaration|\-
 
 #### Modifer
@@ -105,6 +106,17 @@ Shortcut|Title
 \_m|interface method
 \_p|interface property
 \_rp|interface read\-only property
+a|attribute
+a\_au|AttributeUsage attribute
+a\_c|Conditional attribute
+a\_d|Description attribute
+a\_dd|DebuggerDisplay attribute
+a\_dst|DebuggerStepThrough attribute
+a\_dv|DefaultValue attribute
+a\_f|Flags attribute
+a\_o|Obsolete attribute
+a\_r|Required attribute
+a\_tc|TypeConverter attribute
 b|braces
 c|public class
 catch|catch clause
@@ -119,6 +131,7 @@ dispose|dispose pattern
 don|do while null
 doxn|do while not null
 dt|DateTime type
+dto|DateTimeOffset type
 dw|Debug\.WriteLine
 e|else clause
 eif|else\-if
@@ -138,7 +151,9 @@ ifxn|if not equal to null
 ifxtp|if not TryParse
 ir|public indexer
 k|public const
+kvp|KeyValuePair type
 l|lambda expression
+l0|lambda expression without parameters
 l2|lambda expression with 2 parameters
 m|public method
 n|equal to null
@@ -151,6 +166,8 @@ ppife|\#if\-\#else directive
 ppr|\#region directive
 pps|public auto property with private setter
 r|return keyword
+rd|public record
+rdst|public record struct
 ref|return false
 ren|return null
 ret|return true
@@ -158,6 +175,7 @@ rf|public read\-only field
 rir|public read\-only indexer
 rp|public read\-only auto property
 rpp|public read\-only property
+rrdst|public readonly record struct
 rst|public read\-only struct
 s|string keyword
 sc|public static class

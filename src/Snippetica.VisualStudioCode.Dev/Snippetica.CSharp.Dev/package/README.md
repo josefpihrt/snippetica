@@ -2,14 +2,8 @@
 
 Shortcut|Title
 --------|-----
-a|array type
-ae|attribute
-ae\_ay|Assembly attribute
-ae\_cl|Conditional attribute
-ae\_dd|DebuggerDisplay attribute
-ae\_dst|DebuggerStepThrough attribute
-ae\_fs|Flags attribute
-ae\_oe|Obsolete attribute
+aa|Assembly attribute
+afe|await foreach statement
 bk|break statement
 ce|continue statement
 cosne|conditional operator \(string\.IsNullOrEmpty\)
@@ -17,6 +11,7 @@ cosnw|conditional operator \(string\.IsNullOrWhiteSpace\)
 coxsne|conditional operator \(\!string\.IsNullOrEmpty\)
 coxsnw|conditional operator \(\!string\.IsNullOrWhiteSpace\)
 daxn|Debug\.Assert \!= null
+df|Debug\.Fail
 ifemtp|if Enum\.TryParse
 ifnre|if equal to null return
 ifnred|if equal to null return default
@@ -74,9 +69,12 @@ lf| local function
 na|new array 
 ns|namespace
 oe|override modifier
+ra|return await
 re|return statement
+reco|return conditional operator
 red|return default
 rn|return new
+ts|TimeSpan type
 tw|throw statement
 u\_fesm|FileStream Variable
 u\_mysm|MemoryStream Variable

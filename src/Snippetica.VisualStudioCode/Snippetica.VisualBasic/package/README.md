@@ -24,6 +24,7 @@ m|method declaration|\-
 me|Module declaration|\-
 p|property declaration|\-
 pp|property declaration \(expanded\)|\-
+rd|record declaration|\-
 st|struct declaration|\-
 
 #### Modifer
@@ -135,6 +136,7 @@ ifxtp|if not TryParse
 ir|Public indexer
 k|Public constant
 l|Lambda expression
+l0|Lambda expression without parameters
 l2|Lambda expression with 2 parameters
 m|Public method
 me|Public module
