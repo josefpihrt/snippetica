@@ -1,0 +1,37 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>record struct</Title>
+    <Shortcut>rdst</Shortcut>
+    <Description>record struct declaration</Description>
+    <Author>Josef Pihrt</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-GenerateInternalModifier</Keyword>
+      <Keyword>Meta-GeneratePrivateModifier</Keyword>
+      <Keyword>Meta-GeneratePublicModifier</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>_modifiers</ID>
+        <ToolTip>Modifier(s)</ToolTip>
+        <Default>public</Default>
+      </Literal>
+      <Literal>
+        <ID>_parameters</ID>
+        <ToolTip>List of parameters</ToolTip>
+        <Default>T parameter</Default>
+      </Literal>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Struct name</ToolTip>
+        <Default>StructName</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[$_modifiers$ record struct $name$($_parameters$);$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

@@ -145,6 +145,9 @@
     <None Include="Snippetica.CSharp\AutoGeneration\AutoProperty.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\AutoPropertyWithPrivateSet.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Class.snippet" />
+    <None Include="Snippetica.CSharp\AutoGeneration\ReadOnlyRecordStruct.snippet" />
+    <None Include="Snippetica.CSharp\AutoGeneration\Record.snippet" />
+    <None Include="Snippetica.CSharp\AutoGeneration\RecordStruct.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Type.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Variable.snippet" />
     <None Include="Snippetica.CSharp\AutoGeneration\Const.snippet" />

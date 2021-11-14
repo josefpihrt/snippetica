@@ -130,6 +130,13 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
+  <ShortcutInfo Value="rd" Description="record declaration" Comment="-">
+    <Languages>
+      <Language>CSharp</Language>
+      <Language>VisualBasic</Language>
+    </Languages>
+    <Tags />
+  </ShortcutInfo>
   <ShortcutInfo Value="me" Description="Module declaration" Comment="-">
     <Languages>
       <Language>VisualBasic</Language>

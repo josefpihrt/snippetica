@@ -34,6 +34,7 @@
               <New Value="p" Description="property declaration" />
               <New Value="pp" Description="property declaration (expanded)" />
               <New Value="st" Description="struct declaration" />
+              <New Value="rd" Description="record declaration" />
               <Without Languages="C#">
                 <New Value="me" Description="Module declaration" Kind="MemberDeclaration" />
               </Without>

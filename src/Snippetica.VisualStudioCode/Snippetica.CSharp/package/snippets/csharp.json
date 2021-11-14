@@ -1088,6 +1088,13 @@
     ],
     "description": "internal read-only property declaration"
   },
+  "internal readonly record struct": {
+    "prefix": "irrdst",
+    "body": [
+      "internal readonly record struct ${1:StructName}(${2:T parameter});${0}"
+    ],
+    "description": "internal readonly record struct declaration"
+  },
   "internal read-only struct": {
     "prefix": "irst",
     "body": [
@@ -1096,6 +1103,20 @@
       "}"
     ],
     "description": "internal read-only struct declaration"
+  },
+  "internal record": {
+    "prefix": "ird",
+    "body": [
+      "internal record ${1:RecordName}(${2:T parameter});${0}"
+    ],
+    "description": "internal record declaration"
+  },
+  "internal record struct": {
+    "prefix": "irdst",
+    "body": [
+      "internal record struct ${1:StructName}(${2:T parameter});${0}"
+    ],
+    "description": "internal record struct declaration"
   },
   "internal static class": {
     "prefix": "isc",
@@ -1408,6 +1429,13 @@
     ],
     "description": "private read-only property declaration"
   },
+  "private readonly record struct": {
+    "prefix": "prrdst",
+    "body": [
+      "private readonly record struct ${1:StructName}(${2:T parameter});${0}"
+    ],
+    "description": "private readonly record struct declaration"
+  },
   "private read-only struct": {
     "prefix": "prst",
     "body": [
@@ -1416,6 +1444,20 @@
       "}"
     ],
     "description": "private read-only struct declaration"
+  },
+  "private record": {
+    "prefix": "prd",
+    "body": [
+      "private record ${1:RecordName}(${2:T parameter});${0}"
+    ],
+    "description": "private record declaration"
+  },
+  "private record struct": {
+    "prefix": "prdst",
+    "body": [
+      "private record struct ${1:StructName}(${2:T parameter});${0}"
+    ],
+    "description": "private record struct declaration"
   },
   "private static class": {
     "prefix": "psc",
@@ -1624,6 +1666,13 @@
     ],
     "description": "public read-only property declaration"
   },
+  "public readonly record struct": {
+    "prefix": "rrdst",
+    "body": [
+      "public readonly record struct ${1:StructName}(${2:T parameter});${0}"
+    ],
+    "description": "public readonly record struct declaration"
+  },
   "public read-only struct": {
     "prefix": "rst",
     "body": [
@@ -1632,6 +1681,20 @@
       "}"
     ],
     "description": "public read-only struct declaration"
+  },
+  "public record": {
+    "prefix": "rd",
+    "body": [
+      "public record ${1:RecordName}(${2:T parameter});${0}"
+    ],
+    "description": "public record declaration"
+  },
+  "public record struct": {
+    "prefix": "rdst",
+    "body": [
+      "public record struct ${1:StructName}(${2:T parameter});${0}"
+    ],
+    "description": "public record struct declaration"
   },
   "public static class": {
     "prefix": "sc",

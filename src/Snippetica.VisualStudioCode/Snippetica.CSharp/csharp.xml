@@ -2345,6 +2345,35 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>internal readonly record struct</Title>
+      <Shortcut>irrdst</Shortcut>
+      <Description>internal readonly record struct declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InternalReadOnlyRecordStruct</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Struct name</ToolTip>
+          <Default>StructName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[internal readonly record struct $name$($_parameters$);$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>internal read-only struct</Title>
       <Shortcut>irst</Shortcut>
       <Description>internal read-only struct declaration</Description>
@@ -2367,6 +2396,65 @@ protected virtual void On$name$($eventArgs$ e) {
       <Code Language="CSharp"><![CDATA[internal readonly struct $name$ {
 	$end$
 }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>internal record</Title>
+      <Shortcut>ird</Shortcut>
+      <Description>internal record declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InternalRecord</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Record name</ToolTip>
+          <Default>RecordName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[internal record $name$($_parameters$);$end$
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>internal record struct</Title>
+      <Shortcut>irdst</Shortcut>
+      <Description>internal record struct declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name InternalRecordStruct</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Struct name</ToolTip>
+          <Default>StructName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[internal record struct $name$($_parameters$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -4406,6 +4494,35 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>private readonly record struct</Title>
+      <Shortcut>prrdst</Shortcut>
+      <Description>private readonly record struct declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PrivateReadOnlyRecordStruct</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Struct name</ToolTip>
+          <Default>StructName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[private readonly record struct $name$($_parameters$);$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>private read-only struct</Title>
       <Shortcut>prst</Shortcut>
       <Description>private read-only struct declaration</Description>
@@ -4428,6 +4545,65 @@ protected virtual void On$name$($eventArgs$ e) {
       <Code Language="CSharp"><![CDATA[private readonly struct $name$ {
 	$end$
 }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>private record</Title>
+      <Shortcut>prd</Shortcut>
+      <Description>private record declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PrivateRecord</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Record name</ToolTip>
+          <Default>RecordName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[private record $name$($_parameters$);$end$
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>private record struct</Title>
+      <Shortcut>prdst</Shortcut>
+      <Description>private record struct declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PrivateRecordStruct</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Struct name</ToolTip>
+          <Default>StructName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[private record struct $name$($_parameters$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -5182,6 +5358,35 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>public readonly record struct</Title>
+      <Shortcut>rrdst</Shortcut>
+      <Description>public readonly record struct declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PublicReadOnlyRecordStruct</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Struct name</ToolTip>
+          <Default>StructName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[public readonly record struct $name$($_parameters$);$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>public read-only struct</Title>
       <Shortcut>rst</Shortcut>
       <Description>public read-only struct declaration</Description>
@@ -5204,6 +5409,65 @@ protected virtual void On$name$($eventArgs$ e) {
       <Code Language="CSharp"><![CDATA[public readonly struct $name$ {
 	$end$
 }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>public record</Title>
+      <Shortcut>rd</Shortcut>
+      <Description>public record declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PublicRecord</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Record name</ToolTip>
+          <Default>RecordName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[public record $name$($_parameters$);$end$
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>public record struct</Title>
+      <Shortcut>rdst</Shortcut>
+      <Description>public record struct declaration</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name PublicRecordStruct</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>_parameters</ID>
+          <ToolTip>List of parameters</ToolTip>
+          <Default>T parameter</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Struct name</ToolTip>
+          <Default>StructName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[public record struct $name$($_parameters$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
