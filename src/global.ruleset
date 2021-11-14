@@ -219,6 +219,7 @@
     <Rule Id="CA5122" Action="Warning" />
   </Rules>
   <Rules AnalyzerId="Microsoft.CodeAnalysis.Analyzers" RuleNamespace="Microsoft.CodeAnalysis.Analyzers">
+    <Rule Id="RS1024" Action="Info" />
     <Rule Id="RS1025" Action="None" />
     <Rule Id="RS1026" Action="None" />
   </Rules>
@@ -246,18 +247,24 @@
     <Rule Id="IDE0028" Action="Info" />
     <Rule Id="IDE0029" Action="Info" />
     <Rule Id="IDE0031" Action="Info" />
+    <Rule Id="IDE0034" Action="None" />
     <Rule Id="IDE0046" Action="None" />
     <Rule Id="IDE0046WithoutSuggestion" Action="None" />
     <Rule Id="IDE0047" Action="None" />
     <Rule Id="IDE0047WithoutSuggestion" Action="None" />
     <Rule Id="IDE0054" Action="None" />
     <Rule Id="IDE0054WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0056" Action="None" />
+    <Rule Id="IDE0057" Action="None" />
     <Rule Id="IDE0063" Action="None" />
     <Rule Id="IDE0063WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0066" Action="Hidden" />
     <Rule Id="IDE0066WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0071" Action="None" />
     <Rule Id="IDE0071WithoutSuggestion" Action="None" />
     <Rule Id="IDE0074" Action="None" />
     <Rule Id="IDE0074WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0079" Action="None" />
     <Rule Id="IDE1005" Action="Info" />
     <Rule Id="IDE1006" Action="Info" />
   </Rules>
@@ -319,7 +326,6 @@
     <Rule Id="RCS1045" Action="Warning" />
     <Rule Id="RCS1050" Action="Info" />
     <Rule Id="RCS1051" Action="Info" />
-    <Rule Id="RCS1056" Action="Info" />
     <Rule Id="RCS1060" Action="Info" />
     <Rule Id="RCS1061" Action="Info" />
     <Rule Id="RCS1062" Action="Info" />
@@ -331,9 +337,11 @@
     <Rule Id="RCS1074" Action="Info" />
     <Rule Id="RCS1076" Action="None" />
     <Rule Id="RCS1078" Action="Info" />
+    <Rule Id="RCS1079" Action="Info" />
     <Rule Id="RCS1081" Action="Info" />
     <Rule Id="RCS1082" Action="Info" />
     <Rule Id="RCS1083" Action="Info" />
+    <Rule Id="RCS1090" Action="Info" />
     <Rule Id="RCS1091" Action="Info" />
     <Rule Id="RCS1096" Action="Warning" />
     <Rule Id="RCS1101" Action="Info" />
@@ -389,12 +397,14 @@
     <Rule Id="RCS0043" Action="Info" />
     <Rule Id="RCS0044" Action="Info" />
     <Rule Id="RCS0046" Action="Info" />
-    <Rule Id="RCS0047" Action="Info" />
     <Rule Id="RCS0048" Action="Hidden" />
     <Rule Id="RCS0049" Action="Info" />
     <Rule Id="RCS0050" Action="Info" />
     <Rule Id="RCS0051" Action="Info" />
     <Rule Id="RCS0051i" Action="Info" />
+    <Rule Id="RCS0053" Action="Info" />
+    <Rule Id="RCS0054" Action="Info" />
+    <Rule Id="RCS0055" Action="Info" />
   </Rules>
   <Rules AnalyzerId="SonarAnalyzer.CSharp" RuleNamespace="SonarAnalyzer.CSharp">
     <Rule Id="S101" Action="None" />
