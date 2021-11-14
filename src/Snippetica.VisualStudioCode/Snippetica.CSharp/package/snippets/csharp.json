@@ -264,6 +264,13 @@
     ],
     "description": "array variable declaration (with initializer)"
   },
+  "attribute": {
+    "prefix": "a",
+    "body": [
+      "[${TM_SELECTED_TEXT}${0}]"
+    ],
+    "description": "attribute"
+  },
   "Attribute class": {
     "prefix": "c_Attribute",
     "body": [
@@ -273,6 +280,13 @@
       "}"
     ],
     "description": "class derived from Attribute class"
+  },
+  "AttributeUsage attribute": {
+    "prefix": "a_au",
+    "body": [
+      "[AttributeUsage(AttributeTargets${1:.All}, AllowMultiple = ${2:false})]${0}"
+    ],
+    "description": "AttributeUsage attribute"
   },
   "Boolean variable": {
     "prefix": "vb",
@@ -313,6 +327,13 @@
       "}"
     ],
     "description": "class derived from Collection<T>"
+  },
+  "Conditional attribute": {
+    "prefix": "a_cl",
+    "body": [
+      "[Conditional(${1:\"DEBUG\"})]${0}"
+    ],
+    "description": "Conditional attribute"
   },
   "conditional operator": {
     "prefix": "co",
@@ -363,12 +384,40 @@
     ],
     "description": "Debug.WriteLine method"
   },
+  "DebuggerDisplay attribute": {
+    "prefix": "a_dd",
+    "body": [
+      "[DebuggerDisplay(${1:\"{}\"})]${0}"
+    ],
+    "description": "DebuggerDisplay attribute"
+  },
+  "DebuggerStepThrough attribute": {
+    "prefix": "a_dst",
+    "body": [
+      "[DebuggerStepThrough]${0}"
+    ],
+    "description": "DebuggerStepThrough attribute"
+  },
   "default keyword": {
     "prefix": "d",
     "body": [
       "default${0}"
     ],
     "description": "default keyword"
+  },
+  "DefaultValue attribute": {
+    "prefix": "a_dv",
+    "body": [
+      "[DefaultValue(${1:\"\"})]${0}"
+    ],
+    "description": "DefaultValue attribute"
+  },
+  "Description attribute": {
+    "prefix": "a_dn",
+    "body": [
+      "[Description(${1:\"\"})]${0}"
+    ],
+    "description": "Description attribute"
   },
   "Dictionary<TKey, TValue> class": {
     "prefix": "c_DictionaryOfTKeyTValue",
@@ -653,6 +702,13 @@
       "}"
     ],
     "description": "finally clause"
+  },
+  "Flags attribute": {
+    "prefix": "a_fs",
+    "body": [
+      "[Flags]${0}"
+    ],
+    "description": "Flags attribute"
   },
   "for statement": {
     "prefix": "fr",
@@ -1281,6 +1337,13 @@
     ],
     "description": "class derived from ObservableCollection<T>"
   },
+  "Obsolete attribute": {
+    "prefix": "a_oe",
+    "body": [
+      "[Obsolete(${1:\"\"})]${0}"
+    ],
+    "description": "Obsolete attribute"
+  },
   "parameter array ": {
     "prefix": "pa",
     "body": [
@@ -1797,6 +1860,13 @@
     ],
     "description": "class derived from ReadOnlyCollection<T>"
   },
+  "Required attribute": {
+    "prefix": "a_rd",
+    "body": [
+      "[Required]${0}"
+    ],
+    "description": "Required attribute"
+  },
   "return false": {
     "prefix": "ref",
     "body": [
@@ -2041,6 +2111,13 @@
       "}"
     ],
     "description": "try-finally statement with"
+  },
+  "TypeConverter attribute": {
+    "prefix": "a_tc",
+    "body": [
+      "[TypeConverter(typeof(${1:T}))]${0}"
+    ],
+    "description": "TypeConverter attribute"
   },
   "typeof operator": {
     "prefix": "to",

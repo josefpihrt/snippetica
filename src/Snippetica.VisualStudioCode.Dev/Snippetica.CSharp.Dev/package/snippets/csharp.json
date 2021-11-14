@@ -8,26 +8,12 @@
     ],
     "description": " local function declaration"
   },
-  "array type": {
-    "prefix": "a",
-    "body": [
-      "${1:T}[]${0}"
-    ],
-    "description": "array type"
-  },
   "Assembly attribute": {
-    "prefix": "ae_ay",
+    "prefix": "aa",
     "body": [
       "[assembly: ${1:Attribute}]${0}"
     ],
     "description": "Assembly attribute"
-  },
-  "attribute": {
-    "prefix": "ae",
-    "body": [
-      "[${TM_SELECTED_TEXT}${0}]"
-    ],
-    "description": "attribute"
   },
   "await foreach statement": {
     "prefix": "afe",
@@ -44,13 +30,6 @@
       "break;${0}"
     ],
     "description": "break statement"
-  },
-  "Conditional attribute": {
-    "prefix": "ae_cl",
-    "body": [
-      "[Conditional(${1:\"DEBUG\"})]${0}"
-    ],
-    "description": "Conditional attribute"
   },
   "conditional operator (!string.IsNullOrEmpty)": {
     "prefix": "coxsne",
@@ -100,20 +79,6 @@
       "Debug.Fail(${1:\"\"});${0}"
     ],
     "description": "Debug.Fail method"
-  },
-  "DebuggerDisplay attribute": {
-    "prefix": "ae_dd",
-    "body": [
-      "[DebuggerDisplay(${1:\"{}\"})]${0}"
-    ],
-    "description": "DebuggerDisplay attribute"
-  },
-  "DebuggerStepThrough attribute": {
-    "prefix": "ae_dst",
-    "body": [
-      "[DebuggerStepThrough]${0}"
-    ],
-    "description": "DebuggerStepThrough attribute"
   },
   "Directory.CreateDirectory": {
     "prefix": "iod_cd",
@@ -242,13 +207,6 @@
       "}"
     ],
     "description": "FileStream variable declaration."
-  },
-  "Flags attribute": {
-    "prefix": "ae_fs",
-    "body": [
-      "[Flags]${0}"
-    ],
-    "description": "Flags attribute"
   },
   "if !string.IsNullOrEmpty": {
     "prefix": "ifxsne",
@@ -517,13 +475,6 @@
       "new ${1:T}[] { ${2:null} }${0}"
     ],
     "description": "new array (with initializer)"
-  },
-  "Obsolete attribute": {
-    "prefix": "ae_oe",
-    "body": [
-      "[Obsolete(${1:\"\"})]${0}"
-    ],
-    "description": "Obsolete attribute"
   },
   "override modifier": {
     "prefix": "oe",

@@ -1,22 +1,20 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>Assembly attribute</Title>
-    <Shortcut>aa</Shortcut>
-    <Description>Assembly attribute</Description>
+    <Title>- attribute</Title>
+    <Shortcut>a</Shortcut>
+    <Description>attribute</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
     </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-TitleStartsWithShortcut</Keyword>
+    </Keywords>
   </Header>
   <Snippet>
-    <Declarations>
-      <Literal>
-        <ID>attribute</ID>
-        <ToolTip>Attribute</ToolTip>
-        <Default>Attribute</Default>
-      </Literal>
-    </Declarations>
-    <Code Language="CSharp"><![CDATA[[assembly: $attribute$]$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[[$selected$$end$]]]></Code>
   </Snippet>
 </CodeSnippet>
