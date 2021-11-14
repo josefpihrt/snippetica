@@ -34,7 +34,7 @@ namespace Pihrtsoft.Records
             if (Dictionary != null)
                 return Dictionary.TryGetValue(key, out value);
 
-            value = default(TItem);
+            value = default;
             return false;
         }
 

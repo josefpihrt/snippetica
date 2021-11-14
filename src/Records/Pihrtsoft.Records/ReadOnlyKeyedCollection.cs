@@ -33,7 +33,7 @@ namespace Pihrtsoft.Records
             }
             else
             {
-                return default(TValue);
+                return default;
             }
         }
 

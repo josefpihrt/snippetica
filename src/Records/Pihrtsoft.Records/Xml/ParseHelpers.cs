@@ -11,7 +11,7 @@ namespace Pihrtsoft.Records.Xml
 {
     internal static class ParseHelpers
     {
-        private static readonly char[] _separatorsSeparator = new char[] { ' ' };
+        private static readonly char[] _separatorsSeparator = new[] { ' ' };
 
         public static char[] ParseSeparators(string value, XObject @object = null)
         {
@@ -48,7 +48,7 @@ namespace Pihrtsoft.Records.Xml
                     }
                     else
                     {
-                        bool fInside = true;
+                        var fInside = true;
                         int startIndex = i;
                         int lastEndIndex = 0;
                         i++;

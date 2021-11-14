@@ -162,7 +162,7 @@ namespace Pihrtsoft.Records
             return Tags.ContainsAll(tags);
         }
 
-        public string GetStringOrDefault(string propertyName, string defaultValue = default(string))
+        public string GetStringOrDefault(string propertyName, string defaultValue = default)
         {
             if (Properties.TryGetValue(propertyName, out object value))
             {
@@ -172,7 +172,7 @@ namespace Pihrtsoft.Records
             return defaultValue;
         }
 
-        public bool GetBooleanOrDefault(string propertyName, bool defaultValue = default(bool))
+        public bool GetBooleanOrDefault(string propertyName, bool defaultValue = default)
         {
             if (Properties.TryGetValue(propertyName, out object value))
             {
@@ -182,7 +182,7 @@ namespace Pihrtsoft.Records
             return defaultValue;
         }
 
-        public decimal GetDecimalOrDefault(string propertyName, decimal defaultValue = default(decimal))
+        public decimal GetDecimalOrDefault(string propertyName, decimal defaultValue = default)
         {
             if (Properties.TryGetValue(propertyName, out object value))
             {
@@ -192,7 +192,7 @@ namespace Pihrtsoft.Records
             return defaultValue;
         }
 
-        public double GetDoubleOrDefault(string propertyName, double defaultValue = default(double))
+        public double GetDoubleOrDefault(string propertyName, double defaultValue = default)
         {
             if (Properties.TryGetValue(propertyName, out object value))
             {
@@ -202,7 +202,7 @@ namespace Pihrtsoft.Records
             return defaultValue;
         }
 
-        public float GetFloatOrDefault(string propertyName, float defaultValue = default(float))
+        public float GetFloatOrDefault(string propertyName, float defaultValue = default)
         {
             if (Properties.TryGetValue(propertyName, out object value))
             {
@@ -212,7 +212,7 @@ namespace Pihrtsoft.Records
             return defaultValue;
         }
 
-        public int GetIntOrDefault(string propertyName, int defaultValue = default(int))
+        public int GetIntOrDefault(string propertyName, int defaultValue = default)
         {
             if (Properties.TryGetValue(propertyName, out object value))
             {
@@ -222,7 +222,7 @@ namespace Pihrtsoft.Records
             return defaultValue;
         }
 
-        public long GetLongOrDefault(string propertyName, long defaultValue = default(long))
+        public long GetLongOrDefault(string propertyName, long defaultValue = default)
         {
             if (Properties.TryGetValue(propertyName, out object value))
             {
@@ -232,7 +232,7 @@ namespace Pihrtsoft.Records
             return defaultValue;
         }
 
-        public DateTime GetDateTimeOrDefault(string propertyName, DateTime defaultValue = default(DateTime))
+        public DateTime GetDateTimeOrDefault(string propertyName, DateTime defaultValue = default)
         {
             if (Properties.TryGetValue(propertyName, out object value))
             {
@@ -301,12 +301,12 @@ namespace Pihrtsoft.Records
             return items;
         }
 
-        public string[] GetItemsOrDefault(string propertyName, string[] defaultValue = default(string[]))
+        public string[] GetItemsOrDefault(string propertyName, string[] defaultValue = default)
         {
             return GetItemsOrDefault<string>(propertyName, defaultValue);
         }
 
-        private TItem[] GetItemsOrDefault<TItem>(string propertyName, TItem[] defaultValue = default(TItem[]))
+        private TItem[] GetItemsOrDefault<TItem>(string propertyName, TItem[] defaultValue = default)
         {
             if (Properties.TryGetValue(propertyName, out object value)
                 && (value is List<object> list))
@@ -327,7 +327,7 @@ namespace Pihrtsoft.Records
             return (TEnum)Enum.Parse(typeof(TEnum), GetString(propertyName));
         }
 
-        public TEnum GetEnumOrDefault<TEnum>(string propertyName, TEnum defaultValue = default(TEnum)) where TEnum : struct
+        public TEnum GetEnumOrDefault<TEnum>(string propertyName, TEnum defaultValue = default) where TEnum : struct
         {
             string value = GetStringOrDefault(propertyName);
 

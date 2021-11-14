@@ -33,7 +33,7 @@ namespace Snippetica.CodeGeneration
         {
             _shortcuts = Pihrtsoft.Records.Document.ReadRecords(@"..\..\Data\Shortcuts.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
-                .Select(Mapper.MapShortcutInfo)
+                .Select(f => Mapper.MapShortcutInfo(f))
                 .ToArray();
 
             SnippetDirectory[] directories = LoadDirectories(@"..\..\Data\Directories.xml");
@@ -164,7 +164,7 @@ namespace Snippetica.CodeGeneration
         {
             return Pihrtsoft.Records.Document.ReadRecords(url)
                 .Where(f => !f.HasTag(KnownTags.Disabled))
-                .Select(Mapper.MapSnippetDirectory)
+                .Select(f => Mapper.MapSnippetDirectory(f))
                 .ToArray();
         }
 
@@ -176,7 +176,7 @@ namespace Snippetica.CodeGeneration
 
             foreach (TypeDefinition typeDefinition in Pihrtsoft.Records.Document.ReadRecords(@"..\..\Data\Types.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
-                .Select(Mapper.MapTypeDefinition))
+                .Select(f => Mapper.MapTypeDefinition(f)))
             {
                 LanguageDefinitions.CSharp.Types.Add(typeDefinition);
                 LanguageDefinitions.VisualBasic.Types.Add(typeDefinition);

@@ -42,7 +42,7 @@ namespace Pihrtsoft.Records
 
         internal static PropertyDefinition Id { get; } = new PropertyDefinition(IdName);
 
-        internal static PropertyDefinition Tags { get; } = new PropertyDefinition(TagsName, isCollection: true, separators: new char[] { ',' });
+        internal static PropertyDefinition Tags { get; } = new PropertyDefinition(TagsName, isCollection: true, separators: new[] { ',' });
 
         public string Name { get; }
 

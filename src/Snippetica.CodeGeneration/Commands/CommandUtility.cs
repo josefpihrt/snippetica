@@ -22,7 +22,7 @@ namespace Snippetica.CodeGeneration.Commands
 
         public static IEnumerable<Command> GetBasicTypeCommands(Snippet snippet, LanguageDefinition languageDefinition)
         {
-            bool flg = false;
+            var flg = false;
 
             foreach (TypeDefinition type in languageDefinition
                 .Types

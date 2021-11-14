@@ -16,7 +16,7 @@ namespace Snippetica.CodeGeneration
                 record.GetString("Description"),
                 record.GetStringOrDefault("Comment", "-"),
                 record.GetEnumOrDefault("Kind", ShortcutKind.None),
-                record.GetItems("Languages").Select(ParseHelpers.ParseLanguage),
+                record.GetItems("Languages").Select(f => ParseHelpers.ParseLanguage(f)),
                 record.GetItems("IDE").Select(f => (EnvironmentKind)Enum.Parse(typeof(EnvironmentKind), f)),
                 record.GetTags());
         }

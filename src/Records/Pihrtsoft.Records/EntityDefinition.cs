@@ -124,7 +124,7 @@ namespace Pihrtsoft.Records
 
             } while (entity != null);
 
-            return default(Variable);
+            return default;
         }
 
         public bool ContainsProperty(string propertyName)

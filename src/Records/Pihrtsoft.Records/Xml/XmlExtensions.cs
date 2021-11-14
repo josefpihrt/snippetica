@@ -100,12 +100,12 @@ namespace Pihrtsoft.Records.Xml
             return null;
         }
 
-        public static string AttributeValueOrDefault(this XElement element, string attributeName, string defaultValue = default(string))
+        public static string AttributeValueOrDefault(this XElement element, string attributeName, string defaultValue = default)
         {
             return element.Attribute(attributeName)?.Value ?? defaultValue;
         }
 
-        public static bool AttributeValueAsBooleanOrDefault(this XElement element, string attributeName, bool defaultValue = default(bool))
+        public static bool AttributeValueAsBooleanOrDefault(this XElement element, string attributeName, bool defaultValue = default)
         {
             string value = element.AttributeValueOrDefault(attributeName);
 
@@ -115,7 +115,7 @@ namespace Pihrtsoft.Records.Xml
             return defaultValue;
         }
 
-        public static TEnum AttributeValueAsEnumOrDefault<TEnum>(this XElement element, string attributeName, TEnum defaultValue = default(TEnum)) where TEnum : struct
+        public static TEnum AttributeValueAsEnumOrDefault<TEnum>(this XElement element, string attributeName, TEnum defaultValue = default) where TEnum : struct
         {
             string value = element.AttributeValueOrDefault(attributeName);
 

@@ -221,8 +221,8 @@ namespace Pihrtsoft.Records.Xml
                             properties ??= new ExtendedKeyedCollection<string, PropertyDefinition>();
 
                             string name = null;
-                            bool isCollection = false;
-                            bool isRequired = false;
+                            var isCollection = false;
+                            var isRequired = false;
                             string defaultValue = null;
                             string description = null;
                             char[] separators = PropertyDefinition.Tags.SeparatorsArray;
@@ -462,7 +462,7 @@ namespace Pihrtsoft.Records.Xml
             string name = element.GetAttributeValueOrThrow(AttributeNames.Name);
             string value = element.GetAttributeValueOrThrow(AttributeNames.Value);
 
-            (_variables ?? (_variables = new Stack<Variable>())).Push(new Variable(name, value));
+            (_variables ??= new Stack<Variable>()).Push(new Variable(name, value));
         }
 
         private Record CreateRecord(XElement element)
@@ -481,7 +481,7 @@ namespace Pihrtsoft.Records.Xml
                 {
                     Operation operation = CreateOperationFromAttribute(element, ElementKind.New, attribute);
 
-                    (operations ?? (operations = new Collection<Operation>())).Add(operation);
+                    (operations ??= new Collection<Operation>()).Add(operation);
                 }
             }
 

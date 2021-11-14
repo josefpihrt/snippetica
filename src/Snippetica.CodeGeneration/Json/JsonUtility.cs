@@ -14,7 +14,7 @@ namespace Snippetica.CodeGeneration.Json
     {
         public static JObject ToJson(IEnumerable<Snippet> snippets)
         {
-            return new JObject(snippets.Select(ToJProperty));
+            return new JObject(snippets.Select(snippet => ToJProperty(snippet)));
         }
 
         public static string ToJsonText(IEnumerable<Snippet> snippets)

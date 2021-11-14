@@ -26,8 +26,8 @@ namespace Snippetica.CodeGeneration.Commands
 
             LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
-            string typeName = "";
-            string fileName = "";
+            var typeName = "";
+            var fileName = "";
 
             if (Type.IsDictionary)
             {
