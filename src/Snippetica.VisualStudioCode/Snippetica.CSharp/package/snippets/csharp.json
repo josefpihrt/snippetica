@@ -342,6 +342,13 @@
     ],
     "description": "DateTime type"
   },
+  "DateTimeOffset type": {
+    "prefix": "dto",
+    "body": [
+      "DateTimeOffset${0}"
+    ],
+    "description": "DateTimeOffset type"
+  },
   "Debug.Assert": {
     "prefix": "da",
     "body": [
@@ -1171,6 +1178,13 @@
       "}${0}"
     ],
     "description": "internal virtual read-only property declaration"
+  },
+  "KeyValuePair type": {
+    "prefix": "kvp",
+    "body": [
+      "KeyValuePair${0}"
+    ],
+    "description": "KeyValuePair type"
   },
   "lambda expression": {
     "prefix": "l",

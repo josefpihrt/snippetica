@@ -356,6 +356,28 @@ $modifier$ class $name$Attribute : $base$ {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>DateTimeOffset type</Title>
+      <Shortcut>dto</Shortcut>
+      <Description>DateTimeOffset type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name DateTimeOffsetType</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp"><![CDATA[DateTimeOffset$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>DateTime type</Title>
       <Shortcut>dt</Shortcut>
       <Description>DateTime type</Description>
@@ -2657,6 +2679,28 @@ protected virtual void On$name$($eventArgs$ e) {
       <Code Language="CSharp"><![CDATA[internal virtual $_type$ $name$ {
 	get { return $value$; }
 }$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>KeyValuePair type</Title>
+      <Shortcut>kvp</Shortcut>
+      <Description>KeyValuePair type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name KeyValuePair</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp"><![CDATA[KeyValuePair$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

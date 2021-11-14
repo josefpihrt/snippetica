@@ -29,6 +29,15 @@
     ],
     "description": "attribute"
   },
+  "await foreach statement": {
+    "prefix": "afe",
+    "body": [
+      "await foreach (var ${1:item} in ${2:items}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "await foreach statement"
+  },
   "break statement": {
     "prefix": "bk",
     "body": [
@@ -84,6 +93,13 @@
       "Debug.Assert(${1:x} != null, ${2:\"\"});${0}"
     ],
     "description": "Debug.Assert method with condition whether the expression is not equal to null"
+  },
+  "Debug.Fail": {
+    "prefix": "df",
+    "body": [
+      "Debug.Fail(${1:\"\"});${0}"
+    ],
+    "description": "Debug.Fail method"
   },
   "DebuggerDisplay attribute": {
     "prefix": "ae_dd",
@@ -572,6 +588,20 @@
     ],
     "description": "Path.ChangeExtension method."
   },
+  "return await": {
+    "prefix": "ra",
+    "body": [
+      "return await ${0}"
+    ],
+    "description": "return await"
+  },
+  "return conditional operator": {
+    "prefix": "reco",
+    "body": [
+      "return (${1:condition}) ? ${2:true} : ${3:false};${0}"
+    ],
+    "description": "return conditional operator"
+  },
   "return default": {
     "prefix": "red",
     "body": [
@@ -606,6 +636,13 @@
       "throw;${0}"
     ],
     "description": "throw statement"
+  },
+  "TimeSpan type": {
+    "prefix": "ts",
+    "body": [
+      "TimeSpan${0}"
+    ],
+    "description": "TimeSpan type"
   },
   "variable declaration with as operator + if not null": {
     "prefix": "vasxn",

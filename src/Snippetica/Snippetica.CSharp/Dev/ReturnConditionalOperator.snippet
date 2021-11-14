@@ -1,0 +1,32 @@
+﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<Header>
+		<Title>return conditional operator</Title>
+		<Shortcut>reco</Shortcut>
+		<Description>return conditional operator</Description>
+		<Author>Josef Pihrt</Author>
+		<SnippetTypes>
+			<SnippetType>Expansion</SnippetType>
+		</SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Literal>
+				<ID>condition</ID>
+				<ToolTip>Condition to evaluate</ToolTip>
+				<Default>condition</Default>
+			</Literal>
+			<Literal>
+				<ID>false</ID>
+				<ToolTip>False expression</ToolTip>
+				<Default>false</Default>
+			</Literal>
+			<Literal>
+				<ID>true</ID>
+				<ToolTip>True expression</ToolTip>
+				<Default>true</Default>
+			</Literal>
+		</Declarations>
+		<Code Language="CSharp"><![CDATA[return ($condition$) ? $true$ : $false$;$end$]]></Code>
+	</Snippet>
+</CodeSnippet>
