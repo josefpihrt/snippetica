@@ -860,7 +860,7 @@
   "if not TryParse": {
     "prefix": "ifxtp",
     "body": [
-      "${1:T} ${2:x};",
+      "${1:T} ${2:result};",
       "if (!${1}.TryParse(${3:value}, out ${2})) {",
       "\t${0}",
       "}"
@@ -870,7 +870,7 @@
   "if TryParse": {
     "prefix": "iftp",
     "body": [
-      "${1:T} ${2:x};",
+      "${1:T} ${2:result};",
       "if (${1}.TryParse(${3:value}, out ${2})) {",
       "\t${0}",
       "}"

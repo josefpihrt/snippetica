@@ -9,7 +9,7 @@
   "if Enum.TryParse": {
     "prefix": "ifemtp",
     "body": [
-      "Dim ${1:x} As ${2:TEnum}",
+      "Dim ${1:result} As ${2:TEnum}",
       "If Enum.TryParse(${3:value}, ${1})",
       "\t${0}",
       "End If"
@@ -19,7 +19,7 @@
   "if not Enum.TryParse": {
     "prefix": "ifxemtp",
     "body": [
-      "Dim ${1:x} As ${2:TEnum}",
+      "Dim ${1:result} As ${2:TEnum}",
       "If Not Enum.TryParse(${3:value}, ${1})",
       "\t${0}",
       "End If"

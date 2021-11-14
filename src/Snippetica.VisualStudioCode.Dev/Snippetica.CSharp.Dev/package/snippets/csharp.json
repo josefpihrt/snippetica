@@ -255,7 +255,7 @@
   "if Enum.TryParse": {
     "prefix": "ifemtp",
     "body": [
-      "${1:TEnum} ${2:x};",
+      "${1:TEnum} ${2:result};",
       "if (Enum.TryParse(${3:value}, out ${2})) {",
       "\t${0}",
       "}"
@@ -305,7 +305,7 @@
   "if not Enum.TryParse": {
     "prefix": "ifxemtp",
     "body": [
-      "${1:TEnum} ${2:x};",
+      "${1:TEnum} ${2:result};",
       "if (!Enum.TryParse(${3:value}, out ${2})) {",
       "\t${0}",
       "}"
