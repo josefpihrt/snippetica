@@ -305,7 +305,7 @@ $modifier$ class $name$Attribute : $base$ {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Conditional attribute</Title>
-      <Shortcut>a_cl</Shortcut>
+      <Shortcut>a_c</Shortcut>
       <Description>Conditional attribute</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -640,7 +640,7 @@ $modifier$ class $name$Attribute : $base$ {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Description attribute</Title>
-      <Shortcut>a_dn</Shortcut>
+      <Shortcut>a_d</Shortcut>
       <Description>Description attribute</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1254,7 +1254,7 @@ $modifier$ class $name$Exception : $base$ {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Flags attribute</Title>
-      <Shortcut>a_fs</Shortcut>
+      <Shortcut>a_f</Shortcut>
       <Description>Flags attribute</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3293,7 +3293,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Obsolete attribute</Title>
-      <Shortcut>a_oe</Shortcut>
+      <Shortcut>a_o</Shortcut>
       <Description>Obsolete attribute</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -6100,7 +6100,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Required attribute</Title>
-      <Shortcut>a_rd</Shortcut>
+      <Shortcut>a_r</Shortcut>
       <Description>Required attribute</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>

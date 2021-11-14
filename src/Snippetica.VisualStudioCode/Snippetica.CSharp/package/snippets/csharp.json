@@ -329,7 +329,7 @@
     "description": "class derived from Collection<T>"
   },
   "Conditional attribute": {
-    "prefix": "a_cl",
+    "prefix": "a_c",
     "body": [
       "[Conditional(${1:\"DEBUG\"})]${0}"
     ],
@@ -413,7 +413,7 @@
     "description": "DefaultValue attribute"
   },
   "Description attribute": {
-    "prefix": "a_dn",
+    "prefix": "a_d",
     "body": [
       "[Description(${1:\"\"})]${0}"
     ],
@@ -704,7 +704,7 @@
     "description": "finally clause"
   },
   "Flags attribute": {
-    "prefix": "a_fs",
+    "prefix": "a_f",
     "body": [
       "[Flags]${0}"
     ],
@@ -1338,7 +1338,7 @@
     "description": "class derived from ObservableCollection<T>"
   },
   "Obsolete attribute": {
-    "prefix": "a_oe",
+    "prefix": "a_o",
     "body": [
       "[Obsolete(${1:\"\"})]${0}"
     ],
@@ -1861,7 +1861,7 @@
     "description": "class derived from ReadOnlyCollection<T>"
   },
   "Required attribute": {
-    "prefix": "a_rd",
+    "prefix": "a_r",
     "body": [
       "[Required]${0}"
     ],
