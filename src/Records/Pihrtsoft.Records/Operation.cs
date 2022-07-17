@@ -66,8 +66,7 @@ namespace Pihrtsoft.Records
 
                 if (separators.Length > 0)
                 {
-                    foreach (string value2 in Value.Split(separators, StringSplitOptions.RemoveEmptyEntries))
-                        items.Add(value2);
+                    items.AddRange(Value.Split(separators, StringSplitOptions.RemoveEmptyEntries));
                 }
                 else
                 {

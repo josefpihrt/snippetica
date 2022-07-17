@@ -8,7 +8,6 @@
     <Version>0.1.0.0</Version>
     <AssemblyName>Pihrtsoft.Records</AssemblyName>
     <RootNamespace>Pihrtsoft.Records</RootNamespace>
-    <CodeAnalysisRuleSet>..\..\global.ruleset</CodeAnalysisRuleSet>
     <SignAssembly>false</SignAssembly>
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>

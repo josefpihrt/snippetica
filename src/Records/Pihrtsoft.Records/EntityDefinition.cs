@@ -68,8 +68,8 @@ namespace Pihrtsoft.Records
                     yield return property;
 
                 entity = entity.BaseEntity;
-
-            } while (entity != null);
+            }
+            while (entity != null);
         }
 
         public IEnumerable<Variable> AllVariables()
@@ -82,8 +82,8 @@ namespace Pihrtsoft.Records
                     yield return variable;
 
                 entity = entity.BaseEntity;
-
-            } while (entity != null);
+            }
+            while (entity != null);
         }
 
         public PropertyDefinition FindProperty(string name)
@@ -96,8 +96,8 @@ namespace Pihrtsoft.Records
                     return property;
 
                 entity = entity.BaseEntity;
-
-            } while (entity != null);
+            }
+            while (entity != null);
 
             return default;
         }
@@ -121,8 +121,8 @@ namespace Pihrtsoft.Records
                     return variable;
 
                 entity = entity.BaseEntity;
-
-            } while (entity != null);
+            }
+            while (entity != null);
 
             return default;
         }
@@ -156,8 +156,8 @@ namespace Pihrtsoft.Records
             {
                 yield return type;
                 type = type.BaseEntity;
-
-            } while (type != null);
+            }
+            while (type != null);
         }
 
         string IKey<string>.GetKey()
