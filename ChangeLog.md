@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - Rename default branch to `main`.
+- Format changelog according to 'Keep a Changelog' ([#17](https://github.com/josefpihrt/roslynator/pull/17)).
 
 -----
 <!-- Content below does not adhere to 'Keep a Changelog' format -->
