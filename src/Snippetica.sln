@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}"
 EndProject
@@ -9,43 +9,39 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Records", "Records", "{B408
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{BA91112D-6AEE-48D3-8C2B-C59AF29C5BF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica", "src\Snippetica\Snippetica.csproj", "{D26EA838-9073-407E-A15A-112731027059}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica", "Snippetica\Snippetica.csproj", "{D26EA838-9073-407E-A15A-112731027059}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.Common", "src\Snippetica.Common\Snippetica.Common.csproj", "{EA986E08-DD26-43EA-94F0-8D2F70D4A17F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.Common", "Snippetica.Common\Snippetica.Common.csproj", "{EA986E08-DD26-43EA-94F0-8D2F70D4A17F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generator", "src\Tools\Generator\Generator.csproj", "{F28D28EC-37E4-4857-B072-91A2D1FF8F60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generator", "Tools\Generator\Generator.csproj", "{F28D28EC-37E4-4857-B072-91A2D1FF8F60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.CodeGeneration", "src\Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj", "{B53B29D0-8BB3-478D-AD94-863F913E56CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.CodeGeneration", "Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj", "{B53B29D0-8BB3-478D-AD94-863F913E56CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.Validations", "src\Snippetica.Validations\Snippetica.Validations.csproj", "{FBCD876B-5CDE-4C75-834C-685D33FB1725}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.Validations", "Snippetica.Validations\Snippetica.Validations.csproj", "{FBCD876B-5CDE-4C75-834C-685D33FB1725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudio", "src\Snippetica.VisualStudio\Snippetica.VisualStudio.csproj", "{C6E1B9F3-6AFA-4849-9CE1-E224EBB08AA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudio", "Snippetica.VisualStudio\Snippetica.VisualStudio.csproj", "{C6E1B9F3-6AFA-4849-9CE1-E224EBB08AA4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pihrtsoft.Records", "src\Records\Pihrtsoft.Records\Pihrtsoft.Records.csproj", "{5F21280B-2029-4D27-AEE6-C6E3E8C09C29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pihrtsoft.Records", "Records\Pihrtsoft.Records\Pihrtsoft.Records.csproj", "{5F21280B-2029-4D27-AEE6-C6E3E8C09C29}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pihrtsoft.Records.Test", "src\Records\Pihrtsoft.Records.Test\Pihrtsoft.Records.Test.csproj", "{CE18A42C-A7FD-4B6B-90FE-2F4510B7CB0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pihrtsoft.Records.Test", "Records\Pihrtsoft.Records.Test\Pihrtsoft.Records.Test.csproj", "{CE18A42C-A7FD-4B6B-90FE-2F4510B7CB0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.Test", "src\Test\Snippetica.Test\Snippetica.Test.csproj", "{A8ED9945-2D2B-493C-ABB6-E860315EAFFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.Test", "Test\Snippetica.Test\Snippetica.Test.csproj", "{A8ED9945-2D2B-493C-ABB6-E860315EAFFF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6696AB95-B549-41A6-816A-2E5B772A2E7A}"
 	ProjectSection(SolutionItems) = preProject
-		ChangeLog.md = ChangeLog.md
-		src\global.ruleset = src\global.ruleset
-		README.md = README.md
-		text\RecordsTodo.md = text\RecordsTodo.md
+		..\ChangeLog.md = ..\ChangeLog.md
+		global.ruleset = global.ruleset
+		..\README.md = ..\README.md
+		..\text\RecordsTodo.md = ..\text\RecordsTodo.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudio.Dev", "src\Snippetica.VisualStudio.Dev\Snippetica.VisualStudio.Dev.csproj", "{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudio.Dev", "Snippetica.VisualStudio.Dev\Snippetica.VisualStudio.Dev.csproj", "{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode", "src\Snippetica.VisualStudioCode\Snippetica.VisualStudioCode.shproj", "{849BCA71-BCB0-4CC5-A46C-F27C846AD843}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode", "Snippetica.VisualStudioCode\Snippetica.VisualStudioCode.shproj", "{849BCA71-BCB0-4CC5-A46C-F27C846AD843}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode.Dev", "src\Snippetica.VisualStudioCode.Dev\Snippetica.VisualStudioCode.Dev.shproj", "{DDDAE79D-39A1-4D6E-83E9-E9758C632645}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode.Dev", "Snippetica.VisualStudioCode.Dev\Snippetica.VisualStudioCode.Dev.shproj", "{DDDAE79D-39A1-4D6E-83E9-E9758C632645}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		src\Snippetica.VisualStudioCode\Snippetica.VisualStudioCode.projitems*{849bca71-bcb0-4cc5-a46c-f27c846ad843}*SharedItemsImports = 13
-		src\Snippetica.VisualStudioCode.Dev\Snippetica.VisualStudioCode.Dev.projitems*{dddae79d-39a1-4d6e-83e9-e9758c632645}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -111,5 +107,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F615C44-B8F8-4E88-A201-667DE41F776F}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Snippetica.VisualStudioCode\Snippetica.VisualStudioCode.projitems*{849bca71-bcb0-4cc5-a46c-f27c846ad843}*SharedItemsImports = 13
+		Snippetica.VisualStudioCode.Dev\Snippetica.VisualStudioCode.Dev.projitems*{dddae79d-39a1-4d6e-83e9-e9758c632645}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
