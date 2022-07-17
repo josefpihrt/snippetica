@@ -7,6 +7,6 @@ namespace Pihrtsoft.Records.Utilities
 {
     internal static class Empty<T>
     {
-        public static ReadOnlyCollection<T> ReadOnlyCollection { get; } = new ReadOnlyCollection<T>(Array.Empty<T>());
+        public static ReadOnlyCollection<T> ReadOnlyCollection { get; } = new(Array.Empty<T>());
     }
 }

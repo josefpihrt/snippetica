@@ -17,7 +17,7 @@ namespace Pihrtsoft.Records
             Options = options;
         }
 
-        internal static Version SchemaVersion { get; } = new Version(0, 1, 0);
+        internal static Version SchemaVersion { get; } = new(0, 1, 0);
 
         private XDocument XDocument { get; }
 

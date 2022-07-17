@@ -4,10 +4,10 @@ namespace Snippetica.CodeGeneration
 {
     public static class LanguageDefinitions
     {
-        public static CSharpDefinition CSharp { get; } = new CSharpDefinition();
+        public static CSharpDefinition CSharp { get; } = new();
 
-        public static VisualBasicDefinition VisualBasic { get; } = new VisualBasicDefinition();
+        public static VisualBasicDefinition VisualBasic { get; } = new();
 
-        public static CppDefinition Cpp { get; } = new CppDefinition();
+        public static CppDefinition Cpp { get; } = new();
     }
 }

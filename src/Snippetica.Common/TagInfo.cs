@@ -4,7 +4,7 @@ namespace Snippetica
 {
     public struct TagInfo
     {
-        public static TagInfo Default { get; } = new TagInfo();
+        public static TagInfo Default { get; } = new();
 
         internal TagInfo(string name, string value, int keywordIndex)
         {

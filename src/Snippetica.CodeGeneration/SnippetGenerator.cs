@@ -67,7 +67,7 @@ namespace Snippetica.CodeGeneration
                 }
             }
 
-            Snippet GenerateSnippet(Snippet snippet, string shortcut)
+            static Snippet GenerateSnippet(Snippet snippet, string shortcut)
             {
                 snippet = (Snippet)snippet.Clone();
 

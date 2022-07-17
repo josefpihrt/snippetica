@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using DotMarkdown;
 using DotMarkdown.Linq;
-using Pihrtsoft.Records;
 using Pihrtsoft.Snippets;
 using Pihrtsoft.Snippets.Comparers;
 using Snippetica.CodeGeneration.Markdown;
@@ -22,11 +21,11 @@ namespace Snippetica.CodeGeneration
 {
     internal static class Program
     {
-        private static readonly SnippetDeepEqualityComparer _snippetEqualityComparer = new SnippetDeepEqualityComparer();
+        private static readonly SnippetDeepEqualityComparer _snippetEqualityComparer = new();
 
         private static ShortcutInfo[] _shortcuts;
 
-        private static readonly Regex _regexReplaceSpacesWithTabs = new Regex(@"(?<=^(\ {4})*)(?<x>\ {4})(?=(\ {4})*\S)", RegexOptions.Multiline);
+        private static readonly Regex _regexReplaceSpacesWithTabs = new(@"(?<=^(\ {4})*)(?<x>\ {4})(?=(\ {4})*\S)", RegexOptions.Multiline);
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancy", "RCS1163:Unused parameter.")]
         private static void Main(string[] args)

@@ -6,7 +6,6 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using Pihrtsoft.Records;
 using Pihrtsoft.Snippets;
 
 namespace Snippetica
@@ -14,7 +13,7 @@ namespace Snippetica
     [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class SnippetDirectory
     {
-        private static readonly ReadOnlyCollection<string> _noTags = new ReadOnlyCollection<string>(Array.Empty<string>());
+        private static readonly ReadOnlyCollection<string> _noTags = new(Array.Empty<string>());
 
         public SnippetDirectory(string path, Language language, params string[] tags)
         {

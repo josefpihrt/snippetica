@@ -30,9 +30,9 @@ namespace Snippetica.CodeGeneration.Json.Package
 
         public string License { get; set; }
 
-        public List<string> Categories { get; } = new List<string>();
+        public List<string> Categories { get; } = new();
 
-        public List<string> Keywords { get; } = new List<string>();
+        public List<string> Keywords { get; } = new();
 
         public string Homepage { get; set; }
 
@@ -40,7 +40,7 @@ namespace Snippetica.CodeGeneration.Json.Package
 
         public BugInfo Bugs { get; set; }
 
-        public List<SnippetInfo> Snippets { get; } = new List<SnippetInfo>();
+        public List<SnippetInfo> Snippets { get; } = new();
 
         public JObject ToJson()
         {

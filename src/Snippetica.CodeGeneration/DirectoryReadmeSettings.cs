@@ -25,6 +25,6 @@ namespace Snippetica.CodeGeneration
 
         public bool GroupShortcuts { get; set; }
 
-        public List<ShortcutInfo> Shortcuts { get; } = new List<ShortcutInfo>();
+        public List<ShortcutInfo> Shortcuts { get; } = new();
     }
 }

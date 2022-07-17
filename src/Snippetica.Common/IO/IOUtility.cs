@@ -140,7 +140,7 @@ namespace Snippetica.IO
             bool onlyIfChanged = true,
             bool createDirectory = false)
         {
-            encoding = encoding ?? Encoding.UTF8;
+            encoding ??= Encoding.UTF8;
 
             if (!ShouldSave(filePath, content, encoding, onlyIfChanged))
                 return;

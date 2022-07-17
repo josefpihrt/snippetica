@@ -18,7 +18,7 @@ namespace Pihrtsoft.Records.Xml
         private XElement _entitiesElement;
         private XElement _entityElement;
 
-        private readonly Queue<EntitiesInfo> _entities = new Queue<EntitiesInfo>();
+        private readonly Queue<EntitiesInfo> _entities = new();
 
         private XElement _declarationsElement;
         private XElement _withElement;

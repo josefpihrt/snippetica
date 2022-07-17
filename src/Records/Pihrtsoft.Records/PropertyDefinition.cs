@@ -40,9 +40,9 @@ namespace Pihrtsoft.Records
 
         internal static string TagsName { get; } = "Tags";
 
-        internal static PropertyDefinition Id { get; } = new PropertyDefinition(IdName);
+        internal static PropertyDefinition Id { get; } = new(IdName);
 
-        internal static PropertyDefinition Tags { get; } = new PropertyDefinition(TagsName, isCollection: true, separators: new[] { ',' });
+        internal static PropertyDefinition Tags { get; } = new(TagsName, isCollection: true, separators: new[] { ',' });
 
         public string Name { get; }
 

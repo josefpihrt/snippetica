@@ -29,7 +29,7 @@ namespace Pihrtsoft.Records
                 : Empty.VariableCollection;
         }
 
-        public static EntityDefinition Global { get; } = new EntityDefinition(
+        public static EntityDefinition Global { get; } = new(
             name: GlobalName,
             baseEntity: null,
             properties: new ExtendedKeyedCollection<string, PropertyDefinition>(new PropertyDefinition[] { PropertyDefinition.Id }),

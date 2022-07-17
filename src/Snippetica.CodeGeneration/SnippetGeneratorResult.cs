@@ -25,7 +25,7 @@ namespace Snippetica.CodeGeneration
                 Tags.AddRange(tags);
         }
 
-        public List<Snippet> Snippets { get; } = new List<Snippet>();
+        public List<Snippet> Snippets { get; } = new();
 
         public string Path { get; set; }
 
@@ -33,7 +33,7 @@ namespace Snippetica.CodeGeneration
 
         public Language Language { get; set; }
 
-        public List<string> Tags { get; } = new List<string>();
+        public List<string> Tags { get; } = new();
 
         public bool HasTag(string tag)
         {

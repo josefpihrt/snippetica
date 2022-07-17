@@ -9,7 +9,7 @@ namespace Snippetica.CodeGeneration
 {
     public static class XmlSnippetGenerator
     {
-        private static readonly Version _formatVersion = new Version(1, 1, 0);
+        private static readonly Version _formatVersion = new(1, 1, 0);
 
         private const string CommentIdentifier = "comment";
         private const string ContentIdentifier = "content";

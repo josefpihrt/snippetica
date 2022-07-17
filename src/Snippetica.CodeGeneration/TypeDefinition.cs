@@ -9,7 +9,7 @@ namespace Snippetica.CodeGeneration
     [DebuggerDisplay("{Name,nq}")]
     public class TypeDefinition
     {
-        public static TypeDefinition Default { get; } = new TypeDefinition(null, null, null, "a", null, null, null, 0, Array.Empty<string>());
+        public static TypeDefinition Default { get; } = new(null, null, null, "a", null, null, null, 0, Array.Empty<string>());
 
         public TypeDefinition(
             string name,

@@ -6,7 +6,7 @@ namespace Pihrtsoft.Records
 {
     public class DocumentOptions
     {
-        public static DocumentOptions Default { get; } = new DocumentOptions();
+        public static DocumentOptions Default { get; } = new();
 
         public DocumentOptions(
             bool useVariables = false,

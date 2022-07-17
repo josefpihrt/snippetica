@@ -40,7 +40,7 @@ namespace Snippetica.CodeGeneration.Commands
             {
                 if (command.ChildCommand != null)
                 {
-                    (stack ?? (stack = new Stack<Command>())).Push(command.ChildCommand);
+                    (stack ??= new Stack<Command>()).Push(command.ChildCommand);
                 }
             }
 

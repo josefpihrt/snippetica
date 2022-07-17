@@ -7,7 +7,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using Pihrtsoft.Snippets;
-using Snippetica.CodeGeneration.Markdown;
 
 namespace Snippetica.CodeGeneration
 {
@@ -15,7 +14,7 @@ namespace Snippetica.CodeGeneration
     {
         public abstract EnvironmentKind Kind { get; }
 
-        public List<ShortcutInfo> Shortcuts { get; } = new List<ShortcutInfo>();
+        public List<ShortcutInfo> Shortcuts { get; } = new();
 
         public IEnumerable<SnippetGeneratorResult> GenerateSnippets(IEnumerable<SnippetDirectory> directories)
         {

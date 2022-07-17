@@ -10,9 +10,9 @@ namespace Snippetica.CodeGeneration
     [DebuggerDisplay("{Name,nq}")]
     public class KeywordDefinition
     {
-        private static readonly Version _formatVersion = new Version(1, 1, 0);
+        private static readonly Version _formatVersion = new(1, 1, 0);
 
-        public static KeywordDefinition Default { get; } = new KeywordDefinition(null, null, null, null, false, Array.Empty<string>());
+        public static KeywordDefinition Default { get; } = new(null, null, null, null, false, Array.Empty<string>());
 
         public KeywordDefinition(
             string name,
