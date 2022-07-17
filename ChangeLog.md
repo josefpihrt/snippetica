@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - Add CODEOWNERS file ([#21](https://github.com/josefpihrt/roslynator/pull/21)).
+- Add support for Visual Studio 2022 ([#22](https://github.com/josefpihrt/roslynator/pull/22)).
 
 ### Changed
 
