@@ -1,31 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
-  </PropertyGroup>
-
-  <PropertyGroup>
     <Version>0.1.0.0</Version>
-    <AssemblyName>Pihrtsoft.Records</AssemblyName>
-    <RootNamespace>Pihrtsoft.Records</RootNamespace>
-    <SignAssembly>false</SignAssembly>
-    <LangVersion>8.0</LangVersion>
-  </PropertyGroup>
-
-  <PropertyGroup>
     <IsPackable>false</IsPackable>
-    <Authors>Josef Pihrt</Authors>
-    <Company></Company>
-    <Description></Description>
-    <Copyright>Copyright (c) 2017-2018 Josef Pihrt</Copyright>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="Pihrtsoft.Records.snk" />
-  </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
   </ItemGroup>
-
 </Project>

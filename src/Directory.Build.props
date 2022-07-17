@@ -1,0 +1,10 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <LangVersion>10.0</LangVersion>
+    <Authors>Josef Pihrt</Authors>
+    <Copyright>Copyright (c) 2016-2022 Josef Pihrt</Copyright>
+    <EnableNETAnalyzers>false</EnableNETAnalyzers>
+  </PropertyGroup>
+
+</Project>

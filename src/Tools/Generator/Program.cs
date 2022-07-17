@@ -31,12 +31,12 @@ namespace Snippetica.CodeGeneration
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancy", "RCS1163:Unused parameter.")]
         private static void Main(string[] args)
         {
-            _shortcuts = Pihrtsoft.Records.Document.ReadRecords(@"..\..\Data\Shortcuts.xml")
+            _shortcuts = Pihrtsoft.Records.Document.ReadRecords(@"..\..\..\Data\Shortcuts.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .Select(f => Mapper.MapShortcutInfo(f))
                 .ToArray();
 
-            SnippetDirectory[] directories = LoadDirectories(@"..\..\Data\Directories.xml");
+            SnippetDirectory[] directories = LoadDirectories(@"..\..\..\Data\Directories.xml");
 
             ShortcutInfo.SerializeToXml(Path.Combine(VisualStudioExtensionProjectPath, "Shortcuts.xml"), _shortcuts);
 
@@ -70,7 +70,7 @@ namespace Snippetica.CodeGeneration
                 Heading1(ProductName),
                 BulletList(
                     CodeGenerationUtility.GetProjectSubtitle(languages),
-                    BulletItem(Link("Release Notes", $"{MasterGitHubUrl}/{ChangeLogFileName}"), ".")));
+                    BulletItem(Link("Release Notes", $"{MainGitHubUrl}/{ChangeLogFileName}"), ".")));
 
 #if !DEBUG
             MarkdownGenerator.GenerateProjectReadme(visualStudioResults, document, visualStudio.CreateProjectReadmeSettings(), addFootnote: false);
@@ -170,11 +170,11 @@ namespace Snippetica.CodeGeneration
 
         private static void LoadLanguages()
         {
-            Pihrtsoft.Records.Document.ReadRecords(@"..\..\Data\Languages.xml")
+            Pihrtsoft.Records.Document.ReadRecords(@"..\..\..\Data\Languages.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .LoadLanguages();
 
-            foreach (TypeDefinition typeDefinition in Pihrtsoft.Records.Document.ReadRecords(@"..\..\Data\Types.xml")
+            foreach (TypeDefinition typeDefinition in Pihrtsoft.Records.Document.ReadRecords(@"..\..\..\Data\Types.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .Select(f => Mapper.MapTypeDefinition(f)))
             {
