@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- Add CODEOWNERS file ([#21](https://github.com/josefpihrt/roslynator/pull/21)).
+
 ### Changed
 
 - Rename default branch to `main`.
