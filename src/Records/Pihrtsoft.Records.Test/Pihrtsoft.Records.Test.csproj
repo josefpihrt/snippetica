@@ -10,7 +10,6 @@
     <Version>0.1.0.0</Version>
     <AssemblyName>Pihrtsoft.Records.Tests</AssemblyName>
     <RootNamespace>Pihrtsoft.Records</RootNamespace>
-    <CodeAnalysisRuleSet>..\..\global.ruleset</CodeAnalysisRuleSet>
     <SignAssembly>false</SignAssembly>
     <LangVersion>7.2</LangVersion>
   </PropertyGroup>
