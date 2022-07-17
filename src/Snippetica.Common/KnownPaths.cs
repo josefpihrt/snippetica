@@ -9,13 +9,13 @@ namespace Snippetica
     {
         public const string GitHubUrl = "http://github.com/josefpihrt/snippetica";
 
-        public const string MasterGitHubUrl = GitHubUrl + "/blob/master";
+        public const string MainGitHubUrl = GitHubUrl + "/blob/main";
 
-        public const string SourceGitHubUrl = MasterGitHubUrl + "/" + SourceDirectoryName;
+        public const string SourceGitHubUrl = MainGitHubUrl + "/" + SourceDirectoryName;
 
         public const string SnippetBrowserUrl = "http://pihrt.net/snippetica/snippets";
 
-        public const string SolutionDirectoryPath = @"..\..\..\..\..";
+        public const string SolutionDirectoryPath = @"..\..\..\..\..\..";
 
         public static string VisualStudioExtensionProjectPath
         {

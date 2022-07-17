@@ -18,6 +18,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update projects to .NET 4.8 ([#18](https://github.com/josefpihrt/roslynator/pull/18)).
 - Move solution file to `src` ([#19](https://github.com/josefpihrt/roslynator/pull/19)).
 - Replace ruleset file with EditorConfig ([#20](https://github.com/josefpihrt/roslynator/pull/20)).
+- Migrate projects to a new csproj format ([#23](https://github.com/josefpihrt/roslynator/pull/23)).
+- Add `Directory.Build.props` ([#23](https://github.com/josefpihrt/roslynator/pull/23)).
 
 -----
 <!-- Content below does not adhere to 'Keep a Changelog' format -->

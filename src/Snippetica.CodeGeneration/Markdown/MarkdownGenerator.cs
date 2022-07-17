@@ -174,7 +174,7 @@ namespace Snippetica.CodeGeneration.Markdown
                 Heading3("Links"),
                 BulletList(
                     Link("Project Website", GitHubUrl),
-                    Link("Release Notes", $"{MasterGitHubUrl}/{ChangeLogFileName}"),
+                    Link("Release Notes", $"{MainGitHubUrl}/{ChangeLogFileName}"),
                     BulletItem("Browse all available snippets with ", Link("Snippet Browser", GetSnippetBrowserUrl(EnvironmentKind.VisualStudio)))),
                 Heading3("Snippets"),
                 Table(
