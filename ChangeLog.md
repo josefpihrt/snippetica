@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Rename default branch to `main`.
 - Format changelog according to 'Keep a Changelog' ([#17](https://github.com/josefpihrt/roslynator/pull/17)).
 - Update projects to .NET 4.8 ([#18](https://github.com/josefpihrt/roslynator/pull/18)).
+- Move solution file to `src` ([#19](https://github.com/josefpihrt/roslynator/pull/19)).
 
 -----
 <!-- Content below does not adhere to 'Keep a Changelog' format -->
