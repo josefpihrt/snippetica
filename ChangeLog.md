@@ -24,6 +24,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Add `Directory.Build.props` ([#23](https://github.com/josefpihrt/roslynator/pull/23)).
 - Simplify snippet 'using statement' (`u`) ([#27](https://github.com/josefpihrt/roslynator/pull/27)).
 
+### Removed
+
+- Remove snippet for type parameter (`g`) ([#28](https://github.com/josefpihrt/roslynator/pull/28)).
+
 -----
 <!-- Content below does not adhere to 'Keep a Changelog' format -->
 
