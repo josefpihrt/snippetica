@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Add CODEOWNERS file ([#21](https://github.com/josefpihrt/roslynator/pull/21)).
 - Add support for Visual Studio 2022 ([#22](https://github.com/josefpihrt/roslynator/pull/22)).
 - Add snippet for `KeyValuePair.Create` (`kvpc`) ([#24](https://github.com/josefpihrt/roslynator/pull/24)), ([#26](https://github.com/josefpihrt/roslynator/pull/26)).
+- Add snippet for 'using declaration' (`uv`) ([#27](https://github.com/josefpihrt/roslynator/pull/27)).
 
 ### Changed
 
@@ -21,6 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Replace ruleset file with EditorConfig ([#20](https://github.com/josefpihrt/roslynator/pull/20)).
 - Migrate projects to a new csproj format ([#23](https://github.com/josefpihrt/roslynator/pull/23)).
 - Add `Directory.Build.props` ([#23](https://github.com/josefpihrt/roslynator/pull/23)).
+- Simplify snippet 'using statement' (`u`) ([#27](https://github.com/josefpihrt/roslynator/pull/27)).
 
 -----
 <!-- Content below does not adhere to 'Keep a Changelog' format -->
