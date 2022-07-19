@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Migrate projects to a new csproj format ([#23](https://github.com/josefpihrt/roslynator/pull/23)).
 - Add `Directory.Build.props` ([#23](https://github.com/josefpihrt/roslynator/pull/23)).
 - Simplify snippet 'using statement' (`u`) ([#27](https://github.com/josefpihrt/roslynator/pull/27)).
+- Use pattern matching to check for null ([#29](https://github.com/josefpihrt/roslynator/pull/29)).
 
 ### Removed
 
