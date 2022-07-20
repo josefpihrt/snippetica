@@ -14,22 +14,16 @@
       <Literal>
         <ID>expression</ID>
         <ToolTip>Expression to match</ToolTip>
-        <Default>x</Default>
+        <Default>_</Default>
       </Literal>
       <Literal>
         <ID>value</ID>
         <ToolTip>Value to return</ToolTip>
-        <Default>y</Default>
-      </Literal>
-      <Literal>
-        <ID>defaultValue</ID>
-        <ToolTip>Default value to return</ToolTip>
-        <Default>default</Default>
+        <Default>x</Default>
       </Literal>
     </Declarations>
     <Code Language="CSharp"><![CDATA[switch {
 	$expression$ => $value$,
-	_ => $defaultValue$,
 }$end$]]></Code>
   </Snippet>
 </CodeSnippet>
