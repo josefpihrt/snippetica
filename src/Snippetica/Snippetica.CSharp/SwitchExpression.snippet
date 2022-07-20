@@ -21,10 +21,15 @@
         <ToolTip>Value to return</ToolTip>
         <Default>y</Default>
       </Literal>
+      <Literal>
+        <ID>defaultValue</ID>
+        <ToolTip>Default value to return</ToolTip>
+        <Default>default</Default>
+      </Literal>
     </Declarations>
     <Code Language="CSharp"><![CDATA[switch {
-    $expression$ => $value$,
-    _ => default,
+	$expression$ => $value$,
+	_ => $defaultValue$,
 }$end$]]></Code>
   </Snippet>
 </CodeSnippet>
