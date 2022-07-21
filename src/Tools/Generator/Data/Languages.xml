@@ -73,7 +73,6 @@
               <New Id="Int32" Keyword="int" />
               <New Id="Object" Keyword="object" DefaultValue="null" />
               <New Id="String" Keyword="string" DefaultValue="null" />
-              <New Id="DateTime" Keyword="DateTime" DefaultValue="DateTime.MinValue" Namespace="System" />
             </With>
             <With Language="VB">
               <New Id="This" Title="this" Keyword="this" DefaultValue="Nothing" />
@@ -82,7 +81,6 @@
               <New Id="Int32" Keyword="Integer" />
               <New Id="Object" Keyword="Object" DefaultValue="Nothing" />
               <New Id="String" Keyword="String" DefaultValue="Nothing" />
-              <New Id="DateTime" Keyword="Date" DefaultValue="Date.MinValue" />
             </With>
             <With Language="Cpp">
               <New Id="Void" Title="void" Keyword="void" />
