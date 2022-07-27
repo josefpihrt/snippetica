@@ -29,6 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Removed
 
 - Remove snippet for type parameter (`g`) ([#28](https://github.com/josefpihrt/snippetica/pull/28)).
+- Remove snippets where return type is either Int64 or DateTime ([#36](https://github.com/josefpihrt/snippetica/pull/36)).
 
 -----
 <!-- Content below does not adhere to 'Keep a Changelog' format -->
