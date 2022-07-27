@@ -62,13 +62,6 @@
                 <New Id="Boolean" Shortcut="b" DefaultIdentifier="f" />
                 <New Id="Int32" Shortcut="i" DefaultValue="0" DefaultIdentifier="i" />
                 <New Id="DateTime" Shortcut="dt"  DefaultIdentifier="dt" />
-                <New Id="Int64" Shortcut="l" DefaultValue="0" DefaultIdentifier="i" />
-                <With Tags="Disabled">
-                  <New Id="Char" Shortcut="c" DefaultIdentifier="ch" />
-                  <New Id="Decimal" Shortcut="dl" DefaultValue="0" />
-                  <New Id="Double" Shortcut="de" DefaultValue="0" />
-                  <New Id="Single" Shortcut="se" DefaultValue="0" />
-                </With>
               </With>
             </With>
           </With>
@@ -80,12 +73,6 @@
               <New Id="Int32" Keyword="int" />
               <New Id="Object" Keyword="object" DefaultValue="null" />
               <New Id="String" Keyword="string" DefaultValue="null" />
-              <New Id="Decimal" Keyword="decimal" />
-              <New Id="Double" Keyword="double" />
-              <New Id="Int64" Keyword="long" />
-              <New Id="Single" Keyword="float" />
-              <New Id="Char" Keyword="char" DefaultValue="'\0'" />
-              <New Id="DateTime" Keyword="DateTime" DefaultValue="DateTime.MinValue" Namespace="System" />
             </With>
             <With Language="VB">
               <New Id="This" Title="this" Keyword="this" DefaultValue="Nothing" />
@@ -94,21 +81,12 @@
               <New Id="Int32" Keyword="Integer" />
               <New Id="Object" Keyword="Object" DefaultValue="Nothing" />
               <New Id="String" Keyword="String" DefaultValue="Nothing" />
-              <New Id="Decimal" Keyword="Decimal" />
-              <New Id="Double" Keyword="Double" />
-              <New Id="Int64" Keyword="Long" />
-              <New Id="Single" Keyword="Single" />
-              <New Id="Char" Keyword="Char" DefaultValue='"0"c' />
-              <New Id="DateTime" Keyword="Date" DefaultValue="Date.MinValue" />
             </With>
             <With Language="Cpp">
               <New Id="Void" Title="void" Keyword="void" />
               <New Id="Boolean" Keyword="bool" DefaultValue="false" />
               <New Id="Int32" Keyword="int" />
               <New Id="String" Title="string" Keyword="std::string" DefaultValue="nullptr" />
-              <New Id="Double" Keyword="double" />
-              <New Id="Single" Keyword="float" />
-              <New Id="Char" Keyword="char" DefaultValue="0" />
             </With>
           </Records>
         </Entity>
