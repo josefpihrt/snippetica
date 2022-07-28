@@ -92,7 +92,6 @@
                 <New Value="d" Description="Dictionary&lt;TKey,TValue&gt;" />
                 <New Value="hs" Description="HashSet&lt;T&gt;" />
                 <New Value="i" Description="Immutable" Comment="prefix" />
-                <New Value="l" Description="Int64" />
                 <New Value="ll" Description="LinkedList&lt;T&gt;" />
                 <New Value="oc" Description="ObservableCollection&lt;T&gt;" />
                 <New Value="q" Description="Queue&lt;T&gt;" />

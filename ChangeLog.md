@@ -8,27 +8,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- Add CODEOWNERS file ([#21](https://github.com/josefpihrt/roslynator/pull/21)).
-- Add support for Visual Studio 2022 ([#22](https://github.com/josefpihrt/roslynator/pull/22)).
-- Add snippet for `KeyValuePair.Create` (`kvpc`) ([#24](https://github.com/josefpihrt/roslynator/pull/24)), ([#26](https://github.com/josefpihrt/roslynator/pull/26)).
-- Add snippet for 'using declaration' (`uv`) ([#27](https://github.com/josefpihrt/roslynator/pull/27)).
+- Add CODEOWNERS file ([#21](https://github.com/josefpihrt/snippetica/pull/21)).
+- Add support for Visual Studio 2022 ([#22](https://github.com/josefpihrt/snippetica/pull/22)).
+- Add snippet for `KeyValuePair.Create` (`kvpc`) ([#24](https://github.com/josefpihrt/snippetica/pull/24)), ([#26](https://github.com/josefpihrt/snippetica/pull/26)).
+- Add snippet for 'using declaration' (`uv`) ([#27](https://github.com/josefpihrt/snippetica/pull/27)).
+- Add snippet for 'switch expression' (`swe`) ([#34](https://github.com/josefpihrt/roslynator/pull/34)).
 
 ### Changed
 
 - Rename default branch to `main`.
-- Format changelog according to 'Keep a Changelog' ([#17](https://github.com/josefpihrt/roslynator/pull/17)).
-- Update projects to .NET 4.8 ([#18](https://github.com/josefpihrt/roslynator/pull/18)).
-- Move solution file to `src` ([#19](https://github.com/josefpihrt/roslynator/pull/19)).
-- Replace ruleset file with EditorConfig ([#20](https://github.com/josefpihrt/roslynator/pull/20)).
-- Migrate projects to a new csproj format ([#23](https://github.com/josefpihrt/roslynator/pull/23)).
-- Add `Directory.Build.props` ([#23](https://github.com/josefpihrt/roslynator/pull/23)).
-- Simplify snippet 'using statement' (`u`) ([#27](https://github.com/josefpihrt/roslynator/pull/27)).
-- Use pattern matching to check for null ([#29](https://github.com/josefpihrt/roslynator/pull/29)).
-- Change shortcut for 'interface declaration' from `ie` to `i` ([#30](https://github.com/josefpihrt/roslynator/pull/30)).
+- Format changelog according to 'Keep a Changelog' ([#17](https://github.com/josefpihrt/snippetica/pull/17)).
+- Update projects to .NET 4.8 ([#18](https://github.com/josefpihrt/snippetica/pull/18)).
+- Move solution file to `src` ([#19](https://github.com/josefpihrt/snippetica/pull/19)).
+- Replace ruleset file with EditorConfig ([#20](https://github.com/josefpihrt/snippetica/pull/20)).
+- Migrate projects to a new csproj format ([#23](https://github.com/josefpihrt/snippetica/pull/23)).
+- Add `Directory.Build.props` ([#23](https://github.com/josefpihrt/snippetica/pull/23)).
+- Simplify snippet 'using statement' (`u`) ([#27](https://github.com/josefpihrt/snippetica/pull/27)).
+- Use pattern matching to check for null ([#29](https://github.com/josefpihrt/snippetica/pull/29)).
+- Change shortcut for 'interface declaration' from `ie` to `i` ([#30](https://github.com/josefpihrt/snippetica/pull/30)).
+- Change shortcut for 'while' from `we` to `w` ([#33](https://github.com/josefpihrt/snippetica/pull/33)).
 
 ### Removed
 
-- Remove snippet for type parameter (`g`) ([#28](https://github.com/josefpihrt/roslynator/pull/28)).
+- Remove snippet for type parameter (`g`) ([#28](https://github.com/josefpihrt/snippetica/pull/28)).
+- Remove snippets where return type is either Int64 or DateTime ([#36](https://github.com/josefpihrt/snippetica/pull/36)).
 
 -----
 <!-- Content below does not adhere to 'Keep a Changelog' format -->
