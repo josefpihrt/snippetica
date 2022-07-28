@@ -12,7 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Add support for Visual Studio 2022 ([#22](https://github.com/josefpihrt/snippetica/pull/22)).
 - Add snippet for `KeyValuePair.Create` (`kvpc`) ([#24](https://github.com/josefpihrt/snippetica/pull/24)), ([#26](https://github.com/josefpihrt/snippetica/pull/26)).
 - Add snippet for 'using declaration' (`uv`) ([#27](https://github.com/josefpihrt/snippetica/pull/27)).
-- Add snippet for 'switch expression' (`se`) ([#34](https://github.com/josefpihrt/roslynator/pull/34)).
+- Add snippet for 'switch expression' (`swe`) ([#34](https://github.com/josefpihrt/roslynator/pull/34)).
 
 ### Changed
 
