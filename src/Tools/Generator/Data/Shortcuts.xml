@@ -71,7 +71,7 @@
               <New Value="u" Description="using statement" />
               <New Value="we" Description="while statement" />
               <Without Languages="VB">
-                <New Value="sh" Description="switch statement" Kind="Statement" />
+                <New Value="sw" Description="switch statement" Kind="Statement" />
               </Without>
               <Without Languages="C#">
                 <New Value="sc" Description="Select Case statement" Kind="Statement" />
@@ -147,7 +147,7 @@
               <New Value="fe" Description="foreach" />
               <New Value="fr" Description="for" />
               <New Value="if" Description="if" />
-              <New Value="sh" Description="switch" />
+              <New Value="sw" Description="switch" />
               <New Value="tc" Description="try-catch" />
               <New Value="we" Description="while" />
             </With>

@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Add support for Visual Studio 2022 ([#22](https://github.com/josefpihrt/snippetica/pull/22)).
 - Add snippet for `KeyValuePair.Create` (`kvpc`) ([#24](https://github.com/josefpihrt/snippetica/pull/24)), ([#26](https://github.com/josefpihrt/snippetica/pull/26)).
 - Add snippet for 'using declaration' (`uv`) ([#27](https://github.com/josefpihrt/snippetica/pull/27)).
+- Add snippet for 'switch expression' (`swe`) ([#34](https://github.com/josefpihrt/roslynator/pull/34)).
 
 ### Changed
 
@@ -26,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Use pattern matching to check for null ([#29](https://github.com/josefpihrt/snippetica/pull/29)).
 - Change shortcut for 'interface declaration' from `ie` to `i` ([#30](https://github.com/josefpihrt/snippetica/pull/30)).
 - Change shortcut for 'while' from `we` to `w` ([#33](https://github.com/josefpihrt/snippetica/pull/33)).
+- Change shortcut for 'switch statement' from `sh` to `sw` ([#35](https://github.com/josefpihrt/roslynator/pull/35)), ([#38](https://github.com/josefpihrt/roslynator/pull/38)).
 
 ### Removed
 
