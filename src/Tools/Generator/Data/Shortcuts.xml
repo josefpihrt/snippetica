@@ -36,7 +36,7 @@
               <New Value="st" Description="struct declaration" />
               <New Value="re" Description="record declaration" />
               <Without Languages="C#">
-                <New Value="me" Description="Module declaration" Kind="MemberDeclaration" />
+                <New Value="mo" Description="Module declaration" Kind="MemberDeclaration" />
               </Without>
             </With>
             <With Kind="Modifier">
