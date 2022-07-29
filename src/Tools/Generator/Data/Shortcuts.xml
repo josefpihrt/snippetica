@@ -67,7 +67,7 @@
               <New Value="if" Description="if statement" />
               <New Value="re" Description="return statement" />
               <New Value="t" Description="try statement" />
-              <New Value="tw" Description="throw statement" />
+              <New Value="th" Description="throw statement" />
               <New Value="u" Description="using statement" />
               <New Value="we" Description="while statement" />
               <Without Languages="VB">
