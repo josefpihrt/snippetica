@@ -25,7 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Add `Directory.Build.props` ([#23](https://github.com/josefpihrt/snippetica/pull/23)).
 - Simplify snippet 'using statement' (`u`) ([#27](https://github.com/josefpihrt/snippetica/pull/27)).
 - Use pattern matching to check for null ([#29](https://github.com/josefpihrt/snippetica/pull/29)).
-- Change shortcut for 'interface declaration' from `ie` to `i` ([#30](https://github.com/josefpihrt/snippetica/pull/30)).
+- Change shortcut for 'interface declaration' from `ie` to `i` ([#30](https://github.com/josefpihrt/snippetica/pull/30)), ([#48](https://github.com/josefpihrt/snippetica/pull/48)).
 - Change shortcut for 'while' from `we` to `w` ([#33](https://github.com/josefpihrt/snippetica/pull/33)).
 - Change shortcut for 'switch statement' from `sh` to `sw` ([#35](https://github.com/josefpihrt/roslynator/pull/35)), ([#38](https://github.com/josefpihrt/roslynator/pull/38)).
 - Change shortcut for 'enum' from `em` to `en` ([#31](https://github.com/josefpihrt/roslynator/pull/31)).
