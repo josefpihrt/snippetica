@@ -109,7 +109,6 @@
           <New Name="DeclType" Value="decltype" Shortcut="dt" />
           <New Name="Default" Value="default" Shortcut="d" />
           <New Name="Delete" Value="delete" Shortcut="de" IsDevelopment="true" />
-          <New Name="Extern" Value="extern" Shortcut="en" IsDevelopment="true" />
           <New Name="Friend" Value="friend" Shortcut="fd" IsDevelopment="true" />
           <New Name="Inline" Value="inline" Shortcut="il" />
           <New Name="NoExcept" Value="noexcept" Shortcut="ne" IsDevelopment="true" />
