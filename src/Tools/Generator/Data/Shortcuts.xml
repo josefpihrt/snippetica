@@ -22,7 +22,7 @@
             <With Kind="MemberDeclaration">
               <New Value="_" Description="interface member declaration" Comment="prefix" />
               <New Value="c" Description="class declaration" />
-              <New Value="cr" Description="constructor declaration" />
+              <New Value="co" Description="constructor declaration" />
               <New Value="de" Description="delegate declaration" />
               <New Value="en" Description="enum declaration" />
               <New Value="ev" Description="event declaration" />
@@ -52,7 +52,7 @@
               <New Value="oo" Description="operator overload" />
               <New Value="x" Description="logical not operator" Comment="prefix" />
               <Without Languages="VB">
-                <New Value="co" Description="conditional operator" Kind="Operator" />
+                <New Value="cop" Description="conditional operator" Kind="Operator" />
                 <New Value="t" Description="explict cast operator" Kind="Operator" />
                 <New Value="to" Description="typeof operator" Kind="Operator" />
               </Without>
@@ -122,7 +122,7 @@
           <With Languages="Cpp">
             <With Kind="DeclarationDefinition">
               <New Value="c" Description="class" />
-              <New Value="cr" Description="constructor" />
+              <New Value="co" Description="constructor" />
               <New Value="dr" Description="destructor" />
               <New Value="en" Description="enum" />
               <New Value="f" Description="function" />
@@ -153,7 +153,7 @@
             </With>
             <With Kind="Other">
               <New Value="ae" Description="attribute" />
-              <New Value="co" Description="conditional operator" />
+              <New Value="cop" Description="conditional operator" />
               <New Value="ct" Description="cast" Comment="suffix" />
               <New Value="d" Description="default keyword" />
               <New Value="dt" Description="decltype keyword" />
