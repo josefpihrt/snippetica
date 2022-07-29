@@ -22,7 +22,7 @@
             <With Kind="MemberDeclaration">
               <New Value="_" Description="interface member declaration" Comment="prefix" />
               <New Value="c" Description="class declaration" />
-              <New Value="cr" Description="constructor declaration" />
+              <New Value="co" Description="constructor declaration" />
               <New Value="de" Description="delegate declaration" />
               <New Value="em" Description="enum declaration" />
               <New Value="et" Description="event declaration" />
@@ -122,7 +122,7 @@
           <With Languages="Cpp">
             <With Kind="DeclarationDefinition">
               <New Value="c" Description="class" />
-              <New Value="cr" Description="constructor" />
+              <New Value="co" Description="constructor" />
               <New Value="dr" Description="destructor" />
               <New Value="em" Description="enum" />
               <New Value="f" Description="function" />
