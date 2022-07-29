@@ -30,6 +30,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Change shortcut for 'switch statement' from `sh` to `sw` ([#35](https://github.com/josefpihrt/roslynator/pull/35)), ([#38](https://github.com/josefpihrt/roslynator/pull/38)).
 - Change shortcut for 'enum' from `em` to `en` ([#31](https://github.com/josefpihrt/roslynator/pull/31)).
 - Change shortcut for 'record declaration' from `rd` to `re` ([#39](https://github.com/josefpihrt/snippetica/pull/39)).
+- Change shortcut for 'indexer' from `ir` to `in` ([#40](https://github.com/josefpihrt/snippetica/pull/40)).
 
 ### Removed
 
