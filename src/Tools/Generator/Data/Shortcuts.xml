@@ -32,7 +32,6 @@
               <New Value="k" Description="constant declaration" />
               <New Value="m" Description="method declaration" />
               <New Value="p" Description="property declaration" />
-              <New Value="pp" Description="property declaration (expanded)" />
               <New Value="st" Description="struct declaration" />
               <New Value="re" Description="record declaration" />
               <Without Languages="C#">
@@ -69,7 +68,7 @@
               <New Value="t" Description="try statement" />
               <New Value="th" Description="throw statement" />
               <New Value="u" Description="using statement" />
-              <New Value="we" Description="while statement" />
+              <New Value="w" Description="while statement" />
               <Without Languages="VB">
                 <New Value="sw" Description="switch statement" Kind="Statement" />
               </Without>
@@ -85,8 +84,6 @@
               <New Value="l" Description="List&lt;T&gt;" />
               <New Value="o" Description="Object" />
               <New Value="s" Description="String" />
-              <New Value="rr" Description="Reader" Comment="suffix" />
-              <New Value="wr" Description="Writer" Comment="suffix" />
               <Without IDE="VisualStudioCode">
                 <New Value="c" Description="Collection&lt;T&gt;" />
                 <New Value="d" Description="Dictionary&lt;TKey,TValue&gt;" />
@@ -103,8 +100,6 @@
               <New Value="d" Description="default keyword" />
               <New Value="e" Description="else clause" />
               <New Value="f" Description="finally clause" />
-              <New Value="g" Description="type parameter" />
-              <New Value="g" Description="generic type" Comment="prefix" />
               <New Value="l" Description="lambda expression" />
               <New Value="n" Description="(equals to) null" />
               <New Value="pa" Description="parameter array" />
@@ -123,10 +118,10 @@
             <With Kind="DeclarationDefinition">
               <New Value="c" Description="class" />
               <New Value="co" Description="constructor" />
-              <New Value="dr" Description="destructor" />
+              <New Value="de" Description="destructor" />
               <New Value="en" Description="enum" />
               <New Value="f" Description="function" />
-              <New Value="ns" Description="namespace" />
+              <New Value="na" Description="namespace" />
               <New Value="st" Description="struct" />
               <New Value="td" Description="typedef" />
               <New Value="u" Description="using" />
@@ -149,10 +144,10 @@
               <New Value="if" Description="if" />
               <New Value="sw" Description="switch" />
               <New Value="tc" Description="try-catch" />
-              <New Value="we" Description="while" />
+              <New Value="w" Description="while" />
             </With>
             <With Kind="Other">
-              <New Value="ae" Description="attribute" />
+              <New Value="a" Description="attribute" />
               <New Value="cop" Description="conditional operator" />
               <New Value="ct" Description="cast" Comment="suffix" />
               <New Value="d" Description="default keyword" />
