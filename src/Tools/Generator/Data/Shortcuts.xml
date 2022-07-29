@@ -25,7 +25,7 @@
               <New Value="co" Description="constructor declaration" />
               <New Value="de" Description="delegate declaration" />
               <New Value="en" Description="enum declaration" />
-              <New Value="et" Description="event declaration" />
+              <New Value="ev" Description="event declaration" />
               <New Value="f" Description="field declaration" />
               <New Value="ie" Description="interface declaration" />
               <New Value="in" Description="indexer declaration" />
@@ -67,7 +67,7 @@
               <New Value="if" Description="if statement" />
               <New Value="re" Description="return statement" />
               <New Value="t" Description="try statement" />
-              <New Value="tw" Description="throw statement" />
+              <New Value="th" Description="throw statement" />
               <New Value="u" Description="using statement" />
               <New Value="we" Description="while statement" />
               <Without Languages="VB">

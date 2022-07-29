@@ -31,6 +31,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Change shortcut for 'enum' from `em` to `en` ([#31](https://github.com/josefpihrt/roslynator/pull/31)).
 - Change shortcut for 'record declaration' from `rd` to `re` ([#39](https://github.com/josefpihrt/snippetica/pull/39)).
 - Change shortcut for 'indexer' from `ir` to `in` ([#40](https://github.com/josefpihrt/snippetica/pull/40)).
+- Change shortcut for 'event declaration' from `et` to `ev` ([#42](https://github.com/josefpihrt/roslynator/pull/42)).
+- Change shortcut for 'throw statement' from `tw` to `th` ([#41](https://github.com/josefpihrt/roslynator/pull/41)).
 - Change shortcut for constructor from `cr` to `co` ([#43](https://github.com/josefpihrt/snippetica/pull/43)).
 - Change shortcut for ternary conditional operator from `co` to `cop` ([#43](https://github.com/josefpihrt/snippetica/pull/43)).
 
