@@ -24,17 +24,17 @@
               <New Value="c" Description="class declaration" />
               <New Value="cr" Description="constructor declaration" />
               <New Value="de" Description="delegate declaration" />
-              <New Value="em" Description="enum declaration" />
+              <New Value="en" Description="enum declaration" />
               <New Value="ev" Description="event declaration" />
               <New Value="f" Description="field declaration" />
               <New Value="ie" Description="interface declaration" />
-              <New Value="ir" Description="indexer declaration" />
+              <New Value="in" Description="indexer declaration" />
               <New Value="k" Description="constant declaration" />
               <New Value="m" Description="method declaration" />
               <New Value="p" Description="property declaration" />
               <New Value="pp" Description="property declaration (expanded)" />
               <New Value="st" Description="struct declaration" />
-              <New Value="rd" Description="record declaration" />
+              <New Value="re" Description="record declaration" />
               <Without Languages="C#">
                 <New Value="me" Description="Module declaration" Kind="MemberDeclaration" />
               </Without>
@@ -124,7 +124,7 @@
               <New Value="c" Description="class" />
               <New Value="cr" Description="constructor" />
               <New Value="dr" Description="destructor" />
-              <New Value="em" Description="enum" />
+              <New Value="en" Description="enum" />
               <New Value="f" Description="function" />
               <New Value="ns" Description="namespace" />
               <New Value="st" Description="struct" />
