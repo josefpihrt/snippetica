@@ -36,6 +36,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Change shortcut for constructor from `cr` to `co` ([#43](https://github.com/josefpihrt/snippetica/pull/43)).
 - Change shortcut for ternary conditional operator from `co` to `cop` ([#43](https://github.com/josefpihrt/snippetica/pull/43)).
 - Change shortcut for 'module declaration' from `me` to `mo` ([#44](https://github.com/josefpihrt/snippetica/pull/44)).
+- Change shortcut for 'destructor declaration' from `dr` to `de` ([#45](https://github.com/josefpihrt/snippetica/pull/45)).
 
 ### Removed
 
