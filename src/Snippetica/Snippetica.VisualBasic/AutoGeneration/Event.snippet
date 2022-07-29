@@ -2,7 +2,7 @@
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
     <Title>event</Title>
-    <Shortcut>et</Shortcut>
+    <Shortcut>ev</Shortcut>
     <Description>event declaration</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
@@ -27,6 +27,11 @@
         <Default>Public</Default>
       </Literal>
       <Literal>
+        <ID>eventArgs</ID>
+        <ToolTip>EventArgs type name</ToolTip>
+        <Default>EventArgs</Default>
+      </Literal>
+      <Literal>
         <ID>name</ID>
         <ToolTip>Event name</ToolTip>
         <Default>EventName</Default>
@@ -37,9 +42,9 @@
         <Default>e</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[$_modifiers$ Event $name$ As EventHandler
+    <Code Language="VB"><![CDATA[$_modifiers$ Event $name$ As EventHandler(Of $eventArgs$)
 
-Protected Overridable Sub On$name$($parameterName$ As EventArgs)
+Protected Overridable Sub On$name$($parameterName$ As $eventArgs$)
 	RaiseEvent $name$(Me, $parameterName$)
 End Sub$end$]]></Code>
   </Snippet>
