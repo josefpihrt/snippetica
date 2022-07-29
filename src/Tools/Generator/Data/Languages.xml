@@ -104,11 +104,9 @@
         <With Language="Cpp">
           <New Name="AlignAs" Value="alignas" Shortcut="aa" IsDevelopment="true" />
           <New Name="AlignOf" Value="alignof" Shortcut="ao" IsDevelopment="true" />
-          <New Name="Auto" Value="auto" Shortcut="a" IsDevelopment="true" />
           <New Name="ConstExpr" Value="constexpr" Shortcut="ce" />
           <New Name="DeclType" Value="decltype" Shortcut="dt" />
           <New Name="Default" Value="default" Shortcut="d" />
-          <New Name="Delete" Value="delete" Shortcut="de" IsDevelopment="true" />
           <New Name="Friend" Value="friend" Shortcut="fd" IsDevelopment="true" />
           <New Name="Inline" Value="inline" Shortcut="il" />
           <New Name="NoExcept" Value="noexcept" Shortcut="ne" IsDevelopment="true" />
