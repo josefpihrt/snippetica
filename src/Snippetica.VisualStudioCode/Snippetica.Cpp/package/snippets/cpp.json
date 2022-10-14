@@ -132,7 +132,7 @@
     "description": "array variable (with initialization)"
   },
   "attribute": {
-    "prefix": "ae",
+    "prefix": "a",
     "body": [
       "[[${1:attribute}${TM_SELECTED_TEXT}]]${0}"
     ],
@@ -184,7 +184,7 @@
     "description": "class definition"
   },
   "conditional operator": {
-    "prefix": "co",
+    "prefix": "cop",
     "body": [
       "${1:condition} ? ${2:true} : ${3:false}${0}"
     ],
@@ -283,14 +283,14 @@
     "description": "constexpr  variable (with initialization)"
   },
   "constructor declaration": {
-    "prefix": "cr",
+    "prefix": "co",
     "body": [
       "${1:TypeName}(${2:T parameter});${0}"
     ],
     "description": "constructor declaration"
   },
   "constructor definition": {
-    "prefix": "crx",
+    "prefix": "cox",
     "body": [
       "${1:TypeName}(${2:T parameter}) {",
       "\t${TM_SELECTED_TEXT}${0}",
@@ -299,14 +299,14 @@
     "description": "constructor definition"
   },
   "copy constructor declaration": {
-    "prefix": "ccr",
+    "prefix": "cco",
     "body": [
       "${1:TypeName}(const ${1}& ${2:x});${0}"
     ],
     "description": "copy constructor declaration"
   },
   "copy constructor definition": {
-    "prefix": "ccrx",
+    "prefix": "ccox",
     "body": [
       "${1:TypeName}(const ${1}& ${2:x}) {",
       "\t${TM_SELECTED_TEXT}${0}",
@@ -329,14 +329,14 @@
     "description": "default keyword"
   },
   "destructor declaration": {
-    "prefix": "dr",
+    "prefix": "de",
     "body": [
       "~${1:TypeName}();${0}"
     ],
     "description": "destructor declaration"
   },
   "destructor definition": {
-    "prefix": "drx",
+    "prefix": "dex",
     "body": [
       "~${1:TypeName}() {",
       "\t${TM_SELECTED_TEXT}${0}",
@@ -379,14 +379,14 @@
     "description": "else-if"
   },
   "enum class declaration": {
-    "prefix": "emc",
+    "prefix": "enc",
     "body": [
       "enum class ${1:EnumClassName};${0}"
     ],
     "description": "enum class declaration"
   },
   "enum class definition": {
-    "prefix": "emcx",
+    "prefix": "encx",
     "body": [
       "enum class ${1:EnumClassName} {",
       "\t${TM_SELECTED_TEXT}${0}",
@@ -395,14 +395,14 @@
     "description": "enum class definition"
   },
   "enum declaration": {
-    "prefix": "em",
+    "prefix": "en",
     "body": [
       "enum ${1:EnumName};${0}"
     ],
     "description": "enum declaration"
   },
   "enum definition": {
-    "prefix": "emx",
+    "prefix": "enx",
     "body": [
       "enum ${1:EnumName} {",
       "\t${TM_SELECTED_TEXT}${0}",
@@ -411,14 +411,14 @@
     "description": "enum definition"
   },
   "enum struct declaration": {
-    "prefix": "emst",
+    "prefix": "enst",
     "body": [
       "enum struct ${1:EnumStructName};${0}"
     ],
     "description": "enum struct declaration"
   },
   "enum struct definition": {
-    "prefix": "emstx",
+    "prefix": "enstx",
     "body": [
       "enum struct ${1:EnumStructName} {",
       "\t${TM_SELECTED_TEXT}${0}",
@@ -427,14 +427,14 @@
     "description": "enum struct definition"
   },
   "explicit constructor declaration": {
-    "prefix": "ecr",
+    "prefix": "eco",
     "body": [
       "explicit ${1:TypeName}(${2:T parameter});${0}"
     ],
     "description": "explicit constructor declaration"
   },
   "explicit constructor definition": {
-    "prefix": "ecrx",
+    "prefix": "ecox",
     "body": [
       "explicit ${1:TypeName}(${2:T parameter}) {",
       "\t${TM_SELECTED_TEXT}${0}",
@@ -579,7 +579,7 @@
     "description": "inline keyword"
   },
   "inline namespace": {
-    "prefix": "ilns",
+    "prefix": "ina",
     "body": [
       "inline namespace ${1:NamespaceName} {",
       "\t${TM_SELECTED_TEXT}${0}",
@@ -602,7 +602,7 @@
     "description": "inline  variable (with initialization)"
   },
   "interface": {
-    "prefix": "ie",
+    "prefix": "i",
     "body": [
       "__interface ${1:InterfaceName} {",
       "\t${TM_SELECTED_TEXT}${0}",
@@ -620,7 +620,7 @@
     "description": "lambda expression"
   },
   "move constructor declaration": {
-    "prefix": "mcr",
+    "prefix": "mco",
     "body": [
       "",
       "      ${1:TypeName}(${1}&& ${2:x});${0}"
@@ -628,7 +628,7 @@
     "description": "move constructor declaration"
   },
   "move constructor definition": {
-    "prefix": "mcrx",
+    "prefix": "mcox",
     "body": [
       "",
       "      ${1:TypeName}(${1}&& ${2:x}) {",
@@ -645,7 +645,7 @@
     "description": "multi-line comment"
   },
   "namespace": {
-    "prefix": "ns",
+    "prefix": "na",
     "body": [
       "namespace ${1:NamespaceName} {",
       "\t${TM_SELECTED_TEXT}${0}",
@@ -855,7 +855,7 @@
     "description": "struct definition"
   },
   "switch": {
-    "prefix": "sh",
+    "prefix": "sw",
     "body": [
       "switch (${1:SwitchOn}) {",
       "\t${0}",
@@ -911,7 +911,7 @@
     "description": "using declaration"
   },
   "using namespace": {
-    "prefix": "uns",
+    "prefix": "una",
     "body": [
       "using namespace ${1:NamespaceName}${TM_SELECTED_TEXT};${0}"
     ],

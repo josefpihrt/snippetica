@@ -11,11 +11,11 @@
 Shortcut|Description|Comment
 --------|-----------|-------
 c|class|\-
-cr|constructor|\-
-dr|destructor|\-
-em|enum|\-
+co|constructor|\-
+de|destructor|\-
+en|enum|\-
 f|function|\-
-ns|namespace|\-
+na|namespace|\-
 st|struct|\-
 td|typedef|\-
 u|using|\-
@@ -42,16 +42,16 @@ dw|do\-while|\-
 fe|foreach|\-
 fr|for|\-
 if|if|\-
-sh|switch|\-
+sw|switch|\-
 tc|try\-catch|\-
-we|while|\-
+w|while|\-
 
 #### Other
 
 Shortcut|Description|Comment
 --------|-----------|-------
-ae|attribute|\-
-co|conditional operator|\-
+a|attribute|\-
+cop|conditional operator|\-
 ct|cast|suffix
 d|default keyword|\-
 dt|decltype keyword|\-
@@ -68,48 +68,48 @@ t|template|\-
 
 Shortcut|Title
 --------|-----
-ae|[attribute](Attribute.snippet)
+a|[attribute](Attribute.snippet)
 b|[braces](Braces.snippet)
 c|[class declaration](ClassDeclaration.snippet)
 catch|[catch](Catch.snippet)
 cc|[const class](ConstClass.snippet)
-ccr|[copy constructor declaration](CopyConstructorDeclaration.snippet)
+cco|[copy constructor declaration](CopyConstructorDeclaration.snippet)
 cct|[const cast](ConstCast.snippet)
 ce|[constexpr keyword](ConstExprKeyword.snippet)
 cef|[constexpr function declaration](ConstExprFunctionDeclaration.snippet)
 cev|[constexpr variable](ConstExprVariable.snippet)
 cf|[const function declaration](ConstFunctionDeclaration.snippet)
-co|[conditional operator](ConditionalOperator.snippet)
-cr|[constructor declaration](ConstructorDeclaration.snippet)
+co|[constructor declaration](ConstructorDeclaration.snippet)
+cop|[conditional operator](ConditionalOperator.snippet)
 cst|[const struct](ConstStruct.snippet)
 cv|[const variable](ConstVariable.snippet)
 d|[default keyword](DefaultKeyword.snippet)
 dct|[dynamic cast](DynamicCast.snippet)
-dr|[destructor declaration](DestructorDeclaration.snippet)
+de|[destructor declaration](DestructorDeclaration.snippet)
 dt|[decltype keyword](DeclTypeKeyword.snippet)
 dw|[do-while](DoWhile.snippet)
 e|[else](Else.snippet)
-ecr|[explicit constructor declaration](ExplicitConstructorDeclaration.snippet)
+eco|[explicit constructor declaration](ExplicitConstructorDeclaration.snippet)
 eif|[else-if](ElseIf.snippet)
-em|[enum declaration](EnumDeclaration.snippet)
-emc|[enum class declaration](EnumClassDeclaration.snippet)
-emst|[enum struct declaration](EnumStructDeclaration.snippet)
+en|[enum declaration](EnumDeclaration.snippet)
+enc|[enum class declaration](EnumClassDeclaration.snippet)
+enst|[enum struct declaration](EnumStructDeclaration.snippet)
 f|[function declaration](FunctionDeclaration.snippet)
 fr|[for](For.snippet)
 frr|[for (reversed)](ForReversed.snippet)
 frrb|[for (range-based)](ForRangeBased.snippet)
-ie|[interface](Interface.snippet)
+i|[interface](Interface.snippet)
 if|[if](If.snippet)
 ifce|[if constexpr](IfConstExpr.snippet)
 il|[inline keyword](InlineKeyword.snippet)
 ilcv|[inline const variable](InlineConstVariable.snippet)
-ilns|[inline namespace](InlineNamespace.snippet)
 ilv|[inline variable](InlineVariable.snippet)
+ina|[inline namespace](InlineNamespace.snippet)
 l|[lambda expression](LambdaExpression.snippet)
 mc|[multi-line comment](MultilineComment.snippet)
-mcr|[move constructor declaration](MoveConstructorDeclaration.snippet)
+mco|[move constructor declaration](MoveConstructorDeclaration.snippet)
+na|[namespace](Namespace.snippet)
 np|[nullptr keyword](NullPtrKeyword.snippet)
-ns|[namespace](Namespace.snippet)
 ppd|[#define](PreprocessorDirectiveDefine.snippet)
 ppe|[#error](PreprocessorDirectiveError.snippet)
 ppi|[#include](PreprocessorDirectiveInclude.snippet)
@@ -131,19 +131,19 @@ scf|[static const function declaration](StaticConstFunctionDeclaration.snippet)
 sct|[static cast](StaticCast.snippet)
 scv|[static const variable](StaticConstVariable.snippet)
 sf|[static function declaration](StaticFunctionDeclaration.snippet)
-sh|[switch](Switch.snippet)
 silcv|[static inline const variable](StaticInlineConstVariable.snippet)
 silv|[static inline variable](StaticInlineVariable.snippet)
 so|[sizeof keyword](SizeOfKeyword.snippet)
 st|[struct declaration](StructDeclaration.snippet)
 sv|[static variable](StaticVariable.snippet)
+sw|[switch](Switch.snippet)
 t|[template](Template.snippet)
 t2|[template with 2 parameters](TemplateWithTwoParameters.snippet)
 tc|[try-catch](TryCatch.snippet)
 td|[typedef declaration](TypeDefDeclaration.snippet)
 u|[using declaration](UsingDeclaration.snippet)
 un|[union](Union.snippet)
-uns|[using namespace](UsingNamespace.snippet)
+una|[using namespace](UsingNamespace.snippet)
 v|[variable](Variable.snippet)
 va|[array variable](ArrayOfTVariable.snippet)
 vf|[virtual function declaration](VirtualFunctionDeclaration.snippet)

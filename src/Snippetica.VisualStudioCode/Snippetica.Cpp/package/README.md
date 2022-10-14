@@ -9,11 +9,11 @@
 Shortcut|Description|Comment
 --------|-----------|-------
 c|class|\-
-cr|constructor|\-
-dr|destructor|\-
-em|enum|\-
+co|constructor|\-
+de|destructor|\-
+en|enum|\-
 f|function|\-
-ns|namespace|\-
+na|namespace|\-
 st|struct|\-
 td|typedef|\-
 u|using|\-
@@ -40,16 +40,16 @@ dw|do\-while|\-
 fe|foreach|\-
 fr|for|\-
 if|if|\-
-sh|switch|\-
+sw|switch|\-
 tc|try\-catch|\-
-we|while|\-
+w|while|\-
 
 #### Other
 
 Shortcut|Description|Comment
 --------|-----------|-------
-ae|attribute|\-
-co|conditional operator|\-
+a|attribute|\-
+cop|conditional operator|\-
 ct|cast|suffix
 d|default keyword|\-
 dt|decltype keyword|\-
@@ -66,48 +66,48 @@ t|template|\-
 
 Shortcut|Title
 --------|-----
-ae|attribute
+a|attribute
 b|braces
 c|class declaration
 catch|catch
 cc|const class
-ccr|copy constructor declaration
+cco|copy constructor declaration
 cct|const cast
 ce|constexpr keyword
 cef|constexpr function declaration
 cev|constexpr variable
 cf|const function declaration
-co|conditional operator
-cr|constructor declaration
+co|constructor declaration
+cop|conditional operator
 cst|const struct
 cv|const variable
 d|default keyword
 dct|dynamic cast
-dr|destructor declaration
+de|destructor declaration
 dt|decltype keyword
 dw|do\-while
 e|else
-ecr|explicit constructor declaration
+eco|explicit constructor declaration
 eif|else\-if
-em|enum declaration
-emc|enum class declaration
-emst|enum struct declaration
+en|enum declaration
+enc|enum class declaration
+enst|enum struct declaration
 f|function declaration
 fr|for
 frr|for \(reversed\)
 frrb|for \(range\-based\)
-ie|interface
+i|interface
 if|if
 ifce|if constexpr
 il|inline keyword
 ilcv|inline const variable
-ilns|inline namespace
 ilv|inline variable
+ina|inline namespace
 l|lambda expression
 mc|multi\-line comment
-mcr|move constructor declaration
+mco|move constructor declaration
+na|namespace
 np|nullptr keyword
-ns|namespace
 ppd|\#define
 ppe|\#error
 ppi|\#include
@@ -129,19 +129,19 @@ scf|static const function declaration
 sct|static cast
 scv|static const variable
 sf|static function declaration
-sh|switch
 silcv|static inline const variable
 silv|static inline variable
 so|sizeof keyword
 st|struct declaration
 sv|static variable
+sw|switch
 t|template
 t2|template with 2 parameters
 tc|try\-catch
 td|typedef declaration
 u|using declaration
 un|union
-uns|using namespace
+una|using namespace
 v|variable
 va|array variable
 vf|virtual function declaration

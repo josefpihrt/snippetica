@@ -13,13 +13,6 @@
     ],
     "description": "alignof keyword"
   },
-  "auto keyword": {
-    "prefix": "a",
-    "body": [
-      "auto${0}"
-    ],
-    "description": "auto keyword"
-  },
   "bool variable": {
     "prefix": "vb",
     "body": [
@@ -57,20 +50,6 @@
       "continue;${0}"
     ],
     "description": "continue statement"
-  },
-  "delete keyword": {
-    "prefix": "de",
-    "body": [
-      "delete${0}"
-    ],
-    "description": "delete keyword"
-  },
-  "extern keyword": {
-    "prefix": "en",
-    "body": [
-      "extern${0}"
-    ],
-    "description": "extern keyword"
   },
   "friend keyword": {
     "prefix": "fd",

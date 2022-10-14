@@ -2,14 +2,11 @@
 
 Shortcut|Title
 --------|-----
-a|auto keyword
 aa|alignas keyword
 ao|alignof keyword
 bs|break statement
 cil|class with inline constructor/destructor
 cs|continue statement
-de|delete keyword
-en|extern keyword
 fd|friend keyword
 lm|lambda expression \(minimal\)
 ne|noexcept keyword

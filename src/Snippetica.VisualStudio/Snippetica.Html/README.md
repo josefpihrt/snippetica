@@ -6,8 +6,6 @@
 
 ### Quick Reference
 
-* Snippet can be inserted by providing full name of an element (for example **div**).
-* If you want to provide element's content right during snippet insertion you can do it by appending **x** to the element name (for example **divx**).
 Shortcut|Description|Comment
 --------|-----------|-------
 a|\(element\) with attribute|suffix

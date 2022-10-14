@@ -2,7 +2,7 @@
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
     <Title>internal event</Title>
-    <Shortcut>iet</Shortcut>
+    <Shortcut>iev</Shortcut>
     <Description>internal event declaration</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
@@ -22,16 +22,21 @@
     </Imports>
     <Declarations>
       <Literal>
+        <ID>eventArgs</ID>
+        <ToolTip>EventArgs type name</ToolTip>
+        <Default>EventArgs</Default>
+      </Literal>
+      <Literal>
         <ID>name</ID>
         <ToolTip>Event name</ToolTip>
         <Default>EventName</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[internal event EventHandler $name$;
+    <Code Language="CSharp"><![CDATA[internal event EventHandler<$eventArgs$> $name$;
 
-protected virtual void On$name$(EventArgs e) {
-	EventHandler handler = $name$;
-	if (handler != null) {
+protected virtual void On$name$($eventArgs$ e) {
+	EventHandler<$eventArgs$> handler = $name$;
+	if (handler is not null) {
 		handler(this, e);
 	}
 }$end$]]></Code>

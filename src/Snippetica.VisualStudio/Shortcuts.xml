@@ -46,7 +46,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="cr" Description="constructor declaration" Comment="-">
+  <ShortcutInfo Value="co" Description="constructor declaration" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
@@ -60,14 +60,14 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="em" Description="enum declaration" Comment="-">
+  <ShortcutInfo Value="en" Description="enum declaration" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="et" Description="event declaration" Comment="-">
+  <ShortcutInfo Value="ev" Description="event declaration" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
@@ -81,14 +81,14 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="ie" Description="interface declaration" Comment="-">
+  <ShortcutInfo Value="i" Description="interface declaration" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="ir" Description="indexer declaration" Comment="-">
+  <ShortcutInfo Value="in" Description="indexer declaration" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
@@ -116,13 +116,6 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="pp" Description="property declaration (expanded)" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
   <ShortcutInfo Value="st" Description="struct declaration" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -130,14 +123,14 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="rd" Description="record declaration" Comment="-">
+  <ShortcutInfo Value="re" Description="record declaration" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="me" Description="Module declaration" Comment="-">
+  <ShortcutInfo Value="mo" Description="Module declaration" Comment="-">
     <Languages>
       <Language>VisualBasic</Language>
     </Languages>
@@ -206,7 +199,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="co" Description="conditional operator" Comment="-">
+  <ShortcutInfo Value="cop" Description="conditional operator" Comment="-">
     <Languages>
       <Language>CSharp</Language>
     </Languages>
@@ -257,13 +250,6 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="re" Description="return statement" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
   <ShortcutInfo Value="t" Description="try statement" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -271,7 +257,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="tw" Description="throw statement" Comment="-">
+  <ShortcutInfo Value="th" Description="throw statement" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
@@ -285,14 +271,14 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="we" Description="while statement" Comment="-">
+  <ShortcutInfo Value="w" Description="while statement" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="sh" Description="switch statement" Comment="-">
+  <ShortcutInfo Value="sw" Description="switch statement" Comment="-">
     <Languages>
       <Language>CSharp</Language>
     </Languages>
@@ -353,20 +339,6 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="rr" Description="Reader" Comment="suffix">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="wr" Description="Writer" Comment="suffix">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
   <ShortcutInfo Value="c" Description="Collection&lt;T&gt;" Comment="-">
     <Languages>
       <Language>CSharp</Language>
@@ -389,13 +361,6 @@
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="i" Description="Immutable" Comment="prefix">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="l" Description="Int64" Comment="-">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
@@ -452,20 +417,6 @@
     <Tags />
   </ShortcutInfo>
   <ShortcutInfo Value="f" Description="finally clause" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="g" Description="type parameter" Comment="-">
-    <Languages>
-      <Language>CSharp</Language>
-      <Language>VisualBasic</Language>
-    </Languages>
-    <Tags />
-  </ShortcutInfo>
-  <ShortcutInfo Value="g" Description="generic type" Comment="prefix">
     <Languages>
       <Language>CSharp</Language>
       <Language>VisualBasic</Language>
@@ -548,19 +499,19 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="cr" Description="constructor" Comment="-">
+  <ShortcutInfo Value="co" Description="constructor" Comment="-">
     <Languages>
       <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="dr" Description="destructor" Comment="-">
+  <ShortcutInfo Value="de" Description="destructor" Comment="-">
     <Languages>
       <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="em" Description="enum" Comment="-">
+  <ShortcutInfo Value="en" Description="enum" Comment="-">
     <Languages>
       <Language>Cpp</Language>
     </Languages>
@@ -572,7 +523,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="ns" Description="namespace" Comment="-">
+  <ShortcutInfo Value="na" Description="namespace" Comment="-">
     <Languages>
       <Language>Cpp</Language>
     </Languages>
@@ -674,7 +625,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="sh" Description="switch" Comment="-">
+  <ShortcutInfo Value="sw" Description="switch" Comment="-">
     <Languages>
       <Language>Cpp</Language>
     </Languages>
@@ -686,19 +637,19 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="we" Description="while" Comment="-">
+  <ShortcutInfo Value="w" Description="while" Comment="-">
     <Languages>
       <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="ae" Description="attribute" Comment="-">
+  <ShortcutInfo Value="a" Description="attribute" Comment="-">
     <Languages>
       <Language>Cpp</Language>
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="co" Description="conditional operator" Comment="-">
+  <ShortcutInfo Value="cop" Description="conditional operator" Comment="-">
     <Languages>
       <Language>Cpp</Language>
     </Languages>

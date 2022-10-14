@@ -4,14 +4,11 @@
 
 Shortcut|Title
 --------|-----
-a|[auto keyword](AutoKeyword.snippet)
 aa|[alignas keyword](AlignAsKeyword.snippet)
 ao|[alignof keyword](AlignOfKeyword.snippet)
 bs|[break statement](BreakStatement.snippet)
 cil|[class with inline constructor/destructor](ClassWithInlineConstructorDestructor.snippet)
 cs|[continue statement](ContinueStatement.snippet)
-de|[delete keyword](DeleteKeyword.snippet)
-en|[extern keyword](ExternKeyword.snippet)
 fd|[friend keyword](FriendKeyword.snippet)
 lm|[lambda expression (minimal)](LambdaExpressionMinimal.snippet)
 ne|[noexcept keyword](NoExceptKeyword.snippet)

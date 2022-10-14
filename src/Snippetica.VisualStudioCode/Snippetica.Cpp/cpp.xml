@@ -75,7 +75,7 @@
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>attribute</Title>
-      <Shortcut>ae</Shortcut>
+      <Shortcut>a</Shortcut>
       <Description>attribute</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -213,7 +213,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>conditional operator</Title>
-      <Shortcut>co</Shortcut>
+      <Shortcut>cop</Shortcut>
       <Description>conditional operator</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -524,7 +524,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>constructor declaration</Title>
-      <Shortcut>cr</Shortcut>
+      <Shortcut>co</Shortcut>
       <Description>constructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -553,7 +553,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>constructor definition</Title>
-      <Shortcut>crx</Shortcut>
+      <Shortcut>cox</Shortcut>
       <Description>constructor definition</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -674,7 +674,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>copy constructor declaration</Title>
-      <Shortcut>ccr</Shortcut>
+      <Shortcut>cco</Shortcut>
       <Description>copy constructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -703,7 +703,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>copy constructor definition</Title>
-      <Shortcut>ccrx</Shortcut>
+      <Shortcut>ccox</Shortcut>
       <Description>copy constructor definition</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -769,7 +769,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>destructor declaration</Title>
-      <Shortcut>dr</Shortcut>
+      <Shortcut>de</Shortcut>
       <Description>destructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -793,7 +793,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>destructor definition</Title>
-      <Shortcut>drx</Shortcut>
+      <Shortcut>dex</Shortcut>
       <Description>destructor definition</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -923,7 +923,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>enum class declaration</Title>
-      <Shortcut>emc</Shortcut>
+      <Shortcut>enc</Shortcut>
       <Description>enum class declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -947,7 +947,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>enum class definition</Title>
-      <Shortcut>emcx</Shortcut>
+      <Shortcut>encx</Shortcut>
       <Description>enum class definition</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -974,7 +974,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>enum declaration</Title>
-      <Shortcut>em</Shortcut>
+      <Shortcut>en</Shortcut>
       <Description>enum declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -998,7 +998,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>enum definition</Title>
-      <Shortcut>emx</Shortcut>
+      <Shortcut>enx</Shortcut>
       <Description>enum definition</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1025,7 +1025,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>enum struct declaration</Title>
-      <Shortcut>emst</Shortcut>
+      <Shortcut>enst</Shortcut>
       <Description>enum struct declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1049,7 +1049,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>enum struct definition</Title>
-      <Shortcut>emstx</Shortcut>
+      <Shortcut>enstx</Shortcut>
       <Description>enum struct definition</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1076,7 +1076,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>explicit constructor declaration</Title>
-      <Shortcut>ecr</Shortcut>
+      <Shortcut>eco</Shortcut>
       <Description>explicit constructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1105,7 +1105,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>explicit constructor definition</Title>
-      <Shortcut>ecrx</Shortcut>
+      <Shortcut>ecox</Shortcut>
       <Description>explicit constructor definition</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1516,7 +1516,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>inline namespace</Title>
-      <Shortcut>ilns</Shortcut>
+      <Shortcut>ina</Shortcut>
       <Description>inline namespace definition</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1605,7 +1605,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>interface</Title>
-      <Shortcut>ie</Shortcut>
+      <Shortcut>i</Shortcut>
       <Description>interface definition</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1668,7 +1668,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>move constructor declaration</Title>
-      <Shortcut>mcr</Shortcut>
+      <Shortcut>mco</Shortcut>
       <Description>move constructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1698,7 +1698,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>move constructor definition</Title>
-      <Shortcut>mcrx</Shortcut>
+      <Shortcut>mcox</Shortcut>
       <Description>move constructor definition</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1756,7 +1756,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>namespace</Title>
-      <Shortcut>ns</Shortcut>
+      <Shortcut>na</Shortcut>
       <Description>namespace definition</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3092,7 +3092,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>switch</Title>
-      <Shortcut>sh</Shortcut>
+      <Shortcut>sw</Shortcut>
       <Description>switch statement</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3304,7 +3304,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>using namespace</Title>
-      <Shortcut>uns</Shortcut>
+      <Shortcut>una</Shortcut>
       <Description>using namespace</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>

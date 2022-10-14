@@ -2,7 +2,7 @@
 <CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
     <Title>interface event</Title>
-    <Shortcut>_et</Shortcut>
+    <Shortcut>_ev</Shortcut>
     <Description>interface event declaration</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
@@ -17,11 +17,16 @@
     </Imports>
     <Declarations>
       <Literal>
+        <ID>eventArgs</ID>
+        <ToolTip>EventArgs type name</ToolTip>
+        <Default>EventArgs</Default>
+      </Literal>
+      <Literal>
         <ID>name</ID>
         <ToolTip>Event name</ToolTip>
         <Default>EventName</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[event EventHandler $name$;$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[event EventHandler<$eventArgs$> $name$;$end$]]></Code>
   </Snippet>
 </CodeSnippet>

@@ -4,26 +4,23 @@
 
 ### Quick Reference
 
-* Default access modifier is **public**.
-
 #### Member Declaration
 
 Shortcut|Description|Comment
 --------|-----------|-------
 \_|interface member declaration|prefix
 c|class declaration|\-
-cr|constructor declaration|\-
+co|constructor declaration|\-
 de|delegate declaration|\-
-em|enum declaration|\-
-et|event declaration|\-
+en|enum declaration|\-
+ev|event declaration|\-
 f|field declaration|\-
-ie|interface declaration|\-
-ir|indexer declaration|\-
+i|interface declaration|\-
+in|indexer declaration|\-
 k|constant declaration|\-
 m|method declaration|\-
 p|property declaration|\-
-pp|property declaration \(expanded\)|\-
-rd|record declaration|\-
+re|record declaration|\-
 st|struct declaration|\-
 
 #### Modifer
@@ -43,18 +40,17 @@ Shortcut|Description|Comment
 fe|foreach statement|\-
 fr|for statement|\-
 if|if statement|\-
-re|return statement|\-
-sh|switch statement|\-
+sw|switch statement|\-
 t|try statement|\-
-tw|throw statement|\-
+th|throw statement|\-
 u|using statement|\-
-we|while statement|\-
+w|while statement|\-
 
 #### Operator
 
 Shortcut|Description|Comment
 --------|-----------|-------
-co|conditional operator|\-
+cop|conditional operator|\-
 n|new object creation|\-
 no|nameof operator|\-
 oo|operator overload|\-
@@ -70,11 +66,9 @@ a|Array|\-
 b|Boolean|\-
 dt|DateTime|\-
 i|Int32|\-
-l|List\<T>|\-
+l|List\<T\>|\-
 o|Object|\-
-rr|Reader|suffix
 s|String|\-
-wr|Writer|suffix
 
 #### Other
 
@@ -84,8 +78,6 @@ c|catch clause|\-
 d|default keyword|\-
 e|else clause|\-
 f|finally clause|\-
-g|generic type|prefix
-g|type parameter|\-
 l|lambda expression|\-
 n|\(equals to\) null|\-
 pa|parameter array|\-
@@ -100,9 +92,8 @@ y|yield|prefix
 
 Shortcut|Title
 --------|-----
-\_et|interface event
-\_ett|interface event with EventHandler\<T>
-\_ir|interface indexer
+\_ev|interface event
+\_in|interface indexer
 \_m|interface method
 \_p|interface property
 \_rp|interface read\-only property
@@ -120,10 +111,10 @@ a\_tc|TypeConverter attribute
 b|braces
 c|public class
 catch|catch clause
-co|conditional operator
-con|conditional operator \(equal to null\)
-coxn|conditional operator \(not equal to null\)
-cr|public constructor
+co|public constructor
+cop|conditional operator
+copn|conditional operator \(equal to null\)
+copxn|conditional operator \(not equal to null\)
 d|default keyword
 da|Debug\.Assert
 de|public delegate
@@ -135,23 +126,23 @@ dto|DateTimeOffset type
 dw|Debug\.WriteLine
 e|else clause
 eif|else\-if
-em|public enum
+en|public enum
 equals|Equals and GetHashCode
 f|public field
 fe|foreach statement
 finally|finally clause
 fr|for statement
 frr|for statement \(reversed\)
-g| type parameter
-ie|public interface
+i|public interface
 ifn|if equal to null
 iftp|if TryParse
 ifx|if not
 ifxn|if not equal to null
 ifxtp|if not TryParse
-ir|public indexer
+in|public indexer
 k|public const
 kvp|KeyValuePair type
+kvpc|KeyValuePair\.Create method
 l|lambda expression
 l0|lambda expression without parameters
 l2|lambda expression with 2 parameters
@@ -166,22 +157,22 @@ ppife|\#if\-\#else directive
 ppr|\#region directive
 pps|public auto property with private setter
 r|return keyword
-rd|public record
-rdst|public record struct
+re|public record
 ref|return false
 ren|return null
+rest|public record struct
 ret|return true
 rf|public read\-only field
-rir|public read\-only indexer
+rin|public read\-only indexer
 rp|public read\-only auto property
 rpp|public read\-only property
-rrdst|public readonly record struct
+rrest|public readonly record struct
 rst|public read\-only struct
 s|string keyword
 sc|public static class
-scr|static constructor
+sco|static constructor
 sf|public static field
-sh|switch statement
+sh|switch statement \[Obsolete\]
 sm|public static method
 sne|string\.IsNullOrEmpty
 snw|string\.IsNullOrWhiteSpace
@@ -189,15 +180,18 @@ srf|public static read\-only field
 srp|public static read\-only auto property
 srpp|public static read\-only property
 st|public struct
+sw|switch statement
+swe|switch expression
 t|explicit cast operator
 tc|try\-catch
 tcf|try\-catch\-finally
 td|TODO comment
 tf|try\-finally
+thn|throw new
 to|typeof operator
-twn|throw new
 u|using statement
 us|using static directive
+uv|using variable
 v|local variable declaration
 va|array variable
 vb|Boolean variable
@@ -209,10 +203,13 @@ vrp|public virtual read\-only auto property
 vrpp|public virtual read\-only property
 vs|String variable
 vt|local variable declaration with explicit cast operator
-we|while statement
-wen|while null
-wexn|while not null
+w|while statement
+we|while statement \[Obsolete\]
+wen|while null \[Obsolete\]
+wexn|while not null \[Obsolete\]
 where|generic type constraint
+wn|while null
+wxn|while not null
 xn|not equal to null
 xsne|\!string\.IsNullOrEmpty
 xsnw|\!string\.IsNullOrWhiteSpace

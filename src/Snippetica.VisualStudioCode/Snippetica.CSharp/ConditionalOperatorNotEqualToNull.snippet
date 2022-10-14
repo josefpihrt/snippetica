@@ -2,7 +2,7 @@
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
     <Title>conditional operator (not equal to null)</Title>
-    <Shortcut>coxn</Shortcut>
+    <Shortcut>copxn</Shortcut>
     <Description>conditional operator with condition whether the expression is not equal to null</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
@@ -27,6 +27,6 @@
         <Default>true</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[($expression$ != null) ? $true$ : $false$$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[($expression$ is not null) ? $true$ : $false$$end$]]></Code>
   </Snippet>
 </CodeSnippet>

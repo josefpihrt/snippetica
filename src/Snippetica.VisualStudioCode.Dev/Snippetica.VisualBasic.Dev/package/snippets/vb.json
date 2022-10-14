@@ -7,7 +7,7 @@
     "description": "array type"
   },
   "if Enum.TryParse": {
-    "prefix": "ifemtp",
+    "prefix": "ifentp",
     "body": [
       "Dim ${1:result} As ${2:TEnum}",
       "If Enum.TryParse(${3:value}, ${1})",
@@ -17,7 +17,7 @@
     "description": "if statement with condition whether Enum.TryParse method returns true."
   },
   "if not Enum.TryParse": {
-    "prefix": "ifxemtp",
+    "prefix": "ifxentp",
     "body": [
       "Dim ${1:result} As ${2:TEnum}",
       "If Not Enum.TryParse(${3:value}, ${1})",
@@ -25,15 +25,6 @@
       "End If"
     ],
     "description": "if statement with condition whether Enum.TryParse method returns false."
-  },
-  "namespace": {
-    "prefix": "ns",
-    "body": [
-      "Namespace ${1:NamespaceName}",
-      "\t${TM_SELECTED_TEXT}${0}",
-      "End Namespace"
-    ],
-    "description": "namespace declaration"
   },
   "new array ": {
     "prefix": "na",
@@ -71,7 +62,7 @@
     "description": "StringBuilder variable declaration"
   },
   "Throw statement": {
-    "prefix": "tw",
+    "prefix": "th",
     "body": [
       "Throw${0}"
     ],

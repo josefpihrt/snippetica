@@ -2,7 +2,7 @@
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
     <Title>Friend event</Title>
-    <Shortcut>iet</Shortcut>
+    <Shortcut>iev</Shortcut>
     <Description>Friend event declaration</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
@@ -22,6 +22,11 @@
     </Imports>
     <Declarations>
       <Literal>
+        <ID>eventArgs</ID>
+        <ToolTip>EventArgs type name</ToolTip>
+        <Default>EventArgs</Default>
+      </Literal>
+      <Literal>
         <ID>name</ID>
         <ToolTip>Event name</ToolTip>
         <Default>EventName</Default>
@@ -32,9 +37,9 @@
         <Default>e</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Friend Event $name$ As EventHandler
+    <Code Language="VB"><![CDATA[Friend Event $name$ As EventHandler(Of $eventArgs$)
 
-Protected Overridable Sub On$name$($parameterName$ As EventArgs)
+Protected Overridable Sub On$name$($parameterName$ As $eventArgs$)
 	RaiseEvent $name$(Me, $parameterName$)
 End Sub$end$]]></Code>
   </Snippet>

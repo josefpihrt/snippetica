@@ -334,7 +334,7 @@ $modifier$ class $name$Attribute : $base$ {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>conditional operator</Title>
-      <Shortcut>co</Shortcut>
+      <Shortcut>cop</Shortcut>
       <Description>conditional operator</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -368,7 +368,7 @@ $modifier$ class $name$Attribute : $base$ {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>conditional operator (equal to null)</Title>
-      <Shortcut>con</Shortcut>
+      <Shortcut>copn</Shortcut>
       <Description>conditional operator with condition whether the expression is equal to null</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -396,13 +396,13 @@ $modifier$ class $name$Attribute : $base$ {
           <Default>true</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[($expression$ == null) ? $true$ : $false$$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[($expression$ is null) ? $true$ : $false$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>conditional operator (not equal to null)</Title>
-      <Shortcut>coxn</Shortcut>
+      <Shortcut>copxn</Shortcut>
       <Description>conditional operator with condition whether the expression is not equal to null</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -430,7 +430,7 @@ $modifier$ class $name$Attribute : $base$ {
           <Default>true</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[($expression$ != null) ? $true$ : $false$$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[($expression$ is not null) ? $true$ : $false$$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -848,7 +848,7 @@ protected virtual void Dispose(bool disposing) {
       <Code Language="CSharp"><![CDATA[do {
 	$end$
 
-} while ($expression$ != null);]]></Code>
+} while ($expression$ is not null);]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -875,7 +875,7 @@ protected virtual void Dispose(bool disposing) {
       <Code Language="CSharp"><![CDATA[do {
 	$end$
 
-} while ($expression$ == null);]]></Code>
+} while ($expression$ is null);]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -1069,7 +1069,7 @@ private class EnumeratorImpl : IEnumerator<$elementType$>
       </Declarations>
       <Code Language="CSharp"><![CDATA[public override bool Equals(object obj) {
 	var other = obj as $thisName$;
-	if (other == null) {
+	if (other is null) {
 		return false;
 	}
 
@@ -1145,7 +1145,7 @@ public override int GetHashCode() {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$left$ == null$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[$left$ is null$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -1440,11 +1440,11 @@ $modifier$ class $name$Exception : $base$ {
 			return 0;
 		}
 
-		if (x == null) {
-			return (y == null) ? 0 : -1;
+		if (x is null) {
+			return (y is null) ? 0 : -1;
 		}
 
-		if (y == null) {
+		if (y is null) {
 			return 1;
 		}
 
@@ -1502,49 +1502,16 @@ $modifier$ class $name$Exception : $base$ {
 			return 0;
 		}
 
-		if (x == null) {
+		if (x is null) {
 			return -1;
 		}
 
-		if (y == null) {
+		if (y is null) {
 			return 1;
 		}
 
 		$end$
 		throw new NotImplementedException();
-	}
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>IEnumerator&lt;T&gt; variable</Title>
-      <Shortcut>u_er</Shortcut>
-      <Description>IEnumerator&lt;T&gt; variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IEnumeratorOfTVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Collection identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>enumerator</ID>
-          <ToolTip>Enumerator identifier name</ToolTip>
-          <Default>en</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $enumerator$ = $_collectionIdentifier$.GetEnumerator()) {
-	while ($enumerator$.MoveNext()) {
-		$end$
 	}
 }]]></Code>
     </Snippet>
@@ -1594,7 +1561,7 @@ $modifier$ class $name$Exception : $base$ {
 			return true;
 		}
 
-		if (x == null || y == null) {
+		if (x is null || y is null) {
 			return false;
 		}
 
@@ -1606,7 +1573,7 @@ $modifier$ class $name$Exception : $base$ {
 	}
 
 	public int GetHashCode(object obj) {
-		if (obj == null) {
+		if (obj is null) {
 			return 0;
 		}
 
@@ -1660,7 +1627,7 @@ $modifier$ class $name$Exception : $base$ {
 			return true;
 		}
 
-		if (x == null || y == null) {
+		if (x is null || y is null) {
 			return false;
 		}
 
@@ -1669,7 +1636,7 @@ $modifier$ class $name$Exception : $base$ {
 	}
 
 	public override int GetHashCode($type$ obj) {
-		if (obj == null) {
+		if (obj is null) {
 			return 0;
 		}
 
@@ -1699,7 +1666,7 @@ $modifier$ class $name$Exception : $base$ {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ == null) {
+      <Code Language="CSharp"><![CDATA[if ($expression$ is null) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -1751,7 +1718,7 @@ $modifier$ class $name$Exception : $base$ {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ != null) {
+      <Code Language="CSharp"><![CDATA[if ($expression$ is not null) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -1862,7 +1829,7 @@ if ($_type$.TryParse($value$, out $result$)) {
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>interface event</Title>
-      <Shortcut>_et</Shortcut>
+      <Shortcut>_ev</Shortcut>
       <Description>interface event declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1870,35 +1837,6 @@ if ($_type$.TryParse($value$, out $result$)) {
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name InterfaceEvent</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Event name</ToolTip>
-          <Default>EventName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[event EventHandler $name$;$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>interface event with EventHandler&lt;T&gt;</Title>
-      <Shortcut>_ett</Shortcut>
-      <Description>interface event declaration with EventHandler&lt;T&gt;</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InterfaceEventWithEventHandlerOfT</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1925,7 +1863,7 @@ if ($_type$.TryParse($value$, out $result$)) {
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>interface indexer</Title>
-      <Shortcut>_ir</Shortcut>
+      <Shortcut>_in</Shortcut>
       <Description>interface indexer declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2164,7 +2102,7 @@ if ($_type$.TryParse($value$, out $result$)) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>internal constructor</Title>
-      <Shortcut>icr</Shortcut>
+      <Shortcut>ico</Shortcut>
       <Description>internal constructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2229,7 +2167,7 @@ if ($_type$.TryParse($value$, out $result$)) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>internal enum</Title>
-      <Shortcut>iem</Shortcut>
+      <Shortcut>ien</Shortcut>
       <Description>internal enum declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2255,7 +2193,7 @@ if ($_type$.TryParse($value$, out $result$)) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>internal event</Title>
-      <Shortcut>iet_EventHandler</Shortcut>
+      <Shortcut>iev_EventHandler</Shortcut>
       <Description>internal event declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2263,42 +2201,6 @@ if ($_type$.TryParse($value$, out $result$)) {
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name InternalEvent</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Event name</ToolTip>
-          <Default>EventName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[internal event EventHandler $name$;
-
-protected virtual void On$name$(EventArgs e) {
-	EventHandler handler = $name$;
-	if (handler != null) {
-		handler(this, e);
-	}
-}$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>internal event with EventHandler&lt;T&gt;</Title>
-      <Shortcut>iet_EventHandlerOfT</Shortcut>
-      <Description>internal event declaration with EventHandler&lt;T&gt;</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalEventWithEventHandlerOfT</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -2323,7 +2225,7 @@ protected virtual void On$name$(EventArgs e) {
 
 protected virtual void On$name$($eventArgs$ e) {
 	EventHandler<$eventArgs$> handler = $name$;
-	if (handler != null) {
+	if (handler is not null) {
 		handler(this, e);
 	}
 }$end$]]></Code>
@@ -2332,7 +2234,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>internal indexer</Title>
-      <Shortcut>iir</Shortcut>
+      <Shortcut>iin</Shortcut>
       <Description>internal indexer declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2364,7 +2266,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>internal interface</Title>
-      <Shortcut>iie</Shortcut>
+      <Shortcut>ii</Shortcut>
       <Description>internal interface declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2484,7 +2386,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>internal read-only indexer</Title>
-      <Shortcut>irir</Shortcut>
+      <Shortcut>irin</Shortcut>
       <Description>internal read-only indexer declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2556,7 +2458,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>internal readonly record struct</Title>
-      <Shortcut>irrdst</Shortcut>
+      <Shortcut>irrest</Shortcut>
       <Description>internal readonly record struct declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2611,7 +2513,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>internal record</Title>
-      <Shortcut>ird</Shortcut>
+      <Shortcut>ire</Shortcut>
       <Description>internal record declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2641,7 +2543,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>internal record struct</Title>
-      <Shortcut>irdst</Shortcut>
+      <Shortcut>irest</Shortcut>
       <Description>internal record struct declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3003,6 +2905,28 @@ protected virtual void On$name$($eventArgs$ e) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>KeyValuePair.Create method</Title>
+      <Shortcut>kvpc</Shortcut>
+      <Description>KeyValuePair.Create method</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name KeyValuePairCreate</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp"><![CDATA[KeyValuePair.Create$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>lambda expression</Title>
       <Shortcut>l</Shortcut>
       <Description>lambda expression</Description>
@@ -3169,7 +3093,7 @@ protected virtual void On$name$($eventArgs$ e) {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[$left$ != null$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[$left$ is not null$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -3288,6 +3212,74 @@ protected virtual void On$name$($eventArgs$ e) {
 
 	$end$
 }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>switch statement [Obsolete]</Title>
+      <Shortcut>sh</Shortcut>
+      <Description>switch statement [Obsolete]</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Obsolete_SwitchStatement</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp"><![CDATA[/* Shortcut 'sh' is obsolete, use 'sw' instead. */$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>while statement [Obsolete]</Title>
+      <Shortcut>we</Shortcut>
+      <Description>while statement [Obsolete]</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Obsolete_While</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp"><![CDATA[/* Shortcut 'we' is obsolete, use 'w' instead. */$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>while not null [Obsolete]</Title>
+      <Shortcut>wexn</Shortcut>
+      <Description>while statement with condition whether an expression is not equal to null [Obsolete]</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Obsolete_WhileNotNull</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp"><![CDATA[/* Shortcut 'wexn' is obsolete, use 'wxn' instead. */$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>while null [Obsolete]</Title>
+      <Shortcut>wen</Shortcut>
+      <Description>while statement with condition whether an expression is equal to null [Obsolete]</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name Obsolete_WhileNull</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp"><![CDATA[/* Shortcut 'wen' is obsolete, use 'wn' instead. */$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -4339,7 +4331,7 @@ public static bool operator false($thisName$ $operand$) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>private constructor</Title>
-      <Shortcut>pcr</Shortcut>
+      <Shortcut>pco</Shortcut>
       <Description>private constructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4404,7 +4396,7 @@ public static bool operator false($thisName$ $operand$) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>private enum</Title>
-      <Shortcut>pem</Shortcut>
+      <Shortcut>pen</Shortcut>
       <Description>private enum declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4430,7 +4422,7 @@ public static bool operator false($thisName$ $operand$) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>private event</Title>
-      <Shortcut>pet_EventHandler</Shortcut>
+      <Shortcut>pev_EventHandler</Shortcut>
       <Description>private event declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4438,42 +4430,6 @@ public static bool operator false($thisName$ $operand$) {
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name PrivateEvent</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Event name</ToolTip>
-          <Default>EventName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[private event EventHandler $name$;
-
-protected virtual void On$name$(EventArgs e) {
-	EventHandler handler = $name$;
-	if (handler != null) {
-		handler(this, e);
-	}
-}$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>private event with EventHandler&lt;T&gt;</Title>
-      <Shortcut>pet_EventHandlerOfT</Shortcut>
-      <Description>private event declaration with EventHandler&lt;T&gt;</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PrivateEventWithEventHandlerOfT</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4498,7 +4454,7 @@ protected virtual void On$name$(EventArgs e) {
 
 protected virtual void On$name$($eventArgs$ e) {
 	EventHandler<$eventArgs$> handler = $name$;
-	if (handler != null) {
+	if (handler is not null) {
 		handler(this, e);
 	}
 }$end$]]></Code>
@@ -4536,7 +4492,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>private indexer</Title>
-      <Shortcut>pir</Shortcut>
+      <Shortcut>pin</Shortcut>
       <Description>private indexer declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4662,7 +4618,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>private read-only indexer</Title>
-      <Shortcut>prir</Shortcut>
+      <Shortcut>prin</Shortcut>
       <Description>private read-only indexer declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4734,7 +4690,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>private readonly record struct</Title>
-      <Shortcut>prrdst</Shortcut>
+      <Shortcut>prrest</Shortcut>
       <Description>private readonly record struct declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4789,7 +4745,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>private record</Title>
-      <Shortcut>prd</Shortcut>
+      <Shortcut>pre</Shortcut>
       <Description>private record declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4819,7 +4775,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>private record struct</Title>
-      <Shortcut>prdst</Shortcut>
+      <Shortcut>prest</Shortcut>
       <Description>private record struct declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5177,7 +5133,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>public constructor</Title>
-      <Shortcut>cr</Shortcut>
+      <Shortcut>co</Shortcut>
       <Description>public constructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5242,7 +5198,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>public enum</Title>
-      <Shortcut>em</Shortcut>
+      <Shortcut>en</Shortcut>
       <Description>public enum declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5268,7 +5224,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>public event</Title>
-      <Shortcut>et_EventHandler</Shortcut>
+      <Shortcut>ev_EventHandler</Shortcut>
       <Description>public event declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5276,42 +5232,6 @@ protected virtual void On$name$($eventArgs$ e) {
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name PublicEvent</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Event name</ToolTip>
-          <Default>EventName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[public event EventHandler $name$;
-
-protected virtual void On$name$(EventArgs e) {
-	EventHandler handler = $name$;
-	if (handler != null) {
-		handler(this, e);
-	}
-}$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>public event with EventHandler&lt;T&gt;</Title>
-      <Shortcut>et_EventHandlerOfT</Shortcut>
-      <Description>public event declaration with EventHandler&lt;T&gt;</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicEventWithEventHandlerOfT</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -5336,7 +5256,7 @@ protected virtual void On$name$(EventArgs e) {
 
 protected virtual void On$name$($eventArgs$ e) {
 	EventHandler<$eventArgs$> handler = $name$;
-	if (handler != null) {
+	if (handler is not null) {
 		handler(this, e);
 	}
 }$end$]]></Code>
@@ -5374,7 +5294,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>public indexer</Title>
-      <Shortcut>ir</Shortcut>
+      <Shortcut>in</Shortcut>
       <Description>public indexer declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5406,7 +5326,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>public interface</Title>
-      <Shortcut>ie</Shortcut>
+      <Shortcut>i</Shortcut>
       <Description>public interface declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5526,7 +5446,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>public read-only indexer</Title>
-      <Shortcut>rir</Shortcut>
+      <Shortcut>rin</Shortcut>
       <Description>public read-only indexer declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5598,7 +5518,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>public readonly record struct</Title>
-      <Shortcut>rrdst</Shortcut>
+      <Shortcut>rrest</Shortcut>
       <Description>public readonly record struct declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5653,7 +5573,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>public record</Title>
-      <Shortcut>rd</Shortcut>
+      <Shortcut>re</Shortcut>
       <Description>public record declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5683,7 +5603,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>public record struct</Title>
-      <Shortcut>rdst</Shortcut>
+      <Shortcut>rest</Shortcut>
       <Description>public record struct declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -6233,7 +6153,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static constructor</Title>
-      <Shortcut>scr</Shortcut>
+      <Shortcut>sco</Shortcut>
       <Description>static constructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -6252,86 +6172,6 @@ protected virtual void On$name$($eventArgs$ e) {
         </Literal>
       </Declarations>
       <Code Language="CSharp"><![CDATA[static $thisName$() {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>StreamReader Variable</Title>
-      <Shortcut>u_smrr</Shortcut>
-      <Description>StreamReader variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StreamReaderVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>sr</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Constructor parameters</ToolTip>
-          <Default>stream</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StreamReader($parameters$)) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>StreamWriter Variable</Title>
-      <Shortcut>u_smwr</Shortcut>
-      <Description>StreamWriter variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StreamWriterVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-        <Import>
-          <Namespace>System.Text</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_encoding</ID>
-          <ToolTip>File encoding</ToolTip>
-          <Default>Encoding.UTF8</Default>
-        </Literal>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>sw</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Constructor parameters</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StreamWriter($parameters$, $_encoding$)) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -6401,42 +6241,6 @@ protected virtual void On$name$($eventArgs$ e) {
       <Code Language="CSharp"><![CDATA[string$end$]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>StringReader Variable</Title>
-      <Shortcut>u_srr</Shortcut>
-      <Description>StringReader variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StringReaderVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>sr</Default>
-        </Literal>
-        <Literal>
-          <ID>string</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StringReader($string$)) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>String variable</Title>
@@ -6466,48 +6270,48 @@ protected virtual void On$name$($eventArgs$ e) {
       <Code Language="CSharp"><![CDATA[string $identifier$ = $value$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
+  <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>StringWriter Variable</Title>
-      <Shortcut>u_swr</Shortcut>
-      <Description>StringWriter variable declaration.</Description>
+      <Title>switch expression</Title>
+      <Shortcut>swe</Shortcut>
+      <Description>switch expression</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name StringWriterVariable</Keyword>
+        <Keyword>Meta-Name SwitchExpression</Keyword>
       </Keywords>
     </Header>
     <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
       <Declarations>
         <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>sw</Default>
+          <ID>expression</ID>
+          <ToolTip>Expression to match</ToolTip>
+          <Default>_</Default>
+        </Literal>
+        <Literal>
+          <ID>value</ID>
+          <ToolTip>Value to return</ToolTip>
+          <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new StringWriter()) {
-	$end$
-}]]></Code>
+      <Code Language="CSharp"><![CDATA[switch {
+	$expression$ => $value$,
+}$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>switch statement</Title>
-      <Shortcut>sh</Shortcut>
+      <Shortcut>sw</Shortcut>
       <Description>switch statement</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name Switch</Keyword>
+        <Keyword>Meta-Name SwitchStatement</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -6526,7 +6330,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>throw new</Title>
-      <Shortcut>twn</Shortcut>
+      <Shortcut>thn</Shortcut>
       <Description>throw new</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -6543,7 +6347,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>throw new ArgumentException</Title>
-      <Shortcut>twn_ae</Shortcut>
+      <Shortcut>thn_ae</Shortcut>
       <Description>throw new ArgumentException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -6577,7 +6381,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>throw new ArgumentNullException</Title>
-      <Shortcut>twn_ane</Shortcut>
+      <Shortcut>thn_ane</Shortcut>
       <Description>throw new ArgumentNullException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -6606,7 +6410,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>throw new ArgumentOutOfRangeException</Title>
-      <Shortcut>twn_aoore</Shortcut>
+      <Shortcut>thn_aoore</Shortcut>
       <Description>throw new ArgumentOutOfRangeException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -6640,7 +6444,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>throw new InvalidCastException</Title>
-      <Shortcut>twn_ice</Shortcut>
+      <Shortcut>thn_ice</Shortcut>
       <Description>throw new InvalidCastException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -6669,7 +6473,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>throw new InvalidOperationException</Title>
-      <Shortcut>twn_ioe</Shortcut>
+      <Shortcut>thn_ioe</Shortcut>
       <Description>throw new InvalidOperationException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -6698,7 +6502,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>throw new NotImplementedException</Title>
-      <Shortcut>twn_nie</Shortcut>
+      <Shortcut>thn_nie</Shortcut>
       <Description>throw new NotImplementedException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -6727,7 +6531,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>throw new NotSupportedException</Title>
-      <Shortcut>twn_nse</Shortcut>
+      <Shortcut>thn_nse</Shortcut>
       <Description>throw new NotSupportedException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -6756,7 +6560,7 @@ protected virtual void On$name$($eventArgs$ e) {
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>throw new ObjectDisposedException</Title>
-      <Shortcut>twn_ode</Shortcut>
+      <Shortcut>thn_ode</Shortcut>
       <Description>throw new ObjectDisposedException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -6958,26 +6762,31 @@ finally {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title> type parameter</Title>
-      <Shortcut>g</Shortcut>
-      <Description> type parameter</Description>
+      <Title>using variable</Title>
+      <Shortcut>uv</Shortcut>
+      <Description>using variable</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name TypeParameter</Keyword>
+        <Keyword>Meta-Name UsingDeclaration</Keyword>
       </Keywords>
     </Header>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>_type</ID>
-          <ToolTip>Type parameter</ToolTip>
-          <Default>T</Default>
+          <ID>_identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>_value</ID>
+          <ToolTip>Value to assign</ToolTip>
+          <Default>_</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[<$_type$>$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[using var $_identifier$ = $_value$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -6990,18 +6799,23 @@ finally {
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name Using</Keyword>
+        <Keyword>Meta-Name UsingStatement</Keyword>
       </Keywords>
     </Header>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>disposable</ID>
-          <ToolTip>A resouce to use</ToolTip>
-          <Default>disposable</Default>
+          <ID>_identifier</ID>
+          <ToolTip>Identifier name</ToolTip>
+          <Default>x</Default>
+        </Literal>
+        <Literal>
+          <ID>_value</ID>
+          <ToolTip>Value to assign</ToolTip>
+          <Default>_</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[using ($disposable$) {
+      <Code Language="CSharp"><![CDATA[using (var $_identifier$ = $_value$) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -7021,37 +6835,6 @@ finally {
     </Header>
     <Snippet>
       <Code Language="CSharp"><![CDATA[using static$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>using variable</Title>
-      <Shortcut>u_v</Shortcut>
-      <Description>using variable</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name UsingVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-        <Literal>
-          <ID>_value</ID>
-          <ToolTip>Value to assign</ToolTip>
-          <Default>_</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $_identifier$ = $_value$) {
-	$end$
-}]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -7120,7 +6903,7 @@ finally {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>while statement</Title>
-      <Shortcut>we</Shortcut>
+      <Shortcut>w</Shortcut>
       <Description>while statement</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -7146,7 +6929,7 @@ finally {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>while not null</Title>
-      <Shortcut>wexn</Shortcut>
+      <Shortcut>wxn</Shortcut>
       <Description>while statement with condition whether an expression is not equal to null</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -7164,7 +6947,7 @@ finally {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[while ($expression$ != null) {
+      <Code Language="CSharp"><![CDATA[while ($expression$ is not null) {
 	$end$
 }]]></Code>
     </Snippet>
@@ -7172,7 +6955,7 @@ finally {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>while null</Title>
-      <Shortcut>wen</Shortcut>
+      <Shortcut>wn</Shortcut>
       <Description>while statement with condition whether an expression is equal to null</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -7190,79 +6973,7 @@ finally {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[while ($expression$ == null) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>XmlReader Variable</Title>
-      <Shortcut>u_xmlrr</Shortcut>
-      <Description>XmlReader variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name XmlReaderVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Xml</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>argument</ID>
-          <ToolTip>Argument(s)</ToolTip>
-          <Default>argument</Default>
-        </Literal>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>reader</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = XmlReader.Create($argument$)) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>XmlWriter Variable</Title>
-      <Shortcut>u_xmlwr</Shortcut>
-      <Description>XmlWriter variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name XmlWriterVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Xml</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>argument</ID>
-          <ToolTip>Argument(s)</ToolTip>
-          <Default>argument</Default>
-        </Literal>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>writer</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = XmlWriter.Create($argument$)) {
+      <Code Language="CSharp"><![CDATA[while ($expression$ is null) {
 	$end$
 }]]></Code>
     </Snippet>

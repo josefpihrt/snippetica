@@ -943,39 +943,6 @@ End Class]]></Code>
 End Class]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>IEnumerator(Of T) variable</Title>
-      <Shortcut>u_er</Shortcut>
-      <Description>IEnumerator(Of T) variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name IEnumeratorOfTVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_collectionIdentifier</ID>
-          <ToolTip>Collection identifier name</ToolTip>
-          <Default>items</Default>
-        </Literal>
-        <Literal>
-          <ID>enumerator</ID>
-          <ToolTip>Enumerator identifier name</ToolTip>
-          <Default>en</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Using $enumerator$ = $_collectionIdentifier$.GetEnumerator()
-	While $enumerator$.MoveNext()
-		$end$
-	End While
-End Using]]></Code>
-    </Snippet>
-  </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>IEqualityComparer class</Title>
@@ -1367,7 +1334,7 @@ End If]]></Code>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>interface event</Title>
-      <Shortcut>_et</Shortcut>
+      <Shortcut>_ev</Shortcut>
       <Description>interface event declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1375,35 +1342,6 @@ End If]]></Code>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name InterfaceEvent</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Event name</ToolTip>
-          <Default>EventName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Event $name$ As EventHandler$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>interface event with EventHandler&lt;T&gt;</Title>
-      <Shortcut>_ett</Shortcut>
-      <Description>interface event declaration with EventHandler&lt;T&gt;</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InterfaceEventWithEventHandlerOfT</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1430,7 +1368,7 @@ End If]]></Code>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>interface indexer</Title>
-      <Shortcut>_ir</Shortcut>
+      <Shortcut>_in</Shortcut>
       <Description>interface indexer</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1640,7 +1578,7 @@ End Class]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Friend constructor</Title>
-      <Shortcut>icr</Shortcut>
+      <Shortcut>ico</Shortcut>
       <Description>Friend constructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1700,7 +1638,7 @@ End Sub]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Friend enum</Title>
-      <Shortcut>iem</Shortcut>
+      <Shortcut>ien</Shortcut>
       <Description>Friend enum declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1726,7 +1664,7 @@ End Enum]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Friend event</Title>
-      <Shortcut>iet_EventHandler</Shortcut>
+      <Shortcut>iev_EventHandler</Shortcut>
       <Description>Friend event declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1734,44 +1672,6 @@ End Enum]]></Code>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name InternalEvent</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Event name</ToolTip>
-          <Default>EventName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameterName</ID>
-          <ToolTip>Parameter name</ToolTip>
-          <Default>e</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Friend Event $name$ As EventHandler
-
-Protected Overridable Sub On$name$($parameterName$ As EventArgs)
-	RaiseEvent $name$(Me, $parameterName$)
-End Sub$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Friend event with EventHandler&lt;T&gt;</Title>
-      <Shortcut>iet_EventHandlerOfT</Shortcut>
-      <Description>Friend event declaration with EventHandler&lt;T&gt;</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name InternalEventWithEventHandlerOfT</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -1807,7 +1707,7 @@ End Sub$end$]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Friend indexer</Title>
-      <Shortcut>iir</Shortcut>
+      <Shortcut>iin</Shortcut>
       <Description>Friend indexer declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1904,7 +1804,7 @@ End Function]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Friend module</Title>
-      <Shortcut>ime</Shortcut>
+      <Shortcut>imo</Shortcut>
       <Description>Friend module declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1988,7 +1888,7 @@ End Module]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Friend read-only indexer</Title>
-      <Shortcut>irir</Shortcut>
+      <Shortcut>irin</Shortcut>
       <Description>Friend read-only indexer declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2397,6 +2297,50 @@ End Property$end$]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[$left$ IsNot Nothing$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>KeyValuePair type</Title>
+      <Shortcut>kvp</Shortcut>
+      <Description>KeyValuePair type</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name KeyValuePair</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB"><![CDATA[KeyValuePair$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>KeyValuePair.Create method</Title>
+      <Shortcut>kvpc</Shortcut>
+      <Description>KeyValuePair.Create method</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name KeyValuePairCreate</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="VB"><![CDATA[KeyValuePair.Create$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -3703,7 +3647,7 @@ End Class]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Private constructor</Title>
-      <Shortcut>pcr</Shortcut>
+      <Shortcut>pco</Shortcut>
       <Description>Private constructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3763,7 +3707,7 @@ End Sub]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Private enum</Title>
-      <Shortcut>pem</Shortcut>
+      <Shortcut>pen</Shortcut>
       <Description>Private enum declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3789,7 +3733,7 @@ End Enum]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Private event</Title>
-      <Shortcut>pet_EventHandler</Shortcut>
+      <Shortcut>pev_EventHandler</Shortcut>
       <Description>Private event declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3797,44 +3741,6 @@ End Enum]]></Code>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name PrivateEvent</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Event name</ToolTip>
-          <Default>EventName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameterName</ID>
-          <ToolTip>Parameter name</ToolTip>
-          <Default>e</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Private Event $name$ As EventHandler
-
-Protected Overridable Sub On$name$($parameterName$ As EventArgs)
-	RaiseEvent $name$(Me, $parameterName$)
-End Sub$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Private event with EventHandler&lt;T&gt;</Title>
-      <Shortcut>pet_EventHandlerOfT</Shortcut>
-      <Description>Private event declaration with EventHandler&lt;T&gt;</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PrivateEventWithEventHandlerOfT</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -3899,7 +3805,7 @@ End Sub$end$]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Private indexer</Title>
-      <Shortcut>pir</Shortcut>
+      <Shortcut>pin</Shortcut>
       <Description>Private indexer declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4028,7 +3934,7 @@ End Function]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Private read-only indexer</Title>
-      <Shortcut>prir</Shortcut>
+      <Shortcut>prin</Shortcut>
       <Description>Private read-only indexer declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4380,7 +4286,7 @@ End Class]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Public constructor</Title>
-      <Shortcut>cr</Shortcut>
+      <Shortcut>co</Shortcut>
       <Description>Public constructor declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4440,7 +4346,7 @@ End Sub]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Public enum</Title>
-      <Shortcut>em</Shortcut>
+      <Shortcut>en</Shortcut>
       <Description>Public enum declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4466,7 +4372,7 @@ End Enum]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Public event</Title>
-      <Shortcut>et_EventHandler</Shortcut>
+      <Shortcut>ev_EventHandler</Shortcut>
       <Description>Public event declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4474,44 +4380,6 @@ End Enum]]></Code>
       </SnippetTypes>
       <Keywords>
         <Keyword>Meta-Name PublicEvent</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Event name</ToolTip>
-          <Default>EventName</Default>
-        </Literal>
-        <Literal>
-          <ID>parameterName</ID>
-          <ToolTip>Parameter name</ToolTip>
-          <Default>e</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Public Event $name$ As EventHandler
-
-Protected Overridable Sub On$name$($parameterName$ As EventArgs)
-	RaiseEvent $name$(Me, $parameterName$)
-End Sub$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>Public event with EventHandler&lt;T&gt;</Title>
-      <Shortcut>et_EventHandlerOfT</Shortcut>
-      <Description>Public event declaration with EventHandler&lt;T&gt;</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PublicEventWithEventHandlerOfT</Keyword>
       </Keywords>
     </Header>
     <Snippet>
@@ -4576,7 +4444,7 @@ End Sub$end$]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Public indexer</Title>
-      <Shortcut>ir</Shortcut>
+      <Shortcut>in</Shortcut>
       <Description>Public indexer declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4673,7 +4541,7 @@ End Function]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Public module</Title>
-      <Shortcut>me</Shortcut>
+      <Shortcut>mo</Shortcut>
       <Description>Public module declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -4757,7 +4625,7 @@ End Module]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>Public read-only indexer</Title>
-      <Shortcut>rir</Shortcut>
+      <Shortcut>rin</Shortcut>
       <Description>Public read-only indexer declaration</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5320,7 +5188,7 @@ End Class$end$]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static constructor</Title>
-      <Shortcut>scr</Shortcut>
+      <Shortcut>sco</Shortcut>
       <Description>static constructor</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5334,86 +5202,6 @@ End Class$end$]]></Code>
       <Code Language="VB"><![CDATA[Shared Sub New()
 	$end$
 End Sub]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>StreamReader Variable</Title>
-      <Shortcut>u_smrr</Shortcut>
-      <Description>StreamReader variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StreamReaderVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>sr</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Constructor parameters</ToolTip>
-          <Default>stream</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Using $identifier$ = New StreamReader($parameters$)
-	$end$
-End Using]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>StreamWriter Variable</Title>
-      <Shortcut>u_smwr</Shortcut>
-      <Description>StreamWriter variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StreamWriterVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-        <Import>
-          <Namespace>System.Text</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_encoding</ID>
-          <ToolTip>File encoding</ToolTip>
-          <Default>Encoding.UTF8</Default>
-        </Literal>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>sw</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Constructor parameters</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Using $identifier$ = New StreamWriter($parameters$, $_encoding$)
-	$end$
-End Using]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -5474,42 +5262,6 @@ End Using]]></Code>
       <Code Language="VB"><![CDATA[String.IsNullOrWhiteSpace($expression$)$end$]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>StringReader Variable</Title>
-      <Shortcut>u_srr</Shortcut>
-      <Description>StringReader variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StringReaderVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>sr</Default>
-        </Literal>
-        <Literal>
-          <ID>string</ID>
-          <ToolTip>String expression</ToolTip>
-          <Default>s</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Using $identifier$ = new StringReader($string$)
-	$end$
-End Using]]></Code>
-    </Snippet>
-  </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>String variable</Title>
@@ -5541,39 +5293,8 @@ End Using]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>StringWriter Variable</Title>
-      <Shortcut>u_swr</Shortcut>
-      <Description>StringWriter variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name StringWriterVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>sw</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Using $identifier$ = new StringWriter()
-	$end$
-End Using]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
       <Title>Throw New</Title>
-      <Shortcut>twn</Shortcut>
+      <Shortcut>thn</Shortcut>
       <Description>Throw New</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5590,7 +5311,7 @@ End Using]]></Code>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Throw New ArgumentException</Title>
-      <Shortcut>twn_ae</Shortcut>
+      <Shortcut>thn_ae</Shortcut>
       <Description>Throw New ArgumentException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5624,7 +5345,7 @@ End Using]]></Code>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Throw New ArgumentNullException</Title>
-      <Shortcut>twn_ane</Shortcut>
+      <Shortcut>thn_ane</Shortcut>
       <Description>Throw New ArgumentNullException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5653,7 +5374,7 @@ End Using]]></Code>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Throw New ArgumentOutOfRangeException</Title>
-      <Shortcut>twn_aoore</Shortcut>
+      <Shortcut>thn_aoore</Shortcut>
       <Description>Throw New ArgumentOutOfRangeException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5687,7 +5408,7 @@ End Using]]></Code>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Throw New InvalidCastException</Title>
-      <Shortcut>twn_ice</Shortcut>
+      <Shortcut>thn_ice</Shortcut>
       <Description>Throw New InvalidCastException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5716,7 +5437,7 @@ End Using]]></Code>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Throw New InvalidOperationException</Title>
-      <Shortcut>twn_ioe</Shortcut>
+      <Shortcut>thn_ioe</Shortcut>
       <Description>Throw New InvalidOperationException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5745,7 +5466,7 @@ End Using]]></Code>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Throw New NotImplementedException</Title>
-      <Shortcut>twn_nie</Shortcut>
+      <Shortcut>thn_nie</Shortcut>
       <Description>Throw New NotImplementedException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5774,7 +5495,7 @@ End Using]]></Code>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Throw New NotSupportedException</Title>
-      <Shortcut>twn_nse</Shortcut>
+      <Shortcut>thn_nse</Shortcut>
       <Description>Throw New NotSupportedException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5803,7 +5524,7 @@ End Using]]></Code>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Throw New ObjectDisposedException</Title>
-      <Shortcut>twn_ode</Shortcut>
+      <Shortcut>thn_ode</Shortcut>
       <Description>Throw New ObjectDisposedException</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5948,30 +5669,6 @@ End Try]]></Code>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title> type parameter</Title>
-      <Shortcut>g</Shortcut>
-      <Description> type parameter</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name TypeParameter</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Type parameter</ToolTip>
-          <Default>T</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[(Of $_type$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>Using statement</Title>
       <Shortcut>u</Shortcut>
       <Description>Using statement</Description>
@@ -5980,14 +5677,14 @@ End Try]]></Code>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords>
-        <Keyword>Meta-Name Using</Keyword>
+        <Keyword>Meta-Name UsingStatement</Keyword>
       </Keywords>
     </Header>
     <Snippet>
       <Declarations>
         <Literal>
           <ID>disposable</ID>
-          <ToolTip>A resouce to use</ToolTip>
+          <ToolTip>A resource to use</ToolTip>
           <Default>disposable</Default>
         </Literal>
       </Declarations>
@@ -6135,78 +5832,6 @@ End While]]></Code>
       <Code Language="VB"><![CDATA[While $expression$ IsNot Nothing
 	$end$
 End While]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>XmlReader Variable</Title>
-      <Shortcut>u_xmlrr</Shortcut>
-      <Description>XmlReader variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name XmlReaderVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Xml</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>argument</ID>
-          <ToolTip>Argument(s)</ToolTip>
-          <Default>argument</Default>
-        </Literal>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>reader</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Using $identifier$ = XmlReader.Create($argument$)
-	$end$
-End Using]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>XmlWriter Variable</Title>
-      <Shortcut>u_xmlwr</Shortcut>
-      <Description>XmlWriter variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name XmlWriterVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Xml</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>argument</ID>
-          <ToolTip>Argument(s)</ToolTip>
-          <Default>argument</Default>
-        </Literal>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>writer</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Using $identifier$ = XmlWriter.Create($argument$)
-	$end$
-End Using]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>
