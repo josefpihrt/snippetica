@@ -132,7 +132,7 @@
             <With Kind="Specifier">
               <New Value="c" Description="const" Comment="prefix" />
               <New Value="ce" Description="constexpr" Comment="prefix" />
-              <New Value="il" Description="inline" Comment="prefix" />
+              <New Value="i" Description="inline" Comment="prefix" />
               <New Value="s" Description="static" Comment="prefix" />
               <New Value="v" Description="virtual" Comment="prefix" />
             </With>
