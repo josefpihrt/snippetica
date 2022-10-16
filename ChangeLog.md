@@ -38,6 +38,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Change shortcut for 'module declaration' from `me` to `mo` ([#44](https://github.com/josefpihrt/snippetica/pull/44)).
 - Change shortcut for 'destructor declaration' from `dr` to `de` ([#45](https://github.com/josefpihrt/snippetica/pull/45)).
 - Change shortcut for 'namespace declaration' from `ns` to `na` ([#47](https://github.com/josefpihrt/snippetica/pull/47)).
+- [C++] Change shortcut for 'cast' from `ct` to `ca` ([#50](https://github.com/josefpihrt/snippetica/pull/50)).
 
 ### Removed
 
