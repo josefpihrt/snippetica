@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-  <Metadata>
-    <Identity Id="5809355f-dd0b-4463-a439-46f547208e95" Version="0.9.2" Language="en-US" Publisher="Josef Pihrt" />
-    <DisplayName>Snippetica</DisplayName>
-    <Description xml:space="preserve">A collection of snippets for C#, VB, C++, HTML, XAML and XML.</Description>
-    <MoreInfo>http://github.com/JosefPihrt/Snippetica</MoreInfo>
-    <License>License.txt</License>
-    <ReleaseNotes>http://github.com/JosefPihrt/Snippetica/blob/master/ChangeLog.md</ReleaseNotes>
-    <Icon>Snippetica.ico</Icon>
-    <PreviewImage>SnippeticaPreview.png</PreviewImage>
-    <Tags>Snippet,CodeSnippet,Productivity,C#,CSharp,VB,VisualBasic,HTML,XML,XAML,C++</Tags>
-  </Metadata>
-  <Installation>
-    <InstallationTarget Version="[12.0,18.0)" Id="Microsoft.VisualStudio.Community">
-      <ProductArchitecture>amd64</ProductArchitecture>
-    </InstallationTarget>
-    <InstallationTarget Version="[12.0,18.0)" Id="Microsoft.VisualStudio.Pro">
-      <ProductArchitecture>amd64</ProductArchitecture>
-    </InstallationTarget>
-    <InstallationTarget Version="[12.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
-      <ProductArchitecture>amd64</ProductArchitecture>
-    </InstallationTarget>
-  </Installation>
-  <Dependencies>
-  </Dependencies>
-  <Assets>
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="regedit.pkgdef" />
-  </Assets>
-  <Prerequisites>
-    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.25904.2,)" DisplayName="Visual Studio core editor" />
-  </Prerequisites>
+    <Metadata>
+        <Identity Id="5809355f-dd0b-4463-a439-46f547208e95" Version="1.0.0" Language="en-US" Publisher="Josef Pihrt" />
+        <DisplayName>Snippetica</DisplayName>
+        <Description xml:space="preserve">A collection of snippets for C#, VB, C++, HTML, XAML and XML.</Description>
+        <MoreInfo>http://github.com/JosefPihrt/Snippetica</MoreInfo>
+        <License>License.txt</License>
+        <ReleaseNotes>http://github.com/JosefPihrt/Snippetica/blob/master/ChangeLog.md</ReleaseNotes>
+        <Icon>Snippetica.ico</Icon>
+        <PreviewImage>SnippeticaPreview.png</PreviewImage>
+        <Tags>Snippet,CodeSnippet,Productivity,C#,CSharp,VB,VisualBasic,HTML,XML,XAML,C++</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Version="[12.0,18.0)" Id="Microsoft.VisualStudio.Community">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Version="[12.0,18.0)" Id="Microsoft.VisualStudio.Pro">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Version="[12.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+    </Installation>
+    <Dependencies>
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="regedit.pkgdef" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.25904.2,)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
 </PackageManifest>

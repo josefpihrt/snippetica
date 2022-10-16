@@ -68,9 +68,8 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
             {
                 case Language.CSharp:
                 case Language.VisualBasic:
-                    return "0.9.3";
                 case Language.Cpp:
-                    return "0.7.0";
+                    return "1.0.0";
                 case Language.Xml:
                 case Language.JavaScript:
                 case Language.Sql:
