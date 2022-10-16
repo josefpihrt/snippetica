@@ -28,7 +28,7 @@ Shortcut|Description|Comment
 --------|-----------|-------
 c|const|prefix
 ce|constexpr|prefix
-il|inline|prefix
+i|inline|prefix
 s|static|prefix
 v|virtual|prefix
 
@@ -71,8 +71,8 @@ b|braces
 c|class declaration
 catch|catch
 cc|const class
+cca|const cast
 cco|copy constructor declaration
-cct|const cast
 ce|constexpr keyword
 cef|constexpr function declaration
 cev|constexpr variable
@@ -82,7 +82,7 @@ cop|conditional operator
 cst|const struct
 cv|const variable
 d|default keyword
-dct|dynamic cast
+dca|dynamic cast
 de|destructor declaration
 dt|decltype keyword
 dw|do\-while
@@ -121,12 +121,12 @@ ppu|\#using
 ppud|\#undef
 pvf|pure virtual function
 r|return keyword
-rct|reinterpret cast
+rca|reinterpret cast
 sa|static assert
+sca|static cast
 scef|static constexpr function declaration
 scev|static constexpr variable
 scf|static const function declaration
-sct|static cast
 scv|static const variable
 sf|static function declaration
 silcv|static inline const variable

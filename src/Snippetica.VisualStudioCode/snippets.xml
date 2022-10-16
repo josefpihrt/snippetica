@@ -247,7 +247,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>const cast</Title>
-      <Shortcut>cct</Shortcut>
+      <Shortcut>cca</Shortcut>
       <Description>const cast</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -847,7 +847,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>dynamic cast</Title>
-      <Shortcut>dct</Shortcut>
+      <Shortcut>dca</Shortcut>
       <Description>dynamic cast</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2328,7 +2328,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>reinterpret cast</Title>
-      <Shortcut>rct</Shortcut>
+      <Shortcut>rca</Shortcut>
       <Description>reinterpret cast</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2415,7 +2415,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>static cast</Title>
-      <Shortcut>sct</Shortcut>
+      <Shortcut>sca</Shortcut>
       <Description>static cast</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>

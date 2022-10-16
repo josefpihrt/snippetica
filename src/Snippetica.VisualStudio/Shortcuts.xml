@@ -583,7 +583,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="il" Description="inline" Comment="prefix">
+  <ShortcutInfo Value="i" Description="inline" Comment="prefix">
     <Languages>
       <Language>Cpp</Language>
     </Languages>

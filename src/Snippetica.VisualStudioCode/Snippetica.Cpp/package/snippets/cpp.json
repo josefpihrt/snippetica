@@ -191,7 +191,7 @@
     "description": "conditional operator"
   },
   "const cast": {
-    "prefix": "cct",
+    "prefix": "cca",
     "body": [
       "const_cast<${1:T}>(${2:expression})${0}"
     ],
@@ -354,7 +354,7 @@
     "description": "do-while statement"
   },
   "dynamic cast": {
-    "prefix": "dct",
+    "prefix": "dca",
     "body": [
       "dynamic_cast<${1:T}>(${2:expression})${0}"
     ],
@@ -668,7 +668,7 @@
     "description": "pure virtual function"
   },
   "reinterpret cast": {
-    "prefix": "rct",
+    "prefix": "rca",
     "body": [
       "reinterpret_cast<${1:T}>(${2:expression})${0}"
     ],
@@ -696,7 +696,7 @@
     "description": "static assert"
   },
   "static cast": {
-    "prefix": "sct",
+    "prefix": "sca",
     "body": [
       "static_cast<${1:T}>(${2:expression})${0}"
     ],

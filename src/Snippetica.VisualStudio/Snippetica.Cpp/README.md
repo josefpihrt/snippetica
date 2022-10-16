@@ -30,7 +30,7 @@ Shortcut|Description|Comment
 --------|-----------|-------
 c|const|prefix
 ce|constexpr|prefix
-il|inline|prefix
+i|inline|prefix
 s|static|prefix
 v|virtual|prefix
 
@@ -73,8 +73,8 @@ b|[braces](Braces.snippet)
 c|[class declaration](ClassDeclaration.snippet)
 catch|[catch](Catch.snippet)
 cc|[const class](ConstClass.snippet)
+cca|[const cast](ConstCast.snippet)
 cco|[copy constructor declaration](CopyConstructorDeclaration.snippet)
-cct|[const cast](ConstCast.snippet)
 ce|[constexpr keyword](ConstExprKeyword.snippet)
 cef|[constexpr function declaration](ConstExprFunctionDeclaration.snippet)
 cev|[constexpr variable](ConstExprVariable.snippet)
@@ -84,7 +84,7 @@ cop|[conditional operator](ConditionalOperator.snippet)
 cst|[const struct](ConstStruct.snippet)
 cv|[const variable](ConstVariable.snippet)
 d|[default keyword](DefaultKeyword.snippet)
-dct|[dynamic cast](DynamicCast.snippet)
+dca|[dynamic cast](DynamicCast.snippet)
 de|[destructor declaration](DestructorDeclaration.snippet)
 dt|[decltype keyword](DeclTypeKeyword.snippet)
 dw|[do-while](DoWhile.snippet)
@@ -130,12 +130,12 @@ ppu|[#using](PreprocessorDirectiveUsing.snippet)
 ppud|[#undef](PreprocessorDirectiveUndef.snippet)
 pvf|[pure virtual function](PureVirtualFunction.snippet)
 r|[return keyword](ReturnKeyword.snippet)
-rct|[reinterpret cast](ReinterpretCast.snippet)
+rca|[reinterpret cast](ReinterpretCast.snippet)
 sa|[static assert](StaticAssert.snippet)
+sca|[static cast](StaticCast.snippet)
 scef|[static constexpr function declaration](StaticConstExprFunctionDeclaration.snippet)
 scev|[static constexpr variable](StaticConstExprVariable.snippet)
 scf|[static const function declaration](StaticConstFunctionDeclaration.snippet)
-sct|[static cast](StaticCast.snippet)
 scv|[static const variable](StaticConstVariable.snippet)
 sf|[static function declaration](StaticFunctionDeclaration.snippet)
 silcv|[static inline const variable](StaticInlineConstVariable.snippet)
