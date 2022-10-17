@@ -14,7 +14,7 @@ Language|Count | Snippet Browser
 --------|-----:|:---------------:
 [Snippetica.CSharp](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|581|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=csharp)
 [Snippetica.VisualBasic](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|517|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=vb)
-[Snippetica.Cpp](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|120|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=cpp)
+[Snippetica.Cpp](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|121|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=cpp)
 [Snippetica.Html](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.Html/README.md)|221|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=html)
 [Snippetica.Xaml](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.Xaml/README.md)|91|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=xaml)
 [Snippetica.Xml](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.Xml/README.md)|9|[browse](http://pihrt.net/snippetica/snippets?engine=vs&language=xml)

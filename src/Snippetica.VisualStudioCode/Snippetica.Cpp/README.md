@@ -38,7 +38,7 @@ v|virtual|prefix
 
 Shortcut|Description|Comment
 --------|-----------|-------
-dw|do\-while|\-
+do|do\-while|\-
 fe|foreach|\-
 fr|for|\-
 if|if|\-
@@ -86,8 +86,9 @@ cv|[const variable](ConstVariable.snippet)
 d|[default keyword](DefaultKeyword.snippet)
 dca|[dynamic cast](DynamicCast.snippet)
 de|[destructor declaration](DestructorDeclaration.snippet)
+do|[do-while](DoWhile.snippet)
 dt|[decltype keyword](DeclTypeKeyword.snippet)
-dw|[do-while](DoWhile.snippet)
+dw|[do-while \[Obsolete\]](DoWhile_Obsolete.snippet)
 e|[else](Else.snippet)
 eco|[explicit constructor declaration](ExplicitConstructorDeclaration.snippet)
 eif|[else-if](ElseIf.snippet)

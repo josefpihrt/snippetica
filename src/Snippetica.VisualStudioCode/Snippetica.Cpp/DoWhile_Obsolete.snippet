@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>do-while</Title>
-    <Shortcut>do</Shortcut>
-    <Description>do-while statement</Description>
+    <Title>do-while [Obsolete]</Title>
+    <Shortcut>dw</Shortcut>
+    <Description>do-while statement [Obsolete]</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -11,15 +11,6 @@
     </SnippetTypes>
   </Header>
   <Snippet>
-    <Declarations>
-      <Literal>
-        <ID>expression</ID>
-        <ToolTip>Expression to evaluate</ToolTip>
-        <Default>true</Default>
-      </Literal>
-    </Declarations>
-    <Code Language="Cpp"><![CDATA[do {
-	$selected$$end$
-} while ($expression$);]]></Code>
+    <Code Language="Cpp"><![CDATA[/* Shortcut 'dw' is obsolete, use 'do' instead. */$end$]]></Code>
   </Snippet>
 </CodeSnippet>

@@ -601,7 +601,7 @@
     </Languages>
     <Tags />
   </ShortcutInfo>
-  <ShortcutInfo Value="dw" Description="do-while" Comment="-">
+  <ShortcutInfo Value="do" Description="do-while" Comment="-">
     <Languages>
       <Language>Cpp</Language>
     </Languages>

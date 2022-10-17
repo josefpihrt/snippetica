@@ -36,7 +36,7 @@ v|virtual|prefix
 
 Shortcut|Description|Comment
 --------|-----------|-------
-dw|do\-while|\-
+do|do\-while|\-
 fe|foreach|\-
 fr|for|\-
 if|if|\-
@@ -84,8 +84,9 @@ cv|const variable
 d|default keyword
 dca|dynamic cast
 de|destructor declaration
+do|do\-while
 dt|decltype keyword
-dw|do\-while
+dw|do\-while \[Obsolete\]
 e|else
 eco|explicit constructor declaration
 eif|else\-if

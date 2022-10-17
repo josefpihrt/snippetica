@@ -826,7 +826,7 @@ $name$::~$name$() {
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>do-while</Title>
-      <Shortcut>dw</Shortcut>
+      <Shortcut>do</Shortcut>
       <Description>do-while statement</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -848,6 +848,24 @@ $name$::~$name$() {
       <Code Language="Cpp"><![CDATA[do {
 	$selected$$end$
 } while ($expression$);]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>do-while [Obsolete]</Title>
+      <Shortcut>dw</Shortcut>
+      <Description>do-while statement [Obsolete]</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name DoWhile_Obsolete</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Code Language="Cpp"><![CDATA[/* Shortcut 'dw' is obsolete, use 'do' instead. */$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">

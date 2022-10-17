@@ -345,13 +345,20 @@
     "description": "destructor definition"
   },
   "do-while": {
-    "prefix": "dw",
+    "prefix": "do",
     "body": [
       "do {",
       "\t${TM_SELECTED_TEXT}${0}",
       "} while (${1:true});"
     ],
     "description": "do-while statement"
+  },
+  "do-while [Obsolete]": {
+    "prefix": "dw",
+    "body": [
+      "/* Shortcut 'dw' is obsolete, use 'do' instead. */${0}"
+    ],
+    "description": "do-while statement [Obsolete]"
   },
   "dynamic cast": {
     "prefix": "dca",
