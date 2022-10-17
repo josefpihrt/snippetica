@@ -6,7 +6,7 @@
   "icon": "images/icon.png",
   "version": "1.0.0",
   "author": "Josef Pihrt",
-  "license": "SEE LICENSE IN LICENSE.TXT",
+  "license": "Apache-2.0",
   "homepage": "http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudioCode/Snippetica.CSharp/README.md",
   "repository": {
     "type": "git",
