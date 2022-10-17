@@ -32,28 +32,28 @@
     "description": "break statement"
   },
   "conditional operator (!string.IsNullOrEmpty)": {
-    "prefix": "coxsne",
+    "prefix": "copxsne",
     "body": [
       "(!string.IsNullOrEmpty(${1:s})) ? ${2:true} : ${3:false}${0}"
     ],
     "description": "conditional operator with condition whether the string is not equal to null or empty"
   },
   "conditional operator (!string.IsNullOrWhiteSpace)": {
-    "prefix": "coxsnw",
+    "prefix": "copxsnw",
     "body": [
       "(!string.IsNullOrWhiteSpace(${1:s})) ? ${2:true} : ${3:false}${0}"
     ],
     "description": "conditional operator with condition whether the string is not equal to null or white-space"
   },
   "conditional operator (string.IsNullOrEmpty)": {
-    "prefix": "cosne",
+    "prefix": "copsne",
     "body": [
       "(string.IsNullOrEmpty(${1:s})) ? ${2:true} : ${3:false}${0}"
     ],
     "description": "conditional operator with condition whether the string is equal to null or empty"
   },
   "conditional operator (string.IsNullOrWhiteSpace)": {
-    "prefix": "cosnw",
+    "prefix": "copsnw",
     "body": [
       "(string.IsNullOrWhiteSpace(${1:s})) ? ${2:true} : ${3:false}${0}"
     ],
@@ -66,10 +66,10 @@
     ],
     "description": "continue statement"
   },
-  "Debug.Assert != null": {
+  "Debug.Assert is not null": {
     "prefix": "daxn",
     "body": [
-      "Debug.Assert(${1:x} != null, ${2:\"\"});${0}"
+      "Debug.Assert(${1:x} is not null, ${2:\"\"});${0}"
     ],
     "description": "Debug.Assert method with condition whether the expression is not equal to null"
   },
@@ -79,134 +79,6 @@
       "Debug.Fail(${1:\"\"});${0}"
     ],
     "description": "Debug.Fail method"
-  },
-  "Directory.CreateDirectory": {
-    "prefix": "iod_cd",
-    "body": [
-      "Directory.CreateDirectory(${1:path})${0}"
-    ],
-    "description": "Directory.CreateDirectory method."
-  },
-  "Directory.Delete": {
-    "prefix": "iod_d",
-    "body": [
-      "Directory.Delete(${1:path}, recursive: ${2:true})${0}"
-    ],
-    "description": "Directory.Delete method."
-  },
-  "Directory.EnumerateDirectories": {
-    "prefix": "iod_ed",
-    "body": [
-      "Directory.EnumerateDirectories(${1:path}, ${2:\"*\"}, SearchOption${3:.AllDirectories})${0}"
-    ],
-    "description": "Directory.EnumerateDirectories method."
-  },
-  "Directory.EnumerateFiles": {
-    "prefix": "iod_ef",
-    "body": [
-      "Directory.EnumerateFiles(${1:path}, ${2:\"*\"}, SearchOption${3:.AllDirectories})${0}"
-    ],
-    "description": "Directory.EnumerateFiles method."
-  },
-  "Directory.Exists": {
-    "prefix": "iod_e",
-    "body": [
-      "Directory.Exists(${1:path})${0}"
-    ],
-    "description": "Directory.Exists method."
-  },
-  "Directory.GetDirectories": {
-    "prefix": "iod_gd",
-    "body": [
-      "Directory.GetDirectories(${1:path}, ${2:\"*\"}, SearchOption${3:.AllDirectories})${0}"
-    ],
-    "description": "Directory.GetDirectories method."
-  },
-  "Directory.GetFiles": {
-    "prefix": "iod_gf",
-    "body": [
-      "Directory.GetFiles(${1:path}, ${2:\"*\"}, SearchOption${3:.AllDirectories})${0}"
-    ],
-    "description": "Directory.GetFiles method."
-  },
-  "Directory.Move": {
-    "prefix": "iod_m",
-    "body": [
-      "Directory.Move(${1:sourceDirName}, ${2:destinationDirName})${0}"
-    ],
-    "description": "Directory.Move method."
-  },
-  "File Exists": {
-    "prefix": "iof_e",
-    "body": [
-      "File.Exists(${1:path})${0}"
-    ],
-    "description": "File.Exists method."
-  },
-  "File.Copy": {
-    "prefix": "iof_c",
-    "body": [
-      "File.Copy(${1:sourceFileName}, ${2:destinationFileName})${0}"
-    ],
-    "description": "File.Copy method."
-  },
-  "File.Delete": {
-    "prefix": "iof_d",
-    "body": [
-      "File.Delete(${1:path})${0}"
-    ],
-    "description": "File.Delete method."
-  },
-  "File.Move": {
-    "prefix": "iof_m",
-    "body": [
-      "File.Move(${1:sourceFileName}, ${2:destinationFileName})${0}"
-    ],
-    "description": "File.Move method."
-  },
-  "File.ReadAllLines": {
-    "prefix": "iof_ral",
-    "body": [
-      "File.ReadAllLines(${1:path}, ${2:Encoding.UTF8})${0}"
-    ],
-    "description": "File.ReadAllLines method."
-  },
-  "File.ReadAllText": {
-    "prefix": "iof_rat",
-    "body": [
-      "File.ReadAllText(${1:path}, ${2:Encoding.UTF8})${0}"
-    ],
-    "description": "File.ReadAllText method."
-  },
-  "File.ReadLines": {
-    "prefix": "iof_rl",
-    "body": [
-      "File.ReadLines(${1:path}, ${2:Encoding.UTF8})${0}"
-    ],
-    "description": "File.ReadLines method."
-  },
-  "File.WriteAllLines": {
-    "prefix": "iof_wal",
-    "body": [
-      "File.WriteAllLines(${1:path}, ${2:content}, ${3:Encoding.UTF8})${0}"
-    ],
-    "description": "File.WriteAllLines method."
-  },
-  "File.WriteAllText": {
-    "prefix": "iof_wat",
-    "body": [
-      "File.WriteAllText(${1:path}, ${2:\"\"}, ${3:Encoding.UTF8})${0}"
-    ],
-    "description": "File.WriteAllText method."
-  },
-  "FileStream Variable": {
-    "prefix": "u_fesm",
-    "body": [
-      "using (var ${1:fs} = new FileStream(${2:path}, FileMode${3:.OpenOrCreate})) {",
-      "\t${0}",
-      "}"
-    ],
-    "description": "FileStream variable declaration."
   },
   "if !string.IsNullOrEmpty": {
     "prefix": "ifxsne",
@@ -227,7 +99,7 @@
     "description": "if !string.IsNullOrWhiteSpace"
   },
   "if Enum.TryParse": {
-    "prefix": "ifemtp",
+    "prefix": "ifentp",
     "body": [
       "${1:TEnum} ${2:result};",
       "if (Enum.TryParse(${3:value}, out ${2})) {",
@@ -239,7 +111,7 @@
   "if equal to null return": {
     "prefix": "ifnre",
     "body": [
-      "if (${1:x} == null)",
+      "if (${1:x} is null)",
       "\treturn;${0}"
     ],
     "description": "if equal to null return"
@@ -247,7 +119,7 @@
   "if equal to null return default": {
     "prefix": "ifnred",
     "body": [
-      "if (${1:x} == null)",
+      "if (${1:x} is null)",
       "\treturn default;${0}"
     ],
     "description": "if equal to null return default"
@@ -255,7 +127,7 @@
   "if equal to null return false": {
     "prefix": "ifnref",
     "body": [
-      "if (${1:x} == null)",
+      "if (${1:x} is null)",
       "\treturn false;${0}"
     ],
     "description": "if equal to null return false"
@@ -263,7 +135,7 @@
   "if equal to null return null": {
     "prefix": "ifnren",
     "body": [
-      "if (${1:x} == null)",
+      "if (${1:x} is null)",
       "\treturn null;${0}"
     ],
     "description": "if equal to null return null"
@@ -271,13 +143,13 @@
   "if equal to null return true": {
     "prefix": "ifnret",
     "body": [
-      "if (${1:x} == null)",
+      "if (${1:x} is null)",
       "\treturn true;${0}"
     ],
     "description": "if equal to null return true"
   },
   "if not Enum.TryParse": {
-    "prefix": "ifxemtp",
+    "prefix": "ifxentp",
     "body": [
       "${1:TEnum} ${2:result};",
       "if (!Enum.TryParse(${3:value}, out ${2})) {",
@@ -289,7 +161,7 @@
   "if not equal to null return": {
     "prefix": "ifxnre",
     "body": [
-      "if (${1:x} != null)",
+      "if (${1:x} is not null)",
       "\treturn;${0}"
     ],
     "description": "if not equal to null return"
@@ -297,7 +169,7 @@
   "if not equal to null return default": {
     "prefix": "ifxnred",
     "body": [
-      "if (${1:x} != null)",
+      "if (${1:x} is not null)",
       "\treturn default;${0}"
     ],
     "description": "if not equal to null return default"
@@ -305,7 +177,7 @@
   "if not equal to null return false": {
     "prefix": "ifxnref",
     "body": [
-      "if (${1:x} != null)",
+      "if (${1:x} is not null)",
       "\treturn false;${0}"
     ],
     "description": "if not equal to null return false"
@@ -313,7 +185,7 @@
   "if not equal to null return null": {
     "prefix": "ifxnren",
     "body": [
-      "if (${1:x} != null)",
+      "if (${1:x} is not null)",
       "\treturn null;${0}"
     ],
     "description": "if not equal to null return null"
@@ -321,7 +193,7 @@
   "if not equal to null return true": {
     "prefix": "ifxnret",
     "body": [
-      "if (${1:x} != null)",
+      "if (${1:x} is not null)",
       "\treturn true;${0}"
     ],
     "description": "if not equal to null return true"
@@ -444,24 +316,6 @@
     ],
     "description": "if statement with condition whether TryGetValue method returns true."
   },
-  "MemoryStream Variable": {
-    "prefix": "u_mysm",
-    "body": [
-      "using (var ${1:ms} = new MemoryStream(${2:0})) {",
-      "\t${0}",
-      "}"
-    ],
-    "description": "MemoryStream variable declaration."
-  },
-  "namespace": {
-    "prefix": "ns",
-    "body": [
-      "namespace ${1:NamespaceName} {",
-      "\t${TM_SELECTED_TEXT}${0}",
-      "}"
-    ],
-    "description": "namespace declaration"
-  },
   "new array ": {
     "prefix": "na",
     "body": [
@@ -483,75 +337,12 @@
     ],
     "description": "override modifier"
   },
-  "Path.Combine": {
-    "prefix": "iop_c",
-    "body": [
-      "Path.Combine(${1:path1}, ${2:path2})${0}"
-    ],
-    "description": "Path.Combine method."
-  },
-  "Path.GetDirectoryName": {
-    "prefix": "iop_gdn",
-    "body": [
-      "Path.GetDirectoryName(${1:path})${0}"
-    ],
-    "description": "Path.GetDirectoryName method."
-  },
-  "Path.GetExtension": {
-    "prefix": "iop_ge",
-    "body": [
-      "Path.GetExtension(${1:path})${0}"
-    ],
-    "description": "Path.GetExtension method."
-  },
-  "Path.GetFileName": {
-    "prefix": "iop_gfn",
-    "body": [
-      "Path.GetFileName(${1:path})${0}"
-    ],
-    "description": "Path.GetFileName method."
-  },
-  "Path.GetFileNameWithoutExtension": {
-    "prefix": "iop_gfnwe",
-    "body": [
-      "Path.GetFileNameWithoutExtension(${1:path})${0}"
-    ],
-    "description": "Path.GetFileNameWithoutExtension method."
-  },
-  "Path.GetFullPath": {
-    "prefix": "iop_gfp",
-    "body": [
-      "Path.GetFullPath(${1:path})${0}"
-    ],
-    "description": "Path.GetFullPath method."
-  },
-  "Path.HasExtension": {
-    "prefix": "iop_he",
-    "body": [
-      "Path.HasExtension(${1:path})${0}"
-    ],
-    "description": "Path.HasExtension method."
-  },
-  "Path.ChangeExtension": {
-    "prefix": "iop_ce",
-    "body": [
-      "Path.ChangeExtension(${1:path}, ${2:\"\"})${0}"
-    ],
-    "description": "Path.ChangeExtension method."
-  },
   "return await": {
     "prefix": "ra",
     "body": [
       "return await ${0}"
     ],
     "description": "return await"
-  },
-  "return conditional operator": {
-    "prefix": "reco",
-    "body": [
-      "return (${1:condition}) ? ${2:true} : ${3:false};${0}"
-    ],
-    "description": "return conditional operator"
   },
   "return default": {
     "prefix": "red",
@@ -567,13 +358,6 @@
     ],
     "description": "return new"
   },
-  "return statement": {
-    "prefix": "re",
-    "body": [
-      "return;${0}"
-    ],
-    "description": "return statement"
-  },
   "StringBuilder variable": {
     "prefix": "vsb",
     "body": [
@@ -582,7 +366,7 @@
     "description": "StringBuilder variable declaration"
   },
   "throw statement": {
-    "prefix": "tw",
+    "prefix": "th",
     "body": [
       "throw;${0}"
     ],
@@ -594,16 +378,6 @@
       "TimeSpan${0}"
     ],
     "description": "TimeSpan type"
-  },
-  "variable declaration with as operator + if not null": {
-    "prefix": "vasxn",
-    "body": [
-      "var ${1:x} = ${2:_} as ${3:T};",
-      "if (${1} != null) {",
-      "\t${0}",
-      "}"
-    ],
-    "description": "variable declaration with as operator + condition whether the variable is not equal to null"
   },
   "yield return new": {
     "prefix": "yrn",

@@ -6,8 +6,6 @@
 
 ### Quick Reference
 
-* Snippet can be inserted by providing full name of an element (for example **dockpanel** for **DockPanel**).
-* Snippet can be also inserted by providing first and last letter of each part of the element name (for example **dkpl** for **D**oc**kP**ane**l**).
 Shortcut|Description|Comment
 --------|-----------|-------
 a|\(element\) with attribute|suffix

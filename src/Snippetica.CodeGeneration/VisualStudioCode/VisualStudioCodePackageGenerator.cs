@@ -80,7 +80,7 @@ namespace Snippetica.CodeGeneration.VisualStudioCode
                 Description = "A collection of snippets for ",
                 Icon = "images/icon.png",
                 Author = "Josef Pihrt",
-                License = "SEE LICENSE IN LICENSE.TXT",
+                License = "Apache-2.0",
                 Homepage = $"{SourceGitHubUrl}/{VisualStudioCodeExtensionProjectName}",
                 Repository = new RepositoryInfo()
                 {

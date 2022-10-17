@@ -64,7 +64,6 @@
               <New Value="fe" Description="foreach statement" />
               <New Value="fr" Description="for statement" />
               <New Value="if" Description="if statement" />
-              <New Value="re" Description="return statement" />
               <New Value="t" Description="try statement" />
               <New Value="th" Description="throw statement" />
               <New Value="u" Description="using statement" />
@@ -138,7 +137,7 @@
               <New Value="v" Description="virtual" Comment="prefix" />
             </With>
             <With Kind="Statement">
-              <New Value="dw" Description="do-while" />
+              <New Value="do" Description="do-while" />
               <New Value="fe" Description="foreach" />
               <New Value="fr" Description="for" />
               <New Value="if" Description="if" />

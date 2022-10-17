@@ -4,10 +4,8 @@
     <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <TargetFrameworkProfile />
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
+    <FileUpgradeFlags></FileUpgradeFlags>
+    <UpgradeBackupLocation></UpgradeBackupLocation>
     <OldToolsVersion>14.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup>
@@ -49,8 +47,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>
-    </CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -60,8 +57,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>
-    </CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
@@ -237,9 +233,6 @@
     <Content Include="Snippetica.CSharp\IComparerOfTClass.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\IEnumeratorOfTVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\IEqualityComparerClass.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -261,10 +254,10 @@
     <Content Include="Snippetica.CSharp\InterfaceEvent.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\InterfaceEventWithEventHandlerOfT.snippet">
+    <Content Include="Snippetica.CSharp\KeyValuePair.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\KeyValuePair.snippet">
+    <Content Include="Snippetica.CSharp\KeyValuePairCreate.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\LambdaExpression.snippet">
@@ -294,16 +287,22 @@
     <Content Include="Snippetica.CSharp\ObservableCollectionOfTClass.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\Obsolete_CollectionOfTType.snippet">
+    <Content Include="Snippetica.CSharp\Obsolete_Interface.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\Obsolete_CollectionOfTVariable.snippet">
+    <Content Include="Snippetica.CSharp\Obsolete_InternalInterface.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\Obsolete_CollectionOfTVariableWithInitializer.snippet">
+    <Content Include="Snippetica.CSharp\Obsolete_SwitchStatement.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\Obsolete_IEnumerableOfTType.snippet">
+    <Content Include="Snippetica.CSharp\Obsolete_While.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\Obsolete_WhileNotNull.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\Obsolete_WhileNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\OverloadedOperatorAmpersand.snippet">
@@ -402,12 +401,6 @@
     <Content Include="Snippetica.CSharp\StaticConstructor.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\StreamReaderVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\StreamWriterVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\StringIsNullOrEmpty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -417,16 +410,13 @@
     <Content Include="Snippetica.CSharp\StringKeyword.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\StringReaderVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\StringVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\StringWriterVariable.snippet">
+    <Content Include="Snippetica.CSharp\SwitchExpression.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\Switch.snippet">
+    <Content Include="Snippetica.CSharp\SwitchStatement.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\ThrowNew.snippet">
@@ -471,13 +461,13 @@
     <Content Include="Snippetica.CSharp\TypeOfOperator.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\Using.snippet">
+    <Content Include="Snippetica.CSharp\UsingDeclaration.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.CSharp\UsingStatement.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\UsingStatic.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\UsingVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\Variable.snippet">
@@ -493,12 +483,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\WhileNull.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\XmlReaderVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\XmlWriterVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\YieldBreak.snippet">
@@ -525,12 +509,6 @@
     <Content Include="Snippetica.CSharp\ArrayOfStringVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\ArrayOfInt64Variable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\ArrayOfDateTimeVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\ArrayOfThisVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -547,12 +525,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\ArrayOfStringVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\ArrayOfInt64VariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\ArrayOfDateTimeVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicThisAutoProperty.snippet">
@@ -573,12 +545,6 @@
     <Content Include="Snippetica.CSharp\PublicStringAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PublicInt64AutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicDateTimeAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\InternalThisAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -595,12 +561,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalStringAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalInt64AutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalDateTimeAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateThisAutoProperty.snippet">
@@ -621,12 +581,6 @@
     <Content Include="Snippetica.CSharp\PrivateStringAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PrivateInt64AutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateDateTimeAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PublicVirtualThisAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -643,12 +597,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicVirtualStringAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicVirtualInt64AutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicVirtualDateTimeAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalVirtualThisAutoProperty.snippet">
@@ -669,12 +617,6 @@
     <Content Include="Snippetica.CSharp\InternalVirtualStringAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\InternalVirtualInt64AutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalVirtualDateTimeAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PublicThisAutoPropertyWithPrivateSet.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -691,12 +633,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicStringAutoPropertyWithPrivateSet.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicInt64AutoPropertyWithPrivateSet.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicDateTimeAutoPropertyWithPrivateSet.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalThisAutoPropertyWithPrivateSet.snippet">
@@ -717,12 +653,6 @@
     <Content Include="Snippetica.CSharp\InternalStringAutoPropertyWithPrivateSet.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\InternalInt64AutoPropertyWithPrivateSet.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalDateTimeAutoPropertyWithPrivateSet.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PrivateThisAutoPropertyWithPrivateSet.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -739,12 +669,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateStringAutoPropertyWithPrivateSet.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateInt64AutoPropertyWithPrivateSet.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateDateTimeAutoPropertyWithPrivateSet.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicClass.snippet">
@@ -777,9 +701,6 @@
     <Content Include="Snippetica.CSharp\PublicStringConst.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PublicInt64Const.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\InternalBooleanConst.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -792,9 +713,6 @@
     <Content Include="Snippetica.CSharp\InternalStringConst.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\InternalInt64Const.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PrivateBooleanConst.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -805,9 +723,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateStringConst.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateInt64Const.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicConstructor.snippet">
@@ -840,12 +755,6 @@
     <Content Include="Snippetica.CSharp\PublicStringDelegate.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PublicInt64Delegate.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicDateTimeDelegate.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\InternalThisDelegate.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -865,12 +774,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalStringDelegate.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalInt64Delegate.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalDateTimeDelegate.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateThisDelegate.snippet">
@@ -894,12 +797,6 @@
     <Content Include="Snippetica.CSharp\PrivateStringDelegate.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PrivateInt64Delegate.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateDateTimeDelegate.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PublicEnum.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -916,15 +813,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateEvent.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicEventWithEventHandlerOfT.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalEventWithEventHandlerOfT.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateEventWithEventHandlerOfT.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicThisField.snippet">
@@ -945,12 +833,6 @@
     <Content Include="Snippetica.CSharp\PublicStringField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PublicInt64Field.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicDateTimeField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PrivateThisField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -967,12 +849,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateStringField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateInt64Field.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateDateTimeField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicStaticThisField.snippet">
@@ -993,12 +869,6 @@
     <Content Include="Snippetica.CSharp\PublicStaticStringField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PublicStaticInt64Field.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicStaticDateTimeField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PrivateStaticThisField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1017,12 +887,6 @@
     <Content Include="Snippetica.CSharp\PrivateStaticStringField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PrivateStaticInt64Field.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateStaticDateTimeField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\IfNotTryParse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1032,12 +896,6 @@
     <Content Include="Snippetica.CSharp\IfNotTryParseInt32.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\IfNotTryParseInt64.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\IfNotTryParseDateTime.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\IfTryParse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1045,12 +903,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\IfTryParseInt32.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\IfTryParseInt64.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\IfTryParseDateTime.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicThisIndexer.snippet">
@@ -1071,12 +923,6 @@
     <Content Include="Snippetica.CSharp\PublicStringIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PublicInt64Indexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicDateTimeIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\InternalThisIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1095,12 +941,6 @@
     <Content Include="Snippetica.CSharp\InternalStringIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\InternalInt64Indexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalDateTimeIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PrivateThisIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1117,12 +957,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateStringIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateInt64Indexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateDateTimeIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicInterface.snippet">
@@ -1149,12 +983,6 @@
     <Content Include="Snippetica.CSharp\StringInterfaceIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\Int64InterfaceIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\DateTimeInterfaceIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\ThisInterfaceMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1176,12 +1004,6 @@
     <Content Include="Snippetica.CSharp\StringInterfaceMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\Int64InterfaceMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\DateTimeInterfaceMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\ThisInterfaceProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1200,12 +1022,6 @@
     <Content Include="Snippetica.CSharp\StringInterfaceProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\Int64InterfaceProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\DateTimeInterfaceProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\ThisInterfaceReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1222,12 +1038,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\StringInterfaceReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\Int64InterfaceReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\DateTimeInterfaceReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicThisMethod.snippet">
@@ -1251,12 +1061,6 @@
     <Content Include="Snippetica.CSharp\PublicStringMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PublicInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicDateTimeMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\InternalThisMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1276,12 +1080,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalStringMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalDateTimeMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateThisMethod.snippet">
@@ -1305,12 +1103,6 @@
     <Content Include="Snippetica.CSharp\PrivateStringMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PrivateInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateDateTimeMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PublicStaticThisMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1330,12 +1122,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicStaticStringMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicStaticInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicStaticDateTimeMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalStaticThisMethod.snippet">
@@ -1359,12 +1145,6 @@
     <Content Include="Snippetica.CSharp\InternalStaticStringMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\InternalStaticInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalStaticDateTimeMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PrivateStaticThisMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1384,12 +1164,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateStaticStringMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateStaticInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateStaticDateTimeMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicVirtualThisMethod.snippet">
@@ -1413,12 +1187,6 @@
     <Content Include="Snippetica.CSharp\PublicVirtualStringMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PublicVirtualInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicVirtualDateTimeMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\InternalVirtualThisMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1438,12 +1206,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalVirtualStringMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalVirtualInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalVirtualDateTimeMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\NewVariable.snippet">
@@ -1470,12 +1232,6 @@
     <Content Include="Snippetica.CSharp\StringParameterArray.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\Int64ParameterArray.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\DateTimeParameterArray.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PublicThisReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1492,12 +1248,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicStringReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicDateTimeReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalThisReadOnlyAutoProperty.snippet">
@@ -1518,12 +1268,6 @@
     <Content Include="Snippetica.CSharp\InternalStringReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\InternalInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalDateTimeReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PrivateThisReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1540,12 +1284,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateStringReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateDateTimeReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicStaticThisReadOnlyAutoProperty.snippet">
@@ -1566,12 +1304,6 @@
     <Content Include="Snippetica.CSharp\PublicStaticStringReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PublicStaticInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicStaticDateTimeReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\InternalStaticThisReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1588,12 +1320,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalStaticStringReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalStaticInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalStaticDateTimeReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateStaticThisReadOnlyAutoProperty.snippet">
@@ -1614,12 +1340,6 @@
     <Content Include="Snippetica.CSharp\PrivateStaticStringReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PrivateStaticInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateStaticDateTimeReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PublicVirtualThisReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1636,12 +1356,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicVirtualStringReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicVirtualInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicVirtualDateTimeReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalVirtualThisReadOnlyAutoProperty.snippet">
@@ -1662,12 +1376,6 @@
     <Content Include="Snippetica.CSharp\InternalVirtualStringReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\InternalVirtualInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalVirtualDateTimeReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PublicThisReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1684,12 +1392,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicStringReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicInt64ReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicDateTimeReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalThisReadOnlyField.snippet">
@@ -1710,12 +1412,6 @@
     <Content Include="Snippetica.CSharp\InternalStringReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\InternalInt64ReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalDateTimeReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PrivateThisReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1732,12 +1428,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateStringReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateInt64ReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateDateTimeReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicStaticThisReadOnlyField.snippet">
@@ -1758,12 +1448,6 @@
     <Content Include="Snippetica.CSharp\PublicStaticStringReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PublicStaticInt64ReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicStaticDateTimeReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\InternalStaticThisReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1780,12 +1464,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalStaticStringReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalStaticInt64ReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalStaticDateTimeReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateStaticThisReadOnlyField.snippet">
@@ -1806,12 +1484,6 @@
     <Content Include="Snippetica.CSharp\PrivateStaticStringReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PrivateStaticInt64ReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateStaticDateTimeReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PublicThisReadOnlyIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1828,12 +1500,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicStringReadOnlyIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicInt64ReadOnlyIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicDateTimeReadOnlyIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalThisReadOnlyIndexer.snippet">
@@ -1854,12 +1520,6 @@
     <Content Include="Snippetica.CSharp\InternalStringReadOnlyIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\InternalInt64ReadOnlyIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalDateTimeReadOnlyIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PrivateThisReadOnlyIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1876,12 +1536,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateStringReadOnlyIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateInt64ReadOnlyIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateDateTimeReadOnlyIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicThisReadOnlyProperty.snippet">
@@ -1902,12 +1556,6 @@
     <Content Include="Snippetica.CSharp\PublicStringReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PublicInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicDateTimeReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\InternalThisReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1924,12 +1572,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalStringReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalDateTimeReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateThisReadOnlyProperty.snippet">
@@ -1950,12 +1592,6 @@
     <Content Include="Snippetica.CSharp\PrivateStringReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PrivateInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateDateTimeReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PublicStaticThisReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1972,12 +1608,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicStaticStringReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicStaticInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicStaticDateTimeReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalStaticThisReadOnlyProperty.snippet">
@@ -1998,12 +1628,6 @@
     <Content Include="Snippetica.CSharp\InternalStaticStringReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\InternalStaticInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalStaticDateTimeReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\PrivateStaticThisReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2020,12 +1644,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PrivateStaticStringReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateStaticInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PrivateStaticDateTimeReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicVirtualThisReadOnlyProperty.snippet">
@@ -2046,12 +1664,6 @@
     <Content Include="Snippetica.CSharp\PublicVirtualStringReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.CSharp\PublicVirtualInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\PublicVirtualDateTimeReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.CSharp\InternalVirtualThisReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2068,12 +1680,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\InternalVirtualStringReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalVirtualInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\InternalVirtualDateTimeReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\PublicReadOnlyRecordStruct.snippet">
@@ -2185,30 +1791,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\ImmutableListOfTType.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\ThisTypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\TypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\BooleanTypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\Int32TypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\ObjectTypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\StringTypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\Int64TypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.CSharp\DateTimeTypeParameter.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.CSharp\DictionaryOfTKeyTValueVariable.snippet">
@@ -2328,9 +1910,6 @@
     <Content Include="Snippetica.VisualBasic\IComparerOfTClass.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\IEnumeratorOfTVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\IEqualityComparerClass.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2358,13 +1937,16 @@
     <Content Include="Snippetica.VisualBasic\InterfaceEvent.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\InterfaceEventWithEventHandlerOfT.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\IsNothing.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\IsNotNothing.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\KeyValuePair.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\KeyValuePairCreate.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\LambdaExpression.snippet">
@@ -2487,25 +2069,13 @@
     <Content Include="Snippetica.VisualBasic\StaticConstructor.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\StreamReaderVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\StreamWriterVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\StringIsNullOrEmpty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\StringIsNullOrWhiteSpace.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\StringReaderVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\StringVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\StringWriterVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\ThrowNew.snippet">
@@ -2547,7 +2117,7 @@
     <Content Include="Snippetica.VisualBasic\TryFinally.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\Using.snippet">
+    <Content Include="Snippetica.VisualBasic\UsingStatement.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\Variable.snippet">
@@ -2563,12 +2133,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\WhileIsNotNothing.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\XmlReaderVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\XmlWriterVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\ArrayOfThisVariable.snippet">
@@ -2589,12 +2153,6 @@
     <Content Include="Snippetica.VisualBasic\ArrayOfStringVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\ArrayOfInt64Variable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\ArrayOfDateTimeVariable.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\ArrayOfThisVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2611,12 +2169,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\ArrayOfStringVariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\ArrayOfInt64VariableWithInitializer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\ArrayOfDateTimeVariableWithInitializer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicThisAutoProperty.snippet">
@@ -2637,12 +2189,6 @@
     <Content Include="Snippetica.VisualBasic\PublicStringAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PublicInt64AutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicDateTimeAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\InternalThisAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2659,12 +2205,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalStringAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalInt64AutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalDateTimeAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateThisAutoProperty.snippet">
@@ -2685,12 +2225,6 @@
     <Content Include="Snippetica.VisualBasic\PrivateStringAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateInt64AutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateDateTimeAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PublicVirtualThisAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2709,12 +2243,6 @@
     <Content Include="Snippetica.VisualBasic\PublicVirtualStringAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PublicVirtualInt64AutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicVirtualDateTimeAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\InternalVirtualThisAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2731,12 +2259,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalVirtualStringAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalVirtualInt64AutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalVirtualDateTimeAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicClass.snippet">
@@ -2760,9 +2282,6 @@
     <Content Include="Snippetica.VisualBasic\PublicStringConstant.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PublicInt64Constant.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\InternalBooleanConstant.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2775,9 +2294,6 @@
     <Content Include="Snippetica.VisualBasic\InternalStringConstant.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\InternalInt64Constant.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PrivateBooleanConstant.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2788,9 +2304,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateStringConstant.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateInt64Constant.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicConstructor.snippet">
@@ -2823,12 +2336,6 @@
     <Content Include="Snippetica.VisualBasic\PublicStringDelegate.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PublicInt64Delegate.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicDateTimeDelegate.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\InternalThisDelegate.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2848,12 +2355,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalStringDelegate.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalInt64Delegate.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalDateTimeDelegate.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateThisDelegate.snippet">
@@ -2877,12 +2378,6 @@
     <Content Include="Snippetica.VisualBasic\PrivateStringDelegate.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateInt64Delegate.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateDateTimeDelegate.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PublicEnum.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2899,15 +2394,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateEvent.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicEventWithEventHandlerOfT.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalEventWithEventHandlerOfT.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateEventWithEventHandlerOfT.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicThisField.snippet">
@@ -2928,12 +2414,6 @@
     <Content Include="Snippetica.VisualBasic\PublicStringField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PublicInt64Field.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicDateTimeField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PrivateThisField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2950,12 +2430,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateStringField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateInt64Field.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateDateTimeField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicStaticThisField.snippet">
@@ -2976,12 +2450,6 @@
     <Content Include="Snippetica.VisualBasic\PublicStaticStringField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PublicStaticInt64Field.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicStaticDateTimeField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PrivateStaticThisField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3000,12 +2468,6 @@
     <Content Include="Snippetica.VisualBasic\PrivateStaticStringField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateStaticInt64Field.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateStaticDateTimeField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\IfNotTryParse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3015,12 +2477,6 @@
     <Content Include="Snippetica.VisualBasic\IfNotTryParseInt32.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\IfNotTryParseInt64.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\IfNotTryParseDateTime.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\IfTryParse.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3028,12 +2484,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\IfTryParseInt32.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\IfTryParseInt64.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\IfTryParseDateTime.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicThisIndexer.snippet">
@@ -3054,12 +2504,6 @@
     <Content Include="Snippetica.VisualBasic\PublicStringIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PublicInt64Indexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicDateTimeIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\InternalThisIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3078,12 +2522,6 @@
     <Content Include="Snippetica.VisualBasic\InternalStringIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\InternalInt64Indexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalDateTimeIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PrivateThisIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3100,12 +2538,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateStringIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateInt64Indexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateDateTimeIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicInterface.snippet">
@@ -3132,12 +2564,6 @@
     <Content Include="Snippetica.VisualBasic\StringInterfaceIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\Int64InterfaceIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\DateTimeInterfaceIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\ThisInterfaceMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3159,12 +2585,6 @@
     <Content Include="Snippetica.VisualBasic\StringInterfaceMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\Int64InterfaceMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\DateTimeInterfaceMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\ThisInterfaceProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3183,12 +2603,6 @@
     <Content Include="Snippetica.VisualBasic\StringInterfaceProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\Int64InterfaceProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\DateTimeInterfaceProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\ThisInterfaceReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3205,12 +2619,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\StringInterfaceReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\Int64InterfaceReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\DateTimeInterfaceReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicThisMethod.snippet">
@@ -3234,12 +2642,6 @@
     <Content Include="Snippetica.VisualBasic\PublicStringMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PublicInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicDateTimeMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\InternalThisMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3259,12 +2661,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalStringMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalDateTimeMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateThisMethod.snippet">
@@ -3288,12 +2684,6 @@
     <Content Include="Snippetica.VisualBasic\PrivateStringMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateDateTimeMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PublicStaticThisMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3313,12 +2703,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicStaticStringMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicStaticInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicStaticDateTimeMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalStaticThisMethod.snippet">
@@ -3342,12 +2726,6 @@
     <Content Include="Snippetica.VisualBasic\InternalStaticStringMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\InternalStaticInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalStaticDateTimeMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PrivateStaticThisMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3367,12 +2745,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateStaticStringMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateStaticInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateStaticDateTimeMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicVirtualThisMethod.snippet">
@@ -3396,12 +2768,6 @@
     <Content Include="Snippetica.VisualBasic\PublicVirtualStringMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PublicVirtualInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicVirtualDateTimeMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\InternalVirtualThisMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3421,12 +2787,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalVirtualStringMethod.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalVirtualInt64Method.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalVirtualDateTimeMethod.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicModule.snippet">
@@ -3459,12 +2819,6 @@
     <Content Include="Snippetica.VisualBasic\StringParameterArray.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\Int64ParameterArray.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\DateTimeParameterArray.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PublicThisReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3481,12 +2835,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicStringReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicDateTimeReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalThisReadOnlyAutoProperty.snippet">
@@ -3507,12 +2855,6 @@
     <Content Include="Snippetica.VisualBasic\InternalStringReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\InternalInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalDateTimeReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PrivateThisReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3529,12 +2871,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateStringReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateDateTimeReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicStaticThisReadOnlyAutoProperty.snippet">
@@ -3555,12 +2891,6 @@
     <Content Include="Snippetica.VisualBasic\PublicStaticStringReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PublicStaticInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicStaticDateTimeReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\InternalStaticThisReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3577,12 +2907,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalStaticStringReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalStaticInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalStaticDateTimeReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateStaticThisReadOnlyAutoProperty.snippet">
@@ -3603,12 +2927,6 @@
     <Content Include="Snippetica.VisualBasic\PrivateStaticStringReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateStaticInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateStaticDateTimeReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PublicVirtualThisReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3625,12 +2943,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicVirtualStringReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicVirtualInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicVirtualDateTimeReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalVirtualThisReadOnlyAutoProperty.snippet">
@@ -3651,12 +2963,6 @@
     <Content Include="Snippetica.VisualBasic\InternalVirtualStringReadOnlyAutoProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\InternalVirtualInt64ReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalVirtualDateTimeReadOnlyAutoProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PublicThisReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3673,12 +2979,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicStringReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicInt64ReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicDateTimeReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalThisReadOnlyField.snippet">
@@ -3699,12 +2999,6 @@
     <Content Include="Snippetica.VisualBasic\InternalStringReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\InternalInt64ReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalDateTimeReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PrivateThisReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3721,12 +3015,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateStringReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateInt64ReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateDateTimeReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicStaticThisReadOnlyField.snippet">
@@ -3747,12 +3035,6 @@
     <Content Include="Snippetica.VisualBasic\PublicStaticStringReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PublicStaticInt64ReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicStaticDateTimeReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\InternalStaticThisReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3769,12 +3051,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalStaticStringReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalStaticInt64ReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalStaticDateTimeReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateStaticThisReadOnlyField.snippet">
@@ -3795,12 +3071,6 @@
     <Content Include="Snippetica.VisualBasic\PrivateStaticStringReadOnlyField.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateStaticInt64ReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateStaticDateTimeReadOnlyField.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PublicThisReadOnlyIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3817,12 +3087,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicStringReadOnlyIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicInt64ReadOnlyIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicDateTimeReadOnlyIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalThisReadOnlyIndexer.snippet">
@@ -3843,12 +3107,6 @@
     <Content Include="Snippetica.VisualBasic\InternalStringReadOnlyIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\InternalInt64ReadOnlyIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalDateTimeReadOnlyIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PrivateThisReadOnlyIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3865,12 +3123,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateStringReadOnlyIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateInt64ReadOnlyIndexer.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateDateTimeReadOnlyIndexer.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicThisReadOnlyProperty.snippet">
@@ -3891,12 +3143,6 @@
     <Content Include="Snippetica.VisualBasic\PublicStringReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PublicInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicDateTimeReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\InternalThisReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3913,12 +3159,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalStringReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalDateTimeReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateThisReadOnlyProperty.snippet">
@@ -3939,12 +3179,6 @@
     <Content Include="Snippetica.VisualBasic\PrivateStringReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateDateTimeReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PublicStaticThisReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -3961,12 +3195,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicStaticStringReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicStaticInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicStaticDateTimeReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalStaticThisReadOnlyProperty.snippet">
@@ -3987,12 +3215,6 @@
     <Content Include="Snippetica.VisualBasic\InternalStaticStringReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\InternalStaticInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalStaticDateTimeReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\PrivateStaticThisReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -4009,12 +3231,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PrivateStaticStringReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateStaticInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PrivateStaticDateTimeReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicVirtualThisReadOnlyProperty.snippet">
@@ -4035,12 +3251,6 @@
     <Content Include="Snippetica.VisualBasic\PublicVirtualStringReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\PublicVirtualInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\PublicVirtualDateTimeReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\InternalVirtualThisReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -4057,12 +3267,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\InternalVirtualStringReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalVirtualInt64ReadOnlyProperty.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\InternalVirtualDateTimeReadOnlyProperty.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\PublicStruct.snippet">
@@ -4140,30 +3344,6 @@
     <Content Include="Snippetica.VisualBasic\ImmutableListOfTType.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.VisualBasic\ThisTypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\TypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\BooleanTypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\Int32TypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\ObjectTypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\StringTypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\Int64TypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippetica.VisualBasic\DateTimeTypeParameter.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Snippetica.VisualBasic\DictionaryOfTKeyTValueTypeVariable.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -4234,6 +3414,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\DoWhile.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.Cpp\DoWhile_Obsolete.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.Cpp\DynamicCast.snippet">

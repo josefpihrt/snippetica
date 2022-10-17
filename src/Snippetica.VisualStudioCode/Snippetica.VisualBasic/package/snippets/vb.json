@@ -22,13 +22,6 @@
     ],
     "description": "- operator overloading"
   },
-  " type parameter": {
-    "prefix": "g",
-    "body": [
-      "(Of ${1:T})${0}"
-    ],
-    "description": " type parameter"
-  },
   "#If directive": {
     "prefix": "ppif",
     "body": [
@@ -518,7 +511,7 @@
     "description": "Friend constant declaration"
   },
   "Friend constructor": {
-    "prefix": "icr",
+    "prefix": "ico",
     "body": [
       "Friend Sub New(${1:parameter As T})",
       "\t${0}",
@@ -534,7 +527,7 @@
     "description": "Friend delegate declaration"
   },
   "Friend enum": {
-    "prefix": "iem",
+    "prefix": "ien",
     "body": [
       "Friend Enum ${1:EnumName}",
       "\t${0}",
@@ -543,18 +536,7 @@
     "description": "Friend enum declaration"
   },
   "Friend event": {
-    "prefix": "iet_EventHandler",
-    "body": [
-      "Friend Event ${1:EventName} As EventHandler",
-      "",
-      "Protected Overridable Sub On${1}(${2:e} As EventArgs)",
-      "\tRaiseEvent ${1}(Me, ${2})",
-      "End Sub${0}"
-    ],
-    "description": "Friend event declaration"
-  },
-  "Friend event with EventHandler<T>": {
-    "prefix": "iet_EventHandlerOfT",
+    "prefix": "iev_EventHandler",
     "body": [
       "Friend Event ${1:EventName} As EventHandler(Of ${2:EventArgs})",
       "",
@@ -562,10 +544,10 @@
       "\tRaiseEvent ${1}(Me, ${3})",
       "End Sub${0}"
     ],
-    "description": "Friend event declaration with EventHandler<T>"
+    "description": "Friend event declaration"
   },
   "Friend indexer": {
-    "prefix": "iir",
+    "prefix": "iin",
     "body": [
       "Default Friend Property Item(${1:ByVal index As Integer}) As ${2:T}",
       "\tGet",
@@ -596,7 +578,7 @@
     "description": "Friend method declaration"
   },
   "Friend module": {
-    "prefix": "ime",
+    "prefix": "imo",
     "body": [
       "Friend Module ${1:ModuleName}",
       "\t${0}",
@@ -653,7 +635,7 @@
     "description": "Friend read-only field declaration"
   },
   "Friend read-only indexer": {
-    "prefix": "irir",
+    "prefix": "irin",
     "body": [
       "Default Friend Property Item(${1:ByVal index As Integer}) As ${2:T}",
       "\tGet",
@@ -784,17 +766,6 @@
       "End Class"
     ],
     "description": "class that implements IComparer(Of T)"
-  },
-  "IEnumerator(Of T) variable": {
-    "prefix": "u_er",
-    "body": [
-      "Using ${1:en} = ${2:items}.GetEnumerator()",
-      "\tWhile ${1}.MoveNext()",
-      "\t\t${0}",
-      "\tEnd While",
-      "End Using"
-    ],
-    "description": "IEnumerator(Of T) variable declaration."
   },
   "IEqualityComparer class": {
     "prefix": "c_IEqualityComparer",
@@ -944,21 +915,14 @@
     "description": "Int32 variable declaration"
   },
   "interface event": {
-    "prefix": "_et",
-    "body": [
-      "Event ${1:EventName} As EventHandler${0}"
-    ],
-    "description": "interface event declaration"
-  },
-  "interface event with EventHandler<T>": {
-    "prefix": "_ett",
+    "prefix": "_ev",
     "body": [
       "Event ${1:EventName} As EventHandler(Of ${2:EventArgs})${0}"
     ],
-    "description": "interface event declaration with EventHandler<T>"
+    "description": "interface event declaration"
   },
   "interface indexer": {
-    "prefix": "_ir",
+    "prefix": "_in",
     "body": [
       "Default Property Item(${1:int index}) As ${2:T}${0}"
     ],
@@ -1022,6 +986,20 @@
       "End Operator"
     ],
     "description": "IsTrue operator overloading"
+  },
+  "KeyValuePair type": {
+    "prefix": "kvp",
+    "body": [
+      "KeyValuePair${0}"
+    ],
+    "description": "KeyValuePair type"
+  },
+  "KeyValuePair.Create method": {
+    "prefix": "kvpc",
+    "body": [
+      "KeyValuePair.Create${0}"
+    ],
+    "description": "KeyValuePair.Create method"
   },
   "Lambda expression": {
     "prefix": "l",
@@ -1154,7 +1132,7 @@
     "description": "Private constant declaration"
   },
   "Private constructor": {
-    "prefix": "pcr",
+    "prefix": "pco",
     "body": [
       "Private Sub New(${1:parameter As T})",
       "\t${0}",
@@ -1170,7 +1148,7 @@
     "description": "Private delegate declaration"
   },
   "Private enum": {
-    "prefix": "pem",
+    "prefix": "pen",
     "body": [
       "Private Enum ${1:EnumName}",
       "\t${0}",
@@ -1179,18 +1157,7 @@
     "description": "Private enum declaration"
   },
   "Private event": {
-    "prefix": "pet_EventHandler",
-    "body": [
-      "Private Event ${1:EventName} As EventHandler",
-      "",
-      "Protected Overridable Sub On${1}(${2:e} As EventArgs)",
-      "\tRaiseEvent ${1}(Me, ${2})",
-      "End Sub${0}"
-    ],
-    "description": "Private event declaration"
-  },
-  "Private event with EventHandler<T>": {
-    "prefix": "pet_EventHandlerOfT",
+    "prefix": "pev_EventHandler",
     "body": [
       "Private Event ${1:EventName} As EventHandler(Of ${2:EventArgs})",
       "",
@@ -1198,7 +1165,7 @@
       "\tRaiseEvent ${1}(Me, ${3})",
       "End Sub${0}"
     ],
-    "description": "Private event declaration with EventHandler<T>"
+    "description": "Private event declaration"
   },
   "Private field": {
     "prefix": "pf",
@@ -1208,7 +1175,7 @@
     "description": "Private field declaration"
   },
   "Private indexer": {
-    "prefix": "pir",
+    "prefix": "pin",
     "body": [
       "Default Private Property Item(${1:ByVal index As Integer}) As ${2:T}",
       "\tGet",
@@ -1244,7 +1211,7 @@
     "description": "Private read-only field declaration"
   },
   "Private read-only indexer": {
-    "prefix": "prir",
+    "prefix": "prin",
     "body": [
       "Default Private Property Item(${1:ByVal index As Integer}) As ${2:T}",
       "\tGet",
@@ -1339,7 +1306,7 @@
     "description": "Public constant declaration"
   },
   "Public constructor": {
-    "prefix": "cr",
+    "prefix": "co",
     "body": [
       "Public Sub New(${1:parameter As T})",
       "\t${0}",
@@ -1355,7 +1322,7 @@
     "description": "Public delegate declaration"
   },
   "Public enum": {
-    "prefix": "em",
+    "prefix": "en",
     "body": [
       "Public Enum ${1:EnumName}",
       "\t${0}",
@@ -1364,18 +1331,7 @@
     "description": "Public enum declaration"
   },
   "Public event": {
-    "prefix": "et_EventHandler",
-    "body": [
-      "Public Event ${1:EventName} As EventHandler",
-      "",
-      "Protected Overridable Sub On${1}(${2:e} As EventArgs)",
-      "\tRaiseEvent ${1}(Me, ${2})",
-      "End Sub${0}"
-    ],
-    "description": "Public event declaration"
-  },
-  "Public event with EventHandler<T>": {
-    "prefix": "et_EventHandlerOfT",
+    "prefix": "ev_EventHandler",
     "body": [
       "Public Event ${1:EventName} As EventHandler(Of ${2:EventArgs})",
       "",
@@ -1383,7 +1339,7 @@
       "\tRaiseEvent ${1}(Me, ${3})",
       "End Sub${0}"
     ],
-    "description": "Public event declaration with EventHandler<T>"
+    "description": "Public event declaration"
   },
   "Public field": {
     "prefix": "f",
@@ -1393,7 +1349,7 @@
     "description": "Public field declaration"
   },
   "Public indexer": {
-    "prefix": "ir",
+    "prefix": "in",
     "body": [
       "Default Public Property Item(${1:ByVal index As Integer}) As ${2:T}",
       "\tGet",
@@ -1424,7 +1380,7 @@
     "description": "Public method declaration"
   },
   "Public module": {
-    "prefix": "me",
+    "prefix": "mo",
     "body": [
       "Public Module ${1:ModuleName}",
       "\t${0}",
@@ -1481,7 +1437,7 @@
     "description": "Public read-only field declaration"
   },
   "Public read-only indexer": {
-    "prefix": "rir",
+    "prefix": "rin",
     "body": [
       "Default Public Property Item(${1:ByVal index As Integer}) As ${2:T}",
       "\tGet",
@@ -1612,31 +1568,13 @@
     "description": "class that implements singleton pattern"
   },
   "static constructor": {
-    "prefix": "scr",
+    "prefix": "sco",
     "body": [
       "Shared Sub New()",
       "\t${0}",
       "End Sub"
     ],
     "description": "static constructor"
-  },
-  "StreamReader Variable": {
-    "prefix": "u_smrr",
-    "body": [
-      "Using ${1:sr} = New StreamReader(${2:stream})",
-      "\t${0}",
-      "End Using"
-    ],
-    "description": "StreamReader variable declaration."
-  },
-  "StreamWriter Variable": {
-    "prefix": "u_smwr",
-    "body": [
-      "Using ${1:sw} = New StreamWriter(${2:path}, ${3:Encoding.UTF8})",
-      "\t${0}",
-      "End Using"
-    ],
-    "description": "StreamWriter variable declaration."
   },
   "String variable": {
     "prefix": "vs",
@@ -1673,82 +1611,64 @@
     ],
     "description": "String.IsNullOrWhiteSpace = False"
   },
-  "StringReader Variable": {
-    "prefix": "u_srr",
-    "body": [
-      "Using ${1:sr} = new StringReader(${2:s})",
-      "\t${0}",
-      "End Using"
-    ],
-    "description": "StringReader variable declaration."
-  },
-  "StringWriter Variable": {
-    "prefix": "u_swr",
-    "body": [
-      "Using ${1:sw} = new StringWriter()",
-      "\t${0}",
-      "End Using"
-    ],
-    "description": "StringWriter variable declaration."
-  },
   "Throw New": {
-    "prefix": "twn",
+    "prefix": "thn",
     "body": [
       "Throw New${0}"
     ],
     "description": "Throw New"
   },
   "Throw New ArgumentException": {
-    "prefix": "twn_ae",
+    "prefix": "thn_ae",
     "body": [
       "Throw New ArgumentException(${1:\"\"}, NameOf(${2:parameter}))${0}"
     ],
     "description": "Throw New ArgumentException"
   },
   "Throw New ArgumentNullException": {
-    "prefix": "twn_ane",
+    "prefix": "thn_ane",
     "body": [
       "Throw New ArgumentNullException(NameOf(${1:parameter}))${0}"
     ],
     "description": "Throw New ArgumentNullException"
   },
   "Throw New ArgumentOutOfRangeException": {
-    "prefix": "twn_aoore",
+    "prefix": "thn_aoore",
     "body": [
       "Throw New ArgumentOutOfRangeException(NameOf(${1:parameter}), ${1}, ${2:\"\"})${0}"
     ],
     "description": "Throw New ArgumentOutOfRangeException"
   },
   "Throw New InvalidCastException": {
-    "prefix": "twn_ice",
+    "prefix": "thn_ice",
     "body": [
       "Throw New InvalidCastException(${1:\"\"})${0}"
     ],
     "description": "Throw New InvalidCastException"
   },
   "Throw New InvalidOperationException": {
-    "prefix": "twn_ioe",
+    "prefix": "thn_ioe",
     "body": [
       "Throw New InvalidOperationException(${1:message})${0}"
     ],
     "description": "Throw New InvalidOperationException"
   },
   "Throw New NotImplementedException": {
-    "prefix": "twn_nie",
+    "prefix": "thn_nie",
     "body": [
       "Throw New NotImplementedException(${1:message})${0}"
     ],
     "description": "Throw New NotImplementedException"
   },
   "Throw New NotSupportedException": {
-    "prefix": "twn_nse",
+    "prefix": "thn_nse",
     "body": [
       "Throw New NotSupportedException(${1:message})${0}"
     ],
     "description": "Throw New NotSupportedException"
   },
   "Throw New ObjectDisposedException": {
-    "prefix": "twn_ode",
+    "prefix": "thn_ode",
     "body": [
       "Throw New ObjectDisposedException(${1:args})${0}"
     ],
@@ -1829,24 +1749,6 @@
       "End While"
     ],
     "description": "While statement"
-  },
-  "XmlReader Variable": {
-    "prefix": "u_xmlrr",
-    "body": [
-      "Using ${1:reader} = XmlReader.Create(${2:argument})",
-      "\t${0}",
-      "End Using"
-    ],
-    "description": "XmlReader variable declaration."
-  },
-  "XmlWriter Variable": {
-    "prefix": "u_xmlwr",
-    "body": [
-      "Using ${1:writer} = XmlWriter.Create(${2:argument})",
-      "\t${0}",
-      "End Using"
-    ],
-    "description": "XmlWriter variable declaration."
   },
   "Xor operator overloading": {
     "prefix": "oo_Xor",

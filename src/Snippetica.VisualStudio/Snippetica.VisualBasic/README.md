@@ -6,27 +6,24 @@
 
 ### Quick Reference
 
-* Default access modifier is **Public**.
-
 #### Member Declaration
 
 Shortcut|Description|Comment
 --------|-----------|-------
 \_|interface member declaration|prefix
 c|class declaration|\-
-cr|constructor declaration|\-
+co|constructor declaration|\-
 de|delegate declaration|\-
-em|enum declaration|\-
-et|event declaration|\-
+en|enum declaration|\-
+ev|event declaration|\-
 f|field declaration|\-
-ie|interface declaration|\-
-ir|indexer declaration|\-
+i|interface declaration|\-
+in|indexer declaration|\-
 k|constant declaration|\-
 m|method declaration|\-
-me|Module declaration|\-
+mo|Module declaration|\-
 p|property declaration|\-
-pp|property declaration \(expanded\)|\-
-rd|record declaration|\-
+re|record declaration|\-
 st|struct declaration|\-
 
 #### Modifer
@@ -46,12 +43,11 @@ Shortcut|Description|Comment
 fe|foreach statement|\-
 fr|for statement|\-
 if|if statement|\-
-re|return statement|\-
 sc|Select Case statement|\-
 t|try statement|\-
-tw|throw statement|\-
+th|throw statement|\-
 u|using statement|\-
-we|while statement|\-
+w|while statement|\-
 
 #### Operator
 
@@ -70,22 +66,19 @@ Shortcut|Description|Comment
 --------|-----------|-------
 a|Array|\-
 b|Boolean|\-
-c|Collection\<T>|\-
-d|Dictionary\<TKey,TValue>|\-
+c|Collection\<T\>|\-
+d|Dictionary\<TKey,TValue\>|\-
 dt|DateTime|\-
-hs|HashSet\<T>|\-
+hs|HashSet\<T\>|\-
 i|Immutable|prefix
 i|Int32|\-
-l|Int64|\-
-l|List\<T>|\-
-ll|LinkedList\<T>|\-
+l|List\<T\>|\-
+ll|LinkedList\<T\>|\-
 o|Object|\-
-oc|ObservableCollection\<T>|\-
-q|Queue\<T>|\-
-rr|Reader|suffix
-s|Stack\<T>|\-
+oc|ObservableCollection\<T\>|\-
+q|Queue\<T\>|\-
+s|Stack\<T\>|\-
 s|String|\-
-wr|Writer|suffix
 
 #### Other
 
@@ -95,8 +88,6 @@ c|catch clause|\-
 d|default keyword|\-
 e|else clause|\-
 f|finally clause|\-
-g|generic type|prefix
-g|type parameter|\-
 l|lambda expression|\-
 n|\(equals to\) null|\-
 pa|parameter array|\-
@@ -112,9 +103,8 @@ y|yield|prefix
 
 Shortcut|Title
 --------|-----
-\_et|[interface event](InterfaceEvent.snippet)
-\_ett|[interface event with EventHandler\<T>](InterfaceEventWithEventHandlerOfT.snippet)
-\_ir|[interface indexer](InterfaceIndexer.snippet)
+\_ev|[interface event](InterfaceEvent.snippet)
+\_in|[interface indexer](InterfaceIndexer.snippet)
 \_m|[interface method](InterfaceMethod.snippet)
 \_p|[interface property](InterfaceProperty.snippet)
 \_rp|[interface read-only property](InterfaceReadOnlyProperty.snippet)
@@ -132,7 +122,7 @@ c\_|[ObservableCollection(Of T) class](ObservableCollectionClass.snippet)
 c\_|[ReadOnlyCollection(Of T) class](ReadOnlyCollectionClass.snippet)
 c\_|[singleton class](SingletonClass.snippet)
 catch|[Catch clause](Catch.snippet)
-cr|[Public constructor](PublicConstructor.snippet)
+co|[Public constructor](PublicConstructor.snippet)
 da|[Debug.Assert](DebugAssert.snippet)
 de|[Public delegate](PublicDelegate.snippet)
 dispose|[Dispose](Dispose.snippet)
@@ -141,14 +131,13 @@ dt|[DateTime type](DateTimeType.snippet)
 dw|[Debug.WriteLine](DebugWriteLine.snippet)
 e|[Else clause](Else.snippet)
 eif|[ElseIf](ElseIf.snippet)
-em|[Public enum](PublicEnum.snippet)
+en|[Public enum](PublicEnum.snippet)
 equals|[Equals and GetHashCode](EqualsAndGetHashCode.snippet)
-et|[Public event](PublicEvent.snippet)
+ev|[Public event](PublicEvent.snippet)
 f|[Public field](PublicField.snippet)
 fe|[For Each statement](ForEach.snippet)
 fr|[For statement](For.snippet)
 frr|[For statement (reversed)](ForReversed.snippet)
-g|[type parameter](TypeParameter.snippet)
 gt|[GetType](GetTypeOperator.snippet)
 ie|[Public interface](PublicInterface.snippet)
 ifn|[If Is Nothing](IfIsNothing.snippet)
@@ -158,13 +147,15 @@ ifx|[If Not](IfNot.snippet)
 ifxn|[If IsNot Nothing](IfIsNotNothing.snippet)
 ifxtc|[If TryCast Is Nothing](IfTryCastIsNothing.snippet)
 ifxtp|[if not TryParse](IfNotTryParse.snippet)
-ir|[Public indexer](PublicIndexer.snippet)
+in|[Public indexer](PublicIndexer.snippet)
 k|[Public constant](PublicConstant.snippet)
+kvp|[KeyValuePair type](KeyValuePair.snippet)
+kvpc|[KeyValuePair.Create method](KeyValuePairCreate.snippet)
 l|[Lambda expression](LambdaExpression.snippet)
 l0|[Lambda expression without parameters](LambdaExpressionWithoutParameters.snippet)
 l2|[Lambda expression with 2 parameters](LambdaExpressionWithTwoParameters.snippet)
 m|[Public method](PublicMethod.snippet)
-me|[Public module](PublicModule.snippet)
+mo|[Public module](PublicModule.snippet)
 n|[Is Nothing](IsNothing.snippet)
 no|[NameOf operator](NameOfOperator.snippet)
 oo|[= operator overloading](OverloadedOperatorEquality.snippet)
@@ -177,11 +168,11 @@ ref|[Return False](ReturnFalse.snippet)
 ren|[Return Nothing](ReturnNothing.snippet)
 ret|[Return True](ReturnTrue.snippet)
 rf|[Public read-only field](PublicReadOnlyField.snippet)
-rir|[Public read-only indexer](PublicReadOnlyIndexer.snippet)
+rin|[Public read-only indexer](PublicReadOnlyIndexer.snippet)
 rp|[Public read-only auto property](PublicReadOnlyAutoProperty.snippet)
 rpp|[Public read-only Property](PublicReadOnlyProperty.snippet)
 sc|[Select Case statement](SelectCase.snippet)
-scr|[static constructor](StaticConstructor.snippet)
+sco|[static constructor](StaticConstructor.snippet)
 sf|[Public Shared field](PublicStaticField.snippet)
 sm|[Public Shared method](PublicStaticMethod.snippet)
 sne|[String.IsNullOrEmpty](StringIsNullOrEmpty.snippet)
@@ -196,15 +187,8 @@ tcf|[Try-Catch-Finally](TryCatchFinally.snippet)
 td|[TODO comment](TodoComment.snippet)
 tf|[Try-Finally](TryFinally.snippet)
 this|[Containing type name](ContainingTypeName.snippet)
-twn|[Throw New](ThrowNew.snippet)
-u|[IEnumerator(Of T) variable](IEnumeratorOfTVariable.snippet)
-u|[StreamReader Variable](StreamReaderVariable.snippet)
-u|[StreamWriter Variable](StreamWriterVariable.snippet)
-u|[StringReader Variable](StringReaderVariable.snippet)
-u|[StringWriter Variable](StringWriterVariable.snippet)
-u|[Using statement](Using.snippet)
-u|[XmlReader Variable](XmlReaderVariable.snippet)
-u|[XmlWriter Variable](XmlWriterVariable.snippet)
+thn|[Throw New](ThrowNew.snippet)
+u|[Using statement](UsingStatement.snippet)
 v|[local variable declaration](Variable.snippet)
 va|[array variable](ArrayOfTVariable.snippet)
 vb|[Boolean variable](BooleanVariable.snippet)

@@ -4,27 +4,24 @@
 
 ### Quick Reference
 
-* Default access modifier is **Public**.
-
 #### Member Declaration
 
 Shortcut|Description|Comment
 --------|-----------|-------
 \_|interface member declaration|prefix
 c|class declaration|\-
-cr|constructor declaration|\-
+co|constructor declaration|\-
 de|delegate declaration|\-
-em|enum declaration|\-
-et|event declaration|\-
+en|enum declaration|\-
+ev|event declaration|\-
 f|field declaration|\-
-ie|interface declaration|\-
-ir|indexer declaration|\-
+i|interface declaration|\-
+in|indexer declaration|\-
 k|constant declaration|\-
 m|method declaration|\-
-me|Module declaration|\-
+mo|Module declaration|\-
 p|property declaration|\-
-pp|property declaration \(expanded\)|\-
-rd|record declaration|\-
+re|record declaration|\-
 st|struct declaration|\-
 
 #### Modifer
@@ -44,12 +41,11 @@ Shortcut|Description|Comment
 fe|foreach statement|\-
 fr|for statement|\-
 if|if statement|\-
-re|return statement|\-
 sc|Select Case statement|\-
 t|try statement|\-
-tw|throw statement|\-
+th|throw statement|\-
 u|using statement|\-
-we|while statement|\-
+w|while statement|\-
 
 #### Operator
 
@@ -70,11 +66,9 @@ a|Array|\-
 b|Boolean|\-
 dt|DateTime|\-
 i|Int32|\-
-l|List\<T>|\-
+l|List\<T\>|\-
 o|Object|\-
-rr|Reader|suffix
 s|String|\-
-wr|Writer|suffix
 
 #### Other
 
@@ -84,8 +78,6 @@ c|catch clause|\-
 d|default keyword|\-
 e|else clause|\-
 f|finally clause|\-
-g|generic type|prefix
-g|type parameter|\-
 l|lambda expression|\-
 n|\(equals to\) null|\-
 pa|parameter array|\-
@@ -100,15 +92,14 @@ y|yield|prefix
 
 Shortcut|Title
 --------|-----
-\_et|interface event
-\_ett|interface event with EventHandler\<T>
-\_ir|interface indexer
+\_ev|interface event
+\_in|interface indexer
 \_m|interface method
 \_p|interface property
 \_rp|interface read\-only property
 c|Public class
 catch|Catch clause
-cr|Public constructor
+co|Public constructor
 da|Debug\.Assert
 de|Public delegate
 dispose|Dispose
@@ -117,13 +108,12 @@ dt|DateTime type
 dw|Debug\.WriteLine
 e|Else clause
 eif|ElseIf
-em|Public enum
+en|Public enum
 equals|Equals and GetHashCode
 f|Public field
 fe|For Each statement
 fr|For statement
 frr|For statement \(reversed\)
-g| type parameter
 gt|GetType
 ie|Public interface
 ifn|If Is Nothing
@@ -133,13 +123,15 @@ ifx|If Not
 ifxn|If IsNot Nothing
 ifxtc|If TryCast Is Nothing
 ifxtp|if not TryParse
-ir|Public indexer
+in|Public indexer
 k|Public constant
+kvp|KeyValuePair type
+kvpc|KeyValuePair\.Create method
 l|Lambda expression
 l0|Lambda expression without parameters
 l2|Lambda expression with 2 parameters
 m|Public method
-me|Public module
+mo|Public module
 n|Is Nothing
 no|NameOf operator
 p|Public auto property
@@ -151,11 +143,11 @@ ref|Return False
 ren|Return Nothing
 ret|Return True
 rf|Public read\-only field
-rir|Public read\-only indexer
+rin|Public read\-only indexer
 rp|Public read\-only auto property
 rpp|Public read\-only Property
 sc|Select Case statement
-scr|static constructor
+sco|static constructor
 sf|Public Shared field
 sm|Public Shared method
 sne|String\.IsNullOrEmpty
@@ -169,15 +161,8 @@ tc|Try\-Catch
 tcf|Try\-Catch\-Finally
 td|TODO comment
 tf|Try\-Finally
-twn|Throw New
+thn|Throw New
 u|Using statement
-u\_er|IEnumerator\(Of T\) variable
-u\_smrr|StreamReader Variable
-u\_smwr|StreamWriter Variable
-u\_srr|StringReader Variable
-u\_swr|StringWriter Variable
-u\_xmlrr|XmlReader Variable
-u\_xmlwr|XmlWriter Variable
 v|local variable declaration
 va|array variable
 vb|Boolean variable

@@ -36,23 +36,6 @@
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>auto keyword</Title>
-      <Shortcut>a</Shortcut>
-      <Description>auto keyword</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name AutoKeyword</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="Cpp"><![CDATA[auto$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>bool variable</Title>
       <Shortcut>vb</Shortcut>
       <Description>bool variable</Description>
@@ -147,40 +130,6 @@ private:
     </Header>
     <Snippet>
       <Code Language="Cpp"><![CDATA[continue;$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>delete keyword</Title>
-      <Shortcut>de</Shortcut>
-      <Description>delete keyword</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DeleteKeyword</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="Cpp"><![CDATA[delete$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>extern keyword</Title>
-      <Shortcut>en</Shortcut>
-      <Description>extern keyword</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ExternKeyword</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="Cpp"><![CDATA[extern$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -568,7 +517,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>conditional operator (!string.IsNullOrEmpty)</Title>
-      <Shortcut>coxsne</Shortcut>
+      <Shortcut>copxsne</Shortcut>
       <Description>conditional operator with condition whether the string is not equal to null or empty</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -602,7 +551,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>conditional operator (!string.IsNullOrWhiteSpace)</Title>
-      <Shortcut>coxsnw</Shortcut>
+      <Shortcut>copxsnw</Shortcut>
       <Description>conditional operator with condition whether the string is not equal to null or white-space</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -636,7 +585,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>conditional operator (string.IsNullOrEmpty)</Title>
-      <Shortcut>cosne</Shortcut>
+      <Shortcut>copsne</Shortcut>
       <Description>conditional operator with condition whether the string is equal to null or empty</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -670,7 +619,7 @@ private:
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>conditional operator (string.IsNullOrWhiteSpace)</Title>
-      <Shortcut>cosnw</Shortcut>
+      <Shortcut>copsnw</Shortcut>
       <Description>conditional operator with condition whether the string is equal to null or white-space</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -720,7 +669,7 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>Debug.Assert != null</Title>
+      <Title>Debug.Assert is not null</Title>
       <Shortcut>daxn</Shortcut>
       <Description>Debug.Assert method with condition whether the expression is not equal to null</Description>
       <Author>Josef Pihrt</Author>
@@ -749,7 +698,7 @@ private:
           <Default>""</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[Debug.Assert($expression$ != null, $message$);$end$]]></Code>
+      <Code Language="CSharp"><![CDATA[Debug.Assert($expression$ is not null, $message$);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -783,651 +732,8 @@ private:
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>Directory.CreateDirectory</Title>
-      <Shortcut>iod_cd</Shortcut>
-      <Description>Directory.CreateDirectory method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DirectoryCreateDirectory</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>Directory path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Directory.CreateDirectory($path$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Directory.Delete</Title>
-      <Shortcut>iod_d</Shortcut>
-      <Description>Directory.Delete method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DirectoryDelete</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>Directory path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-        <Literal>
-          <ID>recursive</ID>
-          <Default>true</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Directory.Delete($path$, recursive: $recursive$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Directory.EnumerateDirectories</Title>
-      <Shortcut>iod_ed</Shortcut>
-      <Description>Directory.EnumerateDirectories method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DirectoryEnumerateDirectories</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>Directory path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-        <Literal>
-          <ID>pattern</ID>
-          <ToolTip>Search pattern</ToolTip>
-          <Default>"*"</Default>
-        </Literal>
-        <Literal>
-          <ID>searchOption</ID>
-          <ToolTip>SearchOption</ToolTip>
-          <Default>.AllDirectories</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Directory.EnumerateDirectories($path$, $pattern$, SearchOption$searchOption$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Directory.EnumerateFiles</Title>
-      <Shortcut>iod_ef</Shortcut>
-      <Description>Directory.EnumerateFiles method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DirectoryEnumerateFiles</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>Directory path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-        <Literal>
-          <ID>pattern</ID>
-          <ToolTip>Search pattern</ToolTip>
-          <Default>"*"</Default>
-        </Literal>
-        <Literal>
-          <ID>searchOption</ID>
-          <ToolTip>SearchOption</ToolTip>
-          <Default>.AllDirectories</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Directory.EnumerateFiles($path$, $pattern$, SearchOption$searchOption$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Directory.Exists</Title>
-      <Shortcut>iod_e</Shortcut>
-      <Description>Directory.Exists method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DirectoryExists</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>Directory path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Directory.Exists($path$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Directory.GetDirectories</Title>
-      <Shortcut>iod_gd</Shortcut>
-      <Description>Directory.GetDirectories method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DirectoryGetDirectories</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>Directory path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-        <Literal>
-          <ID>pattern</ID>
-          <ToolTip>Search pattern</ToolTip>
-          <Default>"*"</Default>
-        </Literal>
-        <Literal>
-          <ID>searchOption</ID>
-          <ToolTip>SearchOption</ToolTip>
-          <Default>.AllDirectories</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Directory.GetDirectories($path$, $pattern$, SearchOption$searchOption$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Directory.GetFiles</Title>
-      <Shortcut>iod_gf</Shortcut>
-      <Description>Directory.GetFiles method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DirectoryGetFiles</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>Directory path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-        <Literal>
-          <ID>pattern</ID>
-          <ToolTip>Search pattern</ToolTip>
-          <Default>"*"</Default>
-        </Literal>
-        <Literal>
-          <ID>searchOption</ID>
-          <ToolTip>Search option</ToolTip>
-          <Default>.AllDirectories</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Directory.GetFiles($path$, $pattern$, SearchOption$searchOption$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Directory.Move</Title>
-      <Shortcut>iod_m</Shortcut>
-      <Description>Directory.Move method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name DirectoryMove</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>destinationDirName</ID>
-          <ToolTip>Destination file name</ToolTip>
-          <Default>destinationDirName</Default>
-        </Literal>
-        <Literal>
-          <ID>sourceDirName</ID>
-          <ToolTip>Source file name</ToolTip>
-          <Default>sourceDirName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Directory.Move($sourceDirName$, $destinationDirName$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>File.Copy</Title>
-      <Shortcut>iof_c</Shortcut>
-      <Description>File.Copy method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name FileCopy</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>destinationFileName</ID>
-          <ToolTip>Destination file name</ToolTip>
-          <Default>destinationFileName</Default>
-        </Literal>
-        <Literal>
-          <ID>sourceFileName</ID>
-          <ToolTip>Source file name</ToolTip>
-          <Default>sourceFileName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[File.Copy($sourceFileName$, $destinationFileName$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>File.Delete</Title>
-      <Shortcut>iof_d</Shortcut>
-      <Description>File.Delete method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name FileDelete</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>File path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[File.Delete($path$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>File Exists</Title>
-      <Shortcut>iof_e</Shortcut>
-      <Description>File.Exists method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name FileExists</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>File path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[File.Exists($path$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>File.Move</Title>
-      <Shortcut>iof_m</Shortcut>
-      <Description>File.Move method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name FileMove</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>destinationFileName</ID>
-          <ToolTip>Destination file name</ToolTip>
-          <Default>destinationFileName</Default>
-        </Literal>
-        <Literal>
-          <ID>sourceFileName</ID>
-          <ToolTip>Source file name</ToolTip>
-          <Default>sourceFileName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[File.Move($sourceFileName$, $destinationFileName$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>File.ReadAllLines</Title>
-      <Shortcut>iof_ral</Shortcut>
-      <Description>File.ReadAllLines method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name FileReadAllLines</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-        <Import>
-          <Namespace>System.Text</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_encoding</ID>
-          <ToolTip>File encoding</ToolTip>
-          <Default>Encoding.UTF8</Default>
-        </Literal>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>File path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[File.ReadAllLines($path$, $_encoding$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>File.ReadAllText</Title>
-      <Shortcut>iof_rat</Shortcut>
-      <Description>File.ReadAllText method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name FileReadAllText</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-        <Import>
-          <Namespace>System.Text</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_encoding</ID>
-          <ToolTip>File encoding</ToolTip>
-          <Default>Encoding.UTF8</Default>
-        </Literal>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>File path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[File.ReadAllText($path$, $_encoding$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>File.ReadLines</Title>
-      <Shortcut>iof_rl</Shortcut>
-      <Description>File.ReadLines method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name FileReadLines</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-        <Import>
-          <Namespace>System.Text</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_encoding</ID>
-          <ToolTip>File encoding</ToolTip>
-          <Default>Encoding.UTF8</Default>
-        </Literal>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>File path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[File.ReadLines($path$, $_encoding$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>FileStream Variable</Title>
-      <Shortcut>u_fesm</Shortcut>
-      <Description>FileStream variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name FileStreamVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>fileMode</ID>
-          <ToolTip>File mode</ToolTip>
-          <Default>.OpenOrCreate</Default>
-        </Literal>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>fs</Default>
-        </Literal>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>File path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new FileStream($path$, FileMode$fileMode$)) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>File.WriteAllLines</Title>
-      <Shortcut>iof_wal</Shortcut>
-      <Description>File.WriteAllLines method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name FileWriteAllLines</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-        <Import>
-          <Namespace>System.Text</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_encoding</ID>
-          <ToolTip>File encoding</ToolTip>
-          <Default>Encoding.UTF8</Default>
-        </Literal>
-        <Literal>
-          <ID>content</ID>
-          <ToolTip>File content</ToolTip>
-          <Default>content</Default>
-        </Literal>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>File path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[File.WriteAllLines($path$, $content$, $_encoding$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>File.WriteAllText</Title>
-      <Shortcut>iof_wat</Shortcut>
-      <Description>File.WriteAllText method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name FileWriteAllText</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-        <Import>
-          <Namespace>System.Text</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>_encoding</ID>
-          <ToolTip>File encoding</ToolTip>
-          <Default>Encoding.UTF8</Default>
-        </Literal>
-        <Literal>
-          <ID>content</ID>
-          <ToolTip>File content</ToolTip>
-          <Default>""</Default>
-        </Literal>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>File path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[File.WriteAllText($path$, $content$, $_encoding$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
       <Title>if Enum.TryParse</Title>
-      <Shortcut>ifemtp</Shortcut>
+      <Shortcut>ifentp</Shortcut>
       <Description>if statement with condition whether Enum.TryParse method returns true.</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1487,7 +793,7 @@ if (Enum.TryParse($value$, out $result$)) {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ == null)
+      <Code Language="CSharp"><![CDATA[if ($expression$ is null)
 	return;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1512,7 +818,7 @@ if (Enum.TryParse($value$, out $result$)) {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ == null)
+      <Code Language="CSharp"><![CDATA[if ($expression$ is null)
 	return default;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1537,7 +843,7 @@ if (Enum.TryParse($value$, out $result$)) {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ == null)
+      <Code Language="CSharp"><![CDATA[if ($expression$ is null)
 	return false;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1562,7 +868,7 @@ if (Enum.TryParse($value$, out $result$)) {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ == null)
+      <Code Language="CSharp"><![CDATA[if ($expression$ is null)
 	return null;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1587,14 +893,14 @@ if (Enum.TryParse($value$, out $result$)) {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ == null)
+      <Code Language="CSharp"><![CDATA[if ($expression$ is null)
 	return true;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>if not Enum.TryParse</Title>
-      <Shortcut>ifxemtp</Shortcut>
+      <Shortcut>ifxentp</Shortcut>
       <Description>if statement with condition whether Enum.TryParse method returns false.</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -1654,7 +960,7 @@ if (!Enum.TryParse($value$, out $result$)) {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ != null)
+      <Code Language="CSharp"><![CDATA[if ($expression$ is not null)
 	return;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1679,7 +985,7 @@ if (!Enum.TryParse($value$, out $result$)) {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ != null)
+      <Code Language="CSharp"><![CDATA[if ($expression$ is not null)
 	return default;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1704,7 +1010,7 @@ if (!Enum.TryParse($value$, out $result$)) {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ != null)
+      <Code Language="CSharp"><![CDATA[if ($expression$ is not null)
 	return false;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1729,7 +1035,7 @@ if (!Enum.TryParse($value$, out $result$)) {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ != null)
+      <Code Language="CSharp"><![CDATA[if ($expression$ is not null)
 	return null;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -1754,7 +1060,7 @@ if (!Enum.TryParse($value$, out $result$)) {
           <Default>x</Default>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[if ($expression$ != null)
+      <Code Language="CSharp"><![CDATA[if ($expression$ is not null)
 	return true;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
@@ -2232,69 +1538,6 @@ if ($identifier$.TryGetValue($key$, out $value$)) {
 }]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>MemoryStream Variable</Title>
-      <Shortcut>u_mysm</Shortcut>
-      <Description>MemoryStream variable declaration.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name MemoryStreamVariable</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>ms</Default>
-        </Literal>
-        <Literal>
-          <ID>parameters</ID>
-          <ToolTip>Constructor parameters</ToolTip>
-          <Default>0</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[using (var $identifier$ = new MemoryStream($parameters$)) {
-	$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>namespace</Title>
-      <Shortcut>ns</Shortcut>
-      <Description>namespace declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name Namespace</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Namespace name</ToolTip>
-          <Default>NamespaceName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[namespace $name$ {
-	$selected$$end$
-}]]></Code>
-    </Snippet>
-  </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>new array </Title>
@@ -2369,248 +1612,6 @@ if ($identifier$.TryGetValue($key$, out $value$)) {
       <Code Language="CSharp"><![CDATA[override$end$]]></Code>
     </Snippet>
   </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Path.Combine</Title>
-      <Shortcut>iop_c</Shortcut>
-      <Description>Path.Combine method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PathCombine</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path1</ID>
-          <ToolTip>First path</ToolTip>
-          <Default>path1</Default>
-        </Literal>
-        <Literal>
-          <ID>path2</ID>
-          <ToolTip>Second path</ToolTip>
-          <Default>path2</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Path.Combine($path1$, $path2$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Path.GetDirectoryName</Title>
-      <Shortcut>iop_gdn</Shortcut>
-      <Description>Path.GetDirectoryName method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PathGetDirectoryName</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>Path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Path.GetDirectoryName($path$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Path.GetExtension</Title>
-      <Shortcut>iop_ge</Shortcut>
-      <Description>Path.GetExtension method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PathGetExtension</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>Path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Path.GetExtension($path$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Path.GetFileName</Title>
-      <Shortcut>iop_gfn</Shortcut>
-      <Description>Path.GetFileName method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PathGetFileName</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>Path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Path.GetFileName($path$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Path.GetFileNameWithoutExtension</Title>
-      <Shortcut>iop_gfnwe</Shortcut>
-      <Description>Path.GetFileNameWithoutExtension method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PathGetFileNameWithoutExtension</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>Path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Path.GetFileNameWithoutExtension($path$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Path.GetFullPath</Title>
-      <Shortcut>iop_gfp</Shortcut>
-      <Description>Path.GetFullPath method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PathGetFullPath</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>Path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Path.GetFullPath($path$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Path.HasExtension</Title>
-      <Shortcut>iop_he</Shortcut>
-      <Description>Path.HasExtension method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PathHasExtension</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>Path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Path.HasExtension($path$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Title>Path.ChangeExtension</Title>
-      <Shortcut>iop_ce</Shortcut>
-      <Description>Path.ChangeExtension method.</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name PathChangeExtension</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.IO</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>extension</ID>
-          <ToolTip>File extension</ToolTip>
-          <Default>""</Default>
-        </Literal>
-        <Literal>
-          <ID>path</ID>
-          <ToolTip>File path</ToolTip>
-          <Default>path</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[Path.ChangeExtension($path$, $extension$)$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>return await</Title>
@@ -2626,40 +1627,6 @@ if ($identifier$.TryGetValue($key$, out $value$)) {
     </Header>
     <Snippet>
       <Code Language="CSharp"><![CDATA[return await $end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>return conditional operator</Title>
-      <Shortcut>reco</Shortcut>
-      <Description>return conditional operator</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ReturnConditionalOperator</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>condition</ID>
-          <ToolTip>Condition to evaluate</ToolTip>
-          <Default>condition</Default>
-        </Literal>
-        <Literal>
-          <ID>false</ID>
-          <ToolTip>False expression</ToolTip>
-          <Default>false</Default>
-        </Literal>
-        <Literal>
-          <ID>true</ID>
-          <ToolTip>True expression</ToolTip>
-          <Default>true</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[return ($condition$) ? $true$ : $false$;$end$]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -2698,23 +1665,6 @@ if ($identifier$.TryGetValue($key$, out $value$)) {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
-      <Title>return statement</Title>
-      <Shortcut>re</Shortcut>
-      <Description>return statement</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name ReturnStatement</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Code Language="CSharp"><![CDATA[return;$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
       <Title>StringBuilder variable</Title>
       <Shortcut>vsb</Shortcut>
       <Description>StringBuilder variable declaration</Description>
@@ -2745,7 +1695,7 @@ if ($identifier$.TryGetValue($key$, out $value$)) {
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>throw statement</Title>
-      <Shortcut>tw</Shortcut>
+      <Shortcut>th</Shortcut>
       <Description>throw statement</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -2779,43 +1729,6 @@ if ($identifier$.TryGetValue($key$, out $value$)) {
         </Import>
       </Imports>
       <Code Language="CSharp"><![CDATA[TimeSpan$end$]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>variable declaration with as operator + if not null</Title>
-      <Shortcut>vasxn</Shortcut>
-      <Description>variable declaration with as operator + condition whether the variable is not equal to null</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name VariableAsTIfNotNull</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>_type</ID>
-          <ToolTip>Type to cast to</ToolTip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>expression</ID>
-          <ToolTip>Expression to cast</ToolTip>
-          <Default>_</Default>
-        </Literal>
-        <Literal>
-          <ID>identifier</ID>
-          <ToolTip>Identifier name</ToolTip>
-          <Default>x</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp"><![CDATA[var $identifier$ = $expression$ as $_type$;
-if ($identifier$ != null) {
-	$end$
-}]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -3084,7 +1997,7 @@ if ($identifier$ != null) {
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>if Enum.TryParse</Title>
-      <Shortcut>ifemtp</Shortcut>
+      <Shortcut>ifentp</Shortcut>
       <Description>if statement with condition whether Enum.TryParse method returns true.</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3126,7 +2039,7 @@ End If]]></Code>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>if not Enum.TryParse</Title>
-      <Shortcut>ifxemtp</Shortcut>
+      <Shortcut>ifxentp</Shortcut>
       <Description>if statement with condition whether Enum.TryParse method returns false.</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -3163,33 +2076,6 @@ End If]]></Code>
 If Not Enum.TryParse($value$, $result$)
 	$end$
 End If]]></Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.1.0">
-    <Header>
-      <Title>namespace</Title>
-      <Shortcut>ns</Shortcut>
-      <Description>namespace declaration</Description>
-      <Author>Josef Pihrt</Author>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
-      </SnippetTypes>
-      <Keywords>
-        <Keyword>Meta-Name Namespace</Keyword>
-      </Keywords>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>Namespace name</ToolTip>
-          <Default>NamespaceName</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="VB"><![CDATA[Namespace $name$
-	$selected$$end$
-End Namespace]]></Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
@@ -3304,7 +2190,7 @@ End Namespace]]></Code>
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Throw statement</Title>
-      <Shortcut>tw</Shortcut>
+      <Shortcut>th</Shortcut>
       <Description>Throw statement</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>

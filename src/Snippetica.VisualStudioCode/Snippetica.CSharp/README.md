@@ -6,26 +6,23 @@
 
 ### Quick Reference
 
-* Default access modifier is **public**.
-
 #### Member Declaration
 
 Shortcut|Description|Comment
 --------|-----------|-------
 \_|interface member declaration|prefix
 c|class declaration|\-
-cr|constructor declaration|\-
+co|constructor declaration|\-
 de|delegate declaration|\-
-em|enum declaration|\-
-et|event declaration|\-
+en|enum declaration|\-
+ev|event declaration|\-
 f|field declaration|\-
-ie|interface declaration|\-
-ir|indexer declaration|\-
+i|interface declaration|\-
+in|indexer declaration|\-
 k|constant declaration|\-
 m|method declaration|\-
 p|property declaration|\-
-pp|property declaration \(expanded\)|\-
-rd|record declaration|\-
+re|record declaration|\-
 st|struct declaration|\-
 
 #### Modifer
@@ -45,18 +42,17 @@ Shortcut|Description|Comment
 fe|foreach statement|\-
 fr|for statement|\-
 if|if statement|\-
-re|return statement|\-
-sh|switch statement|\-
+sw|switch statement|\-
 t|try statement|\-
-tw|throw statement|\-
+th|throw statement|\-
 u|using statement|\-
-we|while statement|\-
+w|while statement|\-
 
 #### Operator
 
 Shortcut|Description|Comment
 --------|-----------|-------
-co|conditional operator|\-
+cop|conditional operator|\-
 n|new object creation|\-
 no|nameof operator|\-
 oo|operator overload|\-
@@ -72,11 +68,9 @@ a|Array|\-
 b|Boolean|\-
 dt|DateTime|\-
 i|Int32|\-
-l|List\<T>|\-
+l|List\<T\>|\-
 o|Object|\-
-rr|Reader|suffix
 s|String|\-
-wr|Writer|suffix
 
 #### Other
 
@@ -86,8 +80,6 @@ c|catch clause|\-
 d|default keyword|\-
 e|else clause|\-
 f|finally clause|\-
-g|generic type|prefix
-g|type parameter|\-
 l|lambda expression|\-
 n|\(equals to\) null|\-
 pa|parameter array|\-
@@ -102,9 +94,8 @@ y|yield|prefix
 
 Shortcut|Title
 --------|-----
-\_et|[interface event](InterfaceEvent.snippet)
-\_ett|[interface event with EventHandler\<T>](InterfaceEventWithEventHandlerOfT.snippet)
-\_ir|[interface indexer](InterfaceIndexer.snippet)
+\_ev|[interface event](InterfaceEvent.snippet)
+\_in|[interface indexer](InterfaceIndexer.snippet)
 \_m|[interface method](InterfaceMethod.snippet)
 \_p|[interface property](InterfaceProperty.snippet)
 \_rp|[interface read-only property](InterfaceReadOnlyProperty.snippet)
@@ -122,10 +113,10 @@ a\_tc|[TypeConverter attribute](TypeConverterAttribute.snippet)
 b|[braces](Braces.snippet)
 c|[public class](PublicClass.snippet)
 catch|[catch clause](Catch.snippet)
-co|[conditional operator](ConditionalOperator.snippet)
-con|[conditional operator (equal to null)](ConditionalOperatorEqualToNull.snippet)
-coxn|[conditional operator (not equal to null)](ConditionalOperatorNotEqualToNull.snippet)
-cr|[public constructor](PublicConstructor.snippet)
+co|[public constructor](PublicConstructor.snippet)
+cop|[conditional operator](ConditionalOperator.snippet)
+copn|[conditional operator (equal to null)](ConditionalOperatorEqualToNull.snippet)
+copxn|[conditional operator (not equal to null)](ConditionalOperatorNotEqualToNull.snippet)
 d|[default keyword](DefaultKeyword.snippet)
 da|[Debug.Assert](DebugAssert.snippet)
 de|[public delegate](PublicDelegate.snippet)
@@ -137,23 +128,23 @@ dto|[DateTimeOffset type](DateTimeOffsetType.snippet)
 dw|[Debug.WriteLine](DebugWriteLine.snippet)
 e|[else clause](Else.snippet)
 eif|[else-if](ElseIf.snippet)
-em|[public enum](PublicEnum.snippet)
+en|[public enum](PublicEnum.snippet)
 equals|[Equals and GetHashCode](EqualsAndGetHashCode.snippet)
 f|[public field](PublicField.snippet)
 fe|[foreach statement](ForEach.snippet)
 finally|[finally clause](Finally.snippet)
 fr|[for statement](For.snippet)
 frr|[for statement (reversed)](ForReversed.snippet)
-g|[ type parameter](TypeParameter.snippet)
-ie|[public interface](PublicInterface.snippet)
+i|[public interface](PublicInterface.snippet)
 ifn|[if equal to null](IfEqualToNull.snippet)
 iftp|[if TryParse](IfTryParse.snippet)
 ifx|[if not](IfNot.snippet)
 ifxn|[if not equal to null](IfNotEqualToNull.snippet)
 ifxtp|[if not TryParse](IfNotTryParse.snippet)
-ir|[public indexer](PublicIndexer.snippet)
+in|[public indexer](PublicIndexer.snippet)
 k|[public const](PublicConst.snippet)
 kvp|[KeyValuePair type](KeyValuePair.snippet)
+kvpc|[KeyValuePair.Create method](KeyValuePairCreate.snippet)
 l|[lambda expression](LambdaExpression.snippet)
 l0|[lambda expression without parameters](LambdaExpressionWithoutParameters.snippet)
 l2|[lambda expression with 2 parameters](LambdaExpressionWithTwoParameters.snippet)
@@ -168,22 +159,22 @@ ppife|[#if-#else directive](PreprocessorDirectiveIfElse.snippet)
 ppr|[#region directive](PreprocessorDirectiveRegion.snippet)
 pps|[public auto property with private setter](PublicAutoPropertyWithPrivateSet.snippet)
 r|[return keyword](ReturnKeyword.snippet)
-rd|[public record](PublicRecord.snippet)
-rdst|[public record struct](PublicRecordStruct.snippet)
+re|[public record](PublicRecord.snippet)
 ref|[return false](ReturnFalse.snippet)
 ren|[return null](ReturnNull.snippet)
+rest|[public record struct](PublicRecordStruct.snippet)
 ret|[return true](ReturnTrue.snippet)
 rf|[public read-only field](PublicReadOnlyField.snippet)
-rir|[public read-only indexer](PublicReadOnlyIndexer.snippet)
+rin|[public read-only indexer](PublicReadOnlyIndexer.snippet)
 rp|[public read-only auto property](PublicReadOnlyAutoProperty.snippet)
 rpp|[public read-only property](PublicReadOnlyProperty.snippet)
-rrdst|[public readonly record struct](PublicReadOnlyRecordStruct.snippet)
+rrest|[public readonly record struct](PublicReadOnlyRecordStruct.snippet)
 rst|[public read-only struct](PublicReadOnlyStruct.snippet)
 s|[string keyword](StringKeyword.snippet)
 sc|[public static class](PublicStaticClass.snippet)
-scr|[static constructor](StaticConstructor.snippet)
+sco|[static constructor](StaticConstructor.snippet)
 sf|[public static field](PublicStaticField.snippet)
-sh|[switch statement](Switch.snippet)
+sh|[switch statement \[Obsolete\]](Obsolete_SwitchStatement.snippet)
 sm|[public static method](PublicStaticMethod.snippet)
 sne|[string.IsNullOrEmpty](StringIsNullOrEmpty.snippet)
 snw|[string.IsNullOrWhiteSpace](StringIsNullOrWhiteSpace.snippet)
@@ -191,15 +182,18 @@ srf|[public static read-only field](PublicStaticReadOnlyField.snippet)
 srp|[public static read-only auto property](PublicStaticReadOnlyAutoProperty.snippet)
 srpp|[public static read-only property](PublicStaticReadOnlyProperty.snippet)
 st|[public struct](PublicStruct.snippet)
+sw|[switch statement](SwitchStatement.snippet)
+swe|[switch expression](SwitchExpression.snippet)
 t|[explicit cast operator](ExplicitCastOperator.snippet)
 tc|[try-catch](TryCatch.snippet)
 tcf|[try-catch-finally](TryCatchFinally.snippet)
 td|[TODO comment](TodoComment.snippet)
 tf|[try-finally](TryFinally.snippet)
+thn|[throw new](ThrowNew.snippet)
 to|[typeof operator](TypeOfOperator.snippet)
-twn|[throw new](ThrowNew.snippet)
-u|[using statement](Using.snippet)
+u|[using statement](UsingStatement.snippet)
 us|[using static directive](UsingStatic.snippet)
+uv|[using variable](UsingDeclaration.snippet)
 v|[local variable declaration](Variable.snippet)
 va|[array variable](ArrayOfTVariable.snippet)
 vb|[Boolean variable](BooleanVariable.snippet)
@@ -211,10 +205,13 @@ vrp|[public virtual read-only auto property](PublicVirtualReadOnlyAutoProperty.s
 vrpp|[public virtual read-only property](PublicVirtualReadOnlyProperty.snippet)
 vs|[String variable](StringVariable.snippet)
 vt|[local variable declaration with explicit cast operator](VariableWithExplicitCast.snippet)
-we|[while statement](While.snippet)
-wen|[while null](WhileNull.snippet)
-wexn|[while not null](WhileNotNull.snippet)
+w|[while statement](While.snippet)
+we|[while statement \[Obsolete\]](Obsolete_While.snippet)
+wen|[while null \[Obsolete\]](Obsolete_WhileNull.snippet)
+wexn|[while not null \[Obsolete\]](Obsolete_WhileNotNull.snippet)
 where|[generic type constraint](GenericTypeConstraint.snippet)
+wn|[while null](WhileNull.snippet)
+wxn|[while not null](WhileNotNull.snippet)
 xn|[not equal to null](NotEqualToNull.snippet)
 xsne|[!string.IsNullOrEmpty](NotStringIsNullOrEmpty.snippet)
 xsnw|[!string.IsNullOrWhiteSpace](NotStringIsNullOrWhiteSpace.snippet)

@@ -4,10 +4,10 @@
   "displayName": "Snippetica for C#",
   "description": "A collection of snippets for C#.",
   "icon": "images/icon.png",
-  "version": "0.9.2",
+  "version": "1.0.0",
   "author": "Josef Pihrt",
-  "license": "SEE LICENSE IN LICENSE.TXT",
-  "homepage": "http://github.com/josefpihrt/snippetica/blob/master/src/Snippetica.VisualStudioCode/Snippetica.CSharp.Dev/README.md",
+  "license": "Apache-2.0",
+  "homepage": "http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudioCode/Snippetica.CSharp.Dev/README.md",
   "repository": {
     "type": "git",
     "url": "http://github.com/josefpihrt/snippetica.git"
