@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- Add snippet for 'while not' (`wx`) ([#54](https://github.com/josefpihrt/roslynator/pull/54)).
+
 ## [1.0.0] - 2022-10-17
 
 ### Added
