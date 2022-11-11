@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - Add snippet for 'while not' (`wx`) ([#54](https://github.com/josefpihrt/roslynator/pull/54)).
+- Add snippet for `ArgumentNullException.ThrowIfNull` (`anetin`) ([#55](https://github.com/josefpihrt/roslynator/pull/55)).
 
 ## [1.0.0] - 2022-10-17
 
