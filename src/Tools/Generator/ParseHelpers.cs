@@ -3,37 +3,36 @@
 using System;
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+internal static class ParseHelpers
 {
-    internal static class ParseHelpers
+    public static Language ParseLanguage(string value)
     {
-        public static Language ParseLanguage(string value)
+        switch (value)
         {
-            switch (value)
-            {
-                case "Cpp":
-                    return Language.Cpp;
-                case "C#":
-                case "CSharp":
-                    return Language.CSharp;
-                case "Html":
-                    return Language.Html;
-                case "VB":
-                case "VisualBasic":
-                    return Language.VisualBasic;
-                case "Xaml":
-                    return Language.Xaml;
-                case "Xml":
-                    return Language.Xml;
-                case "Json":
-                    return Language.Json;
-                case "Markdown":
-                    return Language.Markdown;
-                default:
-                    {
-                        throw new InvalidOperationException();
-                    }
-            }
+            case "Cpp":
+                return Language.Cpp;
+            case "C#":
+            case "CSharp":
+                return Language.CSharp;
+            case "Html":
+                return Language.Html;
+            case "VB":
+            case "VisualBasic":
+                return Language.VisualBasic;
+            case "Xaml":
+                return Language.Xaml;
+            case "Xml":
+                return Language.Xml;
+            case "Json":
+                return Language.Json;
+            case "Markdown":
+                return Language.Markdown;
+            default:
+                {
+                    throw new InvalidOperationException();
+                }
         }
     }
 }

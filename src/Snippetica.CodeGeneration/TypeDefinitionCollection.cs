@@ -2,13 +2,12 @@
 
 using System.Collections.ObjectModel;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public class TypeDefinitionCollection : KeyedCollection<string, TypeDefinition>
 {
-    public class TypeDefinitionCollection : KeyedCollection<string, TypeDefinition>
+    protected override string GetKeyForItem(TypeDefinition item)
     {
-        protected override string GetKeyForItem(TypeDefinition item)
-        {
-            return item.Name;
-        }
+        return item.Name;
     }
 }

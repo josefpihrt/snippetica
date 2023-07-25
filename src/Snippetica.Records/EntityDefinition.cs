@@ -5,164 +5,163 @@ using System.Diagnostics;
 using System.Linq;
 using Snippetica.Records.Utilities;
 
-namespace Snippetica.Records
+namespace Snippetica.Records;
+
+[DebuggerDisplay("{DebuggerDisplay,nq}")]
+public sealed class EntityDefinition : IKey<string>
 {
-    [DebuggerDisplay("{DebuggerDisplay,nq}")]
-    public sealed class EntityDefinition : IKey<string>
+    internal EntityDefinition(
+        string name,
+        EntityDefinition baseEntity = null,
+        ExtendedKeyedCollection<string, PropertyDefinition> properties = null,
+        ExtendedKeyedCollection<string, Variable> variables = null)
     {
-        internal EntityDefinition(
-            string name,
-            EntityDefinition baseEntity = null,
-            ExtendedKeyedCollection<string, PropertyDefinition> properties = null,
-            ExtendedKeyedCollection<string, Variable> variables = null)
+        Name = name;
+
+        BaseEntity = baseEntity;
+
+        Properties = (properties is not null)
+            ? new PropertyDefinitionCollection(properties)
+            : Empty.PropertyDefinitionCollection;
+
+        Variables = (variables is not null)
+            ? new VariableCollection(variables)
+            : Empty.VariableCollection;
+    }
+
+    public static EntityDefinition Global { get; } = new(
+        name: GlobalName,
+        baseEntity: null,
+        properties: new ExtendedKeyedCollection<string, PropertyDefinition>(new PropertyDefinition[] { PropertyDefinition.Id }),
+        variables: null);
+
+    public string Name { get; }
+
+    public EntityDefinition BaseEntity { get; }
+
+    public PropertyDefinitionCollection Properties { get; }
+
+    public VariableCollection Variables { get; }
+
+    public bool IsGlobalEntity => ReferenceEquals(Name, GlobalName);
+
+    internal static string GlobalName { get; } = "_Global";
+
+    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+    private string DebuggerDisplay
+    {
+        get
         {
-            Name = name;
+            string properties = string.Join(", ", AllProperties().Select(f => f.Name).OrderBy(f => f));
 
-            BaseEntity = baseEntity;
-
-            Properties = (properties != null)
-                ? new PropertyDefinitionCollection(properties)
-                : Empty.PropertyDefinitionCollection;
-
-            Variables = (variables != null)
-                ? new VariableCollection(variables)
-                : Empty.VariableCollection;
+            return $"{Name} {BaseEntity.Name} Properties: {properties}";
         }
+    }
 
-        public static EntityDefinition Global { get; } = new(
-            name: GlobalName,
-            baseEntity: null,
-            properties: new ExtendedKeyedCollection<string, PropertyDefinition>(new PropertyDefinition[] { PropertyDefinition.Id }),
-            variables: null);
+    public IEnumerable<PropertyDefinition> AllProperties()
+    {
+        var entity = this;
 
-        public string Name { get; }
-
-        public EntityDefinition BaseEntity { get; }
-
-        public PropertyDefinitionCollection Properties { get; }
-
-        public VariableCollection Variables { get; }
-
-        public bool IsGlobalEntity => ReferenceEquals(Name, GlobalName);
-
-        internal static string GlobalName { get; } = "_Global";
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private string DebuggerDisplay
+        do
         {
-            get
-            {
-                string properties = string.Join(", ", AllProperties().Select(f => f.Name).OrderBy(f => f));
+            foreach (PropertyDefinition property in entity.Properties)
+                yield return property;
 
-                return $"{Name} {BaseEntity.Name} Properties: {properties}";
-            }
+            entity = entity.BaseEntity;
         }
+        while (entity is not null);
+    }
 
-        public IEnumerable<PropertyDefinition> AllProperties()
+    public IEnumerable<Variable> AllVariables()
+    {
+        var entity = this;
+
+        do
         {
-            var entity = this;
+            foreach (Variable variable in entity.Variables)
+                yield return variable;
 
-            do
-            {
-                foreach (PropertyDefinition property in entity.Properties)
-                    yield return property;
-
-                entity = entity.BaseEntity;
-            }
-            while (entity != null);
+            entity = entity.BaseEntity;
         }
+        while (entity is not null);
+    }
 
-        public IEnumerable<Variable> AllVariables()
+    public PropertyDefinition FindProperty(string name)
+    {
+        var entity = this;
+
+        do
         {
-            var entity = this;
+            if (entity.Properties.TryGetValue(name, out PropertyDefinition property))
+                return property;
 
-            do
-            {
-                foreach (Variable variable in entity.Variables)
-                    yield return variable;
-
-                entity = entity.BaseEntity;
-            }
-            while (entity != null);
+            entity = entity.BaseEntity;
         }
+        while (entity is not null);
 
-        public PropertyDefinition FindProperty(string name)
+        return default;
+    }
+
+    public bool TryGetProperty(string name, out PropertyDefinition property)
+    {
+        property = FindProperty(name);
+        return property is not null;
+    }
+
+    public Variable FindVariable(string name)
+    {
+        return FindVariable(name, this);
+    }
+
+    private static Variable FindVariable(string name, EntityDefinition entity)
+    {
+        do
         {
-            var entity = this;
+            if (entity.Variables.TryGetValue(name, out Variable variable))
+                return variable;
 
-            do
-            {
-                if (entity.Properties.TryGetValue(name, out PropertyDefinition property))
-                    return property;
-
-                entity = entity.BaseEntity;
-            }
-            while (entity != null);
-
-            return default;
+            entity = entity.BaseEntity;
         }
+        while (entity is not null);
 
-        public bool TryGetProperty(string name, out PropertyDefinition property)
+        return default;
+    }
+
+    public bool ContainsProperty(string propertyName)
+    {
+        return FindProperty(propertyName) is not null;
+    }
+
+    public bool ContainsVariable(string variableName)
+    {
+        return !FindVariable(variableName).IsDefault;
+    }
+
+    public IEnumerable<EntityDefinition> BaseEntities()
+    {
+        EntityDefinition type = BaseEntity;
+
+        while (type is not null)
         {
-            property = FindProperty(name);
-            return property != null;
+            yield return type;
+            type = type.BaseEntity;
         }
+    }
 
-        public Variable FindVariable(string name)
+    public IEnumerable<EntityDefinition> BaseEntitiesAndSelf()
+    {
+        var type = this;
+
+        do
         {
-            return FindVariable(name, this);
+            yield return type;
+            type = type.BaseEntity;
         }
+        while (type is not null);
+    }
 
-        private static Variable FindVariable(string name, EntityDefinition entity)
-        {
-            do
-            {
-                if (entity.Variables.TryGetValue(name, out Variable variable))
-                    return variable;
-
-                entity = entity.BaseEntity;
-            }
-            while (entity != null);
-
-            return default;
-        }
-
-        public bool ContainsProperty(string propertyName)
-        {
-            return FindProperty(propertyName) != null;
-        }
-
-        public bool ContainsVariable(string variableName)
-        {
-            return !FindVariable(variableName).IsDefault;
-        }
-
-        public IEnumerable<EntityDefinition> BaseEntities()
-        {
-            EntityDefinition type = BaseEntity;
-
-            while (type != null)
-            {
-                yield return type;
-                type = type.BaseEntity;
-            }
-        }
-
-        public IEnumerable<EntityDefinition> BaseEntitiesAndSelf()
-        {
-            var type = this;
-
-            do
-            {
-                yield return type;
-                type = type.BaseEntity;
-            }
-            while (type != null);
-        }
-
-        string IKey<string>.GetKey()
-        {
-            return Name;
-        }
+    string IKey<string>.GetKey()
+    {
+        return Name;
     }
 }

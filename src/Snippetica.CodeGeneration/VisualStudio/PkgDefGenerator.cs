@@ -5,29 +5,28 @@ using System.IO;
 using System.Linq;
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration.VisualStudio
+namespace Snippetica.CodeGeneration.VisualStudio;
+
+public static class PkgDefGenerator
 {
-    public static class PkgDefGenerator
+    public static string GeneratePkgDefFile(IEnumerable<SnippetGeneratorResult> results)
     {
-        public static string GeneratePkgDefFile(IEnumerable<SnippetGeneratorResult> results)
+        using (var sw = new StringWriter())
         {
-            using (var sw = new StringWriter())
+            foreach (IGrouping<Language, SnippetGeneratorResult> grouping in results.GroupBy(f => f.Language))
             {
-                foreach (IGrouping<Language, SnippetGeneratorResult> grouping in results.GroupBy(f => f.Language))
+                sw.WriteLine($"// {grouping.Key.GetTitle()}");
+
+                foreach (SnippetGeneratorResult result in grouping)
                 {
-                    sw.WriteLine($"// {grouping.Key.GetTitle()}");
-
-                    foreach (SnippetGeneratorResult result in grouping)
-                    {
-                        sw.WriteLine($@"[$RootKey$\Languages\CodeExpansions\{result.Language.GetRegistryCode()}\Paths]");
-                        sw.WriteLine($"\"{result.DirectoryName}\" = \"$PackageFolder$\\{result.DirectoryName}\"");
-                    }
-
-                    sw.WriteLine();
+                    sw.WriteLine($@"[$RootKey$\Languages\CodeExpansions\{result.Language.GetRegistryCode()}\Paths]");
+                    sw.WriteLine($"\"{result.DirectoryName}\" = \"$PackageFolder$\\{result.DirectoryName}\"");
                 }
 
-                return sw.ToString();
+                sw.WriteLine();
             }
+
+            return sw.ToString();
         }
     }
 }

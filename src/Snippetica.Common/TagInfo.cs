@@ -1,31 +1,30 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-namespace Snippetica
+namespace Snippetica;
+
+public struct TagInfo
 {
-    public struct TagInfo
+    public static TagInfo Default { get; } = new();
+
+    internal TagInfo(string name, string value, int keywordIndex)
     {
-        public static TagInfo Default { get; } = new();
+        Name = name;
+        Value = value;
+        KeywordIndex = keywordIndex;
+    }
 
-        internal TagInfo(string name, string value, int keywordIndex)
+    public string Name { get; }
+
+    public string Value { get; }
+
+    public int KeywordIndex { get; }
+
+    public bool Success
+    {
+        get
         {
-            Name = name;
-            Value = value;
-            KeywordIndex = keywordIndex;
-        }
-
-        public string Name { get; }
-
-        public string Value { get; }
-
-        public int KeywordIndex { get; }
-
-        public bool Success
-        {
-            get
-            {
-                return Name != null
-                    && Value != null;
-            }
+            return Name is not null
+                && Value is not null;
         }
     }
 }

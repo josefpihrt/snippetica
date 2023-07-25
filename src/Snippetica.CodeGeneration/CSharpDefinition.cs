@@ -2,48 +2,47 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public class CSharpDefinition : LanguageDefinition
 {
-    public class CSharpDefinition : LanguageDefinition
+    public override Language Language
     {
-        public override Language Language
-        {
-            get { return Language.CSharp; }
-        }
+        get { return Language.CSharp; }
+    }
 
-        public override string GetTypeParameterList(string typeName)
-        {
-            return $"<{typeName}>";
-        }
+    public override string GetTypeParameterList(string typeName)
+    {
+        return $"<{typeName}>";
+    }
 
-        public override string GetDefaultParameter()
-        {
-            return $"{ObjectType.Keyword} parameter";
-        }
+    public override string GetDefaultParameter()
+    {
+        return $"{ObjectType.Keyword} parameter";
+    }
 
-        public override string GetObjectInitializer(string value)
-        {
-            return " { " + value + " }";
-        }
+    public override string GetObjectInitializer(string value)
+    {
+        return " { " + value + " }";
+    }
 
-        public override string GetDictionaryInitializer(string value)
-        {
-            return $" {{ [0] = {value} }}";
-        }
+    public override string GetDictionaryInitializer(string value)
+    {
+        return $" {{ [0] = {value} }}";
+    }
 
-        public override string GetCollectionInitializer(string value)
-        {
-            return " { " + value + " }";
-        }
+    public override string GetCollectionInitializer(string value)
+    {
+        return " { " + value + " }";
+    }
 
-        public override string GetArrayInitializer(string value)
-        {
-            return GetCollectionInitializer(value);
-        }
+    public override string GetArrayInitializer(string value)
+    {
+        return GetCollectionInitializer(value);
+    }
 
-        public override string GetVariableInitializer(string value)
-        {
-            return $" = {value}";
-        }
+    public override string GetVariableInitializer(string value)
+    {
+        return $" = {value}";
     }
 }

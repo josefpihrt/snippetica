@@ -2,17 +2,16 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration.Commands
-{
-    public class HtmlWithoutContentCommand : SnippetCommand
-    {
-        public override CommandKind Kind => CommandKind.None;
+namespace Snippetica.CodeGeneration.Commands;
 
-        protected override void Execute(ExecutionContext context, Snippet snippet)
-        {
-            snippet.ReplacePlaceholders("end", "");
-            snippet.RemoveLiteralAndReplacePlaceholders("content", "$selected$$end$");
-            snippet.SnippetTypes |= SnippetTypes.SurroundsWith;
-        }
+public class HtmlWithoutContentCommand : SnippetCommand
+{
+    public override CommandKind Kind => CommandKind.None;
+
+    protected override void Execute(ExecutionContext context, Snippet snippet)
+    {
+        snippet.ReplacePlaceholders("end", "");
+        snippet.RemoveLiteralAndReplacePlaceholders("content", "$selected$$end$");
+        snippet.SnippetTypes |= SnippetTypes.SurroundsWith;
     }
 }

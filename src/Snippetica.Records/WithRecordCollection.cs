@@ -2,18 +2,17 @@
 
 using System.Collections.Generic;
 
-namespace Snippetica.Records
-{
-    internal class WithRecordCollection : ReadOnlyKeyedCollection<string, Record>
-    {
-        public WithRecordCollection(IEnumerable<Record> records)
-            : this(new List<Record>(records))
-        {
-        }
+namespace Snippetica.Records;
 
-        public WithRecordCollection(IList<Record> list)
-            : base(list)
-        {
-        }
+internal class WithRecordCollection : ReadOnlyKeyedCollection<string, Record>
+{
+    public WithRecordCollection(IEnumerable<Record> records)
+        : this(new List<Record>(records))
+    {
+    }
+
+    public WithRecordCollection(IList<Record> list)
+        : base(list)
+    {
     }
 }

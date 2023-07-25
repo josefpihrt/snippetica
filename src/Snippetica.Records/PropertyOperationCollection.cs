@@ -2,19 +2,18 @@
 
 using System.Collections.ObjectModel;
 
-namespace Snippetica.Records
+namespace Snippetica.Records;
+
+internal class PropertyOperationCollection : Collection<Operation>, IKey<string>
 {
-    internal class PropertyOperationCollection : Collection<Operation>, IKey<string>
+    public PropertyOperationCollection(PropertyDefinition propertyDefinition)
     {
-        public PropertyOperationCollection(PropertyDefinition propertyDefinition)
-        {
-            PropertyDefinition = propertyDefinition;
-        }
-
-        public PropertyDefinition PropertyDefinition { get; }
-
-        public virtual string PropertyName => PropertyDefinition.Name;
-
-        string IKey<string>.GetKey() => PropertyName;
+        PropertyDefinition = propertyDefinition;
     }
+
+    public PropertyDefinition PropertyDefinition { get; }
+
+    public virtual string PropertyName => PropertyDefinition.Name;
+
+    string IKey<string>.GetKey() => PropertyName;
 }

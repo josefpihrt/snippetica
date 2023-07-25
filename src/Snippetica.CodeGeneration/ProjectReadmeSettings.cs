@@ -2,18 +2,17 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public class ProjectReadmeSettings
 {
-    public class ProjectReadmeSettings
-    {
-        public SnippetEnvironment Environment { get; set; }
+    public SnippetEnvironment Environment { get; set; }
 
-        public string DirectoryPath { get; set; }
+    public string DirectoryPath { get; set; }
 
-        public Language Language { get; set; }
+    public Language Language { get; set; }
 
-        public bool IsDevelopment { get; set; }
+    public bool IsDevelopment { get; set; }
 
-        public string Header { get; set; }
-    }
+    public string Header { get; set; }
 }

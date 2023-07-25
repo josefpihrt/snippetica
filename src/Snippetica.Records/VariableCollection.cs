@@ -2,18 +2,17 @@
 
 using System.Collections.Generic;
 
-namespace Snippetica.Records
-{
-    public class VariableCollection : ReadOnlyKeyedCollection<string, Variable>
-    {
-        public VariableCollection(IList<Variable> list)
-            : base(list)
-        {
-        }
+namespace Snippetica.Records;
 
-        internal VariableCollection(ExtendedKeyedCollection<string, Variable> collection)
-            : base(collection)
-        {
-        }
+public class VariableCollection : ReadOnlyKeyedCollection<string, Variable>
+{
+    public VariableCollection(IList<Variable> list)
+        : base(list)
+    {
+    }
+
+    internal VariableCollection(ExtendedKeyedCollection<string, Variable> collection)
+        : base(collection)
+    {
     }
 }

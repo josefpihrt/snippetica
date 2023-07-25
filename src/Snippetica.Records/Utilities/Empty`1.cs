@@ -3,10 +3,9 @@
 using System;
 using System.Collections.ObjectModel;
 
-namespace Snippetica.Records.Utilities
+namespace Snippetica.Records.Utilities;
+
+internal static class Empty<T>
 {
-    internal static class Empty<T>
-    {
-        public static ReadOnlyCollection<T> ReadOnlyCollection { get; } = new(Array.Empty<T>());
-    }
+    public static ReadOnlyCollection<T> ReadOnlyCollection { get; } = new(Array.Empty<T>());
 }

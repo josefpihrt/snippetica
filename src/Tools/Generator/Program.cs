@@ -17,169 +17,168 @@ using static DotMarkdown.Linq.MFactory;
 using static Snippetica.KnownNames;
 using static Snippetica.KnownPaths;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+internal static class Program
 {
-    internal static class Program
+    private static readonly SnippetDeepEqualityComparer _snippetEqualityComparer = new();
+
+    private static ShortcutInfo[] _shortcuts;
+
+    private static readonly Regex _regexReplaceSpacesWithTabs = new(@"(?<=^(\ {4})*)(?<x>\ {4})(?=(\ {4})*\S)", RegexOptions.Multiline);
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancy", "RCS1163:Unused parameter.")]
+    private static void Main(string[] args)
     {
-        private static readonly SnippetDeepEqualityComparer _snippetEqualityComparer = new();
+        _shortcuts = Records.Document.ReadRecords(@"..\..\..\Data\Shortcuts.xml")
+            .Where(f => !f.HasTag(KnownTags.Disabled))
+            .Select(f => Mapper.MapShortcutInfo(f))
+            .ToArray();
 
-        private static ShortcutInfo[] _shortcuts;
+        SnippetDirectory[] directories = LoadDirectories(@"..\..\..\Data\Directories.xml");
 
-        private static readonly Regex _regexReplaceSpacesWithTabs = new(@"(?<=^(\ {4})*)(?<x>\ {4})(?=(\ {4})*\S)", RegexOptions.Multiline);
+        ShortcutInfo.SerializeToXml(Path.Combine(VisualStudioExtensionProjectPath, "Shortcuts.xml"), _shortcuts);
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancy", "RCS1163:Unused parameter.")]
-        private static void Main(string[] args)
-        {
-            _shortcuts = Records.Document.ReadRecords(@"..\..\..\Data\Shortcuts.xml")
-                .Where(f => !f.HasTag(KnownTags.Disabled))
-                .Select(f => Mapper.MapShortcutInfo(f))
-                .ToArray();
+        LoadLanguages();
 
-            SnippetDirectory[] directories = LoadDirectories(@"..\..\..\Data\Directories.xml");
+        SaveChangedSnippets(directories);
 
-            ShortcutInfo.SerializeToXml(Path.Combine(VisualStudioExtensionProjectPath, "Shortcuts.xml"), _shortcuts);
+        var visualStudio = new VisualStudioEnvironment();
 
-            LoadLanguages();
+        (List<SnippetGeneratorResult> visualStudioResults, List<Snippet> visualStudioSnippets) = GenerateSnippets(
+            visualStudio,
+            directories,
+            VisualStudioExtensionProjectPath);
 
-            SaveChangedSnippets(directories);
+        var visualStudioCode = new VisualStudioCodeEnvironment();
 
-            var visualStudio = new VisualStudioEnvironment();
+        (List<SnippetGeneratorResult> visualStudioCodeResults, List<Snippet> visualStudioCodeSnippets) = GenerateSnippets(
+            visualStudioCode,
+            directories,
+            VisualStudioCodeExtensionProjectPath);
 
-            (List<SnippetGeneratorResult> visualStudioResults, List<Snippet> visualStudioSnippets) = GenerateSnippets(
-                visualStudio,
-                directories,
-                VisualStudioExtensionProjectPath);
+        CheckDuplicateShortcuts(visualStudioSnippets, visualStudio);
+        CheckDuplicateShortcuts(visualStudioCodeSnippets, visualStudioCode);
 
-            var visualStudioCode = new VisualStudioCodeEnvironment();
+        IEnumerable<Language> languages = visualStudioResults
+            .Concat(visualStudioCodeResults)
+            .Select(f => f.Language)
+            .Distinct();
 
-            (List<SnippetGeneratorResult> visualStudioCodeResults, List<Snippet> visualStudioCodeSnippets) = GenerateSnippets(
-                visualStudioCode,
-                directories,
-                VisualStudioCodeExtensionProjectPath);
-
-            CheckDuplicateShortcuts(visualStudioSnippets, visualStudio);
-            CheckDuplicateShortcuts(visualStudioCodeSnippets, visualStudioCode);
-
-            IEnumerable<Language> languages = visualStudioResults
-                .Concat(visualStudioCodeResults)
-                .Select(f => f.Language)
-                .Distinct();
-
-            var document = new MDocument(
-                Heading1(ProductName),
-                BulletList(
-                    CodeGenerationUtility.GetProjectSubtitle(languages),
-                    BulletItem(Link("Release Notes", $"{MainGitHubUrl}/{ChangeLogFileName}"), ".")));
+        var document = new MDocument(
+            Heading1(ProductName),
+            BulletList(
+                CodeGenerationUtility.GetProjectSubtitle(languages),
+                BulletItem(Link("Release Notes", $"{MainGitHubUrl}/{ChangeLogFileName}"), ".")));
 
 #if !DEBUG
-            MarkdownGenerator.GenerateProjectReadme(visualStudioResults, document, visualStudio.CreateProjectReadmeSettings(), addFootnote: false);
+        MarkdownGenerator.GenerateProjectReadme(visualStudioResults, document, visualStudio.CreateProjectReadmeSettings(), addFootnote: false);
 
-            MarkdownGenerator.GenerateProjectReadme(visualStudioCodeResults, document, visualStudioCode.CreateProjectReadmeSettings());
+        MarkdownGenerator.GenerateProjectReadme(visualStudioCodeResults, document, visualStudioCode.CreateProjectReadmeSettings());
 
-            IOUtility.WriteAllText(Path.Combine(SolutionDirectoryPath, ReadMeFileName), document.ToString(MarkdownFormat.Default.WithTableOptions(TableOptions.FormatHeader)), IOUtility.UTF8NoBom);
+        IOUtility.WriteAllText(Path.Combine(SolutionDirectoryPath, ReadMeFileName), document.ToString(MarkdownFormat.Default.WithTableOptions(TableOptions.FormatHeader)), IOUtility.UTF8NoBom);
 #endif
 
-            Console.WriteLine("*** END ***");
-            Console.ReadKey();
+        Console.WriteLine("*** END ***");
+        Console.ReadKey();
+    }
+
+    private static (List<SnippetGeneratorResult> results, List<Snippet> snippets) GenerateSnippets(
+        SnippetEnvironment environment,
+        SnippetDirectory[] directories,
+        string projectPath)
+    {
+        environment.Shortcuts.AddRange(_shortcuts.Where(f => f.Environments.Contains(environment.Kind)));
+
+        PackageGenerator generator = environment.CreatePackageGenerator();
+
+        var results = new List<SnippetGeneratorResult>();
+        var devResults = new List<SnippetGeneratorResult>();
+
+        foreach (SnippetGeneratorResult result in environment.GenerateSnippets(directories))
+        {
+            if (result.IsDevelopment)
+            {
+                devResults.Add(result);
+            }
+            else
+            {
+                results.Add(result);
+            }
         }
 
-        private static (List<SnippetGeneratorResult> results, List<Snippet> snippets) GenerateSnippets(
-            SnippetEnvironment environment,
-            SnippetDirectory[] directories,
-            string projectPath)
-        {
-            environment.Shortcuts.AddRange(_shortcuts.Where(f => f.Environments.Contains(environment.Kind)));
+        var snippets = new List<Snippet>();
 
-            PackageGenerator generator = environment.CreatePackageGenerator();
+        snippets.AddRange(generator.GeneratePackageFiles(projectPath, results));
 
-            var results = new List<SnippetGeneratorResult>();
-            var devResults = new List<SnippetGeneratorResult>();
-
-            foreach (SnippetGeneratorResult result in environment.GenerateSnippets(directories))
-            {
-                if (result.IsDevelopment)
-                {
-                    devResults.Add(result);
-                }
-                else
-                {
-                    results.Add(result);
-                }
-            }
-
-            var snippets = new List<Snippet>();
-
-            snippets.AddRange(generator.GeneratePackageFiles(projectPath, results));
-
-            snippets.AddRange(generator.GeneratePackageFiles(projectPath + DevSuffix, devResults));
+        snippets.AddRange(generator.GeneratePackageFiles(projectPath + DevSuffix, devResults));
 
 #if !DEBUG
-            MarkdownFileWriter.WriteProjectReadme(projectPath, results, environment.CreateProjectReadmeSettings());
+        MarkdownFileWriter.WriteProjectReadme(projectPath, results, environment.CreateProjectReadmeSettings());
 #endif
 
-            return (results, snippets);
-        }
+        return (results, snippets);
+    }
 
-        private static void CheckDuplicateShortcuts(IEnumerable<Snippet> snippets, SnippetEnvironment environment)
+    private static void CheckDuplicateShortcuts(IEnumerable<Snippet> snippets, SnippetEnvironment environment)
+    {
+        foreach (IGrouping<Language, Snippet> grouping in snippets
+            .GroupBy(f => f.Language)
+            .OrderBy(f => f.Key.GetIdentifier()))
         {
-            foreach (IGrouping<Language, Snippet> grouping in snippets
-                .GroupBy(f => f.Language)
-                .OrderBy(f => f.Key.GetIdentifier()))
+            Console.WriteLine($"checking duplicate shortcuts for '{environment.Kind.GetIdentifier()}.{grouping.Key.GetIdentifier()}'");
+
+            foreach (DuplicateShortcutInfo info in SnippetUtility.FindDuplicateShortcuts(grouping))
             {
-                Console.WriteLine($"checking duplicate shortcuts for '{environment.Kind.GetIdentifier()}.{grouping.Key.GetIdentifier()}'");
-
-                foreach (DuplicateShortcutInfo info in SnippetUtility.FindDuplicateShortcuts(grouping))
+                if (info.Snippets.Any(f => !f.HasTag(KnownTags.NonUniqueShortcut)))
                 {
-                    if (info.Snippets.Any(f => !f.HasTag(KnownTags.NonUniqueShortcut)))
-                    {
-                        Console.WriteLine($"DUPLICATE SHORTCUT: {info.Shortcut}");
+                    Console.WriteLine($"DUPLICATE SHORTCUT: {info.Shortcut}");
 
-                        foreach (Snippet item in info.Snippets)
-                            Console.WriteLine($"  {item.FileNameWithoutExtension()}");
-                    }
+                    foreach (Snippet item in info.Snippets)
+                        Console.WriteLine($"  {item.FileNameWithoutExtension()}");
                 }
             }
         }
+    }
 
-        private static void SaveChangedSnippets(SnippetDirectory[] directories)
+    private static void SaveChangedSnippets(SnippetDirectory[] directories)
+    {
+        foreach (SnippetDirectory directory in directories)
         {
-            foreach (SnippetDirectory directory in directories)
+            foreach (Snippet snippet in directory.EnumerateSnippets())
             {
-                foreach (Snippet snippet in directory.EnumerateSnippets())
-                {
-                    var clone = (Snippet)snippet.Clone();
+                var clone = (Snippet)snippet.Clone();
 
-                    clone.SortCollections();
+                clone.SortCollections();
 
-                    clone.CodeText = _regexReplaceSpacesWithTabs.Replace(clone.CodeText, "\t");
+                clone.CodeText = _regexReplaceSpacesWithTabs.Replace(clone.CodeText, "\t");
 
-                    if (!_snippetEqualityComparer.Equals(snippet, clone))
-                        IOUtility.SaveSnippet(clone, onlyIfChanged: false);
-                }
+                if (!_snippetEqualityComparer.Equals(snippet, clone))
+                    IOUtility.SaveSnippet(clone, onlyIfChanged: false);
             }
         }
+    }
 
-        private static SnippetDirectory[] LoadDirectories(string url)
+    private static SnippetDirectory[] LoadDirectories(string url)
+    {
+        return Records.Document.ReadRecords(url)
+            .Where(f => !f.HasTag(KnownTags.Disabled))
+            .Select(f => Mapper.MapSnippetDirectory(f))
+            .ToArray();
+    }
+
+    private static void LoadLanguages()
+    {
+        Records.Document.ReadRecords(@"..\..\..\Data\Languages.xml")
+            .Where(f => !f.HasTag(KnownTags.Disabled))
+            .LoadLanguages();
+
+        foreach (TypeDefinition typeDefinition in Records.Document.ReadRecords(@"..\..\..\Data\Types.xml")
+            .Where(f => !f.HasTag(KnownTags.Disabled))
+            .Select(f => Mapper.MapTypeDefinition(f)))
         {
-            return Records.Document.ReadRecords(url)
-                .Where(f => !f.HasTag(KnownTags.Disabled))
-                .Select(f => Mapper.MapSnippetDirectory(f))
-                .ToArray();
-        }
-
-        private static void LoadLanguages()
-        {
-            Records.Document.ReadRecords(@"..\..\..\Data\Languages.xml")
-                .Where(f => !f.HasTag(KnownTags.Disabled))
-                .LoadLanguages();
-
-            foreach (TypeDefinition typeDefinition in Records.Document.ReadRecords(@"..\..\..\Data\Types.xml")
-                .Where(f => !f.HasTag(KnownTags.Disabled))
-                .Select(f => Mapper.MapTypeDefinition(f)))
-            {
-                LanguageDefinitions.CSharp.Types.Add(typeDefinition);
-                LanguageDefinitions.VisualBasic.Types.Add(typeDefinition);
-            }
+            LanguageDefinitions.CSharp.Types.Add(typeDefinition);
+            LanguageDefinitions.VisualBasic.Types.Add(typeDefinition);
         }
     }
 }

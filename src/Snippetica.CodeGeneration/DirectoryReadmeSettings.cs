@@ -3,28 +3,27 @@
 using System.Collections.Generic;
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public class DirectoryReadmeSettings
 {
-    public class DirectoryReadmeSettings
-    {
-        public SnippetEnvironment Environment { get; set; }
+    public SnippetEnvironment Environment { get; set; }
 
-        public string DirectoryPath { get; set; }
+    public string DirectoryPath { get; set; }
 
-        public Language Language { get; set; }
+    public Language Language { get; set; }
 
-        public bool IsDevelopment { get; set; }
+    public bool IsDevelopment { get; set; }
 
-        public bool AddQuickReference { get; set; }
+    public bool AddQuickReference { get; set; }
 
-        public string Header { get; set; }
+    public string Header { get; set; }
 
-        public string QuickReferenceText { get; set; }
+    public string QuickReferenceText { get; set; }
 
-        public bool AddLinkToTitle { get; set; }
+    public bool AddLinkToTitle { get; set; }
 
-        public bool GroupShortcuts { get; set; }
+    public bool GroupShortcuts { get; set; }
 
-        public List<ShortcutInfo> Shortcuts { get; } = new();
-    }
+    public List<ShortcutInfo> Shortcuts { get; } = new();
 }

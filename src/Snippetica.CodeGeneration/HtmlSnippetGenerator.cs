@@ -3,25 +3,24 @@
 using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Commands;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public class HtmlSnippetGenerator : SnippetGenerator
 {
-    public class HtmlSnippetGenerator : SnippetGenerator
+    protected override MultiCommandCollection CreateCommands(Snippet snippet)
     {
-        protected override MultiCommandCollection CreateCommands(Snippet snippet)
+        var commands = new MultiCommandCollection();
+
+        if (snippet.Literals.Contains("content"))
         {
-            var commands = new MultiCommandCollection();
-
-            if (snippet.Literals.Contains("content"))
-            {
-                commands.Add(new MultiCommand(new HtmlWithContentCommand()));
-                commands.Add(new MultiCommand(new HtmlWithoutContentCommand()));
-            }
-            else
-            {
-                commands.Add(new MultiCommand());
-            }
-
-            return commands;
+            commands.Add(new MultiCommand(new HtmlWithContentCommand()));
+            commands.Add(new MultiCommand(new HtmlWithoutContentCommand()));
         }
+        else
+        {
+            commands.Add(new MultiCommand());
+        }
+
+        return commands;
     }
 }

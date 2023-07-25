@@ -2,15 +2,14 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration.Commands
-{
-    public class ShortcutToLowercaseCommand : SnippetCommand
-    {
-        public override CommandKind Kind => CommandKind.ShortcutToLowercase;
+namespace Snippetica.CodeGeneration.Commands;
 
-        protected override void Execute(ExecutionContext context, Snippet snippet)
-        {
-            snippet.Shortcut = snippet.Shortcut.ToLowerInvariant();
-        }
+public class ShortcutToLowercaseCommand : SnippetCommand
+{
+    public override CommandKind Kind => CommandKind.ShortcutToLowercase;
+
+    protected override void Execute(ExecutionContext context, Snippet snippet)
+    {
+        snippet.Shortcut = snippet.Shortcut.ToLowerInvariant();
     }
 }

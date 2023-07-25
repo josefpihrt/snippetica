@@ -2,32 +2,31 @@
 
 using System.Xml.Linq;
 
-namespace Snippetica.Records
+namespace Snippetica.Records;
+
+public class DocumentOptions
 {
-    public class DocumentOptions
+    public static DocumentOptions Default { get; } = new();
+
+    public DocumentOptions(
+        bool useVariables = false,
+        char openVariableDelimiter = '{',
+        char closeVariableDelimiter = '}',
+        bool setLineInfo = true)
     {
-        public static DocumentOptions Default { get; } = new();
-
-        public DocumentOptions(
-            bool useVariables = false,
-            char openVariableDelimiter = '{',
-            char closeVariableDelimiter = '}',
-            bool setLineInfo = true)
-        {
-            UseVariables = useVariables;
-            OpenVariableDelimiter = openVariableDelimiter;
-            CloseVariableDelimiter = closeVariableDelimiter;
-            SetLineInfo = setLineInfo;
-        }
-
-        public bool UseVariables { get; }
-
-        public char OpenVariableDelimiter { get; }
-
-        public char CloseVariableDelimiter { get; }
-
-        public bool SetLineInfo { get; }
-
-        internal LoadOptions LoadOptions => (SetLineInfo) ? LoadOptions.SetLineInfo : LoadOptions.None;
+        UseVariables = useVariables;
+        OpenVariableDelimiter = openVariableDelimiter;
+        CloseVariableDelimiter = closeVariableDelimiter;
+        SetLineInfo = setLineInfo;
     }
+
+    public bool UseVariables { get; }
+
+    public char OpenVariableDelimiter { get; }
+
+    public char CloseVariableDelimiter { get; }
+
+    public bool SetLineInfo { get; }
+
+    internal LoadOptions LoadOptions => (SetLineInfo) ? LoadOptions.SetLineInfo : LoadOptions.None;
 }

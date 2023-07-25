@@ -3,71 +3,70 @@
 using System;
 using System.Collections.Generic;
 
-namespace Snippetica.Records.Tests
-{
-    internal static class Program
-    {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancy", "RCS1163:Unused parameter.")]
-        internal static void Main(string[] args)
-        {
-            var settings = new DocumentOptions(useVariables: true);
+namespace Snippetica.Records.Tests;
 
-            foreach (Record record in Document.ReadRecords(@"..\..\Test.xml", settings))
-            {
-                WriteLine(record.EntityName);
+internal static class Program
+{
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancy", "RCS1163:Unused parameter.")]
+    internal static void Main(string[] args)
+    {
+        var settings = new DocumentOptions(useVariables: true);
+
+        foreach (Record record in Document.ReadRecords(@"..\..\Test.xml", settings))
+        {
+            WriteLine(record.EntityName);
 
 #if DEBUG
-                Indent();
+            Indent();
 
-                foreach (KeyValuePair<string, object> pair in record.GetProperties())
+            foreach (KeyValuePair<string, object> pair in record.GetProperties())
+            {
+                if (pair.Value is List<object> list)
                 {
-                    if (pair.Value is List<object> list)
-                    {
-                        WriteLine($"[{pair.Key}]");
+                    WriteLine($"[{pair.Key}]");
 
-                        Indent();
+                    Indent();
 
-                        foreach (object item in list)
-                            WriteLine(item);
+                    foreach (object item in list)
+                        WriteLine(item);
 
-                        Unindent();
-                    }
-                    else
-                    {
-                        WriteLine($"[{pair.Key}] {pair.Value}");
-                    }
+                    Unindent();
                 }
+                else
+                {
+                    WriteLine($"[{pair.Key}] {pair.Value}");
+                }
+            }
 
-                Unindent();
+            Unindent();
 #endif
 
-                Console.WriteLine("");
-            }
-
-            Console.WriteLine("** DONE ***");
-            Console.ReadKey();
+            Console.WriteLine("");
         }
+
+        Console.WriteLine("** DONE ***");
+        Console.ReadKey();
+    }
 
 #pragma warning disable IDE0051, RCS1213
-        private static void Indent()
-        {
-            IndentString += "  ";
-        }
+    private static void Indent()
+    {
+        IndentString += "  ";
+    }
 
-        private static void Unindent()
+    private static void Unindent()
+    {
+        if (IndentString.Length >= 2)
         {
-            if (IndentString.Length >= 2)
-            {
-                IndentString = IndentString.Remove(IndentString.Length - 2);
-            }
+            IndentString = IndentString.Remove(IndentString.Length - 2);
         }
+    }
 #pragma warning restore IDE0051, RCS1213 
 
-        private static string IndentString { get; set; } = "";
+    private static string IndentString { get; set; } = "";
 
-        private static void WriteLine(object value)
-        {
-            Console.WriteLine(IndentString + value);
-        }
+    private static void WriteLine(object value)
+    {
+        Console.WriteLine(IndentString + value);
     }
 }

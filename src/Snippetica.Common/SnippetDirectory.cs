@@ -8,80 +8,79 @@ using System.IO;
 using System.Linq;
 using Pihrtsoft.Snippets;
 
-namespace Snippetica
+namespace Snippetica;
+
+[DebuggerDisplay("{DebuggerDisplay,nq}")]
+public class SnippetDirectory
 {
-    [DebuggerDisplay("{DebuggerDisplay,nq}")]
-    public class SnippetDirectory
+    private static readonly ReadOnlyCollection<string> _noTags = new(Array.Empty<string>());
+
+    public SnippetDirectory(string path, Language language, params string[] tags)
     {
-        private static readonly ReadOnlyCollection<string> _noTags = new(Array.Empty<string>());
+        Path = path;
+        Language = language;
 
-        public SnippetDirectory(string path, Language language, params string[] tags)
+        if (tags?.Length > 0)
         {
-            Path = path;
-            Language = language;
+            Tags = new ReadOnlyCollection<string>(tags);
+        }
+        else
+        {
+            Tags = _noTags;
+        }
+    }
 
-            if (tags?.Length > 0)
-            {
-                Tags = new ReadOnlyCollection<string>(tags);
-            }
-            else
-            {
-                Tags = _noTags;
-            }
+    public string Path { get; }
+
+    public Language Language { get; }
+
+    public ReadOnlyCollection<string> Tags { get; }
+
+    public string Name
+    {
+        get { return System.IO.Path.GetFileName(Path); }
+    }
+
+    public SnippetDirectory WithPath(string path)
+    {
+        return new SnippetDirectory(path, Language, Tags.ToArray());
+    }
+
+    public bool HasTag(string tag)
+    {
+        return Tags.Any(f => f.Equals(tag, StringComparison.Ordinal));
+    }
+
+    public bool HasTags(params string[] tags)
+    {
+        foreach (string tag in tags)
+        {
+            if (!HasTag(tag))
+                return false;
         }
 
-        public string Path { get; }
+        return true;
+    }
 
-        public Language Language { get; }
-
-        public ReadOnlyCollection<string> Tags { get; }
-
-        public string Name
+    public bool HasAnyTag(params string[] tags)
+    {
+        foreach (string tag in tags)
         {
-            get { return System.IO.Path.GetFileName(Path); }
+            if (HasTag(tag))
+                return true;
         }
 
-        public SnippetDirectory WithPath(string path)
-        {
-            return new SnippetDirectory(path, Language, Tags.ToArray());
-        }
+        return false;
+    }
 
-        public bool HasTag(string tag)
-        {
-            return Tags.Any(f => f.Equals(tag, StringComparison.Ordinal));
-        }
+    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+    private string DebuggerDisplay
+    {
+        get { return $"{Language} Tags = {string.Join(", ", Tags)} Path = {Path}"; }
+    }
 
-        public bool HasTags(params string[] tags)
-        {
-            foreach (string tag in tags)
-            {
-                if (!HasTag(tag))
-                    return false;
-            }
-
-            return true;
-        }
-
-        public bool HasAnyTag(params string[] tags)
-        {
-            foreach (string tag in tags)
-            {
-                if (HasTag(tag))
-                    return true;
-            }
-
-            return false;
-        }
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private string DebuggerDisplay
-        {
-            get { return $"{Language} Tags = {string.Join(", ", Tags)} Path = {Path}"; }
-        }
-
-        public IEnumerable<Snippet> EnumerateSnippets(SearchOption searchOption = SearchOption.AllDirectories)
-        {
-            return SnippetSerializer.Deserialize(Path, searchOption);
-        }
+    public IEnumerable<Snippet> EnumerateSnippets(SearchOption searchOption = SearchOption.AllDirectories)
+    {
+        return SnippetSerializer.Deserialize(Path, searchOption);
     }
 }

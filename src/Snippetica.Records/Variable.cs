@@ -3,26 +3,25 @@
 using System;
 using System.Diagnostics;
 
-namespace Snippetica.Records
+namespace Snippetica.Records;
+
+[DebuggerDisplay("{DebuggerDisplay,nq}")]
+public readonly struct Variable : IKey<string>
 {
-    [DebuggerDisplay("{DebuggerDisplay,nq}")]
-    public readonly struct Variable : IKey<string>
+    public Variable(string name, string value)
     {
-        public Variable(string name, string value)
-        {
-            Name = name ?? throw new ArgumentNullException(nameof(name));
-            Value = value;
-        }
-
-        public string Name { get; }
-
-        public string Value { get; }
-
-        internal bool IsDefault => Name == null;
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private string DebuggerDisplay => $"{Name} = {Value}";
-
-        string IKey<string>.GetKey() => Name;
+        Name = name ?? throw new ArgumentNullException(nameof(name));
+        Value = value;
     }
+
+    public string Name { get; }
+
+    public string Value { get; }
+
+    internal bool IsDefault => Name is null;
+
+    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+    private string DebuggerDisplay => $"{Name} = {Value}";
+
+    string IKey<string>.GetKey() => Name;
 }

@@ -7,122 +7,121 @@ using System.Linq;
 using System.Xml.Linq;
 using Snippetica.Records.Utilities;
 
-namespace Snippetica.Records.Xml
+namespace Snippetica.Records.Xml;
+
+internal static class XmlExtensions
 {
-    internal static class XmlExtensions
+    public static string LocalName(this XAttribute attribute)
     {
-        public static string LocalName(this XAttribute attribute)
+        return attribute.Name.LocalName;
+    }
+
+    public static XElement FirstElement(this XContainer container)
+    {
+        return container.Elements().FirstOrDefault();
+    }
+
+    public static ElementKind Kind(this XElement element)
+    {
+        switch (element.LocalName())
         {
-            return attribute.Name.LocalName;
-        }
-
-        public static XElement FirstElement(this XContainer container)
-        {
-            return container.Elements().FirstOrDefault();
-        }
-
-        public static ElementKind Kind(this XElement element)
-        {
-            switch (element.LocalName())
-            {
-                case ElementNames.Document:
-                    return ElementKind.Document;
-                case ElementNames.Entities:
-                    return ElementKind.Entities;
-                case ElementNames.Entity:
-                    return ElementKind.Entity;
-                case ElementNames.Declarations:
-                    return ElementKind.Declarations;
-                case ElementNames.Property:
-                    return ElementKind.Property;
-                case ElementNames.Variable:
-                    return ElementKind.Variable;
-                case ElementNames.Records:
-                    return ElementKind.Records;
-                case ElementNames.New:
-                    return ElementKind.New;
-                case ElementNames.With:
-                    return ElementKind.With;
-                case ElementNames.Without:
-                    return ElementKind.Without;
-                case ElementNames.Prefix:
-                    return ElementKind.Prefix;
-                case ElementNames.Postfix:
-                    return ElementKind.Postfix;
-                default:
-                    {
-                        Debug.Fail(element.ToString());
-                        return ElementKind.None;
-                    }
-            }
-        }
-
-        public static string LocalName(this XElement element)
-        {
-            return element.Name.LocalName;
-        }
-
-        public static string GetAttributeValueOrThrow(this XElement element, string attributeName)
-        {
-            XAttribute attribute = element.Attribute(attributeName);
-
-            if (attribute == null)
-                ThrowHelper.ThrowInvalidOperation($"Element '{element.LocalName()}' must define attribute '{attributeName}'.", element);
-
-            return attribute.Value;
-        }
-
-        public static XAttribute GetSingleAttributeOrThrow(this XElement element, string attributeName = null)
-        {
-            using (IEnumerator<XAttribute> en = element.Attributes().GetEnumerator())
-            {
-                if (en.MoveNext())
+            case ElementNames.Document:
+                return ElementKind.Document;
+            case ElementNames.Entities:
+                return ElementKind.Entities;
+            case ElementNames.Entity:
+                return ElementKind.Entity;
+            case ElementNames.Declarations:
+                return ElementKind.Declarations;
+            case ElementNames.Property:
+                return ElementKind.Property;
+            case ElementNames.Variable:
+                return ElementKind.Variable;
+            case ElementNames.Records:
+                return ElementKind.Records;
+            case ElementNames.New:
+                return ElementKind.New;
+            case ElementNames.With:
+                return ElementKind.With;
+            case ElementNames.Without:
+                return ElementKind.Without;
+            case ElementNames.Prefix:
+                return ElementKind.Prefix;
+            case ElementNames.Postfix:
+                return ElementKind.Postfix;
+            default:
                 {
-                    XAttribute attribute = en.Current;
+                    Debug.Fail(element.ToString());
+                    return ElementKind.None;
+                }
+        }
+    }
 
-                    if (!en.MoveNext()
-                        && (attributeName == null || en.Current.Name == attributeName))
-                    {
-                        return attribute;
-                    }
+    public static string LocalName(this XElement element)
+    {
+        return element.Name.LocalName;
+    }
+
+    public static string GetAttributeValueOrThrow(this XElement element, string attributeName)
+    {
+        XAttribute attribute = element.Attribute(attributeName);
+
+        if (attribute is null)
+            ThrowHelper.ThrowInvalidOperation($"Element '{element.LocalName()}' must define attribute '{attributeName}'.", element);
+
+        return attribute.Value;
+    }
+
+    public static XAttribute GetSingleAttributeOrThrow(this XElement element, string attributeName = null)
+    {
+        using (IEnumerator<XAttribute> en = element.Attributes().GetEnumerator())
+        {
+            if (en.MoveNext())
+            {
+                XAttribute attribute = en.Current;
+
+                if (!en.MoveNext()
+                    && (attributeName is null || en.Current.Name == attributeName))
+                {
+                    return attribute;
                 }
             }
-
-            if (attributeName != null)
-            {
-                ThrowHelper.ThrowInvalidOperation($"Element '{element.Name}' must contains single attribute with name '{attributeName}'.");
-            }
-            else
-            {
-                ThrowHelper.ThrowInvalidOperation($"Element '{element.Name}' must contains single attribute.");
-            }
-
-            return null;
         }
 
-        public static string AttributeValueOrDefault(this XElement element, string attributeName, string defaultValue = default)
+        if (attributeName is not null)
         {
-            return element.Attribute(attributeName)?.Value ?? defaultValue;
+            ThrowHelper.ThrowInvalidOperation($"Element '{element.Name}' must contains single attribute with name '{attributeName}'.");
         }
-
-        public static bool AttributeValueAsBooleanOrDefault(this XElement element, string attributeName, bool defaultValue = default)
+        else
         {
-            string value = element.AttributeValueOrDefault(attributeName);
-
-            if (value != null)
-                return bool.Parse(value);
-
-            return defaultValue;
+            ThrowHelper.ThrowInvalidOperation($"Element '{element.Name}' must contains single attribute.");
         }
 
-        public static TEnum AttributeValueAsEnumOrDefault<TEnum>(this XElement element, string attributeName, TEnum defaultValue = default) where TEnum : struct
-        {
-            string value = element.AttributeValueOrDefault(attributeName);
+        return null;
+    }
 
-            if (value != null)
-                return (TEnum)Enum.Parse(typeof(TEnum), value);
+    public static string AttributeValueOrDefault(this XElement element, string attributeName, string defaultValue = default)
+    {
+        return element.Attribute(attributeName)?.Value ?? defaultValue;
+    }
 
-            return defaultValue;
-        }
+    public static bool AttributeValueAsBooleanOrDefault(this XElement element, string attributeName, bool defaultValue = default)
+    {
+        string value = element.AttributeValueOrDefault(attributeName);
+
+        if (value is not null)
+            return bool.Parse(value);
+
+        return defaultValue;
+    }
+
+    public static TEnum AttributeValueAsEnumOrDefault<TEnum>(this XElement element, string attributeName, TEnum defaultValue = default) where TEnum : struct
+    {
+        string value = element.AttributeValueOrDefault(attributeName);
+
+        if (value is not null)
+            return (TEnum)Enum.Parse(typeof(TEnum), value);
+
+        return defaultValue;
     }
 }

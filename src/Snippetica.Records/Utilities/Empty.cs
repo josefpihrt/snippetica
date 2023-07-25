@@ -3,19 +3,18 @@
 using System;
 using System.Collections.ObjectModel;
 
-namespace Snippetica.Records.Utilities
+namespace Snippetica.Records.Utilities;
+
+internal static class Empty
 {
-    internal static class Empty
+    public static PropertyDefinitionCollection PropertyDefinitionCollection { get; } = new(Array.Empty<PropertyDefinition>());
+
+    public static VariableCollection VariableCollection { get; } = new(Array.Empty<Variable>());
+
+    public static WithRecordCollection WithRecordCollection { get; } = new(Array.Empty<Record>());
+
+    public static ReadOnlyCollection<T> ReadOnlyCollection<T>()
     {
-        public static PropertyDefinitionCollection PropertyDefinitionCollection { get; } = new(Array.Empty<PropertyDefinition>());
-
-        public static VariableCollection VariableCollection { get; } = new(Array.Empty<Variable>());
-
-        public static WithRecordCollection WithRecordCollection { get; } = new(Array.Empty<Record>());
-
-        public static ReadOnlyCollection<T> ReadOnlyCollection<T>()
-        {
-            return Empty<T>.ReadOnlyCollection;
-        }
+        return Empty<T>.ReadOnlyCollection;
     }
 }

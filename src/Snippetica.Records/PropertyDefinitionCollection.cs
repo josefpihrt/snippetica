@@ -2,18 +2,17 @@
 
 using System.Collections.Generic;
 
-namespace Snippetica.Records
-{
-    public class PropertyDefinitionCollection : ReadOnlyKeyedCollection<string, PropertyDefinition>
-    {
-        public PropertyDefinitionCollection(IList<PropertyDefinition> list)
-            : base(list)
-        {
-        }
+namespace Snippetica.Records;
 
-        internal PropertyDefinitionCollection(ExtendedKeyedCollection<string, PropertyDefinition> collection)
-            : base(collection)
-        {
-        }
+public class PropertyDefinitionCollection : ReadOnlyKeyedCollection<string, PropertyDefinition>
+{
+    public PropertyDefinitionCollection(IList<PropertyDefinition> list)
+        : base(list)
+    {
+    }
+
+    internal PropertyDefinitionCollection(ExtendedKeyedCollection<string, PropertyDefinition> collection)
+        : base(collection)
+    {
     }
 }

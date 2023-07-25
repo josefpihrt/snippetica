@@ -2,16 +2,15 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration
-{
-    public class LanguageExecutionContext : ExecutionContext
-    {
-        public LanguageExecutionContext(Snippet snippet, LanguageDefinition language)
-            : base(snippet)
-        {
-            Language = language;
-        }
+namespace Snippetica.CodeGeneration;
 
-        public LanguageDefinition Language { get; }
+public class LanguageExecutionContext : ExecutionContext
+{
+    public LanguageExecutionContext(Snippet snippet, LanguageDefinition language)
+        : base(snippet)
+    {
+        Language = language;
     }
+
+    public LanguageDefinition Language { get; }
 }

@@ -3,43 +3,42 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace Snippetica.Records
+namespace Snippetica.Records;
+
+public class ReadOnlyKeyedCollection<TKey, TValue> : ReadOnlyCollection<TValue> where TValue : IKey<TKey>
 {
-    public class ReadOnlyKeyedCollection<TKey, TValue> : ReadOnlyCollection<TValue> where TValue : IKey<TKey>
+    private readonly ExtendedKeyedCollection<TKey, TValue> _keyedCollection;
+
+    public ReadOnlyKeyedCollection(IList<TValue> list)
+        : this(new ExtendedKeyedCollection<TKey, TValue>(list))
     {
-        private readonly ExtendedKeyedCollection<TKey, TValue> _keyedCollection;
+    }
 
-        public ReadOnlyKeyedCollection(IList<TValue> list)
-            : this(new ExtendedKeyedCollection<TKey, TValue>(list))
-        {
-        }
+    internal ReadOnlyKeyedCollection(ExtendedKeyedCollection<TKey, TValue> collection)
+        : base(collection)
+    {
+        _keyedCollection = (ExtendedKeyedCollection<TKey, TValue>)Items;
+    }
 
-        internal ReadOnlyKeyedCollection(ExtendedKeyedCollection<TKey, TValue> collection)
-            : base(collection)
-        {
-            _keyedCollection = (ExtendedKeyedCollection<TKey, TValue>)Items;
-        }
+    public bool TryGetValue(TKey key, out TValue value)
+    {
+        return _keyedCollection.TryGetValue(key, out value);
+    }
 
-        public bool TryGetValue(TKey key, out TValue value)
+    internal TValue Find(TKey key)
+    {
+        if (_keyedCollection.TryGetValue(key, out TValue value))
         {
-            return _keyedCollection.TryGetValue(key, out value);
+            return value;
         }
+        else
+        {
+            return default;
+        }
+    }
 
-        internal TValue Find(TKey key)
-        {
-            if (_keyedCollection.TryGetValue(key, out TValue value))
-            {
-                return value;
-            }
-            else
-            {
-                return default;
-            }
-        }
-
-        public TValue this[TKey key]
-        {
-            get { return _keyedCollection[key]; }
-        }
+    public TValue this[TKey key]
+    {
+        get { return _keyedCollection[key]; }
     }
 }

@@ -2,34 +2,33 @@
 
 using System;
 
-namespace Snippetica
-{
-    public static class EnvironmentKindExtensions
-    {
-        public static string GetIdentifier(this EnvironmentKind kind)
-        {
-            switch (kind)
-            {
-                case EnvironmentKind.VisualStudio:
-                    return "vs";
-                case EnvironmentKind.VisualStudioCode:
-                    return "vscode";
-                default:
-                    throw new ArgumentException("", nameof(kind));
-            }
-        }
+namespace Snippetica;
 
-        public static string GetTitle(this EnvironmentKind kind)
+public static class EnvironmentKindExtensions
+{
+    public static string GetIdentifier(this EnvironmentKind kind)
+    {
+        switch (kind)
         {
-            switch (kind)
-            {
-                case EnvironmentKind.VisualStudio:
-                    return "Visual Studio";
-                case EnvironmentKind.VisualStudioCode:
-                    return "Visual Studio Code";
-                default:
-                    throw new ArgumentException("", nameof(kind));
-            }
+            case EnvironmentKind.VisualStudio:
+                return "vs";
+            case EnvironmentKind.VisualStudioCode:
+                return "vscode";
+            default:
+                throw new ArgumentException("", nameof(kind));
+        }
+    }
+
+    public static string GetTitle(this EnvironmentKind kind)
+    {
+        switch (kind)
+        {
+            case EnvironmentKind.VisualStudio:
+                return "Visual Studio";
+            case EnvironmentKind.VisualStudioCode:
+                return "Visual Studio Code";
+            default:
+                throw new ArgumentException("", nameof(kind));
         }
     }
 }

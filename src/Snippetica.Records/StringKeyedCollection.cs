@@ -2,27 +2,26 @@
 
 using System.Collections.Generic;
 
-namespace Snippetica.Records
+namespace Snippetica.Records;
+
+internal class StringKeyedCollection<TValue> : ExtendedKeyedCollection<string, TValue> where TValue : IKey<string>
 {
-    internal class StringKeyedCollection<TValue> : ExtendedKeyedCollection<string, TValue> where TValue : IKey<string>
+    public StringKeyedCollection()
     {
-        public StringKeyedCollection()
-        {
-        }
+    }
 
-        public StringKeyedCollection(IList<TValue> list)
-            : base(list)
-        {
-        }
+    public StringKeyedCollection(IList<TValue> list)
+        : base(list)
+    {
+    }
 
-        public StringKeyedCollection(IEqualityComparer<string> comparer)
-            : base(comparer)
-        {
-        }
+    public StringKeyedCollection(IEqualityComparer<string> comparer)
+        : base(comparer)
+    {
+    }
 
-        public StringKeyedCollection(IList<TValue> list, IEqualityComparer<string> comparer)
-            : base(list, comparer)
-        {
-        }
+    public StringKeyedCollection(IList<TValue> list, IEqualityComparer<string> comparer)
+        : base(list, comparer)
+    {
     }
 }

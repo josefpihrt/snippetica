@@ -2,37 +2,36 @@
 
 using System;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public static class ShortcutKindExtensions
 {
-    public static class ShortcutKindExtensions
+    public static string GetTitle(this ShortcutKind kind)
     {
-        public static string GetTitle(this ShortcutKind kind)
+        switch (kind)
         {
-            switch (kind)
-            {
-                case ShortcutKind.None:
-                    return "";
-                case ShortcutKind.MemberDeclaration:
-                    return "Member Declaration";
-                case ShortcutKind.DeclarationDefinition:
-                    return "Declaration/Definition";
-                case ShortcutKind.Modifier:
-                    return "Modifer";
-                case ShortcutKind.Specifier:
-                    return "Specifier";
-                case ShortcutKind.Statement:
-                    return "Statement";
-                case ShortcutKind.Operator:
-                    return "Operator";
-                case ShortcutKind.Keyword:
-                    return "Keyword";
-                case ShortcutKind.Type:
-                    return "Type";
-                case ShortcutKind.Other:
-                    return "Other";
-                default:
-                    throw new ArgumentException("", nameof(kind));
-            }
+            case ShortcutKind.None:
+                return "";
+            case ShortcutKind.MemberDeclaration:
+                return "Member Declaration";
+            case ShortcutKind.DeclarationDefinition:
+                return "Declaration/Definition";
+            case ShortcutKind.Modifier:
+                return "Modifer";
+            case ShortcutKind.Specifier:
+                return "Specifier";
+            case ShortcutKind.Statement:
+                return "Statement";
+            case ShortcutKind.Operator:
+                return "Operator";
+            case ShortcutKind.Keyword:
+                return "Keyword";
+            case ShortcutKind.Type:
+                return "Type";
+            case ShortcutKind.Other:
+                return "Other";
+            default:
+                throw new ArgumentException("", nameof(kind));
         }
     }
 }

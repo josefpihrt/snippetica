@@ -8,192 +8,191 @@ using System.Linq;
 using System.Text;
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public abstract class SnippetEnvironment
 {
-    public abstract class SnippetEnvironment
+    public abstract EnvironmentKind Kind { get; }
+
+    public List<ShortcutInfo> Shortcuts { get; } = new();
+
+    public IEnumerable<SnippetGeneratorResult> GenerateSnippets(IEnumerable<SnippetDirectory> directories)
     {
-        public abstract EnvironmentKind Kind { get; }
-
-        public List<ShortcutInfo> Shortcuts { get; } = new();
-
-        public IEnumerable<SnippetGeneratorResult> GenerateSnippets(IEnumerable<SnippetDirectory> directories)
+        foreach (SnippetDirectory directory in directories)
         {
-            foreach (SnippetDirectory directory in directories)
-            {
-                foreach (SnippetGeneratorResult result in GenerateSnippets(directory))
-                    yield return result;
-            }
+            foreach (SnippetGeneratorResult result in GenerateSnippets(directory))
+                yield return result;
         }
+    }
 
-        public IEnumerable<SnippetGeneratorResult> GenerateSnippets(SnippetDirectory directory)
-        {
-            if (!ShouldGenerateSnippets(directory))
-                yield break;
+    public IEnumerable<SnippetGeneratorResult> GenerateSnippets(SnippetDirectory directory)
+    {
+        if (!ShouldGenerateSnippets(directory))
+            yield break;
 
-            yield return new SnippetGeneratorResult(
-                GenerateSnippetsCore(directory),
-                directory.Name,
-                directory.Language,
-                isDevelopment: false,
-                tags: directory.Tags.ToArray());
+        yield return new SnippetGeneratorResult(
+            GenerateSnippetsCore(directory),
+            directory.Name,
+            directory.Language,
+            isDevelopment: false,
+            tags: directory.Tags.ToArray());
 
-            string devPath = Path.Combine(directory.Path, KnownNames.Dev);
+        string devPath = Path.Combine(directory.Path, KnownNames.Dev);
 
-            if (!Directory.Exists(devPath))
-                yield break;
+        if (!Directory.Exists(devPath))
+            yield break;
 
-            SnippetDirectory devDirectory = directory.WithPath(devPath);
+        SnippetDirectory devDirectory = directory.WithPath(devPath);
 
-            yield return new SnippetGeneratorResult(
-                GenerateSnippetsCore(devDirectory, isDevelopment: true),
-                name: directory.Path + KnownNames.DevSuffix,
-                language: directory.Language,
-                isDevelopment: true,
-                tags: directory.Tags.ToArray());
-        }
+        yield return new SnippetGeneratorResult(
+            GenerateSnippetsCore(devDirectory, isDevelopment: true),
+            name: directory.Path + KnownNames.DevSuffix,
+            language: directory.Language,
+            isDevelopment: true,
+            tags: directory.Tags.ToArray());
+    }
 
-        private List<Snippet> GenerateSnippetsCore(SnippetDirectory directory, bool isDevelopment = false)
-        {
-            var snippets = new List<Snippet>();
+    private List<Snippet> GenerateSnippetsCore(SnippetDirectory directory, bool isDevelopment = false)
+    {
+        var snippets = new List<Snippet>();
 
-            snippets.AddRange(EnumerateSnippets(directory.Path));
+        snippets.AddRange(EnumerateSnippets(directory.Path));
 
 #if DEBUG
-            foreach (Snippet snippet in snippets)
+        foreach (Snippet snippet in snippets)
+        {
+            foreach (string keyword in snippet.Keywords)
             {
-                foreach (string keyword in snippet.Keywords)
+                if (keyword.StartsWith(KnownTags.MetaPrefix + KnownTags.GeneratePrefix, StringComparison.OrdinalIgnoreCase))
                 {
-                    if (keyword.StartsWith(KnownTags.MetaPrefix + KnownTags.GeneratePrefix, StringComparison.OrdinalIgnoreCase))
-                    {
-                        Debug.Fail(keyword + "\r\n" + snippet.FilePath);
-                        break;
-                    }
+                    Debug.Fail(keyword + "\r\n" + snippet.FilePath);
+                    break;
                 }
             }
+        }
 #endif
 
-            snippets.AddRange(SnippetGenerator.GenerateAlternativeShortcuts(snippets));
+        snippets.AddRange(SnippetGenerator.GenerateAlternativeShortcuts(snippets));
 
-            if (!isDevelopment
-                && directory.HasTag(KnownTags.GenerateXmlSnippets))
+        if (!isDevelopment
+            && directory.HasTag(KnownTags.GenerateXmlSnippets))
+        {
+            switch (directory.Language)
             {
-                switch (directory.Language)
-                {
-                    case Language.Xml:
-                    case Language.Xaml:
-                    case Language.Html:
-                    case Language.Markdown:
-                        {
-                            snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(directory.Language));
-                            break;
-                        }
-                }
-            }
-
-            KeywordDefinitionCollection keywords = LanguageDefinition.GetKeywords(directory.Language);
-
-            if (keywords != null)
-            {
-                foreach (KeywordDefinition keyword in keywords)
-                {
-                    if (keyword.IsDevelopment == isDevelopment)
+                case Language.Xml:
+                case Language.Xaml:
+                case Language.Html:
+                case Language.Markdown:
                     {
-                        Snippet snippet = keyword.ToSnippet();
-                        snippet.Language = directory.Language;
-                        snippets.Add(snippet);
+                        snippets.AddRange(XmlSnippetGenerator.GenerateSnippets(directory.Language));
+                        break;
                     }
-                }
             }
-
-            string autoGenerationPath = Path.Combine(directory.Path, KnownNames.AutoGeneration);
-
-            if (Directory.Exists(autoGenerationPath))
-            {
-                SnippetDirectory autoGenerationDirectory = directory.WithPath(autoGenerationPath);
-
-                SnippetGenerator generator = CreateSnippetGenerator(autoGenerationDirectory);
-
-                snippets.AddRange(generator.GenerateSnippets(autoGenerationDirectory.Path));
-            }
-
-            return snippets;
         }
 
-        private static IEnumerable<Snippet> EnumerateSnippets(string directoryPath)
+        KeywordDefinitionCollection keywords = LanguageDefinition.GetKeywords(directory.Language);
+
+        if (keywords is not null)
         {
-            foreach (string path in Directory.EnumerateDirectories(directoryPath, "*", SearchOption.TopDirectoryOnly))
+            foreach (KeywordDefinition keyword in keywords)
             {
-                string name = Path.GetFileName(path);
-
-                if (name == KnownNames.Dev)
-                    continue;
-
-                if (name == KnownNames.AutoGeneration)
-                    continue;
-
-                foreach (Snippet snippet in SnippetSerializer.Deserialize(path, SearchOption.AllDirectories))
+                if (keyword.IsDevelopment == isDevelopment)
                 {
-                    yield return snippet;
-                }
-            }
-
-            foreach (string filePath in Directory.EnumerateFiles(directoryPath, SnippetFileSearcher.Pattern, SearchOption.TopDirectoryOnly))
-            {
-                foreach (Snippet snippet in SnippetSerializer.DeserializeFile(filePath).Snippets)
-                {
-                    yield return snippet;
+                    Snippet snippet = keyword.ToSnippet();
+                    snippet.Language = directory.Language;
+                    snippets.Add(snippet);
                 }
             }
         }
 
-        protected virtual bool ShouldGenerateSnippets(SnippetDirectory directory)
+        string autoGenerationPath = Path.Combine(directory.Path, KnownNames.AutoGeneration);
+
+        if (Directory.Exists(autoGenerationPath))
         {
-            return IsSupportedLanguage(directory.Language);
+            SnippetDirectory autoGenerationDirectory = directory.WithPath(autoGenerationPath);
+
+            SnippetGenerator generator = CreateSnippetGenerator(autoGenerationDirectory);
+
+            snippets.AddRange(generator.GenerateSnippets(autoGenerationDirectory.Path));
         }
 
-        public virtual DirectoryReadmeSettings CreateDirectoryReadmeSettings(SnippetGeneratorResult result)
-        {
-            var settings = new DirectoryReadmeSettings()
-            {
-                Environment = this,
-                IsDevelopment = result.IsDevelopment,
-                Header = result.DirectoryName,
-                AddLinkToTitle = true,
-                AddQuickReference = !result.IsDevelopment && !result.HasTag(KnownTags.NoQuickReference),
-                Language = result.Language,
-                DirectoryPath = result.Path,
-                GroupShortcuts = true
-            };
-
-            if (!settings.IsDevelopment)
-            {
-                //TODO: ?
-                string filePath = $@"..\..\..\..\..\text\{result.DirectoryName}.md";
-
-                if (File.Exists(filePath))
-                    settings.QuickReferenceText = File.ReadAllText(filePath, Encoding.UTF8);
-
-                settings.Shortcuts.AddRange(Shortcuts);
-            }
-
-            return settings;
-        }
-
-        public virtual ProjectReadmeSettings CreateProjectReadmeSettings()
-        {
-            return new ProjectReadmeSettings()
-            {
-                Environment = this,
-                Header = $"{KnownNames.ProductName} for {Kind.GetTitle()}"
-            };
-        }
-
-        protected abstract SnippetGenerator CreateSnippetGenerator(SnippetDirectory directory);
-
-        public abstract PackageGenerator CreatePackageGenerator();
-
-        public abstract bool IsSupportedLanguage(Language language);
-
-        public abstract string GetVersion(Language language);
+        return snippets;
     }
+
+    private static IEnumerable<Snippet> EnumerateSnippets(string directoryPath)
+    {
+        foreach (string path in Directory.EnumerateDirectories(directoryPath, "*", SearchOption.TopDirectoryOnly))
+        {
+            string name = Path.GetFileName(path);
+
+            if (name == KnownNames.Dev)
+                continue;
+
+            if (name == KnownNames.AutoGeneration)
+                continue;
+
+            foreach (Snippet snippet in SnippetSerializer.Deserialize(path, SearchOption.AllDirectories))
+            {
+                yield return snippet;
+            }
+        }
+
+        foreach (string filePath in Directory.EnumerateFiles(directoryPath, SnippetFileSearcher.Pattern, SearchOption.TopDirectoryOnly))
+        {
+            foreach (Snippet snippet in SnippetSerializer.DeserializeFile(filePath).Snippets)
+            {
+                yield return snippet;
+            }
+        }
+    }
+
+    protected virtual bool ShouldGenerateSnippets(SnippetDirectory directory)
+    {
+        return IsSupportedLanguage(directory.Language);
+    }
+
+    public virtual DirectoryReadmeSettings CreateDirectoryReadmeSettings(SnippetGeneratorResult result)
+    {
+        var settings = new DirectoryReadmeSettings()
+        {
+            Environment = this,
+            IsDevelopment = result.IsDevelopment,
+            Header = result.DirectoryName,
+            AddLinkToTitle = true,
+            AddQuickReference = !result.IsDevelopment && !result.HasTag(KnownTags.NoQuickReference),
+            Language = result.Language,
+            DirectoryPath = result.Path,
+            GroupShortcuts = true
+        };
+
+        if (!settings.IsDevelopment)
+        {
+            //TODO: ?
+            string filePath = $@"..\..\..\..\..\text\{result.DirectoryName}.md";
+
+            if (File.Exists(filePath))
+                settings.QuickReferenceText = File.ReadAllText(filePath, Encoding.UTF8);
+
+            settings.Shortcuts.AddRange(Shortcuts);
+        }
+
+        return settings;
+    }
+
+    public virtual ProjectReadmeSettings CreateProjectReadmeSettings()
+    {
+        return new ProjectReadmeSettings()
+        {
+            Environment = this,
+            Header = $"{KnownNames.ProductName} for {Kind.GetTitle()}"
+        };
+    }
+
+    protected abstract SnippetGenerator CreateSnippetGenerator(SnippetDirectory directory);
+
+    public abstract PackageGenerator CreatePackageGenerator();
+
+    public abstract bool IsSupportedLanguage(Language language);
+
+    public abstract string GetVersion(Language language);
 }

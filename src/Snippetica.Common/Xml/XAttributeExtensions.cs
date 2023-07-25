@@ -2,13 +2,12 @@
 
 using System.Xml.Linq;
 
-namespace Snippetica.Xml
+namespace Snippetica.Xml;
+
+public static class XAttributeExtensions
 {
-    public static class XAttributeExtensions
+    public static string LocalName(this XAttribute attribute)
     {
-        public static string LocalName(this XAttribute attribute)
-        {
-            return attribute.Name.LocalName;
-        }
+        return attribute.Name.LocalName;
     }
 }

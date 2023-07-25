@@ -6,30 +6,29 @@ using Pihrtsoft.Snippets;
 using Snippetica.IO;
 using static Snippetica.KnownNames;
 
-namespace Snippetica.CodeGeneration.Markdown
-{
-    public static class MarkdownFileWriter
-    {
-        public static void WriteProjectReadme(
-            string directoryPath,
-            IEnumerable<SnippetGeneratorResult> results,
-            ProjectReadmeSettings settings)
-        {
-            IOUtility.WriteAllText(
-                Path.Combine(directoryPath, ReadMeFileName),
-                MarkdownGenerator.GenerateProjectReadme(results, settings),
-                IOUtility.UTF8NoBom);
-        }
+namespace Snippetica.CodeGeneration.Markdown;
 
-        public static void WriteDirectoryReadme(
-            string directoryPath,
-            List<Snippet> snippets,
-            DirectoryReadmeSettings settings)
-        {
-            IOUtility.WriteAllText(
-                Path.Combine(directoryPath, ReadMeFileName),
-                MarkdownGenerator.GenerateDirectoryReadme(snippets, settings),
-                IOUtility.UTF8NoBom);
-        }
+public static class MarkdownFileWriter
+{
+    public static void WriteProjectReadme(
+        string directoryPath,
+        IEnumerable<SnippetGeneratorResult> results,
+        ProjectReadmeSettings settings)
+    {
+        IOUtility.WriteAllText(
+            Path.Combine(directoryPath, ReadMeFileName),
+            MarkdownGenerator.GenerateProjectReadme(results, settings),
+            IOUtility.UTF8NoBom);
+    }
+
+    public static void WriteDirectoryReadme(
+        string directoryPath,
+        List<Snippet> snippets,
+        DirectoryReadmeSettings settings)
+    {
+        IOUtility.WriteAllText(
+            Path.Combine(directoryPath, ReadMeFileName),
+            MarkdownGenerator.GenerateDirectoryReadme(snippets, settings),
+            IOUtility.UTF8NoBom);
     }
 }

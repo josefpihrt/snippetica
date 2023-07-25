@@ -4,104 +4,103 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace Snippetica.Records
+namespace Snippetica.Records;
+
+[DebuggerDisplay("{DebuggerDisplay,nq}")]
+internal struct Operation
 {
-    [DebuggerDisplay("{DebuggerDisplay,nq}")]
-    internal struct Operation
+    public Operation(PropertyDefinition propertyDefinition, string value, int depth, OperationKind kind)
     {
-        public Operation(PropertyDefinition propertyDefinition, string value, int depth, OperationKind kind)
+        PropertyDefinition = propertyDefinition;
+        Value = value;
+        Depth = depth;
+        Kind = kind;
+    }
+
+    public PropertyDefinition PropertyDefinition { get; }
+
+    public string Value { get; }
+
+    public int Depth { get; }
+
+    public OperationKind Kind { get; }
+
+    public string PropertyName => PropertyDefinition.Name;
+
+    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+    private string DebuggerDisplay
+    {
+        get { return $"{Kind} {PropertyName} = {Value}"; }
+    }
+
+    public void Execute(Record record)
+    {
+        Debug.Assert(Kind == OperationKind.With || Kind == OperationKind.Without, Kind.ToString());
+
+        if (Kind == OperationKind.With)
         {
-            PropertyDefinition = propertyDefinition;
-            Value = value;
-            Depth = depth;
-            Kind = kind;
-        }
-
-        public PropertyDefinition PropertyDefinition { get; }
-
-        public string Value { get; }
-
-        public int Depth { get; }
-
-        public OperationKind Kind { get; }
-
-        public string PropertyName => PropertyDefinition.Name;
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private string DebuggerDisplay
-        {
-            get { return $"{Kind} {PropertyName} = {Value}"; }
-        }
-
-        public void Execute(Record record)
-        {
-            Debug.Assert(Kind == OperationKind.With || Kind == OperationKind.Without, Kind.ToString());
-
-            if (Kind == OperationKind.With)
+            if (!PropertyDefinition.IsCollection)
             {
-                if (!PropertyDefinition.IsCollection)
-                {
-                    record[PropertyName] = Value;
-                    return;
-                }
+                record[PropertyName] = Value;
+                return;
+            }
 
-                char[] separators = PropertyDefinition.SeparatorsArray;
+            char[] separators = PropertyDefinition.SeparatorsArray;
 
-                if (PropertyDefinition == PropertyDefinition.Tags)
-                {
-                    if (separators.Length > 0)
-                    {
-                        foreach (string value2 in Value.Split(separators, StringSplitOptions.RemoveEmptyEntries))
-                            record.Tags.Add(value2);
-                    }
-                    else
-                    {
-                        record.Tags.Add(Value);
-                    }
-
-                    return;
-                }
-
-                List<object> items = record.GetOrAddCollection(PropertyName);
-
+            if (PropertyDefinition == PropertyDefinition.Tags)
+            {
                 if (separators.Length > 0)
                 {
-                    items.AddRange(Value.Split(separators, StringSplitOptions.RemoveEmptyEntries));
+                    foreach (string value2 in Value.Split(separators, StringSplitOptions.RemoveEmptyEntries))
+                        record.Tags.Add(value2);
                 }
                 else
                 {
-                    items.Add(Value);
+                    record.Tags.Add(Value);
+                }
+
+                return;
+            }
+
+            List<object> items = record.GetOrAddCollection(PropertyName);
+
+            if (separators.Length > 0)
+            {
+                items.AddRange(Value.Split(separators, StringSplitOptions.RemoveEmptyEntries));
+            }
+            else
+            {
+                items.Add(Value);
+            }
+        }
+        else if (Kind == OperationKind.Without)
+        {
+            Debug.Assert(PropertyDefinition.IsCollection, "Property should be a collection.");
+
+            char[] separators = PropertyDefinition.SeparatorsArray;
+
+            if (PropertyDefinition == PropertyDefinition.Tags)
+            {
+                if (separators.Length > 0)
+                {
+                    foreach (string value2 in Value.Split(separators, StringSplitOptions.RemoveEmptyEntries))
+                        record.Tags.Remove(value2);
+                }
+                else
+                {
+                    record.Tags.Remove(Value);
                 }
             }
-            else if (Kind == OperationKind.Without)
+            else if (record.TryGetCollection(PropertyName, out List<object> items))
             {
-                Debug.Assert(PropertyDefinition.IsCollection, "Property should be a collection.");
-
-                char[] separators = PropertyDefinition.SeparatorsArray;
-
-                if (PropertyDefinition == PropertyDefinition.Tags)
+                if (separators.Length > 0)
                 {
-                    if (separators.Length > 0)
-                    {
-                        foreach (string value2 in Value.Split(separators, StringSplitOptions.RemoveEmptyEntries))
-                            record.Tags.Remove(value2);
-                    }
-                    else
-                    {
-                        record.Tags.Remove(Value);
-                    }
+                    foreach (string value2 in Value.Split(separators, StringSplitOptions.RemoveEmptyEntries))
+                        items.Remove(value2);
                 }
-                else if (record.TryGetCollection(PropertyName, out List<object> items))
+                else
                 {
-                    if (separators.Length > 0)
-                    {
-                        foreach (string value2 in Value.Split(separators, StringSplitOptions.RemoveEmptyEntries))
-                            items.Remove(value2);
-                    }
-                    else
-                    {
-                        items.Remove(Value);
-                    }
+                    items.Remove(Value);
                 }
             }
         }

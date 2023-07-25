@@ -4,31 +4,30 @@ using System;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace Snippetica.Records.Utilities
+namespace Snippetica.Records.Utilities;
+
+internal static class ThrowHelper
 {
-    internal static class ThrowHelper
+    public static void ThrowOnUnknownElement(XElement element)
     {
-        public static void ThrowOnUnknownElement(XElement element)
+        ThrowInvalidOperation(ErrorMessages.UnknownElement(element), element);
+    }
+
+    public static void ThrowOnMultipleElementsWithEqualName(XElement element)
+    {
+        ThrowInvalidOperation(ErrorMessages.MultipleElementsWithEqualName(element), element);
+    }
+
+    public static void ThrowInvalidOperation(string message, XObject @object = null, Exception innerException = null)
+    {
+        if (@object is not null)
         {
-            ThrowInvalidOperation(ErrorMessages.UnknownElement(element), element);
+            var info = (IXmlLineInfo)@object;
+
+            if (info.HasLineInfo())
+                message += $" Line: {info.LineNumber}, Position: {info.LinePosition}.";
         }
 
-        public static void ThrowOnMultipleElementsWithEqualName(XElement element)
-        {
-            ThrowInvalidOperation(ErrorMessages.MultipleElementsWithEqualName(element), element);
-        }
-
-        public static void ThrowInvalidOperation(string message, XObject @object = null, Exception innerException = null)
-        {
-            if (@object != null)
-            {
-                var info = (IXmlLineInfo)@object;
-
-                if (info.HasLineInfo())
-                    message += $" Line: {info.LineNumber}, Position: {info.LinePosition}.";
-            }
-
-            throw new DocumentException(message, @object, innerException);
-        }
+        throw new DocumentException(message, @object, innerException);
     }
 }

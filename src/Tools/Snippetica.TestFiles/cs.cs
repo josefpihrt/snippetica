@@ -2,12 +2,11 @@
 
 #pragma warning disable CA1822
 
-namespace Snippetica.Test
+namespace Snippetica.Test;
+
+public class ClassName
 {
-    public class ClassName
+    public void MethodName()
     {
-        public void MethodName()
-        {
-        }
     }
 }

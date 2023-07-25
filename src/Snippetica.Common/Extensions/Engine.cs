@@ -3,33 +3,32 @@
 using System;
 using System.Collections.Generic;
 
-namespace Snippetica
+namespace Snippetica;
+
+public static class EnumerableExtensions
 {
-    public static class EnumerableExtensions
+    public static bool CountExceeds<TSource>(this IEnumerable<TSource> collection, int value)
     {
-        public static bool CountExceeds<TSource>(this IEnumerable<TSource> collection, int value)
-        {
-            if (collection == null)
-                throw new ArgumentNullException(nameof(collection));
+        if (collection is null)
+            throw new ArgumentNullException(nameof(collection));
 
-            if (value < 0)
-                throw new ArgumentOutOfRangeException(nameof(value));
+        if (value < 0)
+            throw new ArgumentOutOfRangeException(nameof(value));
 
-            if (value == 0)
-                return false;
-
-            int cnt = 0;
-            using (IEnumerator<TSource> en = collection.GetEnumerator())
-            {
-                while (en.MoveNext())
-                {
-                    cnt++;
-                    if (cnt == value)
-                        return en.MoveNext();
-                }
-            }
-
+        if (value == 0)
             return false;
+
+        int cnt = 0;
+        using (IEnumerator<TSource> en = collection.GetEnumerator())
+        {
+            while (en.MoveNext())
+            {
+                cnt++;
+                if (cnt == value)
+                    return en.MoveNext();
+            }
         }
+
+        return false;
     }
 }
