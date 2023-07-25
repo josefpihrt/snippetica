@@ -30,7 +30,7 @@ namespace Snippetica.CodeGeneration
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancy", "RCS1163:Unused parameter.")]
         private static void Main(string[] args)
         {
-            _shortcuts = Pihrtsoft.Records.Document.ReadRecords(@"..\..\..\Data\Shortcuts.xml")
+            _shortcuts = Records.Document.ReadRecords(@"..\..\..\Data\Shortcuts.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .Select(f => Mapper.MapShortcutInfo(f))
                 .ToArray();
@@ -161,7 +161,7 @@ namespace Snippetica.CodeGeneration
 
         private static SnippetDirectory[] LoadDirectories(string url)
         {
-            return Pihrtsoft.Records.Document.ReadRecords(url)
+            return Records.Document.ReadRecords(url)
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .Select(f => Mapper.MapSnippetDirectory(f))
                 .ToArray();
@@ -169,11 +169,11 @@ namespace Snippetica.CodeGeneration
 
         private static void LoadLanguages()
         {
-            Pihrtsoft.Records.Document.ReadRecords(@"..\..\..\Data\Languages.xml")
+            Records.Document.ReadRecords(@"..\..\..\Data\Languages.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .LoadLanguages();
 
-            foreach (TypeDefinition typeDefinition in Pihrtsoft.Records.Document.ReadRecords(@"..\..\..\Data\Types.xml")
+            foreach (TypeDefinition typeDefinition in Records.Document.ReadRecords(@"..\..\..\Data\Types.xml")
                 .Where(f => !f.HasTag(KnownTags.Disabled))
                 .Select(f => Mapper.MapTypeDefinition(f)))
             {

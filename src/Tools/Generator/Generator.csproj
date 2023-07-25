@@ -18,7 +18,7 @@
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Records\Pihrtsoft.Records\Pihrtsoft.Records.csproj" />
+    <ProjectReference Include="..\..\Snippetica.Records\Snippetica.Records.csproj" />
     <ProjectReference Include="..\..\Snippetica.Common\Snippetica.Common.csproj" />
     <ProjectReference Include="..\..\Snippetica.Validations\Snippetica.Validations.csproj" />
     <ProjectReference Include="..\..\Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj" />

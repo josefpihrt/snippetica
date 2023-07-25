@@ -5,10 +5,6 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Records", "Records", "{B408FEAA-24E9-488C-B384-6602BAE8DB38}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{BA91112D-6AEE-48D3-8C2B-C59AF29C5BF3}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica", "Snippetica\Snippetica.csproj", "{D26EA838-9073-407E-A15A-112731027059}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.Common", "Snippetica.Common\Snippetica.Common.csproj", "{EA986E08-DD26-43EA-94F0-8D2F70D4A17F}"
@@ -21,11 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.Validations", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudio", "Snippetica.VisualStudio\Snippetica.VisualStudio.csproj", "{C6E1B9F3-6AFA-4849-9CE1-E224EBB08AA4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pihrtsoft.Records", "Records\Pihrtsoft.Records\Pihrtsoft.Records.csproj", "{5F21280B-2029-4D27-AEE6-C6E3E8C09C29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.Records", "Snippetica.Records\Snippetica.Records.csproj", "{5F21280B-2029-4D27-AEE6-C6E3E8C09C29}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pihrtsoft.Records.Test", "Records\Pihrtsoft.Records.Test\Pihrtsoft.Records.Test.csproj", "{CE18A42C-A7FD-4B6B-90FE-2F4510B7CB0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.Records.TestConsole", "Tools\Snippetica.Records.TestConsole\Snippetica.Records.TestConsole.csproj", "{CE18A42C-A7FD-4B6B-90FE-2F4510B7CB0E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.Test", "Test\Snippetica.Test\Snippetica.Test.csproj", "{A8ED9945-2D2B-493C-ABB6-E860315EAFFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.TestFiles", "Tools\Snippetica.TestFiles\Snippetica.TestFiles.csproj", "{A8ED9945-2D2B-493C-ABB6-E860315EAFFF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6696AB95-B549-41A6-816A-2E5B772A2E7A}"
 	ProjectSection(SolutionItems) = preProject
@@ -33,7 +29,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\ChangeLog.md = ..\ChangeLog.md
 		Directory.Build.props = Directory.Build.props
 		..\README.md = ..\README.md
-		..\text\RecordsTodo.md = ..\text\RecordsTodo.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudio.Dev", "Snippetica.VisualStudio.Dev\Snippetica.VisualStudio.Dev.csproj", "{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}"
@@ -102,9 +97,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F28D28EC-37E4-4857-B072-91A2D1FF8F60} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
-		{5F21280B-2029-4D27-AEE6-C6E3E8C09C29} = {B408FEAA-24E9-488C-B384-6602BAE8DB38}
-		{CE18A42C-A7FD-4B6B-90FE-2F4510B7CB0E} = {B408FEAA-24E9-488C-B384-6602BAE8DB38}
-		{A8ED9945-2D2B-493C-ABB6-E860315EAFFF} = {BA91112D-6AEE-48D3-8C2B-C59AF29C5BF3}
+		{CE18A42C-A7FD-4B6B-90FE-2F4510B7CB0E} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
+		{A8ED9945-2D2B-493C-ABB6-E860315EAFFF} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F615C44-B8F8-4E88-A201-667DE41F776F}

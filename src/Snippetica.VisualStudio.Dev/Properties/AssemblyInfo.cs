@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Snippetica.VisualStudio.Dev")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Pihrtsoft")]
+[assembly: AssemblyCompany("Josef Pihrt")]
 [assembly: AssemblyProduct("Snippetica.VisualStudio.Dev")]
 [assembly: AssemblyCopyright("Copyright (c) 2015-2017 Josef Pihrt")]
 [assembly: AssemblyTrademark("")]

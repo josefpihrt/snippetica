@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Pihrtsoft.Records;
+using Snippetica.Records;
 
 namespace Snippetica.CodeGeneration
 {
