@@ -59,12 +59,12 @@ jobs:
         working-directory: src/Tools/DocumentationGenerator
       - run: |
           cd tools
-          ls -R
           ./generate_snippets.ps1
         working-directory: "."
       - run: dotnet restore
       - uses: microsoft/setup-msbuild@v1.1
-      - run: msbuild
+      - run: msbuild -m
+      - run: ls Snippetica.VisualStudio/bin/Release -R
       - uses: actions/upload-artifact@v3
         with:
           name: vs_extension
@@ -108,7 +108,6 @@ jobs:
         working-directory: src/Tools/SnippetGenerator
       - run: |
           cd tools
-          ls -R
           ./generate_snippets.ps1
         working-directory: "."
         shell: pwsh
