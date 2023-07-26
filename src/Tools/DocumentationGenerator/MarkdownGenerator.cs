@@ -2,17 +2,12 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 using DotMarkdown;
 using DotMarkdown.Docusaurus;
 using DotMarkdown.Linq;
 using Pihrtsoft.Snippets;
 using static DotMarkdown.Linq.MFactory;
-using static Snippetica.CodeGeneration.CodeGenerationUtility;
-using static Snippetica.KnownNames;
-using static Snippetica.KnownPaths;
 
 namespace Snippetica.CodeGeneration.Markdown;
 

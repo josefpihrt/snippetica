@@ -479,6 +479,9 @@
     <Content Include="Snippetica.CSharp\While.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Snippetica.CSharp\WhileNot.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Snippetica.CSharp\WhileNotNull.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -2133,6 +2136,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\WhileIsNotNothing.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippetica.VisualBasic\WhileNot.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Snippetica.VisualBasic\ArrayOfThisVariable.snippet">

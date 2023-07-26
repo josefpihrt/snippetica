@@ -11,7 +11,6 @@ using Snippetica.CodeGeneration.VisualStudio;
 using Snippetica.CodeGeneration.VisualStudioCode;
 using Snippetica.IO;
 using static Snippetica.KnownNames;
-using static Snippetica.KnownPaths;
 
 namespace Snippetica.CodeGeneration.SnippetGenerator;
 
@@ -30,6 +29,9 @@ internal static class Program
         string sourcePath = args[0];
         string dataDirectoryPath = args[1];
 
+        sourcePath = Path.GetFullPath(sourcePath);
+        dataDirectoryPath = Path.GetFullPath(dataDirectoryPath);
+
         ShortcutInfo[] shortcuts = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Shortcuts.xml"))
             .Where(f => !f.HasTag(KnownTags.Disabled))
             .Select(f => Mapper.MapShortcutInfo(f))
@@ -44,9 +46,9 @@ internal static class Program
 
         SaveChangedSnippets(directories);
 
-        GenerateSnippets(new VisualStudioEnvironment(), directories, languageDefinitions, VisualStudioExtensionProjectPath);
+        GenerateSnippets(new VisualStudioEnvironment(), directories, languageDefinitions, Path.Combine(sourcePath, "Snippetica.VisualStudio"));
 
-        GenerateSnippets(new VisualStudioCodeEnvironment(), directories, languageDefinitions, VisualStudioCodeExtensionProjectPath);
+        GenerateSnippets(new VisualStudioCodeEnvironment(), directories, languageDefinitions, Path.Combine(sourcePath, "Snippetica.VisualStudioCode"));
 
         Console.WriteLine("DONE");
     }

@@ -10,8 +10,6 @@ using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Json;
 using Snippetica.CodeGeneration.Json.Package;
 using Snippetica.IO;
-using static Snippetica.KnownNames;
-using static Snippetica.KnownPaths;
 using static DotMarkdown.Linq.MFactory;
 
 namespace Snippetica.CodeGeneration.VisualStudioCode;
@@ -143,8 +141,6 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
 
     protected override void SaveSnippets(SnippetGeneratorResult result)
     {
-        base.SaveSnippets(result);
-
         Language language = result.Language;
         string languageId = result.Language.GetIdentifier();
         string directoryPath = result.Path;
@@ -160,7 +156,7 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
         info.Name += "-" + languageId;
         info.DisplayName += " for " + language.GetTitle();
         info.Description += language.GetTitle() + ".";
-        info.Homepage += $"/{Path.GetFileName(directoryPath)}/README.md";
+        info.Homepage += $"/{result.Language.GetIdentifier()}";
         info.Keywords.AddRange(language.GetKeywords());
         info.Snippets.Add(new SnippetInfo() { Language = languageId, Path = $"./snippets/{languageId}.json" });
 
@@ -184,13 +180,13 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
             Icon = "images/icon.png",
             Author = "Josef Pihrt",
             License = "Apache-2.0",
-            Homepage = $"{SourceGitHubUrl}/{VisualStudioCodeExtensionProjectName}",
+            Homepage = "https://github.com/josefpihrt.github.io/docs/snippetica/vscode",
             Repository = new RepositoryInfo()
             {
                 Type = "git",
-                Url = $"{GitHubUrl}.git"
+                Url = "https://github.com/josefpihrt/snippetica.git"
             },
-            Bugs = new BugInfo() { Url = $"{GitHubUrl}/issues" },
+            Bugs = new BugInfo() { Url = $"http://github.com/josefpihrt/snippetica/issues" },
             EngineVersion = "^1.0.0"
         };
 
