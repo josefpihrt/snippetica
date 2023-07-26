@@ -77,6 +77,7 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       Version: ${{ needs.pre_build.outputs.version }}
+      DefineConstants: VSCODE
     strategy:
       matrix:
         component:
@@ -102,7 +103,7 @@ jobs:
       - run: |
           dotnet restore
           dotnet build --no-restore
-        working-directory: src/Tools/SnippetGenerator /p:DefineConstants=VSCODE
+        working-directory: src/Tools/SnippetGenerator
       - run: |
           ./generate_snippets.ps1
         working-directory: tools
