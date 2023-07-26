@@ -146,6 +146,9 @@ public abstract class SnippetEnvironment
 
     private static IEnumerable<Snippet> EnumerateSnippets(string directoryPath)
     {
+        if (!Directory.Exists(directoryPath))
+            yield break;
+
         foreach (string path in Directory.EnumerateDirectories(directoryPath, "*", SearchOption.TopDirectoryOnly))
         {
             string name = Path.GetFileName(path);
