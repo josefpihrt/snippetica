@@ -36,14 +36,4 @@ public static class CodeGenerationUtility
 
         return string.Concat(titles);
     }
-
-    public static string GetSnippetBrowserUrl(EnvironmentKind environmentKind, Language language = Language.None)
-    {
-        string s = $"?engine={environmentKind.GetIdentifier()}";
-
-        if (language != Language.None)
-            s += $"&language={language.GetIdentifier()}";
-
-        return KnownPaths.SnippetBrowserUrl + s;
-    }
 }

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Document Version="0.0.1">
+  <Entities>
+    <Entity Name="Directory">
+      <Declarations>
+        <Property Name="Path" IsRequired="true" />
+        <Property Name="Language" IsRequired="true" />
+      </Declarations>
+      <Records>
+        <Prefix Path="..\..\..\..\..\Snippetica\Snippetica">
+          <With Language="C#">
+            <New Path=".CSharp" />
+          </With>
+          <With Language="VB">
+            <New Path=".VisualBasic" />
+          </With>
+          <With Language="Cpp">
+            <New Path=".Cpp" />
+          </With>
+          <With Language="Html">
+            <New Path=".Html" Tags="GenerateXmlSnippets" />
+          </With>
+          <With Language="Xaml">
+            <New Path=".Xaml" Tags="GenerateXmlSnippets,ExcludeFromVisualStudioCode" />
+          </With>
+          <With Language="Xml">
+            <New Path=".Xml" Tags="GenerateXmlSnippets" />
+            <New Path=".Xml.CodeSnippet" Tags="NoQuickReference,ExcludeFromVisualStudioCode,ExcludeFromDocs" />
+          </With>
+          <With Language="Markdown">
+            <New Path=".Markdown" Tags="GenerateXmlSnippets,ExcludeFromVisualStudio,ExcludeFromDocs" />
+          </With>
+          <With Language="Json">
+            <New Path=".Json" Tags="ExcludeFromVisualStudio,ExcludeFromDocs" />
+          </With>
+        </Prefix>
+      </Records>
+    </Entity>
+  </Entities>
+</Document>

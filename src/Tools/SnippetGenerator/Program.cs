@@ -5,19 +5,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using DotMarkdown;
-using DotMarkdown.Linq;
 using Pihrtsoft.Snippets;
 using Pihrtsoft.Snippets.Comparers;
-using Snippetica.CodeGeneration.Markdown;
 using Snippetica.CodeGeneration.VisualStudio;
 using Snippetica.CodeGeneration.VisualStudioCode;
 using Snippetica.IO;
-using static DotMarkdown.Linq.MFactory;
 using static Snippetica.KnownNames;
 using static Snippetica.KnownPaths;
 
-namespace Snippetica.CodeGeneration;
+namespace Snippetica.CodeGeneration.SnippetGenerator;
 
 internal static class Program
 {
@@ -27,8 +23,7 @@ internal static class Program
 
     private static readonly Regex _regexReplaceSpacesWithTabs = new(@"(?<=^(\ {4})*)(?<x>\ {4})(?=(\ {4})*\S)", RegexOptions.Multiline);
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancy", "RCS1163:Unused parameter.")]
-    private static void Main(string[] args)
+    private static void Main()
     {
         _shortcuts = Records.Document.ReadRecords(@"..\..\..\Data\Shortcuts.xml")
             .Where(f => !f.HasTag(KnownTags.Disabled))
@@ -45,57 +40,30 @@ internal static class Program
 
         var visualStudio = new VisualStudioEnvironment();
 
-        (List<SnippetGeneratorResult> visualStudioResults, List<Snippet> visualStudioSnippets) = GenerateSnippets(
+        List<SnippetGeneratorResult> visualStudioResults = GenerateSnippets(
             visualStudio,
             directories,
             VisualStudioExtensionProjectPath);
 
         var visualStudioCode = new VisualStudioCodeEnvironment();
 
-        (List<SnippetGeneratorResult> visualStudioCodeResults, List<Snippet> visualStudioCodeSnippets) = GenerateSnippets(
+        List<SnippetGeneratorResult> visualStudioCodeResults = GenerateSnippets(
             visualStudioCode,
             directories,
             VisualStudioCodeExtensionProjectPath);
 
-        CheckDuplicateShortcuts(visualStudioSnippets, visualStudio);
-        CheckDuplicateShortcuts(visualStudioCodeSnippets, visualStudioCode);
-
-        IEnumerable<Language> languages = visualStudioResults
-            .Concat(visualStudioCodeResults)
-            .Select(f => f.Language)
-            .Distinct();
-
-        var document = new MDocument(
-            Heading1(ProductName),
-            BulletList(
-                CodeGenerationUtility.GetProjectSubtitle(languages),
-                BulletItem(Link("Release Notes", $"{MainGitHubUrl}/{ChangeLogFileName}"), ".")));
-
-#if !DEBUG
-        MarkdownGenerator.GenerateProjectReadme(visualStudioResults, document, visualStudio.CreateProjectReadmeSettings(), addFootnote: false);
-
-        MarkdownGenerator.GenerateProjectReadme(visualStudioCodeResults, document, visualStudioCode.CreateProjectReadmeSettings());
-
-        IOUtility.WriteAllText(Path.Combine(SolutionDirectoryPath, ReadMeFileName), document.ToString(MarkdownFormat.Default.WithTableOptions(TableOptions.FormatHeader)), IOUtility.UTF8NoBom);
-#endif
-
-        Console.WriteLine("*** END ***");
-        Console.ReadKey();
+        Console.WriteLine("DONE");
     }
 
-    private static (List<SnippetGeneratorResult> results, List<Snippet> snippets) GenerateSnippets(
+    private static List<SnippetGeneratorResult> GenerateSnippets(
         SnippetEnvironment environment,
         SnippetDirectory[] directories,
         string projectPath)
     {
-        environment.Shortcuts.AddRange(_shortcuts.Where(f => f.Environments.Contains(environment.Kind)));
-
-        PackageGenerator generator = environment.CreatePackageGenerator();
-
         var results = new List<SnippetGeneratorResult>();
         var devResults = new List<SnippetGeneratorResult>();
 
-        foreach (SnippetGeneratorResult result in environment.GenerateSnippets(directories))
+        foreach (SnippetGeneratorResult result in environment.GenerateSnippets(directories, includeDevelopment: true))
         {
             if (result.IsDevelopment)
             {
@@ -109,15 +77,12 @@ internal static class Program
 
         var snippets = new List<Snippet>();
 
-        snippets.AddRange(generator.GeneratePackageFiles(projectPath, results));
+        snippets.AddRange(environment.GeneratePackageFiles(projectPath, results));
+        snippets.AddRange(environment.GeneratePackageFiles(projectPath + DevSuffix, devResults));
 
-        snippets.AddRange(generator.GeneratePackageFiles(projectPath + DevSuffix, devResults));
+        CheckDuplicateShortcuts(snippets, environment);
 
-#if !DEBUG
-        MarkdownFileWriter.WriteProjectReadme(projectPath, results, environment.CreateProjectReadmeSettings());
-#endif
-
-        return (results, snippets);
+        return results;
     }
 
     private static void CheckDuplicateShortcuts(IEnumerable<Snippet> snippets, SnippetEnvironment environment)

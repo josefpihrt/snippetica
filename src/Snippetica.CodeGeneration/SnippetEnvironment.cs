@@ -7,6 +7,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using Pihrtsoft.Snippets;
+using Snippetica.IO;
+using Snippetica.Validations;
 
 namespace Snippetica.CodeGeneration;
 
@@ -16,40 +18,45 @@ public abstract class SnippetEnvironment
 
     public List<ShortcutInfo> Shortcuts { get; } = new();
 
-    public IEnumerable<SnippetGeneratorResult> GenerateSnippets(IEnumerable<SnippetDirectory> directories)
+    public IEnumerable<SnippetGeneratorResult> GenerateSnippets(IEnumerable<SnippetDirectory> directories, bool includeDevelopment)
     {
-        foreach (SnippetDirectory directory in directories)
-        {
-            foreach (SnippetGeneratorResult result in GenerateSnippets(directory))
-                yield return result;
-        }
+        return directories.SelectMany(directory => GenerateSnippets(directory, includeDevelopment));
     }
 
-    public IEnumerable<SnippetGeneratorResult> GenerateSnippets(SnippetDirectory directory)
+    private IEnumerable<SnippetGeneratorResult> GenerateSnippets(SnippetDirectory directory, bool includeDevelopment)
     {
         if (!ShouldGenerateSnippets(directory))
             yield break;
 
         yield return new SnippetGeneratorResult(
             GenerateSnippetsCore(directory),
+            this,
             directory.Name,
             directory.Language,
             isDevelopment: false,
             tags: directory.Tags.ToArray());
 
-        string devPath = Path.Combine(directory.Path, KnownNames.Dev);
+        if (includeDevelopment)
+        {
+            string devPath = Path.Combine(directory.Path, KnownNames.Dev);
 
-        if (!Directory.Exists(devPath))
-            yield break;
+            if (!Directory.Exists(devPath))
+                yield break;
 
-        SnippetDirectory devDirectory = directory.WithPath(devPath);
+            SnippetDirectory devDirectory = directory.WithPath(devPath);
 
-        yield return new SnippetGeneratorResult(
-            GenerateSnippetsCore(devDirectory, isDevelopment: true),
-            name: directory.Path + KnownNames.DevSuffix,
-            language: directory.Language,
-            isDevelopment: true,
-            tags: directory.Tags.ToArray());
+            List<Snippet> snippets = GenerateSnippetsCore(devDirectory, isDevelopment: true);
+
+            snippets = PostProcess(snippets).ToList();
+
+            yield return new SnippetGeneratorResult(
+                snippets,
+                this,
+                name: directory.Path + KnownNames.DevSuffix,
+                language: directory.Language,
+                isDevelopment: true,
+                tags: directory.Tags.ToArray());
+        }
     }
 
     private List<Snippet> GenerateSnippetsCore(SnippetDirectory directory, bool isDevelopment = false)
@@ -179,7 +186,7 @@ public abstract class SnippetEnvironment
         return settings;
     }
 
-    public virtual ProjectReadmeSettings CreateProjectReadmeSettings()
+    public ProjectReadmeSettings CreateProjectReadmeSettings()
     {
         return new ProjectReadmeSettings()
         {
@@ -190,9 +197,112 @@ public abstract class SnippetEnvironment
 
     protected abstract SnippetGenerator CreateSnippetGenerator(SnippetDirectory directory);
 
-    public abstract PackageGenerator CreatePackageGenerator();
-
     public abstract bool IsSupportedLanguage(Language language);
 
     public abstract string GetVersion(Language language);
+
+    internal virtual IEnumerable<Snippet> PostProcess(IEnumerable<Snippet> snippets)
+    {
+        foreach (Snippet snippet in snippets)
+        {
+            for (int i = snippet.Literals.Count - 1; i >= 0; i--)
+            {
+                Literal literal = snippet.Literals[i];
+
+                if (!literal.IsEditable
+                    && !string.Equals(literal.Identifier, XmlSnippetGenerator.CDataIdentifier, StringComparison.Ordinal))
+                {
+                    if (string.IsNullOrEmpty(literal.DefaultValue))
+                    {
+                        snippet.RemoveLiteralAndPlaceholders(literal);
+                    }
+                    else if (string.IsNullOrEmpty(literal.Function))
+                    {
+                        snippet.RemoveLiteralAndReplacePlaceholders(literal.Identifier, literal.DefaultValue);
+                    }
+                }
+                else if (!snippet.Code.Placeholders.Contains(literal.Identifier))
+                {
+                    snippet.Literals.Remove(literal);
+                }
+            }
+
+            if (snippet.TryGetTag(KnownTags.Environment, out TagInfo info))
+            {
+                if (string.Equals(info.Value, Kind.GetIdentifier()))
+                {
+                    snippet.Keywords.RemoveAt(info.KeywordIndex);
+                }
+                else
+                {
+                    continue;
+                }
+            }
+
+            if (snippet.TryGetTag(KnownTags.ObsoleteShortcut, out info))
+                snippet.Keywords.RemoveAt(info.KeywordIndex);
+
+            if (snippet.HasTag(KnownTags.NonUniqueTitle))
+            {
+                snippet.Title += " _";
+                snippet.RemoveTag(KnownTags.NonUniqueTitle);
+                snippet.AddTag(KnownTags.TitleEndsWithUnderscore);
+            }
+
+            snippet.SortCollections();
+
+            snippet.Author = "Josef Pihrt";
+
+            if (snippet.SnippetTypes == SnippetTypes.None)
+                snippet.SnippetTypes = SnippetTypes.Expansion;
+
+            yield return snippet;
+        }
+    }
+
+    public virtual List<Snippet> GeneratePackageFiles(
+        string directoryPath,
+        IEnumerable<SnippetGeneratorResult> results)
+    {
+        var allSnippets = new List<Snippet>();
+
+        foreach (SnippetGeneratorResult result in results)
+        {
+            result.Path = Path.Combine(directoryPath, result.DirectoryName);
+
+            List<Snippet> snippets = PostProcess(result.Snippets).ToList();
+
+            result.Snippets.Clear();
+            result.Snippets.AddRange(snippets);
+
+            ValidateSnippets(snippets);
+
+            SaveSnippets(snippets, result);
+
+            allSnippets.AddRange(snippets);
+        }
+
+#if !DEBUG
+        SaveAllSnippets(directoryPath, allSnippets);
+#endif
+
+        return allSnippets;
+    }
+
+    protected virtual void SaveSnippets(List<Snippet> snippets, SnippetGeneratorResult result)
+    {
+        IOUtility.SaveSnippets(snippets, result.Path);
+    }
+
+    protected virtual void SaveAllSnippets(string projectPath, List<Snippet> allSnippets)
+    {
+        IOUtility.SaveSnippetBrowserFile(allSnippets, Path.Combine(projectPath, "snippets.xml"));
+    }
+
+    protected virtual void ValidateSnippets(List<Snippet> snippets)
+    {
+        Validator.ValidateSnippets(snippets);
+
+        Validator.ThrowOnDuplicateFileName(snippets);
+    }
 }

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Document Version="0.0.1">
+  <Entities>
+    <Entity Name="Shortcut">
+      <Declarations>
+        <Property Name="Value" IsRequired="true" />
+        <Property Name="Description" IsRequired="true" />
+        <Property Name="Comment" />
+        <Property Name="Kind" />
+        <Property Name="Languages" IsCollection="true" />
+        <Property Name="IDE" IsCollection="true" />
+      </Declarations>
+      <Records>
+        <With IDE="VisualStudio,VisualStudioCode">
+          <With Languages="Xml,Xaml,Html">
+            <New Value="a" Description="(element) with attribute" Comment="suffix" />
+            <New Value="e" Description="element" />
+            <New Value="s" Description="self-closing (element)" Comment="suffix" />
+            <New Value="x" Description="(element) with content" Comment="suffix" />
+          </With>
+          <With Languages="C#,VB">
+            <With Kind="MemberDeclaration">
+              <New Value="_" Description="interface member declaration" Comment="prefix" />
+              <New Value="c" Description="class declaration" />
+              <New Value="co" Description="constructor declaration" />
+              <New Value="de" Description="delegate declaration" />
+              <New Value="en" Description="enum declaration" />
+              <New Value="ev" Description="event declaration" />
+              <New Value="f" Description="field declaration" />
+              <New Value="i" Description="interface declaration" />
+              <New Value="in" Description="indexer declaration" />
+              <New Value="k" Description="constant declaration" />
+              <New Value="m" Description="method declaration" />
+              <New Value="p" Description="property declaration" />
+              <New Value="st" Description="struct declaration" />
+              <New Value="re" Description="record declaration" />
+              <Without Languages="C#">
+                <New Value="mo" Description="Module declaration" Kind="MemberDeclaration" />
+              </Without>
+            </With>
+            <With Kind="Modifier">
+              <New Value="i" Description="internal (Friend)" Comment="prefix" />
+              <New Value="p" Description="private" Comment="prefix" />
+              <New Value="r" Description="read-only" Comment="prefix (after access modifier)" />
+              <New Value="s" Description="static (Shared)" Comment="prefix (after access modifier)" />
+              <New Value="v" Description="virtual (Overridable)" Comment="prefix (after access modifier)" />
+            </With>
+            <With Kind="Operator">
+              <New Value="n" Description="new object creation" />
+              <New Value="no" Description="nameof operator" />
+              <New Value="oo" Description="operator overload" />
+              <New Value="x" Description="logical not operator" Comment="prefix" />
+              <Without Languages="VB">
+                <New Value="cop" Description="conditional operator" Kind="Operator" />
+                <New Value="t" Description="explict cast operator" Kind="Operator" />
+                <New Value="to" Description="typeof operator" Kind="Operator" />
+              </Without>
+              <Without Languages="C#">
+                <New Value="gt" Description="GetType operator" Kind="Operator" />
+                <New Value="tc" Description="TryCast operator" Kind="Operator" />
+              </Without>
+            </With>
+            <With Kind="Statement">
+              <New Value="fe" Description="foreach statement" />
+              <New Value="fr" Description="for statement" />
+              <New Value="if" Description="if statement" />
+              <New Value="t" Description="try statement" />
+              <New Value="th" Description="throw statement" />
+              <New Value="u" Description="using statement" />
+              <New Value="w" Description="while statement" />
+              <Without Languages="VB">
+                <New Value="sw" Description="switch statement" Kind="Statement" />
+              </Without>
+              <Without Languages="C#">
+                <New Value="sc" Description="Select Case statement" Kind="Statement" />
+              </Without>
+            </With>
+            <With Kind="Type">
+              <New Value="a" Description="Array" />
+              <New Value="b" Description="Boolean" />
+              <New Value="dt" Description="DateTime" />
+              <New Value="i" Description="Int32" />
+              <New Value="l" Description="List&lt;T&gt;" />
+              <New Value="o" Description="Object" />
+              <New Value="s" Description="String" />
+              <Without IDE="VisualStudioCode">
+                <New Value="c" Description="Collection&lt;T&gt;" />
+                <New Value="d" Description="Dictionary&lt;TKey,TValue&gt;" />
+                <New Value="hs" Description="HashSet&lt;T&gt;" />
+                <New Value="i" Description="Immutable" Comment="prefix" />
+                <New Value="ll" Description="LinkedList&lt;T&gt;" />
+                <New Value="oc" Description="ObservableCollection&lt;T&gt;" />
+                <New Value="q" Description="Queue&lt;T&gt;" />
+                <New Value="s" Description="Stack&lt;T&gt;" />
+              </Without>
+            </With>
+            <With Kind="Other">
+              <New Value="c" Description="catch clause" />
+              <New Value="d" Description="default keyword" />
+              <New Value="e" Description="else clause" />
+              <New Value="f" Description="finally clause" />
+              <New Value="l" Description="lambda expression" />
+              <New Value="n" Description="(equals to) null" />
+              <New Value="pa" Description="parameter array" />
+              <New Value="pp" Description="preprocessor directive" Comment="prefix" />
+              <New Value="ps" Description="private set" />
+              <New Value="r" Description="return keyword" />
+              <New Value="v" Description="local variable declaration" />
+              <New Value="x" Description="with initializer" Comment="suffix" />
+              <New Value="y" Description="yield" Comment="prefix" />
+              <Without IDE="VisualStudioCode">
+                <New Value="this" Description="containing type name" />
+              </Without>
+            </With>
+          </With>
+          <With Languages="Cpp">
+            <With Kind="DeclarationDefinition">
+              <New Value="c" Description="class" />
+              <New Value="co" Description="constructor" />
+              <New Value="de" Description="destructor" />
+              <New Value="en" Description="enum" />
+              <New Value="f" Description="function" />
+              <New Value="na" Description="namespace" />
+              <New Value="st" Description="struct" />
+              <New Value="td" Description="typedef" />
+              <New Value="u" Description="using" />
+              <New Value="un" Description="union" />
+              <New Value="v" Description="variable" />
+              <New Value="x" Description="definition" Comment="suffix" />
+              <New Value="x" Description="(variable) with initialization" Comment="suffix" />
+            </With>
+            <With Kind="Specifier">
+              <New Value="c" Description="const" Comment="prefix" />
+              <New Value="ce" Description="constexpr" Comment="prefix" />
+              <New Value="i" Description="inline" Comment="prefix" />
+              <New Value="s" Description="static" Comment="prefix" />
+              <New Value="v" Description="virtual" Comment="prefix" />
+            </With>
+            <With Kind="Statement">
+              <New Value="do" Description="do-while" />
+              <New Value="fe" Description="foreach" />
+              <New Value="fr" Description="for" />
+              <New Value="if" Description="if" />
+              <New Value="sw" Description="switch" />
+              <New Value="tc" Description="try-catch" />
+              <New Value="w" Description="while" />
+            </With>
+            <With Kind="Other">
+              <New Value="a" Description="attribute" />
+              <New Value="cop" Description="conditional operator" />
+              <New Value="ct" Description="cast" Comment="suffix" />
+              <New Value="d" Description="default keyword" />
+              <New Value="dt" Description="decltype keyword" />
+              <New Value="e" Description="else clause" />
+              <New Value="l" Description="lambda expression" />
+              <New Value="np" Description="nullptr" />
+              <New Value="oo" Description="operator overload" />
+              <New Value="pp" Description="preprocessor directive" Comment="prefix" />
+              <New Value="r" Description="return keyword" />
+              <New Value="so" Description="sizeof keyword" />
+              <New Value="t" Description="template" />
+            </With>
+          </With>
+        </With>
+      </Records>
+    </Entity>
+  </Entities>
+</Document>

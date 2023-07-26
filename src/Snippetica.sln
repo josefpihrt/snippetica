@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica", "Snippetica\Sn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.Common", "Snippetica.Common\Snippetica.Common.csproj", "{EA986E08-DD26-43EA-94F0-8D2F70D4A17F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generator", "Tools\Generator\Generator.csproj", "{F28D28EC-37E4-4857-B072-91A2D1FF8F60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetGenerator", "Tools\SnippetGenerator\SnippetGenerator.csproj", "{F28D28EC-37E4-4857-B072-91A2D1FF8F60}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.CodeGeneration", "Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj", "{B53B29D0-8BB3-478D-AD94-863F913E56CE}"
 EndProject
@@ -36,6 +36,8 @@ EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode", "Snippetica.VisualStudioCode\Snippetica.VisualStudioCode.shproj", "{849BCA71-BCB0-4CC5-A46C-F27C846AD843}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode.Dev", "Snippetica.VisualStudioCode.Dev\Snippetica.VisualStudioCode.Dev.shproj", "{DDDAE79D-39A1-4D6E-83E9-E9758C632645}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentationGenerator", "Tools\DocumentationGenerator\DocumentationGenerator.csproj", "{31FE484E-EC51-4B75-88A4-9B7D33710686}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,12 @@ Global
 		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.ReleaseVisualStudio|Any CPU.ActiveCfg = Release|Any CPU
 		{1D137DD7-218D-4DAC-AB1A-E4F3CE95D788}.ReleaseVisualStudio|Any CPU.Build.0 = Release|Any CPU
+		{31FE484E-EC51-4B75-88A4-9B7D33710686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FE484E-EC51-4B75-88A4-9B7D33710686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FE484E-EC51-4B75-88A4-9B7D33710686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FE484E-EC51-4B75-88A4-9B7D33710686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31FE484E-EC51-4B75-88A4-9B7D33710686}.ReleaseVisualStudio|Any CPU.ActiveCfg = Release|Any CPU
+		{31FE484E-EC51-4B75-88A4-9B7D33710686}.ReleaseVisualStudio|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +107,7 @@ Global
 		{F28D28EC-37E4-4857-B072-91A2D1FF8F60} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
 		{CE18A42C-A7FD-4B6B-90FE-2F4510B7CB0E} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
 		{A8ED9945-2D2B-493C-ABB6-E860315EAFFF} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
+		{31FE484E-EC51-4B75-88A4-9B7D33710686} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F615C44-B8F8-4E88-A201-667DE41F776F}

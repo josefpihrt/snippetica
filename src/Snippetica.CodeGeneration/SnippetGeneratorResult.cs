@@ -11,12 +11,14 @@ public class SnippetGeneratorResult
 {
     public SnippetGeneratorResult(
         List<Snippet> snippets,
+        SnippetEnvironment environment,
         string name,
         Language language,
         bool isDevelopment = false,
         params string[] tags)
     {
         Snippets.AddRange(snippets);
+        Environment = environment;
         Path = name;
         Language = language;
         IsDevelopment = isDevelopment;
@@ -26,6 +28,8 @@ public class SnippetGeneratorResult
     }
 
     public List<Snippet> Snippets { get; } = new();
+
+    public SnippetEnvironment Environment { get; }
 
     public string Path { get; set; }
 

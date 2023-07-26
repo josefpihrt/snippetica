@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Document Version="0.0.1">
+  <Entities>
+    <Entity Name="Type">
+      <Declarations>
+        <Property Name="Shortcut" IsRequired="true" />
+        <Property Name="Namespace" />
+        <Property Name="Arity" />
+      </Declarations>
+      <Records>
+        <With Tags="Collection" Arity="1">
+          <Prefix Namespace="System.Collections">
+            <With Namespace=".Generic">
+              <New Id="Dictionary" Shortcut="d" Tags="Initializer" />
+              <New Id="HashSet" Shortcut="hs" Tags="Initializer" />
+              <New Id="List" Shortcut="l" Tags="Initializer" />
+              <New Id="LinkedList" Shortcut="ll" />
+              <New Id="Queue" Shortcut="q" />
+              <New Id="Stack" Shortcut="s" />
+              <New Id="IEnumerable" Shortcut="ie" />
+              <New Id="ICollection" Shortcut="ic" />
+              <New Id="IDictionary" Shortcut="id" Arity="2" />
+              <New Id="IList" Shortcut="il" />
+              <New Id="IReadOnlyCollection" Shortcut="irc" />
+              <New Id="IReadOnlyDictionary" Shortcut="ird" Arity="2" />
+              <New Id="IReadOnlyList" Shortcut="irl" />
+            </With>
+            <With Namespace=".ObjectModel">
+              <New Id="Collection" Shortcut="c" Tags="Initializer" />
+              <New Id="ObservableCollection" Shortcut="oc" Tags="Initializer" />
+              <New Id="ReadOnlyCollection" Shortcut="rc" />
+              <New Id="ReadOnlyObservableCollection" Shortcut="roc" />
+              <New Id="ReadOnlyDictionary" Shortcut="rd" Arity="2"  />
+            </With>
+            <With Namespace=".Immutable">
+              <New Id="ImmutableArray" Shortcut="iea" />
+              <New Id="ImmutableDictionary" Shortcut="ied" />
+              <New Id="ImmutableHashSet" Shortcut="iehs" />
+              <New Id="ImmutableList" Shortcut="iel" />
+            </With>
+          </Prefix>
+        </With>
+        <!--<New Id="Regex" Shortcut="rx" Namespace="System.Text.RegularExpressions" Tags="Arguments" />-->
+        <!--<New Id="TimeSpan" Shortcut="ts" Namespace="System" Tags="Arguments" />-->
+      </Records>
+    </Entity>
+  </Entities>
+</Document>

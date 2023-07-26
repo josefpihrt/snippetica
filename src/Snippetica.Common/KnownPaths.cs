@@ -13,8 +13,6 @@ public static class KnownPaths
 
     public const string SourceGitHubUrl = MainGitHubUrl + "/" + SourceDirectoryName;
 
-    public const string SnippetBrowserUrl = "http://pihrt.net/snippetica/snippets";
-
     public const string SolutionDirectoryPath = @"..\..\..\..\..\..";
 
     public static string VisualStudioExtensionProjectPath

@@ -17,13 +17,7 @@ namespace Snippetica.CodeGeneration.Markdown;
 
 public static class MarkdownGenerator
 {
-    private static string GetString(this MDocument document, bool addFootnote = true)
-    {
-        if (addFootnote)
-            document.Add(NewLine, Italic("(Generated with ", Link("DotMarkdown", "http://github.com/JosefPihrt/DotMarkdown"), ")"));
-
-        return document.ToString(MarkdownFormat.Default.WithTableOptions(TableOptions.FormatHeader));
-    }
+    private static readonly MarkdownFormat _markdownFormat = new MarkdownFormat(angleBracketEscapeStyle: AngleBracketEscapeStyle.EntityRef).WithTableOptions(TableOptions.FormatHeader);
 
     public static string GenerateProjectReadme(
         IEnumerable<SnippetGeneratorResult> results,
@@ -37,25 +31,24 @@ public static class MarkdownGenerator
     public static string GenerateProjectReadme(
         IEnumerable<SnippetGeneratorResult> results,
         MDocument document,
-        ProjectReadmeSettings settings,
-        bool addFootnote = true)
+        ProjectReadmeSettings settings)
     {
         document.Add(
             (!string.IsNullOrEmpty(settings.Header)) ? Heading2(settings.Header) : null,
-            BulletItem("Browse all available snippets with ", Link("Snippet Browser", GetSnippetBrowserUrl(settings.Environment.Kind)), "."),
-            BulletItem("Download extension from ", Link("Marketplace", $"http://marketplace.visualstudio.com/search?term=publisher%3A\"Josef%20Pihrt\"%20{ProductName}&target={settings.Environment.Kind.GetIdentifier()}&sortBy=Name"), "."),
             Heading3("Snippets"),
             Table(
-                TableRow("Group", "Count", TableColumn(HorizontalAlignment.Right)),
-                results.OrderBy(f => f.DirectoryName).Select(f =>
-                {
-                    return TableRow(
-                        Link(f.DirectoryName, $"{VisualStudioExtensionGitHubUrl}/{f.DirectoryName}/{ReadMeFileName}"),
-                        f.Snippets.Count,
-                        Link("Browse", GetSnippetBrowserUrl(settings.Environment.Kind, f.Language)));
-                })));
+                TableRow("Language", "Count"),
+                results
+                    .Where(f => !f.Tags.Contains("ExcludeFromDocs"))
+                    .OrderBy(f => f.DirectoryName)
+                    .Select(f =>
+                    {
+                        return TableRow(
+                            Link(f.DirectoryName, $"{VisualStudioExtensionGitHubUrl}/{f.DirectoryName}/{ReadMeFileName}"),
+                            f.Snippets.Count);
+                    })));
 
-        return document.GetString(addFootnote: addFootnote);
+        return document.ToString(_markdownFormat);
     }
 
     public static string GenerateDirectoryReadme(
@@ -73,13 +66,6 @@ public static class MarkdownGenerator
         DirectoryReadmeSettings settings)
     {
         document.Add((!string.IsNullOrEmpty(settings.Header)) ? Heading2(settings.Header) : null);
-
-        if (!settings.IsDevelopment)
-        {
-            document.Add(
-                Heading3("Snippet Browser"),
-                BulletItem("Browse all available snippets with ", Link("Snippet Browser", GetSnippetBrowserUrl(settings.Environment.Kind, settings.Language)), "."));
-        }
 
         if (!settings.IsDevelopment
             && settings.AddQuickReference)
@@ -102,7 +88,7 @@ public static class MarkdownGenerator
                         LinkOrText(f.GetTitle(), GetSnippetPath(f)));
                 })));
 
-        return document.GetString();
+        return document.ToString(_markdownFormat);
 
         IEnumerable<object> GetQuickReference()
         {
@@ -174,20 +160,18 @@ public static class MarkdownGenerator
             Heading3("Links"),
             BulletList(
                 Link("Project Website", GitHubUrl),
-                Link("Release Notes", $"{MainGitHubUrl}/{ChangeLogFileName}"),
-                BulletItem("Browse all available snippets with ", Link("Snippet Browser", GetSnippetBrowserUrl(EnvironmentKind.VisualStudio)))),
+                Link("Release Notes", $"{MainGitHubUrl}/{ChangeLogFileName}")),
             Heading3("Snippets"),
             Table(
-                TableRow("Language", TableColumn(HorizontalAlignment.Right, "Count"), TableColumn(HorizontalAlignment.Center, "Snippet Browser")),
+                TableRow("Language", TableColumn(HorizontalAlignment.Right, "Count")),
                 results.Select(f =>
                 {
                     return TableRow(
                         Link(f.DirectoryName, VisualStudioExtensionGitHubUrl + "/" + f.DirectoryName + "/" + ReadMeFileName),
-                        f.Snippets.Count,
-                        Link("browse", GetSnippetBrowserUrl(EnvironmentKind.VisualStudio, f.Language)));
+                        f.Snippets.Count);
                 })),
             NewLine);
 
-        return document.GetString(addFootnote: false);
+        return document.ToString(_markdownFormat);
     }
 }

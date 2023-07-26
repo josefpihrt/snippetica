@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Document Version="0.0.1">
+  <Entities>
+    <Entity Name="Base">
+      <Declarations>
+        <Property Name="Keyword" />
+        <Property Name="Shortcut" IsRequired="true" />
+        <Property Name="Language" />
+      </Declarations>
+      <Entities>
+        <Entity Name="Modifier">
+          <With>
+            <With Tags="AccessModifier">
+              <New Id="Public" Shortcut="" Tags="Default" />
+              <New Id="Internal" Shortcut="i" />
+              <New Id="Private" Shortcut="p" />
+              <New Id="Protected" Shortcut="d" Tags="Disabled" />
+            </With>
+            <New Id="Static" Shortcut="s" />
+            <New Id="Virtual" Shortcut="v" />
+          </With>
+          <Records>
+            <With Language="C#">
+              <New Id="Public" Keyword="public" />
+              <New Id="Internal" Keyword="internal" />
+              <New Id="Protected" Keyword="protected" />
+              <New Id="Private" Keyword="private" />
+              <New Id="Static" Keyword="static" />
+              <New Id="Virtual" Keyword="virtual" />
+            </With>
+            <With Language="VB">
+              <New Id="Public" Keyword="Public" />
+              <New Id="Internal" Keyword="Friend" />
+              <New Id="Protected" Keyword="Protected" />
+              <New Id="Private" Keyword="Private" />
+              <New Id="Static" Keyword="Shared" />
+              <New Id="Virtual" Keyword="Overridable" />
+            </With>
+            <With Language="Cpp">
+              <New Id="Const" Shortcut="c" Keyword="const" />
+              <New Id="ConstExpr" Shortcut="ce" Keyword="constexpr" />
+              <New Id="Inline" Shortcut="il" Keyword="inline" />
+              <New Id="Static" Keyword="static" />
+              <New Id="Virtual" Keyword="virtual" />
+            </With>
+          </Records>
+        </Entity>
+        <Entity Name="Type">
+          <Declarations>
+            <Property Name="Title" />
+            <Property Name="DefaultValue" />
+            <Property Name="DefaultIdentifier" />
+            <Property Name="Namespace" />
+          </Declarations>
+          <With>
+            <With Tags="BasicType">
+              <New Id="This" Shortcut="t" />
+              <New Id="Void" Shortcut="-" />
+              <New Id="Object" Shortcut="o" />
+              <New Id="String" Shortcut="s" DefaultIdentifier="s" />
+              <With Tags="TryParse">
+                <New Id="Boolean" Shortcut="b" DefaultIdentifier="f" />
+                <New Id="Int32" Shortcut="i" DefaultValue="0" DefaultIdentifier="i" />
+                <New Id="DateTime" Shortcut="dt"  DefaultIdentifier="dt" />
+              </With>
+            </With>
+          </With>
+          <Records>
+            <With Language="C#">
+              <New Id="This" Title="this" Keyword="this" DefaultValue="null" />
+              <New Id="Void" Title="void" Keyword="void" />
+              <New Id="Boolean" Keyword="bool" DefaultValue="false" />
+              <New Id="Int32" Keyword="int" />
+              <New Id="Object" Keyword="object" DefaultValue="null" />
+              <New Id="String" Keyword="string" DefaultValue="null" />
+            </With>
+            <With Language="VB">
+              <New Id="This" Title="this" Keyword="this" DefaultValue="Nothing" />
+              <New Id="Void" Title="Sub" Keyword="Sub" />
+              <New Id="Boolean" Keyword="Boolean" DefaultValue="False" />
+              <New Id="Int32" Keyword="Integer" />
+              <New Id="Object" Keyword="Object" DefaultValue="Nothing" />
+              <New Id="String" Keyword="String" DefaultValue="Nothing" />
+            </With>
+            <With Language="Cpp">
+              <New Id="Void" Title="void" Keyword="void" />
+              <New Id="Boolean" Keyword="bool" DefaultValue="false" />
+              <New Id="Int32" Keyword="int" />
+              <New Id="String" Title="string" Keyword="std::string" DefaultValue="nullptr" />
+            </With>
+          </Records>
+        </Entity>
+      </Entities>
+    </Entity>
+    <Entity Name="Keyword">
+      <Declarations>
+        <Property Name="Language" IsRequired="true" />
+        <Property Name="Name" IsRequired="true" />
+        <Property Name="Value" IsRequired="true" />
+        <Property Name="Shortcut" IsRequired="true" />
+        <Property Name="IsDevelopment" />
+      </Declarations>
+      <Records>
+        <With Language="Cpp">
+          <New Name="AlignAs" Value="alignas" Shortcut="aa" IsDevelopment="true" />
+          <New Name="AlignOf" Value="alignof" Shortcut="ao" IsDevelopment="true" />
+          <New Name="ConstExpr" Value="constexpr" Shortcut="ce" />
+          <New Name="DeclType" Value="decltype" Shortcut="dt" />
+          <New Name="Default" Value="default" Shortcut="d" />
+          <New Name="Friend" Value="friend" Shortcut="fd" IsDevelopment="true" />
+          <New Name="Inline" Value="inline" Shortcut="il" />
+          <New Name="NoExcept" Value="noexcept" Shortcut="ne" IsDevelopment="true" />
+          <New Name="NullPtr" Value="nullptr" Shortcut="np" />
+          <New Name="Operator" Value="operator" Shortcut="or" IsDevelopment="true" />
+          <New Name="Return" Value="return" Shortcut="r" />
+          <New Name="SizeOf" Value="sizeof" Shortcut="so" />
+          <New Name="ThreadLocal" Value="thread_local" Shortcut="tl" IsDevelopment="true" />
+          <New Name="Throw" Value="throw" Shortcut="tw" IsDevelopment="true" />
+          <New Name="TypeId" Value="typeid" Shortcut="ti" IsDevelopment="true" />
+          <New Name="TypeName" Value="typename" Shortcut="tn" IsDevelopment="true" />
+          <New Name="Unsigned" Value="unsigned" Shortcut="us" IsDevelopment="true" />
+          <New Name="Volatile" Value="volatile" Shortcut="ve" IsDevelopment="true" />
+        </With>
+      </Records>
+    </Entity>
+  </Entities>
+</Document>

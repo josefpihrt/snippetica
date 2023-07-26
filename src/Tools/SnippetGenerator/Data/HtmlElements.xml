@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Document Version="0.0.1">
+  <Entities>
+    <Entity Name="Element">
+      <Declarations>
+        <Property Name="Name" IsRequired="true" />
+        <Property Name="Shortcut" />
+      </Declarations>
+      <Records>
+        <New Name="audio" />
+        <New Name="colgroup" />
+        <New Name="datalist" />
+        <New Name="details" />
+        <New Name="dl" />
+        <New Name="figure" />
+        <New Name="html" />
+        <New Name="map" />
+        <New Name="menuitem" />
+        <New Name="object" />
+        <New Name="table" Shortcut="t" />
+        <New Name="video" />
+        <With Tags="SelfClosing">
+          <New Name="area" />
+          <New Name="base" />
+          <New Name="basefont" />
+          <New Name="br" />
+          <New Name="col" />
+          <New Name="embed" />
+          <New Name="frame" />
+          <New Name="hr" />
+          <New Name="img" />
+          <New Name="input" />
+          <New Name="link" />
+          <New Name="param" />
+          <New Name="source" />
+          <New Name="track" />
+          <New Name="wbr" />
+          <With Tags="Generate,Attribute">
+            <New Name="keygen" />
+            <New Name="meta" />
+          </With>
+        </With>
+        <With Tags="WithContent">
+          <With Tags="Generate">
+            <New Name="address" />
+            <New Name="article" />
+            <New Name="aside" />
+            <New Name="b" />
+            <New Name="bdi" />
+            <New Name="big" />
+            <New Name="canvas" />
+            <New Name="caption" />
+            <New Name="center" />
+            <New Name="cite" />
+            <New Name="dd" />
+            <New Name="del" />
+            <New Name="dfn" />
+            <New Name="dt" />
+            <New Name="em" />
+            <New Name="footer" />
+            <New Name="frameset" />
+            <New Name="h1" />
+            <New Name="h2" />
+            <New Name="h3" />
+            <New Name="h4" />
+            <New Name="h5" />
+            <New Name="h6" />
+            <New Name="head" />
+            <New Name="header" />
+            <New Name="i" />
+            <New Name="ins" />
+            <New Name="kbd" />
+            <New Name="legend" />
+            <New Name="li" />
+            <New Name="main" />
+            <New Name="mark" />
+            <New Name="menu" />
+            <New Name="nav" />
+            <New Name="noframes" />
+            <New Name="noscript" />
+            <New Name="p" />
+            <New Name="pre" />
+            <New Name="q" />
+            <New Name="rp" />
+            <New Name="rt" />
+            <New Name="ruby" />
+            <New Name="s" />
+            <New Name="samp" />
+            <New Name="script" />
+            <New Name="section" />
+            <New Name="small" />
+            <New Name="strike" />
+            <New Name="strong" />
+            <New Name="style" />
+            <New Name="sub" />
+            <New Name="summary" />
+            <New Name="sup" />
+            <New Name="tbody" />
+            <New Name="td" />
+            <New Name="textarea" />
+            <New Name="tfoot" />
+            <New Name="th" />
+            <New Name="thead" />
+            <New Name="title" />
+            <New Name="tr" />
+            <New Name="tt" />
+            <New Name="u" />
+            <New Name="var" />
+            <With Tags="Attribute">
+              <New Name="font" />
+            </With>
+            <With Tags="ClassAttribute,IdAttribute">
+              <New Name="span" Shortcut="s" />
+              <New Name="div" Shortcut="d" />
+            </With>
+          </With>
+          <New Name="a" />
+          <New Name="abbr" />
+          <New Name="acronym" />
+          <New Name="applet" />
+          <New Name="bdo" />
+          <New Name="blockquote" />
+          <New Name="body" />
+          <New Name="button" />
+          <New Name="code" />
+          <New Name="dialog" />
+          <New Name="dir" />
+          <New Name="fieldset" />
+          <New Name="form" />
+          <New Name="iframe" />
+          <New Name="label" />
+          <New Name="meter" />
+          <New Name="ol" />
+          <New Name="optgroup" />
+          <New Name="option" />
+          <New Name="output" />
+          <New Name="progress" />
+          <New Name="region" />
+          <New Name="section" />
+          <New Name="select" />
+          <New Name="time" />
+          <New Name="ul" />
+        </With>
+      </Records>
+    </Entity>
+  </Entities>
+</Document>

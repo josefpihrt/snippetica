@@ -25,13 +25,13 @@
           </With>
           <With Language="Xml">
             <New Path=".Xml" Tags="GenerateXmlSnippets" />
-            <New Path=".Xml.CodeSnippet" Tags="NoQuickReference,ExcludeFromVisualStudioCode" />
+            <New Path=".Xml.CodeSnippet" Tags="NoQuickReference,ExcludeFromVisualStudioCode,ExcludeFromDocs" />
           </With>
           <With Language="Markdown">
-            <New Path=".Markdown" Tags="GenerateXmlSnippets,ExcludeFromVisualStudio" />
+            <New Path=".Markdown" Tags="GenerateXmlSnippets,ExcludeFromVisualStudio,ExcludeFromDocs" />
           </With>
           <With Language="Json">
-            <New Path=".Json" Tags="ExcludeFromVisualStudio" />
+            <New Path=".Json" Tags="ExcludeFromVisualStudio,ExcludeFromDocs" />
           </With>
         </Prefix>
       </Records>
