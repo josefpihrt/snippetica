@@ -53,8 +53,8 @@ jobs:
       - uses: actions/checkout@v3
       - run: (Get-Content source.extension.vsixmanifest) -replace 'Version="1.0.0"', 'Version="${{ needs.pre_build.outputs.version3 }}"' | Set-Content source.extension.vsixmanifest
         working-directory: src/Snippetica.VisualStudio
-      - run: dotnet restore src/Tools/DocumentationGenerator/DocumentationGenerator.csproj
-      - run: dotnet build src/Tools/DocumentationGenerator/DocumentationGenerator.csproj --no-restore
+      - run: dotnet restore Tools/DocumentationGenerator/DocumentationGenerator.csproj
+      - run: dotnet build Tools/DocumentationGenerator/DocumentationGenerator.csproj --no-restore
       - run: |
           cd tools
           ./generate_snippets.ps1
