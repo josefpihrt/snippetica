@@ -56,7 +56,7 @@ jobs:
       - run: |
           dotnet restore
           dotnet build --no-restore
-        working-directory: src/Tools/DocumentationGenerator/DocumentationGenerator.csproj
+        working-directory: src\Tools\DocumentationGenerator\DocumentationGenerator.csproj
       - run: |
           cd tools
           ./generate_snippets.ps1
