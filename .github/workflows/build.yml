@@ -107,8 +107,10 @@ jobs:
         working-directory: src/Snippetica.VisualStudioCode/${{ matrix.component.directoryName }}/package
     steps:
       - uses: actions/checkout@v3
-      - run: dotnet restore src/Tools/SnippetGenerator/SnippetGenerator.csproj
-      - run: dotnet build src/Tools/SnippetGenerator/SnippetGenerator.csproj --no-restore
+      - run: dotnet restore
+        working-directory: src/Tools/SnippetGenerator
+      - run: dotnet build --no-restore
+        working-directory: src/Tools/SnippetGenerator
       - run: |
           cd tools
           ./generate_snippets.ps1
