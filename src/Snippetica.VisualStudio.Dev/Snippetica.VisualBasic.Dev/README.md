@@ -14,5 +14,3 @@ s|[String keyword](StringKeyword.snippet)
 th|[Throw statement](ThrowStatement.snippet)
 vsb|[StringBuilder variable](StringBuilderVariable.snippet)
 y|[Yield keyword](YieldKeyword.snippet)
-
-*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

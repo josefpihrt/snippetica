@@ -52,5 +52,3 @@ th|[throw statement](ThrowStatement.snippet)
 ts|[TimeSpan type](TimeSpan.snippet)
 vsb|[StringBuilder variable](StringBuilderVariable.snippet)
 yrn|[yield return new](YieldReturnNew.snippet)
-
-*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

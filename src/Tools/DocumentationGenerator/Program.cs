@@ -14,27 +14,31 @@ namespace Snippetica.CodeGeneration.DocumentationGenerator;
 
 internal static class Program
 {
-    private static ShortcutInfo[] _shortcuts;
-
     //TODO: data directory
     private static void Main(string[] args)
     {
-        _shortcuts = Records.Document.ReadRecords(@"..\..\..\Data\Shortcuts.xml")
+        string outputDirectoryPath = args[0];
+        string dataDirectoryPath = args[1];
+
+        ShortcutInfo[] shortcuts = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Shortcuts.xml"))
             .Where(f => !f.HasTag(KnownTags.Disabled))
             .Select(f => Mapper.MapShortcutInfo(f))
             .ToArray();
 
-        SnippetDirectory[] directories = LoadDirectories(@"..\..\..\Data\Directories.xml");
+        SnippetDirectory[] directories = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Directories.xml"))
+            .Where(f => !f.HasTag(KnownTags.Disabled))
+            .Select(f => Mapper.MapSnippetDirectory(f))
+            .ToArray();
 
-        ShortcutInfo.SerializeToXml(Path.Combine(VisualStudioExtensionProjectPath, "Shortcuts.xml"), _shortcuts);
-
-        LoadLanguages();
+        Dictionary<Language, LanguageDefinition> languageDefinitions = Mapper.LoadLanguages(dataDirectoryPath);
 
         var visualStudio = new VisualStudioEnvironment();
 
         List<SnippetGeneratorResult> visualStudioResults = GenerateSnippets(
             visualStudio,
             directories,
+            shortcuts,
+            languageDefinitions,
             VisualStudioExtensionProjectPath);
 
         var visualStudioCode = new VisualStudioCodeEnvironment();
@@ -42,6 +46,8 @@ internal static class Program
         List<SnippetGeneratorResult> visualStudioCodeResults = GenerateSnippets(
             visualStudioCode,
             directories,
+            shortcuts,
+            languageDefinitions,
             VisualStudioCodeExtensionProjectPath);
 
         Console.WriteLine("DONE");
@@ -50,37 +56,16 @@ internal static class Program
     private static List<SnippetGeneratorResult> GenerateSnippets(
         SnippetEnvironment environment,
         SnippetDirectory[] directories,
+        ShortcutInfo[] shortcuts,
+        Dictionary<Language, LanguageDefinition> languages,
         string projectPath)
     {
-        environment.Shortcuts.AddRange(_shortcuts.Where(f => f.Environments.Contains(environment.Kind)));
+        environment.Shortcuts.AddRange(shortcuts.Where(f => f.Environments.Contains(environment.Kind)));
 
-        List<SnippetGeneratorResult> results = environment.GenerateSnippets(directories, includeDevelopment: false).ToList();
+        List<SnippetGeneratorResult> results = environment.GenerateSnippets(directories, languages, includeDevelopment: false).ToList();
 
         MarkdownFileWriter.WriteProjectReadme(projectPath, results, environment.CreateProjectReadmeSettings());
 
         return results;
-    }
-
-    private static SnippetDirectory[] LoadDirectories(string url)
-    {
-        return Records.Document.ReadRecords(url)
-            .Where(f => !f.HasTag(KnownTags.Disabled))
-            .Select(f => Mapper.MapSnippetDirectory(f))
-            .ToArray();
-    }
-
-    private static void LoadLanguages()
-    {
-        Records.Document.ReadRecords(@"..\..\..\Data\Languages.xml")
-            .Where(f => !f.HasTag(KnownTags.Disabled))
-            .LoadLanguages();
-
-        foreach (TypeDefinition typeDefinition in Records.Document.ReadRecords(@"..\..\..\Data\Types.xml")
-            .Where(f => !f.HasTag(KnownTags.Disabled))
-            .Select(f => Mapper.MapTypeDefinition(f)))
-        {
-            LanguageDefinitions.CSharp.Types.Add(typeDefinition);
-            LanguageDefinitions.VisualBasic.Types.Add(typeDefinition);
-        }
     }
 }

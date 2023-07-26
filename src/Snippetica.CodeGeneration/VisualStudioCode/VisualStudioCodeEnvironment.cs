@@ -24,13 +24,13 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
             && !directory.HasTag(KnownTags.ExcludeFromVisualStudioCode);
     }
 
-    protected override SnippetGenerator CreateSnippetGenerator(SnippetDirectory directory)
+    protected override SnippetGenerator CreateSnippetGenerator(SnippetDirectory directory, Dictionary<Language, LanguageDefinition> languages)
     {
         return directory.Language switch
         {
-            Language.VisualBasic => new VisualStudioCodeSnippetGenerator(this, LanguageDefinitions.VisualBasic),
-            Language.CSharp => new VisualStudioCodeSnippetGenerator(this, LanguageDefinitions.CSharp),
-            Language.Cpp => new VisualStudioCodeSnippetGenerator(this, LanguageDefinitions.Cpp),
+            Language.VisualBasic => new VisualStudioCodeSnippetGenerator(this, languages[Language.VisualBasic]),
+            Language.CSharp => new VisualStudioCodeSnippetGenerator(this, languages[Language.CSharp]),
+            Language.Cpp => new VisualStudioCodeSnippetGenerator(this, languages[Language.Cpp]),
             Language.Xaml => new XamlSnippetGenerator(),
             Language.Html => new HtmlSnippetGenerator(),
             _ => throw new ArgumentException("", nameof(directory)),

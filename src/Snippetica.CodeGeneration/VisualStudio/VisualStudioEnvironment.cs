@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Pihrtsoft.Snippets;
+using Snippetica.CodeGeneration.Markdown;
 using Snippetica.IO;
 
 namespace Snippetica.CodeGeneration.VisualStudio;
@@ -20,13 +21,13 @@ public class VisualStudioEnvironment : SnippetEnvironment
             && !directory.HasTag(KnownTags.ExcludeFromVisualStudio);
     }
 
-    protected override SnippetGenerator CreateSnippetGenerator(SnippetDirectory directory)
+    protected override SnippetGenerator CreateSnippetGenerator(SnippetDirectory directory, Dictionary<Language, LanguageDefinition> languages)
     {
         return directory.Language switch
         {
-            Language.VisualBasic => new VisualStudioSnippetGenerator(this, LanguageDefinitions.VisualBasic),
-            Language.CSharp => new VisualStudioSnippetGenerator(this, LanguageDefinitions.CSharp),
-            Language.Cpp => new VisualStudioSnippetGenerator(this, LanguageDefinitions.Cpp),
+            Language.VisualBasic => new VisualStudioSnippetGenerator(this, languages[Language.VisualBasic]),
+            Language.CSharp => new VisualStudioSnippetGenerator(this, languages[Language.CSharp]),
+            Language.Cpp => new VisualStudioSnippetGenerator(this, languages[Language.Cpp]),
             Language.Xaml => new XamlSnippetGenerator(),
             Language.Html => new HtmlSnippetGenerator(),
             _ => throw new ArgumentException("", nameof(directory)),
@@ -142,7 +143,7 @@ public class VisualStudioEnvironment : SnippetEnvironment
         base.SaveSnippets(snippets, result);
 
 #if !DEBUG
-        DirectoryReadmeSettings settings = Environment.CreateDirectoryReadmeSettings(result);
+        DirectoryReadmeSettings settings = CreateDirectoryReadmeSettings(result);
 
         MarkdownFileWriter.WriteDirectoryReadme(result.Path, snippets, settings);
 #endif

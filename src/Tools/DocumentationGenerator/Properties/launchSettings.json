@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DocumentationGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": "../../../../../../ ../../../../../Snippetica.CodeGeneration/data"
+    }
+  }
+}

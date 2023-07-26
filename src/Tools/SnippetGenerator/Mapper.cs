@@ -2,7 +2,9 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using Pihrtsoft.Snippets;
 using Snippetica.Records;
 
 namespace Snippetica.CodeGeneration;
@@ -29,34 +31,49 @@ public static class Mapper
             record.GetTags());
     }
 
-    public static void LoadLanguages(this IEnumerable<Record> records)
+    public static Dictionary<Language, LanguageDefinition> LoadLanguages(string directoryPath)
     {
-        foreach (IGrouping<string, Record> grouping in records.GroupBy(f => f.GetString(PropertyNames.Language)))
+        var definitions = new Dictionary<Language, LanguageDefinition>()
         {
-            LanguageDefinition language = LanguageDefinition.FromLanguage(ParseHelpers.ParseLanguage(grouping.Key));
+            [Language.CSharp] = new LanguageDefinition.CSharpDefinition(),
+            [Language.VisualBasic] = new LanguageDefinition.VisualBasicDefinition(),
+            [Language.Cpp] = new LanguageDefinition.CppDefinition()
+        };
+
+        foreach (IGrouping<string, Record> grouping in Document.ReadRecords(Path.Combine(directoryPath, "Languages.xml"))
+            .Where(f => !f.HasTag(KnownTags.Disabled))
+            .GroupBy(f => f.GetString(PropertyNames.Language)))
+        {
+            LanguageDefinition language = definitions[ParseHelpers.ParseLanguage(grouping.Key)];
 
             foreach (Record record in grouping)
             {
                 switch (record.EntityName)
                 {
                     case PropertyNames.Modifier:
-                        {
-                            language.Modifiers.Add(MapModifierDefinition(record));
-                            break;
-                        }
+                        language.Modifiers.Add(MapModifierDefinition(record));
+                        break;
+
                     case PropertyNames.Type:
-                        {
-                            language.Types.Add(MapTypeDefinition(record));
-                            break;
-                        }
+                        language.Types.Add(MapTypeDefinition(record));
+                        break;
+
                     case PropertyNames.Keyword:
-                        {
-                            language.Keywords.Add(MapKeywordDefinition(record));
-                            break;
-                        }
+                        language.Keywords.Add(MapKeywordDefinition(record));
+                        break;
                 }
             }
         }
+
+        foreach (TypeDefinition typeDefinition in Document.ReadRecords(Path.Combine(directoryPath, "Types.xml"))
+            .Where(f => !f.HasTag(KnownTags.Disabled))
+            .Select(f => MapTypeDefinition(f)))
+        {
+            definitions[Language.CSharp].Types.Add(typeDefinition);
+            definitions[Language.VisualBasic].Types.Add(typeDefinition);
+        }
+
+        return definitions;
     }
 
     public static ModifierDefinition MapModifierDefinition(Record record)

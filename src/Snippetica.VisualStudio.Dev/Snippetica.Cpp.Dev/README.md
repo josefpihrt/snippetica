@@ -26,5 +26,3 @@ vb|[bool variable](BoolVariable.snippet)
 ve|[volatile keyword](VolatileKeyword.snippet)
 vi|[int variable](IntVariable.snippet)
 vs|[string variable](StringVariable.snippet)
-
-*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*

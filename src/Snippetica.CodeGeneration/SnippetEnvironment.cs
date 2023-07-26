@@ -18,18 +18,26 @@ public abstract class SnippetEnvironment
 
     public List<ShortcutInfo> Shortcuts { get; } = new();
 
-    public IEnumerable<SnippetGeneratorResult> GenerateSnippets(IEnumerable<SnippetDirectory> directories, bool includeDevelopment)
+    public Dictionary<Language, LanguageDefinition> LanguageDefinitions { get; } = new ();
+
+    public IEnumerable<SnippetGeneratorResult> GenerateSnippets(
+        IEnumerable<SnippetDirectory> directories,
+        Dictionary<Language, LanguageDefinition> languages,
+        bool includeDevelopment)
     {
-        return directories.SelectMany(directory => GenerateSnippets(directory, includeDevelopment));
+        return directories.SelectMany(directory => GenerateSnippets(directory, languages, includeDevelopment));
     }
 
-    private IEnumerable<SnippetGeneratorResult> GenerateSnippets(SnippetDirectory directory, bool includeDevelopment)
+    private IEnumerable<SnippetGeneratorResult> GenerateSnippets(
+        SnippetDirectory directory,
+        Dictionary<Language, LanguageDefinition> languages,
+        bool includeDevelopment)
     {
         if (!ShouldGenerateSnippets(directory))
             yield break;
 
         yield return new SnippetGeneratorResult(
-            GenerateSnippetsCore(directory),
+            GenerateSnippetsCore(directory, languages, isDevelopment: false),
             this,
             directory.Name,
             directory.Language,
@@ -45,7 +53,7 @@ public abstract class SnippetEnvironment
 
             SnippetDirectory devDirectory = directory.WithPath(devPath);
 
-            List<Snippet> snippets = GenerateSnippetsCore(devDirectory, isDevelopment: true);
+            List<Snippet> snippets = GenerateSnippetsCore(devDirectory, languages, isDevelopment: true);
 
             snippets = PostProcess(snippets).ToList();
 
@@ -59,7 +67,10 @@ public abstract class SnippetEnvironment
         }
     }
 
-    private List<Snippet> GenerateSnippetsCore(SnippetDirectory directory, bool isDevelopment = false)
+    private List<Snippet> GenerateSnippetsCore(
+        SnippetDirectory directory,
+        Dictionary<Language, LanguageDefinition> languages,
+        bool isDevelopment = false)
     {
         var snippets = new List<Snippet>();
 
@@ -97,11 +108,9 @@ public abstract class SnippetEnvironment
             }
         }
 
-        KeywordDefinitionCollection keywords = LanguageDefinition.GetKeywords(directory.Language);
-
-        if (keywords is not null)
+        if (languages.TryGetValue(directory.Language, out LanguageDefinition language))
         {
-            foreach (KeywordDefinition keyword in keywords)
+            foreach (KeywordDefinition keyword in language.Keywords)
             {
                 if (keyword.IsDevelopment == isDevelopment)
                 {
@@ -118,7 +127,7 @@ public abstract class SnippetEnvironment
         {
             SnippetDirectory autoGenerationDirectory = directory.WithPath(autoGenerationPath);
 
-            SnippetGenerator generator = CreateSnippetGenerator(autoGenerationDirectory);
+            SnippetGenerator generator = CreateSnippetGenerator(autoGenerationDirectory, languages);
 
             snippets.AddRange(generator.GenerateSnippets(autoGenerationDirectory.Path));
         }
@@ -174,7 +183,7 @@ public abstract class SnippetEnvironment
 
         if (!settings.IsDevelopment)
         {
-            //TODO: ?
+            //TODO: text
             string filePath = $@"..\..\..\..\..\text\{result.DirectoryName}.md";
 
             if (File.Exists(filePath))
@@ -195,7 +204,7 @@ public abstract class SnippetEnvironment
         };
     }
 
-    protected abstract SnippetGenerator CreateSnippetGenerator(SnippetDirectory directory);
+    protected abstract SnippetGenerator CreateSnippetGenerator(SnippetDirectory directory, Dictionary<Language, LanguageDefinition> languages);
 
     public abstract bool IsSupportedLanguage(Language language);
 
@@ -296,7 +305,6 @@ public abstract class SnippetEnvironment
 
     protected virtual void SaveAllSnippets(string projectPath, List<Snippet> allSnippets)
     {
-        IOUtility.SaveSnippetBrowserFile(allSnippets, Path.Combine(projectPath, "snippets.xml"));
     }
 
     protected virtual void ValidateSnippets(List<Snippet> snippets)

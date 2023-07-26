@@ -19,51 +19,56 @@ internal static class Program
 {
     private static readonly SnippetDeepEqualityComparer _snippetEqualityComparer = new();
 
-    private static ShortcutInfo[] _shortcuts;
-
     private static readonly Regex _regexReplaceSpacesWithTabs = new(@"(?<=^(\ {4})*)(?<x>\ {4})(?=(\ {4})*\S)", RegexOptions.Multiline);
 
-    private static void Main()
+    private static void Main(string[] args)
     {
-        _shortcuts = Records.Document.ReadRecords(@"..\..\..\Data\Shortcuts.xml")
+        string outputDirectoryPath = args[0];
+        string dataDirectoryPath = args[1];
+
+        ShortcutInfo[] shortcuts = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Shortcuts.xml"))
             .Where(f => !f.HasTag(KnownTags.Disabled))
             .Select(f => Mapper.MapShortcutInfo(f))
             .ToArray();
 
-        SnippetDirectory[] directories = LoadDirectories(@"..\..\..\Data\Directories.xml");
+        SnippetDirectory[] directories = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Directories.xml"))
+            .Where(f => !f.HasTag(KnownTags.Disabled))
+            .Select(f => Mapper.MapSnippetDirectory(f))
+            .ToArray();
 
-        ShortcutInfo.SerializeToXml(Path.Combine(VisualStudioExtensionProjectPath, "Shortcuts.xml"), _shortcuts);
-
-        LoadLanguages();
+        Dictionary<Language, LanguageDefinition> languageDefinitions = Mapper.LoadLanguages(dataDirectoryPath);
 
         SaveChangedSnippets(directories);
 
         var visualStudio = new VisualStudioEnvironment();
 
-        List<SnippetGeneratorResult> visualStudioResults = GenerateSnippets(
+        GenerateSnippets(
             visualStudio,
             directories,
+            languageDefinitions,
             VisualStudioExtensionProjectPath);
 
         var visualStudioCode = new VisualStudioCodeEnvironment();
 
-        List<SnippetGeneratorResult> visualStudioCodeResults = GenerateSnippets(
+        GenerateSnippets(
             visualStudioCode,
             directories,
+            languageDefinitions,
             VisualStudioCodeExtensionProjectPath);
 
         Console.WriteLine("DONE");
     }
 
-    private static List<SnippetGeneratorResult> GenerateSnippets(
+    private static void GenerateSnippets(
         SnippetEnvironment environment,
         SnippetDirectory[] directories,
+        Dictionary<Language, LanguageDefinition> languages,
         string projectPath)
     {
         var results = new List<SnippetGeneratorResult>();
         var devResults = new List<SnippetGeneratorResult>();
 
-        foreach (SnippetGeneratorResult result in environment.GenerateSnippets(directories, includeDevelopment: true))
+        foreach (SnippetGeneratorResult result in environment.GenerateSnippets(directories, languages, includeDevelopment: true))
         {
             if (result.IsDevelopment)
             {
@@ -81,8 +86,6 @@ internal static class Program
         snippets.AddRange(environment.GeneratePackageFiles(projectPath + DevSuffix, devResults));
 
         CheckDuplicateShortcuts(snippets, environment);
-
-        return results;
     }
 
     private static void CheckDuplicateShortcuts(IEnumerable<Snippet> snippets, SnippetEnvironment environment)
@@ -121,29 +124,6 @@ internal static class Program
                 if (!_snippetEqualityComparer.Equals(snippet, clone))
                     IOUtility.SaveSnippet(clone, onlyIfChanged: false);
             }
-        }
-    }
-
-    private static SnippetDirectory[] LoadDirectories(string url)
-    {
-        return Records.Document.ReadRecords(url)
-            .Where(f => !f.HasTag(KnownTags.Disabled))
-            .Select(f => Mapper.MapSnippetDirectory(f))
-            .ToArray();
-    }
-
-    private static void LoadLanguages()
-    {
-        Records.Document.ReadRecords(@"..\..\..\Data\Languages.xml")
-            .Where(f => !f.HasTag(KnownTags.Disabled))
-            .LoadLanguages();
-
-        foreach (TypeDefinition typeDefinition in Records.Document.ReadRecords(@"..\..\..\Data\Types.xml")
-            .Where(f => !f.HasTag(KnownTags.Disabled))
-            .Select(f => Mapper.MapTypeDefinition(f)))
-        {
-            LanguageDefinitions.CSharp.Types.Add(typeDefinition);
-            LanguageDefinitions.VisualBasic.Types.Add(typeDefinition);
         }
     }
 }
