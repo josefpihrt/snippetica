@@ -39,9 +39,6 @@ jobs:
           echo "version=${version}" >> $GITHUB_OUTPUT
           echo "Resolved version3: $version3"
           echo "version3=${version3}" >> $GITHUB_OUTPUT
-      - run: dotnet restore Snippetica.sln
-      - run: dotnet build Snippetica.sln --no-restore
-      - run: dotnet format Snippetica.sln --no-restore --verify-no-changes --severity info --exclude-diagnostics
 
   build_vs_extension:
     needs: pre_build
