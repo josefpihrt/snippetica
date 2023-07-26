@@ -71,6 +71,30 @@ jobs:
         with:
           name: vs_extension
           path: src/Snippetica.VisualStudio/manifest.json
+      - uses: actions/upload-artifact@v3
+        with:
+          name: vs_cpp_snippets
+          path: src/Snippetica.VisualStudio/Snippetica.Cpp/*.snippets
+      - uses: actions/upload-artifact@v3
+        with:
+          name: vs_csharp_snippets
+          path: src/Snippetica.VisualStudio/Snippetica.CSharp/*.snippets
+      - uses: actions/upload-artifact@v3
+        with:
+          name: vs_html_snippets
+          path: src/Snippetica.VisualStudio/Snippetica.Html/*.snippets
+      - uses: actions/upload-artifact@v3
+        with:
+          name: vs_vb_snippets
+          path: src/Snippetica.VisualStudio/Snippetica.VisualBasic/*.snippets
+      - uses: actions/upload-artifact@v3
+        with:
+          name: vs_xaml_snippets
+          path: src/Snippetica.VisualStudio/Snippetica.Xaml/*.snippets
+      - uses: actions/upload-artifact@v3
+        with:
+          name: vs_xml_snippets
+          path: src/Snippetica.VisualStudio/Snippetica.Xml/*.snippets
 
   build_vs_code_extensions:
     needs: pre_build
