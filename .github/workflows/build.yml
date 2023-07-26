@@ -63,7 +63,6 @@ jobs:
       - run: dotnet restore
       - uses: microsoft/setup-msbuild@v1.1
       - run: msbuild -m
-      - run: ls Snippetica.VisualStudio -R
       - uses: actions/upload-artifact@v3
         name: "Upload vsix file"
         with:
@@ -108,15 +107,14 @@ jobs:
         working-directory: src/Snippetica.VisualStudioCode/${{ matrix.component.directoryName }}/package
     steps:
       - uses: actions/checkout@v3
-      - run: |
-          dotnet restore
-          dotnet build --no-restore
-        working-directory: src/Tools/SnippetGenerator
+      - run: dotnet restore src/Tools/SnippetGenerator/SnippetGenerator.csproj
+      - run: dotnet build src/Tools/SnippetGenerator/SnippetGenerator.csproj --no-restore
       - run: |
           cd tools
           ./generate_snippets.ps1
         working-directory: "."
         shell: pwsh
+        name: "Generate snippets"
       - run: >
           sed -i 's/"version": "1.0.0"/"version": "${{ needs.pre_build.outputs.version3 }}"/' "package.json"
       - run: npm install -g @vscode/vsce
