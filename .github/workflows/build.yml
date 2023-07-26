@@ -63,7 +63,7 @@ jobs:
       - run: dotnet restore
       - uses: microsoft/setup-msbuild@v1.1
       - run: msbuild -m
-      - run: ls src/Snippetica.VisualStudio -R
+      - run: ls Snippetica.VisualStudio -R
       - uses: actions/upload-artifact@v3
         with:
           name: vs_extension
@@ -74,28 +74,28 @@ jobs:
           path: src/Snippetica.VisualStudio/manifest.json
       - uses: actions/upload-artifact@v3
         with:
-          name: vs_cpp_snippets
-          path: src/Snippetica.VisualStudio/Snippetica.Cpp/*.snippets
+          name: vs_snippets
+          path: src/Snippetica.VisualStudio/Snippetica.Cpp
       - uses: actions/upload-artifact@v3
         with:
-          name: vs_csharp_snippets
-          path: src/Snippetica.VisualStudio/Snippetica.CSharp/*.snippets
+          name: vs_snippets
+          path: src/Snippetica.VisualStudio/Snippetica.CSharp
       - uses: actions/upload-artifact@v3
         with:
-          name: vs_html_snippets
-          path: src/Snippetica.VisualStudio/Snippetica.Html/*.snippets
+          name: vs_snippets
+          path: src/Snippetica.VisualStudio/Snippetica.Html
       - uses: actions/upload-artifact@v3
         with:
-          name: vs_vb_snippets
-          path: src/Snippetica.VisualStudio/Snippetica.VisualBasic/*.snippets
+          name: vs_snippets
+          path: src/Snippetica.VisualStudio/Snippetica.VisualBasic
       - uses: actions/upload-artifact@v3
         with:
-          name: vs_xaml_snippets
-          path: src/Snippetica.VisualStudio/Snippetica.Xaml/*.snippets
+          name: vs_snippets
+          path: src/Snippetica.VisualStudio/Snippetica.Xaml
       - uses: actions/upload-artifact@v3
         with:
-          name: vs_xml_snippets
-          path: src/Snippetica.VisualStudio/Snippetica.Xml/*.snippets
+          name: vs_snippets
+          path: src/Snippetica.VisualStudio/Snippetica.Xml
 
   build_vs_code_extensions:
     needs: pre_build
