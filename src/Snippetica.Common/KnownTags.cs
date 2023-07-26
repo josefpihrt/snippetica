@@ -14,7 +14,7 @@ public static class KnownTags
     public const string Default = nameof(Default);
     public const string Disabled = nameof(Disabled);
     public const string Environment = nameof(Environment);
-    public const string ExcludeFromReadme = nameof(ExcludeFromReadme);
+    public const string ExcludeFromDocs = nameof(ExcludeFromDocs);
     public const string ExcludeFromSnippetBrowser = nameof(ExcludeFromSnippetBrowser);
     public const string ExcludeFromVisualStudio = nameof(ExcludeFromVisualStudio);
     public const string ExcludeFromVisualStudioCode = nameof(ExcludeFromVisualStudioCode);

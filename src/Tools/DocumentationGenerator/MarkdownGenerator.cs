@@ -18,8 +18,7 @@ public static class MarkdownGenerator
 
     public static string GenerateEnvironmentMarkdown(
         SnippetEnvironment environment,
-        IEnumerable<SnippetGeneratorResult> results,
-        ProjectReadmeSettings settings)
+        IEnumerable<SnippetGeneratorResult> results)
     {
         MDocument document = Document(
             Raw(@"---
@@ -29,19 +28,12 @@ sidebar_label: "
 ---
 
 "));
-        return GenerateEnvironmentMarkdown(results, document, settings);
-    }
 
-    public static string GenerateEnvironmentMarkdown(
-        IEnumerable<SnippetGeneratorResult> results,
-        MDocument document,
-        ProjectReadmeSettings settings)
-    {
         document.Add(
-            Heading1(settings.Header),
+            Heading1($"Snippets for {environment.Kind.GetTitle()}"),
             Heading2("Languages"),
             results
-                .Where(f => !f.Tags.Contains("ExcludeFromDocs"))
+                .Where(f => !f.Tags.Contains(KnownTags.ExcludeFromDocs))
                 .OrderBy(f => f.DirectoryName)
                 .Select(f => BulletItem(Link(f.Language.GetTitle(), f.Language.GetIdentifier()))));
 
@@ -62,18 +54,12 @@ sidebar_label: "
 "));
         document.Add(Heading1(result.Language.GetTitle() + " Snippets for " + result.Environment.Kind.GetTitle()));
 
-        if (!settings.IsDevelopment
-            && settings.AddQuickReference)
-        {
-            document.Add(GetQuickReference());
-        }
-
         document.Add(Heading2("List of Selected Snippets"));
 
         document.Add(Table(
             TableRow("Shortcut", "Title"),
             result.Snippets
-                .Where(f => !f.HasTag(KnownTags.ExcludeFromReadme))
+                .Where(f => !f.HasTag(KnownTags.ExcludeFromDocs))
                 .OrderBy(f => f.Shortcut)
                 .ThenBy(f => f.GetTitle())
                 .Select(f =>
@@ -82,6 +68,12 @@ sidebar_label: "
                         InlineCode(f.Shortcut),
                         f.GetTitle());
                 })));
+
+        if (!settings.IsDevelopment
+            && settings.AddQuickReference)
+        {
+            document.Add(GetQuickReference());
+        }
 
         return document.ToString(_markdownFormat);
 

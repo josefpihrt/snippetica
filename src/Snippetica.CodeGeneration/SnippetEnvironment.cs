@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
 using Pihrtsoft.Snippets;
 using Snippetica.IO;
 using Snippetica.Validations;

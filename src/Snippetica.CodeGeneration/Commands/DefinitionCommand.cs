@@ -15,7 +15,7 @@ public class DefinitionCommand : SnippetCommand
         snippet.SuffixDescription(" definition");
         snippet.SnippetTypes |= SnippetTypes.SurroundsWith;
         snippet.SuffixFileName("Definition");
-        snippet.AddTag(KnownTags.ExcludeFromReadme);
+        snippet.AddTag(KnownTags.ExcludeFromDocs);
 
         PlaceholderCollection placeholders = snippet.Code.Placeholders;
 

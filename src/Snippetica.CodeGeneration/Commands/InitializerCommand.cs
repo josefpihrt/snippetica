@@ -52,7 +52,7 @@ public class InitializerCommand : SnippetCommand
             snippet.RemoveLiteralAndPlaceholders(LiteralIdentifiers.ArrayLength);
         }
 
-        snippet.AddTag(KnownTags.ExcludeFromReadme);
+        snippet.AddTag(KnownTags.ExcludeFromDocs);
 
         snippet.SuffixFileName((snippet.Language == Language.Cpp) ? "WithInitialization" : "WithInitializer");
 

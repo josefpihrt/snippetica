@@ -113,7 +113,7 @@ public class VisualStudioEnvironment : SnippetEnvironment
         snippet.Literals.Clear();
 
         snippet.AddTag(KnownTags.ExcludeFromSnippetBrowser);
-        snippet.AddTag(KnownTags.ExcludeFromReadme);
+        snippet.AddTag(KnownTags.ExcludeFromDocs);
 
         snippet.SuffixFileName("_Obsolete");
 

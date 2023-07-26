@@ -22,7 +22,7 @@ public class AccessModifierCommand : ModifierCommand
         base.Execute(context, snippet);
 
         if (!Modifier.Tags.Contains(KnownTags.Default))
-            snippet.AddTag(KnownTags.ExcludeFromReadme);
+            snippet.AddTag(KnownTags.ExcludeFromDocs);
     }
 
     protected override ModifierDefinition GetModifier(LanguageDefinition language)

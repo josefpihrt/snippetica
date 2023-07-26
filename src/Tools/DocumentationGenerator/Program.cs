@@ -40,7 +40,6 @@ internal static class Program
         Dictionary<Language, LanguageDefinition> languageDefinitions = Helpers.LoadLanguages(dataDirectoryPath);
 
         GenerateDocumentation(new VisualStudioEnvironment(), directories, shortcuts, languageDefinitions, destinationPath, dataDirectoryPath);
-
         GenerateDocumentation(new VisualStudioCodeEnvironment(), directories, shortcuts, languageDefinitions, destinationPath, dataDirectoryPath);
 
         Console.WriteLine("DONE");
@@ -58,15 +57,15 @@ internal static class Program
 
         List<SnippetGeneratorResult> results = environment.GenerateSnippets(directories, languages, includeDevelopment: false).ToList();
 
-        GenerateEnvironmentMarkdown(
+        IOUtility.WriteAllText(
             Path.Combine(destinationPath, environment.Kind.GetIdentifier(), "index.md"),
-            environment,
-            results,
-            environment.CreateEnvironmentMarkdownSettings());
+            MarkdownGenerator.GenerateEnvironmentMarkdown(environment, results),
+            onlyIfChanged: false,
+            createDirectory: true);
 
         foreach (SnippetGeneratorResult result in results)
         {
-            if (result.Tags.Contains("ExcludeFromDocs"))
+            if (result.Tags.Contains(KnownTags.ExcludeFromDocs))
                 continue;
 
             DirectoryReadmeSettings settings = environment.CreateSnippetsMarkdownSettings(result);
@@ -76,37 +75,11 @@ internal static class Program
             if (File.Exists(filePath))
                 settings.QuickReferenceText = File.ReadAllText(filePath, Encoding.UTF8);
 
-            WriteSnippetsMarkdown(
+            IOUtility.WriteAllText(
                 Path.Combine(destinationPath, result.Environment.Kind.GetIdentifier(), $"{result.Language.GetIdentifier()}.md"),
-                result,
-                settings);
+                MarkdownGenerator.GenerateSnippetsMarkdown(result, settings),
+                onlyIfChanged: false,
+                createDirectory: true);
         }
-    }
-
-    private static void GenerateEnvironmentMarkdown(
-        string filePath,
-        SnippetEnvironment environment,
-        IEnumerable<SnippetGeneratorResult> results,
-        ProjectReadmeSettings settings)
-    {
-        Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-
-        IOUtility.WriteAllText(
-            filePath,
-            MarkdownGenerator.GenerateEnvironmentMarkdown(environment, results, settings),
-            onlyIfChanged: false);
-    }
-
-    private static void WriteSnippetsMarkdown(
-        string filePath,
-        SnippetGeneratorResult result,
-        DirectoryReadmeSettings settings)
-    {
-        Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-
-        IOUtility.WriteAllText(
-            filePath,
-            MarkdownGenerator.GenerateSnippetsMarkdown(result, settings),
-            onlyIfChanged: false);
     }
 }

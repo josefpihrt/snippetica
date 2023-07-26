@@ -50,7 +50,7 @@ public class TypeCommand : BasicTypeCommand
 
         snippet.AddTags(KnownTags.NonUniqueShortcut);
         snippet.AddTags(KnownTags.TitleStartsWithShortcut);
-        snippet.AddTags(KnownTags.ExcludeFromReadme);
+        snippet.AddTags(KnownTags.ExcludeFromDocs);
 
         snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.Type, Type.Name);
 

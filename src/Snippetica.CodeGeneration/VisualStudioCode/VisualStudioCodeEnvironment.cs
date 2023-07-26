@@ -129,7 +129,7 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
 
                     snippet.Keywords.RemoveAt(info.KeywordIndex);
 
-                    snippet.AddTag(KnownTags.ExcludeFromReadme);
+                    snippet.AddTag(KnownTags.ExcludeFromDocs);
                 }
 
                 snippet.RemoveTag(KnownTags.NonUniqueShortcut);

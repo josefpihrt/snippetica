@@ -21,7 +21,7 @@
             <New Path=".Html" Tags="GenerateXmlSnippets" />
           </With>
           <With Language="Xaml">
-            <New Path=".Xaml" Tags="GenerateXmlSnippets,ExcludeFromVisualStudioCode" />
+            <New Path=".Xaml" Tags="GenerateXmlSnippets,ExcludeFromVisualStudioCode,ExcludeFromDocs" />
           </With>
           <With Language="Xml">
             <New Path=".Xml" Tags="GenerateXmlSnippets" />

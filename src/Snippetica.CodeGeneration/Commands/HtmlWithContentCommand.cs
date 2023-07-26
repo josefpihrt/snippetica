@@ -15,6 +15,6 @@ public class HtmlWithContentCommand : SnippetCommand
         snippet.SuffixShortcut(XmlSnippetGenerator.ContentShortcut);
         snippet.SuffixFileName("_with_content");
 
-        snippet.AddTag(KnownTags.ExcludeFromReadme);
+        snippet.AddTag(KnownTags.ExcludeFromDocs);
     }
 }

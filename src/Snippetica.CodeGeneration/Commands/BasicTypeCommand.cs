@@ -67,7 +67,7 @@ public class BasicTypeCommand : SnippetCommand
 
         snippet.AddNamespace(Type.Namespace);
 
-        snippet.AddTag(KnownTags.ExcludeFromReadme);
+        snippet.AddTag(KnownTags.ExcludeFromDocs);
         snippet.AddTag(KnownTags.ExcludeFromSnippetBrowser);
 
         if (Type.Keyword == "this")
