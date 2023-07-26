@@ -1,0 +1,118 @@
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v*
+  pull_request:
+
+env:
+  Configuration: Release
+  TreatWarningsAsErrors: true
+  WarningsNotAsErrors: 1591,NU5128
+  Deterministic: true
+  RunCodeAnalysis: false
+
+jobs:
+  pre_build:
+    runs-on: ubuntu-20.04
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      version3: ${{ steps.version.outputs.version3 }}
+    defaults:
+      run:
+        working-directory: src
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - run: dotnet tool install -g GitVersion.Tool --version 5.12.0
+      - name: Resolve version
+        id: version
+        run: |
+          dotnet-gitversion > version.json
+          version="$(jq -r '.SemVer' version.json)"
+          version3="$(jq -r '.MajorMinorPatch' version.json)"
+          pr_version="$(jq -r '.MajorMinorPatch' version.json)-$(jq -r '.PreReleaseLabel' version.json).${{ github.run_number }}.${{ github.run_attempt }}"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then version=$pr_version; fi
+          echo "Resolved version: $version"
+          echo "version=${version}" >> $GITHUB_OUTPUT
+          echo "Resolved version3: $version3"
+          echo "version3=${version3}" >> $GITHUB_OUTPUT
+      - run: dotnet restore Snippetica.sln
+      - run: dotnet build Snippetica.sln --no-restore
+      - run: dotnet format Snippetica.sln --no-restore --verify-no-changes --severity info --exclude-diagnostics
+
+  build_vs_extension:
+    needs: pre_build
+    runs-on: windows-latest
+    env:
+      Version: ${{ needs.pre_build.outputs.version }}
+      DeployExtension: false
+    defaults:
+      run:
+        working-directory: src
+    steps:
+      - uses: actions/checkout@v3
+      - run: (Get-Content source.extension.vsixmanifest) -replace 'Version="1.0.0"', 'Version="${{ needs.pre_build.outputs.version3 }}"' | Set-Content source.extension.vsixmanifest
+        working-directory: src/Snippetica.VisualStudio
+      - run: |
+          dotnet restore src/Tools/DocumentationGenerator
+          dotnet build src/Tools/DocumentationGenerator --no-restore
+      - run: |
+          cd tools
+          ./generate_snippets.ps1
+      - run: dotnet restore
+      - uses: microsoft/setup-msbuild@v1.1
+      - run: msbuild
+      - uses: actions/upload-artifact@v3
+        with:
+          name: vs_extension
+          path: src/Snippetica.VisualStudio/bin/Release/net48/*.vsix
+      - uses: actions/upload-artifact@v3
+        with:
+          name: vs_extension
+          path: src/Snippetica.VisualStudio/manifest.json
+
+  build_vs_code_extensions:
+    needs: pre_build
+    runs-on: ubuntu-20.04
+    env:
+      Version: ${{ needs.pre_build.outputs.version }}
+    strategy:
+      matrix:
+        component:
+          - name: Snippetica.Cpp
+            identifier: cpp
+          - name: Snippetica.CSharp
+            identifier: cs
+          - name: Snippetica.Html
+            identifier: html
+          - name: Snippetica.Json
+            identifier: json
+          - name: Snippetica.Markdown
+            identifier: markdown
+          - name: Snippetica.VisualBasic
+            identifier: vb
+          - name: Snippetica.Xml
+            identifier: xml
+    defaults:
+      run:
+        working-directory: src/Snippetica.VisualStudioCode/${{ matrix.component.name }}/package
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          dotnet restore
+          dotnet build --no-restore
+        working-directory: src/Tools/SnippetGenerator /p:DefineConstants=VSCODE
+      - run: |
+          ./generate_snippets.ps1
+        working-directory: tools
+      - run: >
+          sed -i 's/"version": "1.0.0"/"version": "${{ needs.pre_build.outputs.version3 }}"/' "package.json"
+      - run: npm install -g @vscode/vsce
+      - run: vsce package
+      - uses: actions/upload-artifact@v3
+        with:
+          name: "vs_code_extension_${{ matrix.component.identifier }}"
+          path: "*.vsix"
