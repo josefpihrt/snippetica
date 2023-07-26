@@ -56,7 +56,7 @@ jobs:
       - run: |
           dotnet restore
           dotnet build --no-restore
-        working-directory: src\Tools\DocumentationGenerator\DocumentationGenerator.csproj
+        working-directory: src/Tools/DocumentationGenerator
       - run: |
           cd tools
           ./generate_snippets.ps1
@@ -81,23 +81,23 @@ jobs:
     strategy:
       matrix:
         component:
-          - name: Snippetica.Cpp
-            identifier: cpp
-          - name: Snippetica.CSharp
-            identifier: cs
-          - name: Snippetica.Html
-            identifier: html
-          - name: Snippetica.Json
-            identifier: json
-          - name: Snippetica.Markdown
-            identifier: markdown
-          - name: Snippetica.VisualBasic
-            identifier: vb
-          - name: Snippetica.Xml
-            identifier: xml
+          - name: cpp
+            directoryName: Snippetica.Cpp
+          - name: cs
+            directoryName: Snippetica.CSharp
+          - name: html
+            directoryName: Snippetica.Html
+          - name: json
+            directoryName: Snippetica.Json
+          - name: markdown
+            directoryName: Snippetica.Markdown
+          - name: vb
+            directoryName: Snippetica.VisualBasic
+          - name: xml
+            directoryName: Snippetica.Xml
     defaults:
       run:
-        working-directory: src/Snippetica.VisualStudioCode/${{ matrix.component.name }}/package
+        working-directory: src/Snippetica.VisualStudioCode/${{ matrix.component.directoryName }}/package
     steps:
       - uses: actions/checkout@v3
       - run: |
@@ -113,5 +113,5 @@ jobs:
       - run: vsce package
       - uses: actions/upload-artifact@v3
         with:
-          name: "vs_code_extension_${{ matrix.component.identifier }}"
+          name: "vs_code_extension_${{ matrix.component.name }}"
           path: "*.vsix"
