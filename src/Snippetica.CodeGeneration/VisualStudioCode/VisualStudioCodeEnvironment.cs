@@ -164,7 +164,7 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
 
         MDocument document = Document(
             Heading1(result.Language.GetTitle() + " Snippets"),
-            Inline("Please see ", Link("documentation", "https://github.com/josefpihrt.github.io/docs/snippetica/vscode"), " for further information."));
+            Inline("Please see ", Link("documentation", "https://josefpihrt.github.io/docs/snippetica/vscode"), " for further information."));
 
         IOUtility.WriteAllText(Path.Combine(packageDirectoryPath, "README.md"), document.ToString());
     }
@@ -180,7 +180,7 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
             Icon = "images/icon.png",
             Author = "Josef Pihrt",
             License = "Apache-2.0",
-            Homepage = "https://github.com/josefpihrt.github.io/docs/snippetica/vscode",
+            Homepage = "https://josefpihrt.github.io/docs/snippetica/vscode",
             Repository = new RepositoryInfo()
             {
                 Type = "git",
