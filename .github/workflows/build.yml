@@ -60,6 +60,7 @@ jobs:
       - run: |
           cd tools
           ./generate_snippets.ps1
+        working-directory: "."
       - run: dotnet restore
       - uses: microsoft/setup-msbuild@v1.1
       - run: msbuild
