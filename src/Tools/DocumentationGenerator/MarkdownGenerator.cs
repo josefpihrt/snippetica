@@ -125,28 +125,4 @@ public static class MarkdownGenerator
                     .Select(f => TableRow(InlineCode(f.Value), f.Description, f.Comment)));
         }
     }
-
-    //TODO: ?
-    public static string GenerateVisualStudioMarketplaceOverview(IEnumerable<SnippetGeneratorResult> results)
-    {
-        MDocument document = Document(
-            Heading3("Introduction"),
-            BulletItem(GetProjectSubtitle(results)),
-            Heading3("Links"),
-            BulletList(
-                Link("Project Website", GitHubUrl),
-                Link("Release Notes", $"{MainGitHubUrl}/{ChangeLogFileName}")),
-            Heading3("Snippets"),
-            Table(
-                TableRow("Language", TableColumn(HorizontalAlignment.Right, "Count")),
-                results.Select(f =>
-                {
-                    return TableRow(
-                        Link(f.DirectoryName, VisualStudioExtensionGitHubUrl + "/" + f.DirectoryName + "/README.md"),
-                        f.Snippets.Count);
-                })),
-            Environment.NewLine);
-
-        return document.ToString(_markdownFormat);
-    }
 }

@@ -19,7 +19,7 @@ public static class Validator
         foreach (SnippetValidationResult result in Validate(snippets))
         {
             Console.WriteLine();
-            Console.WriteLine($"{result.Importance.ToString().ToUpper(CultureInfo.InvariantCulture)}: \"{result.Description}\" in \"{result.Snippet.FilePath}\"");
+            Console.WriteLine($"{result.Importance.ToString().ToUpperInvariant()}: \"{result.Description}\" in \"{result.Snippet.FilePath}\"");
         }
 
         foreach (IGrouping<string, Snippet> snippet in snippets

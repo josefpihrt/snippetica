@@ -3,14 +3,9 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Snippetica.CodeGeneration.DocumentationGenerator</RootNamespace>
     <AssemblyName>Snippetica.CodeGeneration.DocumentationGenerator</AssemblyName>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <CodeAnalysisRuleSet />
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.*" />
-    <PackageReference Include="Microsoft.CSharp" Version="4.*" />
-    <PackageReference Include="System.Net.Http" Version="4.*" />
-  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DotMarkdown.Docusaurus" Version="0.2.1-alpha0028.153.1" />
     <PackageReference Include="SnippetManager" Version="1.3.3" />

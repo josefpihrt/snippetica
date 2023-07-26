@@ -124,15 +124,7 @@ public class VisualStudioEnvironment : SnippetEnvironment
     {
         List<Snippet> snippets = base.GeneratePackageFiles(directoryPath, results);
 
-#if !DEBUG
-        IOUtility.WriteAllText(
-            Path.Combine(directoryPath, "Overview.md"),
-            MarkdownGenerator.GenerateVisualStudioMarketplaceOverview(results));
-#endif
-
-        IOUtility.WriteAllText(
-            Path.Combine(directoryPath, "regedit.pkgdef"),
-            PkgDefGenerator.GeneratePkgDefFile(results));
+        IOUtility.WriteAllText(Path.Combine(directoryPath, "regedit.pkgdef"), PkgDefGenerator.GeneratePkgDefFile(results));
 
         return snippets;
     }

@@ -191,15 +191,7 @@ public abstract class SnippetEnvironment
         };
 
         if (!settings.IsDevelopment)
-        {
-            //TODO: text
-            string filePath = $@"..\..\..\..\..\text\{result.DirectoryName}.md";
-
-            if (File.Exists(filePath))
-                settings.QuickReferenceText = File.ReadAllText(filePath, Encoding.UTF8);
-
             settings.Shortcuts.AddRange(Shortcuts);
-        }
 
         return settings;
     }

@@ -23,10 +23,10 @@ public static class Mapper
             record.GetTags());
     }
 
-    public static SnippetDirectory MapSnippetDirectory(Record record)
+    public static SnippetDirectory MapSnippetDirectory(Record record, string baseDirectoryPath)
     {
         return new SnippetDirectory(
-            record.GetString("Path"),
+            Path.Combine(baseDirectoryPath, record.GetString("Path")),
             ParseLanguage(record.GetString("Language")),
             record.GetTags());
     }

@@ -7,7 +7,7 @@
         <Property Name="Language" IsRequired="true" />
       </Declarations>
       <Records>
-        <Prefix Path="..\..\..\..\..\Snippetica\Snippetica">
+        <Prefix Path="Snippetica/Snippetica">
           <With Language="C#">
             <New Path=".CSharp" />
           </With>

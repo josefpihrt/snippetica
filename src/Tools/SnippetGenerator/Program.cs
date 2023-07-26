@@ -17,13 +17,17 @@ namespace Snippetica.CodeGeneration.SnippetGenerator;
 
 internal static class Program
 {
-    private static readonly SnippetDeepEqualityComparer _snippetEqualityComparer = new();
-
     private static readonly Regex _regexReplaceSpacesWithTabs = new(@"(?<=^(\ {4})*)(?<x>\ {4})(?=(\ {4})*\S)", RegexOptions.Multiline);
 
     private static void Main(string[] args)
     {
-        string outputDirectoryPath = args[0];
+        if (args.Length < 2)
+        {
+            Console.WriteLine("Invalid number of arguments");
+            return;
+        }
+
+        string sourcePath = args[0];
         string dataDirectoryPath = args[1];
 
         ShortcutInfo[] shortcuts = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Shortcuts.xml"))
@@ -33,7 +37,7 @@ internal static class Program
 
         SnippetDirectory[] directories = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Directories.xml"))
             .Where(f => !f.HasTag(KnownTags.Disabled))
-            .Select(f => Mapper.MapSnippetDirectory(f))
+            .Select(f => Mapper.MapSnippetDirectory(f, sourcePath))
             .ToArray();
 
         Dictionary<Language, LanguageDefinition> languageDefinitions = Mapper.LoadLanguages(dataDirectoryPath);
@@ -99,6 +103,8 @@ internal static class Program
 
     private static void SaveChangedSnippets(SnippetDirectory[] directories)
     {
+        var snippetEqualityComparer = new SnippetDeepEqualityComparer();
+
         foreach (SnippetDirectory directory in directories)
         {
             foreach (Snippet snippet in directory.EnumerateSnippets())
@@ -109,7 +115,7 @@ internal static class Program
 
                 clone.CodeText = _regexReplaceSpacesWithTabs.Replace(clone.CodeText, "\t");
 
-                if (!_snippetEqualityComparer.Equals(snippet, clone))
+                if (!snippetEqualityComparer.Equals(snippet, clone))
                     IOUtility.SaveSnippet(clone, onlyIfChanged: false);
             }
         }

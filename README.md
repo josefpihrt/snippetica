@@ -1,28 +1,28 @@
 # Snippetica
 
-* A collection of snippets for C\#, C\+\+, HTML, JSON, Markdown, VB, XAML and XML\.
+A collection of snippets for C\#, C\+\+, HTML, VB and other languages\.
 
 ## Snippetica for Visual Studio
 
-### Snippets
+Install extension from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Snippetica)\.
 
-Language|Count
---------|-----
-[Snippetica.Cpp](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|121
-[Snippetica.CSharp](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|582
-[Snippetica.Html](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.Html/README.md)|221
-[Snippetica.VisualBasic](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|518
-[Snippetica.Xaml](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.Xaml/README.md)|91
-[Snippetica.Xml](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.Xml/README.md)|9
+### Languages
 
-## Snippetica for Visual Studio Code
+- [C#](https://github.com/josefpihrt.github.io/docs/snippetica/vs/csharp)
+- [Visual Basic](https://github.com/josefpihrt.github.io/docs/snippetica/vs/vb)
+- [C++](https://github.com/josefpihrt.github.io/docs/snippetica/vs/cpp)
+- [HTML](https://github.com/josefpihrt.github.io/docs/snippetica/vs/html)
+- [XAML](https://github.com/josefpihrt.github.io/docs/snippetica/vs/xaml)
+- [XML](https://github.com/josefpihrt.github.io/docs/snippetica/vs/xml)
 
-### Snippets
+## Extensions for VS Code
 
-Language|Count
---------|-----
-[Snippetica.Cpp](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.Cpp/README.md)|121
-[Snippetica.CSharp](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.CSharp/README.md)|228
-[Snippetica.Html](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.Html/README.md)|221
-[Snippetica.VisualBasic](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.VisualBasic/README.md)|179
-[Snippetica.Xml](http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudio/Snippetica.Xml/README.md)|9
+Install extension from [VS Code Marketplace](https://marketplace.visualstudio.com/search?term=snippetica&target=VSCode&category=All%20categories&sortBy=Relevance)\.
+
+### Languages
+
+- [C#](https://github.com/josefpihrt.github.io/docs/snippetica/vscode/csharp)
+- [Visual Basic](https://github.com/josefpihrt.github.io/docs/snippetica/vscode/vb)
+- [C++](https://github.com/josefpihrt.github.io/docs/snippetica/vscode/cpp)
+- [HTML](https://github.com/josefpihrt.github.io/docs/snippetica/vscode/html)
+- [XML](https://github.com/josefpihrt.github.io/docs/snippetica/vscode/xml)

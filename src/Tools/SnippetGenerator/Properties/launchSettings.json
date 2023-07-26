@@ -2,7 +2,7 @@
   "profiles": {
     "SnippetGenerator": {
       "commandName": "Project",
-      "commandLineArgs": "../../../../../../ ../../../../../Snippetica.CodeGeneration/data"
+      "commandLineArgs": "../../../../.. ../../../../../Snippetica.CodeGeneration/data"
     }
   }
 }

@@ -1,9 +1,3 @@
-### List of Selected Snippets
+﻿# Markdown Snippets
 
-Shortcut|Title
---------|-----
-bi|bold italic
-ib|italic bold
-twoh|table with 1 column \(without header\)
-
-*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*
+Please see [documentation](https://github.com/josefpihrt.github.io/docs/snippetica/vscode) for further information\.
