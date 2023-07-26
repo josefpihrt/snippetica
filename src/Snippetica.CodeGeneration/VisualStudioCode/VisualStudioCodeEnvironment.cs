@@ -186,7 +186,7 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
                 Type = "git",
                 Url = "https://github.com/josefpihrt/snippetica.git"
             },
-            Bugs = new BugInfo() { Url = $"http://github.com/josefpihrt/snippetica/issues" },
+            Bugs = new BugInfo() { Url = "http://github.com/josefpihrt/snippetica/issues" },
             EngineVersion = "^1.0.0"
         };
 
