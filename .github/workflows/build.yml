@@ -65,14 +65,17 @@ jobs:
       - run: msbuild -m
       - run: ls Snippetica.VisualStudio -R
       - uses: actions/upload-artifact@v3
+        name: "Upload vsix file"
         with:
           name: vs_extension
           path: src/Snippetica.VisualStudio/bin/Release/*.vsix
       - uses: actions/upload-artifact@v3
+        name: "Upload manifest file"
         with:
           name: vs_extension
           path: src/Snippetica.VisualStudio/manifest.json
       - uses: actions/upload-artifact@v3
+        name: "Upload Visual Studio snippets"
         with:
           name: vs_snippets
           path: src/Snippetica.VisualStudio/**/*.snippet
