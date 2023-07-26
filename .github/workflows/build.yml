@@ -75,7 +75,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: vs_snippets
-          path: src/Snippetica.VisualStudio/*.snippet
+          path: src/Snippetica.VisualStudio/**/*.snippet
 
   build_vs_code_extensions:
     needs: pre_build
