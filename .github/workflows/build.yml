@@ -119,4 +119,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: "vs_code_extension_${{ matrix.component.name }}"
-          path: "*.vsix"
+          path: "src/Snippetica.VisualStudioCode/${{ matrix.component.directoryName }}/package/*.vsix"
