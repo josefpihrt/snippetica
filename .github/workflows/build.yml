@@ -107,8 +107,10 @@ jobs:
           dotnet build --no-restore
         working-directory: src/Tools/SnippetGenerator
       - run: |
+          cd tools
+          ls -R
           ./generate_snippets.ps1
-        working-directory: tools
+        working-directory: "."
       - run: >
           sed -i 's/"version": "1.0.0"/"version": "${{ needs.pre_build.outputs.version3 }}"/' "package.json"
       - run: npm install -g @vscode/vsce
