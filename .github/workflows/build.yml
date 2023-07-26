@@ -59,6 +59,7 @@ jobs:
         working-directory: src/Tools/DocumentationGenerator
       - run: |
           cd tools
+          ls -R
           ./generate_snippets.ps1
         working-directory: "."
       - run: dotnet restore
