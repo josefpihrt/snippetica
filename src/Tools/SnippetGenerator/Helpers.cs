@@ -9,7 +9,7 @@ using Snippetica.Records;
 
 namespace Snippetica.CodeGeneration;
 
-public static class Mapper
+public static class Helpers
 {
     public static ShortcutInfo MapShortcutInfo(Record record)
     {

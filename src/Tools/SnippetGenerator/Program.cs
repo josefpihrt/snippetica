@@ -34,15 +34,15 @@ internal static class Program
 
         ShortcutInfo[] shortcuts = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Shortcuts.xml"))
             .Where(f => !f.HasTag(KnownTags.Disabled))
-            .Select(f => Mapper.MapShortcutInfo(f))
+            .Select(f => Helpers.MapShortcutInfo(f))
             .ToArray();
 
         SnippetDirectory[] directories = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Directories.xml"))
             .Where(f => !f.HasTag(KnownTags.Disabled))
-            .Select(f => Mapper.MapSnippetDirectory(f, sourcePath))
+            .Select(f => Helpers.MapSnippetDirectory(f, sourcePath))
             .ToArray();
 
-        Dictionary<Language, LanguageDefinition> languageDefinitions = Mapper.LoadLanguages(dataDirectoryPath);
+        Dictionary<Language, LanguageDefinition> languageDefinitions = Helpers.LoadLanguages(dataDirectoryPath);
 
         SaveChangedSnippets(directories);
 
