@@ -5,7 +5,6 @@ namespace Snippetica;
 public static class KnownNames
 {
     public const string ProductName = "Snippetica";
-    public const string ReadMeFileName = "README.md";
     public const string ChangeLogFileName = "ChangeLog.md";
     public const string SourceDirectoryName = "src";
     public const string VisualStudioExtensionProjectName = ProductName + ".VisualStudio";

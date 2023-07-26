@@ -18,7 +18,7 @@ public static class Mapper
             record.GetString("Description"),
             record.GetStringOrDefault("Comment", "-"),
             record.GetEnumOrDefault("Kind", ShortcutKind.None),
-            record.GetItems("Languages").Select(f => ParseHelpers.ParseLanguage(f)),
+            record.GetItems("Languages").Select(f => ParseLanguage(f)),
             record.GetItems("IDE").Select(f => (EnvironmentKind)Enum.Parse(typeof(EnvironmentKind), f)),
             record.GetTags());
     }
@@ -27,7 +27,7 @@ public static class Mapper
     {
         return new SnippetDirectory(
             record.GetString("Path"),
-            ParseHelpers.ParseLanguage(record.GetString("Language")),
+            ParseLanguage(record.GetString("Language")),
             record.GetTags());
     }
 
@@ -44,7 +44,7 @@ public static class Mapper
             .Where(f => !f.HasTag(KnownTags.Disabled))
             .GroupBy(f => f.GetString(PropertyNames.Language)))
         {
-            LanguageDefinition language = definitions[ParseHelpers.ParseLanguage(grouping.Key)];
+            LanguageDefinition language = definitions[ParseLanguage(grouping.Key)];
 
             foreach (Record record in grouping)
             {
@@ -112,6 +112,22 @@ public static class Mapper
             record.GetStringOrDefault(PropertyNames.Shortcut),
             record.GetBooleanOrDefault(PropertyNames.IsDevelopment),
             record.GetTags());
+    }
+
+    private static Language ParseLanguage(string value)
+    {
+        return value switch
+        {
+            "Cpp" => Language.Cpp,
+            "C#" or "CSharp" => Language.CSharp,
+            "Html" => Language.Html,
+            "VB" or "VisualBasic" => Language.VisualBasic,
+            "Xaml" => Language.Xaml,
+            "Xml" => Language.Xml,
+            "Json" => Language.Json,
+            "Markdown" => Language.Markdown,
+            _ => throw new InvalidOperationException(),
+        };
     }
 
     private static class PropertyNames

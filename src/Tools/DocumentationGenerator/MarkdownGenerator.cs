@@ -1,13 +1,14 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using DotMarkdown;
+using DotMarkdown.Docusaurus;
 using DotMarkdown.Linq;
 using Pihrtsoft.Snippets;
-using static System.Environment;
 using static DotMarkdown.Linq.MFactory;
 using static Snippetica.CodeGeneration.CodeGenerationUtility;
 using static Snippetica.KnownNames;
@@ -17,55 +18,44 @@ namespace Snippetica.CodeGeneration.Markdown;
 
 public static class MarkdownGenerator
 {
-    private static readonly MarkdownFormat _markdownFormat = new MarkdownFormat(angleBracketEscapeStyle: AngleBracketEscapeStyle.EntityRef).WithTableOptions(TableOptions.FormatHeader);
+    private static readonly MarkdownFormat _markdownFormat = new(
+        tableOptions: MarkdownFormat.Default.TableOptions | TableOptions.FormatContent,
+        angleBracketEscapeStyle: AngleBracketEscapeStyle.EntityRef);
 
-    public static string GenerateProjectReadme(
+    public static string GenerateEnvironmentMarkdown(
+        SnippetEnvironment environment,
         IEnumerable<SnippetGeneratorResult> results,
         ProjectReadmeSettings settings)
     {
-        MDocument document = Document();
+        MDocument document = Document(DocusaurusMarkdownFactory.FrontMatter(("sidebar_label", environment.Kind.GetTitle())));
 
-        return GenerateProjectReadme(results, document, settings);
+        return GenerateEnvironmentMarkdown(results, document, settings);
     }
 
-    public static string GenerateProjectReadme(
+    public static string GenerateEnvironmentMarkdown(
         IEnumerable<SnippetGeneratorResult> results,
         MDocument document,
         ProjectReadmeSettings settings)
     {
         document.Add(
-            (!string.IsNullOrEmpty(settings.Header)) ? Heading2(settings.Header) : null,
-            Heading3("Snippets"),
-            Table(
-                TableRow("Language", "Count"),
-                results
-                    .Where(f => !f.Tags.Contains("ExcludeFromDocs"))
-                    .OrderBy(f => f.DirectoryName)
-                    .Select(f =>
-                    {
-                        return TableRow(
-                            Link(f.DirectoryName, $"{VisualStudioExtensionGitHubUrl}/{f.DirectoryName}/{ReadMeFileName}"),
-                            f.Snippets.Count);
-                    })));
+            Heading1(settings.Header),
+            Heading2("Languages"),
+            results
+                .Where(f => !f.Tags.Contains("ExcludeFromDocs"))
+                .OrderBy(f => f.DirectoryName)
+                .Select(f => BulletItem(Link(f.Language.GetTitle(), f.Language.GetIdentifier()))));
 
         return document.ToString(_markdownFormat);
     }
 
-    public static string GenerateDirectoryReadme(
-        IEnumerable<Snippet> snippets,
+    public static string GenerateSnippetsMarkdown(
+        SnippetGeneratorResult result,
         DirectoryReadmeSettings settings)
     {
-        MDocument document = Document();
+        MDocument document = Document(
+            DocusaurusMarkdownFactory.FrontMatter(("sidebar_label", result.Language.GetTitle())));
 
-        return GenerateDirectoryReadme(snippets, document, settings);
-    }
-
-    public static string GenerateDirectoryReadme(
-        IEnumerable<Snippet> snippets,
-        MDocument document,
-        DirectoryReadmeSettings settings)
-    {
-        document.Add((!string.IsNullOrEmpty(settings.Header)) ? Heading2(settings.Header) : null);
+        document.Add(Heading1(result.Language.GetTitle() + " Snippets for " + result.Environment.Kind.GetTitle()));
 
         if (!settings.IsDevelopment
             && settings.AddQuickReference)
@@ -73,19 +63,19 @@ public static class MarkdownGenerator
             document.Add(GetQuickReference());
         }
 
-        document.Add(Heading3("List of Selected Snippets"));
+        document.Add(Heading2("List of Selected Snippets"));
 
         document.Add(Table(
             TableRow("Shortcut", "Title"),
-            snippets
+            result.Snippets
                 .Where(f => !f.HasTag(KnownTags.ExcludeFromReadme))
                 .OrderBy(f => f.Shortcut)
                 .ThenBy(f => f.GetTitle())
                 .Select(f =>
                 {
                     return TableRow(
-                        f.Shortcut,
-                        LinkOrText(f.GetTitle(), GetSnippetPath(f)));
+                        InlineCode(f.Shortcut),
+                        f.GetTitle());
                 })));
 
         return document.ToString(_markdownFormat);
@@ -98,7 +88,7 @@ public static class MarkdownGenerator
 
             if (shortcuts.Count > 0)
             {
-                yield return Heading3("Quick Reference");
+                yield return Heading2("Quick Reference");
 
                 if (settings.QuickReferenceText is not null)
                     yield return Raw(settings.QuickReferenceText);
@@ -114,44 +104,29 @@ public static class MarkdownGenerator
                         if (!string.IsNullOrEmpty(title))
                             yield return Heading4(title);
 
-                        yield return TableWithShortcutInfoValueDesriptionComment(grouping);
+                        yield return TableWithShortcutInfoValueDescriptionComment(grouping);
                     }
                 }
                 else
                 {
-                    yield return NewLine;
-                    yield return TableWithShortcutInfoValueDesriptionComment(shortcuts);
+                    yield return Environment.NewLine;
+                    yield return TableWithShortcutInfoValueDescriptionComment(shortcuts);
                 }
             }
         }
 
-        string GetSnippetPath(Snippet snippet)
-        {
-            if (!settings.AddLinkToTitle)
-                return null;
-
-            string _pattern = $"^{Regex.Escape(settings.DirectoryPath)}{Regex.Escape(Path.DirectorySeparatorChar.ToString())}?";
-
-            string path = Regex.Replace(
-                snippet.FilePath,
-                _pattern,
-                "",
-                RegexOptions.IgnoreCase);
-
-            return path.Replace('\\', '/');
-        }
-
-        MTable TableWithShortcutInfoValueDesriptionComment(IEnumerable<ShortcutInfo> shortcuts)
+        MTable TableWithShortcutInfoValueDescriptionComment(IEnumerable<ShortcutInfo> shortcuts)
         {
             return Table(
                 TableRow("Shortcut", "Description", "Comment"),
                 shortcuts
                     .OrderBy(f => f.Value)
                     .ThenBy(f => f.Description)
-                    .Select(f => TableRow(f.Value, f.Description, f.Comment)));
+                    .Select(f => TableRow(InlineCode(f.Value), f.Description, f.Comment)));
         }
     }
 
+    //TODO: ?
     public static string GenerateVisualStudioMarketplaceOverview(IEnumerable<SnippetGeneratorResult> results)
     {
         MDocument document = Document(
@@ -167,10 +142,10 @@ public static class MarkdownGenerator
                 results.Select(f =>
                 {
                     return TableRow(
-                        Link(f.DirectoryName, VisualStudioExtensionGitHubUrl + "/" + f.DirectoryName + "/" + ReadMeFileName),
+                        Link(f.DirectoryName, VisualStudioExtensionGitHubUrl + "/" + f.DirectoryName + "/README.md"),
                         f.Snippets.Count);
                 })),
-            NewLine);
+            Environment.NewLine);
 
         return document.ToString(_markdownFormat);
     }

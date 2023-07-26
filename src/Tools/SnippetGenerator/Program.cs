@@ -40,21 +40,9 @@ internal static class Program
 
         SaveChangedSnippets(directories);
 
-        var visualStudio = new VisualStudioEnvironment();
+        GenerateSnippets(new VisualStudioEnvironment(), directories, languageDefinitions, VisualStudioExtensionProjectPath);
 
-        GenerateSnippets(
-            visualStudio,
-            directories,
-            languageDefinitions,
-            VisualStudioExtensionProjectPath);
-
-        var visualStudioCode = new VisualStudioCodeEnvironment();
-
-        GenerateSnippets(
-            visualStudioCode,
-            directories,
-            languageDefinitions,
-            VisualStudioCodeExtensionProjectPath);
+        GenerateSnippets(new VisualStudioCodeEnvironment(), directories, languageDefinitions, VisualStudioCodeExtensionProjectPath);
 
         Console.WriteLine("DONE");
     }

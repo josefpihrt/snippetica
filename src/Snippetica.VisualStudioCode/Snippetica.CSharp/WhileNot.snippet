@@ -1,9 +1,9 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>While statement</Title>
-    <Shortcut>w</Shortcut>
-    <Description>While statement</Description>
+    <Title>while not statement</Title>
+    <Shortcut>wx</Shortcut>
+    <Description>while not statement</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
@@ -14,11 +14,11 @@
       <Literal>
         <ID>expression</ID>
         <ToolTip>Expression to evaluate</ToolTip>
-        <Default>True</Default>
+        <Default>true</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[While $expression$
+    <Code Language="CSharp"><![CDATA[while (!$expression$) {
 	$end$
-End While]]></Code>
+}]]></Code>
   </Snippet>
 </CodeSnippet>

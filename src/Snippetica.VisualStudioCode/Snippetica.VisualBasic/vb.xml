@@ -5759,7 +5759,7 @@ End Using]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>While statement</Title>
-      <Shortcut>we</Shortcut>
+      <Shortcut>w</Shortcut>
       <Description>While statement</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5785,7 +5785,7 @@ End While]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>While Is Nothing</Title>
-      <Shortcut>wen</Shortcut>
+      <Shortcut>wn</Shortcut>
       <Description>While statement with condition whether an expression is nothing</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5811,7 +5811,7 @@ End While]]></Code>
   <CodeSnippet Format="1.1.0">
     <Header>
       <Title>While IsNot Nothing</Title>
-      <Shortcut>wexn</Shortcut>
+      <Shortcut>wxn</Shortcut>
       <Description>While statement with condition whether an expression is not nothing</Description>
       <Author>Josef Pihrt</Author>
       <SnippetTypes>
@@ -5830,6 +5830,32 @@ End While]]></Code>
         </Literal>
       </Declarations>
       <Code Language="VB"><![CDATA[While $expression$ IsNot Nothing
+	$end$
+End While]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>While not statement</Title>
+      <Shortcut>wx</Shortcut>
+      <Description>While not statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name WhileNot</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>True</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB"><![CDATA[While Not $expression$
 	$end$
 End While]]></Code>
     </Snippet>

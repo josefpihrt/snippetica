@@ -18,14 +18,23 @@ public abstract class SnippetEnvironment
 
     public List<ShortcutInfo> Shortcuts { get; } = new();
 
-    public Dictionary<Language, LanguageDefinition> LanguageDefinitions { get; } = new ();
+    public Dictionary<Language, LanguageDefinition> LanguageDefinitions { get; } = new();
 
     public IEnumerable<SnippetGeneratorResult> GenerateSnippets(
         IEnumerable<SnippetDirectory> directories,
         Dictionary<Language, LanguageDefinition> languages,
         bool includeDevelopment)
     {
-        return directories.SelectMany(directory => GenerateSnippets(directory, languages, includeDevelopment));
+        return directories.SelectMany(directory => GenerateSnippets(directory, languages, includeDevelopment)
+            .Select(result =>
+            {
+                List<Snippet> snippets = PostProcess(result.Snippets).ToList();
+
+                result.Snippets.Clear();
+                result.Snippets.AddRange(snippets);
+
+                return result;
+            }));
     }
 
     private IEnumerable<SnippetGeneratorResult> GenerateSnippets(
@@ -167,7 +176,7 @@ public abstract class SnippetEnvironment
         return IsSupportedLanguage(directory.Language);
     }
 
-    public virtual DirectoryReadmeSettings CreateDirectoryReadmeSettings(SnippetGeneratorResult result)
+    public DirectoryReadmeSettings CreateSnippetsMarkdownSettings(SnippetGeneratorResult result)
     {
         var settings = new DirectoryReadmeSettings()
         {
@@ -178,7 +187,7 @@ public abstract class SnippetEnvironment
             AddQuickReference = !result.IsDevelopment && !result.HasTag(KnownTags.NoQuickReference),
             Language = result.Language,
             DirectoryPath = result.Path,
-            GroupShortcuts = true
+            GroupShortcuts = false
         };
 
         if (!settings.IsDevelopment)
@@ -195,7 +204,7 @@ public abstract class SnippetEnvironment
         return settings;
     }
 
-    public ProjectReadmeSettings CreateProjectReadmeSettings()
+    public ProjectReadmeSettings CreateEnvironmentMarkdownSettings()
     {
         return new ProjectReadmeSettings()
         {
@@ -277,18 +286,13 @@ public abstract class SnippetEnvironment
 
         foreach (SnippetGeneratorResult result in results)
         {
+            ValidateSnippets(result.Snippets);
+
             result.Path = Path.Combine(directoryPath, result.DirectoryName);
 
-            List<Snippet> snippets = PostProcess(result.Snippets).ToList();
+            SaveSnippets(result);
 
-            result.Snippets.Clear();
-            result.Snippets.AddRange(snippets);
-
-            ValidateSnippets(snippets);
-
-            SaveSnippets(snippets, result);
-
-            allSnippets.AddRange(snippets);
+            allSnippets.AddRange(result.Snippets);
         }
 
 #if !DEBUG
@@ -298,9 +302,9 @@ public abstract class SnippetEnvironment
         return allSnippets;
     }
 
-    protected virtual void SaveSnippets(List<Snippet> snippets, SnippetGeneratorResult result)
+    protected virtual void SaveSnippets(SnippetGeneratorResult result)
     {
-        IOUtility.SaveSnippets(snippets, result.Path);
+        IOUtility.SaveSnippets(result.Snippets, result.Path);
     }
 
     protected virtual void SaveAllSnippets(string projectPath, List<Snippet> allSnippets)

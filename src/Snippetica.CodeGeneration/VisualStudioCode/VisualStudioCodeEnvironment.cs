@@ -6,8 +6,8 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Pihrtsoft.Snippets;
-using Snippetica.CodeGeneration.Json.Package;
 using Snippetica.CodeGeneration.Json;
+using Snippetica.CodeGeneration.Json.Package;
 using Snippetica.IO;
 using static Snippetica.KnownNames;
 using static Snippetica.KnownPaths;
@@ -139,14 +139,14 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
         }
     }
 
-    protected override void SaveSnippets(List<Snippet> snippets, SnippetGeneratorResult result)
+    protected override void SaveSnippets(SnippetGeneratorResult result)
     {
-        base.SaveSnippets(snippets, result);
+        base.SaveSnippets(result);
 
         if (!result.IsDevelopment)
         {
             IOUtility.SaveSnippetBrowserFile(
-                snippets,
+                result.Snippets,
                 Path.Combine(result.Path, $"{result.Language.GetIdentifier()}.xml"));
         }
 
@@ -160,7 +160,7 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
 
         IOUtility.WriteAllText(
             Path.Combine(packageDirectoryPath, "snippets", Path.ChangeExtension(languageId, "json")),
-            JsonUtility.ToJsonText(snippets.OrderBy(f => f.Title)),
+            JsonUtility.ToJsonText(result.Snippets.OrderBy(f => f.Title)),
             createDirectory: true);
 
         PackageInfo info = GetDefaultPackageInfo();
@@ -168,21 +168,18 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
         info.Name += "-" + languageId;
         info.DisplayName += " for " + language.GetTitle();
         info.Description += language.GetTitle() + ".";
-        info.Homepage += $"/{Path.GetFileName(directoryPath)}/{ReadMeFileName}";
+        info.Homepage += $"/{Path.GetFileName(directoryPath)}/README.md";
         info.Keywords.AddRange(language.GetKeywords());
         info.Snippets.Add(new SnippetInfo() { Language = languageId, Path = $"./snippets/{languageId}.json" });
 
         IOUtility.WriteAllText(Path.Combine(packageDirectoryPath, "package.json"), info.ToString(), IOUtility.UTF8NoBom);
 
-        DirectoryReadmeSettings settings = CreateDirectoryReadmeSettings(result);
-
-#if !DEBUG
-        MarkdownFileWriter.WriteDirectoryReadme(directoryPath, snippets, settings);
-#endif
+        DirectoryReadmeSettings settings = CreateSnippetsMarkdownSettings(result);
 
         settings.AddLinkToTitle = false;
         settings.Header = null;
 
+        //TODO: VS Code package readme
 #if !DEBUG
         MarkdownFileWriter.WriteDirectoryReadme(packageDirectoryPath, snippets, settings);
 #endif

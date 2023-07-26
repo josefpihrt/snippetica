@@ -2071,6 +2071,15 @@
     ],
     "description": "while statement with condition whether an expression is not equal to null [Obsolete]"
   },
+  "while not statement": {
+    "prefix": "wx",
+    "body": [
+      "while (!${1:true}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "while not statement"
+  },
   "while null": {
     "prefix": "wn",
     "body": [

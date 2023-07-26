@@ -6928,6 +6928,32 @@ finally {
   </CodeSnippet>
   <CodeSnippet Format="1.1.0">
     <Header>
+      <Title>while not statement</Title>
+      <Shortcut>wx</Shortcut>
+      <Description>while not statement</Description>
+      <Author>Josef Pihrt</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Meta-Name WhileNot</Keyword>
+      </Keywords>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expression</ID>
+          <ToolTip>Expression to evaluate</ToolTip>
+          <Default>true</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[while (!$expression$) {
+	$end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.1.0">
+    <Header>
       <Title>while not null</Title>
       <Shortcut>wxn</Shortcut>
       <Description>while statement with condition whether an expression is not equal to null</Description>

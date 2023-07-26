@@ -6,7 +6,6 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Pihrtsoft.Snippets;
-using Snippetica.CodeGeneration.Markdown;
 using Snippetica.IO;
 
 namespace Snippetica.CodeGeneration.VisualStudio;
@@ -136,17 +135,6 @@ public class VisualStudioEnvironment : SnippetEnvironment
             PkgDefGenerator.GeneratePkgDefFile(results));
 
         return snippets;
-    }
-
-    protected override void SaveSnippets(List<Snippet> snippets, SnippetGeneratorResult result)
-    {
-        base.SaveSnippets(snippets, result);
-
-#if !DEBUG
-        DirectoryReadmeSettings settings = CreateDirectoryReadmeSettings(result);
-
-        MarkdownFileWriter.WriteDirectoryReadme(result.Path, snippets, settings);
-#endif
     }
 
     protected override void SaveAllSnippets(string projectPath, List<Snippet> allSnippets)

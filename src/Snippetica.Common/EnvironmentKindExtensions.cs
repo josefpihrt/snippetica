@@ -26,7 +26,7 @@ public static class EnvironmentKindExtensions
             case EnvironmentKind.VisualStudio:
                 return "Visual Studio";
             case EnvironmentKind.VisualStudioCode:
-                return "Visual Studio Code";
+                return "VS Code";
             default:
                 throw new ArgumentException("", nameof(kind));
         }

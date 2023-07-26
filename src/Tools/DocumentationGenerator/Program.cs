@@ -8,16 +8,21 @@ using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Markdown;
 using Snippetica.CodeGeneration.VisualStudio;
 using Snippetica.CodeGeneration.VisualStudioCode;
-using static Snippetica.KnownPaths;
+using Snippetica.IO;
 
 namespace Snippetica.CodeGeneration.DocumentationGenerator;
 
 internal static class Program
 {
-    //TODO: data directory
     private static void Main(string[] args)
     {
-        string outputDirectoryPath = args[0];
+        if (args.Length < 2)
+        {
+            Console.WriteLine("Invalid number of arguments");
+            return;
+        }
+
+        string destinationPath = args[0];
         string dataDirectoryPath = args[1];
 
         ShortcutInfo[] shortcuts = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Shortcuts.xml"))
@@ -32,40 +37,66 @@ internal static class Program
 
         Dictionary<Language, LanguageDefinition> languageDefinitions = Mapper.LoadLanguages(dataDirectoryPath);
 
-        var visualStudio = new VisualStudioEnvironment();
+        GenerateDocumentation(new VisualStudioEnvironment(), directories, shortcuts, languageDefinitions, destinationPath);
 
-        List<SnippetGeneratorResult> visualStudioResults = GenerateSnippets(
-            visualStudio,
-            directories,
-            shortcuts,
-            languageDefinitions,
-            VisualStudioExtensionProjectPath);
-
-        var visualStudioCode = new VisualStudioCodeEnvironment();
-
-        List<SnippetGeneratorResult> visualStudioCodeResults = GenerateSnippets(
-            visualStudioCode,
-            directories,
-            shortcuts,
-            languageDefinitions,
-            VisualStudioCodeExtensionProjectPath);
+        GenerateDocumentation(new VisualStudioCodeEnvironment(), directories, shortcuts, languageDefinitions, destinationPath);
 
         Console.WriteLine("DONE");
     }
 
-    private static List<SnippetGeneratorResult> GenerateSnippets(
+    private static void GenerateDocumentation(
         SnippetEnvironment environment,
         SnippetDirectory[] directories,
         ShortcutInfo[] shortcuts,
         Dictionary<Language, LanguageDefinition> languages,
-        string projectPath)
+        string destinationPath)
     {
         environment.Shortcuts.AddRange(shortcuts.Where(f => f.Environments.Contains(environment.Kind)));
 
         List<SnippetGeneratorResult> results = environment.GenerateSnippets(directories, languages, includeDevelopment: false).ToList();
 
-        MarkdownFileWriter.WriteProjectReadme(projectPath, results, environment.CreateProjectReadmeSettings());
+        GenerateEnvironmentMarkdown(
+            Path.Combine(destinationPath, environment.Kind.GetIdentifier(), "index.md"),
+            environment,
+            results,
+            environment.CreateEnvironmentMarkdownSettings());
 
-        return results;
+        foreach (SnippetGeneratorResult result in results)
+        {
+            if (result.Tags.Contains("ExcludeFromDocs"))
+                continue;
+
+            WriteSnippetsMarkdown(
+                Path.Combine(destinationPath, result.Environment.Kind.GetIdentifier(), $"{result.Language.GetIdentifier()}.md"),
+                result,
+                environment.CreateSnippetsMarkdownSettings(result));
+        }
+    }
+
+    private static void GenerateEnvironmentMarkdown(
+        string filePath,
+        SnippetEnvironment environment,
+        IEnumerable<SnippetGeneratorResult> results,
+        ProjectReadmeSettings settings)
+    {
+        Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+
+        IOUtility.WriteAllText(
+            filePath,
+            MarkdownGenerator.GenerateEnvironmentMarkdown(environment, results, settings),
+            onlyIfChanged: false);
+    }
+
+    private static void WriteSnippetsMarkdown(
+        string filePath,
+        SnippetGeneratorResult result,
+        DirectoryReadmeSettings settings)
+    {
+        Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+
+        IOUtility.WriteAllText(
+            filePath,
+            MarkdownGenerator.GenerateSnippetsMarkdown(result, settings),
+            onlyIfChanged: false);
     }
 }
