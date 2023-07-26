@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DotMarkdown;
-using DotMarkdown.Docusaurus;
 using DotMarkdown.Linq;
 using Pihrtsoft.Snippets;
 using static DotMarkdown.Linq.MFactory;
@@ -22,8 +21,14 @@ public static class MarkdownGenerator
         IEnumerable<SnippetGeneratorResult> results,
         ProjectReadmeSettings settings)
     {
-        MDocument document = Document(DocusaurusMarkdownFactory.FrontMatter(("sidebar_label", environment.Kind.GetTitle())));
+        MDocument document = Document(
+            Raw(@"---
+sidebar_label: "
+                + environment.Kind.GetTitle()
+                + @"
+---
 
+"));
         return GenerateEnvironmentMarkdown(results, document, settings);
     }
 
@@ -48,8 +53,13 @@ public static class MarkdownGenerator
         DirectoryReadmeSettings settings)
     {
         MDocument document = Document(
-            DocusaurusMarkdownFactory.FrontMatter(("sidebar_label", result.Language.GetTitle())));
+            Raw(@"---
+sidebar_label: "
+                + result.Language.GetTitle()
+                + @"
+---
 
+"));
         document.Add(Heading1(result.Language.GetTitle() + " Snippets for " + result.Environment.Kind.GetTitle()));
 
         if (!settings.IsDevelopment

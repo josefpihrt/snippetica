@@ -7,7 +7,7 @@
     <CodeAnalysisRuleSet />
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="DotMarkdown.Docusaurus" Version="0.2.1-alpha0028.153.1" />
+    <PackageReference Include="DotMarkdown" Version="0.2.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Snippetica.Records\Snippetica.Records.csproj" />
