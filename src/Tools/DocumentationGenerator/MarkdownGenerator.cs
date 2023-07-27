@@ -7,6 +7,7 @@ using DotMarkdown;
 using DotMarkdown.Linq;
 using Pihrtsoft.Snippets;
 using static DotMarkdown.Linq.MFactory;
+using static DotMarkdown.Docusaurus.DocusaurusMarkdownFactory;
 
 namespace Snippetica.CodeGeneration.Markdown;
 
@@ -21,15 +22,7 @@ public static class MarkdownGenerator
         IEnumerable<SnippetGeneratorResult> results)
     {
         MDocument document = Document(
-            Raw(@"---
-sidebar_label: "
-                + environment.Kind.GetTitle()
-                + @"
----
-
-"));
-
-        document.Add(
+            FrontMatter(("sidebar_label", environment.Kind.GetTitle())),
             Heading1($"Snippets for {environment.Kind.GetTitle()}"),
             Heading2("Languages"),
             results
@@ -45,13 +38,8 @@ sidebar_label: "
         DirectoryReadmeSettings settings)
     {
         MDocument document = Document(
-            Raw(@"---
-sidebar_label: "
-                + result.Language.GetTitle()
-                + @"
----
+            FrontMatter(("sidebar_label", result.Language.GetTitle())));
 
-"));
         document.Add(Heading1(result.Language.GetTitle() + " Snippets for " + result.Environment.Kind.GetTitle()));
 
         document.Add(Heading2("List of Selected Snippets"));
