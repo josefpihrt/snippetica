@@ -8,6 +8,7 @@ using DotMarkdown.Linq;
 using Pihrtsoft.Snippets;
 using static DotMarkdown.Linq.MFactory;
 using static DotMarkdown.Docusaurus.DocusaurusMarkdownFactory;
+using System.Reflection.Metadata;
 
 namespace Snippetica.CodeGeneration.Markdown;
 
@@ -33,9 +34,7 @@ public static class MarkdownGenerator
         return document.ToString(_markdownFormat);
     }
 
-    public static string GenerateSnippetsMarkdown(
-        SnippetGeneratorResult result,
-        DirectoryReadmeSettings settings)
+    public static string GenerateSnippetsMarkdown(SnippetGeneratorResult result)
     {
         MDocument document = Document(
             FrontMatter(("sidebar_label", result.Language.GetTitle())));
@@ -57,50 +56,44 @@ public static class MarkdownGenerator
                         f.GetTitle());
                 })));
 
-        if (!settings.IsDevelopment
-            && settings.AddQuickReference)
-        {
-            document.Add(GetQuickReference());
-        }
+        return document.ToString(_markdownFormat);
+    }
+
+    public static string GenerateQuickReferenceForCSharpAndVisualBasic(
+        IEnumerable<ShortcutInfo> shortcuts)
+    {
+        MDocument document = Document(
+            FrontMatter(("sidebar_label", "Quick Reference for C# and VB")),
+            Heading1("Quick Reference for C# and VB"),
+            BulletItem(Inline("Default accessibility is ", InlineCode("public"), "(", InlineCode("Public"), " in Visual Basic)")),
+            GenerateQuickReferenceTable(shortcuts, group: true));
 
         return document.ToString(_markdownFormat);
+    }
 
-        IEnumerable<object> GetQuickReference()
+    private static IEnumerable<object> GenerateQuickReferenceTable(IEnumerable<ShortcutInfo> shortcuts, bool group)
+    {
+        if (group)
         {
-            List<ShortcutInfo> shortcuts = settings.Shortcuts
-                .Where(f => f.Languages.Contains(settings.Language))
-                .ToList();
-
-            if (shortcuts.Count > 0)
+            foreach (IGrouping<ShortcutKind, ShortcutInfo> grouping in shortcuts
+                .GroupBy(f => f.Kind)
+                .OrderBy(f => f.Key))
             {
-                yield return Heading2("Quick Reference");
+                string title = grouping.Key.GetTitle();
 
-                if (settings.QuickReferenceText is not null)
-                    yield return Raw(settings.QuickReferenceText);
+                if (!string.IsNullOrEmpty(title))
+                    yield return Heading2(title);
 
-                if (settings.GroupShortcuts)
-                {
-                    foreach (IGrouping<ShortcutKind, ShortcutInfo> grouping in shortcuts
-                        .GroupBy(f => f.Kind)
-                        .OrderBy(f => f.Key))
-                    {
-                        string title = grouping.Key.GetTitle();
-
-                        if (!string.IsNullOrEmpty(title))
-                            yield return Heading4(title);
-
-                        yield return TableWithShortcutInfoValueDescriptionComment(grouping);
-                    }
-                }
-                else
-                {
-                    yield return Environment.NewLine;
-                    yield return TableWithShortcutInfoValueDescriptionComment(shortcuts);
-                }
+                yield return TableWithShortcutInfoValueDescriptionComment(grouping);
             }
         }
+        else
+        {
+            yield return Environment.NewLine;
+            yield return TableWithShortcutInfoValueDescriptionComment(shortcuts);
+        }
 
-        MTable TableWithShortcutInfoValueDescriptionComment(IEnumerable<ShortcutInfo> shortcuts)
+        static MTable TableWithShortcutInfoValueDescriptionComment(IEnumerable<ShortcutInfo> shortcuts)
         {
             return Table(
                 TableRow("Shortcut", "Description", "Comment"),

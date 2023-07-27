@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Markdown;
 using Snippetica.CodeGeneration.VisualStudio;
@@ -39,8 +38,20 @@ internal static class Program
 
         Dictionary<Language, LanguageDefinition> languageDefinitions = Helpers.LoadLanguages(dataDirectoryPath);
 
-        GenerateDocumentation(new VisualStudioEnvironment(), directories, shortcuts, languageDefinitions, destinationPath, dataDirectoryPath);
-        GenerateDocumentation(new VisualStudioCodeEnvironment(), directories, shortcuts, languageDefinitions, destinationPath, dataDirectoryPath);
+        GenerateDocumentation(new VisualStudioEnvironment(), directories, shortcuts, languageDefinitions, Path.Combine(destinationPath, "snippets"));
+        GenerateDocumentation(new VisualStudioCodeEnvironment(), directories, shortcuts, languageDefinitions, Path.Combine(destinationPath, "snippets"));
+
+        string quickReference = MarkdownGenerator.GenerateQuickReferenceForCSharpAndVisualBasic(
+            shortcuts
+                .Where(f => f.Languages.Contains(Language.CSharp)
+                    || f.Languages.Contains(Language.VisualBasic))
+                .ToList());
+
+        IOUtility.WriteAllText(
+            Path.Combine(destinationPath, "quick-reference-cs-vb.md"),
+            quickReference,
+            onlyIfChanged: false,
+            createDirectory: true);
 
         Console.WriteLine("DONE");
     }
@@ -50,15 +61,14 @@ internal static class Program
         SnippetDirectory[] directories,
         ShortcutInfo[] shortcuts,
         Dictionary<Language, LanguageDefinition> languages,
-        string destinationPath,
-        string dataDirectoryPath)
+        string destinationPath)
     {
         environment.Shortcuts.AddRange(shortcuts.Where(f => f.Environments.Contains(environment.Kind)));
 
         List<SnippetGeneratorResult> results = environment.GenerateSnippets(directories, languages, includeDevelopment: false).ToList();
 
         IOUtility.WriteAllText(
-            Path.Combine(destinationPath, environment.Kind.GetIdentifier(), "index.md"),
+            Path.Combine(destinationPath, $"{environment.Kind.GetIdentifier()}.md"),
             MarkdownGenerator.GenerateEnvironmentMarkdown(environment, results),
             onlyIfChanged: false,
             createDirectory: true);
@@ -68,16 +78,9 @@ internal static class Program
             if (result.Tags.Contains(KnownTags.ExcludeFromDocs))
                 continue;
 
-            DirectoryReadmeSettings settings = environment.CreateSnippetsMarkdownSettings(result);
-
-            string filePath = Path.Combine(dataDirectoryPath, $"{result.Language.GetIdentifier()}.md");
-
-            if (File.Exists(filePath))
-                settings.QuickReferenceText = File.ReadAllText(filePath, Encoding.UTF8);
-
             IOUtility.WriteAllText(
                 Path.Combine(destinationPath, result.Environment.Kind.GetIdentifier(), $"{result.Language.GetIdentifier()}.md"),
-                MarkdownGenerator.GenerateSnippetsMarkdown(result, settings),
+                MarkdownGenerator.GenerateSnippetsMarkdown(result),
                 onlyIfChanged: false,
                 createDirectory: true);
         }

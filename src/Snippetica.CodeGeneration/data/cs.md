@@ -1,1 +1,0 @@
-﻿* Default access modifier is **public**.
