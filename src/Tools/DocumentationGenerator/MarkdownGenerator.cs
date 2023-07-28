@@ -29,7 +29,7 @@ public static class MarkdownGenerator
             results
                 .Where(f => !f.Tags.Contains(KnownTags.ExcludeFromDocs))
                 .OrderBy(f => f.DirectoryName)
-                .Select(f => BulletItem(Link(f.Language.GetTitle(), f.Language.GetIdentifier()))));
+                .Select(f => BulletItem(Link(f.Language.GetTitle(), $"{environment.Kind.GetIdentifier()}/{f.Language.GetIdentifier()}"))));
 
         return document.ToString(_markdownFormat);
     }
