@@ -69,38 +69,38 @@ public static class MarkdownGenerator
             GenerateQuickReferenceTable(shortcuts, group: true));
 
         return document.ToString(_markdownFormat);
-    }
 
-    private static IEnumerable<object> GenerateQuickReferenceTable(IEnumerable<ShortcutInfo> shortcuts, bool group)
-    {
-        if (group)
+        static IEnumerable<object> GenerateQuickReferenceTable(IEnumerable<ShortcutInfo> shortcuts, bool group)
         {
-            foreach (IGrouping<ShortcutKind, ShortcutInfo> grouping in shortcuts
-                .GroupBy(f => f.Kind)
-                .OrderBy(f => f.Key))
+            if (group)
             {
-                string title = grouping.Key.GetTitle();
+                foreach (IGrouping<ShortcutKind, ShortcutInfo> grouping in shortcuts
+                    .GroupBy(f => f.Kind)
+                    .OrderBy(f => f.Key))
+                {
+                    string title = grouping.Key.GetTitle();
 
-                if (!string.IsNullOrEmpty(title))
-                    yield return Heading2(title);
+                    if (!string.IsNullOrEmpty(title))
+                        yield return Heading2(title);
 
-                yield return TableWithShortcutInfoValueDescriptionComment(grouping);
+                    yield return TableWithShortcutInfoValueDescriptionComment(grouping);
+                }
             }
-        }
-        else
-        {
-            yield return Environment.NewLine;
-            yield return TableWithShortcutInfoValueDescriptionComment(shortcuts);
-        }
+            else
+            {
+                yield return Environment.NewLine;
+                yield return TableWithShortcutInfoValueDescriptionComment(shortcuts);
+            }
 
-        static MTable TableWithShortcutInfoValueDescriptionComment(IEnumerable<ShortcutInfo> shortcuts)
-        {
-            return Table(
-                TableRow("Shortcut", "Description", "Comment"),
-                shortcuts
-                    .OrderBy(f => f.Value)
-                    .ThenBy(f => f.Description)
-                    .Select(f => TableRow(InlineCode(f.Value), f.Description, f.Comment)));
+            static MTable TableWithShortcutInfoValueDescriptionComment(IEnumerable<ShortcutInfo> shortcuts)
+            {
+                return Table(
+                    TableRow("Shortcut", "Description", "Comment"),
+                    shortcuts
+                        .OrderBy(f => f.Value)
+                        .ThenBy(f => f.Description)
+                        .Select(f => TableRow(InlineCode(f.Value), f.Description, f.Comment)));
+            }
         }
     }
 }

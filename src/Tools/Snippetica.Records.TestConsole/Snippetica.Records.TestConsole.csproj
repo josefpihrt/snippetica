@@ -1,15 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <Version>0.1.0.0</Version>
     <AssemblyName>Snippetica.Records.Tests</AssemblyName>
     <RootNamespace>Snippetica.Records</RootNamespace>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Snippetica.Records\Snippetica.Records.csproj" />
   </ItemGroup>

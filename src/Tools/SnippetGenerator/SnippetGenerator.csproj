@@ -4,7 +4,6 @@
     <RootNamespace>Snippetica.CodeGeneration.SnippetGenerator</RootNamespace>
     <AssemblyName>Snippetica.CodeGeneration.SnippetGenerator</AssemblyName>
     <TargetFramework>net6.0</TargetFramework>
-    <CodeAnalysisRuleSet />
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="DotMarkdown" Version="0.2.0" />

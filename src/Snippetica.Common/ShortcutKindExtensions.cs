@@ -13,7 +13,7 @@ public static class ShortcutKindExtensions
             case ShortcutKind.None:
                 return "";
             case ShortcutKind.MemberDeclaration:
-                return "Member Declaration";
+                return "Type/Member Declaration";
             case ShortcutKind.DeclarationDefinition:
                 return "Declaration/Definition";
             case ShortcutKind.Modifier:
