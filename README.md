@@ -2,7 +2,9 @@
 
 A collection of snippets for C\#, C\+\+, HTML, VB and other languages\.
 
-## Snippetica for Visual Studio
+## Snippets for Visual Studio
+
+### Installation
 
 Install extension from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Snippetica)\.
 
@@ -15,7 +17,9 @@ Install extension from [Visual Studio Marketplace](https://marketplace.visualstu
 - [XAML](https://josefpihrt.github.io/docs/snippetica/vs/xaml)
 - [XML](https://josefpihrt.github.io/docs/snippetica/vs/xml)
 
-## Extensions for VS Code
+## Snippets for VS Code
+
+### Installation
 
 Install extension from [VS Code Marketplace](https://marketplace.visualstudio.com/search?term=snippetica&target=VSCode&category=All%20categories&sortBy=Relevance)\.
 
