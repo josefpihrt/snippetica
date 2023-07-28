@@ -125,3 +125,42 @@ jobs:
         with:
           name: "vs_code_extension_${{ matrix.component.name }}"
           path: "src/Snippetica.VisualStudioCode/${{ matrix.component.directoryName }}/package/*.vsix"
+
+  publish_vs_extension:
+    needs: build_vs_extension
+    runs-on: windows-latest
+    if: github.ref_type == 'tag' && startsWith(github.ref_name, 'v')
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: vs_extension
+          path: vs_extension
+      - run: |
+          $visualStudioPath = vswhere -latest -products * -requires Microsoft.VisualStudio.Component.VSSDK -property installationPath
+          $vsixPublisher = Join-Path "$visualStudioPath" "VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe"
+          & "$vsixPublisher" publish -payload Snippetica.VisualStudio.vsix -publishManifest manifest.json -personalAccessToken ${{ secrets.VS_MARKETPLACE_TOKEN }}
+        working-directory: vs_extension
+        name: Publish VS extension to Marketplace
+
+  publish_vs_code_extension:
+    needs: build_vs_code_extensions
+    runs-on: ubuntu-20.04
+    if: github.ref_type == 'tag' && startsWith(github.ref_name, 'v')
+    strategy:
+      matrix:
+        component:
+          - name: cpp
+          - name: cs
+          - name: html
+          - name: json
+          - name: markdown
+          - name: vb
+          - name: xml
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: vs_code_extension_${{ matrix.component.name }}
+          path: vs_code_extension
+      - run: npm install -g @vscode/vsce
+      - run: vsce publish -p ${{ secrets.VS_MARKETPLACE_TOKEN }}
+        working-directory: vs_code_extension
