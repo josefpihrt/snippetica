@@ -2,15 +2,14 @@
 
 using System.Diagnostics;
 
-namespace Snippetica.CodeGeneration.Commands
+namespace Snippetica.CodeGeneration.Commands;
+
+[DebuggerDisplay("{Kind}")]
+public abstract class Command
 {
-    [DebuggerDisplay("{Kind}")]
-    public abstract class Command
-    {
-        public abstract void Execute(ExecutionContext context);
+    public abstract void Execute(ExecutionContext context);
 
-        public abstract CommandKind Kind { get; }
+    public abstract CommandKind Kind { get; }
 
-        public virtual Command ChildCommand { get; }
-    }
+    public virtual Command ChildCommand { get; }
 }

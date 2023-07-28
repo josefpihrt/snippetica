@@ -3,28 +3,27 @@
 using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Commands;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public class XamlSnippetGenerator : SnippetGenerator
 {
-    public class XamlSnippetGenerator : SnippetGenerator
+    protected override MultiCommandCollection CreateCommands(Snippet snippet)
     {
-        protected override MultiCommandCollection CreateCommands(Snippet snippet)
+        var commands = new MultiCommandCollection();
+
+        if (snippet.HasTag(KnownTags.GenerateAlternativeShortcut))
         {
-            var commands = new MultiCommandCollection();
-
-            if (snippet.HasTag(KnownTags.GenerateAlternativeShortcut))
-            {
-                commands.AddMultiCommand(CommandUtility.ShortcutToLowercaseCommand);
-                commands.AddMultiCommand(CommandUtility.GenerateAlternativeShortcutCommand);
-            }
-
-            return commands;
+            commands.AddMultiCommand(CommandUtility.ShortcutToLowercaseCommand);
+            commands.AddMultiCommand(CommandUtility.GenerateAlternativeShortcutCommand);
         }
 
-        protected override Snippet PostProcess(Snippet snippet)
-        {
-            snippet.RemoveTag(KnownTags.NonUniqueTitle);
+        return commands;
+    }
 
-            return base.PostProcess(snippet);
-        }
+    protected override Snippet PostProcess(Snippet snippet)
+    {
+        snippet.RemoveTag(KnownTags.NonUniqueTitle);
+
+        return base.PostProcess(snippet);
     }
 }

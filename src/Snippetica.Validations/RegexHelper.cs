@@ -4,21 +4,20 @@ using System.Text.RegularExpressions;
 using Pihrtsoft.Text.RegularExpressions.Linq;
 using static Pihrtsoft.Text.RegularExpressions.Linq.Patterns;
 
-namespace Snippetica.Validations
+namespace Snippetica.Validations;
+
+public static class RegexHelper
 {
-    public static class RegexHelper
-    {
-        public static readonly Pattern InvalidLeadingSpacesPattern =
-            BeginLine()
-                .OneMany(Space(2))
-                .Space()
-                .Any(NotSpace(), EndInput())
-                .WhileNotNewLineChar();
+    public static readonly Pattern InvalidLeadingSpacesPattern =
+        BeginLine()
+            .OneMany(Space(2))
+            .Space()
+            .Any(NotSpace(), EndInput())
+            .WhileNotNewLineChar();
 
-        public static readonly Pattern TrimEndPattern = Spaces().Assert(NewLine(), EndInput());
+    public static readonly Pattern TrimEndPattern = Spaces().Assert(NewLine(), EndInput());
 
-        public static readonly Regex InvalidLeadingSpaces = InvalidLeadingSpacesPattern.ToRegex();
+    public static readonly Regex InvalidLeadingSpaces = InvalidLeadingSpacesPattern.ToRegex();
 
-        public static readonly Regex TrimEnd = TrimEndPattern.ToRegex();
-    }
+    public static readonly Regex TrimEnd = TrimEndPattern.ToRegex();
 }

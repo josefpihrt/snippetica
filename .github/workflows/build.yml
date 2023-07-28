@@ -1,0 +1,166 @@
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v*
+  pull_request:
+
+env:
+  Configuration: Release
+  TreatWarningsAsErrors: true
+  WarningsNotAsErrors: 1591,NU5128
+  Deterministic: true
+  RunCodeAnalysis: false
+
+jobs:
+  pre_build:
+    runs-on: ubuntu-20.04
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      version3: ${{ steps.version.outputs.version3 }}
+    defaults:
+      run:
+        working-directory: src
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - run: dotnet tool install -g GitVersion.Tool --version 5.10.0
+      - name: Resolve version
+        id: version
+        run: |
+          dotnet-gitversion > version.json
+          version="$(jq -r '.SemVer' version.json)"
+          version3="$(jq -r '.MajorMinorPatch' version.json)"
+          pr_version="$(jq -r '.MajorMinorPatch' version.json)-$(jq -r '.PreReleaseLabel' version.json).${{ github.run_number }}.${{ github.run_attempt }}"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then version=$pr_version; fi
+          echo "Resolved version: $version"
+          echo "version=${version}" >> $GITHUB_OUTPUT
+          echo "Resolved version3: $version3"
+          echo "version3=${version3}" >> $GITHUB_OUTPUT
+
+  build_vs_extension:
+    needs: pre_build
+    runs-on: windows-latest
+    env:
+      Version: ${{ needs.pre_build.outputs.version }}
+      DeployExtension: false
+    defaults:
+      run:
+        working-directory: src
+    steps:
+      - uses: actions/checkout@v3
+      - run: (Get-Content source.extension.vsixmanifest) -replace 'Version="1.0.0"', 'Version="${{ needs.pre_build.outputs.version3 }}"' | Set-Content source.extension.vsixmanifest
+        working-directory: src/Snippetica.VisualStudio
+      - run: dotnet restore Tools/DocumentationGenerator/DocumentationGenerator.csproj
+      - run: dotnet build Tools/DocumentationGenerator/DocumentationGenerator.csproj --no-restore
+      - run: |
+          cd tools
+          ./generate_snippets.ps1
+        name: "Generate snippets"
+        working-directory: "."
+      - run: dotnet restore
+      - uses: microsoft/setup-msbuild@v1.1
+      - run: msbuild -m
+      - uses: actions/upload-artifact@v3
+        name: "Upload vsix file"
+        with:
+          name: vs_extension
+          path: src/Snippetica.VisualStudio/bin/Release/*.vsix
+      - uses: actions/upload-artifact@v3
+        name: "Upload manifest file"
+        with:
+          name: vs_extension
+          path: src/Snippetica.VisualStudio/manifest.json
+      - uses: actions/upload-artifact@v3
+        name: "Upload Visual Studio snippets"
+        with:
+          name: vs_snippets
+          path: src/Snippetica.VisualStudio/**/*.snippet
+
+  build_vs_code_extensions:
+    needs: pre_build
+    runs-on: ubuntu-20.04
+    env:
+      Version: ${{ needs.pre_build.outputs.version }}
+      DefineConstants: VSCODE
+    strategy:
+      matrix:
+        component:
+          - name: cpp
+            directoryName: Snippetica.Cpp
+          - name: cs
+            directoryName: Snippetica.CSharp
+          - name: html
+            directoryName: Snippetica.Html
+          - name: json
+            directoryName: Snippetica.Json
+          - name: markdown
+            directoryName: Snippetica.Markdown
+          - name: vb
+            directoryName: Snippetica.VisualBasic
+          - name: xml
+            directoryName: Snippetica.Xml
+    defaults:
+      run:
+        working-directory: src/Snippetica.VisualStudioCode/${{ matrix.component.directoryName }}/package
+    steps:
+      - uses: actions/checkout@v3
+      - run: dotnet restore
+        working-directory: src/Tools/SnippetGenerator
+      - run: dotnet build --no-restore
+        working-directory: src/Tools/SnippetGenerator
+      - run: |
+          cd tools
+          ./generate_snippets.ps1
+        working-directory: "."
+        shell: pwsh
+        name: "Generate snippets"
+      - run: >
+          sed -i 's/"version": "1.0.0"/"version": "${{ needs.pre_build.outputs.version3 }}"/' "package.json"
+      - run: npm install -g @vscode/vsce
+      - run: vsce package
+      - uses: actions/upload-artifact@v3
+        with:
+          name: "vs_code_extension_${{ matrix.component.name }}"
+          path: "src/Snippetica.VisualStudioCode/${{ matrix.component.directoryName }}/package/*.vsix"
+
+  publish_vs_extension:
+    needs: build_vs_extension
+    runs-on: windows-latest
+    if: github.ref_type == 'tag' && startsWith(github.ref_name, 'v')
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: vs_extension
+          path: vs_extension
+      - run: |
+          $visualStudioPath = vswhere -latest -products * -requires Microsoft.VisualStudio.Component.VSSDK -property installationPath
+          $vsixPublisher = Join-Path "$visualStudioPath" "VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe"
+          & "$vsixPublisher" publish -payload Snippetica.VisualStudio.vsix -publishManifest manifest.json -personalAccessToken ${{ secrets.VS_MARKETPLACE_TOKEN }}
+        working-directory: vs_extension
+        name: Publish VS extension to Marketplace
+
+  publish_vs_code_extension:
+    needs: build_vs_code_extensions
+    runs-on: ubuntu-20.04
+    if: github.ref_type == 'tag' && startsWith(github.ref_name, 'v')
+    strategy:
+      matrix:
+        component:
+          - name: cpp
+          - name: cs
+          - name: html
+          - name: json
+          - name: markdown
+          - name: vb
+          - name: xml
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: vs_code_extension_${{ matrix.component.name }}
+          path: vs_code_extension
+      - run: npm install -g @vscode/vsce
+      - run: vsce publish -p ${{ secrets.VS_MARKETPLACE_TOKEN }}
+        working-directory: vs_code_extension

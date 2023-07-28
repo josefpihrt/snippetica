@@ -2,34 +2,33 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration.Commands
+namespace Snippetica.CodeGeneration.Commands;
+
+public class DeclarationCommand : SnippetCommand
 {
-    public class DeclarationCommand : SnippetCommand
+    public override CommandKind Kind => CommandKind.Declaration;
+
+    protected override void Execute(ExecutionContext context, Snippet snippet)
     {
-        public override CommandKind Kind => CommandKind.Declaration;
+        snippet.SuffixTitle(" declaration");
+        snippet.SuffixDescription(" declaration");
+        snippet.SuffixFileName("Declaration");
 
-        protected override void Execute(ExecutionContext context, Snippet snippet)
+        PlaceholderCollection placeholders = snippet.Code.Placeholders;
+
+        if (placeholders.Contains("_definitionStart"))
         {
-            snippet.SuffixTitle(" declaration");
-            snippet.SuffixDescription(" declaration");
-            snippet.SuffixFileName("Declaration");
+            int index = placeholders.Find("_definitionStart").Index - 1;
+            int endIndex = placeholders.Find("_definitionEnd").EndIndex + 1;
 
-            PlaceholderCollection placeholders = snippet.Code.Placeholders;
+            string s = snippet.CodeText;
 
-            if (placeholders.Contains("_definitionStart"))
-            {
-                int index = placeholders.Find("_definitionStart").Index - 1;
-                int endIndex = placeholders.Find("_definitionEnd").EndIndex + 1;
+            s = s.Insert(endIndex, ";");
+            s = s.Remove(index, endIndex - index);
 
-                string s = snippet.CodeText;
-
-                s = s.Insert(endIndex, ";");
-                s = s.Remove(index, endIndex - index);
-
-                snippet.CodeText = s;
-            }
-
-            snippet.AppendCode(snippet.Delimiter + Placeholder.EndIdentifier + snippet.Delimiter);
+            snippet.CodeText = s;
         }
+
+        snippet.AppendCode(snippet.Delimiter + Placeholder.EndIdentifier + snippet.Delimiter);
     }
 }

@@ -1,12 +1,3 @@
-### List of Selected Snippets
+﻿# HTML Snippets
 
-Shortcut|Title
---------|-----
-divcs|div with class attribute
-divid|div with id attribute
-metavp|meta viewport
-spancs|span with class attribute
-spanid|span with id attribute
-table2|table with sections
-
-*\(Generated with [DotMarkdown](http://github.com/JosefPihrt/DotMarkdown)\)*
+Please see [documentation](https://josefpihrt.github.io/docs/snippetica/vscode) for further information\.

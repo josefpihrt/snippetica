@@ -2,13 +2,12 @@
 
 using System.Collections.ObjectModel;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public class ModifierDefinitionCollection : KeyedCollection<string, ModifierDefinition>
 {
-    public class ModifierDefinitionCollection : KeyedCollection<string, ModifierDefinition>
+    protected override string GetKeyForItem(ModifierDefinition item)
     {
-        protected override string GetKeyForItem(ModifierDefinition item)
-        {
-            return item.Name;
-        }
+        return item.Name;
     }
 }

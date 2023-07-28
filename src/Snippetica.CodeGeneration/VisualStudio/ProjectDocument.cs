@@ -6,120 +6,119 @@ using System.Linq;
 using System.Xml.Linq;
 using Snippetica.Xml;
 
-namespace Snippetica.CodeGeneration.VisualStudio
+namespace Snippetica.CodeGeneration.VisualStudio;
+
+public class ProjectDocument
 {
-    public class ProjectDocument
+    public const string CSharpProjectExtension = "csproj";
+    public const string VisualBasicProjectExtension = "vbproj";
+
+    public ProjectDocument(string filePath)
     {
-        public const string CSharpProjectExtension = "csproj";
-        public const string VisualBasicProjectExtension = "vbproj";
+        FilePath = filePath;
 
-        public ProjectDocument(string filePath)
+        Document = XDocument.Load(filePath);
+    }
+
+    public XElement Project
+    {
+        get
         {
-            FilePath = filePath;
-
-            Document = XDocument.Load(filePath);
+            return Document
+                .Elements()
+                .FirstOrDefault(f => f.LocalName() == "Project");
         }
+    }
 
-        public XElement Project
-        {
-            get
-            {
-                return Document
-                    .Elements()
-                    .FirstOrDefault(f => f.LocalName() == "Project");
-            }
-        }
-
-        public XElement LastItemGroupOrDefault
-        {
-            get
-            {
-                return Project
-                    .Elements()
-                    .LastOrDefault(f => f.LocalName() == "ItemGroup");
-            }
-        }
-
-        public string FilePath { get; }
-
-        public XDocument Document { get; }
-
-        public void Save()
-        {
-            Document.Save(FilePath);
-        }
-
-        public IEnumerable<XElement> ItemGroups()
+    public XElement LastItemGroupOrDefault
+    {
+        get
         {
             return Project
                 .Elements()
-                .Where(f => f.LocalName() == "ItemGroup");
+                .LastOrDefault(f => f.LocalName() == "ItemGroup");
         }
+    }
 
-        public static IEnumerable<XElement> GetReferencedSnippetFiles(XElement itemGroup)
+    public string FilePath { get; }
+
+    public XDocument Document { get; }
+
+    public void Save()
+    {
+        Document.Save(FilePath);
+    }
+
+    public IEnumerable<XElement> ItemGroups()
+    {
+        return Project
+            .Elements()
+            .Where(f => f.LocalName() == "ItemGroup");
+    }
+
+    public static IEnumerable<XElement> GetReferencedSnippetFiles(XElement itemGroup)
+    {
+        foreach (XElement element in itemGroup.Elements())
         {
-            foreach (XElement element in itemGroup.Elements())
+            if (element.LocalName() == "Content"
+                && element
+                    .Attributes()
+                    .Any(f => f.LocalName() == "Include" && f.Value.EndsWith(".snippet")))
             {
-                if (element.LocalName() == "Content"
-                    && element
-                        .Attributes()
-                        .Any(f => f.LocalName() == "Include" && f.Value.EndsWith(".snippet")))
-                {
-                    yield return element;
-                }
+                yield return element;
             }
         }
+    }
 
-        public void RemoveSnippetFiles()
+    public void RemoveSnippetFiles()
+    {
+        foreach (XElement itemGroup in ItemGroups())
         {
-            foreach (XElement itemGroup in ItemGroups())
-            {
-                XElement[] items = GetReferencedSnippetFiles(itemGroup).ToArray();
+            XElement[] items = GetReferencedSnippetFiles(itemGroup).ToArray();
 
-                for (int i = 0; i < items.Length; i++)
-                    items[i].Remove();
+            for (int i = 0; i < items.Length; i++)
+                items[i].Remove();
 
-                if (!itemGroup.HasElements)
-                    itemGroup.Remove();
-            }
+            if (!itemGroup.HasElements)
+                itemGroup.Remove();
+        }
+    }
+
+    public XElement AddItemGroup()
+    {
+        var itemGroup = new XElement(Project.Name.Namespace + "ItemGroup");
+
+        XElement lastItemGroup = LastItemGroupOrDefault;
+
+        if (lastItemGroup is not null)
+        {
+            lastItemGroup.AddAfterSelf(itemGroup);
+        }
+        else
+        {
+            Project.Add(itemGroup);
         }
 
-        public XElement AddItemGroup()
-        {
-            var itemGroup = new XElement(Project.Name.Namespace + "ItemGroup");
+        return itemGroup;
+    }
 
-            XElement lastItemGroup = LastItemGroupOrDefault;
+    public void AddSnippetFiles(IEnumerable<string> paths, XElement itemGroup)
+    {
+        foreach (string path in paths)
+            AddSnippetFile(path, itemGroup);
+    }
 
-            if (lastItemGroup != null)
-            {
-                lastItemGroup.AddAfterSelf(itemGroup);
-            }
-            else
-            {
-                Project.Add(itemGroup);
-            }
+    public void AddSnippetFile(string path, XElement itemGroup)
+    {
+        string relativePath = path
+            .Replace(Path.GetDirectoryName(FilePath), "")
+            .TrimStart(Path.DirectorySeparatorChar);
 
-            return itemGroup;
-        }
+        XNamespace ns = itemGroup.Name.Namespace;
 
-        public void AddSnippetFiles(IEnumerable<string> paths, XElement itemGroup)
-        {
-            foreach (string path in paths)
-                AddSnippetFile(path, itemGroup);
-        }
-
-        public void AddSnippetFile(string path, XElement itemGroup)
-        {
-            string relativePath = path
-                .Replace(Path.GetDirectoryName(FilePath), "")
-                .TrimStart(Path.DirectorySeparatorChar);
-
-            XNamespace ns = itemGroup.Name.Namespace;
-
-            itemGroup.Add(new XElement(
-                ns + "Content",
-                new XAttribute("Include", relativePath),
-                new XElement(ns + "IncludeInVSIX", "true")));
-        }
+        itemGroup.Add(new XElement(
+            ns + "Content",
+            new XAttribute("Include", relativePath),
+            new XElement(ns + "IncludeInVSIX", "true")));
     }
 }

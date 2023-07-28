@@ -29,6 +29,13 @@
     ],
     "description": "element"
   },
+  "element (with attribute, with content)": {
+    "prefix": "eax",
+    "body": [
+      "<${1:element} ${2:attribute}=\"${3:value}\">${4:content}</${1}>${0}"
+    ],
+    "description": "element (with attribute, with content)"
+  },
   "element (with attribute)": {
     "prefix": "ea",
     "body": [
@@ -37,13 +44,6 @@
       "</${1}>"
     ],
     "description": "element (with attribute)"
-  },
-  "element (with attribute, with content)": {
-    "prefix": "eax",
-    "body": [
-      "<${1:element} ${2:attribute}=\"${3:value}\">${4:content}</${1}>${0}"
-    ],
-    "description": "element (with attribute, with content)"
   },
   "element (with content)": {
     "prefix": "ex",

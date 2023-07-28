@@ -2,22 +2,21 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration.Commands
+namespace Snippetica.CodeGeneration.Commands;
+
+public class SuffixFileNameCommand : SnippetCommand
 {
-    public class SuffixFileNameCommand : SnippetCommand
+    public SuffixFileNameCommand(string suffix)
     {
-        public SuffixFileNameCommand(string suffix)
-        {
-            Suffix = suffix;
-        }
+        Suffix = suffix;
+    }
 
-        public string Suffix { get; }
+    public string Suffix { get; }
 
-        public override CommandKind Kind => CommandKind.SuffixFileName;
+    public override CommandKind Kind => CommandKind.SuffixFileName;
 
-        protected override void Execute(ExecutionContext context, Snippet snippet)
-        {
-            snippet.SuffixFileName(Suffix);
-        }
+    protected override void Execute(ExecutionContext context, Snippet snippet)
+    {
+        snippet.SuffixFileName(Suffix);
     }
 }

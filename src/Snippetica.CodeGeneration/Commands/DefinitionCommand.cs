@@ -2,31 +2,30 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration.Commands
+namespace Snippetica.CodeGeneration.Commands;
+
+public class DefinitionCommand : SnippetCommand
 {
-    public class DefinitionCommand : SnippetCommand
+    public override CommandKind Kind => CommandKind.Definition;
+
+    protected override void Execute(ExecutionContext context, Snippet snippet)
     {
-        public override CommandKind Kind => CommandKind.Definition;
+        snippet.SuffixShortcut("x");
+        snippet.SuffixTitle(" definition");
+        snippet.SuffixDescription(" definition");
+        snippet.SnippetTypes |= SnippetTypes.SurroundsWith;
+        snippet.SuffixFileName("Definition");
+        snippet.AddTag(KnownTags.ExcludeFromDocs);
 
-        protected override void Execute(ExecutionContext context, Snippet snippet)
+        PlaceholderCollection placeholders = snippet.Code.Placeholders;
+
+        if (placeholders.Contains("_definition"))
         {
-            snippet.SuffixShortcut("x");
-            snippet.SuffixTitle(" definition");
-            snippet.SuffixDescription(" definition");
-            snippet.SnippetTypes |= SnippetTypes.SurroundsWith;
-            snippet.SuffixFileName("Definition");
-            snippet.AddTag(KnownTags.ExcludeFromReadme);
-
-            PlaceholderCollection placeholders = snippet.Code.Placeholders;
-
-            if (placeholders.Contains("_definition"))
-            {
-                snippet.CodeText = snippet.Code.ReplacePlaceholders(
-                    "_definition",
-                    @" {
+            snippet.CodeText = snippet.Code.ReplacePlaceholders(
+                "_definition",
+                @" {
 	$selected$$end$
 }");
-            }
         }
     }
 }

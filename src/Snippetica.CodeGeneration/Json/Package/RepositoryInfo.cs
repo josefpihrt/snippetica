@@ -3,22 +3,21 @@
 using Newtonsoft.Json.Linq;
 using static Snippetica.CodeGeneration.Json.JsonHelper;
 
-namespace Snippetica.CodeGeneration.Json.Package
+namespace Snippetica.CodeGeneration.Json.Package;
+
+public class RepositoryInfo
 {
-    public class RepositoryInfo
+    public string Type { get; set; }
+
+    public string Url { get; set; }
+
+    public JProperty ToJProperty()
     {
-        public string Type { get; set; }
+        var o = new JObject();
 
-        public string Url { get; set; }
+        AddProperty(o, "type", Type);
+        AddProperty(o, "url", Url);
 
-        public JProperty ToJProperty()
-        {
-            var o = new JObject();
-
-            AddProperty(o, "type", Type);
-            AddProperty(o, "url", Url);
-
-            return new JProperty("repository", o);
-        }
+        return new JProperty("repository", o);
     }
 }

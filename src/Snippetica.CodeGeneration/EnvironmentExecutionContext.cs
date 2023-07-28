@@ -2,21 +2,20 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public class EnvironmentExecutionContext : LanguageExecutionContext
 {
-    public class EnvironmentExecutionContext : LanguageExecutionContext
+    public EnvironmentExecutionContext(Snippet snippet, LanguageDefinition language, SnippetEnvironment environment)
+        : base(snippet, language)
     {
-        public EnvironmentExecutionContext(Snippet snippet, LanguageDefinition language, SnippetEnvironment environment)
-            : base(snippet, language)
-        {
-            Environment = environment;
-        }
+        Environment = environment;
+    }
 
-        public SnippetEnvironment Environment { get; }
+    public SnippetEnvironment Environment { get; }
 
-        public override string WithInitializerSuffix(Snippet snippet)
-        {
-            return "x";
-        }
+    public override string WithInitializerSuffix(Snippet snippet)
+    {
+        return "x";
     }
 }

@@ -2,54 +2,53 @@
 
 using System.Text;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public class SnippetCodeBuilder
 {
-    public class SnippetCodeBuilder
+    public SnippetCodeBuilder()
     {
-        public SnippetCodeBuilder()
-        {
-            StringBuilder = new StringBuilder();
-        }
+        StringBuilder = new StringBuilder();
+    }
 
-        public StringBuilder StringBuilder { get; }
+    public StringBuilder StringBuilder { get; }
 
-        public char Delimiter { get; set; } = '$';
+    public char Delimiter { get; set; } = '$';
 
-        public override string ToString()
-        {
-            return StringBuilder.ToString();
-        }
+    public override string ToString()
+    {
+        return StringBuilder.ToString();
+    }
 
-        public void AppendPlaceholder(string identifier)
-        {
-            AppendDelimiter();
-            Append(identifier);
-            AppendDelimiter();
-        }
+    public void AppendPlaceholder(string identifier)
+    {
+        AppendDelimiter();
+        Append(identifier);
+        AppendDelimiter();
+    }
 
-        public void AppendEndPlaceholder()
-        {
-            AppendPlaceholder("end");
-        }
+    public void AppendEndPlaceholder()
+    {
+        AppendPlaceholder("end");
+    }
 
-        internal void AppendSelectedPlaceholder()
-        {
-            AppendPlaceholder("selected");
-        }
+    internal void AppendSelectedPlaceholder()
+    {
+        AppendPlaceholder("selected");
+    }
 
-        public void AppendDelimiter()
-        {
-            Append(Delimiter);
-        }
+    public void AppendDelimiter()
+    {
+        Append(Delimiter);
+    }
 
-        public void Append(string value)
-        {
-            StringBuilder.Append(value);
-        }
+    public void Append(string value)
+    {
+        StringBuilder.Append(value);
+    }
 
-        public void Append(char value)
-        {
-            StringBuilder.Append(value);
-        }
+    public void Append(char value)
+    {
+        StringBuilder.Append(value);
     }
 }

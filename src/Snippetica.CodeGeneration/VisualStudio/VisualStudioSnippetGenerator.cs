@@ -2,27 +2,26 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration.VisualStudio
+namespace Snippetica.CodeGeneration.VisualStudio;
+
+public class VisualStudioSnippetGenerator : EnvironmentSnippetGenerator
 {
-    public class VisualStudioSnippetGenerator : EnvironmentSnippetGenerator
+    public VisualStudioSnippetGenerator(SnippetEnvironment environment, LanguageDefinition languageDefinition)
+        : base(environment, languageDefinition)
     {
-        public VisualStudioSnippetGenerator(SnippetEnvironment environment, LanguageDefinition languageDefinition)
-            : base(environment, languageDefinition)
-        {
-        }
+    }
 
-        protected override Snippet PostProcess(Snippet snippet)
-        {
-            Literal typeLiteral = snippet.Literals[LiteralIdentifiers.Type];
+    protected override Snippet PostProcess(Snippet snippet)
+    {
+        Literal typeLiteral = snippet.Literals[LiteralIdentifiers.Type];
 
-            if (typeLiteral != null)
-                typeLiteral.DefaultValue = "T";
+        if (typeLiteral is not null)
+            typeLiteral.DefaultValue = "T";
 
-            base.PostProcess(snippet);
+        base.PostProcess(snippet);
 
-            snippet.RemoveTag(KnownTags.ExcludeFromVisualStudioCode);
+        snippet.RemoveTag(KnownTags.ExcludeFromVisualStudioCode);
 
-            return snippet;
-        }
+        return snippet;
     }
 }

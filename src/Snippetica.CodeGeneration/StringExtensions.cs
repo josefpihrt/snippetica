@@ -2,24 +2,23 @@
 
 using System.Text.RegularExpressions;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public static class StringExtensions
 {
-    public static class StringExtensions
+    internal static string Replace(
+        this string value,
+        string placeholder,
+        string replacement,
+        bool includeWhitespace)
     {
-        internal static string Replace(
-            this string value,
-            string placeholder,
-            string replacement,
-            bool includeWhitespace)
+        if (includeWhitespace)
         {
-            if (includeWhitespace)
-            {
-                return Regex.Replace(value, $@"\s*{placeholder}\s*", replacement);
-            }
-            else
-            {
-                return value.Replace(placeholder, replacement);
-            }
+            return Regex.Replace(value, $@"\s*{placeholder}\s*", replacement);
+        }
+        else
+        {
+            return value.Replace(placeholder, replacement);
         }
     }
 }

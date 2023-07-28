@@ -2,36 +2,35 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration.Commands
+namespace Snippetica.CodeGeneration.Commands;
+
+public abstract class ModifierCommand : SnippetCommand
 {
-    public abstract class ModifierCommand : SnippetCommand
+    public virtual bool ShouldRemoveLiteral => false;
+
+    protected override void Execute(ExecutionContext context, Snippet snippet)
     {
-        public virtual bool ShouldRemoveLiteral => false;
+        LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
-        protected override void Execute(ExecutionContext context, Snippet snippet)
+        ModifierDefinition modifier = GetModifier(language);
+
+        snippet.PrefixTitle($"{modifier.Keyword} ");
+
+        snippet.PrefixShortcut(modifier.Shortcut);
+
+        snippet.PrefixDescription($"{modifier.Keyword} ");
+
+        if (ShouldRemoveLiteral)
         {
-            LanguageDefinition language = ((LanguageExecutionContext)context).Language;
-
-            ModifierDefinition modifier = GetModifier(language);
-
-            snippet.PrefixTitle($"{modifier.Keyword} ");
-
-            snippet.PrefixShortcut(modifier.Shortcut);
-
-            snippet.PrefixDescription($"{modifier.Keyword} ");
-
-            if (ShouldRemoveLiteral)
-            {
-                snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.Modifiers, modifier.Keyword);
-            }
-            else
-            {
-                snippet.ReplacePlaceholders(LiteralIdentifiers.Modifiers, $"${LiteralIdentifiers.Modifiers}$ {modifier.Keyword}");
-            }
-
-            snippet.PrefixFileName(modifier.Name);
+            snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.Modifiers, modifier.Keyword);
+        }
+        else
+        {
+            snippet.ReplacePlaceholders(LiteralIdentifiers.Modifiers, $"${LiteralIdentifiers.Modifiers}$ {modifier.Keyword}");
         }
 
-        protected abstract ModifierDefinition GetModifier(LanguageDefinition language);
+        snippet.PrefixFileName(modifier.Name);
     }
+
+    protected abstract ModifierDefinition GetModifier(LanguageDefinition language);
 }

@@ -7,10 +7,10 @@
   "version": "1.0.0",
   "author": "Josef Pihrt",
   "license": "Apache-2.0",
-  "homepage": "http://github.com/josefpihrt/snippetica/blob/main/src/Snippetica.VisualStudioCode/Snippetica.CSharp.Dev/README.md",
+  "homepage": "https://josefpihrt.github.io/docs/snippetica/vscode/csharp",
   "repository": {
     "type": "git",
-    "url": "http://github.com/josefpihrt/snippetica.git"
+    "url": "https://github.com/josefpihrt/snippetica.git"
   },
   "bugs": {
     "url": "http://github.com/josefpihrt/snippetica/issues"

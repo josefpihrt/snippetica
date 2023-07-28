@@ -2,61 +2,60 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration.Commands
+namespace Snippetica.CodeGeneration.Commands;
+
+public class InitializerCommand : SnippetCommand
 {
-    public class InitializerCommand : SnippetCommand
+    public override CommandKind Kind => CommandKind.Initializer;
+
+    protected override void Execute(ExecutionContext context, Snippet snippet)
     {
-        public override CommandKind Kind => CommandKind.Initializer;
+        LanguageDefinition language = ((LanguageExecutionContext)context).Language;
 
-        protected override void Execute(ExecutionContext context, Snippet snippet)
+        if (snippet.HasTag(KnownTags.Array))
         {
-            LanguageDefinition language = ((LanguageExecutionContext)context).Language;
+            AddInitializer(context, snippet, language.GetArrayInitializer($"${LiteralIdentifiers.Value}$"), language.GetDefaultValue());
+        }
+        else if (snippet.HasTag(KnownTags.Variable))
+        {
+            AddInitializer(context, snippet, language.GetVariableInitializer($"${LiteralIdentifiers.Value}$"), language.GetDefaultValue());
+        }
+        else
+        {
+            AddInitializer(context, snippet, language.GetObjectInitializer($"${LiteralIdentifiers.Value}$"), "x");
+        }
+    }
 
-            if (snippet.HasTag(KnownTags.Array))
-            {
-                AddInitializer(context, snippet, language.GetArrayInitializer($"${LiteralIdentifiers.Value}$"), language.GetDefaultValue());
-            }
-            else if (snippet.HasTag(KnownTags.Variable))
-            {
-                AddInitializer(context, snippet, language.GetVariableInitializer($"${LiteralIdentifiers.Value}$"), language.GetDefaultValue());
-            }
-            else
-            {
-                AddInitializer(context, snippet, language.GetObjectInitializer($"${LiteralIdentifiers.Value}$"), "x");
-            }
+    internal static Snippet AddInitializer(ExecutionContext context, Snippet snippet, string initializer, string defaultValue)
+    {
+        string suffix = (snippet.Language == Language.Cpp) ? " (with initialization)" : " (with initializer)";
+
+        snippet.SuffixTitle(suffix);
+        snippet.SuffixShortcut(context.WithInitializerSuffix(snippet));
+        snippet.SuffixDescription(suffix);
+
+        snippet.ReplacePlaceholders(LiteralIdentifiers.Initializer, initializer);
+
+        snippet.AddLiteral(LiteralIdentifiers.Value, null, defaultValue);
+
+        snippet.RemoveLiteral(LiteralIdentifiers.Initializer);
+
+        if (snippet.Language == Language.Cpp)
+        {
+            Literal typeLiteral = snippet.Literals.Find(LiteralIdentifiers.Type);
+            typeLiteral.DefaultValue = "auto";
+
+            LiteralRenamer.Rename(snippet, LiteralIdentifiers.Type, "type");
+        }
+        else
+        {
+            snippet.RemoveLiteralAndPlaceholders(LiteralIdentifiers.ArrayLength);
         }
 
-        internal static Snippet AddInitializer(ExecutionContext context, Snippet snippet, string initializer, string defaultValue)
-        {
-            string suffix = (snippet.Language == Language.Cpp) ? " (with initialization)" : " (with initializer)";
+        snippet.AddTag(KnownTags.ExcludeFromDocs);
 
-            snippet.SuffixTitle(suffix);
-            snippet.SuffixShortcut(context.WithInitializerSuffix(snippet));
-            snippet.SuffixDescription(suffix);
+        snippet.SuffixFileName((snippet.Language == Language.Cpp) ? "WithInitialization" : "WithInitializer");
 
-            snippet.ReplacePlaceholders(LiteralIdentifiers.Initializer, initializer);
-
-            snippet.AddLiteral(LiteralIdentifiers.Value, null, defaultValue);
-
-            snippet.RemoveLiteral(LiteralIdentifiers.Initializer);
-
-            if (snippet.Language == Language.Cpp)
-            {
-                Literal typeLiteral = snippet.Literals.Find(LiteralIdentifiers.Type);
-                typeLiteral.DefaultValue = "auto";
-
-                LiteralRenamer.Rename(snippet, LiteralIdentifiers.Type, "type");
-            }
-            else
-            {
-                snippet.RemoveLiteralAndPlaceholders(LiteralIdentifiers.ArrayLength);
-            }
-
-            snippet.AddTag(KnownTags.ExcludeFromReadme);
-
-            snippet.SuffixFileName((snippet.Language == Language.Cpp) ? "WithInitialization" : "WithInitializer");
-
-            return snippet;
-        }
+        return snippet;
     }
 }

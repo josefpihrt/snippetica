@@ -1,103 +1,111 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public abstract class LanguageDefinition
 {
-    public abstract class LanguageDefinition
+    protected LanguageDefinition()
     {
-        protected LanguageDefinition()
-        {
-            Modifiers = new ModifierDefinitionCollection();
-            Types = new TypeDefinitionCollection();
-            Keywords = new KeywordDefinitionCollection();
-        }
+        Modifiers = new ModifierDefinitionCollection();
+        Types = new TypeDefinitionCollection();
+        Keywords = new KeywordDefinitionCollection();
+    }
 
-        public abstract Language Language { get; }
+    public abstract Language Language { get; }
 
-        public ModifierDefinitionCollection Modifiers { get; }
+    public ModifierDefinitionCollection Modifiers { get; }
 
-        public TypeDefinitionCollection Types { get; }
+    public TypeDefinitionCollection Types { get; }
 
-        public KeywordDefinitionCollection Keywords { get; }
+    public KeywordDefinitionCollection Keywords { get; }
 
-        public TypeDefinition ObjectType
-        {
-            get { return Types["Object"]; }
-        }
+    public TypeDefinition ObjectType => Types["Object"];
 
-        public ModifierDefinition StaticModifier
-        {
-            get { return Modifiers["Static"]; }
-        }
+    public ModifierDefinition StaticModifier => Modifiers["Static"];
 
-        public ModifierDefinition VirtualModifier
-        {
-            get { return Modifiers["Virtual"]; }
-        }
+    public ModifierDefinition VirtualModifier => Modifiers["Virtual"];
 
-        public ModifierDefinition InlineModifier
-        {
-            get { return Modifiers["Inline"]; }
-        }
+    public ModifierDefinition InlineModifier => Modifiers["Inline"];
 
-        public ModifierDefinition ConstModifier
-        {
-            get { return Modifiers["Const"]; }
-        }
+    public ModifierDefinition ConstModifier => Modifiers["Const"];
 
-        public ModifierDefinition ConstExprModifier
-        {
-            get { return Modifiers["ConstExpr"]; }
-        }
+    public ModifierDefinition ConstExprModifier => Modifiers["ConstExpr"];
 
-        public abstract string GetTypeParameterList(string typeName);
+    public abstract string GetTypeParameterList(string typeName);
 
-        public abstract string GetDefaultParameter();
+    public abstract string GetDefaultParameter();
 
-        public abstract string GetObjectInitializer(string value);
+    public abstract string GetObjectInitializer(string value);
 
-        public abstract string GetCollectionInitializer(string value);
+    public abstract string GetCollectionInitializer(string value);
 
-        public abstract string GetDictionaryInitializer(string value);
+    public abstract string GetDictionaryInitializer(string value);
 
-        public abstract string GetArrayInitializer(string value);
+    public abstract string GetArrayInitializer(string value);
 
-        public abstract string GetVariableInitializer(string value);
+    public abstract string GetVariableInitializer(string value);
 
-        public virtual string GetDefaultValue()
-        {
-            return ObjectType.DefaultValue;
-        }
+    public virtual string GetDefaultValue() => ObjectType.DefaultValue;
 
-        public static LanguageDefinition FromLanguage(Language language)
-        {
-            switch (language)
-            {
-                case Language.CSharp:
-                    return LanguageDefinitions.CSharp;
-                case Language.VisualBasic:
-                    return LanguageDefinitions.VisualBasic;
-                case Language.Cpp:
-                    return LanguageDefinitions.Cpp;
-                default:
-                    return null;
-            }
-        }
+    public class CSharpDefinition : LanguageDefinition
+    {
+        public override Language Language => Language.CSharp;
 
-        public static KeywordDefinitionCollection GetKeywords(Language language)
-        {
-            switch (language)
-            {
-                case Language.CSharp:
-                    return LanguageDefinitions.CSharp.Keywords;
-                case Language.VisualBasic:
-                    return LanguageDefinitions.VisualBasic.Keywords;
-                case Language.Cpp:
-                    return LanguageDefinitions.Cpp.Keywords;
-                default:
-                    return null;
-            }
-        }
+        public override string GetTypeParameterList(string typeName) => $"<{typeName}>";
+
+        public override string GetDefaultParameter() => $"{ObjectType.Keyword} parameter";
+
+        public override string GetObjectInitializer(string value) => " { " + value + " }";
+
+        public override string GetDictionaryInitializer(string value) => $" {{ [0] = {value} }}";
+
+        public override string GetCollectionInitializer(string value) => " { " + value + " }";
+
+        public override string GetArrayInitializer(string value) => GetCollectionInitializer(value);
+
+        public override string GetVariableInitializer(string value) => $" = {value}";
+    }
+
+    public class CppDefinition : LanguageDefinition
+    {
+        public override Language Language => Language.Cpp;
+
+        public override string GetObjectInitializer(string value) => throw new InvalidOperationException();
+
+        public override string GetArrayInitializer(string value) => " = { " + value + " }";
+
+        public override string GetCollectionInitializer(string value) => throw new InvalidOperationException();
+
+        public override string GetDefaultParameter() => "T parameter";
+
+        public override string GetDictionaryInitializer(string value) => throw new InvalidOperationException();
+
+        public override string GetVariableInitializer(string value) => $" = {value}";
+
+        public override string GetTypeParameterList(string typeName) => "";
+
+        public override string GetDefaultValue() => "0";
+    }
+
+    public class VisualBasicDefinition : LanguageDefinition
+    {
+        public override Language Language => Language.VisualBasic;
+
+        public override string GetTypeParameterList(string typeName) => $"(Of {typeName})";
+
+        public override string GetDefaultParameter() => $"parameter As {ObjectType.Keyword}";
+
+        public override string GetObjectInitializer(string value) => " With {" + value + "}";
+
+        public override string GetDictionaryInitializer(string value) => $" From {{{{0, {value}}}}}";
+
+        public override string GetCollectionInitializer(string value) => " From {" + value + "}";
+
+        public override string GetArrayInitializer(string value) => " {" + value + "}";
+
+        public override string GetVariableInitializer(string value) => $" = {value}";
     }
 }

@@ -2,32 +2,31 @@
 
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration.Commands
+namespace Snippetica.CodeGeneration.Commands;
+
+public class AccessModifierCommand : ModifierCommand
 {
-    public class AccessModifierCommand : ModifierCommand
+    public AccessModifierCommand(ModifierDefinition modifier)
     {
-        public AccessModifierCommand(ModifierDefinition modifier)
-        {
-            Modifier = modifier;
-        }
+        Modifier = modifier;
+    }
 
-        public ModifierDefinition Modifier { get; }
+    public ModifierDefinition Modifier { get; }
 
-        public override CommandKind Kind => CommandKind.AccessModifier;
+    public override CommandKind Kind => CommandKind.AccessModifier;
 
-        public override bool ShouldRemoveLiteral => true;
+    public override bool ShouldRemoveLiteral => true;
 
-        protected override void Execute(ExecutionContext context, Snippet snippet)
-        {
-            base.Execute(context, snippet);
+    protected override void Execute(ExecutionContext context, Snippet snippet)
+    {
+        base.Execute(context, snippet);
 
-            if (!Modifier.Tags.Contains(KnownTags.Default))
-                snippet.AddTag(KnownTags.ExcludeFromReadme);
-        }
+        if (!Modifier.Tags.Contains(KnownTags.Default))
+            snippet.AddTag(KnownTags.ExcludeFromDocs);
+    }
 
-        protected override ModifierDefinition GetModifier(LanguageDefinition language)
-        {
-            return Modifier;
-        }
+    protected override ModifierDefinition GetModifier(LanguageDefinition language)
+    {
+        return Modifier;
     }
 }

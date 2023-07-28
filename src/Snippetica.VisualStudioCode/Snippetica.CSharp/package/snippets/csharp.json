@@ -54,6 +54,33 @@
     ],
     "description": "!string.IsNullOrWhiteSpace method"
   },
+  "* operator overloading": {
+    "prefix": "oo_Asterisk",
+    "body": [
+      "public static ${1:ThisName} operator *(${1} ${2:left}, ${1} ${3:right}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "* operator overloading"
+  },
+  "/ operator overloading": {
+    "prefix": "oo_Slash",
+    "body": [
+      "public static ${1:ThisName} operator /(${1} ${2:left}, ${1} ${3:right}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "/ operator overloading"
+  },
+  "& operator overloading": {
+    "prefix": "oo_Ampersand",
+    "body": [
+      "public static ${1:ThisName} operator &(${1} ${2:left}, ${1} ${3:right}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "& operator overloading"
+  },
   "#if directive": {
     "prefix": "ppif",
     "body": [
@@ -92,33 +119,6 @@
     ],
     "description": "% operator overloading"
   },
-  "& operator overloading": {
-    "prefix": "oo_Ampersand",
-    "body": [
-      "public static ${1:ThisName} operator &(${1} ${2:left}, ${1} ${3:right}) {",
-      "\t${0}",
-      "}"
-    ],
-    "description": "& operator overloading"
-  },
-  "* operator overloading": {
-    "prefix": "oo_Asterisk",
-    "body": [
-      "public static ${1:ThisName} operator *(${1} ${2:left}, ${1} ${3:right}) {",
-      "\t${0}",
-      "}"
-    ],
-    "description": "* operator overloading"
-  },
-  "/ operator overloading": {
-    "prefix": "oo_Slash",
-    "body": [
-      "public static ${1:ThisName} operator /(${1} ${2:left}, ${1} ${3:right}) {",
-      "\t${0}",
-      "}"
-    ],
-    "description": "/ operator overloading"
-  },
   "^ operator overloading": {
     "prefix": "oo_Caret",
     "body": [
@@ -127,24 +127,6 @@
       "}"
     ],
     "description": "^ operator overloading"
-  },
-  "| operator overloading": {
-    "prefix": "oo_VerticalBar",
-    "body": [
-      "public static ${1:ThisName} operator |(${1} ${2:left}, ${1} ${3:right}) {",
-      "\t${0}",
-      "}"
-    ],
-    "description": "| operator overloading"
-  },
-  "~ operator overloading": {
-    "prefix": "oo_Tilde",
-    "body": [
-      "public static ${1:ThisName} operator ~(${1} ${2:value}) {",
-      "\t${0}",
-      "}"
-    ],
-    "description": "~ operator overloading"
   },
   "+ operator overloading": {
     "prefix": "oo_Plus",
@@ -242,6 +224,24 @@
       "}"
     ],
     "description": ">> operator overloading"
+  },
+  "| operator overloading": {
+    "prefix": "oo_VerticalBar",
+    "body": [
+      "public static ${1:ThisName} operator |(${1} ${2:left}, ${1} ${3:right}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "| operator overloading"
+  },
+  "~ operator overloading": {
+    "prefix": "oo_Tilde",
+    "body": [
+      "public static ${1:ThisName} operator ~(${1} ${2:value}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "~ operator overloading"
   },
   "array variable": {
     "prefix": "va",
@@ -1091,13 +1091,6 @@
     ],
     "description": "internal read-only property declaration"
   },
-  "internal readonly record struct": {
-    "prefix": "irrest",
-    "body": [
-      "internal readonly record struct ${1:StructName}(${2:T parameter});${0}"
-    ],
-    "description": "internal readonly record struct declaration"
-  },
   "internal read-only struct": {
     "prefix": "irst",
     "body": [
@@ -1106,6 +1099,13 @@
       "}"
     ],
     "description": "internal read-only struct declaration"
+  },
+  "internal readonly record struct": {
+    "prefix": "irrest",
+    "body": [
+      "internal readonly record struct ${1:StructName}(${2:T parameter});${0}"
+    ],
+    "description": "internal readonly record struct declaration"
   },
   "internal record": {
     "prefix": "ire",
@@ -1432,13 +1432,6 @@
     ],
     "description": "private read-only property declaration"
   },
-  "private readonly record struct": {
-    "prefix": "prrest",
-    "body": [
-      "private readonly record struct ${1:StructName}(${2:T parameter});${0}"
-    ],
-    "description": "private readonly record struct declaration"
-  },
   "private read-only struct": {
     "prefix": "prst",
     "body": [
@@ -1447,6 +1440,13 @@
       "}"
     ],
     "description": "private read-only struct declaration"
+  },
+  "private readonly record struct": {
+    "prefix": "prrest",
+    "body": [
+      "private readonly record struct ${1:StructName}(${2:T parameter});${0}"
+    ],
+    "description": "private readonly record struct declaration"
   },
   "private record": {
     "prefix": "pre",
@@ -1655,13 +1655,6 @@
     ],
     "description": "public read-only property declaration"
   },
-  "public readonly record struct": {
-    "prefix": "rrest",
-    "body": [
-      "public readonly record struct ${1:StructName}(${2:T parameter});${0}"
-    ],
-    "description": "public readonly record struct declaration"
-  },
   "public read-only struct": {
     "prefix": "rst",
     "body": [
@@ -1670,6 +1663,13 @@
       "}"
     ],
     "description": "public read-only struct declaration"
+  },
+  "public readonly record struct": {
+    "prefix": "rrest",
+    "body": [
+      "public readonly record struct ${1:StructName}(${2:T parameter});${0}"
+    ],
+    "description": "public readonly record struct declaration"
   },
   "public record": {
     "prefix": "re",
@@ -2070,6 +2070,15 @@
       "/* Shortcut 'wexn' is obsolete, use 'wxn' instead. */${0}"
     ],
     "description": "while statement with condition whether an expression is not equal to null [Obsolete]"
+  },
+  "while not statement": {
+    "prefix": "wx",
+    "body": [
+      "while (!${1:true}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "while not statement"
   },
   "while null": {
     "prefix": "wn",

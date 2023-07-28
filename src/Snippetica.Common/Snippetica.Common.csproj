@@ -1,16 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.*" />
-    <PackageReference Include="Microsoft.CSharp" Version="4.*" />
-    <PackageReference Include="System.Net.Http" Version="4.*" />
-  </ItemGroup>
+  
   <ItemGroup>
     <PackageReference Include="SnippetManager" Version="1.3.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Records\Pihrtsoft.Records\Pihrtsoft.Records.csproj" />
+    <ProjectReference Include="..\Snippetica.Records\Snippetica.Records.csproj" />
   </ItemGroup>
 </Project>

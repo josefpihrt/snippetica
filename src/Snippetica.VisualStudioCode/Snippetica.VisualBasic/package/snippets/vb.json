@@ -22,6 +22,42 @@
     ],
     "description": "- operator overloading"
   },
+  "* operator overloading": {
+    "prefix": "oo_Asterisk",
+    "body": [
+      "Public Shared Operator *(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "\t${0}",
+      "End Operator"
+    ],
+    "description": "* operator overloading"
+  },
+  "/ operator overloading": {
+    "prefix": "oo_Slash",
+    "body": [
+      "Public Shared Operator /(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "\t${0}",
+      "End Operator"
+    ],
+    "description": "/ operator overloading"
+  },
+  "\\ operator overloading": {
+    "prefix": "oo_Backslash",
+    "body": [
+      "Public Shared Operator \\(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "\t${0}",
+      "End Operator"
+    ],
+    "description": "\\ operator overloading"
+  },
+  "& operator overloading": {
+    "prefix": "oo_Ampersand",
+    "body": [
+      "Public Shared Operator &(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
+      "\t${0}",
+      "End Operator"
+    ],
+    "description": "& operator overloading"
+  },
   "#If directive": {
     "prefix": "ppif",
     "body": [
@@ -50,42 +86,6 @@
       "#End Region"
     ],
     "description": "#Region preprocessor directive"
-  },
-  "& operator overloading": {
-    "prefix": "oo_Ampersand",
-    "body": [
-      "Public Shared Operator &(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "\t${0}",
-      "End Operator"
-    ],
-    "description": "& operator overloading"
-  },
-  "* operator overloading": {
-    "prefix": "oo_Asterisk",
-    "body": [
-      "Public Shared Operator *(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "\t${0}",
-      "End Operator"
-    ],
-    "description": "* operator overloading"
-  },
-  "/ operator overloading": {
-    "prefix": "oo_Slash",
-    "body": [
-      "Public Shared Operator /(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "\t${0}",
-      "End Operator"
-    ],
-    "description": "/ operator overloading"
-  },
-  "\\ operator overloading": {
-    "prefix": "oo_Backslash",
-    "body": [
-      "Public Shared Operator \\(${1:left} As ${2:ThisName}, ${3:right} As ${2})",
-      "\t${0}",
-      "End Operator"
-    ],
-    "description": "\\ operator overloading"
   },
   "^ operator overloading": {
     "prefix": "oo_Caret",
@@ -1724,7 +1724,7 @@
     "description": "Using statement"
   },
   "While Is Nothing": {
-    "prefix": "wen",
+    "prefix": "wn",
     "body": [
       "While ${1:x} Is Nothing",
       "\t${0}",
@@ -1733,7 +1733,7 @@
     "description": "While statement with condition whether an expression is nothing"
   },
   "While IsNot Nothing": {
-    "prefix": "wexn",
+    "prefix": "wxn",
     "body": [
       "While ${1:x} IsNot Nothing",
       "\t${0}",
@@ -1741,8 +1741,17 @@
     ],
     "description": "While statement with condition whether an expression is not nothing"
   },
+  "While not statement": {
+    "prefix": "wx",
+    "body": [
+      "While Not ${1:True}",
+      "\t${0}",
+      "End While"
+    ],
+    "description": "While not statement"
+  },
   "While statement": {
-    "prefix": "we",
+    "prefix": "w",
     "body": [
       "While ${1:True}",
       "\t${0}",

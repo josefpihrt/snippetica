@@ -8,110 +8,109 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration.Json
+namespace Snippetica.CodeGeneration.Json;
+
+public static class JsonUtility
 {
-    public static class JsonUtility
+    public static JObject ToJson(IEnumerable<Snippet> snippets)
     {
-        public static JObject ToJson(IEnumerable<Snippet> snippets)
+        return new JObject(snippets.Select(snippet => ToJProperty(snippet)));
+    }
+
+    public static string ToJsonText(IEnumerable<Snippet> snippets)
+    {
+        return ToJson(snippets).ToString(Formatting.Indented);
+    }
+
+    private static JProperty ToJProperty(Snippet snippet)
+    {
+        return new JProperty(
+            snippet.Title,
+            new JObject(
+                new JProperty("prefix", snippet.Shortcut),
+                new JProperty("body", new JArray(GetTextMateBody(snippet).ToLines())),
+                new JProperty("description", snippet.Description)
+            )
+        );
+    }
+
+    private static string GetTextMateBody(Snippet snippet)
+    {
+        snippet = (Snippet)snippet.Clone();
+
+        snippet.RemoveLiteralAndReplacePlaceholders(XmlSnippetGenerator.CDataIdentifier, "]]>");
+
+        LiteralCollection literals = snippet.Literals;
+
+        string s = snippet.CodeText;
+
+        var sb = new StringBuilder(s.Length);
+
+        int pos = 0;
+
+        PlaceholderCollection placeholders = snippet.Code.Placeholders;
+
+        Dictionary<Literal, int> literalIndexes = literals
+            .OrderBy(f => FindMinIndex(f, placeholders))
+            .Select((literal, i) => new { Literal = literal, Index = i })
+            .ToDictionary(f => f.Literal, f => f.Index + 1);
+
+        var processedIds = new List<string>();
+
+        foreach (Placeholder placeholder in placeholders.OrderBy(f => f.Index))
         {
-            return new JObject(snippets.Select(snippet => ToJProperty(snippet)));
-        }
+            sb.Append(s, pos, placeholder.Index - 1 - pos);
 
-        public static string ToJsonText(IEnumerable<Snippet> snippets)
-        {
-            return ToJson(snippets).ToString(Formatting.Indented);
-        }
-
-        private static JProperty ToJProperty(Snippet snippet)
-        {
-            return new JProperty(
-                snippet.Title,
-                new JObject(
-                    new JProperty("prefix", snippet.Shortcut),
-                    new JProperty("body", new JArray(GetTextMateBody(snippet).ToLines())),
-                    new JProperty("description", snippet.Description)
-                )
-            );
-        }
-
-        private static string GetTextMateBody(Snippet snippet)
-        {
-            snippet = (Snippet)snippet.Clone();
-
-            snippet.RemoveLiteralAndReplacePlaceholders(XmlSnippetGenerator.CDataIdentifier, "]]>");
-
-            LiteralCollection literals = snippet.Literals;
-
-            string s = snippet.CodeText;
-
-            var sb = new StringBuilder(s.Length);
-
-            int pos = 0;
-
-            PlaceholderCollection placeholders = snippet.Code.Placeholders;
-
-            Dictionary<Literal, int> literalIndexes = literals
-                .OrderBy(f => FindMinIndex(f, placeholders))
-                .Select((literal, i) => new { Literal = literal, Index = i })
-                .ToDictionary(f => f.Literal, f => f.Index + 1);
-
-            var processedIds = new List<string>();
-
-            foreach (Placeholder placeholder in placeholders.OrderBy(f => f.Index))
+            if (placeholder.IsEndPlaceholder)
             {
-                sb.Append(s, pos, placeholder.Index - 1 - pos);
+                sb.Append("${0}");
+            }
+            else if (placeholder.IsSelectedPlaceholder)
+            {
+                sb.Append("${TM_SELECTED_TEXT}");
+            }
+            else
+            {
+                string id = placeholder.Identifier;
 
-                if (placeholder.IsEndPlaceholder)
+                Literal literal = literals[id];
+
+                sb.Append("${");
+                sb.Append(literalIndexes[literal]);
+
+                if (!processedIds.Contains(id))
                 {
-                    sb.Append("${0}");
-                }
-                else if (placeholder.IsSelectedPlaceholder)
-                {
-                    sb.Append("${TM_SELECTED_TEXT}");
-                }
-                else
-                {
-                    string id = placeholder.Identifier;
-
-                    Literal literal = literals[id];
-
-                    sb.Append("${");
-                    sb.Append(literalIndexes[literal]);
-
-                    if (!processedIds.Contains(id))
-                    {
-                        sb.Append(":");
-                        sb.Append(literal.DefaultValue);
-                        processedIds.Add(id);
-                    }
-
-                    sb.Append("}");
+                    sb.Append(":");
+                    sb.Append(literal.DefaultValue);
+                    processedIds.Add(id);
                 }
 
-                pos = placeholder.EndIndex + 1;
+                sb.Append("}");
             }
 
-            sb.Append(s, pos, s.Length - pos);
-
-            return sb.ToString();
+            pos = placeholder.EndIndex + 1;
         }
 
-        private static int FindMinIndex(Literal literal, PlaceholderCollection placeholders)
-        {
-            return placeholders
-                .Where(placeholder => placeholder.Identifier == literal.Identifier)
-                .Min(placeholder => placeholder.Index);
-        }
+        sb.Append(s, pos, s.Length - pos);
 
-        private static IEnumerable<string> ToLines(this string value)
-        {
-            using (var sr = new StringReader(value))
-            {
-                string line = null;
+        return sb.ToString();
+    }
 
-                while ((line = sr.ReadLine()) != null)
-                    yield return line;
-            }
+    private static int FindMinIndex(Literal literal, PlaceholderCollection placeholders)
+    {
+        return placeholders
+            .Where(placeholder => placeholder.Identifier == literal.Identifier)
+            .Min(placeholder => placeholder.Index);
+    }
+
+    private static IEnumerable<string> ToLines(this string value)
+    {
+        using (var sr = new StringReader(value))
+        {
+            string line = null;
+
+            while ((line = sr.ReadLine()) is not null)
+                yield return line;
         }
     }
 }

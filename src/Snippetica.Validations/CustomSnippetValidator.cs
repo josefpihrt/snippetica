@@ -6,56 +6,55 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Pihrtsoft.Snippets.Validations;
 
-namespace Snippetica.Validations
+namespace Snippetica.Validations;
+
+public class CustomSnippetValidator : SnippetValidator
 {
-    public class CustomSnippetValidator : SnippetValidator
+    private static readonly SnippetValidator _defaultValidator = CreateDefaultValidator();
+
+    protected override IEnumerable<SnippetValidationResult> Validate(SnippetValidationContext context)
     {
-        private static readonly SnippetValidator _defaultValidator = CreateDefaultValidator();
+        foreach (SnippetValidationResult result in _defaultValidator.Validate(context.Snippet))
+            yield return result;
 
-        protected override IEnumerable<SnippetValidationResult> Validate(SnippetValidationContext context)
+        if (context.Snippet.Author != "Josef Pihrt")
         {
-            foreach (SnippetValidationResult result in _defaultValidator.Validate(context.Snippet))
-                yield return result;
+            yield return new SnippetValidationResult(
+                context.Snippet,
+                "",
+                "Snippet author is not 'Josef Pihrt'.",
+                ResultImportance.Information);
+        }
 
-            if (context.Snippet.Author != "Josef Pihrt")
-            {
-                yield return new SnippetValidationResult(
-                    context.Snippet,
-                    "",
-                    "Snippet author is not 'Josef Pihrt'.",
-                    ResultImportance.Information);
-            }
+        if (context.Snippet.Shortcut.Any(f => char.IsWhiteSpace(f)))
+        {
+            yield return new SnippetValidationResult(
+                context.Snippet,
+                "",
+                "Snippet shortcut contains white-space.",
+                ResultImportance.Information);
+        }
 
-            if (context.Snippet.Shortcut.Any(f => char.IsWhiteSpace(f)))
-            {
-                yield return new SnippetValidationResult(
-                    context.Snippet,
-                    "",
-                    "Snippet shortcut contains white-space.",
-                    ResultImportance.Information);
-            }
+        if (RegexHelper.TrimEnd.IsMatch(context.Snippet.CodeText))
+        {
+            yield return new SnippetValidationResult(
+                context.Snippet,
+                "",
+                "Snippet code contains trailing white-space.",
+                ResultImportance.Information);
+        }
 
-            if (RegexHelper.TrimEnd.IsMatch(context.Snippet.CodeText))
-            {
-                yield return new SnippetValidationResult(
-                    context.Snippet,
-                    "",
-                    "Snippet code contains trailing white-space.",
-                    ResultImportance.Information);
-            }
+        Match match = RegexHelper.InvalidLeadingSpaces.Match(context.Snippet.CodeText);
 
-            Match match = RegexHelper.InvalidLeadingSpaces.Match(context.Snippet.CodeText);
+        if (match.Success)
+        {
+            Console.WriteLine(match.Value);
 
-            if (match.Success)
-            {
-                Console.WriteLine(match.Value);
-
-                yield return new SnippetValidationResult(
-                    context.Snippet,
-                    "",
-                    "Snippet code contains invalid leading spaces.",
-                    ResultImportance.Information);
-            }
+            yield return new SnippetValidationResult(
+                context.Snippet,
+                "",
+                "Snippet code contains invalid leading spaces.",
+                ResultImportance.Information);
         }
     }
 }

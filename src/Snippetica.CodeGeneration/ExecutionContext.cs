@@ -3,22 +3,21 @@
 using System.Collections.ObjectModel;
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration
+namespace Snippetica.CodeGeneration;
+
+public class ExecutionContext
 {
-    public class ExecutionContext
+    public ExecutionContext(Snippet snippet)
     {
-        public ExecutionContext(Snippet snippet)
-        {
-            Snippets = new Collection<Snippet>() { snippet };
-        }
+        Snippets = new Collection<Snippet>() { snippet };
+    }
 
-        public bool IsCanceled { get; set; }
+    public bool IsCanceled { get; set; }
 
-        public Collection<Snippet> Snippets { get; }
+    public Collection<Snippet> Snippets { get; }
 
-        public virtual string WithInitializerSuffix(Snippet snippet)
-        {
-            return "x";
-        }
+    public virtual string WithInitializerSuffix(Snippet snippet)
+    {
+        return "x";
     }
 }
