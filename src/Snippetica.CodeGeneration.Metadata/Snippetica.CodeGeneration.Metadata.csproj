@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Snippetica.CodeGeneration</RootNamespace>
+    <AssemblyName>Snippetica.CodeGeneration.Metadata</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Snippetica.CodeGeneration.Common\Snippetica.CodeGeneration.Common.csproj" />
+  </ItemGroup>
+  
+</Project>

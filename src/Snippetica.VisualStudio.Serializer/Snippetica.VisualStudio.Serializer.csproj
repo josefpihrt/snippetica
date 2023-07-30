@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'!='Release|AnyCPU'">
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
+    <DocumentationFile>bin\$(Configuration)\Snippetica.VisualStudio.Serializer.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Version>1.3.3</Version>
+    <PackageId>SnippetManager</PackageId>
+    <Description>Snippet Manager API enables to work with Visual Studio snippets.</Description>
+    <Copyright>Copyright (c) 2015-2023 Josef Pihrt</Copyright>
+    <Authors>Josef Pihrt</Authors>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>http://github.com/josefpihrt/snippetmanager</PackageProjectUrl>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageTags>snippet;snippets;codeSnippet</PackageTags>
+    <PackageReadmeFile>docs/README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/josefpihrt/snippetmanager.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="SnippetManager.snk" />
+    <None Include="docs\NuGetReadme.md" Pack="true" PackagePath="docs\README.md" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>SnippetManager.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+</Project>

@@ -1,10 +1,22 @@
 ﻿<Project>
 
   <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
     <LangVersion>10.0</LangVersion>
     <Authors>Josef Pihrt</Authors>
     <Copyright>Copyright (c) 2016-2023 Josef Pihrt</Copyright>
-    <EnableNETAnalyzers>false</EnableNETAnalyzers>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Roslynator.Analyzers" Version="4.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 
 </Project>

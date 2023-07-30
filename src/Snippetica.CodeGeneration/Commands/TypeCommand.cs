@@ -2,7 +2,7 @@
 
 using System.Diagnostics;
 using System.IO;
-using Pihrtsoft.Snippets;
+using Snippetica.VisualStudio.Serializer;
 
 namespace Snippetica.CodeGeneration.Commands;
 

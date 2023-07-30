@@ -6,10 +6,10 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using DotMarkdown.Linq;
-using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Json;
 using Snippetica.CodeGeneration.Json.Package;
 using Snippetica.IO;
+using Snippetica.VisualStudio.Serializer;
 using static DotMarkdown.Linq.MFactory;
 
 namespace Snippetica.CodeGeneration.VisualStudioCode;

@@ -1,15 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Snippetica.CodeGeneration</RootNamespace>
+    <AssemblyName>Snippetica.CodeGeneration</AssemblyName>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="DotMarkdown" Version="0.2.0" />
     <PackageReference Include="LinqToRegex" Version="2.5.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="SnippetManager" Version="1.3.3" />
   </ItemGroup>
+  
   <ItemGroup>
-    <ProjectReference Include="..\Snippetica.Common\Snippetica.Common.csproj" />
-    <ProjectReference Include="..\Snippetica.Metadata\Snippetica.Metadata.csproj" />
+    <ProjectReference Include="..\Snippetica.CodeGeneration.Common\Snippetica.CodeGeneration.Common.csproj" />
+    <ProjectReference Include="..\Snippetica.CodeGeneration.Metadata\Snippetica.CodeGeneration.Metadata.csproj" />
   </ItemGroup>
+
 </Project>

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Snippetica.CodeGeneration.SnippetGenerator</RootNamespace>
+    <AssemblyName>Snippetica.CodeGeneration.SnippetGenerator</AssemblyName>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DotMarkdown" Version="0.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Snippetica.CodeGeneration.Metadata\Snippetica.CodeGeneration.Metadata.csproj" />
+    <ProjectReference Include="..\..\Snippetica.CodeGeneration.Common\Snippetica.CodeGeneration.Common.csproj" />
+    <ProjectReference Include="..\..\Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj" />
+  </ItemGroup>
+</Project>

@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
-using Pihrtsoft.Snippets;
 using Snippetica.IO;
+using Snippetica.VisualStudio.Serializer;
 
 namespace Snippetica.CodeGeneration.VisualStudio;
 

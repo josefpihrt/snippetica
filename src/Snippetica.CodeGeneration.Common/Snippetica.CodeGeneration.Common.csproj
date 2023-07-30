@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Snippetica.CodeGeneration</RootNamespace>
+    <AssemblyName>Snippetica.CodeGeneration.Common</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Snippetica.VisualStudio.Serializer\Snippetica.VisualStudio.Serializer.csproj" />
+  </ItemGroup>
+
+</Project>

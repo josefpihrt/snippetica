@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Pihrtsoft.Snippets;
+using Snippetica.VisualStudio.Serializer;
 
 namespace Snippetica.CodeGeneration.Json;
 

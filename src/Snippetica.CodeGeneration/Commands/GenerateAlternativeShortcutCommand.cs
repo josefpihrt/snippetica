@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Pihrtsoft.Snippets;
+using Snippetica.VisualStudio.Serializer;
 using static Pihrtsoft.Text.RegularExpressions.Linq.Patterns;
 
 namespace Snippetica.CodeGeneration.Commands;

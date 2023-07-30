@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using Pihrtsoft.Snippets;
 using Snippetica.IO;
 using Snippetica.Validations;
+using Snippetica.VisualStudio.Serializer;
 
 namespace Snippetica.CodeGeneration;
 
