@@ -1,44 +1,44 @@
 ﻿{
   "directories": [
     {
-      "path": "Snippetica.Metadata/Snippetica.CSharp",
+      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.CSharp",
       "language": "CSharp"
     },
     {
-      "path": "Snippetica.Metadata/Snippetica.VisualBasic",
+      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.VisualBasic",
       "language": "VisualBasic"
     },
     {
-      "path": "Snippetica.Metadata/Snippetica.Cpp",
+      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Cpp",
       "language": "Cpp"
     },
     {
-      "path": "Snippetica.Metadata/Snippetica.Html",
+      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Html",
       "language": "Html",
       "tags": [ "GenerateXmlSnippets" ]
     },
     {
-      "path": "Snippetica.Metadata/Snippetica.Xaml",
+      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Xaml",
       "language": "Xaml",
       "tags": [ "GenerateXmlSnippets", "ExcludeFromVisualStudioCode", "ExcludeFromDocs" ]
     },
     {
-      "path": "Snippetica.Metadata/Snippetica.Xml",
+      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Xml",
       "language": "Xml",
       "tags": [ "GenerateXmlSnippets" ]
     },
     {
-      "path": "Snippetica.Metadata/Snippetica.Xml.CodeSnippet",
+      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Xml.CodeSnippet",
       "language": "Xml",
       "tags": [ "NoQuickReference", "ExcludeFromVisualStudioCode", "ExcludeFromDocs" ]
     },
     {
-      "path": "Snippetica.Metadata/Snippetica.Markdown",
+      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Markdown",
       "language": "Markdown",
       "tags": [ "GenerateXmlSnippets", "ExcludeFromVisualStudio", "ExcludeFromDocs" ]
     },
     {
-      "path": "Snippetica.Metadata/Snippetica.Json",
+      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Json",
       "language": "Json",
       "tags": [ "ExcludeFromVisualStudio", "ExcludeFromDocs" ]
     }

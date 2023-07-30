@@ -37,8 +37,8 @@ internal static class Program
         Dictionary<Language, LanguageDefinition> languageDefinitions = metadata.Languages;
 
         SaveChangedSnippets(directories);
-        GenerateSnippets(new VisualStudioEnvironment(), directories, languageDefinitions, Path.Combine(sourcePath, "Snippetica.VisualStudio"));
-        GenerateSnippets(new VisualStudioCodeEnvironment(), directories, languageDefinitions, Path.Combine(sourcePath, "Snippetica.VisualStudioCode"));
+        GenerateSnippets(new VisualStudioEnvironment(), directories, languageDefinitions, Path.Combine(sourcePath, "Snippetica.VisualStudio.Vsix"));
+        GenerateSnippets(new VisualStudioCodeEnvironment(), directories, languageDefinitions, Path.Combine(sourcePath, "Snippetica.VisualStudioCode.Vsix"));
 
         Console.WriteLine("DONE");
     }

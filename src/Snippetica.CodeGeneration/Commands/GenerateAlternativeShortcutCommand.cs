@@ -6,13 +6,12 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Snippetica.VisualStudio;
-using static Pihrtsoft.Text.RegularExpressions.Linq.Patterns;
 
 namespace Snippetica.CodeGeneration.Commands;
 
 public class GenerateAlternativeShortcutCommand : SnippetCommand
 {
-    private static readonly Regex _regex = AssertBack(LetterLower()).Assert(LetterUpper()).ToRegex();
+    private static readonly Regex _regex = new("(?<=\\p{Ll})(?=\\p{Lu})");
 
     public override CommandKind Kind => CommandKind.AlternativeShortcut;
 

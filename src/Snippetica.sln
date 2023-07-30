@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.CodeGeneration.M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.CodeGeneration.Common", "Snippetica.CodeGeneration.Common\Snippetica.CodeGeneration.Common.csproj", "{EA986E08-DD26-43EA-94F0-8D2F70D4A17F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.CodeGeneration.SnippetGenerator", "Tools\Snippetica.CodeGeneration.SnippetGenerator\Snippetica.CodeGeneration.SnippetGenerator.csproj", "{F28D28EC-37E4-4857-B072-91A2D1FF8F60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetGenerator", "Tools\Snippetica.CodeGeneration.SnippetGenerator\SnippetGenerator.csproj", "{F28D28EC-37E4-4857-B072-91A2D1FF8F60}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.CodeGeneration", "Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj", "{B53B29D0-8BB3-478D-AD94-863F913E56CE}"
 EndProject
@@ -32,7 +32,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode.Vsix.Dev", "Snippetica.VisualStudioCode.Vsix.Dev\Snippetica.VisualStudioCode.Vsix.Dev.shproj", "{DDDAE79D-39A1-4D6E-83E9-E9758C632645}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.CodeGeneration.DocumentationGenerator", "Tools\Snippetica.CodeGeneration.DocumentationGenerator\Snippetica.CodeGeneration.DocumentationGenerator.csproj", "{31FE484E-EC51-4B75-88A4-9B7D33710686}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentationGenerator", "Tools\Snippetica.CodeGeneration.DocumentationGenerator\DocumentationGenerator.csproj", "{31FE484E-EC51-4B75-88A4-9B7D33710686}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.VisualStudio", "Snippetica.VisualStudio\Snippetica.VisualStudio.csproj", "{5881DF81-7D89-4037-906E-098EB6A48A69}"
 EndProject
