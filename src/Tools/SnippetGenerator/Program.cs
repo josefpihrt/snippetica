@@ -32,22 +32,12 @@ internal static class Program
         sourcePath = Path.GetFullPath(sourcePath);
         dataDirectoryPath = Path.GetFullPath(dataDirectoryPath);
 
-        ShortcutInfo[] shortcuts = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Shortcuts.xml"))
-            .Where(f => !f.HasTag(KnownTags.Disabled))
-            .Select(f => Helpers.MapShortcutInfo(f))
-            .ToArray();
-
-        SnippetDirectory[] directories = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Directories.xml"))
-            .Where(f => !f.HasTag(KnownTags.Disabled))
-            .Select(f => Helpers.MapSnippetDirectory(f, sourcePath))
-            .ToArray();
-
-        Dictionary<Language, LanguageDefinition> languageDefinitions = Helpers.LoadLanguages(dataDirectoryPath);
+        SnippeticaMetadata metadata = SnippeticaMetadata.Load(Path.Combine(dataDirectoryPath, "json.json"), sourcePath);
+        SnippetDirectory[] directories = metadata.Directories;
+        Dictionary<Language, LanguageDefinition> languageDefinitions = metadata.Languages;
 
         SaveChangedSnippets(directories);
-
         GenerateSnippets(new VisualStudioEnvironment(), directories, languageDefinitions, Path.Combine(sourcePath, "Snippetica.VisualStudio"));
-
         GenerateSnippets(new VisualStudioCodeEnvironment(), directories, languageDefinitions, Path.Combine(sourcePath, "Snippetica.VisualStudioCode"));
 
         Console.WriteLine("DONE");

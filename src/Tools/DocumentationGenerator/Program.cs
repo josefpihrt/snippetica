@@ -26,32 +26,14 @@ internal static class Program
         string destinationPath = args[1];
         string dataDirectoryPath = args[2];
 
-        ShortcutInfo[] shortcuts = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Shortcuts.xml"))
-            .Where(f => !f.HasTag(KnownTags.Disabled))
-            .Select(f => Helpers.MapShortcutInfo(f))
-            .ToArray();
-
-        SnippetDirectory[] directories = Records.Document.ReadRecords(Path.Combine(dataDirectoryPath, "Directories.xml"))
-            .Where(f => !f.HasTag(KnownTags.Disabled))
-            .Select(f => Helpers.MapSnippetDirectory(f, sourcePath))
-            .ToArray();
-
-        Dictionary<Language, LanguageDefinition> languageDefinitions = Helpers.LoadLanguages(dataDirectoryPath);
+        SnippeticaMetadata metadata = SnippeticaMetadata.Load(Path.Combine(dataDirectoryPath, "json.json"), sourcePath);
+        ShortcutInfo[] shortcuts = metadata.Shortcuts;
+        SnippetDirectory[] directories = metadata.Directories;
+        Dictionary<Language, LanguageDefinition> languageDefinitions = metadata.Languages;
 
         GenerateDocumentation(new VisualStudioEnvironment(), directories, shortcuts, languageDefinitions, Path.Combine(destinationPath, "snippets"));
         GenerateDocumentation(new VisualStudioCodeEnvironment(), directories, shortcuts, languageDefinitions, Path.Combine(destinationPath, "snippets"));
-
-        string quickReference = MarkdownGenerator.GenerateQuickReferenceForCSharpAndVisualBasic(
-            shortcuts
-                .Where(f => f.Languages.Contains(Language.CSharp)
-                    || f.Languages.Contains(Language.VisualBasic))
-                .ToList());
-
-        IOUtility.WriteAllText(
-            Path.Combine(destinationPath, "quick-reference-cs-vb.md"),
-            quickReference,
-            onlyIfChanged: false,
-            createDirectory: true);
+        GenerateQuickReference(destinationPath, shortcuts);
 
         Console.WriteLine("DONE");
     }
@@ -84,5 +66,20 @@ internal static class Program
                 onlyIfChanged: false,
                 createDirectory: true);
         }
+    }
+
+    private static void GenerateQuickReference(string destinationPath, ShortcutInfo[] shortcuts)
+    {
+        string quickReference = MarkdownGenerator.GenerateQuickReferenceForCSharpAndVisualBasic(
+            shortcuts
+                .Where(f => f.Languages.Contains(Language.CSharp)
+                    || f.Languages.Contains(Language.VisualBasic))
+                .ToList());
+
+        IOUtility.WriteAllText(
+            Path.Combine(destinationPath, "quick-reference-cs-vb.md"),
+            quickReference,
+            onlyIfChanged: false,
+            createDirectory: true);
     }
 }

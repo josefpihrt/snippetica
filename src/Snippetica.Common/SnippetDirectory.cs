@@ -2,7 +2,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -13,43 +12,20 @@ namespace Snippetica;
 [DebuggerDisplay("{DebuggerDisplay,nq}")]
 public class SnippetDirectory
 {
-    private static readonly ReadOnlyCollection<string> _noTags = new(Array.Empty<string>());
+    public string Path { get; init; }
 
-    public SnippetDirectory(string path, Language language, params string[] tags)
-    {
-        Path = path;
-        Language = language;
+    public Language Language { get; init; }
 
-        if (tags?.Length > 0)
-        {
-            Tags = new ReadOnlyCollection<string>(tags);
-        }
-        else
-        {
-            Tags = _noTags;
-        }
-    }
+    public List<string> Tags { get; init; } = new();
 
-    public string Path { get; }
-
-    public Language Language { get; }
-
-    public ReadOnlyCollection<string> Tags { get; }
-
-    public string Name
-    {
-        get { return System.IO.Path.GetFileName(Path); }
-    }
+    public string Name => System.IO.Path.GetFileName(Path);
 
     public SnippetDirectory WithPath(string path)
     {
-        return new SnippetDirectory(path, Language, Tags.ToArray());
+        return new SnippetDirectory() { Path = path, Language = Language, Tags = Tags.ToList() };
     }
 
-    public bool HasTag(string tag)
-    {
-        return Tags.Any(f => f.Equals(tag, StringComparison.Ordinal));
-    }
+    public bool HasTag(string tag) => Tags.Any(f => f.Equals(tag, StringComparison.Ordinal));
 
     public bool HasTags(params string[] tags)
     {

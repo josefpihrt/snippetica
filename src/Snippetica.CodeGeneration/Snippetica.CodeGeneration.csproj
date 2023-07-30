@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="DotMarkdown" Version="0.2.0" />
@@ -9,8 +9,7 @@
     <PackageReference Include="SnippetManager" Version="1.3.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Snippetica.Records\Snippetica.Records.csproj" />
     <ProjectReference Include="..\Snippetica.Common\Snippetica.Common.csproj" />
-    <ProjectReference Include="..\Snippetica.Validations\Snippetica.Validations.csproj" />
+    <ProjectReference Include="..\Snippetica.Metadata\Snippetica.Metadata.csproj" />
   </ItemGroup>
 </Project>

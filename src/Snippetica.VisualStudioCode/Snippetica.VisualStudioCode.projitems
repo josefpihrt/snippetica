@@ -11,23 +11,16 @@
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Cpp\package\CHANGELOG.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Cpp\package\README.md" />
-    <None Include="$(MSBuildThisFileDirectory)Snippetica.Cpp\README.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.CSharp\package\CHANGELOG.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.CSharp\package\README.md" />
-    <None Include="$(MSBuildThisFileDirectory)Snippetica.CSharp\README.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Html\package\CHANGELOG.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Html\package\README.md" />
-    <None Include="$(MSBuildThisFileDirectory)Snippetica.Html\README.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Json\package\README.md" />
-    <None Include="$(MSBuildThisFileDirectory)Snippetica.Json\README.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Markdown\package\README.md" />
-    <None Include="$(MSBuildThisFileDirectory)Snippetica.Markdown\README.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic\package\CHANGELOG.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic\package\README.md" />
-    <None Include="$(MSBuildThisFileDirectory)Snippetica.VisualBasic\README.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Xml\package\CHANGELOG.md" />
     <None Include="$(MSBuildThisFileDirectory)Snippetica.Xml\package\README.md" />
-    <None Include="$(MSBuildThisFileDirectory)Snippetica.Xml\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Snippetica.Cpp\package\.vscode\launch.json" />

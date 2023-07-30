@@ -5,10 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using DotMarkdown;
 using DotMarkdown.Linq;
-using Pihrtsoft.Snippets;
 using static DotMarkdown.Linq.MFactory;
 using static DotMarkdown.Docusaurus.DocusaurusMarkdownFactory;
-using System.Reflection.Metadata;
 
 namespace Snippetica.CodeGeneration.Markdown;
 

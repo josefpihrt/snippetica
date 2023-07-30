@@ -1,9 +1,10 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
+using System.Text.Json.Serialization;
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration;
+namespace Snippetica;
 
 public abstract class LanguageDefinition
 {
@@ -16,22 +17,28 @@ public abstract class LanguageDefinition
 
     public abstract Language Language { get; }
 
-    public ModifierDefinitionCollection Modifiers { get; }
+    public ModifierDefinitionCollection Modifiers { get; init; }
 
-    public TypeDefinitionCollection Types { get; }
+    public TypeDefinitionCollection Types { get; init; }
 
-    public KeywordDefinitionCollection Keywords { get; }
+    public KeywordDefinitionCollection Keywords { get; init; }
 
+    [JsonIgnore]
     public TypeDefinition ObjectType => Types["Object"];
 
+    [JsonIgnore]
     public ModifierDefinition StaticModifier => Modifiers["Static"];
 
+    [JsonIgnore]
     public ModifierDefinition VirtualModifier => Modifiers["Virtual"];
 
+    [JsonIgnore]
     public ModifierDefinition InlineModifier => Modifiers["Inline"];
 
+    [JsonIgnore]
     public ModifierDefinition ConstModifier => Modifiers["Const"];
 
+    [JsonIgnore]
     public ModifierDefinition ConstExprModifier => Modifiers["ConstExpr"];
 
     public abstract string GetTypeParameterList(string typeName);

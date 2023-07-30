@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Snippetica.CodeGeneration;
+namespace Snippetica;
 
 public static class ShortcutKindExtensions
 {

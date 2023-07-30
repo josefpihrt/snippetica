@@ -2,11 +2,11 @@
 
 using System.Collections.ObjectModel;
 
-namespace Snippetica.CodeGeneration;
+namespace Snippetica;
 
-public class KeywordDefinitionCollection : KeyedCollection<string, KeywordDefinition>
+public class TypeDefinitionCollection : KeyedCollection<string, TypeDefinition>
 {
-    protected override string GetKeyForItem(KeywordDefinition item)
+    protected override string GetKeyForItem(TypeDefinition item)
     {
         return item.Name;
     }

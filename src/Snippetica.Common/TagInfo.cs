@@ -2,7 +2,7 @@
 
 namespace Snippetica;
 
-public struct TagInfo
+public readonly struct TagInfo
 {
     public static TagInfo Default { get; } = new();
 

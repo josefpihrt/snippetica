@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using Pihrtsoft.Snippets;
@@ -17,7 +17,7 @@ public class BasicTypeCommand : SnippetCommand
 
     public TypeDefinition Type { get; }
 
-    public ReadOnlyCollection<string> Tags => Type.Tags;
+    public List<string> Tags => Type.Tags;
 
     public override CommandKind Kind => CommandKind.Type;
 

@@ -1,9 +1,9 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
-namespace Snippetica.CodeGeneration;
+namespace Snippetica;
 
 public class ModifierDefinition
 {
@@ -12,13 +12,17 @@ public class ModifierDefinition
         Name = name;
         Keyword = keyword;
         Shortcut = shortcut;
-        Tags = new ReadOnlyCollection<string>(tags);
+        Tags = new List<string>(tags);
         Kind = (ModifierKind)Enum.Parse(typeof(ModifierKind), Name);
     }
 
-    public string Name { get; }
-    public string Keyword { get; }
-    public string Shortcut { get; }
-    public ReadOnlyCollection<string> Tags { get; }
-    public ModifierKind Kind { get; }
+    public ModifierDefinition()
+    {
+    }
+
+    public string Name { get; init; }
+    public string Keyword { get; init; }
+    public string Shortcut { get; init; }
+    public List<string> Tags { get; init; } = new();
+    public ModifierKind Kind { get; init; }
 }

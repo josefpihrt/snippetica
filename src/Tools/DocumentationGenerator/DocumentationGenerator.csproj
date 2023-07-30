@@ -10,9 +10,8 @@
     <PackageReference Include="SnippetManager" Version="1.3.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Snippetica.Records\Snippetica.Records.csproj" />
+    <ProjectReference Include="..\..\Snippetica.Metadata\Snippetica.Metadata.csproj" />
     <ProjectReference Include="..\..\Snippetica.Common\Snippetica.Common.csproj" />
-    <ProjectReference Include="..\..\Snippetica.Validations\Snippetica.Validations.csproj" />
     <ProjectReference Include="..\..\Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj" />
   </ItemGroup>
 </Project>

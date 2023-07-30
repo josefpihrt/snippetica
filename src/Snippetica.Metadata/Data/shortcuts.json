@@ -1,0 +1,790 @@
+﻿{
+  "shortcuts": [
+    {
+      "value": "a",
+      "description": "(element) with attribute",
+      "comment": "suffix",
+      "kind": "None",
+      "languages": [ "Xml", "Xaml", "Html" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "e",
+      "description": "element",
+      "kind": "None",
+      "languages": [ "Xml", "Xaml", "Html" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "s",
+      "description": "self-closing (element)",
+      "comment": "suffix",
+      "kind": "None",
+      "languages": [ "Xml", "Xaml", "Html" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "x",
+      "description": "(element) with content",
+      "comment": "suffix",
+      "kind": "None",
+      "languages": [ "Xml", "Xaml", "Html" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "_",
+      "description": "interface member declaration",
+      "comment": "prefix",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "c",
+      "description": "class declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "co",
+      "description": "constructor declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "de",
+      "description": "delegate declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "en",
+      "description": "enum declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "ev",
+      "description": "event declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "f",
+      "description": "field declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "i",
+      "description": "interface declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "in",
+      "description": "indexer declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "k",
+      "description": "constant declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "m",
+      "description": "method declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "p",
+      "description": "property declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "st",
+      "description": "struct declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "re",
+      "description": "record declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "mo",
+      "description": "Module declaration",
+      "kind": "MemberDeclaration",
+      "languages": [ "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "i",
+      "description": "internal (Friend)",
+      "comment": "prefix",
+      "kind": "Modifier",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "p",
+      "description": "private",
+      "comment": "prefix",
+      "kind": "Modifier",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "r",
+      "description": "read-only",
+      "comment": "prefix (after access modifier)",
+      "kind": "Modifier",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "s",
+      "description": "static (Shared)",
+      "comment": "prefix (after access modifier)",
+      "kind": "Modifier",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "v",
+      "description": "virtual (Overridable)",
+      "comment": "prefix (after access modifier)",
+      "kind": "Modifier",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "n",
+      "description": "new object creation",
+      "kind": "Operator",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "no",
+      "description": "nameof operator",
+      "kind": "Operator",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "oo",
+      "description": "operator overload",
+      "kind": "Operator",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "x",
+      "description": "logical not operator",
+      "comment": "prefix",
+      "kind": "Operator",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "cop",
+      "description": "conditional operator",
+      "kind": "Operator",
+      "languages": [ "CSharp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "t",
+      "description": "explict cast operator",
+      "kind": "Operator",
+      "languages": [ "CSharp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "to",
+      "description": "typeof operator",
+      "kind": "Operator",
+      "languages": [ "CSharp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "gt",
+      "description": "GetType operator",
+      "kind": "Operator",
+      "languages": [ "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "tc",
+      "description": "TryCast operator",
+      "kind": "Operator",
+      "languages": [ "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "fe",
+      "description": "foreach statement",
+      "kind": "Statement",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "fr",
+      "description": "for statement",
+      "kind": "Statement",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "if",
+      "description": "if statement",
+      "kind": "Statement",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "t",
+      "description": "try statement",
+      "kind": "Statement",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "th",
+      "description": "throw statement",
+      "kind": "Statement",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "u",
+      "description": "using statement",
+      "kind": "Statement",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "w",
+      "description": "while statement",
+      "kind": "Statement",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "sw",
+      "description": "switch statement",
+      "kind": "Statement",
+      "languages": [ "CSharp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "sc",
+      "description": "Select Case statement",
+      "kind": "Statement",
+      "languages": [ "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "a",
+      "description": "Array",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "b",
+      "description": "Boolean",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "dt",
+      "description": "DateTime",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "i",
+      "description": "Int32",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "l",
+      "description": "List\u003CT\u003E",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "o",
+      "description": "Object",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "s",
+      "description": "String",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "c",
+      "description": "Collection\u003CT\u003E",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio" ]
+    },
+    {
+      "value": "d",
+      "description": "Dictionary\u003CTKey,TValue\u003E",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio" ]
+    },
+    {
+      "value": "hs",
+      "description": "HashSet\u003CT\u003E",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio" ]
+    },
+    {
+      "value": "i",
+      "description": "Immutable",
+      "comment": "prefix",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio" ]
+    },
+    {
+      "value": "ll",
+      "description": "LinkedList\u003CT\u003E",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio" ]
+    },
+    {
+      "value": "oc",
+      "description": "ObservableCollection\u003CT\u003E",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio" ]
+    },
+    {
+      "value": "q",
+      "description": "Queue\u003CT\u003E",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio" ]
+    },
+    {
+      "value": "s",
+      "description": "Stack\u003CT\u003E",
+      "kind": "Type",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio" ]
+    },
+    {
+      "value": "c",
+      "description": "catch clause",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "d",
+      "description": "default keyword",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "e",
+      "description": "else clause",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "f",
+      "description": "finally clause",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "l",
+      "description": "lambda expression",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "n",
+      "description": "(equals to) null",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "pa",
+      "description": "parameter array",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "pp",
+      "description": "preprocessor directive",
+      "comment": "prefix",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "ps",
+      "description": "private set",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "r",
+      "description": "return keyword",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "v",
+      "description": "local variable declaration",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "x",
+      "description": "with initializer",
+      "comment": "suffix",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "y",
+      "description": "yield",
+      "comment": "prefix",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "this",
+      "description": "containing type name",
+      "kind": "Other",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio" ]
+    },
+    {
+      "value": "c",
+      "description": "class",
+      "kind": "DeclarationDefinition",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "co",
+      "description": "constructor",
+      "kind": "DeclarationDefinition",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "de",
+      "description": "destructor",
+      "kind": "DeclarationDefinition",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "en",
+      "description": "enum",
+      "kind": "DeclarationDefinition",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "f",
+      "description": "function",
+      "kind": "DeclarationDefinition",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "na",
+      "description": "namespace",
+      "kind": "DeclarationDefinition",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "st",
+      "description": "struct",
+      "kind": "DeclarationDefinition",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "td",
+      "description": "typedef",
+      "kind": "DeclarationDefinition",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "u",
+      "description": "using",
+      "kind": "DeclarationDefinition",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "un",
+      "description": "union",
+      "kind": "DeclarationDefinition",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "v",
+      "description": "variable",
+      "kind": "DeclarationDefinition",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "x",
+      "description": "definition",
+      "comment": "suffix",
+      "kind": "DeclarationDefinition",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "x",
+      "description": "(variable) with initialization",
+      "comment": "suffix",
+      "kind": "DeclarationDefinition",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "c",
+      "description": "const",
+      "comment": "prefix",
+      "kind": "Specifier",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "ce",
+      "description": "constexpr",
+      "comment": "prefix",
+      "kind": "Specifier",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "i",
+      "description": "inline",
+      "comment": "prefix",
+      "kind": "Specifier",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "s",
+      "description": "static",
+      "comment": "prefix",
+      "kind": "Specifier",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "v",
+      "description": "virtual",
+      "comment": "prefix",
+      "kind": "Specifier",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "do",
+      "description": "do-while",
+      "kind": "Statement",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "fe",
+      "description": "foreach",
+      "kind": "Statement",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "fr",
+      "description": "for",
+      "kind": "Statement",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "if",
+      "description": "if",
+      "kind": "Statement",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "sw",
+      "description": "switch",
+      "kind": "Statement",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "tc",
+      "description": "try-catch",
+      "kind": "Statement",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "w",
+      "description": "while",
+      "kind": "Statement",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "a",
+      "description": "attribute",
+      "kind": "Other",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "cop",
+      "description": "conditional operator",
+      "kind": "Other",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "ct",
+      "description": "cast",
+      "comment": "suffix",
+      "kind": "Other",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "d",
+      "description": "default keyword",
+      "kind": "Other",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "dt",
+      "description": "decltype keyword",
+      "kind": "Other",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "e",
+      "description": "else clause",
+      "kind": "Other",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "l",
+      "description": "lambda expression",
+      "kind": "Other",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "np",
+      "description": "nullptr",
+      "kind": "Other",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "oo",
+      "description": "operator overload",
+      "kind": "Other",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "pp",
+      "description": "preprocessor directive",
+      "comment": "prefix",
+      "kind": "Other",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "r",
+      "description": "return keyword",
+      "kind": "Other",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "so",
+      "description": "sizeof keyword",
+      "kind": "Other",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
+      "value": "t",
+      "description": "template",
+      "kind": "Other",
+      "languages": [ "Cpp" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    }
+  ]
+}

@@ -3,4 +3,4 @@ dotnet build "../src/Tools/SnippetGenerator/SnippetGenerator.csproj" --no-restor
 
 if(!$?) { Read-Host; Exit }
 
-& "../src/Tools/SnippetGenerator/bin/Release/net6.0/Snippetica.CodeGeneration.SnippetGenerator" "../src" "../src/Snippetica.CodeGeneration/data"
+& "../src/Tools/SnippetGenerator/bin/Release/net6.0/Snippetica.CodeGeneration.SnippetGenerator" "../src" "../src/Snippetica.Metadata/data"

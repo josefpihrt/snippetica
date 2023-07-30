@@ -1,11 +1,11 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Pihrtsoft.Snippets;
 
-namespace Snippetica.CodeGeneration;
+namespace Snippetica;
 
 [DebuggerDisplay("{Name,nq}")]
 public class KeywordDefinition
@@ -27,25 +27,26 @@ public class KeywordDefinition
         Title = title;
         Shortcut = shortcut;
         IsDevelopment = isDevelopment;
-        Tags = new ReadOnlyCollection<string>(tags);
+        Tags = new List<string>(tags);
     }
 
-    public string Name { get; }
-
-    public string Value { get; }
-
-    public string Title { get; }
-
-    public string Shortcut { get; }
-
-    public bool IsDevelopment { get; }
-
-    public ReadOnlyCollection<string> Tags { get; }
-
-    public bool HasTag(string tag)
+    public KeywordDefinition()
     {
-        return Tags.Contains(tag);
     }
+
+    public string Name { get; init; }
+
+    public string Value { get; init; }
+
+    public string Title { get; init; }
+
+    public string Shortcut { get; init; }
+
+    public bool IsDevelopment { get; init; }
+
+    public List<string> Tags { get; init; }
+
+    public bool HasTag(string tag) => Tags.Contains(tag);
 
     public Snippet ToSnippet()
     {
