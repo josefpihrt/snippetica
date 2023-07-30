@@ -52,9 +52,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: (Get-Content source.extension.vsixmanifest) -replace 'Version="1.0.0"', 'Version="${{ needs.pre_build.outputs.version3 }}"' | Set-Content source.extension.vsixmanifest
-        working-directory: src/Snippetica.VisualStudio
-      - run: dotnet restore Tools/DocumentationGenerator/DocumentationGenerator.csproj
-      - run: dotnet build Tools/DocumentationGenerator/DocumentationGenerator.csproj --no-restore
+        working-directory: src/Snippetica.VisualStudio.Vsix
+      - run: dotnet restore
+        working-directory: src/Tools/Snippetica.CodeGeneration.SnippetGenerator
+      - run: dotnet build --no-restore
+        working-directory: src/Tools/Snippetica.CodeGeneration.SnippetGenerator
       - run: |
           cd tools
           ./generate_snippets.ps1
@@ -104,13 +106,13 @@ jobs:
             directoryName: Snippetica.Xml
     defaults:
       run:
-        working-directory: src/Snippetica.VisualStudioCode/${{ matrix.component.directoryName }}/package
+        working-directory: src/Snippetica.VisualStudioCode.Vsix/${{ matrix.component.directoryName }}/package
     steps:
       - uses: actions/checkout@v3
       - run: dotnet restore
-        working-directory: src/Tools/SnippetGenerator
+        working-directory: src/Tools/Snippetica.CodeGeneration.SnippetGenerator
       - run: dotnet build --no-restore
-        working-directory: src/Tools/SnippetGenerator
+        working-directory: src/Tools/Snippetica.CodeGeneration.SnippetGenerator
       - run: |
           cd tools
           ./generate_snippets.ps1
@@ -124,7 +126,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: "vs_code_extension_${{ matrix.component.name }}"
-          path: "src/Snippetica.VisualStudioCode/${{ matrix.component.directoryName }}/package/*.vsix"
+          path: "src/Snippetica.VisualStudioCode.Vsix/${{ matrix.component.directoryName }}/package/*.vsix"
 
   publish_vs_extension:
     needs: build_vs_extension
