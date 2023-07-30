@@ -32,7 +32,7 @@ internal static class Program
         sourcePath = Path.GetFullPath(sourcePath);
         dataDirectoryPath = Path.GetFullPath(dataDirectoryPath);
 
-        SnippeticaMetadata metadata = SnippeticaMetadata.Load(Path.Combine(dataDirectoryPath, "json.json"), sourcePath);
+        SnippeticaMetadata metadata = SnippeticaMetadata.Load(Path.Combine(dataDirectoryPath, "metadata.json"), sourcePath);
         SnippetDirectory[] directories = metadata.Directories;
         Dictionary<Language, LanguageDefinition> languageDefinitions = metadata.Languages;
 

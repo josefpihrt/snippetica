@@ -26,7 +26,7 @@ internal static class Program
         string destinationPath = args[1];
         string dataDirectoryPath = args[2];
 
-        SnippeticaMetadata metadata = SnippeticaMetadata.Load(Path.Combine(dataDirectoryPath, "json.json"), sourcePath);
+        SnippeticaMetadata metadata = SnippeticaMetadata.Load(Path.Combine(dataDirectoryPath, "metadata.json"), sourcePath);
         ShortcutInfo[] shortcuts = metadata.Shortcuts;
         SnippetDirectory[] directories = metadata.Directories;
         Dictionary<Language, LanguageDefinition> languageDefinitions = metadata.Languages;
