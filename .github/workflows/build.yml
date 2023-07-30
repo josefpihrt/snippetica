@@ -48,11 +48,10 @@ jobs:
       DeployExtension: false
     defaults:
       run:
-        working-directory: src
+        working-directory: src/Snippetica.VisualStudio.Vsix
     steps:
       - uses: actions/checkout@v3
       - run: (Get-Content source.extension.vsixmanifest) -replace 'Version="1.0.0"', 'Version="${{ needs.pre_build.outputs.version3 }}"' | Set-Content source.extension.vsixmanifest
-        working-directory: src/Snippetica.VisualStudio.Vsix
       - run: dotnet restore
         working-directory: src/Tools/Snippetica.CodeGeneration.SnippetGenerator
       - run: dotnet build --no-restore
@@ -69,17 +68,17 @@ jobs:
         name: "Upload vsix file"
         with:
           name: vs_extension
-          path: src/Snippetica.VisualStudio/bin/Release/*.vsix
+          path: src/Snippetica.VisualStudio.Vsix/bin/Release/*.vsix
       - uses: actions/upload-artifact@v3
         name: "Upload manifest file"
         with:
           name: vs_extension
-          path: src/Snippetica.VisualStudio/manifest.json
+          path: src/Snippetica.VisualStudio.Vsix/manifest.json
       - uses: actions/upload-artifact@v3
         name: "Upload Visual Studio snippets"
         with:
           name: vs_snippets
-          path: src/Snippetica.VisualStudio/**/*.snippet
+          path: src/Snippetica.VisualStudio.Vsix/**/*.snippet
 
   build_vs_code_extensions:
     needs: pre_build
@@ -106,7 +105,7 @@ jobs:
             directoryName: Snippetica.Xml
     defaults:
       run:
-        working-directory: src/Snippetica.VisualStudioCode.Vsix/${{ matrix.component.directoryName }}/package
+        working-directory: "src/Snippetica.VisualStudioCode.Vsix/${{ matrix.component.directoryName }}/package"
     steps:
       - uses: actions/checkout@v3
       - run: dotnet restore
