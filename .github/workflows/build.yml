@@ -61,7 +61,6 @@ jobs:
           ./generate_snippets.ps1
         name: "Generate snippets"
         working-directory: "."
-      - run: dotnet restore
       - uses: microsoft/setup-msbuild@v1.1
       - run: msbuild -m
       - uses: actions/upload-artifact@v3
