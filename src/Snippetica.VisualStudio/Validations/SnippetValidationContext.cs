@@ -3,7 +3,7 @@
 namespace Snippetica.VisualStudio.Validations;
 
 /// <summary>
-/// Represents a context that is used during <see cref="Snippets.Snippet"/> validation.
+/// Represents a context that is used during <see cref="Snippet"/> validation.
 /// </summary>
 public class SnippetValidationContext
 {
