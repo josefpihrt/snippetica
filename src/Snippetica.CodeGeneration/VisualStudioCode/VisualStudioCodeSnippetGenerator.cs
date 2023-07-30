@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 using Snippetica.CodeGeneration.Commands;
-using Snippetica.VisualStudio.Serializer;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration.VisualStudioCode;
 

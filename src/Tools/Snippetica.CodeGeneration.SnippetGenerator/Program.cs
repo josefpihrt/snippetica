@@ -8,8 +8,8 @@ using System.Text.RegularExpressions;
 using Snippetica.CodeGeneration.VisualStudio;
 using Snippetica.CodeGeneration.VisualStudioCode;
 using Snippetica.IO;
-using Snippetica.VisualStudio.Serializer;
-using Snippetica.VisualStudio.Serializer.Comparers;
+using Snippetica.VisualStudio;
+using Snippetica.VisualStudio.Comparers;
 using static Snippetica.KnownNames;
 
 namespace Snippetica.CodeGeneration.SnippetGenerator;

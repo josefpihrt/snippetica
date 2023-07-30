@@ -2,7 +2,7 @@
 
 using System;
 using System.Text.Json.Serialization;
-using Snippetica.VisualStudio.Serializer;
+using Snippetica.VisualStudio;
 
 namespace Snippetica;
 

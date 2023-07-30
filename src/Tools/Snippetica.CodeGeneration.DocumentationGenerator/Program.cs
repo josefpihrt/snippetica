@@ -8,7 +8,7 @@ using Snippetica.CodeGeneration.Markdown;
 using Snippetica.CodeGeneration.VisualStudio;
 using Snippetica.CodeGeneration.VisualStudioCode;
 using Snippetica.IO;
-using Snippetica.VisualStudio.Serializer;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration.DocumentationGenerator;
 

@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Snippetica.VisualStudio.Serializer\Snippetica.VisualStudio.Serializer.csproj" />
+    <ProjectReference Include="..\Snippetica.VisualStudio\Snippetica.VisualStudio.csproj" />
   </ItemGroup>
 
 </Project>

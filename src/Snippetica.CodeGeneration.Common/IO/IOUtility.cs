@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using Snippetica.VisualStudio.Serializer;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.IO;
 

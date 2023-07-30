@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Snippetica.VisualStudio.Serializer;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration.VisualStudio;
 

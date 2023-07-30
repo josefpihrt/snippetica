@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using Snippetica.IO;
 using Snippetica.Validations;
-using Snippetica.VisualStudio.Serializer;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration;
 

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Snippetica.VisualStudio.Serializer.Validations;
+using Snippetica.VisualStudio.Validations;
 
 namespace Snippetica.Validations;
 

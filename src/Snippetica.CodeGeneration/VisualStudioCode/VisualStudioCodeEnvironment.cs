@@ -9,7 +9,7 @@ using DotMarkdown.Linq;
 using Snippetica.CodeGeneration.Json;
 using Snippetica.CodeGeneration.Json.Package;
 using Snippetica.IO;
-using Snippetica.VisualStudio.Serializer;
+using Snippetica.VisualStudio;
 using static DotMarkdown.Linq.MFactory;
 
 namespace Snippetica.CodeGeneration.VisualStudioCode;

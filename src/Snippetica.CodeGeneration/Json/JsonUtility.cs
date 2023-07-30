@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Snippetica.VisualStudio.Serializer;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration.Json;
 
@@ -80,12 +80,12 @@ public static class JsonUtility
 
                 if (!processedIds.Contains(id))
                 {
-                    sb.Append(":");
+                    sb.Append(':');
                     sb.Append(literal.DefaultValue);
                     processedIds.Add(id);
                 }
 
-                sb.Append("}");
+                sb.Append('}');
             }
 
             pos = placeholder.EndIndex + 1;
