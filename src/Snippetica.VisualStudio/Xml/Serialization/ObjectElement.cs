@@ -10,5 +10,5 @@ public sealed class ObjectElement : LiteralElement
     /// <summary>
     /// Gets or sets Type element value.
     /// </summary>
-    public string Type { get; set; }
+    public string? Type { get; set; }
 }

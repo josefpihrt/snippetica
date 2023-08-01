@@ -14,30 +14,27 @@ public sealed class CodeElement : IXmlSerializable
     /// <summary>
     /// Gets or sets Delimiter attribute value.
     /// </summary>
-    public string Delimiter { get; set; }
+    public string? Delimiter { get; set; }
 
     /// <summary>
     /// Gets or sets Kind attribute value.
     /// </summary>
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary>
     /// Gets or sets Language attribute value.
     /// </summary>
-    public string Language { get; set; }
+    public string? Language { get; set; }
 
     /// <summary>
     /// Gets or sets Code element value.
     /// </summary>
-    public string Code { get; set; }
+    public string? Code { get; set; }
 
     /// <summary>
     /// This method is reserved and should not be used.
     /// </summary>
-    public XmlSchema GetSchema()
-    {
-        return null;
-    }
+    public XmlSchema? GetSchema() => null;
 
     /// <summary>
     /// Generates an object from its XML representation.

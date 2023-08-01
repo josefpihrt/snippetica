@@ -23,7 +23,7 @@ public abstract class LiteralComparer : IComparer<Literal>, IEqualityComparer<Li
     /// </summary>
     /// <param name="literal">A literal.</param>
     /// <returns>A string that will be used to compare two literals.</returns>
-    protected abstract string GetValue(Literal literal);
+    protected abstract string? GetValue(Literal? literal);
 
     /// <summary>
     /// Compares two literals and returns an indication of their relative sort order.
@@ -31,7 +31,7 @@ public abstract class LiteralComparer : IComparer<Literal>, IEqualityComparer<Li
     /// <param name="x">A <see cref="Literal"/> to compare to <paramref name="y"/>.</param>
     /// <param name="y">A <see cref="Literal"/> to compare to <paramref name="x"/>.</param>
     /// <returns>A signed integer that indicates the relative values of <paramref name="x"/> and <paramref name="y"/>.</returns>
-    public int Compare(Literal x, Literal y)
+    public int Compare(Literal? x, Literal? y)
     {
         return _stringComparer.Compare(GetValue(x), GetValue(y));
     }
@@ -42,7 +42,7 @@ public abstract class LiteralComparer : IComparer<Literal>, IEqualityComparer<Li
     /// <param name="x">A <see cref="Literal"/> to compare to <paramref name="y"/>.</param>
     /// <param name="y">A <see cref="Literal"/> to compare to <paramref name="x"/>.</param>
     /// <returns><c>true</c> if <paramref name="x"/> and <paramref name="y"/> refer to the same object, or <paramref name="x"/> and <paramref name="y"/> are <c>null</c>, or <paramref name="x"/> and <paramref name="y"/> are equal; otherwise, <c>false</c>.</returns>
-    public bool Equals(Literal x, Literal y)
+    public bool Equals(Literal? x, Literal? y)
     {
         return _stringComparer.Equals(GetValue(x), GetValue(y));
     }
@@ -54,7 +54,9 @@ public abstract class LiteralComparer : IComparer<Literal>, IEqualityComparer<Li
     /// <returns>A 32-bit signed hash code calculated from the value of the <paramref name="obj"/>.</returns>
     public int GetHashCode(Literal obj)
     {
-        return _stringComparer.GetHashCode(GetValue(obj));
+        string? value = GetValue(obj);
+
+        return (value is not null) ? _stringComparer.GetHashCode(value) : 0;
     }
 
     /// <summary>
@@ -63,9 +65,9 @@ public abstract class LiteralComparer : IComparer<Literal>, IEqualityComparer<Li
     /// <param name="x">An object to compare to <paramref name="y"/>.</param>
     /// <param name="y">An object to compare to <paramref name="x"/>.</param>
     /// <returns>A signed integer that indicates the relative values of <paramref name="x"/> and <paramref name="y"/>.</returns>
-    public int Compare(object x, object y)
+    public int Compare(object? x, object? y)
     {
-        return _stringComparer.Compare(GetValue((Literal)x), GetValue((Literal)y));
+        return _stringComparer.Compare(GetValue((Literal?)x), GetValue((Literal?)y));
     }
 
     /// <summary>
@@ -74,9 +76,9 @@ public abstract class LiteralComparer : IComparer<Literal>, IEqualityComparer<Li
     /// <param name="x">An object to compare to <paramref name="y"/>.</param>
     /// <param name="y">An object to compare to <paramref name="x"/>.</param>
     /// <returns><c>true</c> if <paramref name="x"/> and <paramref name="y"/> refer to the same object, or <paramref name="x"/> and <paramref name="y"/> are both the same type of object and those objects are equal; otherwise, <c>false</c>.</returns>
-    new public bool Equals(object x, object y)
+    new public bool Equals(object? x, object? y)
     {
-        return _stringComparer.Equals(GetValue((Literal)x), GetValue((Literal)y));
+        return _stringComparer.Equals(GetValue((Literal?)x), GetValue((Literal?)y));
     }
 
     /// <summary>
@@ -86,6 +88,8 @@ public abstract class LiteralComparer : IComparer<Literal>, IEqualityComparer<Li
     /// <returns>A 32-bit signed hash code calculated from the value of the <paramref name="obj"/>.</returns>
     public int GetHashCode(object obj)
     {
-        return _stringComparer.GetHashCode(GetValue((Literal)obj));
+        string? value = GetValue((Literal)obj);
+
+        return (value is not null) ? _stringComparer.GetHashCode(value) : 0;
     }
 }

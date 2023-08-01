@@ -14,7 +14,7 @@ internal class NamespaceComparer : IComparer<string>
         PlaceSystemFirst = placeSystemFirst;
     }
 
-    public int Compare(string x, string y)
+    public int Compare(string? x, string? y)
     {
         if (object.ReferenceEquals(x, y))
             return 0;

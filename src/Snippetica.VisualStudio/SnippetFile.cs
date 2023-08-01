@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
 using System.Diagnostics;
 
 namespace Snippetica.VisualStudio;
@@ -16,21 +17,12 @@ public class SnippetFile
     public const string Extension = "snippet";
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="SnippetFile"/> class.
-    /// </summary>
-    public SnippetFile()
-        : this(null)
-    {
-    }
-
-    /// <summary>
     /// Initializes a new instance of the <see cref="SnippetFile"/> class with a specified path.
     /// </summary>
     /// <param name="fullName">Full name of the snippet file.</param>
     public SnippetFile(string fullName)
     {
-        FullName = fullName;
-        Snippets = new SnippetCollection();
+        FullName = fullName ?? throw new ArgumentNullException(nameof(fullName));
     }
 
     /// <summary>
@@ -41,5 +33,5 @@ public class SnippetFile
     /// <summary>
     /// Gets a collection of <see cref="Snippet"/>.
     /// </summary>
-    public SnippetCollection Snippets { get; }
+    public SnippetCollection Snippets { get; } = new();
 }

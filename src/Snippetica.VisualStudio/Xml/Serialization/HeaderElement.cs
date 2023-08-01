@@ -14,43 +14,43 @@ public sealed class HeaderElement
     /// <summary>
     /// Gets or sets Title element value.
     /// </summary>
-    public string Title { get; set; }
+    public string? Title { get; set; }
 
     /// <summary>
     /// Gets or sets Shortcut element value.
     /// </summary>
-    public string Shortcut { get; set; }
+    public string? Shortcut { get; set; }
 
     /// <summary>
     /// Gets or sets AlternativeShortcuts element.
     /// </summary>
     [XmlArrayItem("Shortcut")]
-    public string[] AlternativeShortcuts { get; set; }
+    public string[]? AlternativeShortcuts { get; set; }
 
     /// <summary>
     /// Gets or sets Description element value.
     /// </summary>
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     /// <summary>
     /// Gets or sets Author element values.
     /// </summary>
-    public string Author { get; set; }
+    public string? Author { get; set; }
 
     /// <summary>
     /// Gets or sets HelpUrl element value.
     /// </summary>
-    public string HelpUrl { get; set; }
+    public string? HelpUrl { get; set; }
 
     /// <summary>
     /// Gets or sets SnippetTypes element.
     /// </summary>
     [XmlArrayItem("SnippetType")]
-    public string[] SnippetTypes { get; set; }
+    public string[]? SnippetTypes { get; set; }
 
     /// <summary>
     /// Gets or sets Keywords element.
     /// </summary>
     [XmlArrayItem("Keyword")]
-    public string[] Keywords { get; set; }
+    public string[]? Keywords { get; set; }
 }

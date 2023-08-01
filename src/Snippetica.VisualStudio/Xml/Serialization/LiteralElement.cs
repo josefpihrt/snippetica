@@ -28,20 +28,20 @@ public class LiteralElement
     /// <summary>
     /// Gets or sets ID element value.
     /// </summary>
-    public string ID { get; set; }
+    public string? ID { get; set; }
 
     /// <summary>
     /// Gets or sets ToolTip element value.
     /// </summary>
-    public string ToolTip { get; set; }
+    public string? ToolTip { get; set; }
 
     /// <summary>
     /// Gets or sets Default element value.
     /// </summary>
-    public string Default { get; set; }
+    public string? Default { get; set; }
 
     /// <summary>
     /// Gets or sets Function element value.
     /// </summary>
-    public string Function { get; set; }
+    public string? Function { get; set; }
 }

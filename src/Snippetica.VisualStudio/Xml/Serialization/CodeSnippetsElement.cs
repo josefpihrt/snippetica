@@ -16,5 +16,5 @@ public sealed class CodeSnippetsElement
     /// Gets or sets array of CodeSnippet elements.
     /// </summary>
     [XmlElement("CodeSnippet")]
-    public CodeSnippetElement[] Snippets { get; set; }
+    public CodeSnippetElement[]? Snippets { get; set; }
 }

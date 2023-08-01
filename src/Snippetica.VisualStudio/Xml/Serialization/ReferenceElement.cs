@@ -10,10 +10,10 @@ public sealed class ReferenceElement
     /// <summary>
     /// Gets or sets Assembly element value.
     /// </summary>
-    public string Assembly { get; set; }
+    public string? Assembly { get; set; }
 
     /// <summary>
     /// Gets or sets Url element.
     /// </summary>
-    public string Url { get; set; }
+    public string? Url { get; set; }
 }

@@ -33,7 +33,7 @@ public class SnippetValidationResult
     /// <param name="importance">Result importance.</param>
     /// <param name="content">Additional result content. The value can be <c>null</c>.</param>
     /// <exception cref="ArgumentNullException"><paramref name="snippet"/> is <c>null</c>.</exception>
-    public SnippetValidationResult(Snippet snippet, string code, string description, ResultImportance importance, object content)
+    public SnippetValidationResult(Snippet snippet, string code, string description, ResultImportance importance, object? content)
     {
         Snippet = snippet ?? throw new ArgumentNullException(nameof(snippet));
         Code = code;
@@ -65,5 +65,5 @@ public class SnippetValidationResult
     /// <summary>
     /// Gets the additional content of the result. The value can be <c>null</c>.
     /// </summary>
-    public object Content { get; }
+    public object? Content { get; }
 }

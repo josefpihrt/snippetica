@@ -15,11 +15,11 @@ public sealed class DeclarationsElement
     /// Gets or sets array of Literal elements.
     /// </summary>
     [XmlElement("Literal")]
-    public LiteralElement[] Literals { get; set; }
+    public LiteralElement[]? Literals { get; set; }
 
     /// <summary>
     /// Gets or sets array of Object elements.
     /// </summary>
     [XmlElement("Object")]
-    public ObjectElement[] Objects { get; set; }
+    public ObjectElement[]? Objects { get; set; }
 }

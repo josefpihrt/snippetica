@@ -15,21 +15,21 @@ public sealed class SnippetElement
     /// Gets or sets Imports element.
     /// </summary>
     [XmlArrayItem("Import")]
-    public ImportElement[] Imports { get; set; }
+    public ImportElement[]? Imports { get; set; }
 
     /// <summary>
     /// Gets or sets References element.
     /// </summary>
     [XmlArrayItem("Reference")]
-    public ReferenceElement[] References { get; set; }
+    public ReferenceElement[]? References { get; set; }
 
     /// <summary>
     /// Gets or sets Declarations element.
     /// </summary>
-    public DeclarationsElement Declarations { get; set; }
+    public DeclarationsElement? Declarations { get; set; }
 
     /// <summary>
     /// Gets or sets Code element.
     /// </summary>
-    public CodeElement Code { get; set; }
+    public CodeElement? Code { get; set; }
 }

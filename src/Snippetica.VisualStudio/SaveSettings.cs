@@ -56,7 +56,7 @@ public sealed class SaveSettings
     /// <summary>
     /// Gets or sets an XML comment that will be added to the snippet file.
     /// </summary>
-    public string Comment { get; set; }
+    public string? Comment { get; set; }
 
     /// <summary>
     /// Gets or sets a value indicating whether to write 'CodeSnippets' XML element. This option is relevant only if a single snippet is saved to a file.

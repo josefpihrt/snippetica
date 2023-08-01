@@ -61,7 +61,7 @@ public class PlaceholderCollection : ReadOnlyCollection<Placeholder>
     /// </summary>
     /// <param name="identifier">A placeholder identifier.</param>
     /// <returns>First found placeholder with the specified identifier.</returns>
-    public Placeholder Find(string identifier)
+    public Placeholder? Find(string identifier)
     {
         foreach (Placeholder placeholder in Items)
         {
@@ -91,10 +91,7 @@ public class PlaceholderCollection : ReadOnlyCollection<Placeholder>
     /// </summary>
     /// <param name="identifier">A placeholder identifier.</param>
     /// <returns>First found placeholder with the specified identifier.</returns>
-    public Placeholder this[string identifier] => Find(identifier);
+    public Placeholder this[string identifier] => Find(identifier) ?? throw new KeyNotFoundException($"Identifier '{identifier}' was not found.");
 
-    private string Identifiers
-    {
-        get { return string.Join(", ", Items.Select(f => f.Identifier)); }
-    }
+    private string Identifiers => string.Join(", ", Items.Select(f => f.Identifier));
 }

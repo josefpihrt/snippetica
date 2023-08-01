@@ -26,7 +26,7 @@ public abstract class SnippetComparer : IComparer<Snippet>, IEqualityComparer<Sn
     /// <param name="x">A <see cref="Snippet"/> to compare to <paramref name="y"/>.</param>
     /// <param name="y">A <see cref="Snippet"/> to compare to <paramref name="x"/>.</param>
     /// <returns>A signed integer that indicates the relative values of <paramref name="x"/> and <paramref name="y"/>.</returns>
-    public abstract int Compare(Snippet x, Snippet y);
+    public abstract int Compare(Snippet? x, Snippet? y);
 
     /// <summary>
     /// Indicates whether two snippets are equal.
@@ -34,7 +34,7 @@ public abstract class SnippetComparer : IComparer<Snippet>, IEqualityComparer<Sn
     /// <param name="x">A <see cref="Snippet"/> to compare to <paramref name="y"/>.</param>
     /// <param name="y">A <see cref="Snippet"/> to compare to <paramref name="x"/>.</param>
     /// <returns><c>true</c> if <paramref name="x"/> and <paramref name="y"/> refer to the same object, or <paramref name="x"/> and <paramref name="y"/> are <c>null</c>, or <paramref name="x"/> and <paramref name="y"/> are equal; otherwise, <c>false</c>.</returns>
-    public abstract bool Equals(Snippet x, Snippet y);
+    public abstract bool Equals(Snippet? x, Snippet? y);
 
     /// <summary>
     /// Gets the hash code for the specified <see cref="Snippet"/>.
@@ -49,7 +49,7 @@ public abstract class SnippetComparer : IComparer<Snippet>, IEqualityComparer<Sn
     /// <param name="x">An object to compare to <paramref name="y"/>.</param>
     /// <param name="y">An object to compare to <paramref name="x"/>.</param>
     /// <returns>A signed integer that indicates the relative values of <paramref name="x"/> and <paramref name="y"/>.</returns>
-    public abstract int Compare(object x, object y);
+    public abstract int Compare(object? x, object? y);
 
     /// <summary>
     /// Indicates whether two objects are equal.
@@ -57,7 +57,7 @@ public abstract class SnippetComparer : IComparer<Snippet>, IEqualityComparer<Sn
     /// <param name="x">An object to compare to <paramref name="y"/>.</param>
     /// <param name="y">An object to compare to <paramref name="x"/>.</param>
     /// <returns><c>true</c> if <paramref name="x"/> and <paramref name="y"/> refer to the same object, or <paramref name="x"/> and <paramref name="y"/> are both the same type of object and those objects are equal; otherwise, <c>false</c>.</returns>
-    new public abstract bool Equals(object x, object y);
+    new public abstract bool Equals(object? x, object? y);
 
     /// <summary>
     /// Gets the hash code for the specified object.

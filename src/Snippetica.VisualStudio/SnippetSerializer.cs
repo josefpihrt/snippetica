@@ -22,11 +22,11 @@ public static class SnippetSerializer
     /// </summary>
     public const string DefaultNamespace = "http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet";
 
-    private static XmlSerializer _codeSnippetsElementXmlSerializer;
-    private static XmlSerializer _codeSnippetElementXmlSerializer;
-    private static XmlWriterSettings _xmlWriterSettings;
-    private static XmlReaderSettings _xmlReaderSettings;
-    private static XmlSerializerNamespaces _namespaces;
+    private static XmlSerializer? _codeSnippetsElementXmlSerializer;
+    private static XmlSerializer? _codeSnippetElementXmlSerializer;
+    private static XmlWriterSettings? _xmlWriterSettings;
+    private static XmlReaderSettings? _xmlReaderSettings;
+    private static XmlSerializerNamespaces? _namespaces;
     private static readonly UTF8Encoding _utf8EncodingNoBom = new(encoderShouldEmitUTF8Identifier: false);
 
 #if !PORTABLE
@@ -109,21 +109,22 @@ public static class SnippetSerializer
                 {
                     case "CodeSnippet":
                         {
-                            CodeSnippetElement element = Deserialize<CodeSnippetElement>(xmlReader, CodeSnippetElementXmlSerializer);
+                            CodeSnippetElement? element = Deserialize<CodeSnippetElement>(xmlReader, CodeSnippetElementXmlSerializer);
 
-                            yield return SnippetMapper.MapFromElement(element);
+                            if (element is not null)
+                                yield return SnippetMapper.MapFromElement(element);
 
                             break;
                         }
                     case "CodeSnippets":
                         {
-                            CodeSnippetsElement element = Deserialize<CodeSnippetsElement>(xmlReader, CodeSnippetsElementXmlSerializer);
+                            CodeSnippetsElement? element = Deserialize<CodeSnippetsElement>(xmlReader, CodeSnippetsElementXmlSerializer);
 
-                            if (element.Snippets is null)
-                                break;
-
-                            for (int i = 0; i < element.Snippets.Length; i++)
-                                yield return SnippetMapper.MapFromElement(element.Snippets[i]);
+                            if (element?.Snippets is not null)
+                            {
+                                for (int i = 0; i < element.Snippets.Length; i++)
+                                    yield return SnippetMapper.MapFromElement(element.Snippets[i]);
+                            }
 
                             break;
                         }
@@ -132,12 +133,12 @@ public static class SnippetSerializer
         }
     }
 
-    private static T Deserialize<T>(XmlReader xmlReader, XmlSerializer xmlSerializer)
+    private static T? Deserialize<T>(XmlReader xmlReader, XmlSerializer xmlSerializer)
     {
 #if DEBUG
         try
         {
-            return (T)xmlSerializer.Deserialize(xmlReader);
+            return (T?)xmlSerializer.Deserialize(xmlReader);
         }
         catch (InvalidOperationException ex)
         {

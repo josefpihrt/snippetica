@@ -8,12 +8,9 @@ internal class SnippetTitleComparer : SnippetStringComparer
 {
     private static readonly StringComparer _stringComparer = StringComparer.CurrentCulture;
 
-    protected override string GetValue(Snippet snippet)
+    protected override string? GetValue(Snippet? snippet)
     {
-        if (snippet is null)
-            throw new ArgumentNullException(nameof(snippet));
-
-        return snippet.Title;
+        return snippet?.Title;
     }
 
     internal override StringComparer StringComparer => _stringComparer;

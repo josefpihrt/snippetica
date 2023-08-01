@@ -44,7 +44,7 @@ public static class SnippetUtility
     /// <param name="snippet"><see cref="Snippet"/> to remove literals from.</param>
     public static void RemoveUnusedLiterals(Snippet snippet)
     {
-        List<string> identifiers = null;
+        List<string>? identifiers = null;
 
         foreach (Literal literal in snippet.Literals)
         {
@@ -67,7 +67,7 @@ public static class SnippetUtility
     /// <param name="snippet"><see cref="Snippet"/> to remove placeholders from.</param>
     public static void RemoveUnusedPlaceholders(Snippet snippet)
     {
-        List<string> identifiers = null;
+        List<string>? identifiers = null;
 
         foreach (Placeholder placeholder in snippet.Code.Placeholders)
         {

@@ -26,11 +26,11 @@ public class Literal
     /// <param name="toolTip">The <see cref="Literal"/> description.</param>
     /// <param name="defaultValue">The <see cref="Literal"/>default value.</param>
     /// <exception cref="ArgumentNullException"><paramref name="identifier"/> is <c>null</c>.</exception>
-    public Literal(string identifier, string toolTip = null, string defaultValue = "")
+    public Literal(string identifier, string? toolTip = null, string defaultValue = "")
     {
-        Identifier = identifier ?? throw new ArgumentNullException(nameof(identifier));
+        _identifier = identifier ?? throw new ArgumentNullException(nameof(identifier));
         ToolTip = toolTip;
-        DefaultValue = defaultValue;
+        _defaultValue = defaultValue ?? "";
         IsEditable = true;
     }
 
@@ -42,7 +42,7 @@ public class Literal
     /// <param name="defaultValue">The <see cref="Literal"/>default value.</param>
     /// <exception cref="ArgumentNullException"><paramref name="identifier"/> is <c>null</c>.</exception>
     /// <returns><see cref="Literal"/> with function that returns containing type name.</returns>
-    public static Literal CreateClassNameLiteral(string identifier, string toolTip = null, string defaultValue = "")
+    public static Literal CreateClassNameLiteral(string identifier, string? toolTip = null, string defaultValue = "")
     {
         return new Literal(identifier, toolTip, defaultValue)
         {
@@ -60,7 +60,7 @@ public class Literal
     /// <param name="defaultValue">The <see cref="Literal"/>default value.</param>
     /// <exception cref="ArgumentNullException"><paramref name="identifier"/> is <c>null</c>.</exception>
     /// <returns><see cref="Literal"/> with function that generates switch cases.</returns>
-    public static Literal CreateSwitchCasesLiteral(string identifier, string expressionIdentifier, string toolTip = null, string defaultValue = "default:")
+    public static Literal CreateSwitchCasesLiteral(string identifier, string expressionIdentifier, string? toolTip = null, string defaultValue = "default:")
     {
         return new Literal(identifier, toolTip, defaultValue)
         {
@@ -103,7 +103,7 @@ public class Literal
     /// <summary>
     /// Gets or sets literal tooltip.
     /// </summary>
-    public string ToolTip { get; set; }
+    public string? ToolTip { get; set; }
 
     /// <summary>
     /// Gets or sets literal default value.
@@ -117,10 +117,10 @@ public class Literal
     /// <summary>
     /// Gets or sets literal function name.
     /// </summary>
-    public string Function { get; set; }
+    public string? Function { get; set; }
 
     /// <summary>
     /// Gets or sets the type name of the object.
     /// </summary>
-    public string TypeName { get; set; }
+    public string? TypeName { get; set; }
 }

@@ -14,13 +14,18 @@ public class AssemblyReference
     : ICloneable
 #endif
 {
+    public AssemblyReference(string assemblyName)
+    {
+        AssemblyName = assemblyName ?? throw new ArgumentNullException(nameof(assemblyName));
+    }
+
     /// <summary>
     /// Creates a new <see cref="AssemblyReference"/> that is a deep copy of the current instance.
     /// </summary>
     /// <returns>A new <see cref="AssemblyReference"/> that is a deep copy of the current instance.</returns>
     public object Clone()
     {
-        var clone = new AssemblyReference() { AssemblyName = AssemblyName };
+        var clone = new AssemblyReference(AssemblyName);
 
         if (Url is not null)
             clone.Url = new Uri(Url.OriginalString);
@@ -36,5 +41,5 @@ public class AssemblyReference
     /// <summary>
     /// Gets or sets url.
     /// </summary>
-    public Uri Url { get; set; }
+    public Uri? Url { get; set; }
 }

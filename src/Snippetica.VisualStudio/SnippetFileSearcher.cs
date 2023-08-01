@@ -91,7 +91,7 @@ public static class SnippetFileSearcher
                 if (!Directory.Exists(dirPath))
                     continue;
 
-                IEnumerator<string> fe = GetFilesEnumerator(dirPath);
+                IEnumerator<string>? fe = GetFilesEnumerator(dirPath);
                 if (fe is not null)
                 {
                     using (fe)
@@ -103,7 +103,7 @@ public static class SnippetFileSearcher
 
                 if (searchOption == SearchOption.AllDirectories)
                 {
-                    IEnumerator<string> de = GetDirectoriesEnumerator(dirPath);
+                    IEnumerator<string>? de = GetDirectoriesEnumerator(dirPath);
                     if (de is not null)
                     {
                         using (de)
@@ -117,7 +117,7 @@ public static class SnippetFileSearcher
         }
     }
 
-    private static IEnumerator<string> GetFilesEnumerator(string directoryPath)
+    private static IEnumerator<string>? GetFilesEnumerator(string directoryPath)
     {
         try
         {
@@ -130,7 +130,7 @@ public static class SnippetFileSearcher
         return null;
     }
 
-    private static IEnumerator<string> GetDirectoriesEnumerator(string directoryPath)
+    private static IEnumerator<string>? GetDirectoriesEnumerator(string directoryPath)
     {
         try
         {

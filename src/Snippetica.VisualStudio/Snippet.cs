@@ -32,11 +32,11 @@ public class Snippet
     /// </summary>
     internal static readonly string DefaultFormatVersionText = DefaultFormatVersion.ToString(3);
 
-    private KeywordCollection _keywords;
-    private ShortcutCollection _alternativeShortcuts;
-    private NamespaceCollection _namespaces;
-    private Collection<AssemblyReference> _assemblyReferences;
-    private LiteralCollection _literals;
+    private KeywordCollection? _keywords;
+    private ShortcutCollection? _alternativeShortcuts;
+    private NamespaceCollection? _namespaces;
+    private Collection<AssemblyReference>? _assemblyReferences;
+    private LiteralCollection? _literals;
     private string _codeText = "";
     private string _shortcut = "";
     private string _title = "";
@@ -218,7 +218,7 @@ public class Snippet
     /// <summary>
     /// Gets or sets snippet format version.
     /// </summary>
-    public Version FormatVersion { get; set; }
+    public Version? FormatVersion { get; set; }
 
     /// <summary>
     /// Gets or sets snippet title.
@@ -259,7 +259,7 @@ public class Snippet
     /// <summary>
     /// Gets or sets URL the provides additional information about the current instance.
     /// </summary>
-    public Uri HelpUrl { get; set; }
+    public Uri? HelpUrl { get; set; }
 
     /// <summary>
     /// Gets or sets snippet type.
@@ -269,50 +269,32 @@ public class Snippet
     /// <summary>
     /// Gets a collection of snippet keywords.
     /// </summary>
-    public KeywordCollection Keywords
-    {
-        get { return _keywords ??= new KeywordCollection(); }
-    }
+    public KeywordCollection Keywords => _keywords ??= new KeywordCollection();
 
     /// <summary>
     /// Gets a collection of alternative shortcuts.
     /// </summary>
-    public ShortcutCollection AlternativeShortcuts
-    {
-        get { return _alternativeShortcuts ??= new ShortcutCollection(); }
-    }
+    public ShortcutCollection AlternativeShortcuts => _alternativeShortcuts ??= new ShortcutCollection();
 
     /// <summary>
     /// Gets a value indicating whether snippet contains alternative shortcut.
     /// </summary>
-    public bool HasAlternativeShortcuts
-    {
-        get { return _alternativeShortcuts?.Count > 0; }
-    }
+    public bool HasAlternativeShortcuts => _alternativeShortcuts?.Count > 0;
 
     /// <summary>
     /// Gets a collection of snippet namespaces.
     /// </summary>
-    public NamespaceCollection Namespaces
-    {
-        get { return _namespaces ??= new NamespaceCollection(); }
-    }
+    public NamespaceCollection Namespaces => _namespaces ??= new NamespaceCollection();
 
     /// <summary>
     /// Gets a collection of snippet assembly references.
     /// </summary>
-    public Collection<AssemblyReference> AssemblyReferences
-    {
-        get { return _assemblyReferences ??= new Collection<AssemblyReference>(); }
-    }
+    public Collection<AssemblyReference> AssemblyReferences => _assemblyReferences ??= new Collection<AssemblyReference>();
 
     /// <summary>
     /// Gets a collection of snippet literals.
     /// </summary>
-    public LiteralCollection Literals
-    {
-        get { return _literals ??= new LiteralCollection(); }
-    }
+    public LiteralCollection Literals => _literals ??= new LiteralCollection();
 
     /// <summary>
     /// Gets or sets snippet code context.
@@ -329,10 +311,11 @@ public class Snippet
     /// </summary>
     public char Delimiter { get; set; }
 
+    //TODO: Snippet.FilePath
     /// <summary>
     /// Gets or sets full path to the snippet file.
     /// </summary>
-    public string FilePath { get; set; }
+    public string? FilePath { get; set; }
 
     /// <summary>
     /// Gets or sets index of a snippet in a snippet file.
@@ -374,5 +357,5 @@ public class Snippet
     /// <summary>
     /// Occurs when the snippet text changes.
     /// </summary>
-    public event EventHandler TextChanged;
+    public event EventHandler? TextChanged;
 }

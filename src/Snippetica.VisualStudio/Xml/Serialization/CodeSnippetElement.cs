@@ -14,15 +14,15 @@ public sealed class CodeSnippetElement
     /// Gets or sets Format attribute value.
     /// </summary>
     [XmlAttribute]
-    public string Format { get; set; }
+    public string? Format { get; set; }
 
     /// <summary>
     /// Gets or sets Header element.
     /// </summary>
-    public HeaderElement Header { get; set; }
+    public HeaderElement? Header { get; set; }
 
     /// <summary>
     /// Gets or sets Snippet element.
     /// </summary>
-    public SnippetElement Snippet { get; set; }
+    public SnippetElement? Snippet { get; set; }
 }

@@ -24,7 +24,7 @@ public abstract class SnippetComparer<T> : SnippetComparer
     /// </summary>
     /// <param name="snippet">A snippet.</param>
     /// <returns>A string that will be used to compare two snippets.</returns>
-    protected abstract T GetValue(Snippet snippet);
+    protected abstract T? GetValue(Snippet? snippet);
 
     /// <summary>
     /// Compares two snippets and returns an indication of their relative sort order.
@@ -32,7 +32,7 @@ public abstract class SnippetComparer<T> : SnippetComparer
     /// <param name="x">A <see cref="Snippet"/> to compare to <paramref name="y"/>.</param>
     /// <param name="y">A <see cref="Snippet"/> to compare to <paramref name="x"/>.</param>
     /// <returns>A signed integer that indicates the relative values of <paramref name="x"/> and <paramref name="y"/>.</returns>
-    public override int Compare(Snippet x, Snippet y)
+    public override int Compare(Snippet? x, Snippet? y)
     {
         return GenericComparer.Compare(GetValue(x), GetValue(y));
     }
@@ -43,7 +43,7 @@ public abstract class SnippetComparer<T> : SnippetComparer
     /// <param name="x">A <see cref="Snippet"/> to compare to <paramref name="y"/>.</param>
     /// <param name="y">A <see cref="Snippet"/> to compare to <paramref name="x"/>.</param>
     /// <returns><c>true</c> if <paramref name="x"/> and <paramref name="y"/> refer to the same object, or <paramref name="x"/> and <paramref name="y"/> are <c>null</c>, or <paramref name="x"/> and <paramref name="y"/> are equal; otherwise, <c>false</c>.</returns>
-    public override bool Equals(Snippet x, Snippet y)
+    public override bool Equals(Snippet? x, Snippet? y)
     {
         return GenericEqualityComparer.Equals(GetValue(x), GetValue(y));
     }
@@ -53,9 +53,11 @@ public abstract class SnippetComparer<T> : SnippetComparer
     /// </summary>
     /// <param name="obj">A snippet.</param>
     /// <returns>A 32-bit signed hash code calculated from the value of the <paramref name="obj"/>.</returns>
-    public override int GetHashCode(Snippet obj)
+    public override int GetHashCode(Snippet? obj)
     {
-        return GenericEqualityComparer.GetHashCode(GetValue(obj));
+        T? value = GetValue(obj);
+
+        return (value is not null) ? GenericEqualityComparer.GetHashCode(value) : 0;
     }
 
     /// <summary>
@@ -64,9 +66,9 @@ public abstract class SnippetComparer<T> : SnippetComparer
     /// <param name="x">An object to compare to <paramref name="y"/>.</param>
     /// <param name="y">An object to compare to <paramref name="x"/>.</param>
     /// <returns>A signed integer that indicates the relative values of <paramref name="x"/> and <paramref name="y"/>.</returns>
-    public override int Compare(object x, object y)
+    public override int Compare(object? x, object? y)
     {
-        return Comparer.Compare(GetValue((Snippet)x), GetValue((Snippet)y));
+        return Comparer.Compare(GetValue((Snippet?)x), GetValue((Snippet?)y));
     }
 
     /// <summary>
@@ -75,9 +77,9 @@ public abstract class SnippetComparer<T> : SnippetComparer
     /// <param name="x">An object to compare to <paramref name="y"/>.</param>
     /// <param name="y">An object to compare to <paramref name="x"/>.</param>
     /// <returns><c>true</c> if <paramref name="x"/> and <paramref name="y"/> refer to the same object, or <paramref name="x"/> and <paramref name="y"/> are both the same type of object and those objects are equal; otherwise, <c>false</c>.</returns>
-    public override bool Equals(object x, object y)
+    public override bool Equals(object? x, object? y)
     {
-        return EqualityComparer.Equals(GetValue((Snippet)x), GetValue((Snippet)y));
+        return EqualityComparer.Equals(GetValue((Snippet?)x), GetValue((Snippet?)y));
     }
 
     /// <summary>
@@ -87,6 +89,8 @@ public abstract class SnippetComparer<T> : SnippetComparer
     /// <returns>A 32-bit signed hash code calculated from the value of the <paramref name="obj"/>.</returns>
     public override int GetHashCode(object obj)
     {
-        return EqualityComparer.GetHashCode(GetValue((Snippet)obj));
+        T? value = GetValue((Snippet?)obj);
+
+        return (value is not null) ? EqualityComparer.GetHashCode(value) : 0;
     }
 }

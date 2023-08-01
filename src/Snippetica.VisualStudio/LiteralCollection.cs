@@ -43,7 +43,7 @@ public class LiteralCollection : Collection<Literal>
     /// </summary>
     /// <param name="identifier">A literal identifier.</param>
     /// <returns>First found literal with the specified identifier.</returns>
-    public Literal Find(string identifier)
+    public Literal? Find(string identifier)
     {
         foreach (Literal literal in Items)
         {
@@ -92,12 +92,9 @@ public class LiteralCollection : Collection<Literal>
     /// </summary>
     /// <param name="identifier">A literal identifier.</param>
     /// <returns>First found literal with the specified identifier.</returns>
-    public Literal this[string identifier] => Find(identifier);
+    public Literal this[string identifier] => Find(identifier) ?? throw new KeyNotFoundException($"Identifier '{identifier}' was not found.");
 
     private List<Literal> List => (List<Literal>)Items;
 
-    private string Identifiers
-    {
-        get { return string.Join(", ", Items.Select(f => f.Identifier)); }
-    }
+    private string Identifiers => string.Join(", ", Items.Select(f => f.Identifier));
 }

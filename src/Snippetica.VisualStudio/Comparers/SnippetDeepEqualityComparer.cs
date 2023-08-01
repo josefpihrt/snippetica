@@ -19,7 +19,7 @@ public class SnippetDeepEqualityComparer : EqualityComparer<Snippet>
     /// <param name="x">A <see cref="Snippet"/> to compare to <paramref name="y"/>.</param>
     /// <param name="y">A <see cref="Snippet"/> to compare to <paramref name="x"/>.</param>
     /// <returns><c>true</c> if <paramref name="x"/> and <paramref name="y"/> refer to the same object, or <paramref name="x"/> and <paramref name="y"/> are <c>null</c>, or <paramref name="x"/> and <paramref name="y"/> are equal; otherwise, <c>false</c>.</returns>
-    public override bool Equals(Snippet x, Snippet y)
+    public override bool Equals(Snippet? x, Snippet? y)
     {
         if (object.ReferenceEquals(x, y))
             return true;

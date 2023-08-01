@@ -10,5 +10,5 @@ public sealed class ImportElement
     /// <summary>
     /// Gets or sets Namespace element value.
     /// </summary>
-    public string Namespace { get; set; }
+    public string? Namespace { get; set; }
 }

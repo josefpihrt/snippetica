@@ -57,7 +57,7 @@ internal static class ValidationHelper
     /// </summary>
     /// <param name="version">A <see cref="Version"/> to validate.</param>
     /// <returns><c>true</c> if <paramref name="version"/> is valid snippet format version; Otherwise, <c>false</c>.</returns>
-    public static bool IsValidVersion(Version version)
+    public static bool IsValidVersion(Version? version)
     {
         if (version is null)
             return false;

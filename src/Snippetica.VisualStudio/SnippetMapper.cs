@@ -14,7 +14,7 @@ namespace Snippetica.VisualStudio;
 /// </summary>
 internal static class SnippetMapper
 {
-    private static Dictionary<string, ContextKind> _contextKinds;
+    private static Dictionary<string, ContextKind>? _contextKinds;
 
     /// <summary>
     /// Maps a specified <see cref="CodeSnippetElement"/> to the newly created <see cref="Snippet"/>.
@@ -30,7 +30,7 @@ internal static class SnippetMapper
         var snippet = new Snippet();
 
         if (element.Format is not null
-            && Version.TryParse(element.Format, out Version version)
+            && Version.TryParse(element.Format, out Version? version)
             && ValidationHelper.IsValidVersion(version))
         {
             snippet.FormatVersion = version;
@@ -114,11 +114,11 @@ internal static class SnippetMapper
         }
     }
 
-    private static void SerializeVersion(Version version, SerializationContext context)
+    private static void SerializeVersion(Version? version, SerializationContext context)
     {
         if (ValidationHelper.IsValidVersion(version))
         {
-            context.Element.Format = version.ToString(3);
+            context.Element.Format = version!.ToString(3);
         }
         else if (context.Settings.SetDefaultFormat)
         {
@@ -139,7 +139,7 @@ internal static class SnippetMapper
         return element;
     }
 
-    private static ImportElement[] CreateImportsElements(NamespaceCollection namespaces)
+    private static ImportElement[]? CreateImportsElements(NamespaceCollection namespaces)
     {
         if (namespaces.Count > 0)
         {
@@ -154,7 +154,7 @@ internal static class SnippetMapper
         return null;
     }
 
-    private static ReferenceElement[] CreateReferenceElements(Collection<AssemblyReference> references)
+    private static ReferenceElement[]? CreateReferenceElements(Collection<AssemblyReference> references)
     {
         if (references.Count > 0)
         {
@@ -165,7 +165,7 @@ internal static class SnippetMapper
                 var element = new ReferenceElement() { Assembly = references[i].AssemblyName };
 
                 if (references[i].Url is not null)
-                    element.Url = references[i].Url.ToString();
+                    element.Url = references[i].Url?.ToString();
 
                 elements[i] = element;
             }
@@ -304,10 +304,10 @@ internal static class SnippetMapper
 
     private static void LoadHeaderElement(HeaderElement element, Snippet snippet)
     {
-        snippet.Author = element.Author;
-        snippet.Description = element.Description;
-        snippet.Shortcut = element.Shortcut;
-        snippet.Title = element.Title;
+        snippet.Author = element.Author ?? "";
+        snippet.Description = element.Description ?? "";
+        snippet.Shortcut = element.Shortcut ?? "";
+        snippet.Title = element.Title ?? "";
 
         if (element.AlternativeShortcuts is not null)
         {
@@ -316,7 +316,7 @@ internal static class SnippetMapper
         }
 
         if (element.HelpUrl is not null
-            && Uri.TryCreate(element.HelpUrl, UriKind.RelativeOrAbsolute, out Uri uri))
+            && Uri.TryCreate(element.HelpUrl, UriKind.RelativeOrAbsolute, out Uri? uri))
         {
             snippet.HelpUrl = uri;
         }
@@ -385,10 +385,10 @@ internal static class SnippetMapper
         {
             if (!string.IsNullOrEmpty(element.Assembly))
             {
-                var reference = new AssemblyReference() { AssemblyName = element.Assembly };
+                var reference = new AssemblyReference(element.Assembly);
 
                 if (!string.IsNullOrEmpty(element.Url)
-                    && Uri.TryCreate(element.Url, UriKind.RelativeOrAbsolute, out Uri url))
+                    && Uri.TryCreate(element.Url, UriKind.RelativeOrAbsolute, out Uri? url))
                 {
                     reference.Url = url;
                 }
@@ -413,7 +413,7 @@ internal static class SnippetMapper
         {
             var literal = new Literal(element.ID ?? "")
             {
-                DefaultValue = element.Default,
+                DefaultValue = element.Default ?? "",
                 IsEditable = element.Editable,
                 Function = element.Function,
                 ToolTip = element.ToolTip,
@@ -430,7 +430,7 @@ internal static class SnippetMapper
         {
             var literal = new Literal(element.ID ?? "")
             {
-                DefaultValue = element.Default,
+                DefaultValue = element.Default ?? "",
                 IsEditable = element.Editable,
                 Function = element.Function,
                 ToolTip = element.ToolTip
