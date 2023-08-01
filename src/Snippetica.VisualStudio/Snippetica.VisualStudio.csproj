@@ -5,11 +5,13 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <TargetFrameworks>net6.0;net40</TargetFrameworks>
-    <DocumentationFile>bin\$(Configuration)\Snippetica.VisualStudio.Serializer.xml</DocumentationFile>
+    <TargetFrameworks>net6.0;net48</TargetFrameworks>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\($AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
     <Version>1.3.3</Version>
     <PackageId>SnippetManager</PackageId>
     <Description>Snippet Manager API enables to work with Visual Studio snippets.</Description>
