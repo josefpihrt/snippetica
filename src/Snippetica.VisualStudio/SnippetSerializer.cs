@@ -146,7 +146,7 @@ public static class SnippetSerializer
             throw;
         }
 #else
-        return (T)xmlSerializer.Deserialize(xmlReader);
+        return (T?)xmlSerializer.Deserialize(xmlReader);
 #endif
     }
 
