@@ -108,7 +108,7 @@ public class VisualStudioEnvironment : SnippetEnvironment
 
         snippet.Shortcut = info.Value;
 
-        snippet.CodeText = s + $"${Placeholder.EndIdentifier}$";
+        snippet.CodeText = s + $"${SnippetPlaceholder.EndIdentifier}$";
 
         snippet.Literals.Clear();
 

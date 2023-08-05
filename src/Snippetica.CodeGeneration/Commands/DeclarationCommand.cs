@@ -14,7 +14,7 @@ public class DeclarationCommand : SnippetCommand
         snippet.SuffixDescription(" declaration");
         snippet.SuffixFileName("Declaration");
 
-        PlaceholderCollection placeholders = snippet.Code.Placeholders;
+        SnippetPlaceholderList placeholders = snippet.Code.Placeholders;
 
         if (placeholders.Contains("_definitionStart"))
         {
@@ -29,6 +29,6 @@ public class DeclarationCommand : SnippetCommand
             snippet.CodeText = s;
         }
 
-        snippet.AppendCode(snippet.Delimiter + Placeholder.EndIdentifier + snippet.Delimiter);
+        snippet.AppendCode(snippet.Delimiter + SnippetPlaceholder.EndIdentifier + snippet.Delimiter);
     }
 }

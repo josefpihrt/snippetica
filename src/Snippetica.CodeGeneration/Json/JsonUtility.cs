@@ -40,7 +40,7 @@ public static class JsonUtility
 
         snippet.RemoveLiteralAndReplacePlaceholders(XmlSnippetGenerator.CDataIdentifier, "]]>");
 
-        LiteralCollection literals = snippet.Literals;
+        SnippetLiteralList literals = snippet.Literals;
 
         string s = snippet.CodeText;
 
@@ -48,16 +48,16 @@ public static class JsonUtility
 
         int pos = 0;
 
-        PlaceholderCollection placeholders = snippet.Code.Placeholders;
+        SnippetPlaceholderList placeholders = snippet.Code.Placeholders;
 
-        Dictionary<Literal, int> literalIndexes = literals
+        Dictionary<SnippetLiteral, int> literalIndexes = literals
             .OrderBy(f => FindMinIndex(f, placeholders))
             .Select((literal, i) => new { Literal = literal, Index = i })
             .ToDictionary(f => f.Literal, f => f.Index + 1);
 
         var processedIds = new List<string>();
 
-        foreach (Placeholder placeholder in placeholders.OrderBy(f => f.Index))
+        foreach (SnippetPlaceholder placeholder in placeholders.OrderBy(f => f.Index))
         {
             sb.Append(s, pos, placeholder.Index - 1 - pos);
 
@@ -73,7 +73,7 @@ public static class JsonUtility
             {
                 string id = placeholder.Identifier;
 
-                Literal literal = literals[id];
+                SnippetLiteral literal = literals[id];
 
                 sb.Append("${");
                 sb.Append(literalIndexes[literal]);
@@ -96,7 +96,7 @@ public static class JsonUtility
         return sb.ToString();
     }
 
-    private static int FindMinIndex(Literal literal, PlaceholderCollection placeholders)
+    private static int FindMinIndex(SnippetLiteral literal, SnippetPlaceholderList placeholders)
     {
         return placeholders
             .Where(placeholder => placeholder.Identifier == literal.Identifier)

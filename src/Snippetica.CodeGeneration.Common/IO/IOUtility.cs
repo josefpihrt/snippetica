@@ -47,7 +47,7 @@ public static class IOUtility
         if (snippet is null)
             throw new ArgumentNullException(nameof(snippet));
 
-        SaveSettings settings = CreateSaveSettings();
+        SaveOptions settings = CreateSaveSettings();
 
         if (!ShouldSave(snippet, filePath, settings, onlyIfChanged))
             return;
@@ -59,7 +59,7 @@ public static class IOUtility
         }
     }
 
-    private static bool ShouldSave(Snippet snippet, string filePath, SaveSettings settings, bool onlyIfChanged)
+    private static bool ShouldSave(Snippet snippet, string filePath, SaveOptions settings, bool onlyIfChanged)
     {
         if (!onlyIfChanged)
             return true;
@@ -73,9 +73,9 @@ public static class IOUtility
         return !string.Equals(s1, s2, StringComparison.Ordinal);
     }
 
-    private static SaveSettings CreateSaveSettings()
+    private static SaveOptions CreateSaveSettings()
     {
-        return new SaveSettings()
+        return new SaveOptions()
         {
             OmitXmlDeclaration = true,
             OmitCodeSnippetsElement = true,
@@ -92,7 +92,7 @@ public static class IOUtility
         if (snippets is null)
             throw new ArgumentNullException(nameof(snippets));
 
-        SaveSettings settings = CreateSaveSettings();
+        SaveOptions settings = CreateSaveSettings();
 
         string content = SnippetSerializer.CreateXml(snippets, settings);
 

@@ -15,9 +15,9 @@ public class VisualStudioCodeSnippetGenerator : EnvironmentSnippetGenerator
 
     protected override Snippet PostProcess(Snippet snippet)
     {
-        LiteralCollection literals = snippet.Literals;
+        SnippetLiteralList literals = snippet.Literals;
 
-        Literal typeLiteral = literals.Find(LiteralIdentifiers.Type);
+        SnippetLiteral typeLiteral = literals.Find(LiteralIdentifiers.Type);
 
         if (typeLiteral is not null)
         {

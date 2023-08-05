@@ -42,10 +42,10 @@ public class InitializerCommand : SnippetCommand
 
         if (snippet.Language == Language.Cpp)
         {
-            Literal typeLiteral = snippet.Literals.Find(LiteralIdentifiers.Type);
+            SnippetLiteral typeLiteral = snippet.Literals.Find(LiteralIdentifiers.Type);
             typeLiteral.DefaultValue = "auto";
 
-            LiteralRenamer.Rename(snippet, LiteralIdentifiers.Type, "type");
+            snippet.RenameLiteral(LiteralIdentifiers.Type, "type");
         }
         else
         {

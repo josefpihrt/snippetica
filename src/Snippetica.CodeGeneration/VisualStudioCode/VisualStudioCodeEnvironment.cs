@@ -85,11 +85,11 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
             if (snippet.HasTag(KnownTags.ExcludeFromVisualStudioCode))
                 continue;
 
-            LiteralCollection literals = snippet.Literals;
+            SnippetLiteralList literals = snippet.Literals;
 
             for (int i = literals.Count - 1; i >= 0; i--)
             {
-                Literal literal = literals[i];
+                SnippetLiteral literal = literals[i];
 
                 if (!literal.IsEditable
                     && !string.IsNullOrEmpty(literal.Function))

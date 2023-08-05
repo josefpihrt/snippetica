@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-using Snippetica.VisualStudio.Xml.Serialization;
+using Snippetica.VisualStudio.Serialization;
 
 namespace Snippetica.VisualStudio;
 
@@ -152,23 +152,13 @@ public static class SnippetSerializer
 
 #if !PORTABLE
     /// <summary>
-    /// Serializes the specified <see cref="Snippet"/> the specified snippet file.
+    /// Serializes the specified <see cref="Snippet"/> the specified snippet file, optionally using <see cref="SaveOptions"/> to modify serialization process.
     /// </summary>
     /// <param name="filePath">The absolute or relative path to the file.</param>
     /// <param name="snippet">A <see cref="Snippet"/> to be serialized.</param>
-    public static void Serialize(string filePath, Snippet snippet)
-    {
-        Serialize(filePath, snippet, new SaveSettings());
-    }
-
-    /// <summary>
-    /// Serializes the specified <see cref="Snippet"/> the specified snippet file, optionally using <see cref="SaveSettings"/> to modify serialization process.
-    /// </summary>
-    /// <param name="filePath">The absolute or relative path to the file.</param>
-    /// <param name="snippet">A <see cref="Snippet"/> to be serialized.</param>
-    /// <param name="settings">A <see cref="SaveSettings"/> that modify serialization process.</param>
-    /// <exception cref="ArgumentNullException"><paramref name="filePath"/> or <paramref name="snippet"/> or <paramref name="settings"/> is <c>null</c>.</exception>
-    public static void Serialize(string filePath, Snippet snippet, SaveSettings settings)
+    /// <param name="options">A <see cref="SaveOptions"/> that modify serialization process.</param>
+    /// <exception cref="ArgumentNullException"><paramref name="filePath"/> or <paramref name="snippet"/> or <paramref name="options"/> is <c>null</c>.</exception>
+    public static void Serialize(string filePath, Snippet snippet, SaveOptions? options = null)
     {
         if (filePath is null)
             throw new ArgumentNullException(nameof(filePath));
@@ -176,32 +166,21 @@ public static class SnippetSerializer
         if (snippet is null)
             throw new ArgumentNullException(nameof(snippet));
 
-        if (settings is null)
-            throw new ArgumentNullException(nameof(settings));
+        options ??= new SaveOptions();
 
         using (var stream = new FileStream(filePath, FileMode.CreateNew, FileAccess.Write, FileShare.None))
-            Serialize(stream, snippet, settings);
+            Serialize(stream, snippet, options);
     }
 #endif
 
     /// <summary>
-    /// Serializes the specified <see cref="Snippet"/> the specified <see cref="Stream"/>.
+    /// Serializes the specified <see cref="Snippet"/> the specified <see cref="Stream"/>, optionally using <see cref="SaveOptions"/> to modify serialization process.
     /// </summary>
     /// <param name="stream">The stream to output this <see cref="Snippet"/> to.</param>
     /// <param name="snippet">A <see cref="Snippet"/> to be serialized.</param>
-    public static void Serialize(Stream stream, Snippet snippet)
-    {
-        Serialize(stream, snippet, new SaveSettings());
-    }
-
-    /// <summary>
-    /// Serializes the specified <see cref="Snippet"/> the specified <see cref="Stream"/>, optionally using <see cref="SaveSettings"/> to modify serialization process.
-    /// </summary>
-    /// <param name="stream">The stream to output this <see cref="Snippet"/> to.</param>
-    /// <param name="snippet">A <see cref="Snippet"/> to be serialized.</param>
-    /// <param name="settings">A <see cref="SaveSettings"/> that modify serialization process.</param>
-    /// <exception cref="ArgumentNullException"><paramref name="stream"/> or <paramref name="snippet"/> or <paramref name="settings"/> is <c>null</c>.</exception>
-    public static void Serialize(Stream stream, Snippet snippet, SaveSettings settings)
+    /// <param name="options">A <see cref="SaveOptions"/> that modify serialization process.</param>
+    /// <exception cref="ArgumentNullException"><paramref name="stream"/> or <paramref name="snippet"/> or <paramref name="options"/> is <c>null</c>.</exception>
+    public static void Serialize(Stream stream, Snippet snippet, SaveOptions? options = null)
     {
         if (stream is null)
             throw new ArgumentNullException(nameof(stream));
@@ -209,32 +188,21 @@ public static class SnippetSerializer
         if (snippet is null)
             throw new ArgumentNullException(nameof(snippet));
 
-        if (settings is null)
-            throw new ArgumentNullException(nameof(settings));
+        options ??= new SaveOptions();
 
-        using (XmlWriter xmlWriter = XmlWriter.Create(stream, GetXmlWriterSettings(settings)))
-            Serialize(xmlWriter, snippet, settings);
+        using (XmlWriter xmlWriter = XmlWriter.Create(stream, GetXmlWriterSettings(options)))
+            Serialize(xmlWriter, snippet, options);
     }
 
 #if !PORTABLE
     /// <summary>
-    /// Serializes enumerable collection of <see cref="Snippet"/> to the specified snippet file.
+    /// Serializes enumerable collection of <see cref="Snippet"/> to the specified snippet file, optionally using <see cref="SaveOptions"/> to modify serialization process.
     /// </summary>
     /// <param name="filePath">The absolute or relative path to the file.</param>
     /// <param name="snippets">Enumerable collection of <see cref="Snippet"/> to be serialized.</param>
-    public static void Serialize(string filePath, IEnumerable<Snippet> snippets)
-    {
-        Serialize(filePath, snippets, new SaveSettings());
-    }
-
-    /// <summary>
-    /// Serializes enumerable collection of <see cref="Snippet"/> to the specified snippet file, optionally using <see cref="SaveSettings"/> to modify serialization process.
-    /// </summary>
-    /// <param name="filePath">The absolute or relative path to the file.</param>
-    /// <param name="snippets">Enumerable collection of <see cref="Snippet"/> to be serialized.</param>
-    /// <param name="settings">A <see cref="SaveSettings"/> that modify serialization process.</param>
-    /// <exception cref="ArgumentNullException"><paramref name="filePath"/> or <paramref name="snippets"/> or <paramref name="settings"/> is <c>null</c>.</exception>
-    public static void Serialize(string filePath, IEnumerable<Snippet> snippets, SaveSettings settings)
+    /// <param name="options">A <see cref="SaveOptions"/> that modify serialization process.</param>
+    /// <exception cref="ArgumentNullException"><paramref name="filePath"/> or <paramref name="snippets"/> or <paramref name="options"/> is <c>null</c>.</exception>
+    public static void Serialize(string filePath, IEnumerable<Snippet> snippets, SaveOptions? options = null)
     {
         if (filePath is null)
             throw new ArgumentNullException(nameof(filePath));
@@ -242,63 +210,38 @@ public static class SnippetSerializer
         if (snippets is null)
             throw new ArgumentNullException(nameof(snippets));
 
-        if (settings is null)
-            throw new ArgumentNullException(nameof(settings));
+        options ??= new SaveOptions();
 
         using (var stream = new FileStream(filePath, FileMode.CreateNew, FileAccess.Write, FileShare.None))
-            Serialize(stream, snippets, settings);
+            Serialize(stream, snippets, options);
     }
 
     /// <summary>
-    /// Serializes the specified <see cref="SnippetFile"/> to the file.
+    /// Serializes the specified <see cref="SnippetFile"/> to the file, optionally using <see cref="SaveOptions"/> to modify serialization process.
     /// </summary>
     /// <param name="snippetFile">A snippet file to be serialized.</param>
+    /// <param name="options">A <see cref="SaveOptions"/> that modify serialization process.</param>
     /// <exception cref="ArgumentNullException"><paramref name="snippetFile"/> is <c>null</c>.</exception>
-    public static void Serialize(SnippetFile snippetFile)
+    /// <exception cref="ArgumentNullException"><paramref name="options"/> is <c>null</c>.</exception>
+    public static void Serialize(SnippetFile snippetFile, SaveOptions? options = null)
     {
         if (snippetFile is null)
             throw new ArgumentNullException(nameof(snippetFile));
 
-        Serialize(snippetFile.FullName, snippetFile.Snippets, new SaveSettings());
-    }
+        options ??= new SaveOptions();
 
-    /// <summary>
-    /// Serializes the specified <see cref="SnippetFile"/> to the file, optionally using <see cref="SaveSettings"/> to modify serialization process.
-    /// </summary>
-    /// <param name="snippetFile">A snippet file to be serialized.</param>
-    /// <param name="settings">A <see cref="SaveSettings"/> that modify serialization process.</param>
-    /// <exception cref="ArgumentNullException"><paramref name="snippetFile"/> is <c>null</c>.</exception>
-    /// <exception cref="ArgumentNullException"><paramref name="settings"/> is <c>null</c>.</exception>
-    public static void Serialize(SnippetFile snippetFile, SaveSettings settings)
-    {
-        if (snippetFile is null)
-            throw new ArgumentNullException(nameof(snippetFile));
-
-        if (settings is null)
-            throw new ArgumentNullException(nameof(settings));
-
-        Serialize(snippetFile.FullName, snippetFile.Snippets, settings);
+        Serialize(snippetFile.FullName, snippetFile.Snippets, options);
     }
 #endif
 
     /// <summary>
-    /// Serializes enumerable collection of <see cref="Snippet"/> to the specified <see cref="Stream"/>.
+    /// Serializes enumerable collection of <see cref="Snippet"/> to the specified <see cref="Stream"/>, optionally using <see cref="SaveOptions"/> to modify serialization process.
     /// </summary>
     /// <param name="stream">The stream to output this <see cref="Snippet"/> to.</param>
     /// <param name="snippets">Enumerable collection of <see cref="Snippet"/> to be serialized.</param>
-    public static void Serialize(Stream stream, IEnumerable<Snippet> snippets)
-    {
-        Serialize(stream, snippets, new SaveSettings());
-    }
-
-    /// <summary>
-    /// Serializes enumerable collection of <see cref="Snippet"/> to the specified <see cref="Stream"/>, optionally using <see cref="SaveSettings"/> to modify serialization process.
-    /// </summary>
-    /// <param name="stream">The stream to output this <see cref="Snippet"/> to.</param>
-    /// <param name="snippets">Enumerable collection of <see cref="Snippet"/> to be serialized.</param>
-    /// <param name="settings">A <see cref="SaveSettings"/> that modify serialization process.</param>
-    /// <exception cref="ArgumentNullException"><paramref name="stream"/> or <paramref name="snippets"/> or <paramref name="settings"/> is <c>null</c>.</exception>
-    public static void Serialize(Stream stream, IEnumerable<Snippet> snippets, SaveSettings settings)
+    /// <param name="options">A <see cref="SaveOptions"/> that modify serialization process.</param>
+    /// <exception cref="ArgumentNullException"><paramref name="stream"/> or <paramref name="snippets"/> or <paramref name="options"/> is <c>null</c>.</exception>
+    public static void Serialize(Stream stream, IEnumerable<Snippet> snippets, SaveOptions? options = null)
     {
         if (stream is null)
             throw new ArgumentNullException(nameof(stream));
@@ -306,44 +249,32 @@ public static class SnippetSerializer
         if (snippets is null)
             throw new ArgumentNullException(nameof(snippets));
 
-        if (settings is null)
-            throw new ArgumentNullException(nameof(settings));
+        options ??= new SaveOptions();
 
-        using (XmlWriter xmlWriter = XmlWriter.Create(stream, GetXmlWriterSettings(settings)))
-            Serialize(xmlWriter, snippets, settings);
+        using (XmlWriter xmlWriter = XmlWriter.Create(stream, GetXmlWriterSettings(options)))
+            Serialize(xmlWriter, snippets, options);
     }
 
     /// <summary>
-    /// Serializes a specified <see cref="Snippet"/> to xml text.
+    /// Serializes a specified <see cref="Snippet"/> to xml text, optionally using <see cref="SaveOptions"/> to modify serialization process.
     /// </summary>
     /// <param name="snippet">A <see cref="Snippet"/> to be serialized.</param>
+    /// <param name="options">A <see cref="SaveOptions"/> that modify serialization process.</param>
     /// <returns>XML text that represents a specified <see cref="Snippet"/>.</returns>
-    public static string CreateXml(Snippet snippet)
-    {
-        return CreateXml(snippet, new SaveSettings());
-    }
-
-    /// <summary>
-    /// Serializes a specified <see cref="Snippet"/> to xml text, optionally using <see cref="SaveSettings"/> to modify serialization process.
-    /// </summary>
-    /// <param name="snippet">A <see cref="Snippet"/> to be serialized.</param>
-    /// <param name="settings">A <see cref="SaveSettings"/> that modify serialization process.</param>
-    /// <returns>XML text that represents a specified <see cref="Snippet"/>.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="snippet"/> or <paramref name="settings"/> is <c>null</c>.</exception>
-    public static string CreateXml(Snippet snippet, SaveSettings settings)
+    /// <exception cref="ArgumentNullException"><paramref name="snippet"/> or <paramref name="options"/> is <c>null</c>.</exception>
+    public static string CreateXml(Snippet snippet, SaveOptions? options = null)
     {
         if (snippet is null)
             throw new ArgumentNullException(nameof(snippet));
 
-        if (settings is null)
-            throw new ArgumentNullException(nameof(settings));
+        options ??= new SaveOptions();
 
         using (var memoryStream = new MemoryStream())
         {
             using (var streamWriter = new StreamWriter(memoryStream, _utf8EncodingNoBom))
             {
-                using (XmlWriter xmlWriter = XmlWriter.Create(streamWriter, GetXmlWriterSettings(settings)))
-                    Serialize(xmlWriter, snippet, settings);
+                using (XmlWriter xmlWriter = XmlWriter.Create(streamWriter, GetXmlWriterSettings(options)))
+                    Serialize(xmlWriter, snippet, options);
             }
 
 #if NETFRAMEWORK
@@ -356,36 +287,25 @@ public static class SnippetSerializer
     }
 
     /// <summary>
-    /// Serializes enumerable collection of <see cref="Snippet"/> to text.
+    /// Serializes enumerable collection of <see cref="Snippet"/> to text, optionally using <see cref="SaveOptions"/> to modify serialization process.
     /// </summary>
     /// <param name="snippets">Enumerable collection of <see cref="Snippet"/> to be serialized.</param>
+    /// <param name="options">A <see cref="SaveOptions"/> that modify serialization process.</param>
     /// <returns>XML text that represents a specified collection of <see cref="Snippet"/>.</returns>
-    public static string CreateXml(IEnumerable<Snippet> snippets)
-    {
-        return CreateXml(snippets, new SaveSettings());
-    }
-
-    /// <summary>
-    /// Serializes enumerable collection of <see cref="Snippet"/> to text, optionally using <see cref="SaveSettings"/> to modify serialization process.
-    /// </summary>
-    /// <param name="snippets">Enumerable collection of <see cref="Snippet"/> to be serialized.</param>
-    /// <param name="settings">A <see cref="SaveSettings"/> that modify serialization process.</param>
-    /// <returns>XML text that represents a specified collection of <see cref="Snippet"/>.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="snippets"/> or <paramref name="settings"/> is <c>null</c>.</exception>
-    public static string CreateXml(IEnumerable<Snippet> snippets, SaveSettings settings)
+    /// <exception cref="ArgumentNullException"><paramref name="snippets"/> or <paramref name="options"/> is <c>null</c>.</exception>
+    public static string CreateXml(IEnumerable<Snippet> snippets, SaveOptions? options = null)
     {
         if (snippets is null)
             throw new ArgumentNullException(nameof(snippets));
 
-        if (settings is null)
-            throw new ArgumentNullException(nameof(settings));
+        options ??= new SaveOptions();
 
         using (var memoryStream = new MemoryStream())
         {
             using (var streamWriter = new StreamWriter(memoryStream, _utf8EncodingNoBom))
             {
-                using (XmlWriter xmlWriter = XmlWriter.Create(streamWriter, GetXmlWriterSettings(settings)))
-                    Serialize(xmlWriter, snippets, settings);
+                using (XmlWriter xmlWriter = XmlWriter.Create(streamWriter, GetXmlWriterSettings(options)))
+                    Serialize(xmlWriter, snippets, options);
             }
 
 #if NETFRAMEWORK
@@ -397,24 +317,24 @@ public static class SnippetSerializer
         }
     }
 
-    private static void Serialize(XmlWriter xmlWriter, Snippet snippet, SaveSettings settings)
+    private static void Serialize(XmlWriter xmlWriter, Snippet snippet, SaveOptions options)
     {
-        Serialize(xmlWriter, new CodeSnippetElement[] { SnippetMapper.MapToElement(snippet, settings) }, settings);
+        Serialize(xmlWriter, new CodeSnippetElement[] { SnippetMapper.MapToElement(snippet, options) }, options);
     }
 
-    private static void Serialize(XmlWriter xmlWriter, IEnumerable<Snippet> snippets, SaveSettings settings)
+    private static void Serialize(XmlWriter xmlWriter, IEnumerable<Snippet> snippets, SaveOptions options)
     {
-        Serialize(xmlWriter, SnippetMapper.MapToElement(snippets, settings).ToArray(), settings);
+        Serialize(xmlWriter, SnippetMapper.MapToElement(snippets, options).ToArray(), options);
     }
 
-    private static void Serialize(XmlWriter xmlWriter, CodeSnippetElement[] elements, SaveSettings settings)
+    private static void Serialize(XmlWriter xmlWriter, CodeSnippetElement[] elements, SaveOptions options)
     {
         xmlWriter.WriteStartDocument();
 
-        if (!string.IsNullOrEmpty(settings.Comment))
-            xmlWriter.WriteComment(settings.Comment);
+        if (!string.IsNullOrEmpty(options.Comment))
+            xmlWriter.WriteComment(options.Comment);
 
-        if (settings.OmitCodeSnippetsElement
+        if (options.OmitCodeSnippetsElement
             && elements.Length == 1)
         {
             CodeSnippetElementXmlSerializer.Serialize(xmlWriter, elements[0], Namespaces);
@@ -425,15 +345,15 @@ public static class SnippetSerializer
         }
     }
 
-    private static XmlWriterSettings GetXmlWriterSettings(SaveSettings settings)
+    private static XmlWriterSettings GetXmlWriterSettings(SaveOptions options)
     {
         XmlWriterSettings xmlWriterSettings = XmlWriterSettings;
 
-        if (!settings.HasDefaultValues)
+        if (!options.HasDefaultValues)
         {
             xmlWriterSettings = CreateXmlWriterSettings();
-            xmlWriterSettings.IndentChars = settings.IndentChars;
-            xmlWriterSettings.OmitXmlDeclaration = settings.OmitXmlDeclaration;
+            xmlWriterSettings.IndentChars = options.IndentChars;
+            xmlWriterSettings.OmitXmlDeclaration = options.OmitXmlDeclaration;
         }
 
         return xmlWriterSettings;
@@ -458,15 +378,9 @@ public static class SnippetSerializer
         get { return _codeSnippetElementXmlSerializer ??= new XmlSerializer(typeof(CodeSnippetElement), DefaultNamespace); }
     }
 
-    private static XmlWriterSettings XmlWriterSettings
-    {
-        get { return _xmlWriterSettings ??= CreateXmlWriterSettings(); }
-    }
+    private static XmlWriterSettings XmlWriterSettings => _xmlWriterSettings ??= CreateXmlWriterSettings();
 
-    private static XmlReaderSettings XmlReaderSettings
-    {
-        get { return _xmlReaderSettings ??= new XmlReaderSettings() { CloseInput = false }; }
-    }
+    private static XmlReaderSettings XmlReaderSettings => _xmlReaderSettings ??= new XmlReaderSettings() { CloseInput = false };
 
     private static XmlSerializerNamespaces Namespaces
     {

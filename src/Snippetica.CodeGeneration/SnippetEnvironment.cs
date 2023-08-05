@@ -219,7 +219,7 @@ public abstract class SnippetEnvironment
         {
             for (int i = snippet.Literals.Count - 1; i >= 0; i--)
             {
-                Literal literal = snippet.Literals[i];
+                SnippetLiteral literal = snippet.Literals[i];
 
                 if (!literal.IsEditable
                     && !string.Equals(literal.Identifier, XmlSnippetGenerator.CDataIdentifier, StringComparison.Ordinal))

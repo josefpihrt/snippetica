@@ -1,7 +1,5 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System;
-
 namespace Snippetica.VisualStudio;
 
 /// <summary>
@@ -28,12 +26,6 @@ public enum Language
     /// C++ language.
     /// </summary>
     Cpp = 3,
-
-    /// <summary>
-    /// C++ language.
-    /// </summary>
-    [Obsolete("Use Language.Cpp instead.")]
-    CPlusPlus = Cpp,
 
     /// <summary>
     /// XML language.

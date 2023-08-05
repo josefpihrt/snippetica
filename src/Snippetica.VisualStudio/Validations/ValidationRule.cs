@@ -2,6 +2,7 @@
 
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Snippetica.VisualStudio.Validations.Rules;
 
 namespace Snippetica.VisualStudio.Validations;
 

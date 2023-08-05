@@ -15,8 +15,8 @@ namespace Snippetica.VisualStudio;
 [DebuggerDisplay("{Text,nq}")]
 public class SnippetCode
 {
-    private PlaceholderCollection? _placeholders;
-    private Dictionary<int, Placeholder?>? _indexes;
+    private SnippetPlaceholderList? _placeholders;
+    private Dictionary<int, SnippetPlaceholder?>? _indexes;
     private int _startIndex = -1;
 
     /// <summary>
@@ -45,9 +45,9 @@ public class SnippetCode
             int index = 0;
             int prevIndex = 0;
             var sb = new StringBuilder();
-            Placeholder? placeholder = null;
+            SnippetPlaceholder? placeholder = null;
 
-            foreach (KeyValuePair<int, Placeholder> item in Indexes)
+            foreach (KeyValuePair<int, SnippetPlaceholder> item in Indexes)
             {
                 index = item.Key;
                 placeholder = item.Value;
@@ -56,7 +56,7 @@ public class SnippetCode
 
                 if (placeholder is not null)
                 {
-                    Literal? literal = Snippet.Literals.FirstOrDefault(f => Literal.IdentifierComparer.Equals(f.Identifier, placeholder.Identifier));
+                    SnippetLiteral? literal = Snippet.Literals.FirstOrDefault(f => SnippetLiteral.IdentifierComparer.Equals(f.Identifier, placeholder.Identifier));
                     if (literal is not null)
                         sb.Append(literal.DefaultValue);
                 }
@@ -94,7 +94,7 @@ public class SnippetCode
         {
             newIdentifier = "";
         }
-        else if (!ValidationHelper.IsValidLiteralIdentifier(newIdentifier))
+        else if (!SnippetValidator.IsValidLiteralIdentifier(newIdentifier))
         {
             throw new ArgumentException("Value is not a valid literal identifier.", nameof(newIdentifier));
         }
@@ -102,9 +102,9 @@ public class SnippetCode
         int prevIndex = 0;
         StringBuilder? sb = null;
 
-        foreach (Placeholder ph in Placeholders)
+        foreach (SnippetPlaceholder ph in Placeholders)
         {
-            if (Literal.IdentifierComparer.Equals(ph.Identifier, oldIdentifier))
+            if (SnippetLiteral.IdentifierComparer.Equals(ph.Identifier, oldIdentifier))
             {
                 sb ??= new StringBuilder();
 
@@ -135,7 +135,7 @@ public class SnippetCode
         int prevIndex = 0;
         var sb = new StringBuilder();
 
-        foreach (Placeholder ph in Placeholders)
+        foreach (SnippetPlaceholder ph in Placeholders)
         {
             sb.Append(Text, prevIndex, ph.Index - 1 - prevIndex);
             prevIndex = ph.EndIndex + 1;
@@ -159,9 +159,9 @@ public class SnippetCode
             int prevIndex = 0;
             StringBuilder? sb = null;
 
-            foreach (Placeholder placeholder in Placeholders)
+            foreach (SnippetPlaceholder placeholder in Placeholders)
             {
-                if (Literal.IdentifierComparer.Equals(placeholder.Identifier, identifier))
+                if (SnippetLiteral.IdentifierComparer.Equals(placeholder.Identifier, identifier))
                 {
                     sb ??= new StringBuilder();
 
@@ -184,8 +184,8 @@ public class SnippetCode
     private void Parse()
     {
         _startIndex = -1;
-        _indexes = new Dictionary<int, Placeholder?>();
-        var placeholders = new List<Placeholder>();
+        _indexes = new Dictionary<int, SnippetPlaceholder?>();
+        var placeholders = new List<SnippetPlaceholder>();
 
         for (int i = 0; i < Text.Length; i++)
         {
@@ -199,7 +199,7 @@ public class SnippetCode
                 {
                     if (i > _startIndex)
                     {
-                        var placeholder = new Placeholder(_startIndex, Text.Substring(_startIndex, i - _startIndex), Delimiter);
+                        var placeholder = new SnippetPlaceholder(_startIndex, Text.Substring(_startIndex, i - _startIndex), Delimiter);
                         _indexes.Add(_startIndex, placeholder);
                         placeholders.Add(placeholder);
                     }
@@ -213,13 +213,13 @@ public class SnippetCode
             }
         }
 
-        _placeholders = new PlaceholderCollection(placeholders);
+        _placeholders = new SnippetPlaceholderList(placeholders);
     }
 
     /// <summary>
     /// Gets a collection of literal placeholders.
     /// </summary>
-    public PlaceholderCollection Placeholders
+    public SnippetPlaceholderList Placeholders
     {
         get
         {
@@ -233,11 +233,11 @@ public class SnippetCode
     /// <summary>
     /// Gets a placeholder with identifier 'end' or <c>null</c> if it is not present.
     /// </summary>
-    public Placeholder? EndPlaceholder
+    public SnippetPlaceholder? EndPlaceholder
     {
         get
         {
-            foreach (Placeholder placeholder in Placeholders)
+            foreach (SnippetPlaceholder placeholder in Placeholders)
             {
                 if (placeholder.IsEndPlaceholder)
                     return placeholder;
@@ -250,11 +250,11 @@ public class SnippetCode
     /// <summary>
     /// Gets a placeholder with identifier 'selected' or <c>null</c> if it is not present.
     /// </summary>
-    public Placeholder? SelectedPlaceholder
+    public SnippetPlaceholder? SelectedPlaceholder
     {
         get
         {
-            foreach (Placeholder placeholder in Placeholders)
+            foreach (SnippetPlaceholder placeholder in Placeholders)
             {
                 if (placeholder.IsSelectedPlaceholder)
                     return placeholder;
@@ -264,7 +264,7 @@ public class SnippetCode
         }
     }
 
-    private Dictionary<int, Placeholder> Indexes
+    private Dictionary<int, SnippetPlaceholder> Indexes
     {
         get
         {

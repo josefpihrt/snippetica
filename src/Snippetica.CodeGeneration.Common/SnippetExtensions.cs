@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Snippetica.VisualStudio;
+using Snippetica.VisualStudio.Comparers;
 
 namespace Snippetica;
 
@@ -85,7 +86,7 @@ public static class SnippetExtensions
 
     public static void RemoveMetaKeywords(this Snippet snippet)
     {
-        KeywordCollection keywords = snippet.Keywords;
+        List<string> keywords = snippet.Keywords;
 
         for (int i = keywords.Count - 1; i >= 0; i--)
         {
@@ -106,10 +107,10 @@ public static class SnippetExtensions
 
     public static Snippet SortCollections(this Snippet snippet)
     {
-        snippet.AlternativeShortcuts.Sort();
-        snippet.Literals.Sort();
-        snippet.Keywords.Sort();
-        snippet.Namespaces.Sort();
+        snippet.AlternativeShortcuts.Sort(StringComparer.CurrentCulture);
+        snippet.Literals.Sort(SnippetLiteralComparer.Identifier);
+        snippet.Keywords.Sort(StringComparer.CurrentCulture);
+        snippet.Namespaces.Sort(NamespaceComparer.SystemFirst);
 
         return snippet;
     }
@@ -172,7 +173,7 @@ public static class SnippetExtensions
         if (string.IsNullOrEmpty(name))
             return TagInfo.Default;
 
-        KeywordCollection keywords = snippet.Keywords;
+        List<string> keywords = snippet.Keywords;
 
         for (int i = 0; i < keywords.Count; i++)
         {
@@ -231,14 +232,14 @@ public static class SnippetExtensions
         snippet.Namespaces.Add(@namespace);
     }
 
-    public static void AddLiteral(this Snippet snippet, Literal literal)
+    public static void AddLiteral(this Snippet snippet, SnippetLiteral literal)
     {
         snippet.Literals.Add(literal);
     }
 
-    public static Literal AddLiteral(this Snippet snippet, string identifier, string toolTip = null, string defaultValue = "")
+    public static SnippetLiteral AddLiteral(this Snippet snippet, string identifier, string toolTip = null, string defaultValue = "")
     {
-        var literal = new Literal(identifier, toolTip, defaultValue);
+        var literal = new SnippetLiteral(identifier, toolTip, defaultValue);
 
         snippet.Literals.Add(literal);
 
@@ -380,14 +381,14 @@ public static class SnippetExtensions
         snippet.ReplacePlaceholders(identifier, replacement);
     }
 
-    public static void RemoveLiteralAndPlaceholders(this Snippet snippet, Literal literal)
+    public static void RemoveLiteralAndPlaceholders(this Snippet snippet, SnippetLiteral literal)
     {
         RemoveLiteralAndPlaceholders(snippet, literal.Identifier);
     }
 
     public static void RemoveLiteralAndPlaceholders(this Snippet snippet, string identifier)
     {
-        Literal literal = snippet.Literals.FirstOrDefault(f => f.Identifier == identifier);
+        SnippetLiteral literal = snippet.Literals.FirstOrDefault(f => f.Identifier == identifier);
 
         if (literal is null)
             return;
@@ -437,7 +438,7 @@ public static class SnippetExtensions
 
     public static void ReplaceSubOrFunctionLiteral(this Snippet snippet, string replacement)
     {
-        Literal literal = snippet.Literals.FirstOrDefault(f => f.Identifier == LiteralIdentifiers.SubOrFunction);
+        SnippetLiteral literal = snippet.Literals.FirstOrDefault(f => f.Identifier == LiteralIdentifiers.SubOrFunction);
 
         if (literal is null)
             return;

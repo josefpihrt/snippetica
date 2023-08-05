@@ -32,11 +32,11 @@ public class Snippet
     /// </summary>
     internal static readonly string DefaultFormatVersionText = DefaultFormatVersion.ToString(3);
 
-    private KeywordCollection? _keywords;
-    private ShortcutCollection? _alternativeShortcuts;
-    private NamespaceCollection? _namespaces;
+    private List<string>? _keywords;
+    private List<string>? _alternativeShortcuts;
+    private List<string>? _namespaces;
     private Collection<AssemblyReference>? _assemblyReferences;
-    private LiteralCollection? _literals;
+    private SnippetLiteralList? _literals;
     private string _codeText = "";
     private string _shortcut = "";
     private string _title = "";
@@ -52,44 +52,23 @@ public class Snippet
         Code = new SnippetCode(this);
     }
 
-#if !PORTABLE
-    /// <summary>
-    /// Serializes the current instance to the specified file.
-    /// </summary>
-    /// <param name="filePath">The absolute or relative path to the file.</param>
-    public void Save(string filePath)
-    {
-        Save(filePath, new SaveSettings());
-    }
-
-    /// <summary>
-    /// Serializes the current instance to the specified file.
-    /// </summary>
-    /// <param name="filePath">The absolute or relative path to the file.</param>
-    /// <param name="settings">A <see cref="SaveSettings"/> that modify serialization process.</param>
-    public void Save(string filePath, SaveSettings settings)
-    {
-        SnippetSerializer.Serialize(filePath, this, settings);
-    }
-#endif
-
     /// <summary>
     /// Serializes the current instance to the specified <see cref="Stream"/>.
     /// </summary>
     /// <param name="stream">The stream to output this <see cref="Snippet"/> to.</param>
     public void Save(Stream stream)
     {
-        Save(stream, new SaveSettings());
+        Save(stream, new SaveOptions());
     }
 
     /// <summary>
     /// Serializes the current instance to the specified <see cref="Stream"/>, optionally specifying serialization process.
     /// </summary>
     /// <param name="stream">The stream to output this <see cref="Snippet"/> to.</param>
-    /// <param name="settings">A <see cref="SaveSettings"/> that modify serialization process.</param>
-    public void Save(Stream stream, SaveSettings settings)
+    /// <param name="options">A <see cref="SaveOptions"/> that modify serialization process.</param>
+    public void Save(Stream stream, SaveOptions options)
     {
-        SnippetSerializer.Serialize(stream, this, settings);
+        SnippetSerializer.Serialize(stream, this, options);
     }
 
     /// <summary>
@@ -191,17 +170,14 @@ public class Snippet
         foreach (AssemblyReference item in AssemblyReferences)
             clone.AssemblyReferences.Add((AssemblyReference)item.Clone());
 
-        foreach (string shortcut in AlternativeShortcuts)
-            clone.AlternativeShortcuts.Add(shortcut);
+        clone.AlternativeShortcuts.AddRange(AlternativeShortcuts);
 
-        foreach (string keyword in Keywords)
-            clone.Keywords.Add(keyword);
+        clone.Keywords.AddRange(Keywords);
 
-        foreach (Literal item in Literals)
-            clone.Literals.Add((Literal)item.Clone());
+        foreach (SnippetLiteral item in Literals)
+            clone.Literals.Add((SnippetLiteral)item.Clone());
 
-        foreach (string @namespace in Namespaces)
-            clone.Namespaces.Add(@namespace);
+        clone.Namespaces.AddRange(Namespaces);
 
         return clone;
     }
@@ -269,12 +245,12 @@ public class Snippet
     /// <summary>
     /// Gets a collection of snippet keywords.
     /// </summary>
-    public KeywordCollection Keywords => _keywords ??= new KeywordCollection();
+    public List<string> Keywords => _keywords ??= new List<string>();
 
     /// <summary>
     /// Gets a collection of alternative shortcuts.
     /// </summary>
-    public ShortcutCollection AlternativeShortcuts => _alternativeShortcuts ??= new ShortcutCollection();
+    public List<string> AlternativeShortcuts => _alternativeShortcuts ??= new List<string>();
 
     /// <summary>
     /// Gets a value indicating whether snippet contains alternative shortcut.
@@ -284,7 +260,7 @@ public class Snippet
     /// <summary>
     /// Gets a collection of snippet namespaces.
     /// </summary>
-    public NamespaceCollection Namespaces => _namespaces ??= new NamespaceCollection();
+    public List<string> Namespaces => _namespaces ??= new List<string>();
 
     /// <summary>
     /// Gets a collection of snippet assembly references.
@@ -294,12 +270,12 @@ public class Snippet
     /// <summary>
     /// Gets a collection of snippet literals.
     /// </summary>
-    public LiteralCollection Literals => _literals ??= new LiteralCollection();
+    public SnippetLiteralList Literals => _literals ??= new SnippetLiteralList();
 
     /// <summary>
     /// Gets or sets snippet code context.
     /// </summary>
-    public ContextKind ContextKind { get; set; }
+    public SnippetContextKind ContextKind { get; set; }
 
     /// <summary>
     /// Gets or sets code snippet programming language.
@@ -352,7 +328,7 @@ public class Snippet
     /// <summary>
     /// Gets a collection of literal placeholders.
     /// </summary>
-    public PlaceholderCollection Placeholders => Code.Placeholders;
+    public SnippetPlaceholderList Placeholders => Code.Placeholders;
 
     /// <summary>
     /// Occurs when the snippet text changes.

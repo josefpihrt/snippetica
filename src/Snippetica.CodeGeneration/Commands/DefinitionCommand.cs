@@ -17,7 +17,7 @@ public class DefinitionCommand : SnippetCommand
         snippet.SuffixFileName("Definition");
         snippet.AddTag(KnownTags.ExcludeFromDocs);
 
-        PlaceholderCollection placeholders = snippet.Code.Placeholders;
+        SnippetPlaceholderList placeholders = snippet.Code.Placeholders;
 
         if (placeholders.Contains("_definition"))
         {

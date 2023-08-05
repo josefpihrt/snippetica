@@ -6,15 +6,15 @@ using System.Collections.Generic;
 
 namespace Snippetica.VisualStudio.Comparers;
 
-public abstract class SnippetComparer : IComparer<Snippet>, IEqualityComparer<Snippet>, IComparer, IEqualityComparer
+public abstract class SnippetLiteralComparer : IComparer<SnippetLiteral>, IEqualityComparer<SnippetLiteral>, IComparer, IEqualityComparer
 {
-    public static SnippetComparer Shortcut { get; } = new ShortcutComparer();
+    public static SnippetLiteralComparer Identifier { get; } = new IdentifierComparer();
 
-    public abstract int Compare(Snippet? x, Snippet? y);
+    public abstract int Compare(SnippetLiteral? x, SnippetLiteral? y);
 
-    public abstract bool Equals(Snippet? x, Snippet? y);
+    public abstract bool Equals(SnippetLiteral? x, SnippetLiteral? y);
 
-    public abstract int GetHashCode(Snippet obj);
+    public abstract int GetHashCode(SnippetLiteral obj);
 
     public int Compare(object? x, object? y)
     {
@@ -27,8 +27,8 @@ public abstract class SnippetComparer : IComparer<Snippet>, IEqualityComparer<Sn
         if (y is null)
             return 1;
 
-        if (x is Snippet a
-            && y is Snippet b)
+        if (x is SnippetLiteral a
+            && y is SnippetLiteral b)
         {
             return Compare(a, b);
         }
@@ -47,8 +47,8 @@ public abstract class SnippetComparer : IComparer<Snippet>, IEqualityComparer<Sn
         if (y is null)
             return false;
 
-        if (x is Snippet a
-            && y is Snippet b)
+        if (x is SnippetLiteral a
+            && y is SnippetLiteral b)
         {
             return Equals(a, b);
         }
@@ -61,15 +61,15 @@ public abstract class SnippetComparer : IComparer<Snippet>, IEqualityComparer<Sn
         if (obj is null)
             return 0;
 
-        if (obj is Snippet type)
+        if (obj is SnippetLiteral type)
             return GetHashCode(type);
 
         throw new ArgumentException("", nameof(obj));
     }
 
-    private class ShortcutComparer : SnippetComparer
+    private class IdentifierComparer : SnippetLiteralComparer
     {
-        public override int Compare(Snippet? x, Snippet? y)
+        public override int Compare(SnippetLiteral? x, SnippetLiteral? y)
         {
             if (object.ReferenceEquals(x, y))
                 return 0;
@@ -80,10 +80,10 @@ public abstract class SnippetComparer : IComparer<Snippet>, IEqualityComparer<Sn
             if (y is null)
                 return 1;
 
-            return StringComparer.CurrentCulture.Compare(x.Shortcut, y.Shortcut);
+            return StringComparer.CurrentCulture.Compare(x.Identifier, y.Identifier);
         }
 
-        public override bool Equals(Snippet? x, Snippet? y)
+        public override bool Equals(SnippetLiteral? x, SnippetLiteral? y)
         {
             if (object.ReferenceEquals(x, y))
                 return true;
@@ -94,12 +94,12 @@ public abstract class SnippetComparer : IComparer<Snippet>, IEqualityComparer<Sn
             if (y is null)
                 return false;
 
-            return StringComparer.CurrentCulture.Equals(x.Shortcut, y.Shortcut);
+            return StringComparer.CurrentCulture.Equals(x.Identifier, y.Identifier);
         }
 
-        public override int GetHashCode(Snippet? obj)
+        public override int GetHashCode(SnippetLiteral? obj)
         {
-            return (obj is not null) ? StringComparer.CurrentCulture.GetHashCode(obj.Shortcut) : 0;
+            return (obj is not null) ? StringComparer.CurrentCulture.GetHashCode(obj.Identifier) : 0;
         }
     }
 }

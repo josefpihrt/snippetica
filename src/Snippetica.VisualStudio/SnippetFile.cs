@@ -1,12 +1,13 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace Snippetica.VisualStudio;
 
 /// <summary>
-/// Represents a file that has the extension 'snippet' and contains zero or more snippets serialized into xml.
+/// Represents a file that has the extension 'snippet' and contains zero or more XML serialized snippets.
 /// </summary>
 [DebuggerDisplay("{Snippets.Count} {FullName,nq}")]
 public class SnippetFile
@@ -20,7 +21,7 @@ public class SnippetFile
     /// Initializes a new instance of the <see cref="SnippetFile"/> class with a specified path.
     /// </summary>
     /// <param name="fullName">Full name of the snippet file.</param>
-    public SnippetFile(string fullName)
+    internal SnippetFile(string fullName)
     {
         FullName = fullName ?? throw new ArgumentNullException(nameof(fullName));
     }
@@ -33,5 +34,5 @@ public class SnippetFile
     /// <summary>
     /// Gets a collection of <see cref="Snippet"/>.
     /// </summary>
-    public SnippetCollection Snippets { get; } = new();
+    public List<Snippet> Snippets { get; } = new();
 }

@@ -28,13 +28,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="SnippetManager.snk" />
     <None Include="docs\NuGetReadme.md" Pack="true" PackagePath="docs\README.md" />
   </ItemGroup>
 
-  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>SnippetManager.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>Snippetica.CodeGeneration</_Parameter1>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>Snippetica.CodeGeneration.Common</_Parameter1>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>Snippetica.CodeGeneration.SnippetGenerator</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
 
 </Project>

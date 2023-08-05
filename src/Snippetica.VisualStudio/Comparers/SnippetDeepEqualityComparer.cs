@@ -61,7 +61,7 @@ public class SnippetDeepEqualityComparer : EqualityComparer<Snippet>
             return false;
 
         if ((x.HasAlternativeShortcuts || y.HasAlternativeShortcuts)
-            && !x.AlternativeShortcuts.SequenceEqual(y.AlternativeShortcuts, Comparer.StringComparer))
+            && !x.AlternativeShortcuts.SequenceEqual(y.AlternativeShortcuts, StringComparer.CurrentCulture))
         {
             return false;
         }
@@ -75,7 +75,7 @@ public class SnippetDeepEqualityComparer : EqualityComparer<Snippet>
         if (!x.AssemblyReferences.SequenceEqual(y.AssemblyReferences, AssemblyReferenceDeepEqualityComparer.Instance))
             return false;
 
-        if (!x.Literals.SequenceEqual(y.Literals, LiteralDeepEqualityComparer.Instance))
+        if (!x.Literals.SequenceEqual(y.Literals, SnippetLiteralDeepEqualityComparer.Instance))
             return false;
 
         return true;

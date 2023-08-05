@@ -72,7 +72,7 @@ public class BasicTypeCommand : SnippetCommand
 
         if (Type.Keyword == "this")
         {
-            snippet.AddLiteral(Literal.CreateClassNameLiteral("this", "Containing type name", "ThisName"));
+            snippet.AddLiteral(SnippetLiteral.CreateClassNameLiteral("this", "Containing type name", "ThisName"));
             snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.Type, "$this$");
         }
         else
@@ -80,14 +80,14 @@ public class BasicTypeCommand : SnippetCommand
             snippet.RemoveLiteralAndReplacePlaceholders(LiteralIdentifiers.Type, Type.Keyword);
         }
 
-        Literal valueLiteral = snippet.Literals.Find(LiteralIdentifiers.Value);
+        SnippetLiteral valueLiteral = snippet.Literals.Find(LiteralIdentifiers.Value);
 
         if (valueLiteral is not null)
             valueLiteral.DefaultValue = Type.DefaultValue;
 
         if (Type.DefaultIdentifier is not null)
         {
-            Literal identifierLiteral = snippet.Literals.Find(LiteralIdentifiers.Identifier);
+            SnippetLiteral identifierLiteral = snippet.Literals.Find(LiteralIdentifiers.Identifier);
 
             if (identifierLiteral is not null)
                 identifierLiteral.DefaultValue = Type.DefaultIdentifier;
