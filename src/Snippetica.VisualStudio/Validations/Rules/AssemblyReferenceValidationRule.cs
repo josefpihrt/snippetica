@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Snippetica.VisualStudio.Validations.Rules;
 
 /// <summary>
-/// Represents a validation rule for the <see cref="AssemblyReference"/>.
+/// Represents a validation rule for the <see cref="SnippetAssemblyReference"/>.
 /// </summary>
 public class AssemblyReferenceValidationRule : ValidationRule
 {
@@ -25,7 +25,7 @@ public class AssemblyReferenceValidationRule : ValidationRule
 
         IEnumerable<SnippetValidationResult> Validate()
         {
-            foreach (AssemblyReference reference in snippet.AssemblyReferences)
+            foreach (SnippetAssemblyReference reference in snippet.AssemblyReferences)
             {
                 if (string.IsNullOrEmpty(reference.AssemblyName))
                 {

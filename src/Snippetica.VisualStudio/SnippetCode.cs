@@ -297,7 +297,7 @@ public class SnippetCode
     /// <summary>
     /// Gets the placeholder delimiter.
     /// </summary>
-    public char Delimiter => Snippet.Delimiter;
+    public char Delimiter => Snippet.PlaceholderDelimiter;
 
     /// <summary>
     /// Gets the snippet that contains current instance.

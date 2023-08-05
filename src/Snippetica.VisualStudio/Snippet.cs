@@ -18,11 +18,6 @@ public class Snippet
 #endif
 {
     /// <summary>
-    /// Represents a default delimiter in a snippet code. This field is a constant.
-    /// </summary>
-    public const char DefaultDelimiter = '$';
-
-    /// <summary>
     /// Represents code snippet default format version. This field is read-only.
     /// </summary>
     public static readonly Version DefaultFormatVersion = new(1, 0, 0);
@@ -35,7 +30,7 @@ public class Snippet
     private List<string>? _keywords;
     private List<string>? _alternativeShortcuts;
     private List<string>? _namespaces;
-    private Collection<AssemblyReference>? _assemblyReferences;
+    private Collection<SnippetAssemblyReference>? _assemblyReferences;
     private SnippetLiteralList? _literals;
     private string _codeText = "";
     private string _shortcut = "";
@@ -48,7 +43,7 @@ public class Snippet
     /// </summary>
     public Snippet()
     {
-        Delimiter = DefaultDelimiter;
+        PlaceholderDelimiter = SnippetPlaceholder.DefaultDelimiter;
         Code = new SnippetCode(this);
     }
 
@@ -154,7 +149,7 @@ public class Snippet
             Author = Author,
             CodeText = CodeText,
             ContextKind = ContextKind,
-            Delimiter = Delimiter,
+            PlaceholderDelimiter = PlaceholderDelimiter,
             Description = Description,
             FormatVersion = FormatVersion,
             Language = Language,
@@ -167,8 +162,8 @@ public class Snippet
         if (HelpUrl is not null)
             clone.HelpUrl = new Uri(HelpUrl.OriginalString);
 
-        foreach (AssemblyReference item in AssemblyReferences)
-            clone.AssemblyReferences.Add((AssemblyReference)item.Clone());
+        foreach (SnippetAssemblyReference item in AssemblyReferences)
+            clone.AssemblyReferences.Add((SnippetAssemblyReference)item.Clone());
 
         clone.AlternativeShortcuts.AddRange(AlternativeShortcuts);
 
@@ -265,7 +260,7 @@ public class Snippet
     /// <summary>
     /// Gets a collection of snippet assembly references.
     /// </summary>
-    public Collection<AssemblyReference> AssemblyReferences => _assemblyReferences ??= new Collection<AssemblyReference>();
+    public Collection<SnippetAssemblyReference> AssemblyReferences => _assemblyReferences ??= new Collection<SnippetAssemblyReference>();
 
     /// <summary>
     /// Gets a collection of snippet literals.
@@ -285,7 +280,7 @@ public class Snippet
     /// <summary>
     /// Gets or sets a delimiter that encloses placeholder in the code.
     /// </summary>
-    public char Delimiter { get; set; }
+    public char PlaceholderDelimiter { get; set; }
 
     //TODO: Snippet.FilePath
     /// <summary>
@@ -297,11 +292,6 @@ public class Snippet
     /// Gets or sets index of a snippet in a snippet file.
     /// </summary>
     public int Index { get; set; }
-
-    /// <summary>
-    /// Gets a value indicating whether the current instance has default delimiter.
-    /// </summary>
-    public bool HasDefaultDelimiter => Delimiter == DefaultDelimiter;
 
     /// <summary>
     /// Gets or sets snippet code text.

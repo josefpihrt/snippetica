@@ -25,9 +25,10 @@ public abstract class ValidationRule
     /// <returns>Enumerable collection of <see cref="SnippetValidationResult"/>.</returns>
     public abstract IEnumerable<SnippetValidationResult> Validate(Snippet snippet);
 
-    private static List<ValidationRule> GetValidationRules()
-    {
-        return new List<ValidationRule>()
+    /// <summary>
+    /// Gets a collection of predefined validation rules.
+    /// </summary>
+    internal static ReadOnlyCollection<ValidationRule> PredefinedRules { get; } = new(new List<ValidationRule>()
         {
             new FormatVersionValidationRule(),
             new TitleValidationRule(),
@@ -38,11 +39,5 @@ public abstract class ValidationRule
             new AssemblyReferenceValidationRule(),
             new LiteralValidationRule(),
             new CodeValidationRule()
-        };
-    }
-
-    /// <summary>
-    /// Gets a collection of predefined validation rules.
-    /// </summary>
-    internal static ReadOnlyCollection<ValidationRule> PredefinedRules { get; } = new(GetValidationRules());
+        });
 }

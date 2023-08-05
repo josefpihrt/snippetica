@@ -9,23 +9,23 @@ namespace Snippetica.VisualStudio;
 /// Represents a reference to the assembly.
 /// </summary>
 [DebuggerDisplay("{AssemblyName,nq} {Url,nq}")]
-public class AssemblyReference
+public class SnippetAssemblyReference
 #if NETFRAMEWORK
     : ICloneable
 #endif
 {
-    public AssemblyReference(string assemblyName)
+    public SnippetAssemblyReference(string assemblyName)
     {
         AssemblyName = assemblyName ?? throw new ArgumentNullException(nameof(assemblyName));
     }
 
     /// <summary>
-    /// Creates a new <see cref="AssemblyReference"/> that is a deep copy of the current instance.
+    /// Creates a new <see cref="SnippetAssemblyReference"/> that is a deep copy of the current instance.
     /// </summary>
-    /// <returns>A new <see cref="AssemblyReference"/> that is a deep copy of the current instance.</returns>
+    /// <returns>A new <see cref="SnippetAssemblyReference"/> that is a deep copy of the current instance.</returns>
     public object Clone()
     {
-        var clone = new AssemblyReference(AssemblyName);
+        var clone = new SnippetAssemblyReference(AssemblyName);
 
         if (Url is not null)
             clone.Url = new Uri(Url.OriginalString);

@@ -27,7 +27,7 @@ public class SnippetDeepEqualityComparer : EqualityComparer<Snippet>
         if (x is null || y is null)
             return false;
 
-        if (x.Delimiter != y.Delimiter)
+        if (x.PlaceholderDelimiter != y.PlaceholderDelimiter)
             return false;
 
         if (x.ContextKind != y.ContextKind)

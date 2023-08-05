@@ -80,13 +80,13 @@ internal static class Program
         {
             Console.WriteLine($"checking duplicate shortcuts for '{environment.Kind.GetIdentifier()}.{grouping.Key.GetIdentifier()}'");
 
-            foreach (DuplicateShortcutInfo info in SnippetUtility.FindDuplicateShortcuts(grouping))
+            foreach ((string shortcut, List<Snippet> snippets2) in FindDuplicateShortcuts(grouping))
             {
-                if (info.Snippets.Any(f => !f.HasTag(KnownTags.NonUniqueShortcut)))
+                if (snippets2.Any(f => !f.HasTag(KnownTags.NonUniqueShortcut)))
                 {
-                    Console.WriteLine($"DUPLICATE SHORTCUT: {info.Shortcut}");
+                    Console.WriteLine($"DUPLICATE SHORTCUT: {shortcut}");
 
-                    foreach (Snippet item in info.Snippets)
+                    foreach (Snippet item in snippets2)
                         Console.WriteLine($"  {item.FileNameWithoutExtension()}");
                 }
             }
@@ -109,6 +109,26 @@ internal static class Program
 
                 if (!snippetEqualityComparer.Equals(snippet, clone))
                     IOUtility.SaveSnippet(clone, onlyIfChanged: false);
+            }
+        }
+    }
+
+    private static IEnumerable<(string, List<Snippet>)> FindDuplicateShortcuts(IEnumerable<Snippet> snippets)
+    {
+        if (snippets is null)
+            throw new ArgumentNullException(nameof(snippets));
+
+        return FindDuplicateShortcuts();
+
+        IEnumerable<(string, List<Snippet>)> FindDuplicateShortcuts()
+        {
+            foreach (var grouping in snippets
+                .SelectMany(snippet => snippet.Shortcuts()
+                    .Select(shortcut => new { Shortcut = shortcut, Snippet = snippet }))
+                .GroupBy(f => f.Snippet, SnippetComparer.Shortcut))
+            {
+                if (grouping.CountExceeds(1))
+                    yield return (grouping.Key.Shortcut, grouping.Select(f => f.Snippet).ToList());
             }
         }
     }

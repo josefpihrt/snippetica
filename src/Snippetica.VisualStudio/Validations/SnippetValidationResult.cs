@@ -6,24 +6,11 @@ using System.Diagnostics;
 namespace Snippetica.VisualStudio.Validations;
 
 /// <summary>
-/// Represents a result of the <see cref="Snippet"/> validation.
+/// Represents a result of the validation of a snippet.
 /// </summary>
 [DebuggerDisplay("{Code,nq} {Importance} {Description,nq}")]
 public class SnippetValidationResult
 {
-    /// <summary>
-    /// Initializes a new instance of the <see cref="SnippetValidationResult"/> class using the specified snippet, code, description a and importance.
-    /// </summary>
-    /// <param name="snippet">A snippet.</param>
-    /// <param name="code">Alphanumeric code the identifies the result.</param>
-    /// <param name="description">Result description.</param>
-    /// <param name="importance">Result importance.</param>
-    /// <exception cref="ArgumentNullException"><paramref name="snippet"/> is <c>null</c>.</exception>
-    public SnippetValidationResult(Snippet snippet, string code, string description, ResultImportance importance)
-        : this(snippet, code, description, importance, null)
-    {
-    }
-
     /// <summary>
     /// Initializes a new instance of the <see cref="SnippetValidationResult"/> class using the specified snippet, code, description, importance and content.
     /// </summary>
@@ -33,7 +20,12 @@ public class SnippetValidationResult
     /// <param name="importance">Result importance.</param>
     /// <param name="content">Additional result content. The value can be <c>null</c>.</param>
     /// <exception cref="ArgumentNullException"><paramref name="snippet"/> is <c>null</c>.</exception>
-    public SnippetValidationResult(Snippet snippet, string code, string description, ResultImportance importance, object? content)
+    public SnippetValidationResult(
+        Snippet snippet,
+        string code,
+        string description,
+        ResultImportance importance,
+        object? content = null)
     {
         Snippet = snippet ?? throw new ArgumentNullException(nameof(snippet));
         Code = code;

@@ -154,7 +154,7 @@ internal static class SnippetMapper
         return null;
     }
 
-    private static ReferenceElement[]? CreateReferenceElements(Collection<AssemblyReference> references)
+    private static ReferenceElement[]? CreateReferenceElements(Collection<SnippetAssemblyReference> references)
     {
         if (references.Count > 0)
         {
@@ -247,8 +247,11 @@ internal static class SnippetMapper
             element.Code = snippet.CodeText;
         }
 
-        if (!snippet.HasDefaultDelimiter || !context.Options.OmitDefaultDelimiter)
-            element.Delimiter = new string(snippet.Delimiter, 1);
+        if (snippet.PlaceholderDelimiter != SnippetPlaceholder.DefaultDelimiter
+            || context.Options.IncludeDefaultDelimiter)
+        {
+            element.Delimiter = new string(snippet.PlaceholderDelimiter, 1);
+        }
 
         if (snippet.ContextKind != SnippetContextKind.None)
             element.Kind = snippet.ContextKind.ToString();
@@ -351,7 +354,7 @@ internal static class SnippetMapper
     private static void LoadCodeElement(CodeElement element, Snippet snippet)
     {
         if (element.Delimiter?.Length == 1)
-            snippet.Delimiter = element.Delimiter[0];
+            snippet.PlaceholderDelimiter = element.Delimiter[0];
 
         if (element.Kind is not null
             && ContextKinds.TryGetValue(element.Kind, out SnippetContextKind kind))
@@ -381,7 +384,7 @@ internal static class SnippetMapper
         {
             if (!string.IsNullOrEmpty(element.Assembly))
             {
-                var reference = new AssemblyReference(element.Assembly);
+                var reference = new SnippetAssemblyReference(element.Assembly);
 
                 if (!string.IsNullOrEmpty(element.Url)
                     && Uri.TryCreate(element.Url, UriKind.RelativeOrAbsolute, out Uri? url))

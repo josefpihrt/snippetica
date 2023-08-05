@@ -24,7 +24,6 @@ public static class SnippetSerializer
 
     private static XmlSerializer? _codeSnippetsElementXmlSerializer;
     private static XmlSerializer? _codeSnippetElementXmlSerializer;
-    private static XmlWriterSettings? _xmlWriterSettings;
     private static XmlReaderSettings? _xmlReaderSettings;
     private static XmlSerializerNamespaces? _namespaces;
     private static readonly UTF8Encoding _utf8EncodingNoBom = new(encoderShouldEmitUTF8Identifier: false);
@@ -347,24 +346,11 @@ public static class SnippetSerializer
 
     private static XmlWriterSettings GetXmlWriterSettings(SaveOptions options)
     {
-        XmlWriterSettings xmlWriterSettings = XmlWriterSettings;
-
-        if (!options.HasDefaultValues)
-        {
-            xmlWriterSettings = CreateXmlWriterSettings();
-            xmlWriterSettings.IndentChars = options.IndentChars;
-            xmlWriterSettings.OmitXmlDeclaration = options.OmitXmlDeclaration;
-        }
-
-        return xmlWriterSettings;
-    }
-
-    private static XmlWriterSettings CreateXmlWriterSettings()
-    {
         return new XmlWriterSettings()
         {
-            IndentChars = "    ",
-            Indent = true
+            Indent = true,
+            IndentChars = options.IndentChars,
+            OmitXmlDeclaration = options.OmitXmlDeclaration,
         };
     }
 
@@ -377,8 +363,6 @@ public static class SnippetSerializer
     {
         get { return _codeSnippetElementXmlSerializer ??= new XmlSerializer(typeof(CodeSnippetElement), DefaultNamespace); }
     }
-
-    private static XmlWriterSettings XmlWriterSettings => _xmlWriterSettings ??= CreateXmlWriterSettings();
 
     private static XmlReaderSettings XmlReaderSettings => _xmlReaderSettings ??= new XmlReaderSettings() { CloseInput = false };
 

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Snippetica.VisualStudio;
 
-internal static class Extensions
+internal static class EnumerableExtensions
 {
     public static bool CountExceeds<TSource>(this IEnumerable<TSource> collection, int value)
     {

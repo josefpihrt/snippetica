@@ -8,7 +8,7 @@ namespace Snippetica.VisualStudio.Comparers;
 /// <summary>
 /// Represents a deep comparison for <see cref="SnippetLiteral"/>.
 /// </summary>
-public class SnippetLiteralDeepEqualityComparer : EqualityComparer<SnippetLiteral>
+internal class SnippetLiteralDeepEqualityComparer : EqualityComparer<SnippetLiteral>
 {
     /// <summary>
     /// Indicates whether two literals are equal.

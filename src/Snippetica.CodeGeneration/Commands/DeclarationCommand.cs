@@ -29,6 +29,6 @@ public class DeclarationCommand : SnippetCommand
             snippet.CodeText = s;
         }
 
-        snippet.AppendCode(snippet.Delimiter + SnippetPlaceholder.EndIdentifier + snippet.Delimiter);
+        snippet.AppendCode(snippet.PlaceholderDelimiter + SnippetPlaceholder.EndIdentifier + snippet.PlaceholderDelimiter);
     }
 }

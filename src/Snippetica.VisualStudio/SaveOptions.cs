@@ -1,7 +1,5 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System;
-
 namespace Snippetica.VisualStudio;
 
 /// <summary>
@@ -21,15 +19,6 @@ public sealed class SaveOptions
     {
     }
 
-    internal bool HasDefaultValues
-    {
-        get
-        {
-            return string.Equals(IndentChars, DefaultIndentChars, StringComparison.Ordinal)
-                && !OmitXmlDeclaration;
-        }
-    }
-
     /// <summary>
     /// Gets or sets a value indicating whether default format version set is when <see cref="Snippet.FormatVersion"/> value is <c>null</c>.
     /// </summary>
@@ -41,9 +30,9 @@ public sealed class SaveOptions
     public string IndentChars { get; set; } = DefaultIndentChars;
 
     /// <summary>
-    /// Gets or sets a value indicating whether Delimiter attribute with value equal to <see cref="Snippet.DefaultDelimiter"/> will be omitted. Default value is <c>true</c>.
+    /// Gets or sets a value indicating whether Delimiter attribute with value equal to <see cref="Snippet.DefaultDelimiter"/> will be included.
     /// </summary>
-    public bool OmitDefaultDelimiter { get; set; } = true;
+    public bool IncludeDefaultDelimiter { get; set; }
 
     /// <summary>
     /// Gets or sets a value indicating whether to write an XML declaration.

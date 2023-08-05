@@ -11,6 +11,11 @@ namespace Snippetica.VisualStudio;
 public class SnippetPlaceholder
 {
     /// <summary>
+    /// Represents a default delimiter in a snippet code. This field is a constant.
+    /// </summary>
+    public static readonly char DefaultDelimiter = '$';
+
+    /// <summary>
     /// Represents 'end' identifier. This field is a constant.
     /// </summary>
     public static readonly string EndIdentifier = "end";
