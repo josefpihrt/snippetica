@@ -17,7 +17,7 @@ public class VisualStudioCodeSnippetGenerator : EnvironmentSnippetGenerator
     {
         LiteralCollection literals = snippet.Literals;
 
-        Literal typeLiteral = literals[LiteralIdentifiers.Type];
+        Literal typeLiteral = literals.Find(LiteralIdentifiers.Type);
 
         if (typeLiteral is not null)
         {

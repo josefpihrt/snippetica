@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 namespace Snippetica.VisualStudio.Xml.Serialization;
 
 /// <summary>
-/// Represents CodeSnippet element in a serialized <see cref="Snippet"/>. This class cannot be inherited.
+/// Intended for internal use only.
 /// </summary>
 [XmlRoot("CodeSnippet")]
 public sealed class CodeSnippetElement

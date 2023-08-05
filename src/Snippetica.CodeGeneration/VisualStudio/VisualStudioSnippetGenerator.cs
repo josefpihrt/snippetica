@@ -13,7 +13,7 @@ public class VisualStudioSnippetGenerator : EnvironmentSnippetGenerator
 
     protected override Snippet PostProcess(Snippet snippet)
     {
-        Literal typeLiteral = snippet.Literals[LiteralIdentifiers.Type];
+        Literal typeLiteral = snippet.Literals.Find(LiteralIdentifiers.Type);
 
         if (typeLiteral is not null)
             typeLiteral.DefaultValue = "T";

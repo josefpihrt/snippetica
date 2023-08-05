@@ -10,9 +10,9 @@
     <PackageReference Include="SnippetManager" Version="1.3.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Snippetica.CodeGeneration.Metadata\Snippetica.CodeGeneration.Metadata.csproj" />
-    <ProjectReference Include="..\..\Snippetica.CodeGeneration.Common\Snippetica.CodeGeneration.Common.csproj" />
-    <ProjectReference Include="..\..\Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj" />
-    <ProjectReference Include="..\..\Snippetica.VisualStudio\Snippetica.VisualStudio.csproj" />
+    <ProjectReference Include="..\Snippetica.CodeGeneration.Metadata\Snippetica.CodeGeneration.Metadata.csproj" />
+    <ProjectReference Include="..\Snippetica.CodeGeneration.Common\Snippetica.CodeGeneration.Common.csproj" />
+    <ProjectReference Include="..\Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj" />
+    <ProjectReference Include="..\Snippetica.VisualStudio\Snippetica.VisualStudio.csproj" />
   </ItemGroup>
 </Project>

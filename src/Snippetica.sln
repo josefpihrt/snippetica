@@ -3,19 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.CodeGeneration.Metadata", "Snippetica.CodeGeneration.Metadata\Snippetica.CodeGeneration.Metadata.csproj", "{D26EA838-9073-407E-A15A-112731027059}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.CodeGeneration.Common", "Snippetica.CodeGeneration.Common\Snippetica.CodeGeneration.Common.csproj", "{EA986E08-DD26-43EA-94F0-8D2F70D4A17F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetGenerator", "Tools\Snippetica.CodeGeneration.SnippetGenerator\SnippetGenerator.csproj", "{F28D28EC-37E4-4857-B072-91A2D1FF8F60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetGenerator", "Snippetica.CodeGeneration.SnippetGenerator\SnippetGenerator.csproj", "{F28D28EC-37E4-4857-B072-91A2D1FF8F60}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.CodeGeneration", "Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj", "{B53B29D0-8BB3-478D-AD94-863F913E56CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippetica.VisualStudio.Vsix", "Snippetica.VisualStudio.Vsix\Snippetica.VisualStudio.Vsix.csproj", "{C6E1B9F3-6AFA-4849-9CE1-E224EBB08AA4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.TestFiles", "Tools\Snippetica.TestFiles\Snippetica.TestFiles.csproj", "{A8ED9945-2D2B-493C-ABB6-E860315EAFFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestFiles", "Snippetica.TestFiles\TestFiles.csproj", "{A8ED9945-2D2B-493C-ABB6-E860315EAFFF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6696AB95-B549-41A6-816A-2E5B772A2E7A}"
 	ProjectSection(SolutionItems) = preProject
@@ -32,9 +30,11 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Snippetica.VisualStudioCode.Vsix.Dev", "Snippetica.VisualStudioCode.Vsix.Dev\Snippetica.VisualStudioCode.Vsix.Dev.shproj", "{DDDAE79D-39A1-4D6E-83E9-E9758C632645}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentationGenerator", "Tools\Snippetica.CodeGeneration.DocumentationGenerator\DocumentationGenerator.csproj", "{31FE484E-EC51-4B75-88A4-9B7D33710686}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentationGenerator", "Snippetica.CodeGeneration.DocumentationGenerator\DocumentationGenerator.csproj", "{31FE484E-EC51-4B75-88A4-9B7D33710686}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snippetica.VisualStudio", "Snippetica.VisualStudio\Snippetica.VisualStudio.csproj", "{5881DF81-7D89-4037-906E-098EB6A48A69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{B33DC68F-66B7-4E4D-AB48-FF6BC278CEEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,9 +91,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F28D28EC-37E4-4857-B072-91A2D1FF8F60} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
-		{A8ED9945-2D2B-493C-ABB6-E860315EAFFF} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
-		{31FE484E-EC51-4B75-88A4-9B7D33710686} = {98D4AD11-9461-4806-9EB3-B3D5A93DB7AF}
+		{F28D28EC-37E4-4857-B072-91A2D1FF8F60} = {B33DC68F-66B7-4E4D-AB48-FF6BC278CEEE}
+		{A8ED9945-2D2B-493C-ABB6-E860315EAFFF} = {B33DC68F-66B7-4E4D-AB48-FF6BC278CEEE}
+		{31FE484E-EC51-4B75-88A4-9B7D33710686} = {B33DC68F-66B7-4E4D-AB48-FF6BC278CEEE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F615C44-B8F8-4E88-A201-667DE41F776F}

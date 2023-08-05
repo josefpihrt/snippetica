@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 namespace Snippetica.VisualStudio.Xml.Serialization;
 
 /// <summary>
-/// Represents Literal element in a serialized <see cref="Snippet"/>. This class cannot be inherited.
+/// Intended for internal use only.
 /// </summary>
 public class LiteralElement
 {
