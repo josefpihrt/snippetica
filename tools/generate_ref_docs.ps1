@@ -11,7 +11,8 @@ dotnet build "../../Roslynator/src/CommandLine.sln" --no-restore /p:Configuratio
  --group-by-common-namespace `
  --ignored-common-parts content `
  --ignored-root-parts all `
- --max-derived-types 10
+ --max-derived-types 10 `
+ --ignored-names "Snippetica.VisualStudio.Serialization"
 
 & $roslynatorExe generate-doc-root "../src/Snippetica.VisualStudio/Snippetica.VisualStudio.csproj" `
   --properties "Configuration=Release" `
@@ -20,6 +21,7 @@ dotnet build "../../Roslynator/src/CommandLine.sln" --no-restore /p:Configuratio
   --heading ".NET API Reference" `
   --ignored-parts content `
   --group-by-common-namespace `
-  --root-directory-url "ref"
+  --root-directory-url "ref" `
+ --ignored-names "Snippetica.VisualStudio.Serialization"
 
 Write-Host "DONE"

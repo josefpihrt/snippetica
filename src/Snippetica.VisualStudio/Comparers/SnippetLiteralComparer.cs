@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Snippetica.VisualStudio.Comparers;
 
-public abstract class SnippetLiteralComparer : IComparer<SnippetLiteral>, IEqualityComparer<SnippetLiteral>, IComparer, IEqualityComparer
+internal abstract class SnippetLiteralComparer : IComparer<SnippetLiteral>, IEqualityComparer<SnippetLiteral>, IComparer, IEqualityComparer
 {
     public static SnippetLiteralComparer Identifier { get; } = new IdentifierComparer();
 

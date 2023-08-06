@@ -9,7 +9,7 @@ namespace Snippetica.VisualStudio.Comparers;
 /// <summary>
 /// Represents a deep comparison for <see cref="Snippet"/>.
 /// </summary>
-public class SnippetDeepEqualityComparer : EqualityComparer<Snippet>
+internal class SnippetDeepEqualityComparer : EqualityComparer<Snippet>
 {
     private static readonly StringComparer _stringComparer = StringComparer.Ordinal;
 
