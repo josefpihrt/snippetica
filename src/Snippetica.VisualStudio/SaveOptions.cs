@@ -30,7 +30,7 @@ public sealed class SaveOptions
     public string IndentChars { get; set; } = DefaultIndentChars;
 
     /// <summary>
-    /// Gets or sets a value indicating whether Delimiter attribute with value equal to <see cref="Snippet.DefaultDelimiter"/> will be included.
+    /// Gets or sets a value indicating whether Delimiter attribute with value equal to <see cref="SnippetPlaceholder.DefaultDelimiter"/> will be included.
     /// </summary>
     public bool IncludeDefaultDelimiter { get; set; }
 

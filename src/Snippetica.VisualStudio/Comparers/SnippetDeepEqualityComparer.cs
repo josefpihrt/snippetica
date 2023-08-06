@@ -60,7 +60,7 @@ public class SnippetDeepEqualityComparer : EqualityComparer<Snippet>
         if (!string.Equals(x.CodeText, y.CodeText, StringComparison.Ordinal))
             return false;
 
-        if ((x.HasAlternativeShortcuts || y.HasAlternativeShortcuts)
+        if (x.HasAlternativeShortcuts != y.HasAlternativeShortcuts
             && !x.AlternativeShortcuts.SequenceEqual(y.AlternativeShortcuts, StringComparer.CurrentCulture))
         {
             return false;

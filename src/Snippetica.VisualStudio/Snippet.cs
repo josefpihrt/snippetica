@@ -84,7 +84,7 @@ public class Snippet
     /// <summary>
     /// Gets or sets a value indicating whether the current instance has <see cref="SnippetTypes.Expansion"/> flag set.
     /// </summary>
-    public bool IsExpansion
+    internal bool IsExpansion
     {
         get { return (SnippetTypes & SnippetTypes.Expansion) != 0; }
         set
@@ -103,7 +103,7 @@ public class Snippet
     /// <summary>
     /// Gets or sets a value indicating whether the current instance has <see cref="SnippetTypes.SurroundsWith"/> flag set.
     /// </summary>
-    public bool IsSurroundsWith
+    internal bool IsSurroundsWith
     {
         get { return (SnippetTypes & SnippetTypes.SurroundsWith) != 0; }
         set
@@ -122,7 +122,7 @@ public class Snippet
     /// <summary>
     /// Gets or sets a value indicating whether the current instance has <see cref="SnippetTypes.Refactoring"/> flag set.
     /// </summary>
-    public bool IsRefactoring
+    internal bool IsRefactoring
     {
         get { return (SnippetTypes & SnippetTypes.Refactoring) != 0; }
         set
@@ -250,7 +250,7 @@ public class Snippet
     /// <summary>
     /// Gets a value indicating whether snippet contains alternative shortcut.
     /// </summary>
-    public bool HasAlternativeShortcuts => _alternativeShortcuts?.Count > 0;
+    internal bool HasAlternativeShortcuts => _alternativeShortcuts?.Count > 0;
 
     /// <summary>
     /// Gets a collection of snippet namespaces.
