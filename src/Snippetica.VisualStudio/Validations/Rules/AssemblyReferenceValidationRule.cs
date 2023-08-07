@@ -31,7 +31,6 @@ public class AssemblyReferenceValidationRule : ValidationRule
                 {
                     yield return new SnippetValidationResult(
                         snippet,
-                        ErrorCode.MissingAssemblyReferenceName,
                         "Snippet assembly reference name is missing.",
                         ResultImportance.Error,
                         reference);

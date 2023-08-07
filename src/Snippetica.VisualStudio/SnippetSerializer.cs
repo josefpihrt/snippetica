@@ -68,12 +68,9 @@ public static class SnippetSerializer
             var file = new SnippetFile(filePath);
             int index = 0;
 
-            Debug.WriteLine($"deserializing snippet file '{filePath}'");
-
             foreach (Snippet snippet in Deserialize(stream))
             {
                 snippet.FilePath = filePath;
-                snippet.Index = index;
                 file.Snippets.Add(snippet);
                 index++;
             }
@@ -254,6 +251,7 @@ public static class SnippetSerializer
             Serialize(xmlWriter, snippets, options);
     }
 
+    //TODO: GetString
     /// <summary>
     /// Serializes a specified <see cref="Snippet"/> to xml text, optionally using <see cref="SaveOptions"/> to modify serialization process.
     /// </summary>

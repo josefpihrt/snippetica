@@ -29,7 +29,6 @@ public class SnippetTypeValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.MissingSnippetType,
                     "Snippet type is missing.",
                     ResultImportance.Information);
             }

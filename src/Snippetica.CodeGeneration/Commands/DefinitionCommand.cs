@@ -21,7 +21,7 @@ public class DefinitionCommand : SnippetCommand
 
         if (placeholders.Contains("_definition"))
         {
-            snippet.CodeText = snippet.Code.ReplacePlaceholders(
+            snippet.CodeText = snippet.Code.ReplacePlaceholder(
                 "_definition",
                 @" {
 	$selected$$end$

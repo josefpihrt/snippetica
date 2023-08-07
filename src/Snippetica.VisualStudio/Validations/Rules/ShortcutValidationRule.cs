@@ -29,7 +29,6 @@ public class ShortcutValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.MissingShortcut,
                     "Snippet shortcut is missing.",
                     ResultImportance.Error);
             }
@@ -38,7 +37,6 @@ public class ShortcutValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.InvalidShortcut,
                     "Snippet shortcut is invalid.",
                     ResultImportance.Error);
             }

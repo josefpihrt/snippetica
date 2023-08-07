@@ -29,7 +29,6 @@ public class DescriptionValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.MissingDescription,
                     "Snippet description is missing.",
                     ResultImportance.Information);
             }

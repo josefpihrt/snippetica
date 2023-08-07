@@ -29,7 +29,6 @@ public class TitleValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.MissingTitle,
                     "Snippet title is missing.",
                     ResultImportance.Error);
             }
@@ -38,7 +37,6 @@ public class TitleValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.TitleTitleContainsWhiteSpaceOnly,
                     "Snippet title contains white-space only.",
                     ResultImportance.Error);
             }

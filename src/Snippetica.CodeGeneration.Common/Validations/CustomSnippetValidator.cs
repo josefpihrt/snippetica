@@ -21,7 +21,6 @@ public class CustomSnippetValidator : SnippetValidator
         {
             yield return new SnippetValidationResult(
                 context.Snippet,
-                "",
                 "Snippet author is not 'Josef Pihrt'.",
                 ResultImportance.Information);
         }
@@ -30,7 +29,6 @@ public class CustomSnippetValidator : SnippetValidator
         {
             yield return new SnippetValidationResult(
                 context.Snippet,
-                "",
                 "Snippet shortcut contains white-space.",
                 ResultImportance.Information);
         }
@@ -39,7 +37,6 @@ public class CustomSnippetValidator : SnippetValidator
         {
             yield return new SnippetValidationResult(
                 context.Snippet,
-                "",
                 "Snippet code contains trailing white-space.",
                 ResultImportance.Information);
         }
@@ -52,7 +49,6 @@ public class CustomSnippetValidator : SnippetValidator
 
             yield return new SnippetValidationResult(
                 context.Snippet,
-                "",
                 "Snippet code contains invalid leading spaces.",
                 ResultImportance.Information);
         }

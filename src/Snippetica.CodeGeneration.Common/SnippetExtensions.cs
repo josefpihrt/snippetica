@@ -414,7 +414,7 @@ public static class SnippetExtensions
 
         bool endsWithWhitespace = char.IsWhiteSpace(s[s.Length - 1]);
 
-        s = snippet.Code.ReplacePlaceholders(identifier, replacement);
+        s = snippet.Code.ReplacePlaceholder(identifier, replacement);
 
         if (!startsWithWhitespace
             && char.IsWhiteSpace(s[0]))

@@ -11,17 +11,17 @@ namespace Snippetica.VisualStudio;
 public class SnippetPlaceholder
 {
     /// <summary>
-    /// Represents a default delimiter in a snippet code. This field is a constant.
+    /// Represents a default delimiter in a snippet code.
     /// </summary>
     public static readonly char DefaultDelimiter = '$';
 
     /// <summary>
-    /// Represents 'end' identifier. This field is a constant.
+    /// Represents 'end' identifier.
     /// </summary>
     public static readonly string EndIdentifier = "end";
 
     /// <summary>
-    /// Represents 'selected' identifier. This field is a constant.
+    /// Represents 'selected' identifier.
     /// </summary>
     public static readonly string SelectedIdentifier = "selected";
 
@@ -69,17 +69,17 @@ public class SnippetPlaceholder
     public int EndIndex => Index + Length;
 
     /// <summary>
-    /// Gets a value indicating whether the current instance is a system placeholder.
+    /// Gets a value indicating whether the current instance is "end" or "selected" placeholder.
     /// </summary>
     public bool IsSystemPlaceholder => IsEndPlaceholder || IsSelectedPlaceholder;
 
     /// <summary>
-    /// Gets a value indicating whether the current instance has identifier 'end'.
+    /// Gets a value indicating whether the current instance has identifier "end".
     /// </summary>
     public bool IsEndPlaceholder => SnippetLiteral.IdentifierComparer.Equals(Identifier, EndIdentifier);
 
     /// <summary>
-    /// Gets a value indicating whether the current instance has identifier 'selected'.
+    /// Gets a value indicating whether the current instance has identifier "selected".
     /// </summary>
     public bool IsSelectedPlaceholder => SnippetLiteral.IdentifierComparer.Equals(Identifier, SelectedIdentifier);
 }

@@ -34,7 +34,6 @@ public class NamespaceValidationRule : ValidationRule
                 {
                     yield return new SnippetValidationResult(
                         snippet,
-                        ErrorCode.NamespaceDuplicate,
                         $"Namespace '{grp.Key}' is duplicated.",
                         ResultImportance.Warning);
                 }

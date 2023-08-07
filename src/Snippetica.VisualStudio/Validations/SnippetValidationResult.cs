@@ -15,21 +15,18 @@ public class SnippetValidationResult
     /// Initializes a new instance of the <see cref="SnippetValidationResult"/> class using the specified snippet, code, description, importance and content.
     /// </summary>
     /// <param name="snippet">A snippet.</param>
-    /// <param name="code">Alphanumeric code the identifies the result.</param>
     /// <param name="description">Result description.</param>
     /// <param name="importance">Result importance.</param>
     /// <param name="content">Additional result content. The value can be <c>null</c>.</param>
     /// <exception cref="ArgumentNullException"><paramref name="snippet"/> is <c>null</c>.</exception>
     public SnippetValidationResult(
         Snippet snippet,
-        string code,
         string description,
         ResultImportance importance,
         object? content = null)
     {
         Snippet = snippet ?? throw new ArgumentNullException(nameof(snippet));
-        Code = code;
-        Description = description;
+        Description = description ?? throw new ArgumentNullException(nameof(description));
         Importance = importance;
         Content = content;
     }
@@ -40,17 +37,12 @@ public class SnippetValidationResult
     public ResultImportance Importance { get; }
 
     /// <summary>
-    /// Gets the alphanumeric code of the result.
-    /// </summary>
-    public string Code { get; }
-
-    /// <summary>
     /// Gets the description text.
     /// </summary>
     public string Description { get; }
 
     /// <summary>
-    /// Gets the <see cref="Snippet"/> the is the source of the result.
+    /// Gets the snippet the is the source of the result.
     /// </summary>
     public Snippet Snippet { get; }
 

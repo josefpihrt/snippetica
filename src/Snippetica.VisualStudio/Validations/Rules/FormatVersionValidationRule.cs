@@ -29,7 +29,6 @@ public class FormatVersionValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.MissingVersion,
                     "Snippet format version is missing.",
                     ResultImportance.Error);
             }
@@ -38,7 +37,6 @@ public class FormatVersionValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.InvalidVersion,
                     "Snippet format version is has invalid format.",
                     ResultImportance.Error);
             }

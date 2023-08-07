@@ -1,18 +1,20 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Snippetica.VisualStudio;
 
 /// <summary>
 /// Represents the set of <see cref="SnippetLiteral"/>s.
 /// </summary>
-public class SnippetLiteralList : List<SnippetLiteral>
+public class SnippetLiteralList : Collection<SnippetLiteral>
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="SnippetLiteralList"/> class that is empty.
     /// </summary>
     public SnippetLiteralList()
+        : base(new List<SnippetLiteral>())
     {
     }
 
@@ -62,6 +64,11 @@ public class SnippetLiteralList : List<SnippetLiteral>
         }
 
         return false;
+    }
+
+    internal void Sort(IComparer<SnippetLiteral> comparer)
+    {
+        ((List<SnippetLiteral>)Items).Sort(comparer);
     }
 
     /// <summary>

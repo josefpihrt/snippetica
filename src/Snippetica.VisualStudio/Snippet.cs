@@ -48,29 +48,10 @@ public class Snippet
     }
 
     /// <summary>
-    /// Serializes the current instance to the specified <see cref="Stream"/>.
-    /// </summary>
-    /// <param name="stream">The stream to output this <see cref="Snippet"/> to.</param>
-    public void Save(Stream stream)
-    {
-        Save(stream, new SaveOptions());
-    }
-
-    /// <summary>
-    /// Serializes the current instance to the specified <see cref="Stream"/>, optionally specifying serialization process.
-    /// </summary>
-    /// <param name="stream">The stream to output this <see cref="Snippet"/> to.</param>
-    /// <param name="options">A <see cref="SaveOptions"/> that modify serialization process.</param>
-    public void Save(Stream stream, SaveOptions options)
-    {
-        SnippetSerializer.Serialize(stream, this, options);
-    }
-
-    /// <summary>
     /// Returns snippet shortcut and all alternative shortcuts, if any.
     /// </summary>
     /// <returns>Sequence of all defined shortcut.</returns>
-    public IEnumerable<string> Shortcuts()
+    internal IEnumerable<string> Shortcuts()
     {
         yield return Shortcut;
 
@@ -287,11 +268,6 @@ public class Snippet
     /// Gets or sets full path to the snippet file.
     /// </summary>
     public string? FilePath { get; set; }
-
-    /// <summary>
-    /// Gets or sets index of a snippet in a snippet file.
-    /// </summary>
-    public int Index { get; set; }
 
     /// <summary>
     /// Gets or sets snippet code text.

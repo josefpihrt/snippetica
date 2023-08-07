@@ -33,7 +33,6 @@ public class CodeValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.MissingCode,
                     "Snippet code is missing.",
                     ResultImportance.Error);
             }
@@ -42,7 +41,6 @@ public class CodeValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.InvalidCode,
                     "Snippet code may not contain CData end sequence.",
                     ResultImportance.Error);
             }
@@ -51,7 +49,6 @@ public class CodeValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.UnclosedDelimiter,
                     "Snippet code contains unclosed delimiter.",
                     ResultImportance.Warning);
             }
@@ -66,7 +63,6 @@ public class CodeValidationRule : ValidationRule
                 {
                     yield return new SnippetValidationResult(
                         snippet,
-                        ErrorCode.PlaceholderWithoutLiteral,
                         $"Snippet code placeholder '{placeholder.Identifier}' does not have a corresponding literal.",
                         ResultImportance.Warning);
                 }
@@ -76,7 +72,6 @@ public class CodeValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.MissingEndPlaceholder,
                     "Snippet code does not contain end placeholder.",
                     ResultImportance.Warning);
             }
@@ -84,7 +79,6 @@ public class CodeValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.MultipleEndPlaceholders,
                     "Snippet code contain multiple end placeholders.",
                     ResultImportance.Warning);
             }
@@ -93,7 +87,6 @@ public class CodeValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.MissingSelectedPlaceholder,
                     "Snippet code does not contains selected placeholder.",
                     ResultImportance.Warning);
             }
@@ -101,7 +94,6 @@ public class CodeValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.MultipleSelectedPlaceholders,
                     "Snippet code contains multiple selected placeholders.",
                     ResultImportance.Warning);
             }
@@ -110,7 +102,6 @@ public class CodeValidationRule : ValidationRule
             {
                 yield return new SnippetValidationResult(
                     snippet,
-                    ErrorCode.MissingLanguage,
                     "Snippet language is missing.",
                     ResultImportance.Error);
             }

@@ -64,7 +64,7 @@ public class SnippetValidator
     }
 
     /// <summary>
-    /// Creates <see cref="SnippetValidator"/> that contains validation rules defines in <see cref="Validations"/> namespace.
+    /// Creates <see cref="SnippetValidator"/> that contains validation rules defines in <see cref="Rules"/> namespace.
     /// </summary>
     /// <returns><see cref="SnippetValidator"/> with predefined validation rules.</returns>
     public static SnippetValidator CreateDefaultValidator()

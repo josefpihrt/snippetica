@@ -35,43 +35,40 @@ public class SnippetCode
     /// Gets snippet text where placeholders are replaced with matching literal's value.
     /// System placeholders and placeholders which do not have matching literal are removed.
     /// </summary>
-    public string TextWithDefaultValues
+    public string GetTextWithDefaultValues()
     {
-        get
+        if (Indexes.Count == 0)
+            return Text;
+
+        int index = 0;
+        int prevIndex = 0;
+        var sb = new StringBuilder();
+        SnippetPlaceholder? placeholder = null;
+
+        foreach (KeyValuePair<int, SnippetPlaceholder> item in Indexes)
         {
-            if (Indexes.Count == 0)
-                return Text;
+            index = item.Key;
+            placeholder = item.Value;
 
-            int index = 0;
-            int prevIndex = 0;
-            var sb = new StringBuilder();
-            SnippetPlaceholder? placeholder = null;
+            sb.Append(Text, prevIndex, index - 1 - prevIndex);
 
-            foreach (KeyValuePair<int, SnippetPlaceholder> item in Indexes)
+            if (placeholder is not null)
             {
-                index = item.Key;
-                placeholder = item.Value;
-
-                sb.Append(Text, prevIndex, index - 1 - prevIndex);
-
-                if (placeholder is not null)
-                {
-                    SnippetLiteral? literal = Snippet.Literals.FirstOrDefault(f => SnippetLiteral.IdentifierComparer.Equals(f.Identifier, placeholder.Identifier));
-                    if (literal is not null)
-                        sb.Append(literal.DefaultValue);
-                }
-                else
-                {
-                    sb.Append(Text, index, 1);
-                }
-
-                prevIndex = ((placeholder is not null) ? placeholder.EndIndex : index) + 1;
+                SnippetLiteral? literal = Snippet.Literals.FirstOrDefault(f => SnippetLiteral.IdentifierComparer.Equals(f.Identifier, placeholder.Identifier));
+                if (literal is not null)
+                    sb.Append(literal.DefaultValue);
+            }
+            else
+            {
+                sb.Append(Text, index, 1);
             }
 
-            sb.Append(Text, prevIndex, Text.Length - prevIndex);
-
-            return sb.ToString();
+            prevIndex = ((placeholder is not null) ? placeholder.EndIndex : index) + 1;
         }
+
+        sb.Append(Text, prevIndex, Text.Length - prevIndex);
+
+        return sb.ToString();
     }
 
     /// <summary>
@@ -152,7 +149,7 @@ public class SnippetCode
     /// <param name="identifier">A placeholder identifier.</param>
     /// <param name="replacement">The string to replace all occurrences of placeholder with the specified identifier.</param>
     /// <returns>A new <see cref="string"/> where all placeholders with the specified identifier are replaced.</returns>
-    public string ReplacePlaceholders(string identifier, string replacement)
+    public string ReplacePlaceholder(string identifier, string replacement)
     {
         if (Placeholders.Count > 0)
         {
@@ -231,7 +228,7 @@ public class SnippetCode
     }
 
     /// <summary>
-    /// Gets a placeholder with identifier 'end' or <c>null</c> if it is not present.
+    /// Gets a placeholder with identifier "end" or <c>null</c> if it is not present.
     /// </summary>
     public SnippetPlaceholder? EndPlaceholder
     {
@@ -248,7 +245,7 @@ public class SnippetCode
     }
 
     /// <summary>
-    /// Gets a placeholder with identifier 'selected' or <c>null</c> if it is not present.
+    /// Gets a placeholder with identifier "selected" or <c>null</c> if it is not present.
     /// </summary>
     public SnippetPlaceholder? SelectedPlaceholder
     {

@@ -5,7 +5,7 @@ namespace Snippetica.VisualStudio;
 /// <summary>
 /// Specifies a set of options that enables to modify code snippet serialization process.
 /// </summary>
-public sealed class SaveOptions
+public class SaveOptions
 {
     /// <summary>
     /// Represents default indentation when serializing code snippet into xml. This field is read-only.
@@ -19,6 +19,7 @@ public sealed class SaveOptions
     {
     }
 
+    //TODO: IncludeDefaultFormat
     /// <summary>
     /// Gets or sets a value indicating whether default format version set is when <see cref="Snippet.FormatVersion"/> value is <c>null</c>.
     /// </summary>

@@ -60,7 +60,11 @@ public class SnippetLiteral
     /// <param name="defaultValue">The <see cref="SnippetLiteral"/>default value.</param>
     /// <exception cref="ArgumentNullException"><paramref name="identifier"/> is <c>null</c>.</exception>
     /// <returns><see cref="SnippetLiteral"/> with function that generates switch cases.</returns>
-    public static SnippetLiteral CreateSwitchCasesLiteral(string identifier, string expressionIdentifier, string? toolTip = null, string defaultValue = "default:")
+    public static SnippetLiteral CreateSwitchCasesLiteral(
+        string identifier,
+        string expressionIdentifier,
+        string? toolTip = null,
+        string defaultValue = "default:")
     {
         return new SnippetLiteral(identifier, toolTip, defaultValue)
         {

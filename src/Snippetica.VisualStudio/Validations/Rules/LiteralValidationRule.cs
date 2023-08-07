@@ -34,7 +34,6 @@ public class LiteralValidationRule : ValidationRule
                 {
                     yield return new SnippetValidationResult(
                         snippet,
-                        ErrorCode.MissingLiteralIdentifier,
                         "Snippet literal identifier is missing.",
                         ResultImportance.Error,
                         literal);
@@ -43,7 +42,6 @@ public class LiteralValidationRule : ValidationRule
                 {
                     yield return new SnippetValidationResult(
                         snippet,
-                        ErrorCode.LiteralWithoutPlaceholder,
                         "Snippet literal does not have corresponding placeholder in code.",
                         ResultImportance.Error,
                         literal);
@@ -53,7 +51,6 @@ public class LiteralValidationRule : ValidationRule
                 {
                     yield return new SnippetValidationResult(
                         snippet,
-                        ErrorCode.InvalidLiteralIdentifier,
                         "Snippet literal identifier is invalid.",
                         ResultImportance.Error,
                         literal);
@@ -63,7 +60,6 @@ public class LiteralValidationRule : ValidationRule
                 {
                     yield return new SnippetValidationResult(
                         snippet,
-                        ErrorCode.MissingLiteralDefault,
                         "Snippet literal default value is missing.",
                         ResultImportance.Error,
                         literal);
@@ -76,7 +72,6 @@ public class LiteralValidationRule : ValidationRule
                 {
                     yield return new SnippetValidationResult(
                         snippet,
-                        ErrorCode.LiteralIdentifierDuplicate,
                         $"Snippet literal identifier '{grp.Key}' is duplicated.",
                         ResultImportance.Warning);
                 }
