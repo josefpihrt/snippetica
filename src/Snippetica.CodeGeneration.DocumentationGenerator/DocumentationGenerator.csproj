@@ -3,7 +3,6 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Snippetica.CodeGeneration.DocumentationGenerator</RootNamespace>
     <AssemblyName>Snippetica.CodeGeneration.DocumentationGenerator</AssemblyName>
-    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="DotMarkdown.Docusaurus" Version="0.3.0-beta" />
