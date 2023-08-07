@@ -31,7 +31,7 @@ public static class IOUtility
 
             SaveSnippet(snippet);
 
-            filePaths.Remove(filePat);
+            filePaths.Remove(filePath);
         }
 
         foreach (string path in filePaths)
