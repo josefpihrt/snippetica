@@ -26,11 +26,12 @@ public static class IOUtility
 
         foreach (Snippet snippet in snippets)
         {
-            snippet.FilePath = Path.Combine(directoryPath, Path.GetFileName(snippet.FilePath));
+            string filePath = Path.Combine(directoryPath, snippet.GetFileName());
+            snippet.SetFilePath(filePath);
 
             SaveSnippet(snippet);
 
-            filePaths.Remove(snippet.FilePath);
+            filePaths.Remove(filePat);
         }
 
         foreach (string path in filePaths)
@@ -39,7 +40,7 @@ public static class IOUtility
 
     public static void SaveSnippet(Snippet snippet, bool onlyIfChanged = true)
     {
-        SaveSnippet(snippet, snippet.FilePath, onlyIfChanged);
+        SaveSnippet(snippet, snippet.GetFilePath(), onlyIfChanged);
     }
 
     public static void SaveSnippet(Snippet snippet, string filePath, bool onlyIfChanged = true)
@@ -120,7 +121,7 @@ public static class IOUtility
 
                 snippet.RemoveMetaKeywords();
 
-                snippet.Keywords.Add($"{KnownTags.MetaPrefix}Name {snippet.FileNameWithoutExtension()}");
+                snippet.Keywords.Add($"{KnownTags.MetaPrefix}Name {snippet.GetFileNameWithoutExtension()}");
 
                 if (!string.IsNullOrEmpty(submenuShortcut))
                     snippet.Keywords.Add($"{KnownTags.MetaPrefix}SubmenuShortcut {submenuShortcut}");
@@ -128,7 +129,7 @@ public static class IOUtility
                 return snippet;
             })
             .OrderBy(f => f.Language.ToString())
-            .ThenBy(f => f.FileNameWithoutExtension());
+            .ThenBy(f => f.GetFileNameWithoutExtension());
 
         SaveSnippetsToSingleFile(snippets, filePath);
     }

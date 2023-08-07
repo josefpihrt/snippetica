@@ -13,6 +13,16 @@ public static class SnippetExtensions
 {
     private static readonly int _metaPrefixLength = KnownTags.MetaPrefix.Length;
 
+    public static string GetFilePath(this Snippet snippet)
+    {
+        return snippet.Properties["FilePath"];
+    }
+
+    public static void SetFilePath(this Snippet snippet, string filePath)
+    {
+        snippet.Properties["FilePath"] = filePath;
+    }
+
     public static string GetShortcutFromTitle(this Snippet snippet)
     {
         if (!snippet.HasTag(KnownTags.TitleStartsWithShortcut))
@@ -95,14 +105,14 @@ public static class SnippetExtensions
         }
     }
 
-    public static string FileName(this Snippet snippet)
+    public static string GetFileName(this Snippet snippet)
     {
-        return Path.GetFileName(snippet.FilePath);
+        return Path.GetFileName(snippet.GetFilePath());
     }
 
-    public static string FileNameWithoutExtension(this Snippet snippet)
+    public static string GetFileNameWithoutExtension(this Snippet snippet)
     {
-        return Path.GetFileNameWithoutExtension(snippet.FilePath);
+        return Path.GetFileNameWithoutExtension(snippet.GetFilePath());
     }
 
     public static Snippet SortCollections(this Snippet snippet)
@@ -281,7 +291,7 @@ public static class SnippetExtensions
 
     public static void PrefixFileName(this Snippet snippet, string value)
     {
-        SetFileName(snippet, value + Path.GetFileName(snippet.FilePath));
+        SetFileName(snippet, value + snippet.GetFileName());
     }
 
     public static void SuffixTitle(this Snippet snippet, string value)
@@ -301,7 +311,7 @@ public static class SnippetExtensions
 
     public static void SuffixFileName(this Snippet snippet, string value)
     {
-        SetFileName(snippet, Path.GetFileNameWithoutExtension(snippet.FilePath) + value + Path.GetExtension(snippet.FilePath));
+        SetFileName(snippet, snippet.GetFileNameWithoutExtension() + value + Path.GetExtension(snippet.GetFilePath()));
     }
 
     public static void AppendCode(this Snippet snippet, string code)
@@ -311,7 +321,7 @@ public static class SnippetExtensions
 
     public static void SetFileName(this Snippet snippet, string fileName)
     {
-        snippet.FilePath = Path.Combine(Path.GetDirectoryName(snippet.FilePath), fileName);
+        snippet.SetFilePath(Path.Combine(Path.GetDirectoryName(snippet.GetFilePath()), fileName));
     }
 
     public static bool ContainsKeyword(this Snippet snippet, string keyword)

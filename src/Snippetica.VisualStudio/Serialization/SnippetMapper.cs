@@ -120,7 +120,7 @@ internal static class SnippetMapper
         {
             context.Element.Format = version!.ToString(3);
         }
-        else if (context.Options.SetDefaultFormat)
+        else if (!context.Options.OmitDefaultFormat)
         {
             context.Element.Format = Snippet.DefaultFormatVersionText;
         }

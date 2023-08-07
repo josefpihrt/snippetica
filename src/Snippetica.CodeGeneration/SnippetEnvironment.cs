@@ -91,7 +91,7 @@ public abstract class SnippetEnvironment
             {
                 if (keyword.StartsWith(KnownTags.MetaPrefix + KnownTags.GeneratePrefix, StringComparison.OrdinalIgnoreCase))
                 {
-                    Debug.Fail(keyword + "\r\n" + snippet.FilePath);
+                    Debug.Fail(keyword + "\r\n" + snippet.GetFilePath());
                     break;
                 }
             }

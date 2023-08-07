@@ -21,7 +21,7 @@ public class XamlPropertyCommand : SnippetCommand
         snippet.Literals.Clear();
         snippet.AddLiteral("property", "Property name", ".");
 
-        string name = Path.GetFileNameWithoutExtension(snippet.FilePath);
+        string name = snippet.GetFileNameWithoutExtension();
 
         snippet.CodeText = $"<{name}$property$>$end$</{name}$property$>";
 

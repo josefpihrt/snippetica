@@ -81,7 +81,7 @@ public class TypeCommand : BasicTypeCommand
             snippet.RemoveLiteralAndPlaceholders(LiteralIdentifiers.Arguments);
         }
 
-        snippet.SetFileName(fileName + Path.GetFileName(snippet.FilePath));
+        snippet.SetFileName(fileName + snippet.GetFileName());
 
         if (snippet.HasTag(KnownTags.Initializer)
             && Tags.Contains(KnownTags.Initializer))

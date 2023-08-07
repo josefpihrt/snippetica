@@ -87,7 +87,7 @@ internal static class Program
                     Console.WriteLine($"DUPLICATE SHORTCUT: {shortcut}");
 
                     foreach (Snippet item in snippets2)
-                        Console.WriteLine($"  {item.FileNameWithoutExtension()}");
+                        Console.WriteLine($"  {item.GetFileNameWithoutExtension()}");
                 }
             }
         }

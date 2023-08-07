@@ -18,7 +18,7 @@ public static class Validator
         foreach (SnippetValidationResult result in Validate(snippets))
         {
             Console.WriteLine();
-            Console.WriteLine($"{result.Importance.ToString().ToUpperInvariant()}: \"{result.Description}\" in \"{result.Snippet.FilePath}\"");
+            Console.WriteLine($"{result.Importance.ToString().ToUpperInvariant()}: \"{result.Description}\" in \"{result.Snippet.GetFilePath()}\"");
         }
 
         foreach (IGrouping<string, Snippet> snippet in snippets
@@ -27,7 +27,7 @@ public static class Validator
             .Where(f => f.Count() == 1))
         {
             Console.WriteLine();
-            Console.WriteLine($"UNUSED TAG {KnownTags.NonUniqueShortcut} in \"{snippet.First().FilePath}\"");
+            Console.WriteLine($"UNUSED TAG {KnownTags.NonUniqueShortcut} in \"{snippet.First().GetFilePath()}\"");
         }
     }
 
@@ -45,7 +45,7 @@ public static class Validator
     public static void ThrowOnDuplicateFileName(IEnumerable<Snippet> snippets)
     {
         IGrouping<string, Snippet> duplicate = snippets
-            .GroupBy(f => Path.GetFileNameWithoutExtension(f.FilePath))
+            .GroupBy(f => f.GetFileNameWithoutExtension())
             .FirstOrDefault(f => f.CountExceeds(1));
 
         if (duplicate is not null)

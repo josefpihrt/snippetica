@@ -145,7 +145,7 @@ public class VisualStudioEnvironment : SnippetEnvironment
 
         XElement newItemGroup = document.AddItemGroup();
 
-        document.AddSnippetFiles(allSnippets.Select(f => f.FilePath), newItemGroup);
+        document.AddSnippetFiles(allSnippets.Select(f => f.GetFilePath()), newItemGroup);
 
         document.Save();
     }

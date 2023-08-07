@@ -52,17 +52,17 @@ public class KeywordDefinition
     {
         string title = $"{Value} keyword";
 
-        return new Snippet()
+        var snippet = new Snippet()
         {
             FormatVersion = _formatVersion,
             Title = title,
             Shortcut = Shortcut,
-
             Description = title,
-
             CodeText = Value + "$end$",
-
-            FilePath = $"{Name}Keyword.{SnippetFile.Extension}"
         };
+
+        snippet.SetFilePath($"{Name}Keyword.{SnippetFile.Extension}");
+
+        return snippet;
     }
 }

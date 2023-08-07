@@ -93,7 +93,7 @@ public class BasicTypeCommand : SnippetCommand
                 identifierLiteral.DefaultValue = Type.DefaultIdentifier;
         }
 
-        string fileName = Path.GetFileName(snippet.FilePath);
+        string fileName = snippet.GetFileName();
 
         if (fileName.IndexOf("OfT", StringComparison.Ordinal) != -1)
         {

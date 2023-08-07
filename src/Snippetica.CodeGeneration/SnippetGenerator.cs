@@ -21,7 +21,7 @@ public abstract class SnippetGenerator
 
     public IEnumerable<Snippet> GenerateSnippets(Snippet snippet)
     {
-        Debug.Assert(snippet.Language == Language.Html || snippet.Keywords.Any(f => f.StartsWith(KnownTags.MetaPrefix + KnownTags.GeneratePrefix, StringComparison.OrdinalIgnoreCase)), snippet.FilePath);
+        Debug.Assert(snippet.Language == Language.Html || snippet.Keywords.Any(f => f.StartsWith(KnownTags.MetaPrefix + KnownTags.GeneratePrefix, StringComparison.OrdinalIgnoreCase)), snippet.GetFilePath());
 
         foreach (Command command in CreateCommands(snippet))
         {

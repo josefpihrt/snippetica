@@ -136,9 +136,11 @@ public class Snippet
             Language = Language,
             Shortcut = Shortcut,
             SnippetTypes = SnippetTypes,
-            FilePath = FilePath,
             Title = Title
         };
+
+        foreach (KeyValuePair<string, string> kvp in Properties)
+            clone.Properties.Add(kvp.Key, kvp.Value);
 
         if (HelpUrl is not null)
             clone.HelpUrl = new Uri(HelpUrl.OriginalString);
@@ -263,12 +265,6 @@ public class Snippet
     /// </summary>
     public char PlaceholderDelimiter { get; set; }
 
-    //TODO: Snippet.FilePath
-    /// <summary>
-    /// Gets or sets full path to the snippet file.
-    /// </summary>
-    public string? FilePath { get; set; }
-
     /// <summary>
     /// Gets or sets snippet code text.
     /// </summary>
@@ -295,6 +291,8 @@ public class Snippet
     /// Gets a collection of literal placeholders.
     /// </summary>
     public SnippetPlaceholderList Placeholders => Code.Placeholders;
+
+    public Dictionary<string, string> Properties { get; } = new();
 
     /// <summary>
     /// Occurs when the snippet text changes.

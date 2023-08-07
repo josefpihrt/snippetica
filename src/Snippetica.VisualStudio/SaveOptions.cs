@@ -19,11 +19,10 @@ public class SaveOptions
     {
     }
 
-    //TODO: IncludeDefaultFormat
     /// <summary>
-    /// Gets or sets a value indicating whether default format version set is when <see cref="Snippet.FormatVersion"/> value is <c>null</c>.
+    /// Gets or sets a value indicating whether to include default format version when <see cref="Snippet.FormatVersion"/> value is <c>null</c>.
     /// </summary>
-    public bool SetDefaultFormat { get; set; } = true;
+    public bool OmitDefaultFormat { get; set; }
 
     /// <summary>
     /// Gets or sets the string to use when indenting.
