@@ -1,11 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'!='Release|AnyCPU'">
-    <TargetFramework>net6.0</TargetFramework>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <TargetFrameworks>net6.0;net48</TargetFrameworks>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\($AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 
