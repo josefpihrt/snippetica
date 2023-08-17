@@ -80,7 +80,7 @@ jobs:
         working-directory: src/Snippetica.CodeGeneration.SnippetGenerator
       - run: dotnet build --no-restore
         working-directory: src/Snippetica.CodeGeneration.SnippetGenerator
-      - run: "src/Tools/Snippetica.CodeGeneration.SnippetGenerator/bin/Release/net6.0/Snippetica.CodeGeneration.SnippetGenerator src src/Snippetica.CodeGeneration.Metadata/data"
+      - run: "src/Snippetica.CodeGeneration.SnippetGenerator/bin/Release/net6.0/Snippetica.CodeGeneration.SnippetGenerator src src/Snippetica.CodeGeneration.Metadata/data"
         name: "Generate snippets"
         working-directory: "."
       - uses: microsoft/setup-msbuild@v1.1
@@ -137,7 +137,7 @@ jobs:
         working-directory: "."
       - run: ls -R "./src/Tools/Snippetica.CodeGeneration.SnippetGenerator/bin"
         working-directory: "."
-      - run: "./src/Tools/Snippetica.CodeGeneration.SnippetGenerator/bin/Release/net6.0/Snippetica.CodeGeneration.SnippetGenerator src src/Snippetica.CodeGeneration.Metadata/data"
+      - run: "./src/Snippetica.CodeGeneration.SnippetGenerator/bin/Release/net6.0/Snippetica.CodeGeneration.SnippetGenerator src src/Snippetica.CodeGeneration.Metadata/data"
         working-directory: "."
         name: "Generate snippets"
       - run: >
