@@ -133,10 +133,6 @@ jobs:
         working-directory: src/Snippetica.CodeGeneration.SnippetGenerator
       - run: dotnet build --no-restore
         working-directory: src/Snippetica.CodeGeneration.SnippetGenerator
-      - run: ls
-        working-directory: "."
-      - run: ls -R "./src/Tools/Snippetica.CodeGeneration.SnippetGenerator/bin"
-        working-directory: "."
       - run: "./src/Snippetica.CodeGeneration.SnippetGenerator/bin/Release/net6.0/Snippetica.CodeGeneration.SnippetGenerator src src/Snippetica.CodeGeneration.Metadata/data"
         working-directory: "."
         name: "Generate snippets"
