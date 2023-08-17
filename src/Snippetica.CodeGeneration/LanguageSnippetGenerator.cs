@@ -2,8 +2,8 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Commands;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration;
 

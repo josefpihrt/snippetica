@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using Pihrtsoft.Snippets;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration.Commands;
 
@@ -17,11 +17,11 @@ public class DefinitionCommand : SnippetCommand
         snippet.SuffixFileName("Definition");
         snippet.AddTag(KnownTags.ExcludeFromDocs);
 
-        PlaceholderCollection placeholders = snippet.Code.Placeholders;
+        SnippetPlaceholderList placeholders = snippet.Code.Placeholders;
 
         if (placeholders.Contains("_definition"))
         {
-            snippet.CodeText = snippet.Code.ReplacePlaceholders(
+            snippet.CodeText = snippet.Code.ReplacePlaceholder(
                 "_definition",
                 @" {
 	$selected$$end$

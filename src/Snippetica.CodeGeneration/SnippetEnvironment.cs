@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using Pihrtsoft.Snippets;
 using Snippetica.IO;
 using Snippetica.Validations;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration;
 
@@ -91,7 +91,7 @@ public abstract class SnippetEnvironment
             {
                 if (keyword.StartsWith(KnownTags.MetaPrefix + KnownTags.GeneratePrefix, StringComparison.OrdinalIgnoreCase))
                 {
-                    Debug.Fail(keyword + "\r\n" + snippet.FilePath);
+                    Debug.Fail(keyword + "\r\n" + snippet.GetFilePath());
                     break;
                 }
             }
@@ -219,7 +219,7 @@ public abstract class SnippetEnvironment
         {
             for (int i = snippet.Literals.Count - 1; i >= 0; i--)
             {
-                Literal literal = snippet.Literals[i];
+                SnippetLiteral literal = snippet.Literals[i];
 
                 if (!literal.IsEditable
                     && !string.Equals(literal.Identifier, XmlSnippetGenerator.CDataIdentifier, StringComparison.Ordinal))

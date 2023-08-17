@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using Pihrtsoft.Snippets;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration.Commands;
 
@@ -42,10 +42,10 @@ public class InitializerCommand : SnippetCommand
 
         if (snippet.Language == Language.Cpp)
         {
-            Literal typeLiteral = snippet.Literals.Find(LiteralIdentifiers.Type);
+            SnippetLiteral typeLiteral = snippet.Literals.Find(LiteralIdentifiers.Type);
             typeLiteral.DefaultValue = "auto";
 
-            LiteralRenamer.Rename(snippet, LiteralIdentifiers.Type, "type");
+            snippet.RenameLiteral(LiteralIdentifiers.Type, "type");
         }
         else
         {

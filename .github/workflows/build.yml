@@ -40,6 +40,30 @@ jobs:
           echo "Resolved version3: $version3"
           echo "version3=${version3}" >> $GITHUB_OUTPUT
 
+  build_nuget:
+    needs: pre_build
+    runs-on: ubuntu-20.04
+    env:
+      Configuration: Release
+      TreatWarningsAsErrors: true
+      WarningsNotAsErrors: 1591
+    defaults:
+      run:
+        working-directory: src/Snippetica.VisualStudio
+    outputs:
+      Version: ${{ needs.pre_build.outputs.version }}
+    steps:
+      - uses: actions/checkout@v3
+      - run: dotnet restore
+      - run: dotnet format --no-restore --verify-no-changes --severity info
+      - run: dotnet build --no-restore
+      - run: dotnet test --no-build
+      - run: dotnet pack --no-build
+      - uses: actions/upload-artifact@v3
+        with:
+          name: nuget_packages
+          path: src/Snippetica.VisualStudio/bin/Release/*.*nupkg
+
   build_vs_extension:
     needs: pre_build
     runs-on: windows-latest
@@ -48,36 +72,34 @@ jobs:
       DeployExtension: false
     defaults:
       run:
-        working-directory: src
+        working-directory: src/Snippetica.VisualStudio.Vsix
     steps:
       - uses: actions/checkout@v3
       - run: (Get-Content source.extension.vsixmanifest) -replace 'Version="1.0.0"', 'Version="${{ needs.pre_build.outputs.version3 }}"' | Set-Content source.extension.vsixmanifest
-        working-directory: src/Snippetica.VisualStudio
-      - run: dotnet restore Tools/DocumentationGenerator/DocumentationGenerator.csproj
-      - run: dotnet build Tools/DocumentationGenerator/DocumentationGenerator.csproj --no-restore
-      - run: |
-          cd tools
-          ./generate_snippets.ps1
+      - run: dotnet restore
+        working-directory: src/Snippetica.CodeGeneration.SnippetGenerator
+      - run: dotnet build --no-restore
+        working-directory: src/Snippetica.CodeGeneration.SnippetGenerator
+      - run: "src/Snippetica.CodeGeneration.SnippetGenerator/bin/Release/net6.0/Snippetica.CodeGeneration.SnippetGenerator src src/Snippetica.CodeGeneration.Metadata/Data"
         name: "Generate snippets"
         working-directory: "."
-      - run: dotnet restore
       - uses: microsoft/setup-msbuild@v1.1
       - run: msbuild -m
       - uses: actions/upload-artifact@v3
         name: "Upload vsix file"
         with:
           name: vs_extension
-          path: src/Snippetica.VisualStudio/bin/Release/*.vsix
+          path: src/Snippetica.VisualStudio.Vsix/bin/Release/*.vsix
       - uses: actions/upload-artifact@v3
         name: "Upload manifest file"
         with:
           name: vs_extension
-          path: src/Snippetica.VisualStudio/manifest.json
+          path: src/Snippetica.VisualStudio.Vsix/manifest.json
       - uses: actions/upload-artifact@v3
         name: "Upload Visual Studio snippets"
         with:
           name: vs_snippets
-          path: src/Snippetica.VisualStudio/**/*.snippet
+          path: src/Snippetica.VisualStudio.Vsix/**/*.snippet
 
   build_vs_code_extensions:
     needs: pre_build
@@ -104,18 +126,15 @@ jobs:
             directoryName: Snippetica.Xml
     defaults:
       run:
-        working-directory: src/Snippetica.VisualStudioCode/${{ matrix.component.directoryName }}/package
+        working-directory: "src/Snippetica.VisualStudioCode.Vsix/${{ matrix.component.directoryName }}/package"
     steps:
       - uses: actions/checkout@v3
       - run: dotnet restore
-        working-directory: src/Tools/SnippetGenerator
+        working-directory: src/Snippetica.CodeGeneration.SnippetGenerator
       - run: dotnet build --no-restore
-        working-directory: src/Tools/SnippetGenerator
-      - run: |
-          cd tools
-          ./generate_snippets.ps1
+        working-directory: src/Snippetica.CodeGeneration.SnippetGenerator
+      - run: "./src/Snippetica.CodeGeneration.SnippetGenerator/bin/Release/net6.0/Snippetica.CodeGeneration.SnippetGenerator src src/Snippetica.CodeGeneration.Metadata/Data"
         working-directory: "."
-        shell: pwsh
         name: "Generate snippets"
       - run: >
           sed -i 's/"version": "1.0.0"/"version": "${{ needs.pre_build.outputs.version3 }}"/' "package.json"
@@ -124,7 +143,19 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: "vs_code_extension_${{ matrix.component.name }}"
-          path: "src/Snippetica.VisualStudioCode/${{ matrix.component.directoryName }}/package/*.vsix"
+          path: "src/Snippetica.VisualStudioCode.Vsix/${{ matrix.component.directoryName }}/package/*.vsix"
+
+  publish_nuget:
+    runs-on: ubuntu-20.04
+    needs: build_nuget
+    if: github.ref_type == 'tag' && startsWith(github.ref_name, 'v')
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: nuget_packages
+          path: nuget_packages
+      - run: dotnet nuget push "*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s "https://api.nuget.org/v3/index.json"
+        working-directory: nuget_packages
 
   publish_vs_extension:
     needs: build_vs_extension

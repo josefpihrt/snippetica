@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System.IO;
-using Pihrtsoft.Snippets;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration.Commands;
 
@@ -21,7 +21,7 @@ public class XamlPropertyCommand : SnippetCommand
         snippet.Literals.Clear();
         snippet.AddLiteral("property", "Property name", ".");
 
-        string name = Path.GetFileNameWithoutExtension(snippet.FilePath);
+        string name = snippet.GetFileNameWithoutExtension();
 
         snippet.CodeText = $"<{name}$property$>$end$</{name}$property$>";
 

@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
-using Pihrtsoft.Snippets;
 using Snippetica.IO;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration.VisualStudio;
 
@@ -108,7 +108,7 @@ public class VisualStudioEnvironment : SnippetEnvironment
 
         snippet.Shortcut = info.Value;
 
-        snippet.CodeText = s + $"${Placeholder.EndIdentifier}$";
+        snippet.CodeText = s + $"${SnippetPlaceholder.EndIdentifier}$";
 
         snippet.Literals.Clear();
 
@@ -145,7 +145,7 @@ public class VisualStudioEnvironment : SnippetEnvironment
 
         XElement newItemGroup = document.AddItemGroup();
 
-        document.AddSnippetFiles(allSnippets.Select(f => f.FilePath), newItemGroup);
+        document.AddSnippetFiles(allSnippets.Select(f => f.GetFilePath()), newItemGroup);
 
         document.Save();
     }

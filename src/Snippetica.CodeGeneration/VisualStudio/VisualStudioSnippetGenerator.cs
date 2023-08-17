@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using Pihrtsoft.Snippets;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration.VisualStudio;
 
@@ -13,7 +13,7 @@ public class VisualStudioSnippetGenerator : EnvironmentSnippetGenerator
 
     protected override Snippet PostProcess(Snippet snippet)
     {
-        Literal typeLiteral = snippet.Literals[LiteralIdentifiers.Type];
+        SnippetLiteral typeLiteral = snippet.Literals.Find(LiteralIdentifiers.Type);
 
         if (typeLiteral is not null)
             typeLiteral.DefaultValue = "T";

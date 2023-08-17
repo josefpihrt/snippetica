@@ -6,10 +6,10 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using DotMarkdown.Linq;
-using Pihrtsoft.Snippets;
 using Snippetica.CodeGeneration.Json;
 using Snippetica.CodeGeneration.Json.Package;
 using Snippetica.IO;
+using Snippetica.VisualStudio;
 using static DotMarkdown.Linq.MFactory;
 
 namespace Snippetica.CodeGeneration.VisualStudioCode;
@@ -85,11 +85,11 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
             if (snippet.HasTag(KnownTags.ExcludeFromVisualStudioCode))
                 continue;
 
-            LiteralCollection literals = snippet.Literals;
+            SnippetLiteralList literals = snippet.Literals;
 
             for (int i = literals.Count - 1; i >= 0; i--)
             {
-                Literal literal = literals[i];
+                SnippetLiteral literal = literals[i];
 
                 if (!literal.IsEditable
                     && !string.IsNullOrEmpty(literal.Function))

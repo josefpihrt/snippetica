@@ -2,7 +2,7 @@
 
 using System.Diagnostics;
 using System.IO;
-using Pihrtsoft.Snippets;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration.Commands;
 
@@ -60,7 +60,7 @@ public class TypeCommand : BasicTypeCommand
             snippet.AddLiteral(LiteralIdentifiers.KeyType, null, language.ObjectType.Keyword);
             snippet.AddLiteral(LiteralIdentifiers.ValueType, null, language.ObjectType.Keyword);
 
-            Literal literal = snippet.Literals.Find(LiteralIdentifiers.Identifier);
+            SnippetLiteral literal = snippet.Literals.Find(LiteralIdentifiers.Identifier);
 
             if (literal is not null)
                 literal.DefaultValue = "dic";
@@ -81,7 +81,7 @@ public class TypeCommand : BasicTypeCommand
             snippet.RemoveLiteralAndPlaceholders(LiteralIdentifiers.Arguments);
         }
 
-        snippet.SetFileName(fileName + Path.GetFileName(snippet.FilePath));
+        snippet.SetFileName(fileName + snippet.GetFileName());
 
         if (snippet.HasTag(KnownTags.Initializer)
             && Tags.Contains(KnownTags.Initializer))

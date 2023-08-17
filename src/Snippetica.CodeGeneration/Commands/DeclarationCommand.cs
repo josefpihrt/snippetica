@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using Pihrtsoft.Snippets;
+using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration.Commands;
 
@@ -14,7 +14,7 @@ public class DeclarationCommand : SnippetCommand
         snippet.SuffixDescription(" declaration");
         snippet.SuffixFileName("Declaration");
 
-        PlaceholderCollection placeholders = snippet.Code.Placeholders;
+        SnippetPlaceholderList placeholders = snippet.Code.Placeholders;
 
         if (placeholders.Contains("_definitionStart"))
         {
@@ -29,6 +29,6 @@ public class DeclarationCommand : SnippetCommand
             snippet.CodeText = s;
         }
 
-        snippet.AppendCode(snippet.Delimiter + Placeholder.EndIdentifier + snippet.Delimiter);
+        snippet.AppendCode(snippet.PlaceholderDelimiter + SnippetPlaceholder.EndIdentifier + snippet.PlaceholderDelimiter);
     }
 }

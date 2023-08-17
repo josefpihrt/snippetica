@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Snippetica.CodeGeneration.DocumentationGenerator</RootNamespace>
+    <AssemblyName>Snippetica.CodeGeneration.DocumentationGenerator</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DotMarkdown.Docusaurus" Version="0.3.0-beta" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Snippetica.CodeGeneration.Metadata\Snippetica.CodeGeneration.Metadata.csproj" />
+    <ProjectReference Include="..\Snippetica.CodeGeneration.Common\Snippetica.CodeGeneration.Common.csproj" />
+    <ProjectReference Include="..\Snippetica.CodeGeneration\Snippetica.CodeGeneration.csproj" />
+    <ProjectReference Include="..\Snippetica.VisualStudio\Snippetica.VisualStudio.csproj" />
+  </ItemGroup>
+</Project>
