@@ -80,9 +80,7 @@ jobs:
         working-directory: src/Snippetica.CodeGeneration.SnippetGenerator
       - run: dotnet build --no-restore
         working-directory: src/Snippetica.CodeGeneration.SnippetGenerator
-      - run: |
-          cd tools
-          ./generate_snippets.ps1
+      - run: "src/Tools/Snippetica.CodeGeneration.SnippetGenerator/bin/Release/net6.0/Snippetica.CodeGeneration.SnippetGenerator src src/Snippetica.CodeGeneration.Metadata/data"
         name: "Generate snippets"
         working-directory: "."
       - uses: microsoft/setup-msbuild@v1.1
@@ -135,11 +133,8 @@ jobs:
         working-directory: src/Snippetica.CodeGeneration.SnippetGenerator
       - run: dotnet build --no-restore
         working-directory: src/Snippetica.CodeGeneration.SnippetGenerator
-      - run: |
-          cd tools
-          ./generate_snippets.ps1
+      - run: "src/Tools/Snippetica.CodeGeneration.SnippetGenerator/bin/Release/net6.0/Snippetica.CodeGeneration.SnippetGenerator src src/Snippetica.CodeGeneration.Metadata/data"
         working-directory: "."
-        shell: pwsh
         name: "Generate snippets"
       - run: >
           sed -i 's/"version": "1.0.0"/"version": "${{ needs.pre_build.outputs.version3 }}"/' "package.json"
