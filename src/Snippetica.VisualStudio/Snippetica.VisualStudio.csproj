@@ -12,17 +12,17 @@
     <Nullable>enable</Nullable>
     <IsPackable>true</IsPackable>
     <Version>1.3.3</Version>
-    <PackageId>SnippetManager</PackageId>
-    <Description>Snippet Manager API enables to work with Visual Studio snippets.</Description>
+    <PackageId>Snippetica.VisualStudio</PackageId>
+    <Description>API to work with Visual Studio snippets.</Description>
     <Copyright>Copyright (c) 2015-2023 Josef Pihrt</Copyright>
     <Authors>Josef Pihrt</Authors>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>http://github.com/josefpihrt/snippetmanager</PackageProjectUrl>
+    <PackageProjectUrl>http://github.com/josefpihrt/snippetica</PackageProjectUrl>
     <PackageReleaseNotes></PackageReleaseNotes>
     <PackageTags>snippet;snippets;codeSnippet</PackageTags>
     <PackageReadmeFile>docs/README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/josefpihrt/snippetmanager.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/josefpihrt/snippetica.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 

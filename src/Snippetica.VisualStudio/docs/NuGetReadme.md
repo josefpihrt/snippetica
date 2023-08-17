@@ -1,1 +1,1 @@
-# SnippetManager
+# Snippetica.VisualStudio
