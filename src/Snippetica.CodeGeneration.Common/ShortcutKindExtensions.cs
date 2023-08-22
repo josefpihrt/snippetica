@@ -17,7 +17,7 @@ public static class ShortcutKindExtensions
             case ShortcutKind.DeclarationDefinition:
                 return "Declaration/Definition";
             case ShortcutKind.Modifier:
-                return "Modifer";
+                return "Modifier";
             case ShortcutKind.Specifier:
                 return "Specifier";
             case ShortcutKind.Statement:

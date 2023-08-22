@@ -259,7 +259,7 @@
     },
     {
       "value": "t",
-      "description": "explict cast operator",
+      "description": "explicit cast operator",
       "kind": "Operator",
       "languages": [ "CSharp" ],
       "environments": [ "VisualStudio", "VisualStudioCode" ]
