@@ -19,6 +19,7 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>http://github.com/josefpihrt/snippetica</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageReleaseNotes></PackageReleaseNotes>
     <PackageTags>snippet;snippets;codeSnippet</PackageTags>
     <PackageReadmeFile>docs/README.md</PackageReadmeFile>
@@ -28,6 +29,7 @@
 
   <ItemGroup>
     <None Include="docs\NuGetReadme.md" Pack="true" PackagePath="docs\README.md" />
+    <None Include="..\..\images\snippetica-logo-small.png" Pack="true" PackagePath="icon.png" Visible="false" />
   </ItemGroup>
 
   <ItemGroup>
