@@ -75,12 +75,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippetica.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="../../images/snippetica-logo-small.png" Link="snippetica-logo-small.png">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="SnippeticaPreview.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="../../images/snippetica-logo-large.png" Link="snippetica-logo-large.png">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="Overview.md" />

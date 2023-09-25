@@ -1,4 +1,4 @@
-# Snippetica
+# Snippetica <img align="left" width="48px" height="48px" src="images/snippetica-logo-small.png" />
 
 A collection of snippets for C\#, C\+\+, HTML, VB and other languages\.
 

@@ -7,8 +7,8 @@
     <MoreInfo>http://github.com/JosefPihrt/Snippetica</MoreInfo>
     <License>License.txt</License>
     <ReleaseNotes>http://github.com/JosefPihrt/Snippetica/blob/master/ChangeLog.md</ReleaseNotes>
-    <Icon>Snippetica.ico</Icon>
-    <PreviewImage>SnippeticaPreview.png</PreviewImage>
+    <Icon>snippetica-logo-small.png</Icon>
+    <PreviewImage>snippetica-logo-large.png</PreviewImage>
     <Tags>Snippet,CodeSnippet,Productivity,C#,CSharp,VB,VisualBasic,HTML,XML,XAML,C++</Tags>
   </Metadata>
   <Installation>
