@@ -8,23 +8,20 @@
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
-    <Keywords>
-      <Keyword>Meta-GenerateBasicType</Keyword>
-    </Keywords>
   </Header>
   <Snippet>
     <Declarations>
-      <Literal>
-        <ID>_type</ID>
-        <ToolTip>Indexer type</ToolTip>
-        <Default>Object</Default>
-      </Literal>
       <Literal>
         <ID>parameter</ID>
         <ToolTip>Indexer parameter</ToolTip>
         <Default>int index</Default>
       </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Indexer type</ToolTip>
+        <Default>String</Default>
+      </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Default Property Item($parameter$) As $_type$$end$]]></Code>
+    <Code Language="VB"><![CDATA[Default Property Item($parameter$) As $type$$end$]]></Code>
   </Snippet>
 </CodeSnippet>
