@@ -11,37 +11,37 @@
     {
       "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Cpp",
       "language": "Cpp"
-    },
-    {
-      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Html",
-      "language": "Html",
-      "tags": [ "GenerateXmlSnippets" ]
-    },
-    {
-      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Xaml",
-      "language": "Xaml",
-      "tags": [ "GenerateXmlSnippets", "ExcludeFromVisualStudioCode", "ExcludeFromDocs" ]
-    },
-    {
-      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Xml",
-      "language": "Xml",
-      "tags": [ "GenerateXmlSnippets" ]
-    },
-    {
-      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Xml.CodeSnippet",
-      "language": "Xml",
-      "tags": [ "NoQuickReference", "ExcludeFromVisualStudioCode", "ExcludeFromDocs" ]
-    },
-    {
-      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Markdown",
-      "language": "Markdown",
-      "tags": [ "GenerateXmlSnippets", "ExcludeFromVisualStudio", "ExcludeFromDocs" ]
-    },
-    {
-      "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Json",
-      "language": "Json",
-      "tags": [ "ExcludeFromVisualStudio", "ExcludeFromDocs" ]
     }
+    //{
+    //  "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Html",
+    //  "language": "Html",
+    //  "tags": [ "GenerateXmlSnippets" ]
+    //},
+    //{
+    //  "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Xaml",
+    //  "language": "Xaml",
+    //  "tags": [ "GenerateXmlSnippets", "ExcludeFromVisualStudioCode", "ExcludeFromDocs" ]
+    //},
+    //{
+    //  "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Xml",
+    //  "language": "Xml",
+    //  "tags": [ "GenerateXmlSnippets" ]
+    //},
+    //{
+    //  "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Xml.CodeSnippet",
+    //  "language": "Xml",
+    //  "tags": [ "NoQuickReference", "ExcludeFromVisualStudioCode", "ExcludeFromDocs" ]
+    //},
+    //{
+    //  "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Markdown",
+    //  "language": "Markdown",
+    //  "tags": [ "GenerateXmlSnippets", "ExcludeFromVisualStudio", "ExcludeFromDocs" ]
+    //},
+    //{
+    //  "path": "Snippetica.CodeGeneration.Metadata/Snippetica.Json",
+    //  "language": "Json",
+    //  "tags": [ "ExcludeFromVisualStudio", "ExcludeFromDocs" ]
+    //}
   ],
   "shortcuts": [
     {

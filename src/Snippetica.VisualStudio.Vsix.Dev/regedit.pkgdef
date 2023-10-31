@@ -9,12 +9,3 @@
 // C++
 [$RootKey$\Languages\CodeExpansions\C/C++\Paths]
 "Snippetica.Cpp.Dev" = "$PackageFolder$\Snippetica.Cpp.Dev"
-
-// HTML
-[$RootKey$\Languages\CodeExpansions\HTML\Paths]
-"Snippetica.Html.Dev" = "$PackageFolder$\Snippetica.Html.Dev"
-
-// XAML
-[$RootKey$\Languages\CodeExpansions\XAML\Paths]
-"Snippetica.Xaml.Dev" = "$PackageFolder$\Snippetica.Xaml.Dev"
-
