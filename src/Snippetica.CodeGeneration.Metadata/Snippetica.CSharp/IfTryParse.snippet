@@ -8,10 +8,6 @@
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
-    <Keywords>
-      <Keyword>Meta-GenerateBasicType</Keyword>
-      <Keyword>Meta-TryParse</Keyword>
-    </Keywords>
   </Header>
   <Snippet>
     <Declarations>
@@ -31,9 +27,9 @@
         <Default>value</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Dim $result$ As $_type$
-If $_type$.TryParse($value$, $result$)
+    <Code Language="CSharp"><![CDATA[$_type$ $result$;
+if ($_type$.TryParse($value$, out $result$)) {
 	$end$
-End If]]></Code>
+}]]></Code>
   </Snippet>
 </CodeSnippet>

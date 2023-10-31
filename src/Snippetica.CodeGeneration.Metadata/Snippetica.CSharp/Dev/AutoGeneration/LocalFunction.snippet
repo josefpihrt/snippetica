@@ -9,7 +9,6 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-GenerateBasicType</Keyword>
       <Keyword>Meta-GenerateVoidType</Keyword>
     </Keywords>
   </Header>
@@ -21,17 +20,17 @@
         <Default>T parameter</Default>
       </Literal>
       <Literal>
-        <ID>_type</ID>
-        <ToolTip>Return type</ToolTip>
-        <Default>void</Default>
-      </Literal>
-      <Literal>
         <ID>name</ID>
         <ToolTip>Method name</ToolTip>
         <Default>MethodName</Default>
       </Literal>
+      <Literal Editable="false">
+        <ID>type</ID>
+        <ToolTip>Return type</ToolTip>
+        <Default>void</Default>
+      </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$_type$ $name$($_parameters$) {
+    <Code Language="CSharp"><![CDATA[$type$ $name$($_parameters$) {
 	$end$
 }]]></Code>
   </Snippet>

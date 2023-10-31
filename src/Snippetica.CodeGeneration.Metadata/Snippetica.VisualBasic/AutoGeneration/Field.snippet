@@ -9,7 +9,6 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-GenerateBasicType</Keyword>
       <Keyword>Meta-GeneratePrivateModifier</Keyword>
       <Keyword>Meta-GeneratePublicModifier</Keyword>
       <Keyword>Meta-GenerateStaticModifier</Keyword>
@@ -23,16 +22,16 @@
         <Default>Private</Default>
       </Literal>
       <Literal>
-        <ID>_type</ID>
-        <ToolTip>Field type</ToolTip>
-        <Default>Object</Default>
-      </Literal>
-      <Literal>
         <ID>name</ID>
         <ToolTip>Field name</ToolTip>
         <Default>FieldName</Default>
       </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Field type</ToolTip>
+        <Default>String</Default>
+      </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[$_modifiers$ $name$ As $_type$$end$]]></Code>
+    <Code Language="VB"><![CDATA[$_modifiers$ $name$ As $type$$end$]]></Code>
   </Snippet>
 </CodeSnippet>
