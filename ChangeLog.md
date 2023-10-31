@@ -8,12 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- Add snippet for 'while not' (`wx`) ([#54](https://github.com/josefpihrt/snippetica/pull/54)).
+- Add snippet for 'while not' (`wx`) ([PR](https://github.com/josefpihrt/snippetica/pull/54)).
+- Add 'abstract' snippets (`a`) ([PR](https://github.com/josefpihrt/snippetica/pull/66)).
 
 ### Changed
 
-- Migrate documentation to [Docusaurus](https://josefpihrt.github.io/docs/snippetica) ([#56](https://github.com/josefpihrt/snippetica/pull/56)).
-- Update logo ([#60](https://github.com/josefpihrt/snippetica/pull/60), [#62](https://github.com/josefpihrt/snippetica/pull/62)).
+- Migrate documentation to [Docusaurus](https://josefpihrt.github.io/docs/snippetica) ([PR](https://github.com/josefpihrt/snippetica/pull/56)).
+- Update logo ([#60](https://github.com/josefpihrt/snippetica/pull/60), [PR](https://github.com/josefpihrt/snippetica/pull/62)).
 
 ## [1.0.0] - 2022-10-17
 
