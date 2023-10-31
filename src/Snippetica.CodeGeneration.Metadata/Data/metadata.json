@@ -230,6 +230,14 @@
       "environments": [ "VisualStudio", "VisualStudioCode" ]
     },
     {
+      "value": "a",
+      "description": "abstract (MustInherit)",
+      "comment": "prefix (after access modifier)",
+      "kind": "Modifier",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
       "value": "n",
       "description": "new object creation",
       "kind": "Operator",
@@ -1038,6 +1046,12 @@
           "keyword": "virtual",
           "shortcut": "v",
           "kind": "Virtual"
+        },
+        {
+          "name": "Abstract",
+          "keyword": "abstract",
+          "shortcut": "a",
+          "kind": "Abstract"
         }
       ],
       "types": [
@@ -1141,6 +1155,12 @@
           "keyword": "Overridable",
           "shortcut": "v",
           "kind": "Virtual"
+        },
+        {
+          "name": "Abstract",
+          "keyword": "MustInherit",
+          "shortcut": "a",
+          "kind": "Abstract"
         }
       ],
       "types": [
@@ -1234,6 +1254,12 @@
           "keyword": "virtual",
           "shortcut": "v",
           "kind": "Virtual"
+        },
+        {
+          "name": "Abstract",
+          "keyword": "abstract",
+          "shortcut": "a",
+          "kind": "Abstract"
         }
       ],
       "types": [

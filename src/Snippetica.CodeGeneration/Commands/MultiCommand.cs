@@ -88,9 +88,12 @@ public class MultiCommand : Command
     {
         switch (command1.Kind)
         {
+            case CommandKind.AbstractModifier:
             case CommandKind.VirtualModifier:
                 {
-                    if (command2.Kind == CommandKind.StaticModifier
+                    if (command2.Kind == CommandKind.AbstractModifier
+                        || command2.Kind == CommandKind.VirtualModifier
+                        || command2.Kind == CommandKind.StaticModifier
                         || command2.Kind == CommandKind.ConstModifier
                         || command2.Kind == CommandKind.ConstExprModifier
                         || command2 is AccessModifierCommand { Modifier.Kind: ModifierKind.Private })
