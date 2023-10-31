@@ -47,7 +47,7 @@ public class SnippetLiteral
         return new SnippetLiteral(identifier, toolTip, defaultValue)
         {
             Function = "ClassName()",
-            IsEditable = false
+            IsEditable = false,
         };
     }
 
@@ -69,7 +69,7 @@ public class SnippetLiteral
         return new SnippetLiteral(identifier, toolTip, defaultValue)
         {
             Function = $"GenerateSwitchCases(${expressionIdentifier}$)",
-            IsEditable = false
+            IsEditable = false,
         };
     }
 
@@ -85,7 +85,7 @@ public class SnippetLiteral
             Function = Function,
             ToolTip = ToolTip,
             TypeName = TypeName,
-            IsEditable = IsEditable
+            IsEditable = IsEditable,
         };
     }
 

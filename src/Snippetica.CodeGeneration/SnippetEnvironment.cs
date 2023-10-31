@@ -189,7 +189,7 @@ public abstract class SnippetEnvironment
             AddQuickReference = !result.IsDevelopment && !result.HasTag(KnownTags.NoQuickReference),
             Language = result.Language,
             DirectoryPath = result.Path,
-            GroupShortcuts = false
+            GroupShortcuts = false,
         };
 
         if (!settings.IsDevelopment)
@@ -203,7 +203,7 @@ public abstract class SnippetEnvironment
         return new ProjectReadmeSettings()
         {
             Environment = this,
-            Header = $"{KnownNames.ProductName} for {Kind.GetTitle()}"
+            Header = $"{KnownNames.ProductName} for {Kind.GetTitle()}",
         };
     }
 

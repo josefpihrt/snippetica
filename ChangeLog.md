@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Migrate documentation to [Docusaurus](https://josefpihrt.github.io/docs/snippetica) ([PR](https://github.com/josefpihrt/snippetica/pull/56)).
 - Update logo ([PR](https://github.com/josefpihrt/snippetica/pull/60), [PR](https://github.com/josefpihrt/snippetica/pull/62)).
+- Bump Roslynator analyzers to `4.6.1` ([PR](https://github.com/josefpihrt/snippetica/pull/67)).
 
 ### Removed
 
