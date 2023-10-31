@@ -136,7 +136,7 @@ public class Snippet
             Language = Language,
             Shortcut = Shortcut,
             SnippetTypes = SnippetTypes,
-            Title = Title
+            Title = Title,
         };
 
         foreach (KeyValuePair<string, string> kvp in Properties)
