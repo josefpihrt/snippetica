@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Add snippet for 'while not' (`wx`) ([PR](https://github.com/josefpihrt/snippetica/pull/54)).
 - Add 'abstract' snippets (`a`) ([PR](https://github.com/josefpihrt/snippetica/pull/66)).
+- Add 'protected' snippets (`d`) ([PR](https://github.com/josefpihrt/snippetica/pull/68)).
 
 ### Changed
 
@@ -20,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Removed
 
 - Remove option to choose member type (method, property etc.) [PR](https://github.com/josefpihrt/snippetica/pull/63)).
+- Remove snippet for read-only property (`rpp`) [PR](https://github.com/josefpihrt/snippetica/pull/69)).
 - Remove all but C#, VB and C++ snippets [PR](https://github.com/josefpihrt/snippetica/pull/70)).
 
 ## [1.0.0] - 2022-10-17
