@@ -21,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Removed
 
 - Remove option to choose member type (method, property etc.) [PR](https://github.com/josefpihrt/snippetica/pull/63)).
+- Remove snippet for read-only property (`rpp`) [PR](https://github.com/josefpihrt/snippetica/pull/69)).
 
 ## [1.0.0] - 2022-10-17
 
