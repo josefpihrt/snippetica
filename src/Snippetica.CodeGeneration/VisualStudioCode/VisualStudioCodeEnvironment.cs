@@ -184,10 +184,10 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
             Repository = new RepositoryInfo()
             {
                 Type = "git",
-                Url = "https://github.com/josefpihrt/snippetica.git"
+                Url = "https://github.com/josefpihrt/snippetica.git",
             },
             Bugs = new BugInfo() { Url = "http://github.com/josefpihrt/snippetica/issues" },
-            EngineVersion = "^1.0.0"
+            EngineVersion = "^1.0.0",
         };
 
         info.Categories.Add("Snippets");
