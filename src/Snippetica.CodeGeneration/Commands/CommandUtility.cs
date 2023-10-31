@@ -10,6 +10,7 @@ internal static class CommandUtility
 {
     public static Command StaticCommand { get; } = new StaticCommand();
     public static Command VirtualCommand { get; } = new VirtualCommand();
+    public static Command AbstractCommand { get; } = new AbstractCommand();
     public static Command InlineCommand { get; } = new InlineCommand();
     public static Command ConstCommand { get; } = new ConstCommand();
     public static Command ConstExprCommand { get; } = new ConstExprCommand();

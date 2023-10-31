@@ -9,6 +9,7 @@ public enum ModifierKind
     Protected,
     Private,
     Virtual,
+    Abstract,
     Static,
     Inline,
     Const,

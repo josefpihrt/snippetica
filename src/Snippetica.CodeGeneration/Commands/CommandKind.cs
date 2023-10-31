@@ -16,6 +16,7 @@ public enum CommandKind
     InlineModifier,
     StaticModifier,
     VirtualModifier,
+    AbstractModifier,
     AccessModifier,
     AlternativeShortcut,
     XamlProperty,

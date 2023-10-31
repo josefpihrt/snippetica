@@ -1023,6 +1023,12 @@
           "keyword": "virtual",
           "shortcut": "v",
           "kind": "Virtual"
+        },
+        {
+          "name": "Abstract",
+          "keyword": "abstract",
+          "shortcut": "a",
+          "kind": "Abstract"
         }
       ],
       "types": [
@@ -1119,6 +1125,12 @@
           "keyword": "Overridable",
           "shortcut": "v",
           "kind": "Virtual"
+        },
+        {
+          "name": "Abstract",
+          "keyword": "MustInherit",
+          "shortcut": "a",
+          "kind": "Abstract"
         }
       ],
       "types": [
@@ -1212,6 +1224,12 @@
           "keyword": "virtual",
           "shortcut": "v",
           "kind": "Virtual"
+        },
+        {
+          "name": "Abstract",
+          "keyword": "abstract",
+          "shortcut": "a",
+          "kind": "Abstract"
         }
       ],
       "types": [

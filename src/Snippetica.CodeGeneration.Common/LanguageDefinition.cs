@@ -33,6 +33,9 @@ public abstract class LanguageDefinition
     public ModifierDefinition VirtualModifier => Modifiers["Virtual"];
 
     [JsonIgnore]
+    public ModifierDefinition AbstractModifier => Modifiers["Abstract"];
+
+    [JsonIgnore]
     public ModifierDefinition InlineModifier => Modifiers["Inline"];
 
     [JsonIgnore]

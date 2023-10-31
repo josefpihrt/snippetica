@@ -47,6 +47,9 @@ public class LanguageSnippetGenerator : SnippetGenerator
         if (snippet.HasTag(KnownTags.GenerateVirtualModifier))
             commands.AddMultiCommand(CommandUtility.VirtualCommand, duplicateWhenEmpty: true);
 
+        if (snippet.HasTag(KnownTags.GenerateAbstractModifier))
+            commands.AddMultiCommand(CommandUtility.AbstractCommand, duplicateWhenEmpty: true);
+
         if (snippet.HasTag(KnownTags.GenerateConstModifier))
             commands.AddMultiCommand(CommandUtility.ConstCommand, duplicateWhenEmpty: true);
 
