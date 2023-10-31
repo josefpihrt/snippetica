@@ -39,6 +39,7 @@ public static class KnownTags
     public const string GeneratePublicModifier = GeneratePrefix + "PublicModifier";
     public const string GenerateInternalModifier = GeneratePrefix + "InternalModifier";
     public const string GeneratePrivateModifier = GeneratePrefix + "PrivateModifier";
+    public const string GenerateProtectedModifier = GeneratePrefix + "ProtectedModifier";
 
     public const string GenerateStaticModifier = GeneratePrefix + "StaticModifier";
     public const string GenerateVirtualModifier = GeneratePrefix + "VirtualModifier";
