@@ -10,7 +10,6 @@
     </SnippetTypes>
     <Keywords>
       <Keyword>Meta-GenerateAccessModifier</Keyword>
-      <Keyword>Meta-GenerateBasicType</Keyword>
       <Keyword>Meta-GenerateProtectedModifier</Keyword>
     </Keywords>
   </Header>
@@ -22,16 +21,16 @@
         <Default>public</Default>
       </Literal>
       <Literal>
-        <ID>_type</ID>
-        <ToolTip>Property type</ToolTip>
-        <Default>object</Default>
-      </Literal>
-      <Literal>
         <ID>name</ID>
         <ToolTip>Property name</ToolTip>
         <Default>PropertyName</Default>
       </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Property type</ToolTip>
+        <Default>string</Default>
+      </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$_modifiers$ $_type$ $name$ { get; private set; }$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[$_modifiers$ $type$ $name$ { get; private set; }$end$]]></Code>
   </Snippet>
 </CodeSnippet>

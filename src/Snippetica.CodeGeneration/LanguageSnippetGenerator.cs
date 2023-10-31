@@ -30,7 +30,7 @@ public class LanguageSnippetGenerator : SnippetGenerator
             commands.AddMultiCommands(new Command[]
                 {
                     CommandUtility.DeclarationCommand,
-                    CommandUtility.DefinitionCommand
+                    CommandUtility.DefinitionCommand,
                 });
         }
 

@@ -8,23 +8,15 @@
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
-    <Keywords>
-      <Keyword>Meta-GenerateBasicType</Keyword>
-    </Keywords>
   </Header>
   <Snippet>
     <Declarations>
       <Literal>
         <ID>_type</ID>
-        <ToolTip>Type name</ToolTip>
-        <Default>Object</Default>
-      </Literal>
-      <Literal>
-        <ID>name</ID>
-        <ToolTip>Parameter name</ToolTip>
-        <Default>values</Default>
+        <ToolTip>Element type name</ToolTip>
+        <Default>object</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[ParamArray $name$ As $_type$()$end$]]></Code>
+    <Code Language="CSharp"><![CDATA[params $_type$[]$end$]]></Code>
   </Snippet>
 </CodeSnippet>

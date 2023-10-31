@@ -41,7 +41,7 @@ internal static class LanguageMapper
         ["Swift"] = Language.Swift,
         ["TypeScript"] = Language.TypeScript,
         ["Xsl"] = Language.Xsl,
-        ["Yaml"] = Language.Yaml
+        ["Yaml"] = Language.Yaml,
     };
 
     private static readonly Dictionary<Language, string> _mapEnumToText = new()
@@ -79,7 +79,7 @@ internal static class LanguageMapper
         [Language.TypeScript] = "TypeScript",
         [Language.Xsl] = "Xsl",
         [Language.Yaml] = "Yaml",
-        [Language.None] = ""
+        [Language.None] = "",
     };
 
     public static string MapEnumToText(Language value)

@@ -10,7 +10,6 @@
     </SnippetTypes>
     <Keywords>
       <Keyword>Meta-GenerateAccessModifier</Keyword>
-      <Keyword>Meta-GenerateBasicType</Keyword>
       <Keyword>Meta-GenerateProtectedModifier</Keyword>
       <Keyword>Meta-GenerateStaticModifier</Keyword>
       <Keyword>Meta-GenerateVirtualModifier</Keyword>
@@ -24,14 +23,14 @@
         <Default>public</Default>
       </Literal>
       <Literal>
-        <ID>_type</ID>
-        <ToolTip>Property type</ToolTip>
-        <Default>Object</Default>
-      </Literal>
-      <Literal>
         <ID>name</ID>
         <ToolTip>Property name</ToolTip>
         <Default>PropertyName</Default>
+      </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Property type</ToolTip>
+        <Default>String</Default>
       </Literal>
       <Literal>
         <ID>value</ID>
@@ -39,7 +38,7 @@
         <Default>value</Default>
       </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[$_modifiers$ ReadOnly Property $name$ As $_type$
+    <Code Language="VB"><![CDATA[$_modifiers$ ReadOnly Property $name$ As $type$
 	Get
 		Return $value$
 	End Get

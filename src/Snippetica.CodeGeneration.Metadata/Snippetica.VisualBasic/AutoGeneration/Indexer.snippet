@@ -10,7 +10,6 @@
     </SnippetTypes>
     <Keywords>
       <Keyword>Meta-GenerateAccessModifier</Keyword>
-      <Keyword>Meta-GenerateBasicType</Keyword>
       <Keyword>Meta-GenerateProtectedModifier</Keyword>
     </Keywords>
   </Header>
@@ -22,21 +21,21 @@
         <Default>Public</Default>
       </Literal>
       <Literal>
-        <ID>_type</ID>
-        <ToolTip>Indexer type</ToolTip>
-        <Default>Object</Default>
-      </Literal>
-      <Literal>
         <ID>parameters</ID>
         <ToolTip>Parameters</ToolTip>
         <Default>ByVal index As Integer</Default>
       </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Indexer type</ToolTip>
+        <Default>String</Default>
+      </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[Default $_modifiers$ Property Item($parameters$) As $_type$
+    <Code Language="VB"><![CDATA[Default $_modifiers$ Property Item($parameters$) As $type$
 	Get
 		$end$
 	End Get
-	Set(ByVal Value As $_type$)
+	Set(ByVal Value As $type$)
 	End Set
 End Property]]></Code>
   </Snippet>
