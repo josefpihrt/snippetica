@@ -81,7 +81,7 @@ public static class IOUtility
             OmitXmlDeclaration = true,
             OmitCodeSnippetsElement = true,
             IndentChars = "  ",
-            Comment = "Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0."
+            Comment = "Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.",
         };
     }
 

@@ -26,7 +26,7 @@ public class SnippeticaMetadata
             {
                 WriteIndented = true,
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                Converters = { new JsonStringEnumConverter() }
+                Converters = { new JsonStringEnumConverter(), }
             });
 
         var metadata = new SnippeticaMetadata()
@@ -37,7 +37,7 @@ public class SnippeticaMetadata
                 {
                     Path = Path.Combine(sourcePath, f.Path),
                     Language = f.Language,
-                    Tags = f.Tags
+                    Tags = f.Tags,
                 };
             })
                 .ToArray(),
@@ -68,7 +68,7 @@ public class SnippeticaMetadata
                         },
                         _ => throw new InvalidOperationException()
                     });
-                })
+                }),
         };
 
         foreach (TypeDefinition typeDefinition in jsonMetadata.Types)
@@ -84,7 +84,7 @@ public class SnippeticaMetadata
     {
         public SnippetDirectory[] Directories { get; set; }
 
-        public ShortcutInfo [] Shortcuts { get; set; }
+        public ShortcutInfo[] Shortcuts { get; set; }
 
         public TypeDefinition[] Types { get; set; }
 

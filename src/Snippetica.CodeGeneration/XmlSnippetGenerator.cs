@@ -117,7 +117,7 @@ public static class XmlSnippetGenerator
         var s = new Snippet()
         {
             Title = "element",
-            Shortcut = ElementShortcut
+            Shortcut = ElementShortcut,
         };
 
         s.Description = s.Title;
@@ -148,7 +148,7 @@ public static class XmlSnippetGenerator
         var s = new Snippet()
         {
             Title = "self-closing element",
-            Shortcut = ElementShortcut
+            Shortcut = ElementShortcut,
         };
 
         s.Description = s.Title;
@@ -173,7 +173,7 @@ public static class XmlSnippetGenerator
         var s = new Snippet()
         {
             Title = "comment",
-            Shortcut = CommentShortcut
+            Shortcut = CommentShortcut,
         };
 
         s.Description = s.Title;
@@ -197,7 +197,7 @@ public static class XmlSnippetGenerator
         var s = new Snippet()
         {
             Title = "CDATA section",
-            Shortcut = "cdata"
+            Shortcut = "cdata",
         };
 
         s.Description = s.Title;
@@ -300,7 +300,7 @@ public static class XmlSnippetGenerator
         var s = new Snippet()
         {
             Title = title,
-            Shortcut = "he" + shortcut
+            Shortcut = "he" + shortcut,
         };
 
         s.Description = s.Title;

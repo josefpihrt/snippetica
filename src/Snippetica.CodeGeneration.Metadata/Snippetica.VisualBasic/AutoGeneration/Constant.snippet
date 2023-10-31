@@ -10,9 +10,6 @@
     </SnippetTypes>
     <Keywords>
       <Keyword>Meta-GenerateAccessModifier</Keyword>
-      <Keyword>Meta-GenerateBooleanType</Keyword>
-      <Keyword>Meta-GenerateInt32Type</Keyword>
-      <Keyword>Meta-GenerateStringType</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -21,11 +18,6 @@
         <ID>_modifiers</ID>
         <ToolTip>Modifier(s)</ToolTip>
         <Default>Public</Default>
-      </Literal>
-      <Literal>
-        <ID>_type</ID>
-        <ToolTip>Constant type</ToolTip>
-        <Default>T</Default>
       </Literal>
       <Literal>
         <ID>_value</ID>
@@ -37,7 +29,12 @@
         <ToolTip>Constant name</ToolTip>
         <Default>ConstantName</Default>
       </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Constant type</ToolTip>
+        <Default>String</Default>
+      </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[$_modifiers$ Const $name$ As $_type$ = $_value$$end$]]></Code>
+    <Code Language="VB"><![CDATA[$_modifiers$ Const $name$ As $type$ = $_value$$end$]]></Code>
   </Snippet>
 </CodeSnippet>

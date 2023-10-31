@@ -1,15 +1,14 @@
 ﻿<!--Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0.-->
 <CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>if not @type@ TryParse</Title>
-    <Shortcut>ifxtp</Shortcut>
-    <Description>if statement with condition whether @type@ TryParse method returns false.</Description>
+    <Title>if @type@ TryParse</Title>
+    <Shortcut>iftp</Shortcut>
+    <Description>if statement with condition whether @type@ TryParse method returns true.</Description>
     <Author>Josef Pihrt</Author>
     <SnippetTypes>
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
-      <Keyword>Meta-GenerateBasicType</Keyword>
       <Keyword>Meta-TryParse</Keyword>
     </Keywords>
   </Header>
@@ -32,7 +31,7 @@
       </Literal>
     </Declarations>
     <Code Language="VB"><![CDATA[Dim $result$ As $_type$
-If Not $_type$.TryParse($value$, $result$)
+If $_type$.TryParse($value$, $result$)
 	$end$
 End If]]></Code>
   </Snippet>

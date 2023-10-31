@@ -11,7 +11,6 @@
     <Keywords>
       <Keyword>Meta-GenerateAbstractModifier</Keyword>
       <Keyword>Meta-GenerateAccessModifier</Keyword>
-      <Keyword>Meta-GenerateBasicType</Keyword>
       <Keyword>Meta-GenerateStaticModifier</Keyword>
       <Keyword>Meta-GenerateVirtualModifier</Keyword>
       <Keyword>Meta-GenerateVoidType</Keyword>
@@ -41,17 +40,17 @@
         <Default>Function</Default>
       </Literal>
       <Literal>
-        <ID>_type</ID>
-        <ToolTip>Return type</ToolTip>
-        <Default>Object</Default>
-      </Literal>
-      <Literal>
         <ID>name</ID>
         <ToolTip>Method name</ToolTip>
         <Default>MethodName</Default>
       </Literal>
+      <Literal Editable="false">
+        <ID>type</ID>
+        <ToolTip>Return type</ToolTip>
+        <Default>Object</Default>
+      </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[$_modifiers$ $_subOrFunction$ $name$($_parameters$) $_as$ $_type$
+    <Code Language="VB"><![CDATA[$_modifiers$ $_subOrFunction$ $name$($_parameters$) $_as$ $type$
 	$end$
 End $_subOrFunction$]]></Code>
   </Snippet>

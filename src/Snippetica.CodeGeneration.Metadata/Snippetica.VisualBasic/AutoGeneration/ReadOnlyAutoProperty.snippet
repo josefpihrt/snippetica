@@ -11,7 +11,6 @@
     <Keywords>
       <Keyword>Meta-GenerateAbstractModifier</Keyword>
       <Keyword>Meta-GenerateAccessModifier</Keyword>
-      <Keyword>Meta-GenerateBasicType</Keyword>
       <Keyword>Meta-GenerateStaticModifier</Keyword>
       <Keyword>Meta-GenerateVirtualModifier</Keyword>
     </Keywords>
@@ -24,16 +23,16 @@
         <Default>Public</Default>
       </Literal>
       <Literal>
-        <ID>_type</ID>
-        <ToolTip>Property type</ToolTip>
-        <Default>Object</Default>
-      </Literal>
-      <Literal>
         <ID>name</ID>
         <ToolTip>Property name</ToolTip>
         <Default>PropertyName</Default>
       </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Property type</ToolTip>
+        <Default>String</Default>
+      </Literal>
     </Declarations>
-    <Code Language="VB"><![CDATA[$_modifiers$ ReadOnly Property $name$ As $_type$$end$]]></Code>
+    <Code Language="VB"><![CDATA[$_modifiers$ ReadOnly Property $name$ As $type$$end$]]></Code>
   </Snippet>
 </CodeSnippet>

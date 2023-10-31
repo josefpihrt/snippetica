@@ -14,7 +14,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - Migrate documentation to [Docusaurus](https://josefpihrt.github.io/docs/snippetica) ([PR](https://github.com/josefpihrt/snippetica/pull/56)).
-- Update logo ([#60](https://github.com/josefpihrt/snippetica/pull/60), [PR](https://github.com/josefpihrt/snippetica/pull/62)).
+- Update logo ([PR](https://github.com/josefpihrt/snippetica/pull/60), [PR](https://github.com/josefpihrt/snippetica/pull/62)).
+- Bump Roslynator analyzers to `4.6.1` ([PR](https://github.com/josefpihrt/snippetica/pull/67)).
+
+### Removed
+
+- Remove option to choose member type (method, property etc.) [PR](https://github.com/josefpihrt/snippetica/pull/63)).
 
 ## [1.0.0] - 2022-10-17
 
