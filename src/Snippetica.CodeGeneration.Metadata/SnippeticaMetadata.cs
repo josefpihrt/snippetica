@@ -84,7 +84,7 @@ public class SnippeticaMetadata
     {
         public SnippetDirectory[] Directories { get; set; }
 
-        public ShortcutInfo [] Shortcuts { get; set; }
+        public ShortcutInfo[] Shortcuts { get; set; }
 
         public TypeDefinition[] Types { get; set; }
 
