@@ -190,6 +190,14 @@
       "environments": [ "VisualStudio", "VisualStudioCode" ]
     },
     {
+      "value": "d",
+      "description": "protected (Protected)",
+      "comment": "prefix",
+      "kind": "Modifier",
+      "languages": [ "CSharp", "VisualBasic" ],
+      "environments": [ "VisualStudio", "VisualStudioCode" ]
+    },
+    {
       "value": "p",
       "description": "private",
       "comment": "prefix",
@@ -1014,6 +1022,13 @@
           "kind": "Internal"
         },
         {
+          "name": "Protected",
+          "keyword": "protected",
+          "shortcut": "d",
+          "tags": [ "AccessModifier" ],
+          "kind": "Protected"
+        },
+        {
           "name": "Private",
           "keyword": "private",
           "shortcut": "p",
@@ -1114,6 +1129,13 @@
           "shortcut": "i",
           "tags": [ "AccessModifier" ],
           "kind": "Internal"
+        },
+        {
+          "name": "Protected",
+          "keyword": "Protected",
+          "shortcut": "d",
+          "tags": [ "AccessModifier" ],
+          "kind": "Protected"
         },
         {
           "name": "Private",

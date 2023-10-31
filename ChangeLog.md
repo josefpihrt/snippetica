@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Add snippet for 'while not' (`wx`) ([PR](https://github.com/josefpihrt/snippetica/pull/54)).
 - Add 'abstract' snippets (`a`) ([PR](https://github.com/josefpihrt/snippetica/pull/66)).
+- Add 'protected' snippets (`d`) ([PR](https://github.com/josefpihrt/snippetica/pull/68)).
 
 ### Changed
 
