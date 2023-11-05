@@ -6,6 +6,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [2.0.0] - 2023-11-05
+
+### Added
+
+- Add snippet for 'while not' (`wx`) ([PR](https://github.com/josefpihrt/snippetica/pull/54)).
+- Add 'abstract' snippets (`a`) ([PR](https://github.com/josefpihrt/snippetica/pull/66)).
+- Add 'protected' snippets (`d`) ([PR](https://github.com/josefpihrt/snippetica/pull/68), [PR](https://github.com/josefpihrt/snippetica/pull/71)).
+- Add snippets for VB keywords ([PR](https://github.com/josefpihrt/snippetica/pull/74)).
+  - `Object` keyword (`o`)
+  - `Return` keyword (`r`)
+  - `String` keyword (`s`)
+
+### Changed
+
+- Migrate documentation to [Docusaurus](https://josefpihrt.github.io/docs/snippetica) ([PR](https://github.com/josefpihrt/snippetica/pull/56)).
+- Update logo ([PR](https://github.com/josefpihrt/snippetica/pull/60), [PR](https://github.com/josefpihrt/snippetica/pull/62)).
+- Bump Roslynator analyzers to `4.6.1` ([PR](https://github.com/josefpihrt/snippetica/pull/67)).
+- Remove parentheses from `nameof` snippet ([PR](https://github.com/josefpihrt/snippetica/pull/72)).
+
+### Removed
+
+- Remove option to choose member type (method, property etc.) [PR](https://github.com/josefpihrt/snippetica/pull/63)).
+- Remove snippet for read-only property (`rpp`) [PR](https://github.com/josefpihrt/snippetica/pull/69)).
+- Remove all but C#, VB and C++ snippets [PR](https://github.com/josefpihrt/snippetica/pull/70)).
+
 ## [1.0.0] - 2022-10-17
 
 ### Added
