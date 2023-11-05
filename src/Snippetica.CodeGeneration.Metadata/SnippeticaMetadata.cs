@@ -26,7 +26,8 @@ public class SnippeticaMetadata
             {
                 WriteIndented = true,
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                Converters = { new JsonStringEnumConverter(), }
+                Converters = { new JsonStringEnumConverter() },
+                ReadCommentHandling = JsonCommentHandling.Skip,
             });
 
         var metadata = new SnippeticaMetadata()
