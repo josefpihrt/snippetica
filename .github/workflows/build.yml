@@ -96,6 +96,10 @@ jobs:
           name: vs_extension
           path: src/Snippetica.VisualStudio.Vsix/manifest.json
       - uses: actions/upload-artifact@v3
+        with:
+          name: vs_extension
+          path: src/Snippetica.VisualStudio.Vsix/Overview.md
+      - uses: actions/upload-artifact@v3
         name: "Upload Visual Studio snippets"
         with:
           name: vs_snippets
