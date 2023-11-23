@@ -33,6 +33,6 @@ public static class SnippetExtensions
         if (snippet is null)
             throw new ArgumentNullException(nameof(snippet));
 
-        return snippet.CodeText.IndexOf("]]>", StringComparison.Ordinal) != -1;
+        return snippet.CodeText.Contains("]]>");
     }
 }

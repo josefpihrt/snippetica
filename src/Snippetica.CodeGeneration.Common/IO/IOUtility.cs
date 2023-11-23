@@ -3,7 +3,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 using Snippetica.VisualStudio;
 
@@ -85,55 +84,6 @@ public static class IOUtility
         };
     }
 
-    public static void SaveSnippetsToSingleFile(
-        IEnumerable<Snippet> snippets,
-        string filePath,
-        bool onlyIfChanged = true)
-    {
-        if (snippets is null)
-            throw new ArgumentNullException(nameof(snippets));
-
-        SaveOptions settings = CreateSaveSettings();
-
-        string content = SnippetSerializer.CreateXml(snippets, settings);
-
-        if (!ShouldSave(filePath, content, Encoding.UTF8, onlyIfChanged))
-            return;
-
-        using (var fileStream = new FileStream(filePath, FileMode.Create))
-        {
-            Console.WriteLine($"saving file {filePath}");
-            SnippetSerializer.Serialize(fileStream, snippets, settings);
-        }
-    }
-
-    public static void SaveSnippetBrowserFile(IEnumerable<Snippet> snippets, string filePath)
-    {
-        snippets = snippets
-            .Where(f => !f.HasTag(KnownTags.ExcludeFromSnippetBrowser))
-            .Select(snippet =>
-            {
-                snippet = (Snippet)snippet.Clone();
-
-                string submenuShortcut = snippet.GetShortcutFromTitle();
-
-                snippet.RemoveShortcutFromTitle();
-
-                snippet.RemoveMetaKeywords();
-
-                snippet.Keywords.Add($"{KnownTags.MetaPrefix}Name {snippet.GetFileNameWithoutExtension()}");
-
-                if (!string.IsNullOrEmpty(submenuShortcut))
-                    snippet.Keywords.Add($"{KnownTags.MetaPrefix}SubmenuShortcut {submenuShortcut}");
-
-                return snippet;
-            })
-            .OrderBy(f => f.Language.ToString())
-            .ThenBy(f => f.GetFileNameWithoutExtension());
-
-        SaveSnippetsToSingleFile(snippets, filePath);
-    }
-
     public static void WriteAllText(
         string filePath,
         string content,
@@ -167,59 +117,9 @@ public static class IOUtility
         return !string.Equals(content, content2, StringComparison.Ordinal);
     }
 
-    public static void CleanOrCreateDirectory(string directoryPath)
-    {
-        if (Directory.Exists(directoryPath))
-        {
-            CleanDirectory(directoryPath);
-        }
-        else
-        {
-            CreateDirectory(directoryPath);
-        }
-    }
-
-    private static void CleanDirectory(string directoryPath)
-    {
-        DeleteDirectories(directoryPath);
-        DeleteFiles(directoryPath);
-    }
-
-    private static void DeleteFiles(string directoryPath)
-    {
-        foreach (string path in Directory.EnumerateFiles(directoryPath))
-            DeleteFile(path);
-    }
-
-    private static void DeleteDirectories(string directoryPath)
-    {
-        foreach (string path in Directory.EnumerateDirectories(directoryPath))
-            DeleteDirectory(path);
-    }
-
     public static void DeleteFile(string path)
     {
         Console.WriteLine($"deleting file {path}");
         File.Delete(path);
-    }
-
-    private static void DeleteDirectory(string path)
-    {
-        Console.WriteLine($"deleting directory {path}");
-        Directory.Delete(path);
-    }
-
-    public static void DeleteAndCreateDirectory(string directoryPath)
-    {
-        if (Directory.Exists(directoryPath))
-            DeleteDirectory(directoryPath);
-
-        CreateDirectory(directoryPath);
-    }
-
-    private static void CreateDirectory(string directoryPath)
-    {
-        Console.WriteLine($"creating directory {directoryPath}");
-        Directory.CreateDirectory(directoryPath);
     }
 }

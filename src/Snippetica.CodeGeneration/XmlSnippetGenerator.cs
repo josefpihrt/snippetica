@@ -27,7 +27,6 @@ public static class XmlSnippetGenerator
     public const string SelfClosingShortcut = "s";
     public const string ContentShortcut = "x";
     public const string CommentShortcut = "c";
-    public const string RegionShortcut = "r";
 
     public static IEnumerable<Snippet> GenerateSnippets(Language language, bool generateHtmlEntities = false)
     {

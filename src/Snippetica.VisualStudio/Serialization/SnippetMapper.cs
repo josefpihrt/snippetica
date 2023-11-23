@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Snippetica.VisualStudio.Serialization;
 using Snippetica.VisualStudio.Validations;
 
 namespace Snippetica.VisualStudio.Serialization;

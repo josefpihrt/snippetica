@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -95,7 +94,7 @@ public class BasicTypeCommand : SnippetCommand
 
         string fileName = snippet.GetFileName();
 
-        if (fileName.IndexOf("OfT", StringComparison.Ordinal) != -1)
+        if (fileName.Contains("OfT"))
         {
             fileName = fileName.Replace("OfT", $"Of{Type.Name}");
         }

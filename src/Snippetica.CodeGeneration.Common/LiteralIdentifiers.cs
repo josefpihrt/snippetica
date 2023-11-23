@@ -10,8 +10,6 @@ public static class LiteralIdentifiers
     public const string Identifier = "_identifier";
     public const string Initializer = "_initializer";
     public const string Modifiers = "_modifiers";
-    public const string ParameterList = "_parameterList";
-    public const string Semicolon = "_semicolon";
     public const string SubOrFunction = "_subOrFunction";
     public const string Type = "_type";
     public const string TypeParameterList = "_typeParameterList";

@@ -27,28 +27,6 @@ public class SnippetDirectory
 
     public bool HasTag(string tag) => Tags.Any(f => f.Equals(tag, StringComparison.Ordinal));
 
-    public bool HasTags(params string[] tags)
-    {
-        foreach (string tag in tags)
-        {
-            if (!HasTag(tag))
-                return false;
-        }
-
-        return true;
-    }
-
-    public bool HasAnyTag(params string[] tags)
-    {
-        foreach (string tag in tags)
-        {
-            if (HasTag(tag))
-                return true;
-        }
-
-        return false;
-    }
-
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     private string DebuggerDisplay
     {
