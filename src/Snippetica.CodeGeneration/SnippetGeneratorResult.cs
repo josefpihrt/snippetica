@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Josef Pihrt. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using Snippetica.VisualStudio;
 
 namespace Snippetica.CodeGeneration;
@@ -38,11 +36,6 @@ public class SnippetGeneratorResult
     public Language Language { get; set; }
 
     public List<string> Tags { get; } = new();
-
-    public bool HasTag(string tag)
-    {
-        return Tags.Any(f => f.Equals(tag, StringComparison.Ordinal));
-    }
 
     public string DirectoryName
     {

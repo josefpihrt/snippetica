@@ -11,7 +11,6 @@ namespace Snippetica.CodeGeneration.VisualStudio;
 public class ProjectDocument
 {
     public const string CSharpProjectExtension = "csproj";
-    public const string VisualBasicProjectExtension = "vbproj";
 
     public ProjectDocument(string filePath)
     {

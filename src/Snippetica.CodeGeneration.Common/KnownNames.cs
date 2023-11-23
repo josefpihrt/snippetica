@@ -4,11 +4,6 @@ namespace Snippetica;
 
 public static class KnownNames
 {
-    public const string ProductName = "Snippetica";
-    public const string ChangeLogFileName = "ChangeLog.md";
-    public const string SourceDirectoryName = "src";
-    public const string VisualStudioExtensionProjectName = ProductName + ".VisualStudio";
-    public const string VisualStudioCodeExtensionProjectName = ProductName + ".VisualStudioCode";
     public const string AutoGeneration = "AutoGeneration";
     public const string Dev = "Dev";
     public const string DevSuffix = "." + Dev;

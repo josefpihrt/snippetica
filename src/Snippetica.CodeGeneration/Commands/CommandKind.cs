@@ -19,7 +19,6 @@ public enum CommandKind
     AbstractModifier,
     AccessModifier,
     AlternativeShortcut,
-    XamlProperty,
     PrefixTitle,
     SuffixFileName,
     ShortcutToLowercase,

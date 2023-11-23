@@ -2,7 +2,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using Snippetica.VisualStudio;
 using Snippetica.VisualStudio.Validations;
@@ -50,15 +49,5 @@ public static class Validator
 
         if (duplicate is not null)
             throw new InvalidOperationException($"Multiple snippets with same file name '{duplicate.Key}'");
-    }
-
-    public static void ThrowOnDuplicateShortcut(IEnumerable<Snippet> snippets)
-    {
-        IGrouping<string, Snippet> duplicate = snippets
-            .GroupBy(f => f.Shortcut)
-            .FirstOrDefault(f => f.CountExceeds(1));
-
-        if (duplicate is not null)
-            throw new InvalidOperationException($"Multiple snippets with same shortcut '{duplicate.Key}'");
     }
 }

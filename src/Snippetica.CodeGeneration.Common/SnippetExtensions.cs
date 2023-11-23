@@ -23,31 +23,6 @@ public static class SnippetExtensions
         snippet.Properties["FilePath"] = filePath;
     }
 
-    public static string GetShortcutFromTitle(this Snippet snippet)
-    {
-        if (!snippet.HasTag(KnownTags.TitleStartsWithShortcut))
-            return null;
-
-        string s = snippet.Title;
-
-        int i = 0;
-
-        while (i < s.Length
-            && s[i] != ' ')
-        {
-            i++;
-        }
-
-        return s.Substring(0, i);
-    }
-
-    public static Snippet RemoveShortcutFromTitle(this Snippet snippet)
-    {
-        snippet.Title = snippet.GetTitle(trimLeadingShortcut: true, trimTrailingUnderscore: false);
-
-        return snippet;
-    }
-
     public static string GetTitle(
         this Snippet snippet,
         bool trimLeadingShortcut = true,
@@ -92,17 +67,6 @@ public static class SnippetExtensions
         }
 
         return s.Substring(i, j - i + 1);
-    }
-
-    public static void RemoveMetaKeywords(this Snippet snippet)
-    {
-        List<string> keywords = snippet.Keywords;
-
-        for (int i = keywords.Count - 1; i >= 0; i--)
-        {
-            if (keywords[i].StartsWith(KnownTags.MetaPrefix))
-                keywords.RemoveAt(i);
-        }
     }
 
     public static string GetFileName(this Snippet snippet)
@@ -324,60 +288,10 @@ public static class SnippetExtensions
         snippet.SetFilePath(Path.Combine(Path.GetDirectoryName(snippet.GetFilePath()), fileName));
     }
 
-    public static bool ContainsKeyword(this Snippet snippet, string keyword)
-    {
-        return snippet.Keywords.Contains(keyword);
-    }
-
-    public static bool ContainsAnyKeyword(this Snippet snippet, params string[] keywords)
-    {
-        foreach (string keyword in keywords)
-        {
-            if (snippet.ContainsKeyword(keyword))
-                return true;
-        }
-
-        return false;
-    }
-
-    public static bool ContainsAnyKeyword(this Snippet snippet, IEnumerable<string> keywords)
-    {
-        foreach (string keyword in keywords)
-        {
-            if (snippet.ContainsKeyword(keyword))
-                return true;
-        }
-
-        return false;
-    }
-
-    public static void RemoveKeywords(this Snippet snippet, IEnumerable<string> keywords)
-    {
-        foreach (string keyword in keywords)
-            snippet.Keywords.Remove(keyword);
-    }
-
-    public static void RemoveKeywords(this Snippet snippet, params string[] keywords)
-    {
-        foreach (string keyword in keywords)
-            snippet.Keywords.Remove(keyword);
-    }
-
-    public static bool RemoveKeyword(this Snippet snippet, string keyword)
-    {
-        return snippet.Keywords.Remove(keyword);
-    }
-
     public static void AddKeyword(this Snippet snippet, string keyword)
     {
         if (!snippet.Keywords.Contains(keyword))
             snippet.Keywords.Add(keyword);
-    }
-
-    public static void AddKeywords(this Snippet snippet, params string[] keywords)
-    {
-        foreach (string keyword in keywords)
-            AddKeyword(snippet, keyword);
     }
 
     public static bool RemoveLiteral(this Snippet snippet, string identifier)
@@ -405,12 +319,6 @@ public static class SnippetExtensions
 
         snippet.Literals.Remove(literal);
         snippet.ReplacePlaceholders(literal.Identifier, "");
-    }
-
-    public static void RemoveLiterals(this Snippet snippet, params string[] identifiers)
-    {
-        foreach (string identifier in identifiers)
-            RemoveLiteral(snippet, identifier);
     }
 
     public static void ReplacePlaceholders(this Snippet snippet, string identifier, string replacement)

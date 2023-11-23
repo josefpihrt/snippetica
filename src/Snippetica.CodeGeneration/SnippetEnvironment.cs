@@ -17,8 +17,6 @@ public abstract class SnippetEnvironment
 
     public List<ShortcutInfo> Shortcuts { get; } = new();
 
-    public Dictionary<Language, LanguageDefinition> LanguageDefinitions { get; } = new();
-
     public IEnumerable<SnippetGeneratorResult> GenerateSnippets(
         IEnumerable<SnippetDirectory> directories,
         Dictionary<Language, LanguageDefinition> languages,
@@ -176,35 +174,6 @@ public abstract class SnippetEnvironment
     protected virtual bool ShouldGenerateSnippets(SnippetDirectory directory)
     {
         return IsSupportedLanguage(directory.Language);
-    }
-
-    public DirectoryReadmeSettings CreateSnippetsMarkdownSettings(SnippetGeneratorResult result)
-    {
-        var settings = new DirectoryReadmeSettings()
-        {
-            Environment = this,
-            IsDevelopment = result.IsDevelopment,
-            Header = result.DirectoryName,
-            AddLinkToTitle = true,
-            AddQuickReference = !result.IsDevelopment && !result.HasTag(KnownTags.NoQuickReference),
-            Language = result.Language,
-            DirectoryPath = result.Path,
-            GroupShortcuts = false,
-        };
-
-        if (!settings.IsDevelopment)
-            settings.Shortcuts.AddRange(Shortcuts);
-
-        return settings;
-    }
-
-    public ProjectReadmeSettings CreateEnvironmentMarkdownSettings()
-    {
-        return new ProjectReadmeSettings()
-        {
-            Environment = this,
-            Header = $"{KnownNames.ProductName} for {Kind.GetTitle()}",
-        };
     }
 
     protected abstract SnippetGenerator CreateSnippetGenerator(SnippetDirectory directory, Dictionary<Language, LanguageDefinition> languages);

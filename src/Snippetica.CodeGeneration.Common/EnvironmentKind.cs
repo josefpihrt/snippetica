@@ -4,7 +4,6 @@ namespace Snippetica;
 
 public enum EnvironmentKind
 {
-    None,
     VisualStudio,
     VisualStudioCode,
 }

@@ -32,11 +32,6 @@ public class SnippetCodeBuilder
         AppendPlaceholder("end");
     }
 
-    internal void AppendSelectedPlaceholder()
-    {
-        AppendPlaceholder("selected");
-    }
-
     public void AppendDelimiter()
     {
         Append(Delimiter);

@@ -8,8 +8,6 @@ namespace Snippetica.VisualStudio;
 
 internal class NamespaceComparer : IComparer<string>
 {
-    public static NamespaceComparer Default { get; } = new(placeSystemFirst: false);
-
     public static NamespaceComparer SystemFirst { get; } = new(placeSystemFirst: true);
 
     private static readonly Regex _systemUsingRegex = new(@"\A\s*System\s*(\.|\z)");

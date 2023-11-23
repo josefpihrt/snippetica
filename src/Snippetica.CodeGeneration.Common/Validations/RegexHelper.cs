@@ -6,10 +6,6 @@ namespace Snippetica.Validations;
 
 public static class RegexHelper
 {
-    public static readonly Regex InvalidLeadingSpacesPattern = new(@"(?m:^)(?:\ {2})+\ (?:[^ ]|\z)[^\r\n]*");
-
-    public static readonly Regex TrimEndPattern = new(@"\ +(?=(?:\r?\n)|\z)");
-
     public static readonly Regex InvalidLeadingSpaces = new(@"(?m:^)(?:\ {2})+\ (?:[^ ]|\z)[^\r\n]*");
 
     public static readonly Regex TrimEnd = new(@"\ +(?=(?:\r?\n)|\z)");

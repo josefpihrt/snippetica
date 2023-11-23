@@ -12,7 +12,6 @@ public static class KnownTags
     public const string BasicType = nameof(BasicType);
     public const string Collection = nameof(Collection);
     public const string Default = nameof(Default);
-    public const string Disabled = nameof(Disabled);
     public const string Environment = nameof(Environment);
     public const string ExcludeFromDocs = nameof(ExcludeFromDocs);
     public const string ExcludeFromSnippetBrowser = nameof(ExcludeFromSnippetBrowser);
@@ -20,26 +19,19 @@ public static class KnownTags
     public const string ExcludeFromVisualStudioCode = nameof(ExcludeFromVisualStudioCode);
     public const string GenerateXmlSnippets = nameof(GenerateXmlSnippets);
     public const string Initializer = nameof(Initializer);
-    public const string Language = nameof(Language);
     public const string NonUniqueShortcut = nameof(NonUniqueShortcut);
     public const string NonUniqueTitle = nameof(NonUniqueTitle);
-    public const string NoQuickReference = nameof(NoQuickReference);
     public const string ObsoleteShortcut = nameof(ObsoleteShortcut);
     public const string ShortcutSuffix = nameof(ShortcutSuffix);
     public const string TitleEndsWithUnderscore = nameof(TitleEndsWithUnderscore);
     public const string TitleStartsWithShortcut = nameof(TitleStartsWithShortcut);
     public const string TryParse = nameof(TryParse);
     public const string Variable = nameof(Variable);
-    public const string VisualStudio = nameof(VisualStudio);
 
     public const string MetaPrefix = "Meta-";
     public const string GeneratePrefix = "Generate";
 
     public const string GenerateAccessModifier = GeneratePrefix + "AccessModifier";
-    public const string GeneratePublicModifier = GeneratePrefix + "PublicModifier";
-    public const string GenerateInternalModifier = GeneratePrefix + "InternalModifier";
-    public const string GeneratePrivateModifier = GeneratePrefix + "PrivateModifier";
-    public const string GenerateProtectedModifier = GeneratePrefix + "ProtectedModifier";
 
     public const string GenerateStaticModifier = GeneratePrefix + "StaticModifier";
     public const string GenerateVirtualModifier = GeneratePrefix + "VirtualModifier";
@@ -48,7 +40,6 @@ public static class KnownTags
     public const string GenerateConstModifier = GeneratePrefix + "ConstModifier";
     public const string GenerateConstExprModifier = GeneratePrefix + "ConstExprModifier";
     public const string GenerateInitializer = GeneratePrefix + "Initializer";
-    public const string GenerateXamlProperty = GeneratePrefix + "XamlProperty";
     public const string GenerateType = GeneratePrefix + "Type";
     public const string GenerateAlternativeShortcut = GeneratePrefix + "AlternativeShortcut";
     public const string GenerateDeclarationAndDefinition = GeneratePrefix + "DeclarationAndDefinition";
