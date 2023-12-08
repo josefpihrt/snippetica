@@ -164,7 +164,7 @@ public class VisualStudioCodeEnvironment : SnippetEnvironment
 
         MDocument document = Document(
             Heading1(result.Language.GetTitle() + " Snippets"),
-            Inline("Please see ", Link("documentation", "https://josefpihrt.github.io/docs/snippetica/vscode"), " for further information."));
+            Inline("Please see ", Link("documentation", "https://josefpihrt.github.io/docs/snippetica/snippets/vscode/" + languageId), " for further information."));
 
         IOUtility.WriteAllText(Path.Combine(packageDirectoryPath, "README.md"), document.ToString());
     }
