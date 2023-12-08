@@ -44,8 +44,7 @@ public static class IOUtility
 
     public static void SaveSnippet(Snippet snippet, string filePath, bool onlyIfChanged = true)
     {
-        if (snippet is null)
-            throw new ArgumentNullException(nameof(snippet));
+        ArgumentNullException.ThrowIfNull(snippet);
 
         SaveOptions settings = CreateSaveSettings();
 

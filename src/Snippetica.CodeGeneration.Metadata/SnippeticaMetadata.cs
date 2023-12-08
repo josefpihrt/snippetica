@@ -12,6 +12,14 @@ namespace Snippetica.CodeGeneration;
 
 public class SnippeticaMetadata
 {
+    private static readonly JsonSerializerOptions _serializerOptions = new()
+    {
+        WriteIndented = true,
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        Converters = { new JsonStringEnumConverter() },
+        ReadCommentHandling = JsonCommentHandling.Skip,
+    };
+
     public SnippetDirectory[] Directories { get; init; }
 
     public ShortcutInfo[] Shortcuts { get; init; }
@@ -22,13 +30,7 @@ public class SnippeticaMetadata
     {
         JsonSnippeticaMetadata jsonMetadata = JsonSerializer.Deserialize<JsonSnippeticaMetadata>(
             File.ReadAllText(filePath),
-            new JsonSerializerOptions()
-            {
-                WriteIndented = true,
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                Converters = { new JsonStringEnumConverter() },
-                ReadCommentHandling = JsonCommentHandling.Skip,
-            });
+            _serializerOptions);
 
         var metadata = new SnippeticaMetadata()
         {
