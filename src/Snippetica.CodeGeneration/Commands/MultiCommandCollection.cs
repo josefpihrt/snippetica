@@ -7,6 +7,15 @@ namespace Snippetica.CodeGeneration.Commands;
 
 public class MultiCommandCollection : Collection<MultiCommand>
 {
+    public MultiCommandCollection()
+    {
+    }
+
+    public MultiCommandCollection(IEnumerable<MultiCommand> commands)
+    {
+        AddRange(commands);
+    }
+
     public void AddRange(IEnumerable<MultiCommand> commands)
     {
         foreach (MultiCommand command in commands)

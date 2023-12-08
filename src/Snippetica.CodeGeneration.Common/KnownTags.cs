@@ -44,6 +44,7 @@ public static class KnownTags
     public const string GenerateStaticModifier = GeneratePrefix + "StaticModifier";
     public const string GenerateVirtualModifier = GeneratePrefix + "VirtualModifier";
     public const string GenerateAbstractModifier = GeneratePrefix + "AbstractModifier";
+    public const string GenerateAbstractModifierRequired = "AbstractModifierRequired";
     public const string GenerateInlineModifier = GeneratePrefix + "InlineModifier";
     public const string GenerateConstModifier = GeneratePrefix + "ConstModifier";
     public const string GenerateConstExprModifier = GeneratePrefix + "ConstExprModifier";

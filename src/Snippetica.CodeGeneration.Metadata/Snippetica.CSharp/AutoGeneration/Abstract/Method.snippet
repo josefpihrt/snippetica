@@ -9,10 +9,11 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
+      <Keyword>Meta-AbstractModifierRequired</Keyword>
+      <Keyword>Meta-FileName-Method</Keyword>
+      <Keyword>Meta-GenerateAbstractModifier</Keyword>
       <Keyword>Meta-GenerateAccessModifier</Keyword>
       <Keyword>Meta-GenerateProtectedModifier</Keyword>
-      <Keyword>Meta-GenerateStaticModifier</Keyword>
-      <Keyword>Meta-GenerateVirtualModifier</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -38,8 +39,6 @@
         <Default>void</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$_modifiers$ $type$ $name$($_parameters$) {
-	$end$
-}]]></Code>
+    <Code Language="CSharp"><![CDATA[$_modifiers$ $type$ $name$($_parameters$);$end$]]></Code>
   </Snippet>
 </CodeSnippet>
