@@ -41,6 +41,8 @@ public class LanguageSnippetGenerator : SnippetGenerator
 
         commands.AddMultiCommands(GetAccessModifierCommands(snippet));
 
+        var abstractModifierRequired = false;
+
         if (snippet.HasTag(KnownTags.GenerateStaticModifier))
             commands.AddMultiCommand(CommandUtility.StaticCommand, duplicateWhenEmpty: true);
 
@@ -48,7 +50,10 @@ public class LanguageSnippetGenerator : SnippetGenerator
             commands.AddMultiCommand(CommandUtility.VirtualCommand, duplicateWhenEmpty: true);
 
         if (snippet.HasTag(KnownTags.GenerateAbstractModifier))
-            commands.AddMultiCommand(CommandUtility.AbstractCommand, duplicateWhenEmpty: true);
+        {
+            commands.AddMultiCommand(CommandUtility.AbstractCommand, duplicateWhenEmpty: false);
+            abstractModifierRequired = snippet.HasTag(KnownTags.GenerateAbstractModifierRequired);
+        }
 
         if (snippet.HasTag(KnownTags.GenerateConstModifier))
             commands.AddMultiCommand(CommandUtility.ConstCommand, duplicateWhenEmpty: true);
@@ -61,6 +66,9 @@ public class LanguageSnippetGenerator : SnippetGenerator
 
         if (snippet.HasTag(KnownTags.GenerateInitializer))
             commands.AddMultiCommand(CommandUtility.InitializerCommand, duplicateWhenEmpty: true);
+
+        if (abstractModifierRequired)
+            commands = new MultiCommandCollection(commands.Where(mc => mc.Commands.Any(c => c.Kind == CommandKind.AbstractModifier)));
 
         return commands;
     }

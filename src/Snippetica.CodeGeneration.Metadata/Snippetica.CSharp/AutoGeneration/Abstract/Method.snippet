@@ -9,10 +9,10 @@
       <SnippetType>Expansion</SnippetType>
     </SnippetTypes>
     <Keywords>
+      <Keyword>Meta-AbstractModifierRequired</Keyword>
+      <Keyword>Meta-GenerateAbstractModifier</Keyword>
       <Keyword>Meta-GenerateAccessModifier</Keyword>
       <Keyword>Meta-GenerateProtectedModifier</Keyword>
-      <Keyword>Meta-GenerateStaticModifier</Keyword>
-      <Keyword>Meta-GenerateVirtualModifier</Keyword>
     </Keywords>
   </Header>
   <Snippet>
@@ -32,14 +32,12 @@
         <ToolTip>Method name</ToolTip>
         <Default>MethodName</Default>
       </Literal>
-      <Literal Editable="false">
+      <Literal>
         <ID>type</ID>
         <ToolTip>Return type</ToolTip>
         <Default>void</Default>
       </Literal>
     </Declarations>
-    <Code Language="CSharp"><![CDATA[$_modifiers$ $type$ $name$($_parameters$) {
-	$end$
-}]]></Code>
+    <Code Language="CSharp"><![CDATA[$_modifiers$ $type$ $name$($_parameters$);$end$]]></Code>
   </Snippet>
 </CodeSnippet>

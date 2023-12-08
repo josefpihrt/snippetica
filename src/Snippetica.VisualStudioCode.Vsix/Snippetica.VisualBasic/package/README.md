@@ -1,3 +1,3 @@
-﻿# Visual Basic Snippets
+﻿# VB Snippets
 
 Please see [documentation](https://josefpihrt.github.io/docs/snippetica/snippets/vscode/vb) for further information\.
