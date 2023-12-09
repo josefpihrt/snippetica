@@ -3,4 +3,4 @@ dotnet build "../src/Snippetica.CodeGeneration.DocumentationGenerator/Documentat
 
 if(!$?) { Read-Host; Exit }
 
-& "../src/Snippetica.CodeGeneration.DocumentationGenerator/bin/Release/net6.0/Snippetica.CodeGeneration.DocumentationGenerator" "../src" "build" "../src/Snippetica.CodeGeneration.Metadata/data"
+& "../src/Snippetica.CodeGeneration.DocumentationGenerator/bin/Release/net8.0/Snippetica.CodeGeneration.DocumentationGenerator" "../src" "build" "../src/Snippetica.CodeGeneration.Metadata/data"
