@@ -1,8 +1,8 @@
 ﻿<Project>
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <LangVersion>10.0</LangVersion>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12.0</LangVersion>
     <Authors>Josef Pihrt</Authors>
     <Copyright>Copyright (c) 2016-2023 Josef Pihrt</Copyright>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>

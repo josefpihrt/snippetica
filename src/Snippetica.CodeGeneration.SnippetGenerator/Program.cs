@@ -115,8 +115,7 @@ internal static class Program
 
     private static IEnumerable<(string, List<Snippet>)> FindDuplicateShortcuts(IEnumerable<Snippet> snippets)
     {
-        if (snippets is null)
-            throw new ArgumentNullException(nameof(snippets));
+        ArgumentNullException.ThrowIfNull(snippets);
 
         return FindDuplicateShortcuts();
 

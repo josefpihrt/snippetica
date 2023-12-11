@@ -9,11 +9,8 @@ public static class EnumerableExtensions
 {
     public static bool CountExceeds<TSource>(this IEnumerable<TSource> collection, int value)
     {
-        if (collection is null)
-            throw new ArgumentNullException(nameof(collection));
-
-        if (value < 0)
-            throw new ArgumentOutOfRangeException(nameof(value));
+        ArgumentNullException.ThrowIfNull(collection);
+        ArgumentOutOfRangeException.ThrowIfNegative(value);
 
         if (value == 0)
             return false;

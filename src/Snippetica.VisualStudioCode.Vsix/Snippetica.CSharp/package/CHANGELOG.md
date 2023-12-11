@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [2.1.0] - 2023-12-11
+
+### Fixed
+
+- Fix snippets for abstract method ([PR](https://github.com/josefpihrt/snippetica/pull/82))
+
 ## [2.0.2] - 2023-11-05
 
 ## [2.0.1] - 2023-11-05
