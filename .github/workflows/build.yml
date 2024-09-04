@@ -180,7 +180,7 @@ jobs:
           - name: csharp
           - name: vb
     steps:
-      - uses: actions/download-artifact@v4.1.7
+      - uses: actions/download-artifact@v4
         with:
           name: vs_code_extension_${{ matrix.component.name }}
           path: vs_code_extension
