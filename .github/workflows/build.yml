@@ -146,7 +146,7 @@ jobs:
   #   needs: build_nuget
   #   if: github.ref_type == 'tag' && startsWith(github.ref_name, 'v')
   #   steps:
-  #     - uses: actions/download-artifact@v4.1.7
+  #     - uses: actions/download-artifact@v4
   #       with:
   #         name: nuget_packages
   #         path: nuget_packages
